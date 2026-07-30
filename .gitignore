@@ -10,3 +10,6 @@ data/storage_state.json
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Contains plaintext credentials; see the security note in git history.
+ai_assistant.zip
