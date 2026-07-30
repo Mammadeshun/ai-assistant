@@ -25,6 +25,7 @@ from typing import Iterator
 from .. import config
 from ..archive import ArchivedResponse, RawArchive
 
+AUTH_AUTO = "auto"
 AUTH_INTERACTIVE = "interactive"
 AUTH_STORAGE = "storage"
 AUTH_ENV = "env"
@@ -96,7 +97,7 @@ class Session:
             )
 
         storage = None
-        if self.auth_mode in (AUTH_STORAGE, AUTH_ENV) and config.STORAGE_STATE.exists():
+        if self.auth_mode != AUTH_INTERACTIVE and config.STORAGE_STATE.exists():
             storage = str(config.STORAGE_STATE)
 
         self.context = self._browser.new_context(
@@ -163,6 +164,13 @@ class Session:
             self._wait_for_human(success_marker)
         elif self.auth_mode == AUTH_ENV:
             self._submit_credentials()
+        elif self.auth_mode == AUTH_AUTO:
+            # The saved session is gone or expired. Prefer handing the login
+            # back to the user over guessing at credentials.
+            if config.Credentials.from_env() is not None:
+                self._submit_credentials()
+            else:
+                self._wait_for_human(success_marker)
         else:
             raise LoginError(
                 "Not authenticated and no saved session. Run once with "
