@@ -24,18 +24,20 @@ from .archive import RawArchive
 from .models import NOT_TAKEN, PASSED, Career, Exam
 from .planner import PlannerOptions, assess, earliest_feasible
 from .sources import bai, esse3, kiro
-from .sources.browser import AUTH_ENV, AUTH_INTERACTIVE, AUTH_STORAGE, session
+from .sources.browser import AUTH_AUTO, AUTH_ENV, AUTH_INTERACTIVE, AUTH_STORAGE, session
 
 
 def _add_auth(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--auth",
-        choices=[AUTH_INTERACTIVE, AUTH_STORAGE, AUTH_ENV],
-        default=AUTH_STORAGE,
+        choices=[AUTH_AUTO, AUTH_INTERACTIVE, AUTH_STORAGE, AUTH_ENV],
+        default=AUTH_AUTO,
         help=(
-            "interactive: sign in by hand in a visible browser (handles 2FA); "
-            "storage: reuse the saved session; "
-            "env: fill the form from UNIPV_USERNAME / UNIPV_PASSWORD"
+            "auto (default): reuse the saved session, else use "
+            "UNIPV_USERNAME / UNIPV_PASSWORD if set, else open a browser for "
+            "you to sign in; interactive: always sign in by hand (handles 2FA); "
+            "storage: only reuse the saved session; "
+            "env: only use the environment variables"
         ),
     )
     parser.add_argument(
