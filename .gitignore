@@ -1,0 +1,12 @@
+# Personal academic data and anything that could carry credentials.
+data/raw/
+data/career.json
+data/graduation_plan.json
+data/storage_state.json
+.env
+
+# Environments and build noise
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

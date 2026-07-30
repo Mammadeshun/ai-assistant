@@ -1,0 +1,107 @@
+{
+  "degree": "Artificial Intelligence (L-31), interateneo Pavia / Milano Statale / Milano-Bicocca",
+  "cohort": "2025/26",
+  "total_cfu": 180,
+  "source": "Allegato n. 3 - Regolamento L-AI 2025-26 per DR (bai.unipv.it), Piano di studio",
+  "note": "Authoritative for the 2025/26 cohort. A student on an earlier cohort follows the regolamento of their own enrolment year; the planner prefers the study plan scraped from Esse3 whenever it is available.",
+  "years": {
+    "1": [
+      {"code": "509477", "name": "Computer programming, algorithms and data structures", "cfu": 12, "ssd": "INF/01", "taf": "BASE"},
+      {"code": "509478", "name": "Knowledge representation and reasoning", "cfu": 12, "ssd": "INF/01", "taf": "BASE/CARATT.", "modules": [{"name": "mod. 1", "cfu": 6}, {"name": "mod. 2", "cfu": 6}]},
+      {"code": "509481", "name": "Calculus", "cfu": 12, "ssd": "MAT/05", "taf": "BASE"},
+      {"code": "509482", "name": "Theoretical and computational linear algebra", "cfu": 6, "ssd": "MAT/08", "taf": "CARATT."},
+      {"code": "509483", "name": "Computational logic", "cfu": 6, "ssd": "INF/01", "taf": "CARATT."},
+      {"code": "509484", "name": "Experimental physics for AI", "cfu": 6, "ssd": "FIS/01", "taf": "BASE"},
+      {"code": "509485", "name": "Cognitive psychology", "cfu": 6, "ssd": "M-PSI/01", "taf": "AFFINE"}
+    ],
+    "2": [
+      {"code": "509486", "name": "Machine learning, artificial neural networks and deep learning", "cfu": 12, "ssd": "INF/01", "taf": "CARATT."},
+      {"code": "509487", "name": "Fuzzy systems and evolutionary computing", "cfu": 6, "ssd": "INF/01", "taf": "CARATT."},
+      {"code": "509488", "name": "Text mining and natural language processing", "cfu": 6, "ssd": "INF/01", "taf": "CARATT."},
+      {"code": "510109", "name": "Probability and statistical inference", "cfu": 12, "ssd": "INF/01", "taf": "CARATT."},
+      {"code": "509492", "name": "Theoretical and quantum physics for AI", "cfu": 12, "ssd": "FIS/02", "taf": "CARATT."},
+      {"code": "509519", "name": "Ethics, law and AI", "cfu": 12, "ssd": "IUS/20", "taf": "AFFINE"}
+    ],
+    "3": [
+      {"code": "509493", "name": "Statistical modelling", "cfu": 6, "ssd": "SECS-S/01", "taf": "AFFINE"},
+      {"code": "509494", "name": "Brain modelling", "cfu": 6, "ssd": "ING-INF/06", "taf": "AFFINE"},
+      {"code": null, "name": "Track exams (4 activities of 6 CFU each)", "cfu": 24, "taf": "AFFINE", "kind": "track"},
+      {"code": null, "name": "Free-choice exams", "cfu": 12, "taf": "D", "kind": "free_choice"},
+      {"code": null, "name": "Stage or laboratories", "cfu": 9, "taf": "F - ALTRO", "kind": "lab_or_stage"},
+      {"code": "509535", "name": "Final exam", "cfu": 3, "taf": "E - PROVA FINALE", "kind": "thesis"}
+    ]
+  },
+  "tracks": {
+    "1": {
+      "name": "Data analysis, communication and marketing",
+      "cfu": 24,
+      "courses": [
+        {"code": "511276", "name": "Data and Knowledge Bases", "cfu": 6, "ssd": "INF/01"},
+        {"code": "509496", "name": "Information retrieval and recommender systems", "cfu": 6, "ssd": "INF/01"},
+        {"code": "510638", "name": "Web and Social Media Search and Analysis", "cfu": 6, "ssd": "INF/01"},
+        {"code": "509498", "name": "Artificial intelligence for communication and marketing", "cfu": 6, "ssd": "INF/01"}
+      ]
+    },
+    "2": {
+      "name": "Industrial Systems and Health-Care",
+      "cfu": 24,
+      "courses": [
+        {"code": "509499", "name": "Signal and image processing", "cfu": 6, "ssd": "ING-INF/05"},
+        {"code": "510284", "name": "Dynamical systems for industrial automation", "cfu": 6, "ssd": "ING-INF/04"},
+        {"code": "509505", "name": "Medical applications and health-care", "cfu": 6, "ssd": "ING-INF/06"},
+        {"code": "509508", "name": "Human-system interaction", "cfu": 6, "ssd": "ING-INF/05"}
+      ]
+    },
+    "3": {
+      "name": "Brain, Cognition and Society",
+      "cfu": 24,
+      "courses": [
+        {"code": "509511", "name": "Logics for practical reasoning and AI", "cfu": 6, "ssd": "M-FIL/02"},
+        {"code": "509512", "name": "Brain-inspired neural networks and neural architectures", "cfu": 6, "ssd": "BIO/09"},
+        {"code": "509508", "name": "Human system interaction", "cfu": 6, "ssd": "ING-INF/05"},
+        {"code": "509515", "name": "Artificial intelligence and society", "cfu": 6, "ssd": "SPS/08"}
+      ]
+    },
+    "4": {
+      "name": "Physics for AI: Environment, Health and Quantum Information",
+      "cfu": 24,
+      "courses": [
+        {"code": "509520", "name": "Experimental physics for AI 2", "cfu": 6, "ssd": "FIS/01"},
+        {"code": "509516", "name": "Imaging and spectroscopy for environment and health", "cfu": 6, "ssd": "FIS/07"},
+        {"code": "509517", "name": "Materials and platforms for artificial intelligence", "cfu": 6, "ssd": "FIS/03"},
+        {"code": "509518", "name": "Mathematics for imaging and signal processing", "cfu": 6, "ssd": "FIS/02"}
+      ]
+    }
+  },
+  "laboratories": [
+    {"code": "509521", "name": "Laboratory of machine learning", "cfu": 3},
+    {"code": "509522", "name": "Laboratory of computational intelligence", "cfu": 3},
+    {"code": "511277", "name": "Laboratory of machine learning for physics and astronomy", "cfu": 3},
+    {"code": "509528", "name": "Laboratory of medical devices and systems", "cfu": 3},
+    {"code": "509529", "name": "Laboratory of cognitive and behavioural measures", "cfu": 3},
+    {"code": "509530", "name": "Laboratory of neural signals and brain-inspired systems", "cfu": 3},
+    {"code": "509532", "name": "Laboratory of complex systems", "cfu": 3},
+    {"code": "509533", "name": "Laboratory of quantum information", "cfu": 3},
+    {"code": "509534", "name": "Laboratory of physics sensors and related data analysis", "cfu": 3},
+    {"code": "508207", "name": "Project work", "cfu": 3}
+  ],
+  "stage_options": [
+    {"code": "502815", "name": "Stage", "cfu": 9},
+    {"code": "511160", "name": "Stage (6 CFU)", "cfu": 6}
+  ],
+  "italian_language": {"code": "509536", "name": "Italian language for foreign students", "cfu": 3},
+  "final_exam": {
+    "code": "509535",
+    "cfu": 3,
+    "rules": {
+      "application_lead_days": 30,
+      "report_and_records_lead_days": 7,
+      "base_score_formula": "weighted average of graded exams x 11/3, rounded to nearest integer",
+      "board_increment_range": [0, 7],
+      "in_corso_bonus": 2,
+      "laude_threshold": 112,
+      "max_mark": 110,
+      "source": "Final examination regulations a.y. 2025/26, bai.unipv.it"
+    }
+  }
+}
