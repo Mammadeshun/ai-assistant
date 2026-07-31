@@ -14,6 +14,7 @@ all: they are deadline-driven and run alongside exam preparation.
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 from typing import Any, Iterable
@@ -21,7 +22,15 @@ from typing import Any, Iterable
 from .config import REFERENCE_DIR
 from .models import Career, PASSED, match_course_key, normalise_course_name
 
+# The audit rates effort 1-5 against a written rubric (see gradplan.audit).
+# Older profiles used low/medium/high; both are accepted.
 EFFORT_POINTS = {"low": 1, "medium": 2, "high": 3}
+
+
+def effort_points(value) -> int:
+    if isinstance(value, (int, float)):
+        return max(1, int(value))
+    return EFFORT_POINTS.get(str(value), 2)
 
 # Three sessions per academic year, as published for this degree:
 # winter (Jan-Feb), summer (Jun-Jul), autumn (Aug-Sep).
@@ -46,7 +55,7 @@ class ProfiledActivity:
 
     @property
     def points(self) -> int:
-        return EFFORT_POINTS.get(self.effort, 2)
+        return effort_points(self.effort)
 
     def to_json(self) -> dict[str, Any]:
         return {
@@ -94,10 +103,27 @@ def load_profile(path=None) -> dict[str, dict[str, Any]]:
     if not path.exists():
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
-    return {
-        normalise_course_name(entry["name"]): entry
-        for entry in data.get("activities", [])
-    }
+    profile: dict[str, dict[str, Any]] = {}
+    for entry in data.get("activities", []):
+        findings = entry.get("findings", {})
+        judgement = entry.get("judgement", {})
+        fmt = str(findings.get("assessment_format", entry.get("mode", "")))
+        # An activity needs an exam slot unless it is assessed purely by
+        # submitted work, in which case it runs alongside exam preparation.
+        coursework = bool(
+            re.search(r"coursework|report \+ presentation", fmt, re.I)
+            or re.fullmatch(r"project.*", fmt.strip(), re.I)
+        )
+        profile[normalise_course_name(entry["name"])] = {
+            "mode": fmt or "UNVERIFIED",
+            "consumes_exam_slot": entry.get("consumes_exam_slot", not coursework),
+            "past_papers": bool(findings.get("past_paper_count", 0)),
+            "effort": judgement.get("effort", entry.get("effort", 2)),
+            "notes": judgement.get("why", entry.get("notes", "")),
+            "evidence": [e.get("quote", "") for e in findings.get("evidence", [])],
+            "tier": findings.get("evidence_tier", "?"),
+        }
+    return profile
 
 
 def profile_outstanding(

@@ -52,7 +52,9 @@ SIGNALS: dict[str, re.Pattern] = {
     ),
     "written": re.compile(
         r"(written|scritt)[^.]{0,60}(exam|test|prova|paper)"
-        r"|(exam|esame)[^.]{0,50}(is|consists?|sar[àa]|consiste)[^.]{0,50}(written|scritt)",
+        r"|(exam|esame)[^.]{0,50}(is|consists?|sar[àa]|consiste)[^.]{0,50}(written|scritt)"
+        # 'Exam: Written in the computer lab ...' puts the noun first.
+        r"|(exam|esame)\s*:?\s*(written|scritt|oral|orale)",
         re.I,
     ),
     "grade_formula": re.compile(
