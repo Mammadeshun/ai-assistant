@@ -1,0 +1,350 @@
+{
+  "note": "How each outstanding activity is actually assessed. 'mode' and 'evidence' are observed from the archived Kiro course pages (data/raw/kiro/course-*.html) and the published exam calendars. 'effort' is a judgement call, not data: it ranks how much work a bare pass (18/30) plausibly takes given the material available, and should be overridden freely. Courses marked 'on Kiro but not enrolled' exist on the platform but hide their contents until self-enrolment, so their effort rating is the least evidenced in this file.",
+  "source": "Kiro course pages archived 2026-07-31; Regolamento L-AI 2025/26 art. 10 (no prerequisites, no attendance obligation)",
+  "modes": {
+    "coursework": "graded on submitted work; no sit-down exam to schedule",
+    "project": "a project replaces or dominates the written exam",
+    "assignment_plus_exam": "assignments during the course plus a written exam",
+    "written": "written exam",
+    "quiz": "written exam in closed/multiple-choice form"
+  },
+  "activities": [
+    {
+      "code": "509521",
+      "name": "Laboratory of Machine Learning",
+      "cfu": 3,
+      "mode": "coursework",
+      "consumes_exam_slot": false,
+      "past_papers": false,
+      "effort": "low",
+      "kiro_course": 5124,
+      "evidence": [
+        "Submission of the report on pet classification",
+        "report on audio classification",
+        "report on pet segmentation",
+        "report on ASR",
+        "report on handwritten text recognition",
+        "report on Audio Denoising Autoencoder",
+        "report on face generation",
+        "report on Audio GAN",
+        "report on manga character generation"
+      ],
+      "notes": "Nine report submissions, no exam. Deadline-driven, so it can run in parallel with exam preparation."
+    },
+    {
+      "code": "508207",
+      "name": "Project Work",
+      "cfu": 3,
+      "mode": "project",
+      "consumes_exam_slot": false,
+      "past_papers": false,
+      "effort": "low",
+      "kiro_course": 9643,
+      "evidence": [
+        "on Kiro but not enrolled: id 9643; the page shows an enrolment prompt"
+      ],
+      "notes": "F-ALTRO activity. Agree the brief with a supervisor; can overlap with the final report."
+    },
+    {
+      "code": "509496",
+      "name": "Information retrieval and recommender systems",
+      "cfu": 6,
+      "mode": "project",
+      "consumes_exam_slot": false,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 9703,
+      "evidence": [
+        "Project June/July 2026",
+        "Templates to Submit your Project",
+        "Project Instructions 2026 June - July",
+        "Code to get the Dataset"
+      ],
+      "notes": "Assessed by project with published instructions and templates. No sit-down exam to schedule."
+    },
+    {
+      "code": "509495",
+      "name": "Data mining and knowledge extraction",
+      "cfu": 6,
+      "mode": "assignment_plus_exam",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "medium",
+      "kiro_course": 10353,
+      "evidence": [
+        "Assignment 1/2/3 Discussions",
+        "Past Assignment 1 (24/10)",
+        "Mockup Exam (07/01/2026)",
+        "Example Database (actordb)"
+      ],
+      "notes": "Three assignments plus a written exam; a mock exam and a past assignment are published."
+    },
+    {
+      "code": "509483",
+      "name": "Computational logic",
+      "cfu": 6,
+      "mode": "assignment_plus_exam",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 10047,
+      "evidence": [
+        "Exam_Assignments"
+      ],
+      "notes": "Assessment centres on exam assignments rather than a conventional paper. Only 18 activities on Kiro; confirm the format with Ghilardi."
+    },
+    {
+      "code": "510109",
+      "name": "Probability and statistical inference",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "high",
+      "kiro_course": 11783,
+      "evidence": [
+        "Course previous exams (Jan 2023 through Feb 2025, texts and full solutions)",
+        "Mock exam",
+        "Exam attachment",
+        "156 activities across mod. 1 and mod. 2"
+      ],
+      "notes": "The largest past-paper archive of any course in the plan, with worked solutions. Two modules, both required. Highly practicable but 12 CFU of material."
+    },
+    {
+      "code": "509481",
+      "name": "Calculus",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "high",
+      "kiro_course": 9942,
+      "evidence": [
+        "Exam rules and dates",
+        "Previous exams and sample exams",
+        "Tests from Feb 2024, Jun 2024, Jul 2024, Sep 2024 (both appelli)",
+        "Theory questions and answers for the exam",
+        "2025 sample test with solution"
+      ],
+      "notes": "Split into part 1 and part 2, examined separately on the same day. Past tests published for each. Also the activity that clears an OFA if one is outstanding."
+    },
+    {
+      "code": "509478",
+      "name": "Knowledge representation and reasoning",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "high",
+      "kiro_course": 7609,
+      "evidence": [
+        "mod. 1: Past Exams, Mock Exam 2021 with solutions, Exam 2022/09/30, Exam 2023/02/06, Exam Instructions",
+        "mod. 2: 2025 Mock Exam with solutions, June 2022 and July 2022 exams with solutions, RDFLib exercise session"
+      ],
+      "notes": "Two modules (Penaloza, Palmonari), examined on the same day. Both publish past papers with solutions."
+    },
+    {
+      "code": "509477",
+      "name": "Computer programming, algorithms and data structures",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "high",
+      "kiro_course": 9919,
+      "evidence": [
+        "Exam Information",
+        "Previous Exams",
+        "Exam 23/06/2022 with solutions",
+        "Exam 14/07/2022 with solutions",
+        "Exam 09/09/2022 with solutions",
+        "Exam 21/07/2023 code solution"
+      ],
+      "notes": "Programming plus algorithms; solutions published as code. Examined at Milano Statale. Two modules."
+    },
+    {
+      "code": "509486",
+      "name": "Machine learning, artificial neural networks and deep learning",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "high",
+      "kiro_course": 10341,
+      "evidence": [
+        "IMPORTANT NOTICE FOR THE OVERALL EXAM",
+        "Mock Exam",
+        "Mock Exam 2",
+        "Exam Session 16 June 2026",
+        "Exam Session 14 July 2026"
+      ],
+      "notes": "Two parts with a combined final mark; read the overall-exam notice before planning which appello to take."
+    },
+    {
+      "code": "509487",
+      "name": "Fuzzy systems and evolutionary computing",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "medium",
+      "kiro_course": 11127,
+      "evidence": [
+        "Exams 2023/24",
+        "Exam example 5.6.2025",
+        "Example of answer to the open questions",
+        "Exam 2026-01",
+        "Lab - Exam Exercise Samples",
+        "Lab - Exam Sample Solutions"
+      ],
+      "notes": "Written paper plus a lab component, both with published samples and model answers."
+    },
+    {
+      "code": "509488",
+      "name": "Text mining and natural language processing",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "medium",
+      "kiro_course": 11391,
+      "evidence": [
+        "Practice exercises for exam preparation (NLP part)",
+        "[TMNLP 22_23] Exam questions sample",
+        "[TMNLP 23_24] Exam questions sample",
+        "[TMNLP-2025_2026] Practice Written Exam"
+      ],
+      "notes": "Question samples for three separate years plus a full practice paper."
+    },
+    {
+      "code": "509485",
+      "name": "Cognitive psychology",
+      "cfu": 6,
+      "mode": "quiz",
+      "consumes_exam_slot": true,
+      "past_papers": true,
+      "effort": "low",
+      "kiro_course": 7392,
+      "evidence": [
+        "Exams Information",
+        "Test quiz on chapters 1, 2, 3, 5, 6, 8, 10"
+      ],
+      "notes": "Self-test quizzes per chapter, and the exam has separate written and oral appelli in the calendar. Memorisation-led rather than derivation-led."
+    },
+    {
+      "code": "504464",
+      "name": "Organization theory and design",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "low",
+      "kiro_course": 8598,
+      "evidence": [
+        "EXAM"
+      ],
+      "notes": "Free-choice exam outside the AI degree, so its dates follow its own course, not the BAI session calendar. Check its appelli in Esse3."
+    },
+    {
+      "code": "509493",
+      "name": "Statistical modelling",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 10217,
+      "evidence": [
+        "only 4 activities on Kiro"
+      ],
+      "notes": "Thin Kiro presence: material is likely distributed elsewhere by D'Angelo. Ask for past papers directly."
+    },
+    {
+      "code": "509494",
+      "name": "Brain modelling",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 10392,
+      "evidence": [
+        "only 3 activities on Kiro"
+      ],
+      "notes": "Thin Kiro presence. Casellato teaches it at Bicocca; check the Bicocca e-learning page."
+    },
+    {
+      "code": "509519",
+      "name": "Ethics, law and AI",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 5123,
+      "evidence": [
+        "only 7 activities on Kiro"
+      ],
+      "notes": "12 CFU but essay/discursive rather than technical. Three lecturers; confirm which parts are examined together."
+    },
+    {
+      "code": "509492",
+      "name": "Theoretical and quantum physics for AI",
+      "cfu": 12,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "high",
+      "kiro_course": 9893,
+      "evidence": [
+        "on Kiro but not enrolled: module 1 id 9893 (Gherardi), module 2 id 11668 (Guarnieri)",
+        "part 1 examined at Milano Statale, part 2 at Pavia"
+      ],
+      "notes": "Two modules examined independently at two universities. The Kiro courses exist but their contents stay hidden until you self-enrol; enrol to see past papers before judging the effort."
+    },
+    {
+      "code": "509498",
+      "name": "Artificial intelligence for communication and marketing",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "low",
+      "kiro_course": 10959,
+      "evidence": [
+        "on Kiro but not enrolled: id 10959 (Suriano)",
+        "examined at Milano-Bicocca in both summer and autumn"
+      ],
+      "notes": "Non-technical Bicocca course. Self-enrol on Kiro to reveal the material; effort is a guess until then."
+    },
+    {
+      "code": "510638",
+      "name": "Web and social media search and analysis",
+      "cfu": 6,
+      "mode": "written",
+      "consumes_exam_slot": true,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": 11076,
+      "evidence": [
+        "on Kiro but not enrolled: id 11076 (Viviani, Mancini)",
+        "examined at Milano-Bicocca"
+      ],
+      "notes": "Same track as Information retrieval, so material overlaps with the IR project. Self-enrol to confirm whether it is project-assessed too."
+    },
+    {
+      "code": "509535",
+      "name": "Final exam",
+      "cfu": 3,
+      "mode": "project",
+      "consumes_exam_slot": false,
+      "past_papers": false,
+      "effort": "medium",
+      "kiro_course": null,
+      "evidence": [
+        "Final examination regulations a.y. 2025/26"
+      ],
+      "notes": "A report on a topic explored in a stage, project work or laboratory, supervised by a course lecturer. Must be uploaded in PDF/A one week before the graduation day."
+    }
+  ]
+}

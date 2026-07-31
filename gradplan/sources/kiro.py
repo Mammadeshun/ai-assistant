@@ -152,3 +152,24 @@ def _walk_courses(payload: Any) -> list[dict[str, Any]]:
             return [c for c in courses if isinstance(c, dict) and c.get("fullname")]
         return _walk_courses(payload["data"]) if "data" in payload else []
     return []
+
+
+def fetch_course_pages(session, course_ids: list[str]) -> dict[str, Any]:
+    """Archive the main page of each given Moodle course.
+
+    Course pages carry the syllabus, the exam rules and, where they exist, the
+    project brief — the things that decide how an exam is actually passed.
+    """
+    fetched: list[str] = []
+    failed: list[str] = []
+    for course_id in course_ids:
+        try:
+            session.goto(
+                f"{config.KIRO_BASE}/course/view.php?id={course_id}",
+                source=SOURCE,
+                label=f"course-{course_id}",
+            )
+            fetched.append(course_id)
+        except Exception as exc:  # noqa: BLE001
+            failed.append(f"{course_id}: {type(exc).__name__}")
+    return {"fetched": fetched, "failed": failed}
