@@ -8,7 +8,7 @@
       "info-10959"
     ],
     "pages_read": 2,
-    "docs_read": 25,
+    "docs_read": 26,
     "evidence_tier": "C",
     "findings": [
       {
@@ -74,7 +74,7 @@
       "info-10392"
     ],
     "pages_read": 6,
-    "docs_read": 0,
+    "docs_read": 3,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [],
@@ -110,7 +110,7 @@
       "info-9942"
     ],
     "pages_read": 10,
-    "docs_read": 34,
+    "docs_read": 38,
     "evidence_tier": "A",
     "findings": [
       {
@@ -280,7 +280,7 @@
       "info-4228"
     ],
     "pages_read": 10,
-    "docs_read": 37,
+    "docs_read": 44,
     "evidence_tier": "A",
     "findings": [
       {
@@ -445,6 +445,13 @@
         "authoritative": true
       },
       {
+        "signal": "pass_gate",
+        "quote": "The forum is open so anybody can answer/comment on all the threads Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Forum - Questions, observations, comments (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154332Z__mod-forum-303454.html",
+        "authoritative": false
+      },
+      {
         "signal": "oral",
         "quote": "You must reach at least 13 pts with the written exam to get access to the oral exam.",
         "source": "General information (resource)",
@@ -519,7 +526,7 @@
       "info-10047"
     ],
     "pages_read": 2,
-    "docs_read": 9,
+    "docs_read": 10,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [
@@ -561,7 +568,7 @@
       "info-9919"
     ],
     "pages_read": 14,
-    "docs_read": 44,
+    "docs_read": 51,
     "evidence_tier": "A",
     "findings": [
       {
@@ -719,14 +726,28 @@
       "info-7669"
     ],
     "pages_read": 6,
-    "docs_read": 165,
+    "docs_read": 177,
     "evidence_tier": "C",
     "findings": [
+      {
+        "signal": "pass_gate",
+        "quote": "Aggregazione dei criteri Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Assignment 1 Discussions (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154411Z__mod-forum-280033.html",
+        "authoritative": false
+      },
       {
         "signal": "partial_credit",
         "quote": "• The assignments are worth at most 12 points, and so the final mark is at most 30.",
         "source": "Mockup Exam (07/01/2026) (resource)",
         "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012157Z__mod-resource-291497.pdf",
+        "authoritative": false
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "Aggregazione dei criteri Spunta come completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Assignment 1 (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154418Z__mod-forum-149709.html",
         "authoritative": false
       }
     ],
@@ -771,7 +792,7 @@
       "info-7302"
     ],
     "pages_read": 8,
-    "docs_read": 7,
+    "docs_read": 11,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [],
@@ -817,7 +838,7 @@
       "info-6878"
     ],
     "pages_read": 8,
-    "docs_read": 19,
+    "docs_read": 23,
     "evidence_tier": "A",
     "findings": [
       {
@@ -880,7 +901,7 @@
       "info-9703"
     ],
     "pages_read": 6,
-    "docs_read": 71,
+    "docs_read": 75,
     "evidence_tier": "B",
     "findings": [
       {
@@ -1009,9 +1030,16 @@
       "info-11588"
     ],
     "pages_read": 32,
-    "docs_read": 152,
+    "docs_read": 188,
     "evidence_tier": "A",
     "findings": [
+      {
+        "signal": "pass_gate",
+        "quote": "Aggregazione dei criteri Completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Student (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154244Z__mod-forum-139443.html",
+        "authoritative": false
+      },
       {
         "signal": "written",
         "quote": "During the exam: The KRR1 exam is a written exam and no additional support is needed or allowed.",
@@ -1020,11 +1048,32 @@
         "authoritative": true
       },
       {
+        "signal": "pass_gate",
+        "quote": "Aggregazione dei criteri Spunta come completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Al momento in questo forum non sono presenti argomenti di discussione.",
+        "source": "Student (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154248Z__mod-forum-259413.html",
+        "authoritative": false
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Students' questions (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154251Z__mod-forum-111893.html",
+        "authoritative": false
+      },
+      {
         "signal": "lab_component",
         "quote": "SPARQL Exercises RDF & SPARQL Exercises File Spunta come completato Updates: 20/5: new exercise 5 21/5: added missing rdfs:label triples in the graph of exercise 5 Seleziona attività RDF &amp;",
         "source": "kiro course/9232",
         "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021031Z__course-9232.html",
         "authoritative": true
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Student (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154305Z__mod-forum-471.html",
+        "authoritative": false
       }
     ],
     "past_papers": [
@@ -1097,7 +1146,7 @@
       "info-11242"
     ],
     "pages_read": 6,
-    "docs_read": 90,
+    "docs_read": 93,
     "evidence_tier": "C",
     "findings": [
       {
@@ -1150,6 +1199,13 @@
         "authoritative": false
       },
       {
+        "signal": "pass_gate",
+        "quote": "Aggregazione dei criteri Share the results you obtained here Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni.",
+        "source": "Image gallery (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154446Z__mod-forum-306403.html",
+        "authoritative": false
+      },
+      {
         "signal": "upload",
         "quote": "Also upload a PDF with the notebook with visible outputs 2.",
         "source": "Colorization Challenge (resource)",
@@ -1189,7 +1245,7 @@
       "info-10341"
     ],
     "pages_read": 2,
-    "docs_read": 4,
+    "docs_read": 5,
     "evidence_tier": "A",
     "findings": [
       {
@@ -1266,7 +1322,7 @@
       "info-574"
     ],
     "pages_read": 10,
-    "docs_read": 130,
+    "docs_read": 135,
     "evidence_tier": "C",
     "findings": [
       {
@@ -1591,7 +1647,7 @@
       "info-9297"
     ],
     "pages_read": 12,
-    "docs_read": 61,
+    "docs_read": 64,
     "evidence_tier": "A",
     "findings": [
       {
@@ -1696,7 +1752,7 @@
       "info-9643"
     ],
     "pages_read": 2,
-    "docs_read": 1,
+    "docs_read": 2,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [],
@@ -1734,9 +1790,17 @@
       "info-10217"
     ],
     "pages_read": 6,
-    "docs_read": 0,
+    "docs_read": 3,
     "evidence_tier": "C",
-    "findings": [],
+    "findings": [
+      {
+        "signal": "written",
+        "quote": "Visualizzazione di 1 discussioni su 1 Stato Discussione Iniziato da Ultimo intervento Repliche Azioni Practical information about the written exam.",
+        "source": "Annunci (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154401Z__mod-forum-150448.html",
+        "authoritative": false
+      }
+    ],
     "past_papers": [],
     "appelli": [
       {
@@ -1768,7 +1832,7 @@
       "info-8995"
     ],
     "pages_read": 8,
-    "docs_read": 20,
+    "docs_read": 26,
     "evidence_tier": "A",
     "findings": [
       {
@@ -1849,11 +1913,25 @@
         "authoritative": true
       },
       {
+        "signal": "pass_gate",
+        "quote": "The forum is open so anybody can answer/comment on all the threads Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Al momento in questo forum non sono presenti argomenti di discussione.",
+        "source": "Forum - Questions, observations, comments (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154346Z__mod-forum-110990.html",
+        "authoritative": false
+      },
+      {
         "signal": "written",
         "quote": "● These points will be added to the evaluation obtained in the written exam.",
         "source": "Project Instructions (resource)",
         "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020229Z__mod-resource-126913.pdf",
         "authoritative": true
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Al momento in questo forum non sono presenti argomenti di discussione.",
+        "source": "Questions Regarding the Project aka your specific Stack Overflow forum (forum)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T154348Z__mod-forum-126916.html",
+        "authoritative": false
       },
       {
         "signal": "lab_component",
@@ -1939,7 +2017,7 @@
       "info-9893"
     ],
     "pages_read": 10,
-    "docs_read": 70,
+    "docs_read": 74,
     "evidence_tier": "C",
     "findings": [
       {
@@ -2021,7 +2099,7 @@
       "info-11076"
     ],
     "pages_read": 2,
-    "docs_read": 34,
+    "docs_read": 35,
     "evidence_tier": "B",
     "findings": [
       {
