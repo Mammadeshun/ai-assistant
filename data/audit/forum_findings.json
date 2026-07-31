@@ -1,0 +1,594 @@
+{
+ "exam_logistics": [
+  {
+   "thread": "forum-thread-23436",
+   "title": "Art2_509477_10589: Exam rooms for 30 Jan and 6 Feb 2024 | Kiro",
+   "quote": "Exam rooms for 30 Jan and 6 Feb 2024 ◄ Exam session for project presentation Which project is valid now? ►  Inserisci tra le preferite Since I often schedule additional exam dates by appointment, I will try to keep track of these dates and rooms to allow the attendance at the presentation of other teams. The by-appointment"
+  },
+  {
+   "thread": "forum-thread-23878",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Exam 2024/02/26 | Kiro",
+   "quote": "ond KRR exam will take place on February 5th at 14:00 in room G11 (Milano-Statale). Please be there 15 minutes earlier, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do bring your student ID (or an official ID) for verification, and remember your (Pavia) student number. The exam covers all the material from the course. After the exam, students who get at least 17 points (out of 30) can ask for an oral exami"
+  },
+  {
+   "thread": "forum-thread-23878",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Exam 2024/02/26 | Kiro",
+   "quote": "ace on February 5th at 14:00 in room G11 (Milano-Statale). Please be there 15 minutes earlier, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do bring your student ID (or an official ID) for verification, and remember your (Pavia) student number. The exam covers all the material from the course. After the exam, students who get at least 17 points (out of 30) can ask for an oral examination. Depending on perf"
+  },
+  {
+   "thread": "forum-thread-23534",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Instructions for Exam | Kiro",
+   "quote": "s \" Part I \". The exam will take place on February 5th, 14:30, at room G21 in Milano-Statale. Please be there by 14:15, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do bring your student ID (or an official ID) for verification, and remember your (Pavia) student number. The exam covers all the material from the course. After the exam, students who get at least 17 points (out of 30) can ask for an oral exami"
+  },
+  {
+   "thread": "forum-thread-23534",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Instructions for Exam | Kiro",
+   "quote": "ll take place on February 5th, 14:30, at room G21 in Milano-Statale. Please be there by 14:15, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do bring your student ID (or an official ID) for verification, and remember your (Pavia) student number. The exam covers all the material from the course. After the exam, students who get at least 17 points (out of 30) can ask for an oral examination. Depending on perf"
+  },
+  {
+   "thread": "forum-thread-44578",
+   "title": "KNOWLEDGE  509479_10845_2025: [KRR] Exercise 6 | Kiro",
+   "quote": "ise 6 ◄ [KRR] Updates [KRR] Exam Visualization ►  Inserisci tra le preferite Dear students, Exercise 6 has been published. First-year students can get up to 2 bonus points by solving these exercises. Bring your solutions the day of the exam. Copied and automatically generated answers will receive no bonus points. Best, Rafael Permalink ◄ [KRR] Updates [KRR] Exam Visualization ►"
+  },
+  {
+   "thread": "forum-thread-14665",
+   "title": "KRR2: Second exercise sheet and solutions for the first exercise sheet | Kiro",
+   "quote": "23 ►  Inserisci tra le preferite Dear students, I have uploaded the second exercise sheet and the solutions for the first exercise sheet. The next exercise session will be April 13. Again, we suggest bringing a laptop in order to run DLV on your knowledge bases. I wish you a nice holiday break. Gian Carlo Permalink ◄ Answers to a few questions from first exercise session Third exercise session 27/04/2023 ►"
+  },
+  {
+   "thread": "forum-thread-14047",
+   "title": "KRR2: Software for the first exercise session tomorrow 23 March | Kiro",
+   "quote": "isci tra le preferite Dear students, Tomorrow 23 March there will be the first exercise session, which will cover unification, bottom-up procedures and building knowledge bases. We strongly recommend bringing a laptop in order to run DLV (a disjunctive logic programming system) on your knowledge bases. I have uploaded a few slides with instructions on how to install and run DLV. If you have issues with the installation you can ask me during the exercise session. Best, Gian Carlo Permalink ◄ Updates to the website E"
+  },
+  {
+   "thread": "forum-thread-14200",
+   "title": "KRR2: First exercise session tomorrow 28 March | Kiro",
+   "quote": "se session to tomorrow 28 March at 4PM. The session will cover what was meant to be covered last Thursday, namely unification, bottom-up procedures and building knowledge bases. We strongly recommend bringing a laptop in order to run DLV (a disjunctive logic programming system) on your knowledge bases. Please see the uploaded slides for instructions on how to install DLV. Best, Gian Carlo Permalink ◄ Exercise session of today 23 March is cancelled 30/03 - Seminar on datalog applications + Lesson ►"
+  },
+  {
+   "thread": "forum-thread-15224",
+   "title": "KRR2: Third exercise session 27/04/2023 | Kiro",
+   "quote": "u can run it (follow the instructions on the page). This tool allows you to run SPARQL queries on RDF data of your choice. We can discuss any issues with the installation during the exercise session. Bringing your laptop is as usual strongly suggested, so you can run DLV and SPARQL Playground to solve the exercises. Best, Gian Carlo Permalink Dear students, If there are any issues with running Sparql playground, you can try to download and install the latest Java Development Kit here ( https://www.oracle.com/java/t"
+  },
+  {
+   "thread": "forum-thread-25973",
+   "title": "KRR2 - 2324: Third exercise session on ASP - 18/4/2024 | Kiro",
+   "quote": "lecture on 30/4 ►  Inserisci tra le preferite Dear students, Tomorrow 18 April there will be the third exercise session on Answer Set Programming with negation and disjunction. We strongly recommend bringing a laptop in order to run DLV (a disjunctive logic programming system) on your knowledge bases. Best, Gian Carlo Permalink Dear students, Please note that the KRR exercise session today will start at 13:00 sharp. Best wishes, Gian Carlo Permalink Visualizza intervento genitore Dear students, I have uploaded a f"
+  },
+  {
+   "thread": "forum-thread-25973",
+   "title": "KRR2 - 2324: Third exercise session on ASP - 18/4/2024 | Kiro",
+   "quote": "ut the exercises and their solutions. Best wishes, Gian Carlo Permalink Visualizza intervento genitore Dear students, Tomorrow 23/4 there will be an additional exercise session on ASP and DLV. Please bring your laptop in case you want to run DLV on your KBs. Best, Gian Carlo Permalink Visualizza intervento genitore ◄ Second exercise session on Datalog - 4/4/2024 No lecture on 30/4 ►"
+  },
+  {
+   "thread": "forum-thread-24865",
+   "title": "KRR2 - 2324: First exercise session on SQL - 19/3/2024 | Kiro",
+   "quote": "programs ►  Inserisci tra le preferite Dear students, The first exercise session on SQL will be tomorrow 19 March at 4PM. Although every exercise can be solved by pen and paper, we strongly recommend bringing a laptop in order to run queries on https://sqliteonline.com/ . Best, Gian Carlo Permalink Dear students, I have uploaded the solutions to the SQL exercises. As mentioned yesterday, the solution to exercise 2.5 will be posted at a later time, so that you can try to solve it on your own. Here are a few addition"
+  },
+  {
+   "thread": "forum-thread-29339",
+   "title": "KRR2 - 2324: Room for KRR2 exam, Sep 27th, 2024 | Kiro",
+   "quote": "Room for KRR2 exam, Sep 27th, 2024 ◄ IMPORTANT - The today KRR2 exam is moved to room U6/25 (building U6, adjacent to U7) Final grade registration for the whole course: some clarifications ►  Inserisci tra le preferite Dear all, I'm not sure what is the channel you use to access the most up to date information about th"
+  },
+  {
+   "thread": "forum-thread-29339",
+   "title": "KRR2 - 2324: Room for KRR2 exam, Sep 27th, 2024 | Kiro",
+   "quote": "like to communicate (in case you do not know it already) that the KRR2 exam will take place in Room U7-14 , located in the U7 Unimib's Building, at the scheduled time (11.30). We asked to change the room that was previously assigned to this exam (e.g., as specified here ) because the previous room was not comfortable for handwriting. Best, Matteo Palmonari Permalink ◄ IMPORTANT - The today KRR2 exam is moved to room U6/25 (building U6, adjacent to U7) Final grade registration for the whole course: some clarificati"
+  },
+  {
+   "thread": "forum-thread-26604",
+   "title": "KRR2 - 2324: Exercise session on RDF - 7/5/2024 | Kiro",
+   "quote": "ferite Dear students, Tomorrow 7 May there will be the first exercise session on RDF and SPARQL. We will begin to see how to represent knowledge with RDF, and how to run SPARQL queries on RDF graphs. Bringing your laptop is recommended as usual. We will use the following tools: - Online validators to check the syntax of your RDF graphs (e.g., http://ttl.summerofcode.be/ ). - You can install SPARQL Playground on your PC (instructions here: https://github.com/calipho-sib/sparql-playground ). This allows you to run SP"
+  },
+  {
+   "thread": "forum-thread-26604",
+   "title": "KRR2 - 2324: Exercise session on RDF - 7/5/2024 | Kiro",
+   "quote": "olution during the next class. Best, Gian Carlo Permalink Visualizza intervento genitore Dear students, Just a reminder that tomorrow there will be the next exercise session on RDF and SPARQL. Please bring your laptop in case you want to run SPARQL queries using SPARQL Playground or on DBpedia's knowledge graph. Best, Gian Carlo Permalink Visualizza intervento genitore ◄ No lecture on April 30 Next exercise sessions and software ►"
+  },
+  {
+   "thread": "forum-thread-29030",
+   "title": "KRR2 - 2324: IMPORTANT - The today KRR2 exam is moved to room U6/25 (building U6, adjacent",
+   "quote": "IMPORTANT - The today KRR2 exam is moved to room U6/25 (building U6, adjacent to U7) ◄ Some advice to prepare to next exam sessions Room for KRR2 exam, Sep 27th, 2024 ►  Inserisci tra le preferite Dear all, The room that was assigned to our exam today was not appropriate. We managed to accommodate a last minute change. The exam will be in U6/25 . We will start to accommodate the students at 11.30. U6 is building adjacent to U7 (travel time ~3-5 min"
+  },
+  {
+   "thread": "forum-thread-29030",
+   "title": "KRR2 - 2324: IMPORTANT - The today KRR2 exam is moved to room U6/25 (building U6, adjacent",
+   "quote": "The today KRR2 exam is moved to room U6/25 (building U6, adjacent to U7) ◄ Some advice to prepare to next exam sessions Room for KRR2 exam, Sep 27th, 2024 ►  Inserisci tra le preferite Dear all, The room that was assigned to our exam today was not appropriate. We managed to accommodate a last minute change. The exam will be in U6/25 . We will start to accommodate the students at 11.30. U6 is building adjacent to U7 (travel time ~3-5 minutes) If you are doing the KRR1 exam in the next building come when you finish."
+  },
+  {
+   "thread": "forum-thread-29343",
+   "title": "KRR2 - 2324: Final grade registration for the whole course: some clarifications | Kiro",
+   "quote": "Final grade registration for the whole course: some clarifications ◄ Room for KRR2 exam, Sep 27th, 2024 Results for September 11th exam ►  Inserisci tra le preferite Dear all, For final grade registration, please be patient, especially if you do not have urgencies related to scholarships ( which we usually try to consider and accommodate ): the final registration comes only after we: 1)"
+  },
+  {
+   "thread": "forum-thread-29343",
+   "title": "KRR2 - 2324: Final grade registration for the whole course: some clarifications | Kiro",
+   "quote": "3) the mandatory 5 days that the system takes to officially record the grades is expired. You can easily imagine that the whole process takes time. Best Matteo Palmonari & Rafael Penaloza Permalink ◄ Room for KRR2 exam, Sep 27th, 2024 Results for September 11th exam ►"
+  },
+  {
+   "thread": "forum-thread-28285",
+   "title": "KRR2 - 2324: Rules and recommendations for the exam | Kiro",
+   "quote": "nsidering the large number of students, we anticipate some rules to be followed during the test. Violations of the rules may lead the exclusion from the test. the test will be based on pen and paper; bring your pen(s) we'll bring sheets and tests at the end of the test, you must deliver every sheets used during the test, included the ones for the raw copy the above rule applied also to the students who prefer to withdrawal their submission no mobile phone can stay on the table smartwatches are not allowed (must be"
+  },
+  {
+   "thread": "forum-thread-28285",
+   "title": "KRR2 - 2324: Rules and recommendations for the exam | Kiro",
+   "quote": "er of students, we anticipate some rules to be followed during the test. Violations of the rules may lead the exclusion from the test. the test will be based on pen and paper; bring your pen(s) we'll bring sheets and tests at the end of the test, you must deliver every sheets used during the test, included the ones for the raw copy the above rule applied also to the students who prefer to withdrawal their submission no mobile phone can stay on the table smartwatches are not allowed (must be removed and put in the b"
+  },
+  {
+   "thread": "forum-thread-25342",
+   "title": "KRR2 - 2324: Second exercise session on Datalog - 4/4/2024 | Kiro",
+   "quote": "ra le preferite Dear students, Tomorrow 4 April there will be the second exercise session, which will cover unification, bottom-up proof procedures and building knowledge bases. We strongly recommend bringing a laptop in order to run DLV (a disjunctive logic programming system) on your knowledge bases. I have uploaded a few slides with instructions on how to install and run DLV. If you have issues with the installation you can ask me during the exercise session. Best, Gian Carlo Permalink Dear students, Regrettably"
+  },
+  {
+   "thread": "forum-thread-25342",
+   "title": "KRR2 - 2324: Second exercise session on Datalog - 4/4/2024 | Kiro",
+   "quote": "ises in the students' forum. Best, Gian Carlo Permalink Visualizza intervento genitore Dear students, The exercise session on Datalog is rescheduled to tomorrow 11 April at 1PM. We strongly recommend bringing a laptop in order to run DLV (a disjunctive logic programming system) on your knowledge bases. I have uploaded a few slides with instructions on how to install and run DLV. If you have issues with the installation you can ask me during the exercise session. Best, Gian Carlo Permalink Visualizza intervento geni"
+  },
+  {
+   "thread": "forum-thread-35379",
+   "title": "KRR MOD2 - 2024-2025 : First exercise session on SQL tomorrow 18/3 | Kiro",
+   "quote": "Datalog) ►  Inserisci tra le preferite Dear students, The first exercise session on SQL will be tomorrow 18 March at 4PM. Although every exercise can be solved by pen and paper, we strongly recommend bringing a laptop in order to run queries on https://sqliteonline.com/ . The first exercise sheet is up in case you want to take a look at the exercises. Best, Gian Carlo Permalink Second exercise sheet (Datalog) ►"
+  },
+  {
+   "thread": "forum-thread-39100",
+   "title": "KRR MOD2 - 2024-2025 : Important remarks about the KRR2 exam of July 7th | Kiro",
+   "quote": "admitted and students found with this technology will be excluded from the exam; AI-empowered watches (basically all digital watches) cannot be used during the exam; if you need to check time, please bring a traditional watch; otherwise, we are used to report time and answer questions about remaining time. Taking pictures of the tests, copying its content and related activities are strictly prohibited and sanctioned. In fact, you have to deliver all the sheets you are given to take the test, even if you decide to w"
+  },
+  {
+   "thread": "forum-thread-38515",
+   "title": "KRR MOD2 - 2024-2025 : Policies fImportant remarks about the registration for the exam ses",
+   "quote": "admitted and students found with this technology will be excluded from the exam; AI-empowered watches (basically all digital watches) cannot be used during the exam; if you need to check time, please bring a traditional watch; otherwise, we are used to report time and answer questions about remaining time. Taking pictures of the tests, copying its content and related activities are strictly prohibited and sanctioned. In fact, you have to deliver all the sheets you are given to take the test, even if you decide to w"
+  },
+  {
+   "thread": "forum-thread-49410",
+   "title": "KRR2  509480_10845_2025: KRR2 Exams' Policies - Read it Carefully | Kiro",
+   "quote": "admitted and students found with this technology will be excluded from the exam; AI-empowered watches (basically all digital watches) cannot be used during the exam; if you need to check time, please bring a traditional watch; otherwise, we are used to report time and answer questions about remaining time. Taking pictures of the tests, copying its content and related activities are strictly prohibited and sanctioned. In fact, you have to deliver all the sheets you are given to take the test, even if you decide to w"
+  },
+  {
+   "thread": "forum-thread-46341",
+   "title": "KRR2  509480_10845_2025: First exercise session on SQL tomorrow 19/3 | Kiro",
+   "quote": "ling DLV ►  Inserisci tra le preferite Dear students, The first exercise session on SQL will be tomorrow 19 March at 1PM. Although every exercise can be solved by pen and paper, we strongly recommend bringing a laptop in order to run queries on https://sqliteonline.com/ . The first exercise sheet is up in case you want to take a look at the exercises. Best, Gian Carlo Permalink ◄ Sharing of teaching material used in class Next exercise sessions and installing DLV ►"
+  },
+  {
+   "thread": "forum-thread-2257",
+   "title": "Art_509479_10589: [KRR] Mock Exam and Exam Instructions | Kiro",
+   "quote": "ut hurrying too much. Some indications about the exam. As of today, unless the situation and regulations deteriorate, the exam will be in person . For the exam, you do not need any specific material. Bring your ID, a pen or two, and some water. Those who cannot attend the exam with a valid justification (quarantine, suspected contact, fragile situation, etc.) can request to participate remotely. Please note that, due to the difference in format, the remote exam will be different. For any questions, contact me. Best"
+  },
+  {
+   "thread": "forum-thread-2926",
+   "title": "Art_509479_10589: [KRR] Feb 28th Exam Instructions | Kiro",
+   "quote": "R] Results Exam 28/02/2022 ►  Inserisci tra le preferite Dear students, the next first KRR exam (February 7th, at 14:30) will take place in person in room V4 (Venezian). Note that this is a different room than the previous exam (in the same building). For the exam, you need to bring your ID, a pen (or two) and some water. Nothing else. Those unable to attend due to COVID-related issues, and those currently outside of Italy, may request to do the exam online. Below you will find the relevant information. Make sure y"
+  },
+  {
+   "thread": "forum-thread-2926",
+   "title": "Art_509479_10589: [KRR] Feb 28th Exam Instructions | Kiro",
+   "quote": "xt first KRR exam (February 7th, at 14:30) will take place in person in room V4 (Venezian). Note that this is a different room than the previous exam (in the same building). For the exam, you need to bring your ID, a pen (or two) and some water. Nothing else. Those unable to attend due to COVID-related issues, and those currently outside of Italy, may request to do the exam online. Below you will find the relevant information. Make sure you understand it, and contact me in case of any doubts. Requests Requests are"
+  }
+ ],
+ "esonero_partial": [
+  {
+   "thread": "forum-thread-23534",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Instructions for Exam | Kiro",
+   "quote": "instructions for the KRR exam on February 5th. Please read them carefully . You should register to the exam through the online system. If you see more than one option for KRR, please register to the partial exam labelled as \" Part I \". The exam will take place on February 5th, 14:30, at room G21 in Milano-Statale. Please be there by 14:15, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do bring your student"
+  },
+  {
+   "thread": "forum-thread-43282",
+   "title": "KNOWLEDGE  509479_10845_2025: IMPORTANT Announcement | Kiro",
+   "quote": "ach. The slides and lecture notes are already available. To test your knowledge, an exercise sheet will be published, and you are welcome to submit your answers (precise instructions will follow) for partial exam credits. Sorry for the inconvenience. Best, Rafael Permalink ◄ [KRR] Zoom link for exercise session 5 [KRR] Updates ►"
+  },
+  {
+   "thread": "forum-thread-11982",
+   "title": "Art_509479_10589: [KRR] Exams February 6th and 27th and Official Grades | Kiro",
+   "quote": "Module 1 Exam September 30th  Inserisci tra le preferite Dear students, the next exams for KRR will take place on February 6th and February 27th. Please make sure to register to the adequate module (partial exams labeled \"Part I\" and \"Part II\" respectively). Also remember that we can only formalise your final grade if you register for the full exam (\"Appello con verbalizzazione online\"). Hence, if you have passed both modules (or plan to do so in the next session), do not forget to register to that exam as well. B"
+  },
+  {
+   "thread": "forum-thread-6887",
+   "title": "Art_509479_10589: [KRR] July Exams (both modules) | Kiro",
+   "quote": "xams (both modules) ◄ [KRR] Results written exam Module 1 Galileo Science Festival ►  Inserisci tra le preferite Dear students, for the July 11th exam, you will see the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. Module 1 starts at 14:00; Module 2 starts at 16:00. The full exam is needed to register your final official grade i"
+  },
+  {
+   "thread": "forum-thread-6624",
+   "title": "Art_509479_10589: [KRR] Important information about KRR Exams (both modules) | Kiro",
+   "quote": "/02/2022 [KRR] Results written exam Module 1 ►  Inserisci tra le preferite Dear students, I want to briefly clarify the registration for the KRR exams. You will see the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. The full exam is needed to register your final official grade into the system. Hence, if you have already passed Mo"
+  }
+ ],
+ "registration": [
+  {
+   "thread": "forum-thread-23534",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Instructions for Exam | Kiro",
+   "quote": "ates and exams [KRR] Results Exam 2024/07/08 ►  Inserisci tra le preferite Dear students, below you can find the instructions for the KRR exam on February 5th. Please read them carefully . You should register to the exam through the online system. If you see more than one option for KRR, please register to the partial exam labelled as \" Part I \". The exam will take place on February 5th, 14:30, at room G21 in Milano-Statale. Please be there by 14:15, to guarantee that we can start the exam on time. During the exam,"
+  },
+  {
+   "thread": "forum-thread-23534",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Instructions for Exam | Kiro",
+   "quote": "you can find the instructions for the KRR exam on February 5th. Please read them carefully . You should register to the exam through the online system. If you see more than one option for KRR, please register to the partial exam labelled as \" Part I \". The exam will take place on February 5th, 14:30, at room G21 in Milano-Statale. Please be there by 14:15, to guarantee that we can start the exam on time. During the exam, you will need pen, pencil, and eraser. No additional material is needed (or allowed), but do br"
+  },
+  {
+   "thread": "forum-thread-22469",
+   "title": "KNOWLEDGE  509479_10589_2023: [KRR] Updates and exams | Kiro",
+   "quote": "(for all your courses) here: https://bai.unipv.it/home-eng/enrolled-students/ (sub-section \"Exam Sessions / Winter session\"). KRR takes place on the 5th and 26th February. Just to emphasise, you can register to *any* of the 6 exam sessions of the year (do so when you feel ready), and you can repeat the exam as many times as necessary until you pass it. For the exam you need only a pen to write your answers (and if you want, a pencil and eraser for you own notes); everything else will be provided by me. Have a nice"
+  },
+  {
+   "thread": "forum-thread-29238",
+   "title": "KRR2 - 2324: Results for September 11th exam | Kiro",
+   "quote": "Results for September 11th exam ◄ Final grade registration for the whole course: some clarifications Delayed correction of latest exam ►  Inserisci tra le preferite Dear all, You can find the list of students who have passed the July exam and their related grades here below. 535408: 23/30 518344: 20/30 We remind you that our exam does not come with an oral session"
+  },
+  {
+   "thread": "forum-thread-29238",
+   "title": "KRR2 - 2324: Results for September 11th exam | Kiro",
+   "quote": "icocca, at 14:30, and not in room T037. You can find room T014 on the ground floor, by going right after entering the building. Best, Gian Carlo Permalink Visualizza intervento genitore ◄ Final grade registration for the whole course: some clarifications Delayed correction of latest exam ►"
+  },
+  {
+   "thread": "forum-thread-29343",
+   "title": "KRR2 - 2324: Final grade registration for the whole course: some clarifications | Kiro",
+   "quote": "Final grade registration for the whole course: some clarifications ◄ Room for KRR2 exam, Sep 27th, 2024 Results for September 11th exam ►  Inserisci tra le preferite Dear all, For final grade registration, please be patient, especially if you do not have urgencies related to scholarships ( which we usually try to consider and acco"
+  },
+  {
+   "thread": "forum-thread-38619",
+   "title": "KRR MOD2 - 2024-2025 : Important Information about the Exam Session  | Kiro",
+   "quote": "Important Information about the Exam Session ◄ Policies fImportant remarks about the registration for the exam sessions and their execution Results of Session 1 out in one day max + test revision meeting ►  Inserisci tra le preferite Dear students, A few additional notes to make sure that the exam proceeds smoothly. The only items that you need during the exam are: - One or more pens/pencils (if you re"
+  },
+  {
+   "thread": "forum-thread-38619",
+   "title": "KRR MOD2 - 2024-2025 : Important Information about the Exam Session  | Kiro",
+   "quote": "ok at the exam before the official start time. Point penalties and/or other sanctions may occur in case of violations. Best Regards, Matteo Palmonari Permalink ◄ Policies fImportant remarks about the registration for the exam sessions and their execution Results of Session 1 out in one day max + test revision meeting ►"
+  },
+  {
+   "thread": "forum-thread-39100",
+   "title": "KRR MOD2 - 2024-2025 : Important remarks about the KRR2 exam of July 7th | Kiro",
+   "quote": "nt remarks about the KRR2 exam of July 7th ◄ Results of June 17th KRR2 Exam Results of July 7th KRR2 Exam ►  Inserisci tra le preferite Dear all, Please read carefully the following remarks about the registration to the exam sessions and related policies Registration to the exam sessions in the system Apparently there is no critical issue reported this time. However, refer to the similar message shared during the June session Remember to register to the correct session, i.e., KNOWLEDGE REPRESENTATION AND (PART 2)."
+  },
+  {
+   "thread": "forum-thread-38515",
+   "title": "KRR MOD2 - 2024-2025 : Policies fImportant remarks about the registration for the exam ses",
+   "quote": "Policies fImportant remarks about the registration for the exam sessions and their execution ◄ Additional examples of Exam Question 5 (Datalog and SQL) Important Information about the Exam Session ►  Inserisci tra le preferite Dear all, Please read carefully the following remarks about the registration to the exam sessions and related policies Registration"
+  },
+  {
+   "thread": "forum-thread-38515",
+   "title": "KRR MOD2 - 2024-2025 : Policies fImportant remarks about the registration for the exam ses",
+   "quote": "n ◄ Additional examples of Exam Question 5 (Datalog and SQL) Important Information about the Exam Session ►  Inserisci tra le preferite Dear all, Please read carefully the following remarks about the registration to the exam sessions and related policies Registration to the exam sessions in the system We cannot check individual issues with the system. All administrative issues related to finding/not finding the proper session in the system must be resolved by the students with the administrative personnel. Especial"
+  },
+  {
+   "thread": "forum-thread-38343",
+   "title": "KRR MOD2 - 2024-2025 : Additional examples of Exam Question 5 (Datalog and SQL) | Kiro",
+   "quote": "Additional examples of Exam Question 5 (Datalog and SQL) ◄ About tomorrow lesson - Thursday, June 5th Policies fImportant remarks about the registration for the exam sessions and their execution ►  Inserisci tra le preferite Dear students, Question 5 in the uploaded June & July 2022 exams has been updated in order to provide additional examples of the structure and topics of this question for this year. Best wishes, Gian Carlo Permalink ◄ About tomorrow le"
+  },
+  {
+   "thread": "forum-thread-38343",
+   "title": "KRR MOD2 - 2024-2025 : Additional examples of Exam Question 5 (Datalog and SQL) | Kiro",
+   "quote": "de additional examples of the structure and topics of this question for this year. Best wishes, Gian Carlo Permalink ◄ About tomorrow lesson - Thursday, June 5th Policies fImportant remarks about the registration for the exam sessions and their execution ►"
+  },
+  {
+   "thread": "forum-thread-50056",
+   "title": "KRR2  509480_10845_2025: Results of July 8th KRR2 Exam  | Kiro",
+   "quote": "o refuse your grade, you can do it using the functionalities of the system, which gives 5 days to take a decision - This grade does not expires. Once you have your grades for both modules and you are registered to the \"whole exam\" session, the final grade for KRR will be recorded in the system. Important remark about the decision to refute the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this optio"
+  },
+  {
+   "thread": "forum-thread-49411",
+   "title": "KRR2  509480_10845_2025: Additional Important Information about the KRR2 Exam Session  | K",
+   "quote": "Additional Important Information about the KRR2 Exam Session ◄ Some instructions about registration to KRR2 exam sessions Results of June 15th KRR2 Exam ►  Inserisci tra le preferite Dear students, A few additional notes to make sure that the exam proceeds smoothly. The only items that you need during the exam are: - One or more pens/pencils (if you really need it: rubber and white-out liquids are admitt"
+  },
+  {
+   "thread": "forum-thread-49411",
+   "title": "KRR2  509480_10845_2025: Additional Important Information about the KRR2 Exam Session  | K",
+   "quote": "You cannot look at the exam before the official start time. Point penalties and/or other sanctions may occur in case of violations. Best Regards, Matteo Palmonari Permalink ◄ Some instructions about registration to KRR2 exam sessions Results of June 15th KRR2 Exam ►"
+  },
+  {
+   "thread": "forum-thread-49143",
+   "title": "KRR2  509480_10845_2025: Tomorrow's exercise session (June 4) will be online | Kiro",
+   "quote": "Tomorrow's exercise session (June 4) will be online ◄ All exercises solutions are up + additional blackboard notes Some instructions about registration to KRR2 exam sessions ►  Inserisci tra le preferite Dear students, Tomorrow's last exercise session will be held online at 13:15. I will post a zoom link to connect shortly before the start as a reply to this post. Best wishes, Gian Carlo Permalink Dear students, Here is the link to connect: https://us04we"
+  },
+  {
+   "thread": "forum-thread-49143",
+   "title": "KRR2  509480_10845_2025: Tomorrow's exercise session (June 4) will be online | Kiro",
+   "quote": "m9.1 The exercise session will start at 13:15. See you soon, Gian Carlo Permalink Visualizza intervento genitore ◄ All exercises solutions are up + additional blackboard notes Some instructions about registration to KRR2 exam sessions ►"
+  },
+  {
+   "thread": "forum-thread-49768",
+   "title": "KRR2  509480_10845_2025: Results of June 15th KRR2 Exam  | Kiro",
+   "quote": "o refuse your grade, you can do it using the functionalities of the system, which gives 5 days to take a decision - This grade does not expires. Once you have your grades for both modules and you are registered to the \"whole exam\" session, the final grade for KRR will be recorded in the system. Important remark about the decision to refute the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this optio"
+  },
+  {
+   "thread": "forum-thread-49409",
+   "title": "KRR2  509480_10845_2025: Some instructions about registration to KRR2 exam sessions | Kiro",
+   "quote": "Some instructions about registration to KRR2 exam sessions ◄ Tomorrow's exercise session (June 4) will be online Additional Important Information about the KRR2 Exam Session ►  Inserisci tra le preferite Dear all, Please read carefully the following remarks about the registration to the exam sessions and related policies. REMARK: we remind th"
+  },
+  {
+   "thread": "forum-thread-49409",
+   "title": "KRR2  509480_10845_2025: Some instructions about registration to KRR2 exam sessions | Kiro",
+   "quote": "w's exercise session (June 4) will be online Additional Important Information about the KRR2 Exam Session ►  Inserisci tra le preferite Dear all, Please read carefully the following remarks about the registration to the exam sessions and related policies. REMARK: we remind that today is expiring the registration window. If you plan to attend the exam and you have not registered yet, please do it ASAP. We won't accept students who are not registered (unless the case falls in one of the circumstances regulated below)"
+  },
+  {
+   "thread": "forum-thread-11982",
+   "title": "Art_509479_10589: [KRR] Exams February 6th and 27th and Official Grades | Kiro",
+   "quote": "27th and Official Grades ◄ [KRR] Module 1 Exam September 30th  Inserisci tra le preferite Dear students, the next exams for KRR will take place on February 6th and February 27th. Please make sure to register to the adequate module (partial exams labeled \"Part I\" and \"Part II\" respectively). Also remember that we can only formalise your final grade if you register for the full exam (\"Appello con verbalizzazione online\"). Hence, if you have passed both modules (or plan to do so in the next session), do not forget to"
+  },
+  {
+   "thread": "forum-thread-11982",
+   "title": "Art_509479_10589: [KRR] Exams February 6th and 27th and Official Grades | Kiro",
+   "quote": "th and February 27th. Please make sure to register to the adequate module (partial exams labeled \"Part I\" and \"Part II\" respectively). Also remember that we can only formalise your final grade if you register for the full exam (\"Appello con verbalizzazione online\"). Hence, if you have passed both modules (or plan to do so in the next session), do not forget to register to that exam as well. Best, Rafael Permalink ◄ [KRR] Module 1 Exam September 30th"
+  },
+  {
+   "thread": "forum-thread-6887",
+   "title": "Art_509479_10589: [KRR] July Exams (both modules) | Kiro",
+   "quote": "[KRR] July Exams (both modules) ◄ [KRR] Results written exam Module 1 Galileo Science Festival ►  Inserisci tra le preferite Dear students, for the July 11th exam, you will see the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. Module 1 starts at 14:00; Module 2 starts at 16:00. The full exam is needed to regis"
+  },
+  {
+   "thread": "forum-thread-6887",
+   "title": "Art_509479_10589: [KRR] July Exams (both modules) | Kiro",
+   "quote": "the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. Module 1 starts at 14:00; Module 2 starts at 16:00. The full exam is needed to register your final official grade into the system. Hence, if you have already passed Module 1 and are taking the Module 2 exam, please also register to the full exam. Do not forget that registration"
+  },
+  {
+   "thread": "forum-thread-2926",
+   "title": "Art_509479_10589: [KRR] Feb 28th Exam Instructions | Kiro",
+   "quote": "https://forms.gle/rjwPjdxNZisLzWCdA You must be connected with your universitadipavia account. The form requires you to upload the attached form, fully compiled and signed, as a PDF file. Remember to register for the exam through the app. Requests for the online exam will be accepted until February 28th at 10:00 AM sharp. Later requests will not be accepted (but you can do a later exam). Exam The online exam is divided in two parts: A quiz worth 20 points and An oral examination worth 10 points (which will be onlin"
+  },
+  {
+   "thread": "forum-thread-6995",
+   "title": "Art_509479_10589: [KRR] Final Results June | Kiro",
+   "quote": "RR exam of June. You must be logged in with your universitadipavia account to access it. As a brief reminder: to pass the exam, you must have gotten at least 18 points in each modure of KRR, and have registered for the full exam in June. The final score is the average of the two modules, rounded to the closest integer. Please check the information, and let us know by an email to both ( rafael.penaloza@unimib.it ; matteo.palmonari@unimib.it ) if you notice any incongruence. A few of you have passed both modules, but"
+  },
+  {
+   "thread": "forum-thread-6995",
+   "title": "Art_509479_10589: [KRR] Final Results June | Kiro",
+   "quote": "heck the information, and let us know by an email to both ( rafael.penaloza@unimib.it ; matteo.palmonari@unimib.it ) if you notice any incongruence. A few of you have passed both modules, but did not register to the final exam. Please register to the exam in July so that we can assign you the final score. Best, Rafael Permalink ◄ Galileo Science Festival [KRR] Results written exam July module 1 ►"
+  },
+  {
+   "thread": "forum-thread-6624",
+   "title": "Art_509479_10589: [KRR] Important information about KRR Exams (both modules) | Kiro",
+   "quote": "RR] Important information about KRR Exams (both modules) ◄ [KRR] Results Exam 28/02/2022 [KRR] Results written exam Module 1 ►  Inserisci tra le preferite Dear students, I want to briefly clarify the registration for the KRR exams. You will see the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. The full exam is needed to register"
+  },
+  {
+   "thread": "forum-thread-6624",
+   "title": "Art_509479_10589: [KRR] Important information about KRR Exams (both modules) | Kiro",
+   "quote": "odules) ◄ [KRR] Results Exam 28/02/2022 [KRR] Results written exam Module 1 ►  Inserisci tra le preferite Dear students, I want to briefly clarify the registration for the KRR exams. You will see the registration available for two partial exams (one for each module), plus one for the full exam. If you intend to take the exam for Module 1 (with me) or Module 2 (with Prof. Palmonari), you must register to the respective partial test. The full exam is needed to register your final official grade into the system. Hence"
+  },
+  {
+   "thread": "forum-thread-7214",
+   "title": "Art_509479_10589: [KRR] Next Exams (both modules) | Kiro",
+   "quote": "le preferite Dear students, the September exams for KRR will take place on the following dates: For Module 1 : September 14th and September 30th For Module 2 : September 8th and September 26th Please register to the adequate exam on those dates. To formalise the final score, you should also register to the total exam , programmed on the same dates as Module 1. For any doubts, please let me know. Best, Rafael Permalink ◄ [KRR] Results written exam July module 1 [KRR] Final Results July ►"
+  },
+  {
+   "thread": "forum-thread-7214",
+   "title": "Art_509479_10589: [KRR] Next Exams (both modules) | Kiro",
+   "quote": "es: For Module 1 : September 14th and September 30th For Module 2 : September 8th and September 26th Please register to the adequate exam on those dates. To formalise the final score, you should also register to the total exam , programmed on the same dates as Module 1. For any doubts, please let me know. Best, Rafael Permalink ◄ [KRR] Results written exam July module 1 [KRR] Final Results July ►"
+  },
+  {
+   "thread": "forum-thread-2396",
+   "title": "Art_509479_10589: [KRR] Online Exam Instructions | Kiro",
+   "quote": "lated cases, upload the documentation supporting your situation for students abroad, you must fill and sign the document that will be available at the KIRO platform on Monday January 31st Remember to register for the exam through the app. Requests for the online exam will be accepted until February 7th at 10:00 AM sharp. Later requests will not be accepted (but you can do the exam on February 28th). Exam The online exam is divided in two parts: A quiz worth 20 points and An oral examination worth 10 points (which w"
+  }
+ ],
+ "bonus_points": [
+  {
+   "thread": "forum-thread-44578",
+   "title": "KNOWLEDGE  509479_10845_2025: [KRR] Exercise 6 | Kiro",
+   "quote": "[KRR] Exercise 6 ◄ [KRR] Updates [KRR] Exam Visualization ►  Inserisci tra le preferite Dear students, Exercise 6 has been published. First-year students can get up to 2 bonus points by solving these exercises. Bring your solutions the day of the exam. Copied and automatically generated answers will receive no bonus points. Best, Rafael Permalink ◄ [KRR] Updates [KRR] Exam Visualization ►"
+  },
+  {
+   "thread": "forum-thread-44578",
+   "title": "KNOWLEDGE  509479_10845_2025: [KRR] Exercise 6 | Kiro",
+   "quote": "6 has been published. First-year students can get up to 2 bonus points by solving these exercises. Bring your solutions the day of the exam. Copied and automatically generated answers will receive no bonus points. Best, Rafael Permalink ◄ [KRR] Updates [KRR] Exam Visualization ►"
+  },
+  {
+   "thread": "forum-thread-44561",
+   "title": "KNOWLEDGE  509479_10845_2025: [KRR] Updates | Kiro",
+   "quote": "preferite Dear students, I have uploaded the solutions to Exercises 4 and 5, and instructions for the exam (please read them carefully). The exercises on probabilistic reasoning and instructions for extra points will be available in the next days. Best, Rafael Permalink ◄ IMPORTANT Announcement [KRR] Exercise 6 ►"
+  },
+  {
+   "thread": "forum-thread-29238",
+   "title": "KRR2 - 2324: Results for September 11th exam | Kiro",
+   "quote": "ns (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests, considering some extra bonus. - The student with IDs 535875 has got a score in the interval 15-16; we let him know just in case he is more interested in checking his test (all other tests felt below this score). - We cannot provide information about the tests by email; unfortunately, you need to visit us in presence for getting insight"
+  },
+  {
+   "thread": "forum-thread-28512",
+   "title": "KRR2 - 2324: Results for June 21th exam | Kiro",
+   "quote": "he tests with boundary scores (close to 18, especially insufficient ones). - Considering that this is the first session and that the extra question was found quite difficult, we decided to award some extra bonus to a few tests that were done particularly well. - Students with IDs 535322, 535996, 513215 and 535601 got a score in the interval 16-17; we let them know just in case they are more interested in checking their test (but we remind that everybody can come and check). - We cannot provide additional informatio"
+  },
+  {
+   "thread": "forum-thread-28733",
+   "title": "KRR2 - 2324: Results for July 8th exam | Kiro",
+   "quote": "eck all the tests with boundary scores (close to 18, especially insufficient ones). - Considering that this was one of the first sessions, we have been quite generous in our grading, considering some extra bonus. - Students with IDs 513222, 535708, 535462, 518344, and 535750, got a score in the interval 15-16; we let them know just in case they are more interested in checking their test (but we remind that everybody can come and check). - We cannot provide information about the tests by email; unfortunately, you ne"
+  },
+  {
+   "thread": "forum-thread-28733",
+   "title": "KRR2 - 2324: Results for July 8th exam | Kiro",
+   "quote": "to 5 days to decide whether to accept / reject your grade for KRR2 (KRR MOD 2). In the unlikely case that we upgrade your vote after the test visualization session (unlikely because we applied a few bonuses already, but not impossible), we will consider the updated KRR2 grade to compute the average with KRR1 and the final KRR grade (in other words, we do not need to modify the KRR2 grade because we will simply use the new grade for the average). Therefore, if you are fine with accepting the current grade, you can"
+  }
+ ],
+ "grading_policy": [
+  {
+   "thread": "forum-thread-17684",
+   "title": "KRR2: Results of 10 July exam | Kiro",
+   "quote": "ores. The details are TBD. A few notes: - The total score does not include the points gained with the project, which will be communicated as soon as possible. - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Students with IDs 504946 and 513009 got a score in the interval 16-17; we let them know just in case they are more interested in checking their test (but we remind that everybody can come and check). Best, Matteo Palmonari Gian Carlo Milan"
+  },
+  {
+   "thread": "forum-thread-23769",
+   "title": "KRR2: Results of 5 February exam | Kiro",
+   "quote": "find the list of students who have passed the 5th February exam and their related grades below. ID Grade 505079 23 515658 27 504946 19 515788 18 A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We remind you that our exam does not come with an oral session, which is substituted by the additional scores that are given for the optional project. Due to the limited number of students who took the exam, we proceed as follows: - for al"
+  },
+  {
+   "thread": "forum-thread-24468",
+   "title": "KRR2: Results of 26 February exam | Kiro",
+   "quote": "s You can find the list of students who have passed the 26th February exam and their related grades below. ID Grade 513009 18 514900 21 516169 22 A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We remind you that our exam does not come with an oral session, which is substituted by the additional scores that are given for the optional project. Due to the limited number of students who took the exam, we proceed as follows: - for al"
+  },
+  {
+   "thread": "forum-thread-17474",
+   "title": "KRR2: Results of 23 June exam | Kiro",
+   "quote": "dit#heading=h.baxjxvxcecax A few notes: - The total score does not include the points gained with the project, which will be communicated as soon as possible. - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Students with IDs 513011 and 506276 got a score in the interval 16-17; we let them know just in case they are more interested in checking their test (but we remind that everybody can come and check). Best, Matteo Palmonari Gian Carlo Milan"
+  },
+  {
+   "thread": "forum-thread-18238",
+   "title": "KRR2: Results of 13 September exam | Kiro",
+   "quote": "le preferite Dear all, You can find the list of students who have passed the 13th September exam and their related grades in the document below. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We remind you that our exam does not come with an oral session, which is substituted by the additional scores that are given for the optional project. We are going to arrange an in-person meeting at University of Milano-Bicocca for the stu"
+  },
+  {
+   "thread": "forum-thread-18903",
+   "title": "KRR2: Results of 29 September exam | Kiro",
+   "quote": "le preferite Dear all, You can find the list of students who have passed the 29th September exam and their related grades in the document below. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We remind you that our exam does not come with an oral session, which is substituted by the additional scores that are given for the optional project. We are going to arrange an in-person meeting at University of Milano-Bicocca for the stu"
+  },
+  {
+   "thread": "forum-thread-34178",
+   "title": "KRR2 - 2324: Results of the February 3rd exam | Kiro",
+   "quote": "document by tormorrow, Friday February 7th 1 PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - We cannot provide information about the tests by email; unfortunately, you need"
+  },
+  {
+   "thread": "forum-thread-34178",
+   "title": "KRR2 - 2324: Results of the February 3rd exam | Kiro",
+   "quote": "een automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - We cannot provide information about the tests by email; unfortunately, you need to visit us in presence for getting insights into your tests. About exam registration: - We will upload the grades in the system now - If you want to reject your grade, you can do i"
+  },
+  {
+   "thread": "forum-thread-29238",
+   "title": "KRR2 - 2324: Results for September 11th exam | Kiro",
+   "quote": "this document by Wednesday, September 25th 5PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests, considering some extra bonus. - The student with IDs 535875 has got a score in th"
+  },
+  {
+   "thread": "forum-thread-29238",
+   "title": "KRR2 - 2324: Results for September 11th exam | Kiro",
+   "quote": "een automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests, considering some extra bonus. - The student with IDs 535875 has got a score in the interval 15-16; we let him know just in case he is more interested in checking his test (all other tests felt below this score). - We cannot provide information about the tests by"
+  },
+  {
+   "thread": "forum-thread-28512",
+   "title": "KRR2 - 2324: Results for June 21th exam | Kiro",
+   "quote": "me to this document by Wednesday, July 3rd, 5PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - Considering that this is the first session and that the extra question was found quite difficult, we decided to award some extra bonus to"
+  },
+  {
+   "thread": "forum-thread-35302",
+   "title": "KRR2 - 2324: Results of the February 20th exam | Kiro",
+   "quote": "s who want to look at their tests and individual scores can indicate their interest by sending an email to both of us, and we will set up a date. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - We cannot provide information about the tests by email; unfortunately, you need"
+  },
+  {
+   "thread": "forum-thread-35302",
+   "title": "KRR2 - 2324: Results of the February 20th exam | Kiro",
+   "quote": "een automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - We cannot provide information about the tests by email; unfortunately, you need to visit us in presence for getting insights into your tests. About exam registration: - We have upladed the grades in the system - If you want to reject your grade, you can do it u"
+  },
+  {
+   "thread": "forum-thread-28733",
+   "title": "KRR2 - 2324: Results for July 8th exam | Kiro",
+   "quote": "name to this document by Monday, July 22nd, 5PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - Considering that this was one of the first sessions, we have been quite generous in our grading, considering some extra bonus. - Students"
+  },
+  {
+   "thread": "forum-thread-28733",
+   "title": "KRR2 - 2324: Results for July 8th exam | Kiro",
+   "quote": "tice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - Considering that this was one of the first sessions, we have been quite generous in our grading, considering some extra bonus. - Students with IDs 513222, 535708, 535462, 518344, and 535750, got a score in the interval 15-16; we let them know just in case they are more interested in checking their test (but we remind that everybody can come and check). - We cannot provid"
+  },
+  {
+   "thread": "forum-thread-29343",
+   "title": "KRR2 - 2324: Final grade registration for the whole course: some clarifications | Kiro",
+   "quote": "ation, please be patient, especially if you do not have urgencies related to scholarships ( which we usually try to consider and accommodate ): the final registration comes only after we: 1) complete grading for both modules in the same session, 2) upload both grade lists in the system, 3) the mandatory 5 days that the system takes to officially record the grades is expired. You can easily imagine that the whole process takes time. Best Matteo Palmonari & Rafael Penaloza Permalink ◄ Room for KRR2 exam, Sep 27th, 20"
+  },
+  {
+   "thread": "forum-thread-30377",
+   "title": "KRR2 - 2324: Results for September 27th exam | Kiro",
+   "quote": "dules. However, I have no problem in moving this session on Tuesday 29th at 15.30 . In case you prefer this slot, write it in the document above. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - The student with IDs 516032 and 534982 has got a score ~16; we let them know ju"
+  },
+  {
+   "thread": "forum-thread-30377",
+   "title": "KRR2 - 2324: Results for September 27th exam | Kiro",
+   "quote": "een automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We have been quite generous in grading sufficient tests. - The student with IDs 516032 and 534982 has got a score ~16; we let them know just in case they are more interested in checking his test (all other tests felt below this score). - We cannot provide information about the tests by email; unfortunately, you need to"
+  },
+  {
+   "thread": "forum-thread-40356",
+   "title": "KRR MOD2 - 2024-2025 : Results of September 26th KRR2 Exam | Kiro",
+   "quote": "of the schema, which changed the inferences. Since the mistake was discovered during the exam, we have considered correct all the interpretations and corrected the rest of the test accordingly. Also, we granted some little extra score to those who find the typo. - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all th"
+  },
+  {
+   "thread": "forum-thread-40356",
+   "title": "KRR MOD2 - 2024-2025 : Results of September 26th KRR2 Exam | Kiro",
+   "quote": "onsidered correct all the interpretations and corrected the rest of the test accordingly. Also, we granted some little extra score to those who find the typo. - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We cannot provide additional"
+  },
+  {
+   "thread": "forum-thread-45276",
+   "title": "KRR MOD2 - 2024-2025 : Results of February 2nd KRR2 Exam | Kiro",
+   "quote": "e February 2nd KRR2 Exam. We remind you that our exam does not come with an oral session, which is substituted by the open questions in the test. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We cannot provide additional"
+  },
+  {
+   "thread": "forum-thread-45276",
+   "title": "KRR MOD2 - 2024-2025 : Results of February 2nd KRR2 Exam | Kiro",
+   "quote": "refuse the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this option carefully - We have been quite generous in grading sufficient tests - This is an exam of the first year, and you have multiple opportunities to raise your average grade in your career Best, Matteo Palmonari Gian Carlo Milanese Permalink ◄ Results of September 26th KRR2 Exam Results of February 19th KRR2 Exam ►"
+  },
+  {
+   "thread": "forum-thread-39868",
+   "title": "KRR MOD2 - 2024-2025 : Results of September 10th KRR2 Exam | Kiro",
+   "quote": "to this document by Monday, September 22nd, 2PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We cannot provide additional"
+  },
+  {
+   "thread": "forum-thread-39868",
+   "title": "KRR MOD2 - 2024-2025 : Results of September 10th KRR2 Exam | Kiro",
+   "quote": "refuse the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this option carefully - We have been quite generous in grading sufficient tests - This is an exam of the first year, and you have multiple opportunities to raise your average grade in your career Best, Matteo Palmonari Gian Carlo Milanese Permalink ◄ Results of July 7th KRR2 Exam Results of September 26th KRR2 Exam ►"
+  },
+  {
+   "thread": "forum-thread-45627",
+   "title": "KRR MOD2 - 2024-2025 : Results of February 19th KRR2 Exam | Kiro",
+   "quote": "February 19th KRR2 Exam. We remind you that our exam does not come with an oral session, which is substituted by the open questions in the test. A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We cannot provide additional"
+  },
+  {
+   "thread": "forum-thread-45627",
+   "title": "KRR MOD2 - 2024-2025 : Results of February 19th KRR2 Exam | Kiro",
+   "quote": "refuse the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this option carefully - We have been quite generous in grading sufficient tests - This is an exam of the first year, and you have multiple opportunities to raise your average grade in your career Best, Matteo Palmonari Gian Carlo Milanese Permalink ◄ Results of February 2nd KRR2 Exam"
+  },
+  {
+   "thread": "forum-thread-39259",
+   "title": "KRR MOD2 - 2024-2025 : Results of July 7th KRR2 Exam | Kiro",
+   "quote": "e to this document by Wednesday, July 16th, 5PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - Students with IDs 554201, 55"
+  },
+  {
+   "thread": "forum-thread-39259",
+   "title": "KRR MOD2 - 2024-2025 : Results of July 7th KRR2 Exam | Kiro",
+   "quote": "refuse the grade: - Rejecting the grade and taking the exam again is in your capacity; however, also based on our previous experience, we would strongly recommend to consider this option carefully - We have been quite generous in grading sufficient tests - This is an exam of the first year, and you have multiple opportunities to raise your average grade in your career Best, Matteo Palmonari Gian Carlo Milanese Permalink Dear students, The test visualization session will take place on Friday 18 July at 14:30 in roo"
+  },
+  {
+   "thread": "forum-thread-38993",
+   "title": "KRR MOD2 - 2024-2025 : Results of June 17th KRR2 Exam  | Kiro",
+   "quote": "me to this document by Wednesday, July 2nd, 5PM: https://docs.google.com/document/d/1K-QrqyJ1xbamYEPvaHGqmbsM42teEkbiIU0dzQ7PDfw/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - We also re-balanced the scor"
+  },
+  {
+   "thread": "forum-thread-50056",
+   "title": "KRR2  509480_10845_2025: Results of July 8th KRR2 Exam  | Kiro",
+   "quote": "this document by today, Monday, July 20th, 8PM: https://docs.google.com/document/d/1kvOm1Z_65Ntj3twT5sdpGtTLwMTNsgoclFdL2wUN488/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - This time we have inserted i"
+  },
+  {
+   "thread": "forum-thread-49768",
+   "title": "KRR2  509480_10845_2025: Results of June 15th KRR2 Exam  | Kiro",
+   "quote": "me to this document by Wednesday, July 1st, 7PM: https://docs.google.com/document/d/1kvOm1Z_65Ntj3twT5sdpGtTLwMTNsgoclFdL2wUN488/edit?usp=sharing A few notes: - All the scores have been automatically rounded following the standard practice without exceptions (< 0.5 vs. >= 0.5). - Additional rounding has been applied to rule out corner cases (e.g., from 23,45 to 23,50, which becomes 24) - We carefully check all the tests with boundary scores (close to 18, especially insufficient ones). - Students with IDs 575999 , 5"
+  },
+  {
+   "thread": "forum-thread-49768",
+   "title": "KRR2  509480_10845_2025: Results of June 15th KRR2 Exam  | Kiro",
+   "quote": "again, is at your risk and you may have to prepare well - This is an exam of the first year, and you have multiple opportunities to raise your average grade in your career A final remark: - While the pass rate has not changed much from the previous years, we are happy that a considerable number of students got top grades this year. Since the test structure has not changed much, I think you deserve some \"bravo\" from us. Best, Matteo Palmonari Gian Carlo Milanese Permalink A small addition: for any private communicat"
+  },
+  {
+   "thread": "forum-thread-7227",
+   "title": "Art_509479_10589: [KRR] Final Results July | Kiro",
+   "quote": "owledge Representation ►  Inserisci tra le preferite Dear students, the results for the July exam have been published; you can consult them at the studentionline site. The final score is the average (rounded to the closest integer) of the scores of the two modules. Please check that I did not make any error. The scores will become official on Monday (August 1st). I wish you a nice and relaxing summer break. Best, Rafael Permalink ◄ [KRR] Next Exams (both modules) Seminar on Knowledge Representation ►"
+  },
+  {
+   "thread": "forum-thread-6995",
+   "title": "Art_509479_10589: [KRR] Final Results June | Kiro",
+   "quote": "As a brief reminder: to pass the exam, you must have gotten at least 18 points in each modure of KRR, and have registered for the full exam in June. The final score is the average of the two modules, rounded to the closest integer. Please check the information, and let us know by an email to both ( rafael.penaloza@unimib.it ; matteo.palmonari@unimib.it ) if you notice any incongruence. A few of you have passed both modules, but did not register to the final exam. Please register to the exam in July so that we can a"
+  }
+ ],
+ "format_change": [
+  {
+   "thread": "forum-thread-28283",
+   "title": "KRR2 - 2324: Last clarifications about the exam and the test  | Kiro",
+   "quote": "Answer Set Programming (5 points). 7. Open question (3 points) about any topic seen during the lectures or included in the course material. 8. Extra question (3 points). Questions 1-7 follow the same format as in the exams from the previous years (no changes). As a consequence, the structure of the exam is for the most part the same as the one used for the exam in the last year. A few examples are uploaded on the course website, and other examples of exam exercises are included in the exercise sheets (note however"
+  },
+  {
+   "thread": "forum-thread-28283",
+   "title": "KRR2 - 2324: Last clarifications about the exam and the test  | Kiro",
+   "quote": "during the lectures or included in the course material. 8. Extra question (3 points). Questions 1-7 follow the same format as in the exams from the previous years (no changes). As a consequence, the structure of the exam is for the most part the same as the one used for the exam in the last year. A few examples are uploaded on the course website, and other examples of exam exercises are included in the exercise sheets (note however that the exam exercises might have a slightly different format from the ones in the"
+  },
+  {
+   "thread": "forum-thread-28804",
+   "title": "KRR2 - 2324: Some advice to prepare to next exam sessions | Kiro",
+   "quote": "he exercises with results expressed in the tabular format (see Exercise Sheet 6: RDFS and its solution ). Observe that in some test we may use this tabular format, in some other we may use the triple format; this should not confuse you, we're asking the same kind of information in two different but equivalent formats. Also, many list types or relations that are already in the graph G; these should not be included in the results. Finally, in the exercises you have seen in these tests, we focus on types of entities a"
+  },
+  {
+   "thread": "forum-thread-49768",
+   "title": "KRR2  509480_10845_2025: Results of June 15th KRR2 Exam  | Kiro",
+   "quote": "e grade in your career A final remark: - While the pass rate has not changed much from the previous years, we are happy that a considerable number of students got top grades this year. Since the test structure has not changed much, I think you deserve some \"bravo\" from us. Best, Matteo Palmonari Gian Carlo Milanese Permalink A small addition: for any private communication about the test, please always write to both teachers using their @unimib.it email address. No other channels will be considered (e.g., messages t"
+  }
+ ]
+}
