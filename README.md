@@ -168,6 +168,41 @@ silently — which is how the real libretto's combined `Voto - Data Esame`
 column and its zero-width padding characters were found. Re-run `build-career`
 after any change and check the diagnostics it prints.
 
+## Evidence audit
+
+`gradplan/audit.py` builds one dossier per remaining activity and writes
+`reference/coverage_ledger.md`. It exists because rating a course from the
+activity names on its current course page produces confident, wrong answers.
+
+What it reads, per activity:
+
+* every Kiro edition across academic years, not only the current one — the
+  Computer Programming project option is stated on the 2023-24 page and
+  nowhere else;
+* every activity by Moodle type, opened rather than inferred from its name —
+  an `assign` called "Exam Session 16 June" is an upload, not a paper;
+* every rule-bearing document, including PDFs and slide decks;
+* the Esse3 appelli list, which is authoritative for which sessions a course
+  can actually be sat in.
+
+A sentence only counts as establishing a rule when it comes from a source
+that states rules — an assignment or page description, a course front page,
+or a document named as exam information, instructions, syllabus or
+regulations. Without that filter, sentences in textbook chapters score as
+exam rules, which is exactly what happened on the first pass.
+
+Findings and judgement are kept in separate files, deliberately:
+
+* `data/audit/dossiers.json` — quoted sentences with their archive paths.
+* `reference/effort_ratings.json` — effort scores, the reason for each, and
+  for every gap the action that would close it.
+* `reference/assessment_profile.json` — regenerated from both, with
+  `findings` and `judgement` as separate keys.
+
+Evidence tiers: **A** quoted rules + past papers, **B** quoted rules only,
+**C** pages read but no rules published, **D** thin or nothing. `UNVERIFIED`
+is used wherever no source was found; it is not filled with a guess.
+
 ## Sources
 
 Rules and calendars are fetched from, and attributable to:
