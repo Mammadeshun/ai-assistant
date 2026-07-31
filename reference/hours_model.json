@@ -1,0 +1,8 @@
+{
+  "_purpose": "Hours to reach 18/30, per activity. Optimised for a bare pass, not for command of the subject. Every input is stated so it can be overridden.",
+  "_formula": "hours_to_18 = content_hours + drill_hours",
+  "_content": "content_hours = (topics in min_topic_set) x hours_per_topic, where hours_per_topic = 4h for a 12 CFU course, 3h for a 6 CFU course. Only min_topic_set topics are studied - the rest of the syllabus is deliberately skipped.",
+  "_drill": "drill_hours = n_papers x hours_per_paper x 2 passes. hours_per_paper = 3h (12 CFU) or 2h (6 CFU). n_papers is set by measured novelty: 6 papers if novelty < 0.3 (problems are rewritten each session, so fluency is needed), 4 if 0.3-0.6, 3 if > 0.6 (templates - recognition is enough).",
+  "_no_papers": "Where no papers exist the estimate is a range, not a point, and the low end assumes the lecturer supplies material on request.",
+  "_caveat": "These are drilling hours for someone who already has the prerequisite maths/programming background. They do not include time to acquire that background."
+}
