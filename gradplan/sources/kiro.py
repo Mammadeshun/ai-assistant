@@ -173,3 +173,63 @@ def fetch_course_pages(session, course_ids: list[str]) -> dict[str, Any]:
         except Exception as exc:  # noqa: BLE001
             failed.append(f"{course_id}: {type(exc).__name__}")
     return {"fetched": fetched, "failed": failed}
+
+
+def self_enrol(session, course_id: str) -> str:
+    """Self-enrol the signed-in user into a Moodle course.
+
+    Returns 'already', 'enrolled', 'no-self-enrolment', 'needs-key', or
+    'failed:<reason>'. Moodle 4 renders the enrolment form as a quickform whose
+    fields vary per instance (``instance``, ``sesskey``, a ``_qf__*`` marker),
+    so the whole form is parsed and resubmitted rather than named fields being
+    guessed at.
+    """
+    import urllib.parse
+    import urllib.request
+
+    from .http_session import parse_forms
+
+    base = config.KIRO_BASE
+    session.goto(
+        f"{base}/course/view.php?id={course_id}",
+        source=SOURCE,
+        label=f"enrolcheck-{course_id}",
+    )
+    if "/enrol/index.php" not in session.url and _has_content(session.content):
+        return "already"
+
+    enrol_url = f"{base}/enrol/index.php?id={course_id}"
+    session.goto(enrol_url, source=SOURCE, label=f"enrolpage-{course_id}")
+
+    form = next(
+        (f for f in parse_forms(session.content) if "enrol/index.php" in f.action),
+        None,
+    )
+    if form is None or "sesskey" not in form.fields:
+        return "no-self-enrolment"
+    if any("password" in name or "enrolpassword" in name for name in form.fields):
+        return "needs-key"
+
+    fields = dict(form.fields)
+    fields.setdefault("id", str(course_id))
+    request = urllib.request.Request(
+        form.action, data=urllib.parse.urlencode(fields).encode()
+    )
+    request.add_header("Content-Type", "application/x-www-form-urlencoded")
+    request.add_header("Referer", enrol_url)
+    try:
+        with session.opener.open(request, timeout=60) as response:
+            body = response.read().decode("utf-8", errors="replace")
+    except Exception as exc:  # noqa: BLE001
+        return f"failed:{type(exc).__name__}"
+
+    session.archive.save(
+        source=SOURCE, label=f"enrolresult-{course_id}", url=enrol_url,
+        payload=body, kind="html", status=200,
+    )
+    return "enrolled" if _has_content(body) else "failed:no-content-after-post"
+
+
+def _has_content(markup: str) -> bool:
+    """True when a course page shows actual activities rather than a gate."""
+    return bool(re.search(r'/mod/(resource|folder|assign|page|quiz|url)/view\.php', markup))

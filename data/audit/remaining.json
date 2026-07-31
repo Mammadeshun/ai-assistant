@@ -1,0 +1,107 @@
+[
+ {
+  "code": "509498",
+  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+  "cfu": 6.0
+ },
+ {
+  "code": "509494",
+  "name": "BRAIN MODELLING",
+  "cfu": 6.0
+ },
+ {
+  "code": "509481",
+  "name": "CALCULUS",
+  "cfu": 12.0
+ },
+ {
+  "code": "509485",
+  "name": "COGNITIVE PSYCHOLOGY",
+  "cfu": 6.0
+ },
+ {
+  "code": "509483",
+  "name": "COMPUTATIONAL LOGIC",
+  "cfu": 6.0
+ },
+ {
+  "code": "509477",
+  "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+  "cfu": 12.0
+ },
+ {
+  "code": "509495",
+  "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+  "cfu": 6.0
+ },
+ {
+  "code": "509519",
+  "name": "ETHICS, LAW AND AI",
+  "cfu": 12.0
+ },
+ {
+  "code": "509535",
+  "name": "FINAL EXAM",
+  "cfu": 3.0
+ },
+ {
+  "code": "509487",
+  "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+  "cfu": 6.0
+ },
+ {
+  "code": "509496",
+  "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+  "cfu": 6.0
+ },
+ {
+  "code": "509478",
+  "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+  "cfu": 12.0
+ },
+ {
+  "code": "509521",
+  "name": "LABORATORY OF MACHINE LEARNING",
+  "cfu": 3.0
+ },
+ {
+  "code": "509486",
+  "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+  "cfu": 12.0
+ },
+ {
+  "code": "504464",
+  "name": "ORGANIZATION THEORY AND DESIGN",
+  "cfu": 6.0
+ },
+ {
+  "code": "510109",
+  "name": "PROBABILITY AND STATISTICAL INFERENCE",
+  "cfu": 12.0
+ },
+ {
+  "code": "508207",
+  "name": "PROJECT WORK",
+  "cfu": 3.0
+ },
+ {
+  "code": "509493",
+  "name": "STATISTICAL MODELLING",
+  "cfu": 6.0
+ },
+ {
+  "code": "509488",
+  "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+  "cfu": 6.0
+ },
+ {
+  "code": "509492",
+  "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+  "cfu": 12.0
+ },
+ {
+  "code": "510638",
+  "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+  "cfu": 6.0
+ }
+]
