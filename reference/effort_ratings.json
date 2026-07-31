@@ -155,26 +155,26 @@
       "action": "now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers"
     },
     "509493": {
-      "assessment_format": "UNVERIFIED",
-      "project_option": "UNVERIFIED",
-      "partial_credit": "UNVERIFIED",
-      "pass_gates": "UNVERIFIED",
-      "effort": 3,
+      "assessment_format": "written, closed book, 2-3 exercises in line with those seen in the course",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "none stated beyond 18",
+      "effort": 2,
       "syllabus_read": false,
-      "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
-      "missing": "everything except the appelli dates",
-      "action": "email D'Angelo (Bicocca) for the syllabus and past papers; do NOT use the Bicocca 'Statistical Modeling' page by Pennoni, which is a different course"
+      "why": "Forum: 'The exam will include 2 or 3 exercises (in line with the exercises seen during the course). Please bring: a calculator, ID or student card, a pen. Course notes, books, and other materials are NOT allowed'. Narrow, closed-book, exercise-only.",
+      "missing": "the course exercises themselves - none are published on Kiro",
+      "action": "email D'Angelo asking for the exercise sheets used in class, since the exam mirrors them"
     },
     "509494": {
-      "assessment_format": "UNVERIFIED",
-      "project_option": "UNVERIFIED",
-      "partial_credit": "UNVERIFIED",
-      "pass_gates": "UNVERIFIED",
-      "effort": 3,
+      "assessment_format": "coding project (30% of final mark) + written exam (70%), ~2h, open questions",
+      "project_option": "no - the project is compulsory and is 30% of the mark",
+      "partial_credit": "the coding project mark CAN BE CARRIED across all exam sessions of the same academic year",
+      "pass_gates": "none stated beyond 18 overall",
+      "effort": 2,
       "syllabus_read": false,
-      "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
-      "missing": "everything except the appelli dates and the course aims",
-      "action": "email Casellato; the course is co-taught with Dagliati (5+1 CFU split)"
+      "why": "Forum (edition 509494_10589_2023) states: 'Exam modality: a coding project (30% of final mark) + written exam (70% of final mark). This way the written exam will not include coding parts'. Written is ~2h of open questions. Project topics are published on Drive; contact Alessio Marta.",
+      "missing": "whether the 30/70 split still applies in 2026 and whether a project done now carries into the autumn session",
+      "action": "email Casellato to confirm the split still holds and request the project-topics document"
     },
     "510638": {
       "assessment_format": "project + written exam (both present)",
