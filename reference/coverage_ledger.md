@@ -24,63 +24,47 @@ Every row is one remaining activity. **Findings** columns are quoted from a sour
 
 | code | activity | CFU | assessment_format | project_option | partial_credit | pass_gates | past_papers | appelli (autumn 2026) | tier | effort | read: kiro / docs / syllabus / appelli |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 509498 | ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AN | 6 | lab exam (multi-part, with data files) | UNVERIFIED | UNVERIFIED | UNVERIFIED | 4 | 04/09/2026, 18/09/2026 | C | 2 | 2 / 25 / no / yes |
-| 509494 | BRAIN MODELLING | 6 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 0 | 03/09/2026, 25/09/2026 | C | 3 | 6 / 0 / no / yes |
-| 509481 | CALCULUS | 12 | written, closed book; oral possible at the board's request | no | none found | Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request | 34 | 11/09/2026, 25/09/2026 | A | 4 | 10 / 34 / no / yes |
-| 509485 | COGNITIVE PSYCHOLOGY | 6 | written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory | no | class-attendance bonus (+2 in the oldest edition, quiz-average bonus in others) - requires in-class presence, not available retroactively | written threshold to reach the oral DRIFTS BY EDITION: id 12 = >=16 and final is the AVERAGE; ids 4228/6850/7392 = >=12 and final is the SUM; id 11579 (current) = >=13 and final is the SUM | 27 | 08/09/2026, 25/09/2026 | A | 4 | 10 / 37 / no / yes |
-| 509483 | COMPUTATIONAL LOGIC | 6 | written (exam assignments) | no | none found | none found | 1 | 31/08/2026, 23/09/2026 | C | 1 | 2 / 9 / no / yes |
-| 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND DATA ST | 12 | mod.2 written (theory + Python); mod.1 project OR computer-based test | conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies | none found | mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright | 19 | 09/09/2026, 24/09/2026 | A | 4 | 14 / 44 / no / yes |
-| 509495 | DATA MINING AND KNOWLEDGE EXTRACTION | 6 | assignments + written | no | assignments up to 12 of 30 points | none found | 9 | 04/09/2026, 24/09/2026 | C | 2 | 6 / 165 / no / yes |
-| 509519 | ETHICS, LAW AND AI | 12 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 0 | 02/09/2026, 16/09/2026 | C | 3 | 8 / 7 / no / yes |
+| 509498 | ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AN | 6 | lab project (upload) + written exam | no - the lab project is compulsory | UNVERIFIED - split between project and written not stated | HARD GATE: the lab project must be uploaded before the written exam to be admitted to it | 4 | 04/09/2026, 18/09/2026 | C | 3 | 2 / 26 / no / yes |
+| 509494 | BRAIN MODELLING | 6 | coding project (30% of final mark) + written exam (70%), ~2h, open questions | no - the project is compulsory and is 30% of the mark | the coding project mark CAN BE CARRIED across all exam sessions of the same academic year | none stated beyond 18 overall | 0 | 03/09/2026, 25/09/2026 | C | 2 | 6 / 3 / no / yes |
+| 509481 | CALCULUS | 12 | written, closed book; oral possible at the board's request | no | none found | Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request | 34 | 11/09/2026, 25/09/2026 | A | 4 | 10 / 38 / no / yes |
+| 509485 | COGNITIVE PSYCHOLOGY | 6 | written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory | no | class-attendance bonus (+2 in the oldest edition, quiz-average bonus in others) - requires in-class presence, not available retroactively | written threshold to reach the oral DRIFTS BY EDITION: id 12 = >=16 and final is the AVERAGE; ids 4228/6850/7392 = >=12 and final is the SUM; id 11579 (current) = >=13 and final is the SUM | 27 | 08/09/2026, 25/09/2026 | A | 4 | 10 / 44 / no / yes |
+| 509483 | COMPUTATIONAL LOGIC | 6 | written (exam assignments) | no | none found | none found | 1 | 31/08/2026, 23/09/2026 | C | 1 | 2 / 10 / no / yes |
+| 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND DATA ST | 12 | mod.2 written (theory + Python); mod.1 project OR computer-based test | conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies | none found | mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright | 19 | 09/09/2026, 24/09/2026 | A | 4 | 14 / 51 / no / yes |
+| 509495 | DATA MINING AND KNOWLEDGE EXTRACTION | 6 | assignments + written | no | assignments up to 12 of 30 points | none found | 9 | 04/09/2026, 24/09/2026 | C | 2 | 6 / 177 / no / yes |
+| 509519 | ETHICS, LAW AND AI | 12 | multiple-choice test, single unsplit exam | no | none found | none beyond 18 | 0 | 02/09/2026, 16/09/2026 | C | 2 | 8 / 11 / no / yes |
 | 509535 | FINAL EXAM | 3 | report + presentation to the degree board | n/a | n/a | report uploaded in PDF/A one week before the graduation day | 0 | UNVERIFIED | D | 3 | 0 / 0 / yes / no |
-| 509487 | FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING | 6 | written + lab component | no | none found | none found | 15 | 03/09/2026, 17/09/2026 | A | 2 | 8 / 19 / no / yes |
-| 509496 | INFORMATION RETRIEVAL AND RECOMMENDER SYSTEM | 6 | project (search engine build) | yes - it is the assessment | n/a | none found | 0 | 31/08/2026, 15/09/2026 | B | 2 | 6 / 71 / no / yes |
-| 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | written, two modules | no | none found | final mark is the MEAN of the two module scores | 52 | 10/09/2026, 21/09/2026 | A | 3 | 32 / 152 / no / yes |
-| 509521 | LABORATORY OF MACHINE LEARNING | 3 | coursework - nine report submissions | n/a | the reports are the grade | none found | 0 | 01/09/2026, 21/09/2026 | C | 2 | 6 / 90 / no / yes |
-| 509486 | MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS | 12 | upload (Colab notebook + PDF) on the session date | n/a - the exam itself is an upload | none found | none found | 4 | 01/09/2026, 15/09/2026 | A | 2 | 2 / 4 / no / yes |
-| 504464 | ORGANIZATION THEORY AND DESIGN | 6 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 5 | 03/09/2026, 17/09/2026 | C | 2 | 10 / 130 / no / yes |
-| 510109 | PROBABILITY AND STATISTICAL INFERENCE | 12 | written in computer lab, open + closed items | no | homeworks stated to match exam difficulty | none found | 47 | 07/09/2026, 21/09/2026 | A | 3 | 12 / 61 / no / yes |
-| 508207 | PROJECT WORK | 3 | project | yes - it is the assessment | n/a | none found | 0 | 09/09/2026, 14/10/2026, 02/12/2026 | C | 2 | 2 / 1 / no / yes |
-| 509493 | STATISTICAL MODELLING | 6 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 0 | 10/09/2026, 24/09/2026 | C | 3 | 6 / 0 / no / yes |
-| 509488 | TEXT MINING AND NATURAL LANGUAGE PROCESSING | 6 | written, open + closed questions, up to 32 points | no | none found | minimum 18; wrong closed answers score -0.5 | 7 | 10/09/2026, 24/09/2026 | A | 3 | 8 / 20 / no / yes |
-| 509492 | THEORETICAL AND QUANTUM PHYSICS FOR AI | 12 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 3 | 08/09/2026, 22/09/2026 | C | 4 | 10 / 70 / no / yes |
-| 510638 | WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS | 6 | project + written exam (both present) | no - the project appears to be in addition to the written exam, not instead of it | UNVERIFIED | UNVERIFIED | 0 | 08/09/2026, 24/09/2026 | B | 3 | 2 / 34 / no / yes |
+| 509487 | FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING | 6 | written + lab component | no | none found | none found | 15 | 03/09/2026, 17/09/2026 | A | 2 | 8 / 23 / no / yes |
+| 509496 | INFORMATION RETRIEVAL AND RECOMMENDER SYSTEM | 6 | project + presentation | yes - it is the assessment | n/a | none found | 0 | 31/08/2026, 15/09/2026 | B | 2 | 6 / 75 / no / yes |
+| 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | written, two modules | no | none found | final mark is the MEAN of the two module scores | 52 | 10/09/2026, 21/09/2026 | A | 3 | 32 / 188 / no / yes |
+| 509521 | LABORATORY OF MACHINE LEARNING | 3 | coursework - nine report submissions | n/a | the reports are the grade | none found | 0 | 01/09/2026, 21/09/2026 | C | 2 | 6 / 93 / no / yes |
+| 509486 | MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS | 12 | upload (Colab notebook + PDF) on the session date | n/a - the exam itself is an upload | none found | none found | 4 | 01/09/2026, 15/09/2026 | A | 2 | 2 / 5 / no / yes |
+| 504464 | ORGANIZATION THEORY AND DESIGN | 6 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 5 | 03/09/2026, 17/09/2026 | C | 2 | 10 / 135 / no / yes |
+| 510109 | PROBABILITY AND STATISTICAL INFERENCE | 12 | written in computer lab, open + closed items | no | homeworks stated to match exam difficulty | none found | 47 | 07/09/2026, 21/09/2026 | A | 3 | 12 / 64 / no / yes |
+| 508207 | PROJECT WORK | 3 | project | yes - it is the assessment | n/a | none found | 0 | 09/09/2026, 14/10/2026, 02/12/2026 | C | 2 | 2 / 2 / no / yes |
+| 509493 | STATISTICAL MODELLING | 6 | written, closed book, 2-3 exercises in line with those seen in the course | no | none found | none stated beyond 18 | 0 | 10/09/2026, 24/09/2026 | C | 2 | 6 / 3 / no / yes |
+| 509488 | TEXT MINING AND NATURAL LANGUAGE PROCESSING | 6 | written, open + closed questions, up to 32 points | no | none found | minimum 18; wrong closed answers score -0.5 | 7 | 10/09/2026, 24/09/2026 | A | 3 | 8 / 26 / no / yes |
+| 509492 | THEORETICAL AND QUANTUM PHYSICS FOR AI | 12 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 3 | 08/09/2026, 22/09/2026 | C | 4 | 10 / 74 / no / yes |
+| 510638 | WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS | 6 | project + presentation + written exam | no - project is in addition to the written exam | UNVERIFIED | UNVERIFIED | 0 | 08/09/2026, 24/09/2026 | B | 3 | 2 / 35 / no / yes |
 
 ## Cannot rate honestly
-
-### 509498 ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING
-- missing: point split and whether a written theory part exists
-- resolves by: open the lab exam folder on Kiro 10959 and email Suriano
-
-### 509494 BRAIN MODELLING
-- missing: everything except the appelli dates and the course aims
-- resolves by: email Casellato; the course is co-taught with Dagliati (5+1 CFU split)
-
-### 509519 ETHICS, LAW AND AI
-- missing: any statement of exam format; four editions read, none publishes rules
-- resolves by: email Faroldi/Redaelli/Larese, or check the UniPV scheda insegnamento for 509519
 
 ### 504464 ORGANIZATION THEORY AND DESIGN
 - missing: exam format
 - resolves by: email Greco; note its appelli follow its own degree's calendar, not the BAI sessions
-
-### 509493 STATISTICAL MODELLING
-- missing: everything except the appelli dates
-- resolves by: email D'Angelo (Bicocca) for the syllabus and past papers; do NOT use the Bicocca 'Statistical Modeling' page by Pennoni, which is a different course
 
 ### 509492 THEORETICAL AND QUANTUM PHYSICS FOR AI
 - missing: exam format for both modules
 - resolves by: now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers
 
 ### 510638 WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS
-- missing: the point split between project and written exam
-- resolves by: read Kiro 11076 project instructions in full and email Viviani/Mancino
+- missing: mark split across the three components
+- resolves by: email Viviani for the mark split and the autumn project deadline
 
 
 ## Quoted evidence per activity
 
 ### 509498 - ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING (6 CFU) - tier C
-editions read: 2 | documents read: 25
+editions read: 2 | documents read: 26
 
 - **lab_component** - "Aggregazione dei criteri Scarica cartella AI4CM_LabExam_Part1.pdf marketing_campaign.csv"
   - source: `V Lab 08/04/2026 (folder)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022715Z__mod-folder-311707.html`
@@ -92,13 +76,13 @@ editions read: 2 | documents read: 25
   - source: `Lab exam assignment - 2026 Summer session (folder)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020705Z__mod-folder-322615.html`
 
 ### 509494 - BRAIN MODELLING (6 CFU) - tier C
-editions read: 6 | documents read: 0
+editions read: 6 | documents read: 3
 
 _no assessment-rule sentence found in any archived source_
 
 
 ### 509481 - CALCULUS (12 CFU) - tier A
-editions read: 10 | documents read: 34
+editions read: 10 | documents read: 38
 
 - **pass_gate** - "The duration of the test is 1 hour Pass Part 1 of the Calculus exam with a score of at least 15/30 Pass the Calculus course Important: if you passed the OFA by passing Part 1 or the full exam of Calculus, you should contact the teacher so that your OFA exam ca"
   - source: `kiro course/2771` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html`
@@ -118,7 +102,7 @@ editions read: 10 | documents read: 34
   - source: `kiro course/2771` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html`
 
 ### 509485 - COGNITIVE PSYCHOLOGY (6 CFU) - tier A
-editions read: 10 | documents read: 37
+editions read: 10 | documents read: 44
 
 - **pass_gate** - "•Both written and oral part are mandatory."
   - source: `Course Information slides (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf`
@@ -138,13 +122,13 @@ editions read: 10 | documents read: 37
   - source: `kiro course/6850` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html`
 
 ### 509483 - COMPUTATIONAL LOGIC (6 CFU) - tier C
-editions read: 2 | documents read: 9
+editions read: 2 | documents read: 10
 
 _no assessment-rule sentence found in any archived source_
 
 
 ### 509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES (12 CFU) - tier A
-editions read: 14 | documents read: 44
+editions read: 14 | documents read: 51
 
 - **project_option** - "Aggregazione dei criteri Spunta come completato The final exam will consist in the design and implementation of a software project in Python, in a report to document the project, and in a short presentation to summarize the report content and discuss the desig"
   - source: `Information about the project (page)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html`
@@ -164,13 +148,17 @@ editions read: 14 | documents read: 44
   - source: `kiro course/7388` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html`
 
 ### 509495 - DATA MINING AND KNOWLEDGE EXTRACTION (6 CFU) - tier C
-editions read: 6 | documents read: 165
+editions read: 6 | documents read: 177
 
+- **pass_gate** - "Aggregazione dei criteri Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Assignment 1 Discussions (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154411Z__mod-forum-280033.html`
 - **partial_credit** - "• The assignments are worth at most 12 points, and so the final mark is at most 30."
   - source: `Mockup Exam (07/01/2026) (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T012157Z__mod-resource-291497.pdf`
+- **pass_gate** - "Aggregazione dei criteri Spunta come completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Assignment 1 (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154418Z__mod-forum-149709.html`
 
 ### 509519 - ETHICS, LAW AND AI (12 CFU) - tier C
-editions read: 8 | documents read: 7
+editions read: 8 | documents read: 11
 
 _no assessment-rule sentence found in any archived source_
 
@@ -182,7 +170,7 @@ _no assessment-rule sentence found in any archived source_
 
 
 ### 509487 - FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING (6 CFU) - tier A
-editions read: 8 | documents read: 19
+editions read: 8 | documents read: 23
 
 - **lab_component** - "Aggregazione dei criteri Per aprire la risorsa fai click su Fuzzy logic control - MATLAB example"
   - source: `Fuzzy logic control - MATLAB example (url)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T012319Z__mod-url-302661.html`
@@ -190,7 +178,7 @@ editions read: 8 | documents read: 19
   - source: `Project's Instructions (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020219Z__mod-resource-255209.pdf`
 
 ### 509496 - INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS (6 CFU) - tier B
-editions read: 6 | documents read: 71
+editions read: 6 | documents read: 75
 
 - **oral** - "AssignmentWrittenexam plus optional oral individual examination, definition of a laboratory assignements or projectthat can be developed also by groups of students (up to three students).The written examination is aimed at assessing the level of understanding "
   - source: `Introduction to the course and to Information Retrieval (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020646Z__mod-resource-207408.pdf`
@@ -210,15 +198,23 @@ editions read: 6 | documents read: 71
   - source: `Bias Fairness and Cold Start (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022638Z__mod-resource-281937.pdf`
 
 ### 509478 - KNOWLEDGE REPRESENTATION AND REASONING (12 CFU) - tier A
-editions read: 32 | documents read: 152
+editions read: 32 | documents read: 188
 
+- **pass_gate** - "Aggregazione dei criteri Completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Student (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154244Z__mod-forum-139443.html`
 - **written** - "During the exam: The KRR1 exam is a written exam and no additional support is needed or allowed."
   - source: `kiro course/9884` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021023Z__course-9884.html`
+- **pass_gate** - "Aggregazione dei criteri Spunta come completato Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Al momento in questo forum non sono presenti argomenti di discuss"
+  - source: `Student (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154248Z__mod-forum-259413.html`
+- **pass_gate** - "Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Students' questions (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154251Z__mod-forum-111893.html`
 - **lab_component** - "SPARQL Exercises RDF & SPARQL Exercises File Spunta come completato Updates: 20/5: new exercise 5 21/5: added missing rdfs:label triples in the graph of exercise 5 Seleziona attività RDF &amp;"
   - source: `kiro course/9232` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021031Z__course-9232.html`
+- **pass_gate** - "Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Student (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154305Z__mod-forum-471.html`
 
 ### 509521 - LABORATORY OF MACHINE LEARNING (3 CFU) - tier C
-editions read: 6 | documents read: 90
+editions read: 6 | documents read: 93
 
 - **lab_component** - "Learning purely from labeled examples does not resemble language acquisition in humans: infants learn language by listening to adults around them - a process that requires learning good representations of speech."
   - source: `Wave2Vec2 (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022741Z__mod-resource-181944.pdf`
@@ -234,11 +230,11 @@ editions read: 6 | documents read: 90
   - source: `waveGAN (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022822Z__mod-resource-252165.pdf`
 - **lab_component** - "In batches of ten random examples, we ask annotators to label which digit they perceive in each example, and compute their accuracy with respect to the classiﬁer’s labels (random accuracy would be 10%)."
   - source: `waveGAN (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022822Z__mod-resource-252165.pdf`
-- **upload** - "Also upload a PDF with the notebook with visible outputs 2."
-  - source: `Colorization Challenge (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022853Z__mod-resource-321841.pdf`
+- **pass_gate** - "Aggregazione dei criteri Share the results you obtained here Cerca nei forum Cerca nei forum Aggiungi argomento di discussione Sottoscrivi il forum Oggetto Messaggio Annulla campi a compilazione obbligatoria Elenco delle discussioni."
+  - source: `Image gallery (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154446Z__mod-forum-306403.html`
 
 ### 509486 - MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING (12 CFU) - tier A
-editions read: 2 | documents read: 4
+editions read: 2 | documents read: 5
 
 - **upload** - "Aggregazione dei criteri Aperto: mercoledì, 8 aprile 2026, 00:00 Data limite: sabato, 11 aprile 2026, 23:59 Please upload a unique pdf file, containing the description of your solution, by strictly respecting assignment numbering even in the provided answers."
   - source: `Mock Exam (assign)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T012301Z__mod-assign-312518.html`
@@ -252,7 +248,7 @@ editions read: 2 | documents read: 4
   - source: `Exam Session 14 July 2026 (assign)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T012308Z__mod-assign-325322.html`
 
 ### 504464 - ORGANIZATION THEORY AND DESIGN (6 CFU) - tier C
-editions read: 10 | documents read: 130
+editions read: 10 | documents read: 135
 
 - **lab_component** - "This frame of reference reflects the need for organizations to share information, have a collaborative strategy, and to have all parts working together."
   - source: `R. DAFT ORGANIZATION THEORY AND DESIGN (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf`
@@ -272,7 +268,7 @@ editions read: 10 | documents read: 130
   - source: `R. DAFT ORGANIZATION THEORY AND DESIGN (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf`
 
 ### 510109 - PROBABILITY AND STATISTICAL INFERENCE (12 CFU) - tier A
-editions read: 12 | documents read: 61
+editions read: 12 | documents read: 64
 
 - **lab_component** - "Ross File Spunta come completato Seleziona sezione Syllabus Part 1 (tentative) Minimizza Espandi Syllabus Part 1 (tentative) We shall discuss the following topics (all included in Chapters 1-4 of the textbook): 1."
   - source: `kiro course/10516` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021117Z__course-10516.html`
@@ -286,19 +282,19 @@ editions read: 12 | documents read: 61
   - source: `Hypothesis testing (solution) (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T020839Z__mod-resource-324195.pdf`
 
 ### 508207 - PROJECT WORK (3 CFU) - tier C
-editions read: 2 | documents read: 1
+editions read: 2 | documents read: 2
 
 _no assessment-rule sentence found in any archived source_
 
 
 ### 509493 - STATISTICAL MODELLING (6 CFU) - tier C
-editions read: 6 | documents read: 0
+editions read: 6 | documents read: 3
 
-_no assessment-rule sentence found in any archived source_
-
+- **written** - "Visualizzazione di 1 discussioni su 1 Stato Discussione Iniziato da Ultimo intervento Repliche Azioni Practical information about the written exam."
+  - source: `Annunci (forum)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T154401Z__mod-forum-150448.html`
 
 ### 509488 - TEXT MINING AND NATURAL LANGUAGE PROCESSING (6 CFU) - tier A
-editions read: 8 | documents read: 20
+editions read: 8 | documents read: 26
 
 - **written** - "Please note that all topics covered during the course may be included in the written exam."
   - source: `kiro course/11391` -> `/home/user/ai-assistant/data/raw/kiro/20260731T021105Z__course-11391.html`
@@ -318,7 +314,7 @@ editions read: 8 | documents read: 20
   - source: `[TMNLP-2025_2026] Practice Written Exam (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T012333Z__mod-resource-321142.pdf`
 
 ### 509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI (12 CFU) - tier C
-editions read: 10 | documents read: 70
+editions read: 10 | documents read: 74
 
 - **oral** - "Organisms as metabolic engines, characterized by energy consumption rates, growth rates, body size, and behavioral times (32–34), have a clear counterpart in social systems (14, 35)."
   - source: `Additional material (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022007Z__mod-resource-276466.pdf`
@@ -336,7 +332,7 @@ editions read: 10 | documents read: 70
   - source: `Additional material (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022026Z__mod-resource-288570.pdf`
 
 ### 510638 - WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS (6 CFU) - tier B
-editions read: 2 | documents read: 34
+editions read: 2 | documents read: 35
 
 - **written** - "Cham: Springer International Publishing Study Material (exercises+Labs) ● Written exam (theoretical aspects + exercises seen in class) ○ Max 24 points (6 open questions and exercises)."
   - source: `Introduction to the Course (resource)` -> `/home/user/ai-assistant/data/raw/kiro/20260731T022857Z__mod-resource-303438.pdf`

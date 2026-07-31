@@ -104,13 +104,15 @@
       "action": "email Bricolo before booking - the course page requires previous-year students to message her at least three days before the appello if they want the current syllabus"
     },
     "509496": {
-      "assessment_format": "project (search engine build)",
+      "assessment_format": "project + presentation",
       "project_option": "yes - it is the assessment",
       "partial_credit": "n/a",
       "pass_gates": "none found",
       "effort": 2,
       "syllabus_read": false,
-      "why": "No sitting to schedule; published instructions, templates and dataset code. Overlaps with Web and social media."
+      "why": "Peikos/Pasi, forums: project deadline extensions and 'project presentations session' scheduled; instructions, templates and dataset code published. No written paper found.",
+      "missing": "whether a presentation slot exists in the autumn session",
+      "action": "email Peikos to confirm an autumn presentation slot"
     },
     "509521": {
       "assessment_format": "coursework - nine report submissions",
@@ -133,15 +135,15 @@
       "action": "open the proposals database on Kiro course 9643 and pick a supervisor"
     },
     "509519": {
-      "assessment_format": "UNVERIFIED",
-      "project_option": "UNVERIFIED",
-      "partial_credit": "UNVERIFIED",
-      "pass_gates": "UNVERIFIED",
-      "effort": 3,
+      "assessment_format": "multiple-choice test, single unsplit exam",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "none beyond 18",
+      "effort": 2,
       "syllabus_read": false,
-      "why": "12 CFU, three lecturers, essayistic subject. Rated on subject type alone, which is weak.",
-      "missing": "any statement of exam format; four editions read, none publishes rules",
-      "action": "email Faroldi/Redaelli/Larese, or check the UniPV scheda insegnamento for 509519"
+      "why": "Faroldi, forum 'Exam format and content': 'the exam will be a multiple-choice test... It is going to be a unique exam, i.e. not split in multiple parts. For non-attending students, the exam is on the material reported in the syllabus.' 12 CFU on MCQ with a defined non-attending syllabus is among the cheapest routes to 18 in the plan.",
+      "missing": "the syllabus document itself (course Google Drive, not Kiro) and whether example questions were released",
+      "action": "email Faroldi for the non-attending syllabus and the example questions he mentions"
     },
     "509492": {
       "assessment_format": "UNVERIFIED",
@@ -177,26 +179,26 @@
       "action": "email Casellato to confirm the split still holds and request the project-topics document"
     },
     "510638": {
-      "assessment_format": "project + written exam (both present)",
-      "project_option": "no - the project appears to be in addition to the written exam, not instead of it",
+      "assessment_format": "project + presentation + written exam",
+      "project_option": "no - project is in addition to the written exam",
       "partial_credit": "UNVERIFIED",
       "pass_gates": "UNVERIFIED",
       "effort": 3,
       "syllabus_read": false,
-      "why": "Project instructions found with 'Deadline: at least 7 days before the written examination', so both components exist.",
-      "missing": "the point split between project and written exam",
-      "action": "read Kiro 11076 project instructions in full and email Viviani/Mancino"
+      "why": "Viviani/Mancino, forums: project presentation schedules published for 30-31 July, and project instructions state 'Deadline: at least 7 days before the written examination'. Three components: build, present, sit.",
+      "missing": "mark split across the three components",
+      "action": "email Viviani for the mark split and the autumn project deadline"
     },
     "509498": {
-      "assessment_format": "lab exam (multi-part, with data files)",
-      "project_option": "UNVERIFIED",
-      "partial_credit": "UNVERIFIED",
-      "pass_gates": "UNVERIFIED",
-      "effort": 2,
+      "assessment_format": "lab project (upload) + written exam",
+      "project_option": "no - the lab project is compulsory",
+      "partial_credit": "UNVERIFIED - split between project and written not stated",
+      "pass_gates": "HARD GATE: the lab project must be uploaded before the written exam to be admitted to it",
+      "effort": 3,
       "syllabus_read": false,
-      "why": "'Lab exam assignment - 2026 Summer session' folder contains AI4CM_LabExam_Part1/2/3.pdf plus data.xlsx and marketing_campaign.csv, so the exam is applied lab work on supplied data.",
-      "missing": "point split and whether a written theory part exists",
-      "action": "open the lab exam folder on Kiro 10959 and email Suriano"
+      "why": "Suriano, forum: 'I'd like to remind you to upload the lab project by the end of 23rd of June if you want to be admitted at the written exam of the 24th.' The project is an admission gate, not an option - it must be done before the sitting, which removes the option of walking in cold.",
+      "missing": "mark split, and the project deadline for the autumn session",
+      "action": "email Suriano for the autumn lab-project deadline - this gates the 04/09 and 18/09 appelli"
     },
     "504464": {
       "assessment_format": "UNVERIFIED",
