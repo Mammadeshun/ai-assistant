@@ -1,0 +1,793 @@
+{
+ "509477": {
+  "course": "509477",
+  "n_papers": 11,
+  "weighting": "item count (2/11 papers print per-item marks)",
+  "papers": [
+   "Stack-test-py",
+   "Exam-09-09-22-NAME-SURNAME-py",
+   "2021-22-castles-war-pdf",
+   "2022-23-planisuss-v0-95-pdf",
+   "Exam-23-06-2022-NAME-SURNAME-py",
+   "Exam-23-06-2022-pdf",
+   "Exam-14-07-2022-NAME-SURNAME-py",
+   "Exam-14-07-2022-pdf",
+   "Exam-09-09-2022-pdf",
+   "Exam-21-07-2023-SURNAME-NAME-py",
+   "Exam-21-07-2023-pdf"
+  ],
+  "recurrence": 0.0,
+  "structure_stability": "variable: 1-5 items per paper",
+  "novelty_score": 0.13281312732530084,
+  "novelty_examples": [
+   {
+    "a": "Exam-14-07-2022-pdf: 3) Trees: \n \n \na) Given the AVL tree in figure add one by one nodes with the following keys: 20, 7, 16 \nNOTE: remember to verify the balancing after e",
+    "b": "Exam-21-07-2023-pdf: 3) Trees (6 points): \na) Given the AVL tree in figure add one by one nodes with the following keys: 32, 99, 55 \nNOTE: remember to verify the balancing",
+    "similarity": 0.567
+   },
+   {
+    "a": "2021-22-castles-war-pdf: Università degli Studi di Pavia\nBachelor degree in Artiﬁcial Intelligence\nCastles war — Final exam project — A.Y. 2021/22\nSTEFANO FERRARI\nComputer pro",
+    "b": "Exam-14-07-2022-NAME-SURNAME-py: # Given a BST and a number K, return the node in the BST that is closest to K,\n# i.e. the node with the minimum absolute difference with K.\n#\n# E.g.\n#",
+    "similarity": 0.012
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "linear_structures",
+    "share": 0.359
+   },
+   {
+    "topic": "trees_graphs",
+    "share": 0.333
+   }
+  ],
+  "coverage_of_min_set": 0.692,
+  "matrix": {
+   "linear_structures": {
+    "Stack-test-py": 1.0,
+    "Exam-23-06-2022-pdf": 1.0,
+    "Exam-14-07-2022-pdf": 1.0,
+    "Exam-09-09-2022-pdf": 1.0,
+    "Exam-21-07-2023-pdf": 10.0
+   },
+   "python_coding": {
+    "Exam-09-09-22-NAME-SURNAME-py": 1.0,
+    "2021-22-castles-war-pdf": 1.0,
+    "Exam-14-07-2022-NAME-SURNAME-py": 1.0,
+    "Exam-21-07-2023-SURNAME-NAME-py": 1.0
+   },
+   "complexity": {
+    "2022-23-planisuss-v0-95-pdf": 1.0
+   },
+   "trees_graphs": {
+    "Exam-23-06-2022-NAME-SURNAME-py": 1.0,
+    "Exam-23-06-2022-pdf": 2.0,
+    "Exam-14-07-2022-pdf": 2.0,
+    "Exam-09-09-2022-pdf": 2.0,
+    "Exam-21-07-2023-pdf": 6.0
+   },
+   "sorting_searching": {
+    "Exam-23-06-2022-pdf": 1.0,
+    "Exam-14-07-2022-pdf": 1.0,
+    "Exam-09-09-2022-pdf": 1.0,
+    "Exam-21-07-2023-pdf": 4.0
+   },
+   "unclassified": {
+    "Exam-14-07-2022-pdf": 1.0
+   }
+  },
+  "dated_papers": 9,
+  "undated_papers": 2
+ },
+ "509478": {
+  "course": "509478",
+  "n_papers": 15,
+  "weighting": "item count (3/15 papers print per-item marks)",
+  "papers": [
+   "exam-dl",
+   "exam-facts-dl",
+   "Mock Exam 2021",
+   "Exam 2022/09/30",
+   "Exam 2022/07/11",
+   "Mock Exam 2022-2023",
+   "Mock Exam 2022 (Updated 9/6/2022)",
+   "Mock Exam January 2022",
+   "July 2022 Exam",
+   "June 2022 Exam",
+   "Exam 2023/02/06",
+   "2023 Mock Exam",
+   "2024 Mock Exam",
+   "2025 Mock Exam",
+   "2026 Mock Test"
+  ],
+  "recurrence": 0.42857142857142855,
+  "structure_stability": "variable: 1-8 items per paper",
+  "novelty_score": 0.1602760959986977,
+  "novelty_examples": [
+   {
+    "a": "Mock Exam 2021: (7)\nConsider the subsumption relation\n∃r.(A⊓ B)⊓∃ r.⊤ ⊑ ∃r.A⊓∃ r.(B⊓∃ r.⊤).\n1. Determine whether it holds or not without a TBox. If the answer is “no,",
+    "b": "Mock Exam January 2022: (7)\nConsider the subsumption relation\n∃r.(A⊓ B)⊓∃ r.⊤ ⊑ ∃r.A⊓∃ r.(B⊓∃ r.⊤).\n1. Determine whether it holds or not without a TBox. If the answer is “no,",
+    "similarity": 1.0
+   },
+   {
+    "a": "Mock Exam 2022-2023: (5)\n1. Build an LTL f formula φ that can only be satisfied in temporal models of length\nat least2.\n2. For your formula φ, construct a final type.\n3. C",
+    "b": "Exam 2023/02/06: Question 5. T emporal Logic 5 (+1) P.\nFor an LTLf formula φ, we have constructed the following subsets of csub(φ):\nτ1 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, (a ∧",
+    "similarity": 0.003
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "description_logic",
+    "share": 0.338
+   },
+   {
+    "topic": "rdf_sparql",
+    "share": 0.309
+   }
+  ],
+  "coverage_of_min_set": 0.647,
+  "matrix": {
+   "unclassified": {
+    "exam-dl": 1.0,
+    "Mock Exam 2021": 1.0,
+    "Exam 2022/09/30": 1.0,
+    "Exam 2022/07/11": 2.0,
+    "Mock Exam 2022-2023": 1.0,
+    "Mock Exam 2022 (Updated 9/6/2022)": 3.0,
+    "Mock Exam January 2022": 1.0,
+    "July 2022 Exam": 1.0,
+    "2023 Mock Exam": 3.0,
+    "2024 Mock Exam": 3.0,
+    "2025 Mock Exam": 1.0,
+    "2026 Mock Test": 1.0
+   },
+   "description_logic": {
+    "exam-facts-dl": 1.0,
+    "Mock Exam 2021": 2.0,
+    "Exam 2022/09/30": 2.0,
+    "Exam 2022/07/11": 2.0,
+    "Mock Exam 2022-2023": 2.0,
+    "Mock Exam 2022 (Updated 9/6/2022)": 1.0,
+    "Mock Exam January 2022": 2.0,
+    "July 2022 Exam": 1.0,
+    "June 2022 Exam": 1.0,
+    "Exam 2023/02/06": 3.0,
+    "2023 Mock Exam": 1.0,
+    "2024 Mock Exam": 1.0,
+    "2025 Mock Exam": 2.0,
+    "2026 Mock Test": 2.0
+   },
+   "ontology_modelling": {
+    "Mock Exam 2021": 2.0,
+    "Mock Exam 2022-2023": 1.0,
+    "Mock Exam January 2022": 2.0,
+    "June 2022 Exam": 1.0,
+    "Exam 2023/02/06": 1.0
+   },
+   "temporal_logic": {
+    "Mock Exam 2021": 1.0,
+    "Exam 2022/09/30": 1.0,
+    "Exam 2022/07/11": 1.0,
+    "Mock Exam 2022-2023": 1.0,
+    "Mock Exam January 2022": 1.0,
+    "Exam 2023/02/06": 1.0
+   },
+   "datalog_rules": {
+    "Exam 2022/09/30": 1.0,
+    "Exam 2022/07/11": 1.0,
+    "Mock Exam 2022 (Updated 9/6/2022)": 1.0,
+    "July 2022 Exam": 1.0,
+    "June 2022 Exam": 1.0,
+    "Exam 2023/02/06": 1.0,
+    "2023 Mock Exam": 1.0,
+    "2024 Mock Exam": 1.0,
+    "2025 Mock Exam": 1.0,
+    "2026 Mock Test": 1.0
+   },
+   "reasoning_tasks": {
+    "Mock Exam 2022 (Updated 9/6/2022)": 1.0
+   },
+   "rdf_sparql": {
+    "Mock Exam 2022 (Updated 9/6/2022)": 3.0,
+    "July 2022 Exam": 3.0,
+    "June 2022 Exam": 3.0,
+    "2023 Mock Exam": 3.0,
+    "2024 Mock Exam": 3.0,
+    "2025 Mock Exam": 3.0,
+    "2026 Mock Test": 3.0
+   }
+  },
+  "dated_papers": 13,
+  "undated_papers": 2
+ },
+ "509481": {
+  "course": "509481",
+  "n_papers": 31,
+  "weighting": "published marks",
+  "papers": [
+   "2023-24 TheoryQuestions for Part1 exam",
+   "2023-24-SampleTest-Part1",
+   "Calculus-part1-2024-feb7th-a-pdf",
+   "Calculus-part1-2024-feb7th-b-pdf",
+   "Calculus-part1-2024-feb7th-c-pdf",
+   "Calculus-part1-2024-feb7th-d-pdf",
+   "Calculus-part1-2024-feb21-a-pdf",
+   "Calculus-part1-2024-feb21-b-pdf",
+   "Calculus-part1-2024-feb21-c-pdf",
+   "Calculus-part1-2024-feb21-d-pdf",
+   "Calculus-part1-2024-July17th-a-pdf",
+   "Calculus-part1-2024-July17th-b-pdf",
+   "Calculus-part1-2024-July17th-c-pdf",
+   "Calculus-part1-2024-July17th-d-pdf",
+   "Calculus-part1-2024-Jun25th-b-pdf",
+   "Calculus-part1-2024-Jun25th-c-pdf",
+   "Calculus-part1-2024-jun25-a-pdf",
+   "Calculus-part1-2024-jun25th-d-pdf",
+   "Calculus-part1-2024-sept-a-pdf",
+   "Calculus-part1-2024-sept-b-pdf",
+   "Calculus-part1-2024-sept-26-a-pdf",
+   "Calculus-part1-2024-sept-26-b-pdf",
+   "Calculus-part1-2025-SampleTest",
+   "Calculus-part1-2026-feb-18-a-pdf",
+   "Calculus-part1-2026-feb-18-b-pdf",
+   "Calculus-part1-2026-feb-18-c-pdf",
+   "Calculus-part1-2026-feb-18-d-pdf",
+   "Calculus-part1-2026-feb-4-a-pdf",
+   "Calculus-part1-2026-feb-4-b-pdf",
+   "Calculus-part1-2026-feb-4-c-pdf",
+   "Calculus-part1-2026-feb-4-d-pdf"
+  ],
+  "recurrence": 0.0,
+  "structure_stability": "stable: 1-2 items per paper",
+  "novelty_score": 0.24168337889712932,
+  "novelty_examples": [
+   {
+    "a": "Calculus-part1-2024-feb7th-a-pdf: Written exam of Calculus (part 1-a) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nNAME: . .",
+    "b": "Calculus-part1-2024-feb7th-c-pdf: Written exam of Calculus (part 1-c) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nNAME: . .",
+    "similarity": 0.962
+   },
+   {
+    "a": "Calculus-part1-2024-feb21-c-pdf: Written exam of Calculus (part 1-c) February 21st, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nNAME: . ",
+    "b": "Calculus-part1-2026-feb-4-b-pdf: 2x)\nsin(ex − 1)(ex − 1 − x)2\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, asymptotes, sign, increasing /decreasing, graph)\nf",
+    "similarity": 0.005
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "limits_continuity",
+    "share": 0.471
+   },
+   {
+    "topic": "theory_questions",
+    "share": 0.286
+   }
+  ],
+  "coverage_of_min_set": 0.757,
+  "matrix": {
+   "derivatives": {
+    "2023-24 TheoryQuestions for Part1 exam": 1.0,
+    "Calculus-part1-2024-July17th-a-pdf": 3.0,
+    "Calculus-part1-2024-July17th-b-pdf": 3.0,
+    "Calculus-part1-2024-July17th-c-pdf": 3.0,
+    "Calculus-part1-2024-July17th-d-pdf": 3.0,
+    "Calculus-part1-2024-sept-26-a-pdf": 3.0,
+    "Calculus-part1-2024-sept-26-b-pdf": 3.0
+   },
+   "theory_questions": {
+    "2023-24-SampleTest-Part1": 3.0,
+    "Calculus-part1-2024-feb7th-b-pdf": 3.0,
+    "Calculus-part1-2024-feb7th-d-pdf": 3.0,
+    "Calculus-part1-2024-Jun25th-b-pdf": 8.0,
+    "Calculus-part1-2024-Jun25th-c-pdf": 3.0,
+    "Calculus-part1-2024-jun25-a-pdf": 3.0,
+    "Calculus-part1-2024-jun25th-d-pdf": 3.0,
+    "Calculus-part1-2024-sept-a-pdf": 7.0,
+    "Calculus-part1-2024-sept-b-pdf": 7.0
+   },
+   "limits_continuity": {
+    "Calculus-part1-2024-feb7th-a-pdf": 3.0,
+    "Calculus-part1-2024-feb7th-c-pdf": 3.0,
+    "Calculus-part1-2024-feb21-a-pdf": 3.0,
+    "Calculus-part1-2024-feb21-b-pdf": 3.0,
+    "Calculus-part1-2024-feb21-c-pdf": 3.0,
+    "Calculus-part1-2024-feb21-d-pdf": 3.0,
+    "Calculus-part1-2024-sept-a-pdf": 8.0,
+    "Calculus-part1-2024-sept-b-pdf": 8.0,
+    "Calculus-part1-2026-feb-4-a-pdf": 8.0,
+    "Calculus-part1-2026-feb-4-b-pdf": 8.0,
+    "Calculus-part1-2026-feb-4-c-pdf": 8.0,
+    "Calculus-part1-2026-feb-4-d-pdf": 8.0
+   },
+   "series_sequences": {
+    "Calculus-part1-2025-SampleTest": 3.0,
+    "Calculus-part1-2026-feb-18-a-pdf": 3.0,
+    "Calculus-part1-2026-feb-18-b-pdf": 3.0,
+    "Calculus-part1-2026-feb-18-c-pdf": 3.0,
+    "Calculus-part1-2026-feb-18-d-pdf": 3.0
+   },
+   "unclassified": {
+    "Calculus-part1-2026-feb-4-c-pdf": 1.0
+   }
+  },
+  "dated_papers": 31,
+  "undated_papers": 0
+ },
+ "509483": {
+  "course": "509483",
+  "n_papers": 39,
+  "weighting": "item count (0/39 papers print per-item marks)",
+  "papers": [
+   "31-1-22A-pdf",
+   "B31-1-22-pdf",
+   "C31-1-22-pdf",
+   "D31-1-22-pdf",
+   "February25-zip::13-02-25A.pdf",
+   "February25-zip::13-02-25B.pdf",
+   "Jan24-A-zip::29-01-24A.pdf",
+   "Jan24-B-zip::29-01-24B.pdf",
+   "January25-zip::27-01-25D.pdf",
+   "January25-zip::27-01-25C.pdf",
+   "January25-zip::27-01-25B.pdf",
+   "January25-zip::27-01-25A.pdf",
+   "July24-zip::22-07-24.pdf",
+   "June24-zip::19-06-24A.pdf",
+   "Jan2023-zip::2.1B.txt",
+   "Jan2023-zip::2.2B.txt",
+   "Jan2023-zip::labyrinthB.txt",
+   "Jan2023-zip::MarsVenusB.txt",
+   "Jan2023-zip::2.3B.txt",
+   "Jan2023-zip::30-1-23B.pdf",
+   "Jan2023-zip::questions.txt",
+   "Jan2023-zip::2.2.txt",
+   "Jan2023-zip::MarsVenus.txt",
+   "Jan2023-zip::labyrinthA.txt",
+   "Jan2023-zip::2.3.txt",
+   "Jan2023-zip::2.1.txt",
+   "Jan2023-zip::30-1-23A.pdf",
+   "July-2023-zip::24-07-23.pdf",
+   "June2023-zip::coloring.txt",
+   "June2023-zip::PartII_2.txt",
+   "June2023-zip::pizzeria.txt",
+   "June2023-zip::29-06-23.pdf",
+   "June2023-zip::PartII_3.txt",
+   "June2023-zip::PartII_1.txt",
+   "June2023-zip::PartI.txt",
+   "September22-2023-zip::23-09-23.pdf",
+   "September-1st-2023-zip::1-09-23.pdf",
+   "Sept20-2024-zip::20-09-24.pdf",
+   "September2-2024-zip::02-09-24.pdf"
+  ],
+  "recurrence": 0.0,
+  "structure_stability": "variable: 1-5 items per paper",
+  "novelty_score": 0.15762132517438934,
+  "novelty_examples": [
+   {
+    "a": "Jan2023-zip::labyrinthB.txt: 1) (= y 1))\n )\n \n(declare-const x0 Int)\n(declare-const y0 Int)\n\n(declare-const x1 Int)\n(declare-const y1 Int)\n\n(declare-const x2 Int)\n(declare-const y",
+    "b": "Jan2023-zip::labyrinthA.txt: 8) (= y 1))\n )\n \n(declare-const x0 Int)\n(declare-const y0 Int)\n\n(declare-const x1 Int)\n(declare-const y1 Int)\n\n(declare-const x2 Int)\n(declare-const y",
+    "similarity": 1.0
+   },
+   {
+    "a": "Jan2023-zip::labyrinthA.txt: 8) (= y 1))\n )\n \n(declare-const x0 Int)\n(declare-const y0 Int)\n\n(declare-const x1 Int)\n(declare-const y1 Int)\n\n(declare-const x2 Int)\n(declare-const y",
+    "b": "June2023-zip::PartII_3.txt: \n\n; Flattening\n; 1. f(a,b)=e\n; 2. e=g(c)\n; 3. b=g(c)\n; 4. f(a,c)=d\n; 5. ~d=a\n; 6. g(b)=a\n; 7. c=b\n\n; First blocks\n; {f(a,b),e,g(c),b,c} {f(a,c), d} {g",
+    "similarity": 0.0
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "propositional_sat",
+    "share": 0.564
+   },
+   {
+    "topic": "smt_encoding",
+    "share": 0.256
+   }
+  ],
+  "coverage_of_min_set": 0.821,
+  "matrix": {
+   "propositional_sat": {
+    "31-1-22A-pdf": 1.0,
+    "B31-1-22-pdf": 1.0,
+    "C31-1-22-pdf": 1.0,
+    "D31-1-22-pdf": 1.0,
+    "February25-zip::13-02-25A.pdf": 1.0,
+    "Jan24-A-zip::29-01-24A.pdf": 1.0,
+    "Jan24-B-zip::29-01-24B.pdf": 1.0,
+    "January25-zip::27-01-25B.pdf": 1.0,
+    "January25-zip::27-01-25A.pdf": 1.0,
+    "July24-zip::22-07-24.pdf": 1.0,
+    "June24-zip::19-06-24A.pdf": 1.0,
+    "Jan2023-zip::2.1B.txt": 1.0,
+    "Jan2023-zip::2.3B.txt": 1.0,
+    "Jan2023-zip::30-1-23B.pdf": 1.0,
+    "Jan2023-zip::2.3.txt": 1.0,
+    "Jan2023-zip::2.1.txt": 1.0,
+    "Jan2023-zip::30-1-23A.pdf": 1.0,
+    "July-2023-zip::24-07-23.pdf": 1.0,
+    "June2023-zip::29-06-23.pdf": 1.0,
+    "June2023-zip::PartII_1.txt": 1.0,
+    "June2023-zip::PartI.txt": 1.0,
+    "September22-2023-zip::23-09-23.pdf": 1.0
+   },
+   "first_order": {
+    "February25-zip::13-02-25B.pdf": 1.0,
+    "January25-zip::27-01-25D.pdf": 1.0,
+    "January25-zip::27-01-25C.pdf": 1.0,
+    "September-1st-2023-zip::1-09-23.pdf": 1.0,
+    "September2-2024-zip::02-09-24.pdf": 1.0
+   },
+   "smt_encoding": {
+    "Jan2023-zip::2.2B.txt": 1.0,
+    "Jan2023-zip::labyrinthB.txt": 1.0,
+    "Jan2023-zip::MarsVenusB.txt": 1.0,
+    "Jan2023-zip::2.2.txt": 1.0,
+    "Jan2023-zip::MarsVenus.txt": 1.0,
+    "Jan2023-zip::labyrinthA.txt": 1.0,
+    "June2023-zip::coloring.txt": 1.0,
+    "June2023-zip::PartII_2.txt": 1.0,
+    "June2023-zip::pizzeria.txt": 1.0,
+    "June2023-zip::PartII_3.txt": 1.0
+   },
+   "unclassified": {
+    "Jan2023-zip::labyrinthB.txt": 4.0,
+    "Jan2023-zip::2.3B.txt": 1.0,
+    "Jan2023-zip::labyrinthA.txt": 4.0,
+    "Jan2023-zip::2.3.txt": 1.0,
+    "June2023-zip::PartI.txt": 1.0
+   },
+   "theories": {
+    "Jan2023-zip::questions.txt": 1.0,
+    "Sept20-2024-zip::20-09-24.pdf": 1.0
+   }
+  },
+  "dated_papers": 25,
+  "undated_papers": 14
+ },
+ "509485": {
+  "course": "509485",
+  "n_papers": 2,
+  "weighting": "item count (0/2 papers print per-item marks)",
+  "papers": [
+   "Oral exam topics",
+   "Papers (oral exam) final score"
+  ],
+  "recurrence": null,
+  "structure_stability": "identical skeleton: every paper has 1 items",
+  "novelty_score": null,
+  "novelty_examples": [],
+  "min_topic_set": [
+   {
+    "topic": "memory",
+    "share": 1.0
+   }
+  ],
+  "coverage_of_min_set": 1.0,
+  "matrix": {
+   "memory": {
+    "Oral exam topics": 1.0
+   },
+   "unclassified": {
+    "Papers (oral exam) final score": 1.0
+   }
+  },
+  "dated_papers": 0,
+  "undated_papers": 2,
+  "recurrence_note": "not computable: only 0/2 papers carry a parseable date"
+ },
+ "509487": {
+  "course": "509487",
+  "n_papers": 10,
+  "weighting": "published marks",
+  "papers": [
+   "Lab - Exam Exercise Samples",
+   "2023-06-Exam-pdf",
+   "2023-07-Esame-pdf",
+   "2023-09-Esame-pdf",
+   "Text of the exam - July 2023",
+   "Text of the exam - June 2023",
+   "2024-06-text-pdf",
+   "2024-07-Text-pdf",
+   "Exam example 5.6.2025",
+   "Exam 2026-01"
+  ],
+  "recurrence": 1.0,
+  "structure_stability": "variable: 1-4 items per paper",
+  "novelty_score": 0.11777777777777777,
+  "novelty_examples": [
+   {
+    "a": "2023-06-Exam-pdf: FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 22.06.2023 1. [5 punti] Cosa sono fuzzyficazione e defuzzyficazione in un sistema basato su regole fuzzy? Qua",
+    "b": "Text of the exam - June 2023: FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 22.06.2023 1. [5 punti] Cosa sono fuzzyficazione e defuzzyficazione in un sistema basato su regole fuzzy? Qua",
+    "similarity": 1.0
+   },
+   {
+    "a": "2024-07-Text-pdf: NAME: MATRICOLA: FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 09.07.2024 1. [4points] Give the definition and an example of linguistic variable/ Si dia la",
+    "b": "Exam example 5.6.2025: FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING \n \n \n1. What is a trapezoidal fuzzy set? \n2. Which are the three semantics (meaning/interpretations) that we ",
+    "similarity": 0.005
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "evolutionary_algorithms",
+    "share": 0.949
+   }
+  ],
+  "coverage_of_min_set": 0.949,
+  "matrix": {
+   "evolutionary_algorithms": {
+    "Lab - Exam Exercise Samples": 2.0,
+    "2023-06-Exam-pdf": 5.0,
+    "2023-07-Esame-pdf": 4.0,
+    "2023-09-Esame-pdf": 4.0,
+    "Text of the exam - July 2023": 4.0,
+    "Text of the exam - June 2023": 5.0,
+    "2024-06-text-pdf": 4.0,
+    "2024-07-Text-pdf": 4.0,
+    "Exam example 5.6.2025": 1.0,
+    "Exam 2026-01": 4.0
+   },
+   "fuzzy_logic_control": {
+    "Lab - Exam Exercise Samples": 1.0
+   },
+   "fuzzy_clustering": {
+    "Lab - Exam Exercise Samples": 1.0
+   }
+  },
+  "dated_papers": 9,
+  "undated_papers": 1
+ },
+ "509488": {
+  "course": "509488",
+  "n_papers": 5,
+  "weighting": "item count (1/5 papers print per-item marks)",
+  "papers": [
+   "[TMNLP 22_23] Exam questions sample",
+   "[TMNLP 23_24] Exam questions sample",
+   "[TM-NLP 23_24] Exam questions sample",
+   "example of exam for linguistic part",
+   "[TMNLP-2025_2026] Practice Written Exam"
+  ],
+  "recurrence": null,
+  "structure_stability": "variable: 1-16 items per paper",
+  "novelty_score": 0.11833176012499062,
+  "novelty_examples": [
+   {
+    "a": "[TMNLP 22_23] Exam questions sample: Pleaseprovideathoroughexplanationfor eachquestion.\n1. Giventhefollowingtablethatcontainswords(rows)andcontexts(columns)co-occurrences:\nandthefollowing",
+    "b": "[TM-NLP 23_24] Exam questions sample: Pleaseprovideathoroughexplanationfor eachquestion.\n1. Giventhefollowingtablethatcontainswords(rows)andcontexts(columns)co-occurrences:\nandthefollowing",
+    "similarity": 1.0
+   },
+   {
+    "a": "[TM-NLP 23_24] Exam questions sample: Pleaseprovideathoroughexplanationfor eachquestion.\n1. Giventhefollowingtablethatcontainswords(rows)andcontexts(columns)co-occurrences:\nandthefollowing",
+    "b": "[TMNLP-2025_2026] Practice Written Exam: (9) In a Transformer decoder, masked self-attention is used during training mainly to: A. Prevent each target position from attending to future target",
+    "similarity": 0.018
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "language_models",
+    "share": 0.524
+   },
+   {
+    "topic": "sequence_models",
+    "share": 0.143
+   }
+  ],
+  "coverage_of_min_set": 0.667,
+  "matrix": {
+   "language_models": {
+    "[TMNLP 22_23] Exam questions sample": 1.0,
+    "[TMNLP 23_24] Exam questions sample": 3.0,
+    "[TM-NLP 23_24] Exam questions sample": 1.0,
+    "[TMNLP-2025_2026] Practice Written Exam": 6.0
+   },
+   "unclassified": {
+    "[TMNLP 23_24] Exam questions sample": 3.0,
+    "example of exam for linguistic part": 3.0,
+    "[TMNLP-2025_2026] Practice Written Exam": 2.0
+   },
+   "embeddings": {
+    "[TMNLP 23_24] Exam questions sample": 1.0,
+    "[TMNLP-2025_2026] Practice Written Exam": 1.0
+   },
+   "sequence_models": {
+    "[TMNLP 23_24] Exam questions sample": 1.0,
+    "[TMNLP-2025_2026] Practice Written Exam": 2.0
+   },
+   "linguistics": {
+    "example of exam for linguistic part": 1.0
+   },
+   "tokenisation": {
+    "[TMNLP-2025_2026] Practice Written Exam": 2.0
+   },
+   "evaluation": {
+    "[TMNLP-2025_2026] Practice Written Exam": 2.0
+   }
+  },
+  "dated_papers": 1,
+  "undated_papers": 4,
+  "recurrence_note": "not computable: only 1/5 papers carry a parseable date"
+ },
+ "509495": {
+  "course": "509495",
+  "n_papers": 5,
+  "weighting": "published marks",
+  "papers": [
+   "Past Assignment 1 (24/10)",
+   "Mockup Exam (12/01)",
+   "Exercise on Past Assignment (25/10)",
+   "Mockup Exam",
+   "Mockup Exam (07/01/2026)"
+  ],
+  "recurrence": null,
+  "structure_stability": "identical skeleton: every paper has 1 items",
+  "novelty_score": 0.5375,
+  "novelty_examples": [
+   {
+    "a": "Past Assignment 1 (24/10): GiuseppeLibrano\nDirectoroftheNationalLibrary\nLungotevereRipa,1\n00153-Roma\nDearstudentoftheDataandKnowledgeBasescourse\nAs the director of the National ",
+    "b": "Exercise on Past Assignment (25/10): GiuseppeLibrano\nDirectoroftheNationalLibrary\nLungotevereRipa,1\n00153-Roma\nDearstudentoftheDataandKnowledgeBasescourse\nAs the director of the National ",
+    "similarity": 1.0
+   },
+   {
+    "a": "Mockup Exam (12/01): Exam Mockup\nGeneral Info\n• The (basic) exam will consist of 16 questions\n• Each question gives between 0 and 2 points\n• The total is 32 points\n• These",
+    "b": "Mockup Exam (07/01/2026): Exam Mockup\nGeneral Info\n• Multiple choice questions over the topics of the course.\n• You can get up to 30 points, which are then scaled to the\ninterv",
+    "similarity": 0.075
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "sql_algebra",
+    "share": 0.969
+   }
+  ],
+  "coverage_of_min_set": 0.969,
+  "matrix": {
+   "er_relational": {
+    "Past Assignment 1 (24/10)": 1.0,
+    "Exercise on Past Assignment (25/10)": 1.0
+   },
+   "sql_algebra": {
+    "Mockup Exam (12/01)": 2.0,
+    "Mockup Exam": 30.0,
+    "Mockup Exam (07/01/2026)": 30.0
+   }
+  },
+  "dated_papers": 1,
+  "undated_papers": 4,
+  "recurrence_note": "not computable: only 1/5 papers carry a parseable date"
+ },
+ "510109": {
+  "course": "510109",
+  "n_papers": 16,
+  "weighting": "item count (9/16 papers print per-item marks)",
+  "papers": [
+   "Exam attachment",
+   "10 Hypothesis testing (part 1)",
+   "10 Hypothesis testing (part 2)",
+   "HypothesisTesting notes",
+   "Mock Exam",
+   "Hypothesis testing notes",
+   "Mock exam",
+   "Exam 28 Feb 2023 (text)",
+   "Exam 27 January 2023",
+   "Exam 3 July 2023",
+   "Exam 21 July 2023",
+   "Exam 27 Sep 2023",
+   "Exam 9 Feb 2024",
+   "Exam 6 Feb 2025, Questions 1-2 (text)",
+   "Exam 5 Feb 2026 (text)",
+   "Exam 20 Jan 2026 (text)"
+  ],
+  "recurrence": 0.6829268292682927,
+  "structure_stability": "variable: 1-25 items per paper",
+  "novelty_score": 0.23932433488441746,
+  "novelty_examples": [
+   {
+    "a": "Exam 9 Feb 2024: Problem 4. (10 points) Let (X,Y ) : Ω → R2 be a random vector having Gaussian distribution with\nmean vector (mX,m Y ) = (1,",
+    "b": "Exam 20 Jan 2026 (text): Problem 4. (12 points)Let (X,Y ) : Ω→ R2 be a random vector having Gaussian distribution\nwith mean vector (mX,m Y ) = (0,",
+    "similarity": 1.0
+   },
+   {
+    "a": "Exam 27 Sep 2023: 2d) Determine the conditional probabilityP (the chosen letter is N|X≤ 3). [2 points]",
+    "b": "Exam 20 Jan 2026 (text): Problem 1. (10 points)A biased coin is tossed repeatedly. The probability of heads is p∈ (0, 1).\nAssume all tosses are independent of each other.\nLet ",
+    "similarity": 0.0
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "expectation_variance",
+    "share": 0.22
+   },
+   {
+    "topic": "independence_conditional",
+    "share": 0.179
+   },
+   {
+    "topic": "continuous_random_variables",
+    "share": 0.168
+   },
+   {
+    "topic": "discrete_random_variables",
+    "share": 0.158
+   }
+  ],
+  "coverage_of_min_set": 0.725,
+  "matrix": {
+   "unclassified": {
+    "Exam attachment": 1.0,
+    "HypothesisTesting notes": 3.0,
+    "Hypothesis testing notes": 3.0,
+    "Exam 28 Feb 2023 (text)": 30.0,
+    "Exam 27 January 2023": 16.0,
+    "Exam 3 July 2023": 17.0,
+    "Exam 21 July 2023": 21.0,
+    "Exam 27 Sep 2023": 6.0,
+    "Exam 9 Feb 2024": 10.0,
+    "Exam 5 Feb 2026 (text)": 32.0,
+    "Exam 20 Jan 2026 (text)": 16.0
+   },
+   "continuous_random_variables": {
+    "Exam attachment": 2.0,
+    "Exam 28 Feb 2023 (text)": 4.0,
+    "Exam 27 January 2023": 10.0,
+    "Exam 3 July 2023": 16.0,
+    "Exam 21 July 2023": 7.0,
+    "Exam 27 Sep 2023": 12.0,
+    "Exam 9 Feb 2024": 11.0,
+    "Exam 6 Feb 2025, Questions 1-2 (text)": 2.0,
+    "Exam 20 Jan 2026 (text)": 22.0
+   },
+   "hypothesis_testing": {
+    "10 Hypothesis testing (part 1)": 20.0,
+    "10 Hypothesis testing (part 2)": 1.0,
+    "HypothesisTesting notes": 21.0,
+    "Mock Exam": 1.0,
+    "Hypothesis testing notes": 21.0,
+    "Mock exam": 1.0
+   },
+   "expectation_variance": {
+    "HypothesisTesting notes": 1.0,
+    "Hypothesis testing notes": 1.0,
+    "Exam 28 Feb 2023 (text)": 18.0,
+    "Exam 27 January 2023": 20.0,
+    "Exam 3 July 2023": 14.0,
+    "Exam 21 July 2023": 20.0,
+    "Exam 27 Sep 2023": 21.0,
+    "Exam 9 Feb 2024": 4.0,
+    "Exam 5 Feb 2026 (text)": 5.0,
+    "Exam 20 Jan 2026 (text)": 9.0
+   },
+   "discrete_random_variables": {
+    "Exam 28 Feb 2023 (text)": 16.0,
+    "Exam 27 January 2023": 7.0,
+    "Exam 3 July 2023": 3.0,
+    "Exam 21 July 2023": 1.0,
+    "Exam 27 Sep 2023": 17.0,
+    "Exam 9 Feb 2024": 18.0,
+    "Exam 5 Feb 2026 (text)": 9.0,
+    "Exam 20 Jan 2026 (text)": 10.0
+   },
+   "independence_conditional": {
+    "Exam 28 Feb 2023 (text)": 4.0,
+    "Exam 27 January 2023": 13.0,
+    "Exam 3 July 2023": 17.0,
+    "Exam 21 July 2023": 18.0,
+    "Exam 27 Sep 2023": 7.0,
+    "Exam 9 Feb 2024": 7.0,
+    "Exam 6 Feb 2025, Questions 1-2 (text)": 2.0,
+    "Exam 5 Feb 2026 (text)": 8.0,
+    "Exam 20 Jan 2026 (text)": 16.0
+   },
+   "joint_and_transforms": {
+    "Exam 28 Feb 2023 (text)": 3.0,
+    "Exam 27 January 2023": 13.0,
+    "Exam 3 July 2023": 4.0,
+    "Exam 21 July 2023": 15.0,
+    "Exam 27 Sep 2023": 13.0,
+    "Exam 9 Feb 2024": 4.0,
+    "Exam 6 Feb 2025, Questions 1-2 (text)": 2.0,
+    "Exam 5 Feb 2026 (text)": 13.0,
+    "Exam 20 Jan 2026 (text)": 9.0
+   }
+  },
+  "dated_papers": 9,
+  "undated_papers": 7
+ }
+}
