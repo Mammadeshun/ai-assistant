@@ -457,7 +457,7 @@
       "info-10047"
     ],
     "pages_read": 2,
-    "docs_read": 2,
+    "docs_read": 9,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [
@@ -642,7 +642,7 @@
       "info-7669"
     ],
     "pages_read": 6,
-    "docs_read": 10,
+    "docs_read": 30,
     "evidence_tier": "C",
     "findings": [
       {
@@ -1057,9 +1057,250 @@
       "info-574"
     ],
     "pages_read": 10,
-    "docs_read": 5,
-    "evidence_tier": "C",
-    "findings": [],
+    "docs_read": 130,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "lab_component",
+        "quote": "This frame of reference reflects the need for organizations to share information, have a collaborative strategy, and to have all parts working together.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "It has fully elaborated technical and administrative departments, including engi- neers, market researchers, and financial analysts who scrutinize, routinize, and formalize work in the high-volume production center.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Generally little collaboration occurs across functional departments, and the whole organization is coordinated and controlled through the vertical hier- archy, with decision-making authority residing with upper-level managers.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "The “Fit & Easy” label continues as part of a nutrition cam- paign, using skinless, boneless chicken and turkey products.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "An organizational culture that values team- work, collaboration, creativity, and open communication, for example, would not function well with a tight, vertical structure and strict rules and regulations.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 86 Part 2: Organizational Purpose and Structural Design Notes 1.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Labor Department to the major television networks to the local auto parts store.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Integration is the quality of collaboration among departments.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Omega hired a new presi- dent who had been a director of a large electronic research laboratory and upgraded several of the existing personnel within the plant.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Collaboration and partnership is the new way of doing business.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "ASSESS YOUR ANSWER Briefcase As an organization manager, keep these guidelines in mind: Seek collaborative partnerships that enable mutual depen- dence and enhance value and gain for both sides.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 200 Part 3: Open System Design Elements City Government • Mayor Barbara Ott, a political newcomer, who has been in office for less than a year and who campaigned on environmental issues.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 204 Part 3: Open System Design Elements Notes 1.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Not Text not available due to copyright restrictions 248 Part 3: Open System Design Elements 22.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "The management and office staff (department head, staff engineer, lab technician, and department clerk) worked only on the day shift, although if an emergency arose on the other shifts, the foreman might call.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Managers use the bud- get for planning the future and reducing uncertainty about the availability of human and material resources needed to perform department tasks.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "IT can also improve horizontal coor- dination and collaboration with external parties such as suppliers, customers, and partners.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "She tried to show him some of the HR resources available on the intranet and explain how it had benefited the department and the company, but he waved her away.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Disc Text not available due to copyright restrictions 364 Part 4: Internal Design Elements Case for Analysis: Sunflower Incorporated* Sunflower Incorporated is a large distribution company with more than 5,000 employees and gross sales of more than $550 million (2003).",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "The morality of aiding a drowning person, for example, is not specified by law, and driving on the right-hand side of the road has no moral basis;",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "Ethical dilemmas are not easy to resolve, but top executives can aid the process by establishing orga- nizational values that provide people with guidelines for making the best decision from a moral standpoint.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "Whistle-blowing is employee disclosure of illegal, immoral, or illegitimate practices on the part of the organization.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 402 Part 5: Managing Dynamic Processes Case for Analysis: Implementing Change at National Industrial Products* Curtis Simpson sat staring out the window of his office.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Needs Suppliers Professional Associations Consultants Research Literature Customers Competition Legislation Regulation Labor Force 416 Part 5: Managing Dynamic Processes Chapter 11: Innovation and Change 417 4.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Other studies indicate that innovation success is related to collaboration between technical and marketing departments.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 436 Part 5: Managing Dynamic Processes 4.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "In Chapter 3, we talked about horizontal linkages such as task forces and teams that encourage collaboration among functional departments.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "We discuss ways managers increase their power, political tactics for using power, and some ways managers can enhance collaboration among people and departments.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Text not available due to copyright restrictions 502 Part 5: Managing Dynamic Processes People at all levels of the hierarchy can use the idea of network centrality to accomplish goals and be more successful.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "92 Sometimes a full-time integrator is assigned to achieve cooperation and collabo- ration by meeting with members of the respective departments and exchanging information.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Now, Freeman is encouraging greater “hori- zontal collaboration,” as he calls it, asking that managers in the news department and the ad department consult with one another regarding issues or stories that involve the paper’s major advertisers.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Take Lab Safety, for example.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "integration the quality of collaboration among depart- ments or organizations.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "W whistle-blowing employee disclosure of illegal, immoral, or illegitimate practices on the part of the organization.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Labor Department, 142 U.S.",
+        "source": "R. DAFT ORGANIZATION THEORY AND DESIGN (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021425Z__mod-resource-220306.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Integration is the quality of collaboration that is achieved between those departments.",
+        "source": "chapter04 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021440Z__mod-resource-244213.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Elaboration stage - rewards are extensive and tailored to product and department, innovation is by institutionalized R&D, goals are for reputation, and top management style is a team approach with attacks on excessive bureaucracy.",
+        "source": "Chapter09 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021455Z__mod-resource-250820.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Disclosure mechanisms Whistle-blowing is employee disclosure of illegal, immoral, or illegitimate practices on the part of the organization.",
+        "source": "Chapter10 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021459Z__mod-resource-250823.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Reasons for New Product Success Innovation success is related to collaboration between technical and marketing departments.",
+        "source": "Chapter11 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021502Z__mod-resource-250916.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "The structure should enable extensive discussion and conflict as needed to collaborate on decisions that meet the needs of both departments.",
+        "source": "Chapter11 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021502Z__mod-resource-250916.html"
+      }
+    ],
     "past_papers": [
       "EXAM [resource/220380]",
       "EXAM [resource/103313]",
@@ -1195,7 +1436,7 @@
       "info-9643"
     ],
     "pages_read": 2,
-    "docs_read": 0,
+    "docs_read": 1,
     "evidence_tier": "C",
     "findings": [],
     "past_papers": [],
@@ -1420,9 +1661,52 @@
       "info-9893"
     ],
     "pages_read": 10,
-    "docs_read": 3,
-    "evidence_tier": "C",
-    "findings": [],
+    "docs_read": 70,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "oral",
+        "quote": "Organisms as metabolic engines, characterized by energy consumption rates, growth rates, body size, and behavioral times (32–34), have a clear counterpart in social systems (14, 35).",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022007Z__mod-resource-276466.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "We have obtained datasets at this level of detail mostly for the U.S., where typically more data are available and in more particular cases for European countries and China.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022007Z__mod-resource-276466.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "When we examine the ele- phant brain we see it has massive temporal lobes and huge sections devoted to control- ling the trunk muscles.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022009Z__mod-resource-276467.pdf"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "In such a case, ﬁxed points are solutions of pi =0a n d ∂U/∂q i =0 ,a n dt h eL y a p u n o vf u n c t i o ni sn o t i n gb u tt h e energy (minus its value on the ﬁxed point), and one has the well known Laplace theorem: if the energy potential has a minimum the ﬁxed point is stable.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022021Z__mod-resource-288561.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "The picture is thus rather diﬀerent and more complex than before: the available phase space is partitioned in regions with regular orbits separated by ﬁnite portions, densely ﬁlled by trajectories with no evident regularity.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022021Z__mod-resource-288561.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "Bistability and Competition of Spatiotemporal Chaotic and Fixed Point Attractors in Rayleigh- B´enard Convection, Phys.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022021Z__mod-resource-288561.pdf"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "(4) This holds true when the maximum (or minimum) of map functionf happens to also be the ﬁxed point x∗ =xm = maxf (x), (5) wherexm denotes the maximum.",
+        "source": "Additional material (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T022026Z__mod-resource-288570.pdf"
+      }
+    ],
     "past_papers": [
       "Lecture 24 - Simulation of the Exam (IPAD solutions of the problems requiring calculations at the end) [resource/324279]",
       "Another mock exam [resource/290672]",
