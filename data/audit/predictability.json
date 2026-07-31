@@ -789,5 +789,109 @@
   },
   "dated_papers": 9,
   "undated_papers": 7
+ },
+ "509493": {
+  "course": "509493",
+  "n_papers": 15,
+  "weighting": "item count (0/15 papers print per-item marks)",
+  "papers": [
+   "06-01-exercise-cuckoos-pdf",
+   "Esame1-pdf",
+   "Esame2-pdf",
+   "Esame3-pdf",
+   "Esame4-pdf",
+   "Esame5-pdf",
+   "Esame6-pdf",
+   "01-01-SimpleLM-ex-pdf",
+   "01-02-SimpleGaussianLM-ex-pdf",
+   "01-03-SimpleGaussianLM-ex2-pdf",
+   "02-SimpleGaussianLM-ex3-pdf",
+   "04-MultipleLM-ex-pdf",
+   "05-MultipleLM-ex2-pdf",
+   "07-GLM-ex-pdf",
+   "09-exam-practice-pdf"
+  ],
+  "recurrence": 1.0,
+  "structure_stability": "variable: 1-24 items per paper",
+  "novelty_score": 0.15640262120718654,
+  "novelty_examples": [
+   {
+    "a": "01-02-SimpleGaussianLM-ex-pdf: Exercise 1.8\nProvide the confidence intervals for βr, r = 1, 2 at level 1 − α = 0.95.\n4",
+    "b": "07-GLM-ex-pdf: Exercise 2.2\nPerform the significance tests and determine whether the variables are significant at the\n0.05 level.\n5",
+    "similarity": 0.522
+   },
+   {
+    "a": "05-MultipleLM-ex2-pdf: 3) 8 1.764 0.5007\nCompute the total deviance (total sum of squares - SST) and explain its components.\n11",
+    "b": "09-exam-practice-pdf: Exercise 2\nGiven a set ofn = 30 observations, consider fitting the modelYi ∼ Bernoulli(πi) where logit(πi) =\nβ1 +β2xi, with xi is a dummy variable tak",
+    "similarity": 0.0
+   }
+  ],
+  "min_topic_set": [
+   {
+    "topic": "inference",
+    "share": 0.46
+   },
+   {
+    "topic": "diagnostics",
+    "share": 0.19
+   }
+  ],
+  "coverage_of_min_set": 0.651,
+  "matrix": {
+   "unclassified": {
+    "06-01-exercise-cuckoos-pdf": 1.0,
+    "Esame4-pdf": 9.0,
+    "Esame5-pdf": 1.0,
+    "01-01-SimpleLM-ex-pdf": 3.0,
+    "01-02-SimpleGaussianLM-ex-pdf": 2.0,
+    "01-03-SimpleGaussianLM-ex2-pdf": 6.0,
+    "04-MultipleLM-ex-pdf": 9.0,
+    "05-MultipleLM-ex2-pdf": 11.0,
+    "07-GLM-ex-pdf": 12.0
+   },
+   "diagnostics": {
+    "Esame1-pdf": 1.0,
+    "Esame3-pdf": 1.0,
+    "Esame4-pdf": 1.0,
+    "Esame5-pdf": 1.0,
+    "Esame6-pdf": 2.0,
+    "01-01-SimpleLM-ex-pdf": 2.0,
+    "01-03-SimpleGaussianLM-ex2-pdf": 1.0,
+    "05-MultipleLM-ex2-pdf": 2.0,
+    "09-exam-practice-pdf": 1.0
+   },
+   "glm": {
+    "Esame1-pdf": 1.0,
+    "Esame2-pdf": 1.0,
+    "Esame3-pdf": 1.0,
+    "Esame5-pdf": 1.0,
+    "Esame6-pdf": 1.0,
+    "05-MultipleLM-ex2-pdf": 2.0,
+    "07-GLM-ex-pdf": 3.0,
+    "09-exam-practice-pdf": 1.0
+   },
+   "inference": {
+    "Esame2-pdf": 1.0,
+    "Esame4-pdf": 1.0,
+    "Esame5-pdf": 1.0,
+    "01-02-SimpleGaussianLM-ex-pdf": 3.0,
+    "01-03-SimpleGaussianLM-ex2-pdf": 3.0,
+    "02-SimpleGaussianLM-ex3-pdf": 1.0,
+    "04-MultipleLM-ex-pdf": 8.0,
+    "05-MultipleLM-ex2-pdf": 4.0,
+    "07-GLM-ex-pdf": 7.0
+   },
+   "simple_linear_model": {
+    "Esame4-pdf": 1.0,
+    "01-01-SimpleLM-ex-pdf": 1.0,
+    "01-02-SimpleGaussianLM-ex-pdf": 3.0,
+    "01-03-SimpleGaussianLM-ex2-pdf": 1.0,
+    "07-GLM-ex-pdf": 2.0
+   },
+   "multiple_linear_model": {
+    "04-MultipleLM-ex-pdf": 2.0,
+    "05-MultipleLM-ex2-pdf": 1.0
+   }
+  }
  }
 }
