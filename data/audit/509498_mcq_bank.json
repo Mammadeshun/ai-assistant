@@ -1,0 +1,453 @@
+{
+ "items": [
+  {
+   "n": 1,
+   "text": "What is the base of the data strategy pyramid? a. Data governance ✓ b. infrastructure c. people and data culture",
+   "topic": "data_strategy_governance"
+  },
+  {
+   "n": 2,
+   "text": "select 3 customer lifecycle stages a. attract ✓ b. loyalty c. engage✓ d. retain✓",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 3,
+   "text": "Which of the following models apply in the engage new customers phase (phase 1)? a. Churn model b. repurchase model✓ c. CLTV",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 4,
+   "text": "What is the priority action to take on repeat customers? a. increase of purchase frequency b. up-selling and cross-selling✓ c. Retention",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 5,
+   "text": "What type of analysis does deterministic segmentation belong to? a. Analytics✓ b. machine learning c. deep learning d. generative AI",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 6,
+   "text": "What are the three components of deterministic segmentation? a. Recency✓ b. loyalty c. frequency✓ d. monetary✓ e. tenure",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 7,
+   "text": "What is the RFM migration matrix? a. A matrix that compares 2 different segmentations b. a matrix that compares the same segmentation in 2 different periods c. a matrix that allows you to understand how customers move between \nsegments\n \nfrom\n \na\n \ndate\n \nT-1\n \nto\n \na\n \ndate\n \nT✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 8,
+   "text": "Indicate one benefit of RFM segmentation a. Difficult interpretation of the segments obtained b. model useful for entry-level companies for the development of an evolutionary \nroad\n \nmap\n \nin\n \nthe\n \ndata\n \ndriven\n \nfield✓ c. development of complex algorithm for defining segment",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 9,
+   "text": "How many times does the repeat customer purchase in a year a. once a year b. twice a year c. three times a year d. At least twice a year✓",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 10,
+   "text": "What is the priority action to take on one shooter customers? a. up-selling b. cross-selling c. retention d. increase of purchase frequency✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 11,
+   "text": "What is the priority action to take on repeat customers? a. increase of purchase frequency b. up-selling and cross-selling✓ c. retention",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 12,
+   "text": "90% of the customers… a. make a purchase in the last year b. make a purchase in the last 6 months c. who repurchases, within 6 months✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 13,
+   "text": "order the phases of the RFM overall methodological approach a. define the time period [T0-T1]✓ b. Verify the distribution of the variables to define the number of optimal \ncategories\n \ninto\n \nwhich\n \nto\n \ndivide\n \nthe\n \n3\n \ndimensions\n \nidentified\n \nR,F,M✓ c. identify the best combination of the triplets (R,F,M)✓ d. Verify the segments that are smaller and/or not very marketing actionable and \nmanagement\n \nof\n \nthe\n \ntrade-off,\n \nnumber\n \nof\n \ncategories\n \nor\n \nunification\n \nof\n \nthe\n \nsegments✓ e. creation of the final segments✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 14,
+   "text": "Order the different phases related to the development of RFM segmentation for LSD \nindustry\n a. Definition of analysis time period✓ b. definition of recency and frequency thresholds✓ c. identification of groups derived from the intersection between recency and \nfrequency✓ d. definition of monetary thresholds✓ e. identification of the final segments and marketing actions✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 15,
+   "text": "What is the objective of cluster analysis? a. understand what are the main drivers that impact customer satisfaction and \ntheir\n \npositive\n \nor\n \nnegative\n \nimpact\n b. estimate the future profitability of the customer relationship c. identify customer groups/segments with the same purchasing behavioral \nprofile✓ d. reduce the number of variables considered in the clustering algorithm",
+   "topic": "clustering"
+  },
+  {
+   "n": 16,
+   "text": "What metrics are used to evaluate the correct number of clusters? a. silhouettes’s coefficient✓ b. R-square c. elbow method✓ d. pseudo- f statistic✓ e. AUC",
+   "topic": "clustering"
+  },
+  {
+   "n": 17,
+   "text": "Which of the following clusters is the priority one for the company in the fashion and \nluxury\n \nsector?\n a. digital orientation \n\nb. ambassador✓ c. discount seeker d. cashmere lover",
+   "topic": "fashion_luxury_segments"
+  },
+  {
+   "n": 18,
+   "text": "What are the 2 segments with the highest penetration in the ambassador cluster? a. gold-silver b. silver-bronze c. gold-diamond✓ d. bronze-steel e. diamond-silver",
+   "topic": "fashion_luxury_segments"
+  },
+  {
+   "n": 19,
+   "text": "What are the 2 segments with the highest penetration in the discount seeker cluster? a. gold-silver b. silver-bronze c. gold-diamond d. bronze-steel✓ e. diamond-silver",
+   "topic": "fashion_luxury_segments"
+  },
+  {
+   "n": 20,
+   "text": "What is the first step in developing a churn model? a. Explorative analysis✓ b. churn model development c. features selection",
+   "topic": "model_selection"
+  },
+  {
+   "n": 21,
+   "text": "Why is the Churn model important? a. because the model allows you to rationalize and diversify the marketing \ncontact\n \nplan\n \nto\n \nactivate\n \nad\n \nhoc\n \nactions✓ b. because it segments customers into homogeneous groups c. because it is one of the first analyzes of an evolutionary roadmap in the AI \nfield",
+   "topic": "model_selection"
+  },
+  {
+   "n": 22,
+   "text": "what are the 3 different ways to balance the sample a. undersampling✓ b. random sample c. oversampling✓ d. synthetic data generation✓",
+   "topic": "sample_balancing"
+  },
+  {
+   "n": 23,
+   "text": "What are the main performance measures for churn and repurchase models? a. AUC✓ b. R-squared c. Accuracy✓ d. Recall✓ e. T-test",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 24,
+   "text": "Order the different stages related to the phase 1 “explorative analysis” of the churn \nmodel\n a. time period and target definition✓ b. data understanding and data collection✓ c. data preparation and data cleaning✓ d. customer table development✓ e. explorative analysis✓",
+   "topic": "churn_pipeline"
+  },
+  {
+   "n": 25,
+   "text": "Which test should be used for the significance of numerical variables? a. t-test✓ b. R-squared c. Chi-squared d. AUC",
+   "topic": "significance_tests"
+  },
+  {
+   "n": 26,
+   "text": "What is the purpose of the t-test? a. evaluate the accuracy of the model b. avoid the risk of overfitting✓ c. it is not necessary for the model development",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 27,
+   "text": "What models can be used to predict churn?(MC) a. Linear regression b. Logistic regression✓ c. ANOVA d. Random forest✓",
+   "topic": "churn_pipeline"
+  },
+  {
+   "n": 28,
+   "text": "Which of the following are the main benefits of using the churn and repurchase \nmodel?\n a. Increased customer acquisition✓ b. improved customer satisfaction✓ c. identification of at-risk customers and understanding of the main churn \ndrivers✓ d. reduced marketing costs",
+   "topic": "churn_pipeline"
+  },
+  {
+   "n": 29,
+   "text": "What are the 3 different approaches to formulating the customer lifetime value(CLTV) \nmodel?\n a. traditional approach, descriptive approach using AI, predictive approach using \nstatistical\n \nmodels\n b. traditional approach, predictive approach using AI, predictive approach using \nstatistical\n \nmodels\n c. traditional approach, descriptive approach using Machine learning, predictive \napproach\n \nusing\n \neconometric\n \nmodels\n d. traditional approach, predictive approach using Machine learning, predictive \napproach\n \nusing\n \neconometric\n \nmodels✓",
+   "topic": "model_selection"
+  },
+  {
+   "n": 30,
+   "text": "Which AI algorithms were compared for churn/repurchase models? a. decision tree, random forest, logistic regression, gradient boosting, neural \nnetwork✓ b. hierarchical clustering, k-means algorithm c. linear regression, logistic regression d. principal component analysis(PCA)",
+   "topic": "clustering"
+  },
+  {
+   "n": 31,
+   "text": "What is the main purpose of a neural network in the churn/repurchase model? a. clustering b. anomaly detection c. dimensionality reduction d. using an architecture of artificial neurons connected via activation functions✓",
+   "topic": "model_selection"
+  },
+  {
+   "n": 32,
+   "text": "What is the main purpose of a decision tree in the churn/repurchase model? a. dimensionality reduction b. classification or prediction✓ c. clustering d. anomaly detection",
+   "topic": "model_selection"
+  },
+  {
+   "n": 33,
+   "text": "What is the main purpose of random forest in the churn/repurchase model? a. clustering b. combining different decision trees✓ c. outlier detection d. dimensionality reduction",
+   "topic": "model_selection"
+  },
+  {
+   "n": 34,
+   "text": "What is the time frame used in the customer lifetime value(CLTV) model? a. a single time unit(e.g. daily, weekly, monthly) for all metrics✓ b. the past behavior of customers c. the average duration of the relationship between the customer and the \ncompany\n d. the next 3 years",
+   "topic": "model_selection"
+  },
+  {
+   "n": 35,
+   "text": "What are the main steps in the development of the churn and repurchase models? a. definition of time horizon and customer selection, creation of model features, \ndata\n \nquality\n \nactivities\n \nand\n \nstatistical\n \ntests,\n \nModel\n \ntesting\n \nand\n \nevaluation\n b. data understanding and collection, data preparation and cleaning, model \ninterpretation\n \nand\n \npresentation,automation\n \nand\n \nintegration\n \ninto\n \nthe\n \ncompany\n \nsystems✓ c. automation and integration of the model into the company systems and \ncontact\n \nstrategy\n \nplan\n d. selection and transformation of the input variables, optimization and choices \nof\n \nthe\n \nbest\n \nmodel",
+   "topic": "model_selection"
+  },
+  {
+   "n": 36,
+   "text": "What are the goals of the Customer Lifetime Value(CLTV) model? (MC) a. to predict customer value over the next 3 years b. to establish a customer-centric paradigm c. to analyze the past behavior of consumers to estimate their future economic \nvalue✓ d. to develop ad hoc marketing actions on customers✓",
+   "topic": "model_selection"
+  },
+  {
+   "n": 37,
+   "text": "What are the variables used in the traditional approach of the Customer Lifetime \nValue(CLTV)\n \nmodel?\n \n a. spending,frequency,duration of the relationship and churn rate b. spending,frequency,duration of the relationship and customer spending c. spending,frequency,duration of the relationship and discount rate d. spending,frequency,duration of the relationship, profit, discount rate and churn \nrate✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 38,
+   "text": "Which of the following statements is NOT true about the BTYD model? a. it is based on 2 stochastic processes: one for estimating the purchase \nfrequency\n \nand\n \none\n \nfor\n \nestimating\n \nthe\n \nchurn\n b. The pareto/NBD model is the simplest version of the BTYD model c. The BTYD model is used to simulate customer behavior in a contractual \nsetting✓ d. The beta-geometric/NBD model uses a geometric distribution with beta \nparameter\n \nto\n \nsimulate\n \nthe\n \ninactivity\n \nprocess",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 39,
+   "text": "Which factor does not influence customer behavior simulated by the BTYD model? a. Recency b. Frequency c. Monetary value✓ d. Churn",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 40,
+   "text": "What is the purpose of the algorithm in the testing phase? a. to evaluate the model and avoid overfitting✓ b. to perform stratified undersampling c. to develop the model d. to generate training and testing sets",
+   "topic": "sample_balancing"
+  },
+  {
+   "n": 41,
+   "text": "What is the accuracy metric used to evaluate the models in terms of goodness? a. Roc curve b. Area under the curve (AUC) c. Percentage of the customers correctly classified✓ d. Lift",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 42,
+   "text": "What is the AUC metric used to evaluate the models in terms of goodness? a. Roc curve b. Area under the curve✓ c. Percentage of the customers correctly classified d. Lift",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 43,
+   "text": "What does a ROC curve plot? a. False positive rate and false negative rate b. True positive rate and false positive rate✓ c. True positive rate and true negative rate d. Precision and recall",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 44,
+   "text": "What is the main goal of measuring customer satisfaction? a. Retain loyal customers b. Develop a complete view of the customer base by monitoring changes over \ntime\n \nand\n \nidentifying\n \nvaluable\n \ninsights\n c. Improve the weakness of the rand and the offer d. Obtaining a vision of the entire customer experience and identifying insights \nto\n \nimprove\n \nthe\n \nrelationship\n \nwith\n \nthe\n \ncustomer✓",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 45,
+   "text": "What is the brand recommendation score (BRS) index? a. An index that measures customer lifetime value b. An index that represents the loyalty of customers and employees to the \nbrand✓ c. An index that measures churn d. An index that measures brand awareness",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 46,
+   "text": "What is the purpose of the net social perception score (NSPS)? a. To evaluate the company’s diversity and inclusion approach b. To measure the loyalty of the customers and employees c. to capture the clients and employees’ perception of the company across \ndifferent\n \nspheres\n \non\n \nsocial\n \nmedia✓ d. to analyze the sentiment of social media data",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 47,
+   "text": "What is the relationship between customer satisfaction and brand awareness? a. Brand awareness is determined by marketing efforts b. a satisfied customer is more likely to promote the brand to other potential \ncustomers✓ c. Brand awareness has no impact on customer satisfaction d. customer satisfaction has no impact on brand awareness",
+   "topic": "unclassified"
+  },
+  {
+   "n": 48,
+   "text": "What is the weighted combination of the 3 scores (price, assortment, relationship \nwith\n \nthe\n \nclient)?\n a. overall index✓ b. satisfiction matrix c. weighted result d. evaluation score",
+   "topic": "unclassified"
+  },
+  {
+   "n": 49,
+   "text": "What is the main driver of assortment satisfiction (use case LSD)? a. wide variety of regional and local products \nb. high quality fruit and vegetable products c. well stocked deli/counter department d. Finding the same products at more affordable prices in other supermarkets✓",
+   "topic": "rfm_segmentation"
+  },
+  {
+   "n": 50,
+   "text": "Based on the type of preferred store, which group of customers has the highest price \nsatisfaction?\n \n(use\n \ncase\n \nLSSD)\n a. customers who have “Other” as their reference point b. customers who have \"Affiliate\" as their reference point c. customers who have “Direct” as their reference point ✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 51,
+   "text": "Which drivers have the greatest impact on the general satisfaction of customers? a. price, availability, competence of the staff✓ b. product and reliability c. assortment and quality d. kindness of the staff",
+   "topic": "unclassified"
+  },
+  {
+   "n": 52,
+   "text": "What are the reasons for the dissatisfaction with the assortment? a. Low prices and high quality products b. convenient locations and ample parking c. friendly staff and wide variety of products d. critical issues in prices, the fruit and vegetable department, and a lack of \nvariety✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 53,
+   "text": "What is the main takeout from the pricing satisfaction index? a. The price satisfaction index is the highest compared to the previous drivers \nanalyzed\n b. The price satisfaction index is slightly higher than the previous drivers \nanalyzed\n c. The price satisfaction index is slightly lower than the previous drivers \nanalyzed\n d. The price satisfaction index is the lowest compared to the previous drivers \nanalyzed✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 54,
+   "text": "What is the main goal of product association analysis? a. To estimate the probability that the customer will buy a specific product b. To define associative rules between products✓ c. To analyze the transactions made by customers d. To identify association rules between items that appear jointly in an event✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 55,
+   "text": "Why is Market Basket Analysis (MBA) important? a. It allows the identification of driving products/categories and can be integrated \ninto\n \nmarketing\n \nautomation✓ b. It helps in the estimation of the probability that the customer will buy a specific \nproduct\n c. It allows the analysis of the transactions made by customers d. It helps in defining churn probability",
+   "topic": "churn_pipeline"
+  },
+  {
+   "n": 56,
+   "text": "What is an associative rule? a. A rule that defines the association between different sets of jointly purchased \nproducts\n \nand\n \nservices\n b. An implication between two propositions, such that if the first proposition is \ntrue,\n \nthen\n \nthe\n \nsecond\n \nproposition\n \nis\n \nalso\n \ntrue✓ c. A rule that identifies recurrent behaviors among customers d. A rule that has a probability of occurrence",
+   "topic": "unclassified"
+  },
+  {
+   "n": 57,
+   "text": "What is the support of an associative rule? a. The conditional probability that X occurs given that Y occurs b. The probability of all the items in a rule occurring together c. The strength of association between the products on the left and right sides of \nthe\n \nrule\n d. The percentage of transactions that contain both products X and Y✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 58,
+   "text": "What is the confidence of an associative rule? a. The strength of association between the products on the left and right sides of \nthe\n \nrule\n b. The conditional probability that X occurs given that Y occurs✓ c. The probability of all the items in a rule occurring together d. The percentage of transactions that contain both products X and Y",
+   "topic": "unclassified"
+  },
+  {
+   "n": 59,
+   "text": "What does lift measure in market basket analysis (MBA)? a. The strength of association between the products on the left and right sides of \nthe\n \nrule✓ b. The probability of all the items in a rule occurring together c. The percentage of transactions that contain both products X and Y d. The conditional probability that X occurs given that Y occurs",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 60,
+   "text": "What are the main goals of market basket analysis (MBA)? a. Identifying existing relationships between different products or patterns of \nproducts\n \npurchased\n \nby\n \ncustomers✓ b. Defining associative rules between different sets of jointly purchased products c. Estimating the probability of the purchase of a specific product given the \npurchase\n \nof\n \nanother\n \nproduct✓ d. Analyzing customers' purchasing habits by uncovering existing associations",
+   "topic": "unclassified"
+  },
+  {
+   "n": 61,
+   "text": "What is the purpose of BUNDLING in market basket analysis (MBA)? a. To identify association rules between items that appear jointly in an event b. To analyze the transactions made by customers to understand their purchase \npatterns\n c. To estimate the probability that the customer will buy a specific product d. To develop marketing campaigns by proposing combinations of products to \ncustomers\n \nbased\n \non\n \nassociation\n \nrules✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 62,
+   "text": "What is the benefit of market basket analysis for businesses? a. It helps businesses determine the optimal pricing strategy for their products b. It helps businesses identify the most popular products in the market c. It allows businesses to trigger commercial actions on lower-margin products \nin\n \ncase\n \nof\n \njoint\n \npurchase\n \nwith\n \nhigher-margin\n \nproducts✓ d. It allows businesses to track the purchasing behavior of individual customers",
+   "topic": "unclassified"
+  },
+  {
+   "n": 63,
+   "text": "What is the purpose of the 'next best product' analysis? a. To track the purchasing history of individual customers b. To analyze the market trends of different products c. To determine the profitability of different product bundles d. To identify products that are most likely to be purchased by customers in their \nnext\n \npurchase\n \naccording\n \nto\n \ntheir\n \npurchase\n \nhistory✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 64,
+   "text": "What is the purpose of the 'most significant rules' in market basket analysis? a. To identify the most popular products in the market b. To track the purchasing history of individual customers \nc. To extract the rules that have the highest support and confidence from the \nresults\n \nof\n \nthe\n \nanalysis✓ d. To determine the profitability of different product bundles",
+   "topic": "unclassified"
+  },
+  {
+   "n": 65,
+   "text": "What is the advantage of associating the rule with the highest confidence of the \ncluster\n \nto\n \ncustomers?\n \n(MC)\n a. It increases the probability of finding available products to offer to the \ncustomer,\n \neven\n \nif\n \nless\n \npersonalized✓ b. It helps businesses determine the optimal pricing strategy for their products c. It allows businesses to track the purchasing behavior of individual customers d. It provides highly personalized recommendations for each customer based on \ntheir\n \npurchasing\n \nhabits✓",
+   "topic": "clustering"
+  },
+  {
+   "n": 66,
+   "text": "What is the disadvantage of associating the rule with the highest confidence of the \ncluster\n \nto\n \ncustomers?\n a. It allows businesses to track the purchasing behavior of individual customers b. It helps businesses determine the optimal pricing strategy for their products c. It provides highly personalized recommendations for each customer based on \ntheir\n \npurchasing\n \nhabits\n d. The rule with highest confidence could be very different from the single \ncustomer's\n \npurchasing\n \nhabits,\n \nleading\n \nto\n \nlower\n \nredemption✓",
+   "topic": "clustering"
+  },
+  {
+   "n": 67,
+   "text": "What is the purpose of the 'most frequent in the cluster' analysis in market basket \nanalysis?\n a. To determine the profitability of different product bundles b. To associate the customer with the rule that has the highest confidence and \nsupport\n \nin\n \nthe\n \ncluster✓ c. To track the purchasing history of individual customers d. To identify the most popular products in the market",
+   "topic": "clustering"
+  },
+  {
+   "n": 68,
+   "text": "What is the goal of a product propensity model? a. To develop marketing campaigns for undecided customers b. To analyze customer loyalty and penetration c. To identify the probability that a customer will purchase a specific product or \nproduct\n \ncategory✓ d. To optimize the placement of products on store shelves",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 69,
+   "text": "What is the purpose of feature selection in a product propensity model? a. To analyze customer demographics and purchase categories b. To evaluate the performance of different Al algorithms c. To select the most relevant features for predicting customer purchasing \nbehavior✓ d. To determine the optimal parameters for the model",
+   "topic": "model_selection"
+  },
+  {
+   "n": 70,
+   "text": "How did the NEUROMETRIC measurements change during the experiment of SPOT \nА,\n \nВ\n \nand\n \nC?\n a. Spot C had a decline in attention that stabilized at the end b. Spot A had the least attention in the participants c. Presence of two main peaks of attention, both related to spot B✓ d. Spot A and C had a more stable and high average engagement",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 71,
+   "text": "What are the limits of Neuromarketing? a. Neuroethics has an impact on the protection of privacy b. Many people have criticized these experiments considering them immoral✓ c. Neuromarketing experiments are capable of undermining individual freedom \nd. Neuroscience research could provide marketers with information about \nvulnerable\n \nconsumers",
+   "topic": "unclassified"
+  },
+  {
+   "n": 72,
+   "text": "What are the benefits of Neuromarketing? a. Reduce the time between data collection and insight generation b. Maximize the effectiveness of the communication strategy c. Understand and study the subconscious behavior of customers✓ d. Improve marketing strategies with an orientation towards innovation",
+   "topic": "repurchase_curve"
+  },
+  {
+   "n": 73,
+   "text": "Which video recorded the most interest and engagement among the participants? a. Spot C b. Spot A c. Spot B✓ d. Spot A and C",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 74,
+   "text": "What technologies were used to monitor emotional involvement and attention? a. Muse and Interview b. Shimmer c. Shimmer and Interview d. Shimmer and Muse✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 75,
+   "text": "What is the difference between rational and irrational decision making in \nNeuromarketing?\n a. Rational decision making considers factors like price, quality, and utility, while \nirrational\n \ndecision\n \nmaking\n \nis\n \ninfluenced\n \nby\n \nbiases\n \nand\n \nunconscious\n \nchoices✓ b. Rational decision making is influenced by social norms, while irrational \ndecision\n \nmaking\n \nis\n \nindependent\n \nof\n \nsocial\n \ninfluence\n c. Rational decision making is quick and impulsive, while irrational decision \nmaking\n \nis\n \nthoughtful\n \nand\n \ndeliberate",
+   "topic": "unclassified"
+  },
+  {
+   "n": 76,
+   "text": "What are the benefits of Neuromarketing?(again) a. Integration of the decision-making process through evidence obtained from a \ndeep\n \nunderstanding\n \nof\n \nthe\n \nunconscious✓ b. Improved customer service c. Higher conversion rates d. Increased brand visibility",
+   "topic": "model_evaluation"
+  },
+  {
+   "n": 77,
+   "text": "What can be measured using neuroscience-based technological tools in \nNeuromarketing?\n a. Visual attention, level of attention, level of emotion, cognitive load✓ b. Customer satisfaction, brand loyalty, customer lifetime value, net promoter \nscore\n c. Market share, sales revenue, return on investment, customer acquisition cost d. Number of clicks, time spent on a website, bounce rate, conversion rate",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 78,
+   "text": "What are the elements that have generated the peaks of attention? a. Under 30 and sound: music b. Men and women over 30 c. European match and celebration scenes d. Training scenes and presence of the logo✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 79,
+   "text": "What is the main goal of Neuromarketing? a. To increase brand awareness b. To improve customer satisfaction c. To generate more leads \nd. To determine the communication's ability to capture attention and be \nemotionally\n \nengaging✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 80,
+   "text": "What are the four application areas of Neuromarketing? a. Product development, pricing, distribution, and promotion b. Sales forecasting, budgeting, sales promotion, and customer relationship \nmanagement\n c. Market research, competitor analysis, target audience segmentation, and \nmarketing\n \nstrategy\n d. Brand reputation, advertising and communication, customer experience, \nwebsite,\n \napp,\n \nand\n \nsocial✓",
+   "topic": "unclassified"
+  },
+  {
+   "n": 81,
+   "text": "What is the field of marketing research that studies consumers' cognitive and \naffective\n \nresponse\n \nto\n \nmarketing\n \nstimuli?\n a. Neuroscience b. Digital Marketing c. Neuromarketing✓ d. Content Marketing",
+   "topic": "unclassified"
+  },
+  {
+   "n": 82,
+   "text": "What does Neuromarketing measure in terms of communication effectiveness? a. Emotional and cognitive engagement✓ b. Conversion rate c. Number of views d. Click-through rate",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 83,
+   "text": "What format should be avoided when interacting with gen Z on Instagram? a. Post in formato video, post sponsorizzati che chiamano all'acquisto, post a \ntema\n \ncibo\n b. Call to action standard, post format video, sponsored posts that call to \naction✓ c. Post a tema cibo, sponsorizzazioni divertenti (meme), presenza di persone \nnei\n \npost\n d. Sponsorizzazioni divertenti (meme), presenza di persone nei post, call to \naction\n \nstandard",
+   "topic": "unclassified"
+  },
+  {
+   "n": 84,
+   "text": "What is the purpose of NEUROMARKETING? (MC) a. To choose the advertisement with more effective communication✓ b. To compare how attention and emotional engagement varied✓ c. To identify the main peaks of emotion d. To analyze the commercials individually",
+   "topic": "customer_lifecycle"
+  },
+  {
+   "n": 85,
+   "text": "How can you choose the 'PERFECT' cover for a book? a. Measure emotions through facial expression recognition and track eye \nmovements✓ b. Measure emotions through facial expression recognition and measure visual \nattention\n c. Measure emotions through facial expression recognition and track eye \nmovements\n d. Track eye movements and measure visual attention",
+   "topic": "unclassified"
+  }
+ ],
+ "topics": {
+  "data_strategy_governance": 1,
+  "customer_lifecycle": 14,
+  "rfm_segmentation": 10,
+  "unclassified": 25,
+  "clustering": 6,
+  "fashion_luxury_segments": 3,
+  "model_selection": 10,
+  "sample_balancing": 2,
+  "model_evaluation": 8,
+  "churn_pipeline": 4,
+  "significance_tests": 1,
+  "repurchase_curve": 1
+ },
+ "min_topic_set": [
+  "customer_lifecycle",
+  "rfm_segmentation",
+  "model_selection",
+  "model_evaluation",
+  "clustering",
+  "churn_pipeline"
+ ],
+ "coverage": 0.611764705882353,
+ "n_questions": 85
+}

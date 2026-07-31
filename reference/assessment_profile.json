@@ -20,10 +20,10 @@
       "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
       "cfu": 6.0,
       "findings": {
-        "assessment_format": "lab project (upload) + written exam",
+        "assessment_format": "lab project (upload, gates admission) + written MCQ exam",
         "project_option": "no - the lab project is compulsory",
-        "partial_credit": "UNVERIFIED - split between project and written not stated",
-        "pass_gates": "HARD GATE: the lab project must be uploaded before the written exam to be admitted to it",
+        "partial_credit": "the written half is now papered: 85-question solved MCQ bank supplied by the student",
+        "pass_gates": "HARD GATE, and BOTH 2026 WINDOWS ARE CLOSED: 'LAB Exam June 2026' due 24/06/2026 and 'LAB Exam July 2026' due 07/07/2026, both show 'Consegna in ritardo' and 'Non sono presenti consegne'. No autumn lab assignment exists on Kiro as of 31/07/2026.",
         "past_paper_count": 4,
         "appelli_autumn_2026": [
           "04/09/2026",
@@ -33,13 +33,13 @@
         "evidence": []
       },
       "judgement": {
-        "effort": 3,
-        "why": "Suriano, forum: 'I'd like to remind you to upload the lab project by the end of 23rd of June if you want to be admitted at the written exam of the 24th.' The project is an admission gate, not an option - it must be done before the sitting, which removes the option of walking in cold.",
+        "effort": 2,
+        "why": "The written half is cheap (85 solved MCQs, 6 topics cover 61%). The blocker is entirely the lab gate, which has no open window.",
         "timing_constraint": ""
       },
       "gaps": {
-        "missing": "mark split, and the project deadline for the autumn session",
-        "action": "email Suriano for the autumn lab-project deadline - this gates the 04/09 and 18/09 appelli"
+        "missing": "whether Suriano will open an autumn lab window",
+        "action": "EMAIL SURIANO THIS WEEK. Without an autumn lab window this course cannot be sat in September and moves to winter."
       },
       "sources_read": {
         "kiro_editions": 2,
@@ -89,7 +89,7 @@
         "assessment_format": "written, closed book; oral possible at the board's request",
         "project_option": "no",
         "partial_credit": "none found",
-        "pass_gates": "Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request",
+        "pass_gates": "Part 1 >=15/30. NOTE: the 'sit Part 1 and Part 2 in different sessions' route is NOT available in autumn 2026 - Esse3 shows a single combined CALCULUS appello (11/09, 25/09) with no Part 1/Part 2 partial options. The forum post describing partial registration is from the 2022 edition.",
         "past_paper_count": 34,
         "appelli_autumn_2026": [
           "11/09/2026",
@@ -262,7 +262,7 @@
         "assessment_format": "mod.2 written (theory + Python); mod.1 project OR computer-based test",
         "project_option": "conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies",
         "partial_credit": "none found",
-        "pass_gates": "mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright",
+        "pass_gates": "mod.2: theory >=12/20 AND code >=6/10; non-running code fails. Esse3 shows ONE combined appello (09/09, 24/09), not two.",
         "past_paper_count": 19,
         "appelli_autumn_2026": [
           "09/09/2026",
@@ -380,8 +380,8 @@
         "timing_constraint": ""
       },
       "gaps": {
-        "missing": "the syllabus document itself (course Google Drive, not Kiro) and whether example questions were released",
-        "action": "email Faroldi for the non-attending syllabus and the example questions he mentions"
+        "missing": "the non-attending reading list (syllabus found on Kiro 5123, mod/resource/132265, but it is the 2023/24 edition)",
+        "action": "confirm with Faroldi that the 2023/24 non-attending reading list still applies"
       },
       "sources_read": {
         "kiro_editions": 8,
@@ -508,7 +508,7 @@
         "assessment_format": "written, two modules",
         "project_option": "no",
         "partial_credit": "none found",
-        "pass_gates": "final mark is the MEAN of the two module scores",
+        "pass_gates": "final mark is the MEAN of the two module scores. NOTE: no separate Part I/Part II appelli appear in autumn 2026 Esse3 - single combined KRR appello (10/09, 21/09).",
         "past_paper_count": 52,
         "appelli_autumn_2026": [
           "10/09/2026",
@@ -648,10 +648,10 @@
       "name": "ORGANIZATION THEORY AND DESIGN",
       "cfu": 6.0,
       "findings": {
-        "assessment_format": "UNVERIFIED",
-        "project_option": "UNVERIFIED",
-        "partial_credit": "UNVERIFIED",
-        "pass_gates": "UNVERIFIED",
+        "assessment_format": "8 Learning Tests, each <=25 min, 30 MCQ x 4 options each; final mark = AVERAGE of the 8 section marks, rounded 0.25 up",
+        "project_option": "no",
+        "partial_credit": "Learning Tests taken during the course carry into the exam and are confirmed ('With the enrolment to the exam the learning tests carried out during the course are valid'). You did not attend, so ALL 8 are sat on the exam date.",
+        "pass_gates": "18/30; NEGATIVE MARKING +1 correct, -1 wrong, 0 blank (true/false items +-0.5)",
         "past_paper_count": 5,
         "appelli_autumn_2026": [
           "03/09/2026",
@@ -661,13 +661,13 @@
         "evidence": []
       },
       "judgement": {
-        "effort": 2,
-        "why": "Free-choice course outside the AI degree; 27 slide decks per edition but no rules statement.",
+        "effort": 4,
+        "why": "Now fully verified from the ODT 'EXAM' file. 8 sections x 30 questions = 240 MCQs over Daft chapters 1-13 in one sitting (~3h20m), with -1 per wrong answer. With 4 options, a random guess has EV -0.5, so blind guessing is strongly negative. Much harsher than the 6 CFU label suggests.",
         "timing_constraint": ""
       },
       "gaps": {
-        "missing": "exam format",
-        "action": "email Greco; note its appelli follow its own degree's calendar, not the BAI sessions"
+        "missing": "nothing material",
+        "action": "the per-test example questions are published on Kiro - drill those"
       },
       "sources_read": {
         "kiro_editions": 10,
@@ -761,10 +761,10 @@
       "name": "STATISTICAL MODELLING",
       "cfu": 6.0,
       "findings": {
-        "assessment_format": "written, closed book, 2-3 exercises in line with those seen in the course",
+        "assessment_format": "written, closed book, 2-3 exercises; calculator allowed, quantiles provided",
         "project_option": "no",
-        "partial_credit": "none found",
-        "pass_gates": "none stated beyond 18",
+        "partial_credit": "none",
+        "pass_gates": "none beyond 18",
         "past_paper_count": 0,
         "appelli_autumn_2026": [
           "10/09/2026",
@@ -775,12 +775,12 @@
       },
       "judgement": {
         "effort": 2,
-        "why": "Forum: 'The exam will include 2 or 3 exercises (in line with the exercises seen during the course). Please bring: a calculator, ID or student card, a pen. Course notes, books, and other materials are NOT allowed'. Narrow, closed-book, exercise-only.",
+        "why": "Material is NOT on Kiro - it is on the lecturer's public site laura-dangelo.github.io/statistical_modelling. 6 full past exams (Esame1-6) plus 10 exercise sets, many with solutions: 15 usable papers, 117 items, novelty 0.156, min_topic_set = inference + diagnostics = 65% of items. Regression/GLM.",
         "timing_constraint": ""
       },
       "gaps": {
-        "missing": "the course exercises themselves - none are published on Kiro",
-        "action": "email D'Angelo asking for the exercise sheets used in class, since the exam mirrors them"
+        "missing": "nothing material",
+        "action": "drill Esame1-6 and the solved exercise sets"
       },
       "sources_read": {
         "kiro_editions": 6,
@@ -864,10 +864,10 @@
       "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
       "cfu": 12.0,
       "findings": {
-        "assessment_format": "UNVERIFIED",
-        "project_option": "UNVERIFIED",
+        "assessment_format": "PARTIAL (student report, verbal, 2026-07-31): multiple-choice test, same family as 509519 Ethics. NOT yet corroborated on Kiro or Esse3.",
+        "project_option": "no",
         "partial_credit": "UNVERIFIED",
-        "pass_gates": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED - but Esse3 shows ONE combined appello (08/09, 22/09), no Part 1/Part 2 partials, so the two modules appear NOT separately sittable",
         "past_paper_count": 3,
         "appelli_autumn_2026": [
           "08/09/2026",
@@ -877,13 +877,13 @@
         "evidence": []
       },
       "judgement": {
-        "effort": 4,
-        "why": "12 CFU split across two universities and examined independently; physics-heavy. Rated on structure, not on rules.",
+        "effort": 2,
+        "why": "Reclassified from the 12 CFU no-rules band (45-90 h) into the Ethics MCQ band on the student's report. An MCQ test over a bounded syllabus is far cheaper than a physics written exam.",
         "timing_constraint": ""
       },
       "gaps": {
-        "missing": "exam format for both modules",
-        "action": "now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers"
+        "missing": "corroboration on Kiro; the syllabus; whether modules 1 and 2 are examined together",
+        "action": "email Gherardi and Guarnieri to confirm MCQ format and whether the two modules are one sitting"
       },
       "sources_read": {
         "kiro_editions": 10,

@@ -24,37 +24,29 @@ Every row is one remaining activity. **Findings** columns are quoted from a sour
 
 | code | activity | CFU | assessment_format | project_option | partial_credit | pass_gates | past_papers | appelli (autumn 2026) | tier | effort | read: kiro / docs / syllabus / appelli |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 509498 | ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AN | 6 | lab project (upload) + written exam | no - the lab project is compulsory | UNVERIFIED - split between project and written not stated | HARD GATE: the lab project must be uploaded before the written exam to be admitted to it | 4 | 04/09/2026, 18/09/2026 | C | 3 | 2 / 26 / no / yes |
+| 509498 | ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AN | 6 | lab project (upload, gates admission) + written MCQ exam | no - the lab project is compulsory | the written half is now papered: 85-question solved MCQ bank supplied by the student | HARD GATE, and BOTH 2026 WINDOWS ARE CLOSED: 'LAB Exam June 2026' due 24/06/2026 and 'LAB Exam July 2026' due 07/07/2026, both show 'Consegna in ritardo' and 'Non sono presenti consegne'. No autumn lab assignment exists on Kiro as of 31/07/2026. | 4 | 04/09/2026, 18/09/2026 | C | 2 | 2 / 26 / no / yes |
 | 509494 | BRAIN MODELLING | 6 | coding project (30% of final mark) + written exam (70%), ~2h, open questions | no - the project is compulsory and is 30% of the mark | the coding project mark CAN BE CARRIED across all exam sessions of the same academic year | none stated beyond 18 overall | 0 | 03/09/2026, 25/09/2026 | C | 2 | 6 / 3 / no / yes |
-| 509481 | CALCULUS | 12 | written, closed book; oral possible at the board's request | no | none found | Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request | 34 | 11/09/2026, 25/09/2026 | A | 4 | 10 / 38 / no / yes |
+| 509481 | CALCULUS | 12 | written, closed book; oral possible at the board's request | no | none found | Part 1 >=15/30. NOTE: the 'sit Part 1 and Part 2 in different sessions' route is NOT available in autumn 2026 - Esse3 shows a single combined CALCULUS appello (11/09, 25/09) with no Part 1/Part 2 partial options. The forum post describing partial registration is from the 2022 edition. | 34 | 11/09/2026, 25/09/2026 | A | 4 | 10 / 38 / no / yes |
 | 509485 | COGNITIVE PSYCHOLOGY | 6 | written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory | no | class-attendance bonus (+2 in the oldest edition, quiz-average bonus in others) - requires in-class presence, not available retroactively | written threshold to reach the oral DRIFTS BY EDITION: id 12 = >=16 and final is the AVERAGE; ids 4228/6850/7392 = >=12 and final is the SUM; id 11579 (current) = >=13 and final is the SUM | 27 | 08/09/2026, 25/09/2026 | A | 4 | 10 / 44 / no / yes |
 | 509483 | COMPUTATIONAL LOGIC | 6 | written (exam assignments) | no | none found | none found | 1 | 31/08/2026, 23/09/2026 | C | 1 | 2 / 10 / no / yes |
-| 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND DATA ST | 12 | mod.2 written (theory + Python); mod.1 project OR computer-based test | conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies | none found | mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright | 19 | 09/09/2026, 24/09/2026 | A | 4 | 14 / 51 / no / yes |
+| 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND DATA ST | 12 | mod.2 written (theory + Python); mod.1 project OR computer-based test | conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies | none found | mod.2: theory >=12/20 AND code >=6/10; non-running code fails. Esse3 shows ONE combined appello (09/09, 24/09), not two. | 19 | 09/09/2026, 24/09/2026 | A | 4 | 14 / 51 / no / yes |
 | 509495 | DATA MINING AND KNOWLEDGE EXTRACTION | 6 | assignments + written | no | assignments up to 12 of 30 points | none found | 9 | 04/09/2026, 24/09/2026 | C | 2 | 6 / 177 / no / yes |
 | 509519 | ETHICS, LAW AND AI | 12 | multiple-choice test, single unsplit exam | no | none found | none beyond 18 | 0 | 02/09/2026, 16/09/2026 | C | 2 | 8 / 11 / no / yes |
 | 509535 | FINAL EXAM | 3 | report + presentation to the degree board | n/a | n/a | report uploaded in PDF/A one week before the graduation day | 0 | UNVERIFIED | D | 3 | 0 / 0 / yes / no |
 | 509487 | FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING | 6 | written + lab component | no | none found | none found | 15 | 03/09/2026, 17/09/2026 | A | 2 | 8 / 23 / no / yes |
 | 509496 | INFORMATION RETRIEVAL AND RECOMMENDER SYSTEM | 6 | project + presentation | yes - it is the assessment | n/a | none found | 0 | 31/08/2026, 15/09/2026 | B | 2 | 6 / 75 / no / yes |
-| 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | written, two modules | no | none found | final mark is the MEAN of the two module scores | 52 | 10/09/2026, 21/09/2026 | A | 3 | 32 / 188 / no / yes |
+| 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | written, two modules | no | none found | final mark is the MEAN of the two module scores. NOTE: no separate Part I/Part II appelli appear in autumn 2026 Esse3 - single combined KRR appello (10/09, 21/09). | 52 | 10/09/2026, 21/09/2026 | A | 3 | 32 / 188 / no / yes |
 | 509521 | LABORATORY OF MACHINE LEARNING | 3 | coursework - nine report submissions | n/a | the reports are the grade | none found | 0 | 01/09/2026, 21/09/2026 | C | 2 | 6 / 93 / no / yes |
 | 509486 | MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS | 12 | upload (Colab notebook + PDF) on the session date | n/a - the exam itself is an upload | none found | none found | 4 | 01/09/2026, 15/09/2026 | A | 2 | 2 / 5 / no / yes |
-| 504464 | ORGANIZATION THEORY AND DESIGN | 6 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 5 | 03/09/2026, 17/09/2026 | C | 2 | 10 / 135 / no / yes |
+| 504464 | ORGANIZATION THEORY AND DESIGN | 6 | 8 Learning Tests, each <=25 min, 30 MCQ x 4 options each; final mark = AVERAGE of the 8 section marks, rounded 0.25 up | no | Learning Tests taken during the course carry into the exam and are confirmed ('With the enrolment to the exam the learning tests carried out during the course are valid'). You did not attend, so ALL 8 are sat on the exam date. | 18/30; NEGATIVE MARKING +1 correct, -1 wrong, 0 blank (true/false items +-0.5) | 5 | 03/09/2026, 17/09/2026 | C | 4 | 10 / 135 / no / yes |
 | 510109 | PROBABILITY AND STATISTICAL INFERENCE | 12 | written in computer lab, open + closed items | no | homeworks stated to match exam difficulty | none found | 47 | 07/09/2026, 21/09/2026 | A | 3 | 12 / 64 / no / yes |
 | 508207 | PROJECT WORK | 3 | project | yes - it is the assessment | n/a | none found | 0 | 09/09/2026, 14/10/2026, 02/12/2026 | C | 2 | 2 / 2 / no / yes |
-| 509493 | STATISTICAL MODELLING | 6 | written, closed book, 2-3 exercises in line with those seen in the course | no | none found | none stated beyond 18 | 0 | 10/09/2026, 24/09/2026 | C | 2 | 6 / 3 / no / yes |
+| 509493 | STATISTICAL MODELLING | 6 | written, closed book, 2-3 exercises; calculator allowed, quantiles provided | no | none | none beyond 18 | 0 | 10/09/2026, 24/09/2026 | C | 2 | 6 / 3 / no / yes |
 | 509488 | TEXT MINING AND NATURAL LANGUAGE PROCESSING | 6 | written, open + closed questions, up to 32 points | no | none found | minimum 18; wrong closed answers score -0.5 | 7 | 10/09/2026, 24/09/2026 | A | 3 | 8 / 26 / no / yes |
-| 509492 | THEORETICAL AND QUANTUM PHYSICS FOR AI | 12 | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED | 3 | 08/09/2026, 22/09/2026 | C | 4 | 10 / 74 / no / yes |
+| 509492 | THEORETICAL AND QUANTUM PHYSICS FOR AI | 12 | PARTIAL (student report, verbal, 2026-07-31): multiple-choice test, same family as 509519 Ethics. NOT yet corroborated on Kiro or Esse3. | no | UNVERIFIED | UNVERIFIED - but Esse3 shows ONE combined appello (08/09, 22/09), no Part 1/Part 2 partials, so the two modules appear NOT separately sittable | 3 | 08/09/2026, 22/09/2026 | C | 2 | 10 / 74 / no / yes |
 | 510638 | WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS | 6 | project + presentation + written exam | no - project is in addition to the written exam | UNVERIFIED | UNVERIFIED | 0 | 08/09/2026, 24/09/2026 | B | 3 | 2 / 35 / no / yes |
 
 ## Cannot rate honestly
-
-### 504464 ORGANIZATION THEORY AND DESIGN
-- missing: exam format
-- resolves by: email Greco; note its appelli follow its own degree's calendar, not the BAI sessions
-
-### 509492 THEORETICAL AND QUANTUM PHYSICS FOR AI
-- missing: exam format for both modules
-- resolves by: now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers
 
 ### 510638 WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS
 - missing: mark split across the three components

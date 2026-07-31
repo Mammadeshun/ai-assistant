@@ -1,0 +1,122 @@
+{
+ "509481": {
+  "name": "Calculus",
+  "cfu": 12,
+  "hours": 44,
+  "basis": "no split available; 31 papers but splitter weak"
+ },
+ "509477": {
+  "name": "Computer Programming",
+  "cfu": 12,
+  "hours": 44,
+  "basis": "novelty 0.13; 11 papers; two independent gates"
+ },
+ "509478": {
+  "name": "KRR",
+  "cfu": 12,
+  "hours": 44,
+  "basis": "novelty 0.16; 15 papers; mean of modules"
+ },
+ "510109": {
+  "name": "Probability",
+  "cfu": 12,
+  "hours": 52,
+  "basis": "novelty 0.24; 16 papers; 4 topics = 73%"
+ },
+ "509519": {
+  "name": "Ethics",
+  "cfu": 12,
+  "hours": 28,
+  "basis": "MCQ, bounded non-attending syllabus, no papers"
+ },
+ "509492": {
+  "name": "Quantum Physics",
+  "cfu": 12,
+  "hours": 30,
+  "basis": "PARTIAL: MCQ per student report (was 45-90)"
+ },
+ "509486": {
+  "name": "Machine Learning",
+  "cfu": 12,
+  "hours": 28,
+  "basis": "take-home Colab upload; 2 mocks"
+ },
+ "509483": {
+  "name": "Computational Logic",
+  "cfu": 6,
+  "hours": 30,
+  "basis": "novelty 0.16; 39 papers, solved"
+ },
+ "509488": {
+  "name": "Text Mining",
+  "cfu": 6,
+  "hours": 30,
+  "basis": "novelty 0.12; negative marking -0.5"
+ },
+ "509487": {
+  "name": "Fuzzy",
+  "cfu": 6,
+  "hours": 27,
+  "basis": "novelty 0.12; 1 topic = 95%"
+ },
+ "509485": {
+  "name": "Cognitive Psychology",
+  "cfu": 6,
+  "hours": 27,
+  "basis": "compulsory oral, gate >=12/25"
+ },
+ "509495": {
+  "name": "Data Mining",
+  "cfu": 6,
+  "hours": 19,
+  "basis": "novelty 0.54 templated; assignments may be closed"
+ },
+ "509493": {
+  "name": "Statistical Modelling",
+  "cfu": 6,
+  "hours": 22,
+  "basis": "NEW: 15 papers on public site, novelty 0.156"
+ },
+ "504464": {
+  "name": "Organization Theory",
+  "cfu": 6,
+  "hours": 45,
+  "basis": "NEW: 8x30 MCQ, -1 wrong, 13 chapters"
+ },
+ "510638": {
+  "name": "Web & Social",
+  "cfu": 6,
+  "hours": 38,
+  "basis": "project+presentation+written"
+ },
+ "509496": {
+  "name": "Information Retrieval",
+  "cfu": 6,
+  "hours": 30,
+  "basis": "project+presentation, overlaps Web"
+ },
+ "509498": {
+  "name": "AI Comm & Marketing",
+  "cfu": 6,
+  "hours": 16,
+  "basis": "85 solved MCQs; BUT lab gate closed"
+ },
+ "509521": {
+  "name": "Lab of ML",
+  "cfu": 3,
+  "hours": 25,
+  "basis": "nine reports"
+ },
+ "508207": {
+  "name": "Project Work",
+  "cfu": 3,
+  "hours": 20,
+  "basis": "project, supervisor needed"
+ },
+ "509535": {
+  "name": "Final Exam",
+  "cfu": 3,
+  "hours": 60,
+  "basis": "report + presentation"
+ }
+}
