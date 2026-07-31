@@ -1,0 +1,222 @@
+{
+  "_purpose": "JUDGEMENT layer, deliberately separate from data/audit/dossiers.json which holds only quoted findings. Rated for one goal: reaching 18/30 by drilling past papers. Override freely.",
+  "_rubric": {
+    "1": "Solved past papers for many sessions, single assessment, no gate beyond 18 overall.",
+    "2": "Past papers or samples exist; one straightforward written or coursework assessment.",
+    "3": "Either no published papers, or two components to satisfy, or a large syllabus (12 CFU).",
+    "4": "Independent pass gates, negative marking, or a compulsory oral on top of a written part.",
+    "5": "Rules not published anywhere reachable, or several gates at once; cannot be drilled blind."
+  },
+  "ratings": {
+    "509483": {
+      "assessment_format": "written (exam assignments)",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "none found",
+      "effort": 1,
+      "syllabus_read": false,
+      "why": "Solved exams for every session 2022-2026 in the Exam_Assignments folders. Nothing else to satisfy.",
+      "missing": "the exam-rules statement itself; only the archive is published",
+      "action": "ask Ghilardi to confirm structure and whether the assignments are take-home"
+    },
+    "509487": {
+      "assessment_format": "written + lab component",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "Question types recur verbatim year to year with published model answers; lab samples solved."
+    },
+    "509495": {
+      "assessment_format": "assignments + written",
+      "project_option": "no",
+      "partial_credit": "assignments up to 12 of 30 points",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "12 of 30 points bankable before the written part, which is then scaled into 18.",
+      "timing_constraint": "assignments are set during delivery; they cannot be recovered by sitting a later appello"
+    },
+    "509486": {
+      "assessment_format": "upload (Colab notebook + PDF) on the session date",
+      "project_option": "n/a - the exam itself is an upload",
+      "partial_credit": "none found",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "Take-home style coding with two published mock assignments in identical format; not a closed-book paper."
+    },
+    "509488": {
+      "assessment_format": "written, open + closed questions, up to 32 points",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "minimum 18; wrong closed answers score -0.5",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Well covered by three years of samples, but negative marking punishes the guess-everything strategy that a bare 18 usually relies on."
+    },
+    "510109": {
+      "assessment_format": "written in computer lab, open + closed items",
+      "project_option": "no",
+      "partial_credit": "homeworks stated to match exam difficulty",
+      "pass_gates": "none found",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Largest solved archive in the plan (Jan 2023 - Feb 2025), but 12 CFU across two modules."
+    },
+    "509478": {
+      "assessment_format": "written, two modules",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "final mark is the MEAN of the two module scores",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Both modules publish solved papers, and the mean lets a strong module carry a weak one - but it is 12 CFU and two sittings."
+    },
+    "509481": {
+      "assessment_format": "written, closed book; oral possible at the board's request",
+      "project_option": "no",
+      "partial_credit": "none found",
+      "pass_gates": "Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request",
+      "effort": 4,
+      "syllabus_read": false,
+      "why": "Published theory-question lists per year make the theory half predictable, but Part 1 carries its own 15/30 minimum on top of the overall 18."
+    },
+    "509477": {
+      "assessment_format": "mod.2 written (theory + Python); mod.1 project OR computer-based test",
+      "project_option": "conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies",
+      "partial_credit": "none found",
+      "pass_gates": "mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright",
+      "effort": 4,
+      "syllabus_read": false,
+      "why": "Two independent minimums on module 2 and an automatic fail for non-running code. The module 1 project option reduces risk but adds a deliverable."
+    },
+    "509485": {
+      "assessment_format": "written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory",
+      "project_option": "no",
+      "partial_credit": "class-attendance bonus (+2 in the oldest edition, quiz-average bonus in others) - requires in-class presence, not available retroactively",
+      "pass_gates": "written threshold to reach the oral DRIFTS BY EDITION: id 12 = >=16 and final is the AVERAGE; ids 4228/6850/7392 = >=12 and final is the SUM; id 11579 (current) = >=13 and final is the SUM",
+      "effort": 4,
+      "syllabus_read": false,
+      "why": "Compulsory oral gated behind a written threshold. Subject is approachable; structure is not. Which threshold binds depends on which edition you sit under.",
+      "missing": "which edition's rules bind for a 2023/24-cohort student sitting in 2026",
+      "action": "email Bricolo before booking - the course page requires previous-year students to message her at least three days before the appello if they want the current syllabus"
+    },
+    "509496": {
+      "assessment_format": "project (search engine build)",
+      "project_option": "yes - it is the assessment",
+      "partial_credit": "n/a",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "No sitting to schedule; published instructions, templates and dataset code. Overlaps with Web and social media."
+    },
+    "509521": {
+      "assessment_format": "coursework - nine report submissions",
+      "project_option": "n/a",
+      "partial_credit": "the reports are the grade",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "No exam. Deadline-driven, so it runs alongside exam preparation."
+    },
+    "508207": {
+      "assessment_format": "project",
+      "project_option": "yes - it is the assessment",
+      "partial_credit": "n/a",
+      "pass_gates": "none found",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "Kiro page carries a proposals database rather than rules; appelli exist in Sep, Oct and Dec, which is unusually flexible.",
+      "missing": "the brief and supervision requirements",
+      "action": "open the proposals database on Kiro course 9643 and pick a supervisor"
+    },
+    "509519": {
+      "assessment_format": "UNVERIFIED",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "12 CFU, three lecturers, essayistic subject. Rated on subject type alone, which is weak.",
+      "missing": "any statement of exam format; four editions read, none publishes rules",
+      "action": "email Faroldi/Redaelli/Larese, or check the UniPV scheda insegnamento for 509519"
+    },
+    "509492": {
+      "assessment_format": "UNVERIFIED",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 4,
+      "syllabus_read": false,
+      "why": "12 CFU split across two universities and examined independently; physics-heavy. Rated on structure, not on rules.",
+      "missing": "exam format for both modules",
+      "action": "now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers"
+    },
+    "509493": {
+      "assessment_format": "UNVERIFIED",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
+      "missing": "everything except the appelli dates",
+      "action": "email D'Angelo (Bicocca) for the syllabus and past papers; do NOT use the Bicocca 'Statistical Modeling' page by Pennoni, which is a different course"
+    },
+    "509494": {
+      "assessment_format": "UNVERIFIED",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
+      "missing": "everything except the appelli dates and the course aims",
+      "action": "email Casellato; the course is co-taught with Dagliati (5+1 CFU split)"
+    },
+    "510638": {
+      "assessment_format": "project + written exam (both present)",
+      "project_option": "no - the project appears to be in addition to the written exam, not instead of it",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 3,
+      "syllabus_read": false,
+      "why": "Project instructions found with 'Deadline: at least 7 days before the written examination', so both components exist.",
+      "missing": "the point split between project and written exam",
+      "action": "read Kiro 11076 project instructions in full and email Viviani/Mancino"
+    },
+    "509498": {
+      "assessment_format": "lab exam (multi-part, with data files)",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "'Lab exam assignment - 2026 Summer session' folder contains AI4CM_LabExam_Part1/2/3.pdf plus data.xlsx and marketing_campaign.csv, so the exam is applied lab work on supplied data.",
+      "missing": "point split and whether a written theory part exists",
+      "action": "open the lab exam folder on Kiro 10959 and email Suriano"
+    },
+    "504464": {
+      "assessment_format": "UNVERIFIED",
+      "project_option": "UNVERIFIED",
+      "partial_credit": "UNVERIFIED",
+      "pass_gates": "UNVERIFIED",
+      "effort": 2,
+      "syllabus_read": false,
+      "why": "Free-choice course outside the AI degree; 27 slide decks per edition but no rules statement.",
+      "missing": "exam format",
+      "action": "email Greco; note its appelli follow its own degree's calendar, not the BAI sessions"
+    },
+    "509535": {
+      "assessment_format": "report + presentation to the degree board",
+      "project_option": "n/a",
+      "partial_credit": "n/a",
+      "pass_gates": "report uploaded in PDF/A one week before the graduation day",
+      "effort": 3,
+      "syllabus_read": true,
+      "why": "Rules come from the Final examination regulations, not Kiro. 3 CFU but gated on a supervisor and a deadline."
+    }
+  }
+}

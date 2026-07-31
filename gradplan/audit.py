@@ -84,19 +84,34 @@ def _silence_pdf_warnings() -> None:
     _LOG_SILENCED = True
 
 
+# A sentence only establishes a rule if it comes from somewhere that states
+# rules. Lecture slides and textbook chapters contain plenty of sentences that
+# match the patterns ("...at least 1/2...", "...we examine...") without saying
+# anything about assessment, so the source has to be authoritative too.
+AUTHORITATIVE_DOC = re.compile(
+    r"exam\s*(information|rules|instruction)|modalit|assessment|"
+    r"course information|general information|syllabus|programma|"
+    r"regolamento|notice|avviso|instructions|project instructions|"
+    r"exam_assignments|appello|valutazione",
+    re.I,
+)
+
+
 @dataclass
 class Finding:
     signal: str
     quote: str
     source_label: str
     source_path: str
+    authoritative: bool = True
 
-    def to_json(self) -> dict[str, str]:
+    def to_json(self) -> dict[str, Any]:
         return {
             "signal": self.signal,
             "quote": self.quote,
             "source": self.source_label,
             "path": self.source_path,
+            "authoritative": self.authoritative,
         }
 
 
@@ -116,7 +131,12 @@ class Dossier:
     def tier(self) -> str:
         """Evidence tier. A needs quoted rules AND solved past papers."""
         rules = any(
-            f.signal in ("project_option", "project_required", "pass_gate", "written", "oral", "upload")
+            f.authoritative
+            and f.signal in (
+                "project_option", "project_required", "pass_gate",
+                "written", "oral", "upload", "grade_formula",
+                "negative_marking", "partial_credit",
+            )
             for f in self.findings
         )
         solved = any(re.search(r"solu|soluzion", p, re.I) for p in self.past_papers)
@@ -161,7 +181,16 @@ def _text(record) -> str:
     return main.get_text(" ", strip=True)
 
 
-def scan(text: str, label: str, path: str) -> list[Finding]:
+def is_authoritative(label: str, kind: str = "") -> bool:
+    """True when this source is the kind of place exam rules are stated."""
+    if kind in ("assign", "page"):
+        return True
+    if label.startswith("kiro course/") or label.startswith("kiro info/"):
+        return True
+    return bool(AUTHORITATIVE_DOC.search(label))
+
+
+def scan(text: str, label: str, path: str, authoritative: bool = True) -> list[Finding]:
     """Pull out sentences that state assessment rules."""
     flat = re.sub(r"\s+", " ", text)
     out: list[Finding] = []
@@ -171,7 +200,7 @@ def scan(text: str, label: str, path: str) -> list[Finding]:
             continue
         for signal, pattern in SIGNALS.items():
             if pattern.search(sentence):
-                out.append(Finding(signal, sentence, label, path))
+                out.append(Finding(signal, sentence, label, path, authoritative))
                 break
     return out
 
@@ -221,7 +250,12 @@ def build(
                     continue
                 dossier.docs_read += 1
                 dossier.findings.extend(
-                    scan(_text(doc), f"{name} ({activity['kind']})", str(doc.path))
+                    scan(
+                        _text(doc),
+                        f"{name} ({activity['kind']})",
+                        str(doc.path),
+                        authoritative=is_authoritative(name, activity["kind"]),
+                    )
                 )
 
     for name, entries in appelli.items():
@@ -344,3 +378,66 @@ def ledger_markdown(
             lines.append(f"  - source: `{f.source_label}` -> `{f.source_path}`")
         lines.append("")
     return "\n".join(lines)
+
+
+def rebuild_profile(
+    dossiers: Iterable[Dossier],
+    ratings: dict[str, dict[str, Any]],
+    generated: str,
+) -> dict[str, Any]:
+    """Regenerate assessment_profile.json with evidence attached to each rating.
+
+    Findings and judgement stay in separate keys so a reader can always tell
+    which is which.
+    """
+    activities = []
+    for d in dossiers:
+        r = ratings.get(d.code, {})
+        quotes = [
+            {"signal": f.signal, "quote": f.quote[:300], "source": f.source_label, "path": f.source_path}
+            for f in d.findings
+            if f.authoritative
+        ][:6]
+        activities.append(
+            {
+                "code": d.code,
+                "name": d.name,
+                "cfu": d.cfu,
+                "findings": {
+                    "assessment_format": r.get("assessment_format", "UNVERIFIED"),
+                    "project_option": r.get("project_option", "UNVERIFIED"),
+                    "partial_credit": r.get("partial_credit", "UNVERIFIED"),
+                    "pass_gates": r.get("pass_gates", "UNVERIFIED"),
+                    "past_paper_count": len(d.past_papers),
+                    "appelli_autumn_2026": [a["appello"] for a in d.appelli],
+                    "evidence_tier": d.tier,
+                    "evidence": quotes,
+                },
+                "judgement": {
+                    "effort": r.get("effort"),
+                    "why": r.get("why", ""),
+                    "timing_constraint": r.get("timing_constraint", ""),
+                },
+                "gaps": {
+                    "missing": r.get("missing", ""),
+                    "action": r.get("action", ""),
+                },
+                "sources_read": {
+                    "kiro_editions": len(d.editions),
+                    "documents": d.docs_read,
+                    "official_syllabus": bool(r.get("syllabus_read")),
+                    "appelli_list": bool(d.appelli),
+                },
+            }
+        )
+    return {
+        "generated": generated,
+        "note": (
+            "'findings' are quoted from archived sources with their path. "
+            "'judgement' is a rating, not an observation. UNVERIFIED means no "
+            "source was found - see gaps.action for what would resolve it."
+        ),
+        "rubric": RUBRIC,
+        "tiers": TIER_MEANING,
+        "activities": activities,
+    }
