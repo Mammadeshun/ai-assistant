@@ -1,0 +1,1481 @@
+[
+  {
+    "code": "509498",
+    "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-10959",
+      "info-10959"
+    ],
+    "pages_read": 2,
+    "docs_read": 4,
+    "evidence_tier": "C",
+    "findings": [
+      {
+        "signal": "lab_component",
+        "quote": "Aggregazione dei criteri Scarica cartella AI4CM_LabExam_Part1.pdf AI4CM_LabExam_Part2.pdf AI4CM_LabExam_Part3.pdf data.xlsx marketing_campaign.csv",
+        "source": "Lab exam assignment - 2026 Summer session (folder)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020705Z__mod-folder-322615.html"
+      }
+    ],
+    "past_papers": [
+      "LAB Exam June 2026 [assign/322460]",
+      "LAB Exam July 2026 [assign/325147]",
+      "Lab exam Instructions [folder/322614]",
+      "Lab exam assignment - 2026 Summer session [folder/322615]"
+    ],
+    "appelli": [
+      {
+        "course": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+        "appello": "04/09/2026",
+        "iscrizione": "15/08/2026 30/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+        "appello": "18/09/2026",
+        "iscrizione": "29/08/2026 13/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509494",
+    "name": "BRAIN MODELLING",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-5203",
+      "info-5203",
+      "course-7863",
+      "info-7863",
+      "course-10392",
+      "info-10392"
+    ],
+    "pages_read": 6,
+    "docs_read": 0,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "BRAIN MODELLING",
+        "appello": "03/09/2026",
+        "iscrizione": "14/08/2026 29/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "BRAIN MODELLING",
+        "appello": "25/09/2026",
+        "iscrizione": "05/09/2026 20/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509481",
+    "name": "CALCULUS",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-8",
+      "info-8",
+      "course-2771",
+      "info-2771",
+      "course-5344",
+      "info-5344",
+      "course-7468",
+      "info-7468",
+      "course-9942",
+      "info-9942"
+    ],
+    "pages_read": 10,
+    "docs_read": 34,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "pass_gate",
+        "quote": "The duration of the test is 1 hour Pass Part 1 of the Calculus exam with a score of at least 15/30 Pass the Calculus course Important: if you passed the OFA by passing Part 1 or the full exam of Calculus, you should contact the teacher so that your OFA exam can be properly registered.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Seleziona attività Tutoring Tutoring URL Spunta come completato Seleziona sezione Exam rules and dates Minimizza Espandi Exam rules and dates The exam consists of a written test .",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Upon request by the exam committee, the written exam may be complemented by an oral part.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "For this oral exam no further preparation with respect to the written test is required.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "The written test is a closed books test : notes, books, calculators or similar instruments, items with a photocamera or able to connect to the internet are not allowed.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "In the written test, students should solve some exercises on the topics of the course and answer to some questions of theoretical character on the program of the course.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "To sit at a written test, students are required to register through the Università di Pavia esse3 online system, within the deadline provided .",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Students are allowed, within a few days, to reject a positive final score and to retake the written test to improve their scores.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "The written test lasts at most 3 hours and is divided into two parts (with half time allowed for each part): Part 1 on the topics of the first semester and Part 2 on the topics of the second semester.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "To pass the exam, students need to obtain a score of at least 15/30 on each part with a mean greater than or equal to 18/30.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "It will include some samples of the written exams as well as the previous exam texts as soon as they become available.",
+        "source": "kiro course/2771",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Written exam of Calculus (sample test) January 19th, 2024 IT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON TIME ALLOWED: 90 MINUTES NAME: .",
+        "source": "2023-24-SampleTest-Part1 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020003Z__mod-resource-165630.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "The next test for OFA will be on Friday 26 September 2025 at 4:00pm in the classroom Laboratorio Didattico , ground floor of the Department of Mathematics at Università degli Studi di Pavia .",
+        "source": "kiro course/7468",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021041Z__course-7468.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Written exam of Calculus (sample test) January 11th, 2025 IT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON TIME ALLOWED: 90 MINUTES NAME: .",
+        "source": "Calculus-part1-2025-SampleTest (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020030Z__mod-resource-226381.pdf"
+      }
+    ],
+    "past_papers": [
+      "Previous exams and sample exams [url/66103]",
+      "Previous exams and sample exams [url/133887]",
+      "2023-24 TheoryQuestions for Part1 exam [resource/165632]",
+      "2023-24-SampleTest-Part1 [resource/165630]",
+      "Theory-QuestionsAndAnswerForTheExam-Part1 [folder/165634]",
+      "2024 Feb 7th Test-Part1 [folder/165631]",
+      "2024-Feb21st-Test-Part1 [folder/190448]",
+      "2024-June25th-Test-Part1 [folder/190449]",
+      "2024-July17th-Test-Part1 [folder/194746]",
+      "Previous exams and sample exams [url/197437]",
+      "2023-24 TheoryQuestions for Part1 exam [resource/197439]",
+      "2023-24-SampleTest-Part1 [resource/197440]",
+      "Theory-QuestionsAndAnswerForTheExam-Part1 [folder/197443]",
+      "2024 Feb 7th Test-Part1 [folder/197444]",
+      "2024-Feb21st-Test-Part1 [folder/197445]",
+      "2024-June25th-Test-Part1 [folder/197446]",
+      "2024-July17th-Test-Part1 [folder/197447]",
+      "2024-Sept4th-Test-Part1 [folder/206436]",
+      "2024-Sept26th-Test-Part1 [folder/206438]",
+      "Calculus-part1-2025-SampleTest [resource/226381]",
+      "Calculus-part1-2025-SampleTest-Solution [resource/226380]",
+      "Previous exams and sample exams [url/261982]",
+      "2023-24 TheoryQuestions for Part1 exam [resource/261985]",
+      "2023-24-SampleTest-Part1 [resource/261986]",
+      "Theory-QuestionsAndAnswerForTheExam-Part1 [folder/261989]",
+      "2024 Feb 7th Test-Part1 [folder/261990]",
+      "2024-Feb21st-Test-Part1 [folder/261991]",
+      "2024-June25th-Test-Part1 [folder/261992]",
+      "2024-July17th-Test-Part1 [folder/261993]",
+      "2024-Sept4th-Test-Part1 [folder/261994]",
+      "2024-Sept26th-Test-Part1 [folder/261995]",
+      "Calculus-part1-2025-SampleTest [resource/261996]",
+      "Calculus-part1-2025-SampleTest-Solution [resource/261997]",
+      "Calculus-part1-2026-Feb-Tests [folder/302855]"
+    ],
+    "appelli": [
+      {
+        "course": "CALCULUS",
+        "appello": "11/09/2026",
+        "iscrizione": "22/08/2026 06/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "CALCULUS",
+        "appello": "25/09/2026",
+        "iscrizione": "05/09/2026 20/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509485",
+    "name": "COGNITIVE PSYCHOLOGY",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-12",
+      "info-12",
+      "course-6850",
+      "info-6850",
+      "course-7392",
+      "info-7392",
+      "course-11579",
+      "info-11579",
+      "course-4228",
+      "info-4228"
+    ],
+    "pages_read": 10,
+    "docs_read": 37,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "pass_gate",
+        "quote": "•Both written and oral part are mandatory.",
+        "source": "Course Information slides (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "You must reach at least 16 pts with the written exam to get access to the oral exam.",
+        "source": "Course Information slides (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "•The final grade is the average of the written and oral exam.9 10 11 12 3/13/2022 4 Cognitive Psychology Grading•Written exam•Multiple choice questions: max 8 points•Open questions: max 24 points•Oral exam•Can add +/-3 points•In class participation up to two points at the end if the grade from previous parts> 18.",
+        "source": "Course Information slides (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Written exam (25 points max): multiple choice questions (5 points) open questions (20 points) on book materials Students who have obtained a score above or equal to 12 will have to take the 2.",
+        "source": "kiro course/6850",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Oral exam (6 points max): discussion of the written exam (can modulate the result of the written part) presentation/d iscussion of the research papers (6 points).",
+        "source": "kiro course/6850",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Failure to do so implies automatically that they will have to take the exam following the syllabus and the modalities of their class as of Departmental rules.",
+        "source": "kiro course/6850",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "The point(s) will be added to the final grade after the oral exam for the June/July/September sessions.",
+        "source": "kiro course/6850",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Seleziona attività Questions on research paper (Language) Questions on research paper (Language) Quiz You should accurately read the research paper of this chapter and respond to the questions taking in consideration the information present in the textbook and discussed in class and what is written on the paper.",
+        "source": "kiro course/6850",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+      },
+      {
+        "signal": "partial_credit",
+        "quote": "Cognitive Psychology Additional activities – Bonus points •At the end of each chapter there will be a brief quiz (total of 7) to test learning •Each quiz will be scores to a maximum of 2 points •Final bonus points = average of the best 5 quizzes.",
+        "source": "Additional activities information (update April 5th) (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020110Z__mod-resource-178661.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "•The bonus points will be added to the written evaluation only if you reach at least 12 in the written exam.",
+        "source": "Additional activities information (update April 5th) (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020110Z__mod-resource-178661.pdf"
+      },
+      {
+        "signal": "upload",
+        "quote": "•I will upload pdf of the slides.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "The importance of empirical data Cognitive Psychology How will you be evaluated •Written exam (25 points): •multiple choice •open questions •Oral exam (6 points): •discussion of the written exam.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "You must reach at least 12 pts with the written exam to get access to the oral exam.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "•The final grade is the sum of the written and oral exam.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "•Questions will be discussed in class in one of the following lectures, to give you feedback and help you evaluate your preparation Cognitive Psychology Additional activities – Bonus points on written exam •Activity participation will be used for additional points for the June, July, and September exams.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "partial_credit",
+        "quote": "•Each quiz (7 in total) if taken in class will be scored to a maximum of 2 points •Final bonus points = average of the best 5 quizzes.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012259Z__mod-resource-235337.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Aggregazione dei criteri Spunta come completato Chiuso: martedì, 3 giugno 2025, 12:00 You should accurately read the research paper of this chapter and respond to the questions taking in consideration the information present in the textbook and discussed in class and what is written on the paper.",
+        "source": "Questions on research paper (Language) (quiz)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020142Z__mod-quiz-235357.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Written and oral exams must be taken one after the other.",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "The written exam score cannot be \"kept\" for a later oral session.",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "written",
+        "quote": "The minimum grade for passing the written exam remainsa unchanged.",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Seleziona attività Papers (oral exam) final score Papers (oral exam) final score File Spunta come completato In the attached file, the final grade for the oral part (papers discussion).",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "It will be added to a passing written exam grade to obtain the exam final grade for the June/July/September exams at the oral session.",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Students will be required to attend the oral exam iassociated to the written exam to register the final grade.",
+        "source": "kiro course/11579",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021052Z__course-11579.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "You must reach at least 13 pts with the written exam to get access to the oral exam.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020148Z__mod-resource-303461.pdf"
+      },
+      {
+        "signal": "partial_credit",
+        "quote": "•Each quiz (7 in total) will be scored to a maximum of 2 points•Final bonus points = average of the best 6 quizzes.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020148Z__mod-resource-303461.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "•The bonus points will be added to the written evaluation only if you reach at least 13 in the written exam.",
+        "source": "General information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020148Z__mod-resource-303461.pdf"
+      }
+    ],
+    "past_papers": [
+      "Oral exam topics [resource/52911]",
+      "July 3rd Oral exam questions' choice Questionario [questionnaire/188803]",
+      "July 26th Oral exam questions' choice Questionario [questionnaire/188806]",
+      "September 16th Oral exam questions' choice Questionario [questionnaire/196208]",
+      "Final grade September 1st exam [resource/196209]",
+      "Final grade September 2nd exam [resource/202064]",
+      "Test quiz on chapter 1 [quiz/169352]",
+      "Test quiz on chapter 2 [quiz/169362]",
+      "Test quiz on chapter 3 [quiz/169368]",
+      "Test quiz on chapter 5 + 6 [quiz/169381]",
+      "Test quiz on chapter 1 [quiz/235341]",
+      "Test quiz on chapter 2 [quiz/235343]",
+      "Test quiz on chapter 3 [quiz/235344]",
+      "Test quiz on chapter 5 [quiz/248968]",
+      "Test quiz on chapter 6 [quiz/235353]",
+      "Test quiz on chapter 8 [quiz/235356]",
+      "Test quiz on chapter 10 [quiz/254130]",
+      "Papers (oral exam) final score [resource/303457]",
+      "July 17th oral exam papers' choice Questionario [questionnaire/325439]",
+      "Articles discussion in class (oral exam) Scelta [choice/312429]",
+      "Test quiz on chapter 1 [quiz/303464]",
+      "Test quiz on chapter 2 [quiz/303466]",
+      "Test quiz on chapter 3 [quiz/303469]",
+      "Test quiz on chapter 5 [quiz/303472]",
+      "Test quiz on chapter 6 [quiz/303474]",
+      "Test quiz on chapter 8 [quiz/303477]",
+      "Test quiz on chapter 10 [quiz/303486]"
+    ],
+    "appelli": [
+      {
+        "course": "COGNITIVE PSYCHOLOGY",
+        "appello": "08/09/2026",
+        "iscrizione": "19/08/2026 03/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "COGNITIVE PSYCHOLOGY",
+        "appello": "25/09/2026",
+        "iscrizione": "05/09/2026 20/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509483",
+    "name": "COMPUTATIONAL LOGIC",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-10047",
+      "info-10047"
+    ],
+    "pages_read": 2,
+    "docs_read": 2,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [
+      "Exam_Assignments [folder/262556]"
+    ],
+    "appelli": [
+      {
+        "course": "COMPUTATIONAL LOGIC",
+        "appello": "31/08/2026",
+        "iscrizione": "11/08/2026 26/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "COMPUTATIONAL LOGIC",
+        "appello": "23/09/2026",
+        "iscrizione": "03/09/2026 18/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509477",
+    "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-4",
+      "info-4",
+      "course-7388",
+      "info-7388",
+      "course-2848",
+      "info-2848",
+      "course-5360",
+      "info-5360",
+      "course-9811",
+      "info-9811",
+      "course-7598",
+      "info-7598",
+      "course-9919",
+      "info-9919"
+    ],
+    "pages_read": 14,
+    "docs_read": 44,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "project_option",
+        "quote": "Aggregazione dei criteri Spunta come completato The final exam will consist in the design and implementation of a software project in Python, in a report to document the project, and in a short presentation to summarize the report content and discuss the design and implementation of the project.",
+        "source": "Information about the project (page)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+      },
+      {
+        "signal": "project_option",
+        "quote": "Any student or team can choose a project among those published in their university career.",
+        "source": "Information about the project (page)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+      },
+      {
+        "signal": "project_option",
+        "quote": "Hence, if one is going to take the exam in the first year, can choose only the project published for the current year.",
+        "source": "Information about the project (page)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+      },
+      {
+        "signal": "project_option",
+        "quote": "Instead, if one is going to take the exam in the second year, can choose either the project published in the previous year or the one of the current year.",
+        "source": "Information about the project (page)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+      },
+      {
+        "signal": "project_option",
+        "quote": "2023-24) can choose between the project-based exam and the current written exam.",
+        "source": "kiro course/7388",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+      },
+      {
+        "signal": "grade_formula",
+        "quote": "The final score results as sum of the score points accumulated, properly scaled to the usual grades interval.",
+        "source": "kiro course/7388",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+      },
+      {
+        "signal": "duration",
+        "quote": "Tentatively, the duration of the exam will be 1.5 hours.",
+        "source": "kiro course/7388",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "IMPORTANT: The exam will be done in laboratory and will require the credentials of UniMi for accessing to the exam system.",
+        "source": "kiro course/7388",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+      },
+      {
+        "signal": "grade_formula",
+        "quote": "The final score will result as the sum of the scores achieved in the submitted exercises, added to a base score (to reach 32 or 34).",
+        "source": "kiro course/7388",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Course structure ▶ Frontal lessons ▶ No streaming, but recordings ▶ Laboratory lessons/exercise ▶ Python ▶ https://www.python.org/ ▶ Software: Python interpreter, shell, IDE ▶ Documentation .",
+        "source": "Course introduction and general information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012554Z__mod-resource-193824.pdf"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "A tie with at least one goal is worth two points for each of the teams.",
+        "source": "Ex. 3 (7 points) (page)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015641Z__mod-page-223895.html"
+      },
+      {
+        "signal": "grade_formula",
+        "quote": "▶ The final score (recorded in your career) is given by the average of the score of the two exams.",
+        "source": "Course introduction and general information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012549Z__mod-resource-134076.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Lessons are held in the Città Studi campus Seleziona sezione Course Information / Exam Minimizza Espandi Course Information / Exam Starting from the 2024-25 edition, the exam is a written computer-based exam, consisting in programming exercises.",
+        "source": "kiro course/9811",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020958Z__course-9811.html"
+      },
+      {
+        "signal": "duration",
+        "quote": "Tentatively, the duration of the exam will be 3 hours.",
+        "source": "kiro course/9811",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020958Z__course-9811.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Seleziona attività Slides and source files Slides and source files Cartella Spunta come completato Seleziona attività Python extras Python extras Tool esterno Seleziona sezione Lab: Exam preparation Minimizza Espandi Lab: Exam preparation In this lab session some exercises for exam preparation are proposed.",
+        "source": "kiro course/9811",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020958Z__course-9811.html"
+      }
+    ],
+    "past_papers": [
+      "Lesson on Functions of the past year [lti/208840]",
+      "Example of projects specifications [folder/134072]",
+      "Exam preparation [lti/292711]",
+      "Exam Information [resource/197280]",
+      "Examples [folder/197287]",
+      "Examples [folder/197293]",
+      "Examples [folder/197297]",
+      "Exam 23/06/2022 - with Solutions [folder/197318]",
+      "Exam 14/07/2022 - with Solutions [folder/197319]",
+      "Exam 09/09/2022 - with Solutions [folder/197320]",
+      "Exam 21/07/2023 - Code Solution Only [folder/197321]",
+      "Exam Information [resource/270359]",
+      "Examples [folder/270366]",
+      "Examples [folder/270370]",
+      "Examples [folder/270387]",
+      "Exam 23/06/2022 - with Solutions [folder/270397]",
+      "Exam 14/07/2022 - with Solutions [folder/270398]",
+      "Exam 09/09/2022 - with Solutions [folder/270399]",
+      "Exam 21/07/2023 - Code Solution Only [folder/270400]"
+    ],
+    "appelli": [
+      {
+        "course": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+        "appello": "09/09/2026",
+        "iscrizione": "20/08/2026 04/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+        "appello": "24/09/2026",
+        "iscrizione": "04/09/2026 19/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509495",
+    "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-10353",
+      "info-10353",
+      "course-5756",
+      "info-5756",
+      "course-7669",
+      "info-7669"
+    ],
+    "pages_read": 6,
+    "docs_read": 10,
+    "evidence_tier": "C",
+    "findings": [
+      {
+        "signal": "partial_credit",
+        "quote": "• The assignments are worth at most 12 points, and so the final mark is at most 30.",
+        "source": "Mockup Exam (07/01/2026) (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012157Z__mod-resource-291497.pdf"
+      }
+    ],
+    "past_papers": [
+      "Past Assignment 1 (24/10) [resource/277788]",
+      "Example Database (actordb) (07/11) [resource/282025]",
+      "Mockup Exam (07/01/2026) [resource/291497]",
+      "Installing PostgreSQL, Exercises on ER to Relational and Past Assignment 1 (24/10) [lti/277981]",
+      "Frequent Itemset Mining and Discussion of Mockup Exam (07/01/2026) [lti/292748]",
+      "Mockup Exam (12/01) [resource/161728]",
+      "Frequent Itemsets Mining and Association Rules Mining - Part 2 (and mockup exam) (12/01) Video Time [videotime/161736]",
+      "Exercise on Past Assignment (25/10) [resource/210602]",
+      "Mockup Exam [resource/225651]"
+    ],
+    "appelli": [
+      {
+        "course": "DATA MINING AND KNOWLEDGE EXTRACTION",
+        "appello": "04/09/2026",
+        "iscrizione": "15/08/2026 30/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "DATA MINING AND KNOWLEDGE EXTRACTION",
+        "appello": "24/09/2026",
+        "iscrizione": "04/09/2026 19/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509519",
+    "name": "ETHICS, LAW AND AI",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-5123",
+      "info-5123",
+      "course-9646",
+      "info-9646",
+      "course-2842",
+      "info-2842",
+      "course-7302",
+      "info-7302"
+    ],
+    "pages_read": 8,
+    "docs_read": 4,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "ETHICS, LAW AND AI",
+        "appello": "02/09/2026",
+        "iscrizione": "13/08/2026 28/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "ETHICS, LAW AND AI",
+        "appello": "16/09/2026",
+        "iscrizione": "27/08/2026 11/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509535",
+    "name": "FINAL EXAM",
+    "cfu": 3.0,
+    "editions_read": [],
+    "pages_read": 0,
+    "docs_read": 0,
+    "evidence_tier": "D",
+    "findings": [],
+    "past_papers": [],
+    "appelli": []
+  },
+  {
+    "code": "509487",
+    "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-4681",
+      "info-4681",
+      "course-11127",
+      "info-11127",
+      "course-8774",
+      "info-8774",
+      "course-6878",
+      "info-6878"
+    ],
+    "pages_read": 8,
+    "docs_read": 19,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "lab_component",
+        "quote": "Aggregazione dei criteri Per aprire la risorsa fai click su Fuzzy logic control - MATLAB example",
+        "source": "Fuzzy logic control - MATLAB example (url)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012319Z__mod-url-302661.html"
+      },
+      {
+        "signal": "oral",
+        "quote": "Depending on the degree of satisfaction of these three criteria the project can contribute up to 4 points to the final degree (such points will be directly added to the vote resulting from the written/oral examination, provided this latter is at least equal to 18).",
+        "source": "Project's Instructions (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020219Z__mod-resource-255209.pdf"
+      }
+    ],
+    "past_papers": [
+      "Text of the exam - June 2023 [resource/130070]",
+      "Text of the exam - July 2023 [resource/135762]",
+      "Exams 2023/24 [folder/302651]",
+      "Exam example 5.6.2025 [resource/302652]",
+      "Example of answer to the open questions [page/302653]",
+      "Exam 2026-01 [resource/320764]",
+      "Fuzzy logic control - MATLAB example [url/302661]",
+      "Lab - Exam Exercise Samples [resource/324525]",
+      "Lab - Exam Sample Solutions [resource/324532]",
+      "Exams 2022/23 [folder/233726]",
+      "Exams 2023/24 [folder/253372]",
+      "Exam example 5.6.2025 [resource/254237]",
+      "Example of answer to the open questions [page/254239]",
+      "Fuzzy logic control - MATLAB example [url/241694]",
+      "Exams 2022/23 [folder/188904]"
+    ],
+    "appelli": [
+      {
+        "course": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+        "appello": "03/09/2026",
+        "iscrizione": "14/08/2026 29/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+        "appello": "17/09/2026",
+        "iscrizione": "28/08/2026 12/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509496",
+    "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-7951",
+      "info-7951",
+      "course-5528",
+      "info-5528",
+      "course-9703",
+      "info-9703"
+    ],
+    "pages_read": 6,
+    "docs_read": 9,
+    "evidence_tier": "B",
+    "findings": [
+      {
+        "signal": "oral",
+        "quote": "AssignmentWrittenexam plus optional oral individual examination, definition of a laboratory assignements or projectthat can be developed also by groups of students (up to three students).The written examination is aimed at assessing the level of understanding of the basic aspects taught during the course;",
+        "source": "Introduction to the course and to Information Retrieval (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020646Z__mod-resource-207408.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "5.Project Presentations:Deadline -June, after the written exam, day to be decided.",
+        "source": "Project Instructions 2026 June - July (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012541Z__mod-resource-322356.pdf"
+      }
+    ],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+        "appello": "31/08/2026",
+        "iscrizione": "11/08/2026 26/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+        "appello": "15/09/2026",
+        "iscrizione": "26/08/2026 10/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509478",
+    "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-5401",
+      "info-5401",
+      "course-9884",
+      "info-9884",
+      "course-4811",
+      "info-4811",
+      "course-6926",
+      "info-6926",
+      "course-9232",
+      "info-9232",
+      "course-11588",
+      "info-11588",
+      "course-5",
+      "info-5",
+      "course-2840",
+      "info-2840",
+      "course-7609",
+      "info-7609",
+      "course-5401",
+      "info-5401",
+      "course-9884",
+      "info-9884",
+      "course-10",
+      "info-10",
+      "course-4811",
+      "info-4811",
+      "course-6926",
+      "info-6926",
+      "course-9232",
+      "info-9232",
+      "course-11588",
+      "info-11588"
+    ],
+    "pages_read": 32,
+    "docs_read": 152,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "written",
+        "quote": "During the exam: The KRR1 exam is a written exam and no additional support is needed or allowed.",
+        "source": "kiro course/9884",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021023Z__course-9884.html"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "SPARQL Exercises RDF & SPARQL Exercises File Spunta come completato Updates: 20/5: new exercise 5 21/5: added missing rdfs:label triples in the graph of exercise 5 Seleziona attività RDF &amp;",
+        "source": "kiro course/9232",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021031Z__course-9232.html"
+      }
+    ],
+    "past_papers": [
+      "Mock Exam 2021 [resource/139466]",
+      "Solutions to the Mock Exam 2021 [resource/139467]",
+      "Exam 2022/02/07 (with solutions) [resource/139468]",
+      "Exam 2022/09/30 [resource/139469]",
+      "Exam 2023/02/06 [resource/139470]",
+      "Exam 2023/07/10 (with solutions) [resource/139471]",
+      "Mock Exam 2021 [resource/259446]",
+      "Solutions to the Mock Exam 2021 [resource/259447]",
+      "Exam 2022/09/30 [resource/259448]",
+      "Exam 2023/02/06 [resource/259449]",
+      "2023 Mock Exam [resource/128923]",
+      "2023 Mock Exam Solution [resource/129231]",
+      "June 2022 Exam [resource/128721]",
+      "June 2022 Exam Solutions [resource/129229]",
+      "July 2022 Exam [resource/128723]",
+      "July 2022 Exam Solutions [resource/129230]",
+      "2024 Mock Exam [resource/171224]",
+      "2024 Mock Exam Solution [resource/171225]",
+      "June 2022 Exam [resource/171226]",
+      "June 2022 Exam Solutions [resource/171227]",
+      "July 2022 Exam [resource/171228]",
+      "July 2022 Exam Solutions [resource/171229]",
+      "2025 Mock Exam [resource/236291]",
+      "2025 Mock Exam Solutions [resource/236292]",
+      "June 2022 Exam [resource/236293]",
+      "June 2022 Exam Solutions [resource/236294]",
+      "July 2022 Exam [resource/236295]",
+      "July 2022 Exam Solutions [resource/236296]",
+      "2026 Mock Test [resource/313862]",
+      "2026 Mock Test Solutions [resource/313863]",
+      "June 2022 Exam [resource/313864]",
+      "June 2022 Exam Solutions [resource/313865]",
+      "July 2022 Exam [resource/313866]",
+      "June 2022 Exam Solutions [resource/313867]",
+      "Mock Exam January 2022 [resource/19187]",
+      "Exam 2022/02/07 (with solutions) [resource/24950]",
+      "Exam 2022/09/30 [resource/78384]",
+      "Exam 2022/07/11 [resource/78385]",
+      "Mock Exam 2022-2023 [resource/103371]",
+      "Mock Exam 2021 [resource/94584]"
+    ],
+    "appelli": [
+      {
+        "course": "KNOWLEDGE REPRESENTATION AND REASONING",
+        "appello": "10/09/2026",
+        "iscrizione": "21/08/2026 05/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "KNOWLEDGE REPRESENTATION AND REASONING",
+        "appello": "21/09/2026",
+        "iscrizione": "01/09/2026 16/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509521",
+    "name": "LABORATORY OF MACHINE LEARNING",
+    "cfu": 3.0,
+    "editions_read": [
+      "course-5124",
+      "info-5124",
+      "course-8799",
+      "info-8799",
+      "course-11242",
+      "info-11242"
+    ],
+    "pages_read": 6,
+    "docs_read": 41,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "LABORATORY OF MACHINE LEARNING",
+        "appello": "01/09/2026",
+        "iscrizione": "12/08/2026 27/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "LABORATORY OF MACHINE LEARNING",
+        "appello": "21/09/2026",
+        "iscrizione": "01/09/2026 16/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509486",
+    "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-10341",
+      "info-10341"
+    ],
+    "pages_read": 2,
+    "docs_read": 4,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "upload",
+        "quote": "Aggregazione dei criteri Aperto: mercoledì, 8 aprile 2026, 00:00 Data limite: sabato, 11 aprile 2026, 23:59 Please upload a unique pdf file, containing the description of your solution, by strictly respecting assignment numbering even in the provided answers.",
+        "source": "Mock Exam (assign)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012301Z__mod-assign-312518.html"
+      },
+      {
+        "signal": "upload",
+        "quote": "Aggregazione dei criteri Aperto: mercoledì, 6 maggio 2026, 00:00 Data limite: venerdì, 8 maggio 2026, 23:59 Please upload a unique pdf file, containing the description of your solution for laboratory 17 assignment, by strictly respecting its numbering even in the provided answers.",
+        "source": "Mock Exam 2 (assign)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012304Z__mod-assign-318439.html"
+      },
+      {
+        "signal": "upload",
+        "quote": "Aggregazione dei criteri Aperto: martedì, 16 giugno 2026, 00:00 Data limite: giovedì, 25 giugno 2026, 23:59 In this section you can to upload your exam notebook code.",
+        "source": "Exam Session 16 June 2026 (assign)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012306Z__mod-assign-324523.html"
+      },
+      {
+        "signal": "upload",
+        "quote": "WHAT Upload a unique pdf file ( surname_number.pdf ) file containing a link to a Colab notebook by ensuring to grant \"anyone with the link\" can \"Edit\" permissions, in the General access area of the share window menu (top right button).",
+        "source": "Exam Session 16 June 2026 (assign)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012306Z__mod-assign-324523.html"
+      },
+      {
+        "signal": "upload",
+        "quote": "Aggregazione dei criteri Aperto: martedì, 14 luglio 2026, 16:00 Data limite: mercoledì, 22 luglio 2026, 23:59 In this section you can to upload your exam notebook code.",
+        "source": "Exam Session 14 July 2026 (assign)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012308Z__mod-assign-325322.html"
+      }
+    ],
+    "past_papers": [
+      "Mock Exam [assign/312518]",
+      "Mock Exam 2 [assign/318439]",
+      "Exam Session 16 June 2026 [assign/324523]",
+      "Exam Session 14 July 2026 [assign/325322]"
+    ],
+    "appelli": [
+      {
+        "course": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+        "appello": "01/09/2026",
+        "iscrizione": "12/08/2026 27/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+        "appello": "15/09/2026",
+        "iscrizione": "26/08/2026 10/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "504464",
+    "name": "ORGANIZATION THEORY AND DESIGN",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-8598",
+      "info-8598",
+      "course-2838",
+      "info-2838",
+      "course-5920",
+      "info-5920",
+      "course-11489",
+      "info-11489",
+      "course-574",
+      "info-574"
+    ],
+    "pages_read": 10,
+    "docs_read": 5,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [
+      "EXAM [resource/220380]",
+      "EXAM [resource/103313]",
+      "EXAM [resource/142171]",
+      "ORGANIZATION THEORY AND DESIGN EXAM [resource/301655]",
+      "EXAM [resource/16559]"
+    ],
+    "appelli": [
+      {
+        "course": "ORGANIZATION THEORY AND DESIGN",
+        "appello": "03/09/2026",
+        "iscrizione": "14/08/2026 31/08/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "ORGANIZATION THEORY AND DESIGN",
+        "appello": "17/09/2026",
+        "iscrizione": "28/08/2026 14/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "510109",
+    "name": "PROBABILITY AND STATISTICAL INFERENCE",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-8088",
+      "info-8088",
+      "course-5765",
+      "info-5765",
+      "course-10516",
+      "info-10516",
+      "course-11783",
+      "info-11783",
+      "course-7009",
+      "info-7009",
+      "course-9297",
+      "info-9297"
+    ],
+    "pages_read": 12,
+    "docs_read": 61,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "lab_component",
+        "quote": "Ross File Spunta come completato Seleziona sezione Syllabus Part 1 (tentative) Minimizza Espandi Syllabus Part 1 (tentative) We shall discuss the following topics (all included in Chapters 1-4 of the textbook): 1.",
+        "source": "kiro course/10516",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021117Z__course-10516.html"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "We have shown so far that the number p must be at least 1/2.",
+        "source": "Exam 19 July 2024, Solutions 1-2 (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020300Z__mod-resource-269040.pdf"
+      },
+      {
+        "signal": "duration",
+        "quote": "There is evidence at the 5% level that the mean duration is less than 10 years, so the design specification is not supported.",
+        "source": "Hypothesis testing (solution) (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020839Z__mod-resource-324195.pdf"
+      },
+      {
+        "signal": "duration",
+        "quote": "There is evidence at the 10% level that the mean duration is less than 10 years.",
+        "source": "Hypothesis testing (solution) (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020839Z__mod-resource-324195.pdf"
+      }
+    ],
+    "past_papers": [
+      "Exam 6 Feb 2025, Solutions 1-2 (copy) [resource/281673]",
+      "Exam 27 January 2023 [resource/269019]",
+      "Exam 10 Feb 2023, Text and Solutions [resource/269021]",
+      "Exam 28 Feb 2023 (text) [resource/269022]",
+      "Exam 28 Feb 2023, Solutions 1-2 [resource/269023]",
+      "Exam 28 Feb 2023, Solutions 3-4 [resource/269024]",
+      "Exam 3 July 2023 [resource/269025]",
+      "Exam 3 July 2023, Solutions 1-2 [resource/269026]",
+      "Exam 27 Jan 2023, Solutions [resource/269020]",
+      "Exam 3 July 2023, Solutions 3-4 [resource/269027]",
+      "Exam 21 July 2023 [resource/269028]",
+      "Exam 21 July 2023, Solutions 1-2 [resource/269029]",
+      "Exam July 21, 2023, Solution 4 [resource/269030]",
+      "Exam 27 Sep 2023 [resource/269031]",
+      "Exam 27 Sep 2023, Solutions 1-2 [resource/269032]",
+      "Exam 27 Sept 2023, Solution 3 [resource/269033]",
+      "Exam 26 Jan 2024, Solutions 1-2 [resource/269034]",
+      "Exam 26 Jan 2024, Solutions 3-4 [resource/269035]",
+      "Exam 9 Feb 2024 [resource/269036]",
+      "Exam 9 Feb 2024, Solutions 1-2 [resource/269037]",
+      "Exam 27 Feb 2024, Solutions 1-2 [resource/269038]",
+      "Exam 1 July 2024, Solutions 1-2 [resource/269039]",
+      "Exam 19 July 2024, Solutions 1-2 [resource/269040]",
+      "Exam 25 Sep 2024, Solutions 1-2 [resource/269041]",
+      "Exam 21 Jan 2025, Solutions 1-2 [resource/269042]",
+      "Solutions Exam 21Jan---Prob. 3-4 [resource/268980]",
+      "Exam 6 Feb 2025, Questions 1-2 (text) [resource/269043]",
+      "Exam 6 Feb 2025, Solutions 1-2 [resource/269044]",
+      "Exam 20 Jan 2026 (text) [resource/296317]",
+      "Exam 5 Feb 2026 (text) [resource/296316]",
+      "Solution of Exercise 2, Session July 15, 2022 (exam for mathematicians) [resource/269047]",
+      "Sample Exam (with solutions) [resource/269048]",
+      "Examples of exam problems (with solutions) [resource/269049]",
+      "Exercise sheet 6: mini-simulation of the exam (problems 1, 2) - with solutions (upd. 27/11/23) [resource/269058]",
+      "Exam 27 July Logistic Information [page/325058]",
+      "Mock exam [quiz/325059]",
+      "Exam attachment [resource/325063]",
+      "10 Hypothesis testing (part 1) [resource/322025]",
+      "10 Hypothesis testing (part 2) [resource/323475]",
+      "Hypothesis test code used during classes [resource/324194]"
+    ],
+    "appelli": [
+      {
+        "course": "PROBABILITY AND STATISTICAL INFERENCE",
+        "appello": "07/09/2026",
+        "iscrizione": "18/08/2026 02/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "PROBABILITY AND STATISTICAL INFERENCE",
+        "appello": "21/09/2026",
+        "iscrizione": "01/09/2026 16/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "508207",
+    "name": "PROJECT WORK",
+    "cfu": 3.0,
+    "editions_read": [
+      "course-9643",
+      "info-9643"
+    ],
+    "pages_read": 2,
+    "docs_read": 0,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "PROJECT WORK",
+        "appello": "09/09/2026",
+        "iscrizione": "20/08/2026 04/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "PROJECT WORK",
+        "appello": "14/10/2026",
+        "iscrizione": "24/09/2026 09/10/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "PROJECT WORK",
+        "appello": "02/12/2026",
+        "iscrizione": "12/11/2026 27/11/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509493",
+    "name": "STATISTICAL MODELLING",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-6198",
+      "info-6198",
+      "course-7460",
+      "info-7460",
+      "course-10217",
+      "info-10217"
+    ],
+    "pages_read": 6,
+    "docs_read": 0,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "STATISTICAL MODELLING",
+        "appello": "10/09/2026",
+        "iscrizione": "21/08/2026 05/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "STATISTICAL MODELLING",
+        "appello": "24/09/2026",
+        "iscrizione": "04/09/2026 19/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509488",
+    "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-11391",
+      "info-11391",
+      "course-2294",
+      "info-2294",
+      "course-5414",
+      "info-5414",
+      "course-8995",
+      "info-8995"
+    ],
+    "pages_read": 8,
+    "docs_read": 20,
+    "evidence_tier": "A",
+    "findings": [
+      {
+        "signal": "written",
+        "quote": "Please note that all topics covered during the course may be included in the written exam.",
+        "source": "kiro course/11391",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021105Z__course-11391.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Seleziona attività [TMNLP 22_23] Exam questions sample [TMNLP 22_23] Exam questions sample File Seleziona attività [TMNLP 23_24] Exam questions sample [TMNLP 23_24] Exam questions sample File Seleziona attività [TMNLP-2025_2026] Practice Written Exam [TMNLP-2025_2026] Practice Written Exam File",
+        "source": "kiro course/11391",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021105Z__course-11391.html"
+      },
+      {
+        "signal": "pass_gate",
+        "quote": "Course Information Assessment: Course Information Assessment: - written exam, consists of open and closed questions (up to 32 points) ○ minimum passing score: 18 - In case of a final half score, it will then be rounded up.",
+        "source": "Course Information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012326Z__mod-resource-302971.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Name: Surname: ID: Written Exam of TM&NLP (1) True or False Question (Provide the answer with a very brief, just a sentence, explanation): BERT is an example of a left-to-right language model used only as a decoder.",
+        "source": "[TMNLP 23_24] Exam questions sample (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012331Z__mod-resource-321141.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Name: Surname: ID: Written Exam of TM&NLP 1) What are the decoding algorithms in sequence-to-sequence models?",
+        "source": "[TMNLP 23_24] Exam questions sample (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012331Z__mod-resource-321141.pdf"
+      },
+      {
+        "signal": "negative_marking",
+        "quote": "Name: Surname: ID: Write your answers on this sheet PART 2 OF 3 - Written Exam of TM&NLP WRONG ANSWER WILL GET -0.5 POINT!",
+        "source": "[TMNLP-2025_2026] Practice Written Exam (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012333Z__mod-resource-321142.pdf"
+      },
+      {
+        "signal": "negative_marking",
+        "quote": "WRONG ANSWER WILL GET -0.5 POINT!",
+        "source": "[TMNLP-2025_2026] Practice Written Exam (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012333Z__mod-resource-321142.pdf"
+      },
+      {
+        "signal": "negative_marking",
+        "quote": "None of the above WRONG ANSWER WILL GET -0.5 POINT!",
+        "source": "[TMNLP-2025_2026] Practice Written Exam (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012333Z__mod-resource-321142.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "Name: Surname: ID: PART 3 OF 3 - Written Exam of TM&NLP 19/05/2026 Answer the following open questions clearly and concisely.",
+        "source": "[TMNLP-2025_2026] Practice Written Exam (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012333Z__mod-resource-321142.pdf"
+      },
+      {
+        "signal": "oral",
+        "quote": "Semester Second Semester Assessment method Written and optional oral individual examination, definition of a laboratory project that can be developed also by groups of students (up to three students).",
+        "source": "kiro course/2294",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021107Z__course-2294.html"
+      },
+      {
+        "signal": "written",
+        "quote": "The written examination is aimed at assessing the level of understanding of the basic aspects taught during the course;",
+        "source": "kiro course/2294",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021107Z__course-2294.html"
+      },
+      {
+        "signal": "written",
+        "quote": "● These points will be added to the evaluation obtained in the written exam.",
+        "source": "Project Instructions (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020229Z__mod-resource-126913.pdf"
+      },
+      {
+        "signal": "lab_component",
+        "quote": "Large Language Models (LLMs) File Spunta come completato Seleziona attività TEXT MINING AND NLP GENERATIVE AI TEXT MINING AND NLP GENERATIVE AI File Spunta come completato Seleziona attività LabsThe lab examples use PyTorch as a deep learnin...",
+        "source": "kiro course/5414",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021108Z__course-5414.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Project slides can be uploaded later , until the same day of the project presentation date (we will communicate the date for the project presentation after the written exam).",
+        "source": "kiro course/5414",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021108Z__course-5414.html"
+      },
+      {
+        "signal": "written",
+        "quote": "Of course, each topic covered in the course is eligible to appear on the written exam.",
+        "source": "kiro course/5414",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021108Z__course-5414.html"
+      },
+      {
+        "signal": "written",
+        "quote": "○ E.g., written exam: 25, project: 3 → Final score: 28/30 ○ Praise (lode) is acquired with a total grade greater than 31/30 → 30 e lode Course Information Assessment - General instructions: - You can decide to do the written exam only.",
+        "source": "[TM&NLP 23-24] 00. Course Information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020235Z__mod-resource-170088.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "- more information about the project and its deadlines will be delivered later in the course - You need to decide beforehand whether you want to do the project or not: The written examination and the project must be conducted in the same examination session.",
+        "source": "[TM&NLP 23-24] 00. Course Information (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020235Z__mod-resource-170088.pdf"
+      },
+      {
+        "signal": "written",
+        "quote": "○ E.g., written exam: 25, project: 3 → Final score: 28/30 ○ Praise (lode) is acquired with a total grade equal to or greater than 31/30 → 30 e lode Steps to be accomplished (part 1) ● Text pre-processing (task-dependent): ○ Tokenization;",
+        "source": "[TM&NLP 23-24] Project instructions (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020237Z__mod-resource-183364.pdf"
+      }
+    ],
+    "past_papers": [
+      "[TMNLP 22_23] Exam questions sample [resource/321140]",
+      "[TMNLP 23_24] Exam questions sample [resource/321141]",
+      "[TMNLP-2025_2026] Practice Written Exam [resource/321142]",
+      "[TM-NLP 23_24] Exam questions sample [resource/183650]",
+      "example of exam for linguistic part [resource/240123]",
+      "[TMNLP 22_23] Exam questions sample [resource/246715]",
+      "[TMNLP 23_24] Exam questions sample [resource/246716]"
+    ],
+    "appelli": [
+      {
+        "course": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+        "appello": "10/09/2026",
+        "iscrizione": "21/08/2026 05/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+        "appello": "24/09/2026",
+        "iscrizione": "04/09/2026 19/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "509492",
+    "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+    "cfu": 12.0,
+    "editions_read": [
+      "course-11668",
+      "info-11668",
+      "course-4264",
+      "info-4264",
+      "course-6900",
+      "info-6900",
+      "course-8923",
+      "info-8923",
+      "course-9893",
+      "info-9893"
+    ],
+    "pages_read": 10,
+    "docs_read": 3,
+    "evidence_tier": "C",
+    "findings": [],
+    "past_papers": [
+      "Lecture 24 - Simulation of the Exam (IPAD solutions of the problems requiring calculations at the end) [resource/324279]",
+      "Another mock exam [resource/290672]",
+      "Yet another mock exam [resource/290936]"
+    ],
+    "appelli": [
+      {
+        "course": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+        "appello": "08/09/2026",
+        "iscrizione": "19/08/2026 03/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+        "appello": "22/09/2026",
+        "iscrizione": "02/09/2026 17/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  },
+  {
+    "code": "510638",
+    "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+    "cfu": 6.0,
+    "editions_read": [
+      "course-11076",
+      "info-11076"
+    ],
+    "pages_read": 2,
+    "docs_read": 1,
+    "evidence_tier": "B",
+    "findings": [
+      {
+        "signal": "written",
+        "quote": "Deadline: at least 7 days before the written examination.",
+        "source": "Project instructions (resource)",
+        "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020911Z__mod-resource-303440.pdf"
+      }
+    ],
+    "past_papers": [],
+    "appelli": [
+      {
+        "course": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+        "appello": "08/09/2026",
+        "iscrizione": "19/08/2026 03/09/2026",
+        "sessione": "2025/2026"
+      },
+      {
+        "course": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+        "appello": "24/09/2026",
+        "iscrizione": "04/09/2026 19/09/2026",
+        "sessione": "2025/2026"
+      }
+    ]
+  }
+]
