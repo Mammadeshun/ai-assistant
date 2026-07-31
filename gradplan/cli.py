@@ -313,16 +313,16 @@ def cmd_schedule(args: argparse.Namespace) -> int:
         for activity in session.activities:
             flag = "papers" if activity.past_papers else "no papers"
             print(
-                f"      {activity.effort:6s} {activity.cfu:>2g} CFU  "
-                f"{activity.name[:46]:46s} {activity.mode:20s} {flag}"
+                f"      e{activity.points} {activity.cfu:>2g} CFU  "
+                f"{activity.name[:44]:44s} {activity.mode[:34]:34s} {flag}"
             )
     if coursework:
         print()
         print("  In parallel (no exam slot - coursework or project):")
         for activity in coursework:
             print(
-                f"      {activity.effort:6s} {activity.cfu:>2g} CFU  "
-                f"{activity.name[:46]:46s} {activity.mode}"
+                f"      e{activity.points} {activity.cfu:>2g} CFU  "
+                f"{activity.name[:44]:44s} {activity.mode[:40]}"
             )
     if unprofiled:
         print()

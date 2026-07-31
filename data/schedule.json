@@ -4,41 +4,52 @@
       "session": "autumn",
       "start": "2026-08-31",
       "end": "2026-09-25",
-      "effort_points": 9,
-      "cfu": 36.0,
+      "effort_points": 13,
+      "cfu": 42.0,
       "activities": [
         {
           "name": "CALCULUS",
           "code": "509481",
           "cfu": 12.0,
-          "mode": "written",
+          "mode": "written, closed book; oral possible at the board's request",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "Closed book, parts 1 and 2 examined separately. Published theory-question lists make the theory half fully predictable."
+          "effort": 4,
+          "effort_points": 4,
+          "notes": "Published theory-question lists per year make the theory half predictable, but Part 1 carries its own 15/30 minimum on top of the overall 18."
         },
         {
           "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
           "code": "509477",
           "cfu": 12.0,
-          "mode": "written",
+          "mode": "mod.2 written (theory + Python); mod.1 project OR computer-based test",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "YOU ARE A 2023/24 COHORT STUDENT, so for module 1 you may choose the project-based exam instead of the computer-based test. Module 2 stays a written paper with two independent minimums."
+          "effort": 4,
+          "effort_points": 4,
+          "notes": "Two independent minimums on module 2 and an automatic fail for non-running code. The module 1 project option reduces risk but adds a deliverable."
         },
         {
-          "name": "KNOWLEDGE REPRESENTATION AND REASONING",
-          "code": "509478",
+          "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+          "code": "509492",
           "cfu": 12.0,
-          "mode": "written",
+          "mode": "UNVERIFIED",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "Final mark is the MEAN of the two module scores, so a strong module can carry a weak one. Both publish solved papers."
+          "effort": 4,
+          "effort_points": 4,
+          "notes": "12 CFU split across two universities and examined independently; physics-heavy. Rated on structure, not on rules."
+        },
+        {
+          "name": "COMPUTATIONAL LOGIC",
+          "code": "509483",
+          "cfu": 6.0,
+          "mode": "written (exam assignments)",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": 1,
+          "effort_points": 1,
+          "notes": "Solved exams for every session 2022-2026 in the Exam_Assignments folders. Nothing else to satisfy."
         }
       ]
     },
@@ -46,52 +57,52 @@
       "session": "winter",
       "start": "2027-01-19",
       "end": "2027-02-27",
-      "effort_points": 9,
+      "effort_points": 13,
       "cfu": 42.0,
       "activities": [
         {
-          "name": "PROBABILITY AND STATISTICAL INFERENCE",
-          "code": "510109",
-          "cfu": 12.0,
-          "mode": "written",
+          "name": "COGNITIVE PSYCHOLOGY",
+          "code": "509485",
+          "cfu": 6.0,
+          "mode": "written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "Computer-lab written exam. The published exercises are explicitly stated to match exam difficulty, and the solved-paper archive is the largest in the plan."
-        },
-        {
-          "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
-          "code": "509492",
-          "cfu": 12.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "Two modules examined independently at two universities. The Kiro courses exist but their contents stay hidden until you self-enrol; enrol to see past papers before judging the effort."
+          "effort": 4,
+          "effort_points": 4,
+          "notes": "Compulsory oral gated behind a written threshold. Subject is approachable; structure is not. Which threshold binds depends on which edition you sit under."
         },
         {
           "name": "ETHICS, LAW AND AI",
           "code": "509519",
           "cfu": 12.0,
-          "mode": "written",
+          "mode": "UNVERIFIED",
           "consumes_exam_slot": true,
           "past_papers": false,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "12 CFU but essay/discursive rather than technical. Three lecturers; confirm which parts are examined together."
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "12 CFU, three lecturers, essayistic subject. Rated on subject type alone, which is weak."
         },
         {
-          "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
-          "code": "509498",
-          "cfu": 6.0,
-          "mode": "written",
+          "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+          "code": "509478",
+          "cfu": 12.0,
+          "mode": "written, two modules",
           "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Non-technical Bicocca course. Self-enrol on Kiro to reveal the material; effort is a guess until then."
+          "past_papers": true,
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "Both modules publish solved papers, and the mean lets a strong module carry a weak one - but it is 12 CFU and two sittings."
+        },
+        {
+          "name": "PROBABILITY AND STATISTICAL INFERENCE",
+          "code": "510109",
+          "cfu": 12.0,
+          "mode": "written in computer lab, open + closed items",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "Largest solved archive in the plan (Jan 2023 - Feb 2025), but 12 CFU across two modules."
         }
       ]
     },
@@ -99,63 +110,63 @@
       "session": "summer",
       "start": "2027-06-15",
       "end": "2027-07-31",
-      "effort_points": 9,
+      "effort_points": 13,
       "cfu": 36.0,
       "activities": [
-        {
-          "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
-          "code": "509486",
-          "cfu": 12.0,
-          "mode": "project",
-          "consumes_exam_slot": true,
-          "past_papers": true,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "The exam is take-home style coding submitted on the session date, not a closed-book paper. Part 1 + part 2 register as one overall grade - read the registration notice."
-        },
         {
           "name": "BRAIN MODELLING",
           "code": "509494",
           "cfu": 6.0,
-          "mode": "written",
+          "mode": "UNVERIFIED",
           "consumes_exam_slot": true,
           "past_papers": false,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Thin Kiro presence. Casellato teaches it at Bicocca; check the Bicocca e-learning page."
-        },
-        {
-          "name": "COGNITIVE PSYCHOLOGY",
-          "code": "509485",
-          "cfu": 6.0,
-          "mode": "quiz",
-          "consumes_exam_slot": true,
-          "past_papers": true,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Not a soft option: the oral is compulsory and gated behind 12/25 on the written. The quiz bonus needs in-class attendance, so it is not available to you retroactively."
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else."
         },
         {
           "name": "STATISTICAL MODELLING",
           "code": "509493",
           "cfu": 6.0,
-          "mode": "written",
+          "mode": "UNVERIFIED",
           "consumes_exam_slot": true,
           "past_papers": false,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Thin Kiro presence: material is likely distributed elsewhere by D'Angelo. Ask for past papers directly."
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else."
         },
         {
-          "name": "COMPUTATIONAL LOGIC",
-          "code": "509483",
+          "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+          "code": "509488",
           "cfu": 6.0,
-          "mode": "assignment_plus_exam",
+          "mode": "written, open + closed questions, up to 32 points",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Five straight years of past papers with solutions - the most directly practicable exam in the plan."
+          "effort": 3,
+          "effort_points": 3,
+          "notes": "Well covered by three years of samples, but negative marking punishes the guess-everything strategy that a bare 18 usually relies on."
+        },
+        {
+          "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+          "code": "509486",
+          "cfu": 12.0,
+          "mode": "upload (Colab notebook + PDF) on the session date",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": 2,
+          "effort_points": 2,
+          "notes": "Take-home style coding with two published mock assignments in identical format; not a closed-book paper."
+        },
+        {
+          "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+          "code": "509498",
+          "cfu": 6.0,
+          "mode": "lab exam (multi-part, with data files)",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": 2,
+          "effort_points": 2,
+          "notes": "'Lab exam assignment - 2026 Summer session' folder contains AI4CM_LabExam_Part1/2/3.pdf plus data.xlsx and marketing_campaign.csv, so the exam is applied lab work on supplied data."
         }
       ]
     },
@@ -163,63 +174,41 @@
       "session": "autumn",
       "start": "2027-08-31",
       "end": "2027-09-25",
-      "effort_points": 7,
-      "cfu": 30.0,
+      "effort_points": 6,
+      "cfu": 18.0,
       "activities": [
-        {
-          "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
-          "code": "509488",
-          "cfu": 6.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": true,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Negative marking on the closed questions - guessing costs you. Otherwise well covered by samples."
-        },
-        {
-          "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
-          "code": "510638",
-          "cfu": 6.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Same track as Information retrieval, so material overlaps with the IR project. Self-enrol to confirm whether it is project-assessed too."
-        },
         {
           "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
           "code": "509495",
           "cfu": 6.0,
-          "mode": "assignment_plus_exam",
+          "mode": "assignments + written",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Best value in the plan: the three assignments carry up to 12 of the 30 points before you sit anything. Do them and the written part only has to deliver the remainder."
+          "effort": 2,
+          "effort_points": 2,
+          "notes": "12 of 30 points bankable before the written part, which is then scaled into 18."
         },
         {
           "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
           "code": "509487",
           "cfu": 6.0,
-          "mode": "written",
+          "mode": "written + lab component",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Highly patterned: the same question types recur with published model answers. Strong candidate for a fast 18."
+          "effort": 2,
+          "effort_points": 2,
+          "notes": "Question types recur verbatim year to year with published model answers; lab samples solved."
         },
         {
           "name": "ORGANIZATION THEORY AND DESIGN",
           "code": "504464",
           "cfu": 6.0,
-          "mode": "written",
+          "mode": "UNVERIFIED",
           "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Free-choice exam outside the AI degree, so its dates follow its own course, not the BAI session calendar. Check its appelli in Esse3."
+          "past_papers": true,
+          "effort": 2,
+          "effort_points": 2,
+          "notes": "Free-choice course outside the AI degree; 27 slide decks per edition but no rules statement."
         }
       ]
     }
@@ -229,34 +218,34 @@
       "name": "FINAL EXAM",
       "code": "509535",
       "cfu": 3.0,
-      "mode": "project",
+      "mode": "report + presentation to the degree board",
       "consumes_exam_slot": false,
       "past_papers": false,
-      "effort": "medium",
-      "effort_points": 2,
-      "notes": "A report on a topic explored in a stage, project work or laboratory, supervised by a course lecturer. Must be uploaded in PDF/A one week before the graduation day."
+      "effort": 3,
+      "effort_points": 3,
+      "notes": "Rules come from the Final examination regulations, not Kiro. 3 CFU but gated on a supervisor and a deadline."
     },
     {
       "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
       "code": "509496",
       "cfu": 6.0,
-      "mode": "project",
+      "mode": "project (search engine build)",
       "consumes_exam_slot": false,
       "past_papers": false,
-      "effort": "medium",
+      "effort": 2,
       "effort_points": 2,
-      "notes": "A real build, not a token exercise - but no exam to sit, and it overlaps heavily with Web and social media search."
+      "notes": "No sitting to schedule; published instructions, templates and dataset code. Overlaps with Web and social media."
     },
     {
       "name": "LABORATORY OF MACHINE LEARNING",
       "code": "509521",
       "cfu": 3.0,
-      "mode": "coursework",
+      "mode": "coursework - nine report submissions",
       "consumes_exam_slot": false,
       "past_papers": false,
-      "effort": "low",
-      "effort_points": 1,
-      "notes": "Nine report submissions, no exam. Deadline-driven, so it can run in parallel with exam preparation."
+      "effort": 2,
+      "effort_points": 2,
+      "notes": "No exam. Deadline-driven, so it runs alongside exam preparation."
     },
     {
       "name": "PROJECT WORK",
@@ -265,13 +254,24 @@
       "mode": "project",
       "consumes_exam_slot": false,
       "past_papers": false,
-      "effort": "low",
-      "effort_points": 1,
-      "notes": "F-ALTRO activity. Agree the brief with a supervisor; can overlap with the final report."
+      "effort": 2,
+      "effort_points": 2,
+      "notes": "Kiro page carries a proposals database rather than rules; appelli exist in Sep, Oct and Dec, which is unusually flexible."
+    },
+    {
+      "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+      "code": "510638",
+      "cfu": 6.0,
+      "mode": "project + written exam (both present)",
+      "consumes_exam_slot": false,
+      "past_papers": false,
+      "effort": 3,
+      "effort_points": 3,
+      "notes": "Project instructions found with 'Deadline: at least 7 days before the written examination', so both components exist."
     }
   ],
   "unprofiled": [],
-  "exams_scheduled": 17,
+  "exams_scheduled": 16,
   "sessions_needed": 4,
   "completion": "2027-09-25",
   "earliest_graduation": {
