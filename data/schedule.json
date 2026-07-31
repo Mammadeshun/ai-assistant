@@ -4,8 +4,8 @@
       "session": "autumn",
       "start": "2026-08-31",
       "end": "2026-09-25",
-      "effort_points": 13,
-      "cfu": 54.0,
+      "effort_points": 9,
+      "cfu": 36.0,
       "activities": [
         {
           "name": "CALCULUS",
@@ -16,7 +16,7 @@
           "past_papers": true,
           "effort": "high",
           "effort_points": 3,
-          "notes": "Split into part 1 and part 2, examined separately on the same day. Past tests published for each. Also the activity that clears an OFA if one is outstanding."
+          "notes": "Closed book, parts 1 and 2 examined separately. Published theory-question lists make the theory half fully predictable."
         },
         {
           "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
@@ -27,7 +27,7 @@
           "past_papers": true,
           "effort": "high",
           "effort_points": 3,
-          "notes": "Programming plus algorithms; solutions published as code. Examined at Milano Statale. Two modules."
+          "notes": "YOU ARE A 2023/24 COHORT STUDENT, so for module 1 you may choose the project-based exam instead of the computer-based test. Module 2 stays a written paper with two independent minimums."
         },
         {
           "name": "KNOWLEDGE REPRESENTATION AND REASONING",
@@ -38,29 +38,7 @@
           "past_papers": true,
           "effort": "high",
           "effort_points": 3,
-          "notes": "Two modules (Penaloza, Palmonari), examined on the same day. Both publish past papers with solutions."
-        },
-        {
-          "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
-          "code": "509486",
-          "cfu": 12.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": true,
-          "effort": "high",
-          "effort_points": 3,
-          "notes": "Two parts with a combined final mark; read the overall-exam notice before planning which appello to take."
-        },
-        {
-          "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
-          "code": "509498",
-          "cfu": 6.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Bicocca-taught, so its material is on the Bicocca platform. Non-technical."
+          "notes": "Final mark is the MEAN of the two module scores, so a strong module can carry a weak one. Both publish solved papers."
         }
       ]
     },
@@ -68,8 +46,8 @@
       "session": "winter",
       "start": "2027-01-19",
       "end": "2027-02-27",
-      "effort_points": 13,
-      "cfu": 54.0,
+      "effort_points": 9,
+      "cfu": 42.0,
       "activities": [
         {
           "name": "PROBABILITY AND STATISTICAL INFERENCE",
@@ -80,7 +58,7 @@
           "past_papers": true,
           "effort": "high",
           "effort_points": 3,
-          "notes": "The largest past-paper archive of any course in the plan, with worked solutions. Two modules, both required. Highly practicable but 12 CFU of material."
+          "notes": "Computer-lab written exam. The published exercises are explicitly stated to match exam difficulty, and the solved-paper archive is the largest in the plan."
         },
         {
           "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
@@ -91,7 +69,7 @@
           "past_papers": false,
           "effort": "high",
           "effort_points": 3,
-          "notes": "Split across two universities, so the two parts are scheduled independently. Material lives on the Statale platform, not Kiro."
+          "notes": "Two modules examined independently at two universities. The Kiro courses exist but their contents stay hidden until you self-enrol; enrol to see past papers before judging the effort."
         },
         {
           "name": "ETHICS, LAW AND AI",
@@ -105,6 +83,37 @@
           "notes": "12 CFU but essay/discursive rather than technical. Three lecturers; confirm which parts are examined together."
         },
         {
+          "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+          "code": "509498",
+          "cfu": 6.0,
+          "mode": "written",
+          "consumes_exam_slot": true,
+          "past_papers": false,
+          "effort": "low",
+          "effort_points": 1,
+          "notes": "Non-technical Bicocca course. Self-enrol on Kiro to reveal the material; effort is a guess until then."
+        }
+      ]
+    },
+    {
+      "session": "summer",
+      "start": "2027-06-15",
+      "end": "2027-07-31",
+      "effort_points": 9,
+      "cfu": 36.0,
+      "activities": [
+        {
+          "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+          "code": "509486",
+          "cfu": 12.0,
+          "mode": "project",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": "medium",
+          "effort_points": 2,
+          "notes": "The exam is take-home style coding submitted on the session date, not a closed-book paper. Part 1 + part 2 register as one overall grade - read the registration notice."
+        },
+        {
           "name": "BRAIN MODELLING",
           "code": "509494",
           "cfu": 6.0,
@@ -116,57 +125,15 @@
           "notes": "Thin Kiro presence. Casellato teaches it at Bicocca; check the Bicocca e-learning page."
         },
         {
-          "name": "COMPUTATIONAL LOGIC",
-          "code": "509483",
-          "cfu": 6.0,
-          "mode": "assignment_plus_exam",
-          "consumes_exam_slot": true,
-          "past_papers": false,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Assessment centres on exam assignments rather than a conventional paper. Only 18 activities on Kiro; confirm the format with Ghilardi."
-        },
-        {
           "name": "COGNITIVE PSYCHOLOGY",
           "code": "509485",
           "cfu": 6.0,
           "mode": "quiz",
           "consumes_exam_slot": true,
           "past_papers": true,
-          "effort": "low",
-          "effort_points": 1,
-          "notes": "Self-test quizzes per chapter, and the exam has separate written and oral appelli in the calendar. Memorisation-led rather than derivation-led."
-        }
-      ]
-    },
-    {
-      "session": "summer",
-      "start": "2027-06-15",
-      "end": "2027-07-31",
-      "effort_points": 11,
-      "cfu": 36.0,
-      "activities": [
-        {
-          "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
-          "code": "509495",
-          "cfu": 6.0,
-          "mode": "assignment_plus_exam",
-          "consumes_exam_slot": true,
-          "past_papers": true,
           "effort": "medium",
           "effort_points": 2,
-          "notes": "Three assignments plus a written exam; a mock exam and a past assignment are published."
-        },
-        {
-          "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
-          "code": "509487",
-          "cfu": 6.0,
-          "mode": "written",
-          "consumes_exam_slot": true,
-          "past_papers": true,
-          "effort": "medium",
-          "effort_points": 2,
-          "notes": "Written paper plus a lab component, both with published samples and model answers."
+          "notes": "Not a soft option: the oral is compulsory and gated behind 12/25 on the written. The quiz bonus needs in-class attendance, so it is not available to you retroactively."
         },
         {
           "name": "STATISTICAL MODELLING",
@@ -180,6 +147,26 @@
           "notes": "Thin Kiro presence: material is likely distributed elsewhere by D'Angelo. Ask for past papers directly."
         },
         {
+          "name": "COMPUTATIONAL LOGIC",
+          "code": "509483",
+          "cfu": 6.0,
+          "mode": "assignment_plus_exam",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": "low",
+          "effort_points": 1,
+          "notes": "Five straight years of past papers with solutions - the most directly practicable exam in the plan."
+        }
+      ]
+    },
+    {
+      "session": "autumn",
+      "start": "2027-08-31",
+      "end": "2027-09-25",
+      "effort_points": 7,
+      "cfu": 30.0,
+      "activities": [
+        {
           "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
           "code": "509488",
           "cfu": 6.0,
@@ -188,7 +175,7 @@
           "past_papers": true,
           "effort": "medium",
           "effort_points": 2,
-          "notes": "Question samples for three separate years plus a full practice paper."
+          "notes": "Negative marking on the closed questions - guessing costs you. Otherwise well covered by samples."
         },
         {
           "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
@@ -199,7 +186,29 @@
           "past_papers": false,
           "effort": "medium",
           "effort_points": 2,
-          "notes": "Bicocca-taught. Same track as Information retrieval, so the material overlaps with the IR project."
+          "notes": "Same track as Information retrieval, so material overlaps with the IR project. Self-enrol to confirm whether it is project-assessed too."
+        },
+        {
+          "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+          "code": "509495",
+          "cfu": 6.0,
+          "mode": "assignment_plus_exam",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": "low",
+          "effort_points": 1,
+          "notes": "Best value in the plan: the three assignments carry up to 12 of the 30 points before you sit anything. Do them and the written part only has to deliver the remainder."
+        },
+        {
+          "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+          "code": "509487",
+          "cfu": 6.0,
+          "mode": "written",
+          "consumes_exam_slot": true,
+          "past_papers": true,
+          "effort": "low",
+          "effort_points": 1,
+          "notes": "Highly patterned: the same question types recur with published model answers. Strong candidate for a fast 18."
         },
         {
           "name": "ORGANIZATION THEORY AND DESIGN",
@@ -236,7 +245,7 @@
       "past_papers": false,
       "effort": "medium",
       "effort_points": 2,
-      "notes": "Assessed by project with published instructions and templates. No sit-down exam to schedule."
+      "notes": "A real build, not a token exercise - but no exam to sit, and it overlaps heavily with Web and social media search."
     },
     {
       "name": "LABORATORY OF MACHINE LEARNING",
@@ -258,18 +267,18 @@
       "past_papers": false,
       "effort": "low",
       "effort_points": 1,
-      "notes": "F-ALTRO activity. Not on Kiro; agree the brief with a supervisor. Can overlap with the final report."
+      "notes": "F-ALTRO activity. Agree the brief with a supervisor; can overlap with the final report."
     }
   ],
   "unprofiled": [],
   "exams_scheduled": 17,
-  "sessions_needed": 3,
-  "completion": "2027-07-31",
+  "sessions_needed": 4,
+  "completion": "2027-09-25",
   "earliest_graduation": {
-    "date": "2027-09-23",
+    "date": "2027-10-28",
     "location": "Milano-Bicocca",
-    "application_deadline": "2027-08-24",
-    "records_deadline": "2027-09-16",
+    "application_deadline": "2027-09-28",
+    "records_deadline": "2027-10-21",
     "academic_year": "projected",
     "projected": true
   }

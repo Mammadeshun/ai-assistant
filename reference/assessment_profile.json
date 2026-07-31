@@ -1,6 +1,6 @@
 {
   "note": "How each outstanding activity is actually assessed. 'mode' and 'evidence' are observed from the archived Kiro course pages (data/raw/kiro/course-*.html) and the published exam calendars. 'effort' is a judgement call, not data: it ranks how much work a bare pass (18/30) plausibly takes given the material available, and should be overridden freely. Courses marked 'on Kiro but not enrolled' exist on the platform but hide their contents until self-enrolment, so their effort rating is the least evidenced in this file.",
-  "source": "Kiro course pages archived 2026-07-31; Regolamento L-AI 2025/26 art. 10 (no prerequisites, no attendance obligation)",
+  "source": "Kiro course pages archived 2026-07-31; Regolamento L-AI 2025/26 art. 10 (no prerequisites, no attendance obligation); exam-rule documents and all 35 enrolled course instances archived 2026-07-31",
   "modes": {
     "coursework": "graded on submitted work; no sit-down exam to schedule",
     "project": "a project replaces or dominates the written exam",
@@ -55,12 +55,10 @@
       "effort": "medium",
       "kiro_course": 9703,
       "evidence": [
-        "Project June/July 2026",
-        "Templates to Submit your Project",
-        "Project Instructions 2026 June - July",
-        "Code to get the Dataset"
+        "Project Instructions 2026 June-July: build a search engine ranking clinical trials for precision-medicine oncology cases (TREC 2019 Precision Medicine subtask)",
+        "submission templates and dataset code published"
       ],
-      "notes": "Assessed by project with published instructions and templates. No sit-down exam to schedule."
+      "notes": "A real build, not a token exercise - but no exam to sit, and it overlaps heavily with Web and social media search."
     },
     {
       "code": "509495",
@@ -69,15 +67,14 @@
       "mode": "assignment_plus_exam",
       "consumes_exam_slot": true,
       "past_papers": true,
-      "effort": "medium",
+      "effort": "low",
       "kiro_course": 10353,
       "evidence": [
-        "Assignment 1/2/3 Discussions",
-        "Past Assignment 1 (24/10)",
-        "Mockup Exam (07/01/2026)",
-        "Example Database (actordb)"
+        "Mockup exam: 'You can get up to 30 points, which are then scaled to [0,18] and summed up to the assignment marks'",
+        "'The assignments are worth at most 12 points, and so the final mark is at most 30'",
+        "three assignments plus a published past assignment"
       ],
-      "notes": "Three assignments plus a written exam; a mock exam and a past assignment are published."
+      "notes": "Best value in the plan: the three assignments carry up to 12 of the 30 points before you sit anything. Do them and the written part only has to deliver the remainder."
     },
     {
       "code": "509483",
@@ -85,13 +82,13 @@
       "cfu": 6,
       "mode": "assignment_plus_exam",
       "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "medium",
+      "past_papers": true,
+      "effort": "low",
       "kiro_course": 10047,
       "evidence": [
-        "Exam_Assignments"
+        "Exam_Assignments folder holds solved exams for EVERY session from 2022 to 2026 (Jan, Feb, Jun, Jul, Sep), most with full solution archives"
       ],
-      "notes": "Assessment centres on exam assignments rather than a conventional paper. Only 18 activities on Kiro; confirm the format with Ghilardi."
+      "notes": "Five straight years of past papers with solutions - the most directly practicable exam in the plan."
     },
     {
       "code": "510109",
@@ -103,12 +100,11 @@
       "effort": "high",
       "kiro_course": 11783,
       "evidence": [
-        "Course previous exams (Jan 2023 through Feb 2025, texts and full solutions)",
-        "Mock exam",
-        "Exam attachment",
-        "156 activities across mod. 1 and mod. 2"
+        "Syllabus: 'Exam: Written in the computer lab, including open and closed items. Exercises and theory'",
+        "'Homeworks and class exercises are on the same difficulty level as the exam'",
+        "past exams with full solutions from Jan 2023 to Feb 2025"
       ],
-      "notes": "The largest past-paper archive of any course in the plan, with worked solutions. Two modules, both required. Highly practicable but 12 CFU of material."
+      "notes": "Computer-lab written exam. The published exercises are explicitly stated to match exam difficulty, and the solved-paper archive is the largest in the plan."
     },
     {
       "code": "509481",
@@ -120,13 +116,11 @@
       "effort": "high",
       "kiro_course": 9942,
       "evidence": [
-        "Exam rules and dates",
-        "Previous exams and sample exams",
-        "Tests from Feb 2024, Jun 2024, Jul 2024, Sep 2024 (both appelli)",
-        "Theory questions and answers for the exam",
-        "2025 sample test with solution"
+        "'The exam consists of a written test'; 'closed books test'; 'may be complemented by an oral part' with no extra preparation",
+        "theory question lists published per year for part 1 and part 2",
+        "past tests from every 2024 session"
       ],
-      "notes": "Split into part 1 and part 2, examined separately on the same day. Past tests published for each. Also the activity that clears an OFA if one is outstanding."
+      "notes": "Closed book, parts 1 and 2 examined separately. Published theory-question lists make the theory half fully predictable."
     },
     {
       "code": "509478",
@@ -138,10 +132,11 @@
       "effort": "high",
       "kiro_course": 7609,
       "evidence": [
-        "mod. 1: Past Exams, Mock Exam 2021 with solutions, Exam 2022/09/30, Exam 2023/02/06, Exam Instructions",
-        "mod. 2: 2025 Mock Exam with solutions, June 2022 and July 2022 exams with solutions, RDFLib exercise session"
+        "mod.1: past exams 2022/09, 2023/02, Mock Exam 2021 with solutions, exam instructions",
+        "mod.2: 2025 mock with solutions, June and July 2022 exams with solutions",
+        "'The full score of Knowledge Representation and Reasoning will be the mean between the scores of the two modules (KRR1 and KRR2)'"
       ],
-      "notes": "Two modules (Penaloza, Palmonari), examined on the same day. Both publish past papers with solutions."
+      "notes": "Final mark is the MEAN of the two module scores, so a strong module can carry a weak one. Both publish solved papers."
     },
     {
       "code": "509477",
@@ -153,32 +148,28 @@
       "effort": "high",
       "kiro_course": 9919,
       "evidence": [
-        "Exam Information",
-        "Previous Exams",
-        "Exam 23/06/2022 with solutions",
-        "Exam 14/07/2022 with solutions",
-        "Exam 09/09/2022 with solutions",
-        "Exam 21/07/2023 code solution"
+        "mod.2 (Dondi) Exam Information: written, Theory up to 20 pts + Python up to 10; must reach >=12 theory AND >=6 programming; non-running or empty code = failed; ~2h20m",
+        "mod.1 (Ferrari, Statale) 2023-24 edition: 'The exam will consist in the development of a project in Python, and its presentation and discussion'",
+        "mod.1 2024-25 edition: 'Students of the previous editions (up to a.y. 2023-24) can choose between the project-based exam and the current written exam'"
       ],
-      "notes": "Programming plus algorithms; solutions published as code. Examined at Milano Statale. Two modules."
+      "notes": "YOU ARE A 2023/24 COHORT STUDENT, so for module 1 you may choose the project-based exam instead of the computer-based test. Module 2 stays a written paper with two independent minimums.",
+      "project_option": true
     },
     {
       "code": "509486",
       "name": "Machine learning, artificial neural networks and deep learning",
       "cfu": 12,
-      "mode": "written",
+      "mode": "project",
       "consumes_exam_slot": true,
       "past_papers": true,
-      "effort": "high",
+      "effort": "medium",
       "kiro_course": 10341,
       "evidence": [
-        "IMPORTANT NOTICE FOR THE OVERALL EXAM",
-        "Mock Exam",
-        "Mock Exam 2",
-        "Exam Session 16 June 2026",
-        "Exam Session 14 July 2026"
+        "exam sessions are mod/assign submissions: 'Exam Session 16 June 2026', 'Exam Session 14 July 2026'",
+        "'Attached you can find the exam assignment, and the file input_data.zip'; solutions submitted as a Colab notebook plus a PDF",
+        "two published mock assignments with the same format"
       ],
-      "notes": "Two parts with a combined final mark; read the overall-exam notice before planning which appello to take."
+      "notes": "The exam is take-home style coding submitted on the session date, not a closed-book paper. Part 1 + part 2 register as one overall grade - read the registration notice."
     },
     {
       "code": "509487",
@@ -187,17 +178,14 @@
       "mode": "written",
       "consumes_exam_slot": true,
       "past_papers": true,
-      "effort": "medium",
+      "effort": "low",
       "kiro_course": 11127,
       "evidence": [
-        "Exams 2023/24",
-        "Exam example 5.6.2025",
-        "Example of answer to the open questions",
-        "Exam 2026-01",
-        "Lab - Exam Exercise Samples",
-        "Lab - Exam Sample Solutions"
+        "Exam 2026-01 is point-weighted and formulaic: definitions, pseudo-code of an evolutionary algorithm, fuzzy relation composition, alpha-cuts, centre of gravity",
+        "'Example of answer to the open questions' page gives model answers",
+        "Lab exam exercise samples with solutions"
       ],
-      "notes": "Written paper plus a lab component, both with published samples and model answers."
+      "notes": "Highly patterned: the same question types recur with published model answers. Strong candidate for a fast 18."
     },
     {
       "code": "509488",
@@ -209,12 +197,11 @@
       "effort": "medium",
       "kiro_course": 11391,
       "evidence": [
-        "Practice exercises for exam preparation (NLP part)",
-        "[TMNLP 22_23] Exam questions sample",
-        "[TMNLP 23_24] Exam questions sample",
-        "[TMNLP-2025_2026] Practice Written Exam"
+        "Course Information: 'written exam, consists of open and closed questions (up to 32 points), minimum passing score 18'",
+        "practice paper: 'WRONG ANSWER WILL GET -0.5 POINT!'",
+        "question samples for 22_23, 23_24 and 2025_26"
       ],
-      "notes": "Question samples for three separate years plus a full practice paper."
+      "notes": "Negative marking on the closed questions - guessing costs you. Otherwise well covered by samples."
     },
     {
       "code": "509485",
@@ -223,13 +210,15 @@
       "mode": "quiz",
       "consumes_exam_slot": true,
       "past_papers": true,
-      "effort": "low",
+      "effort": "medium",
       "kiro_course": 7392,
       "evidence": [
-        "Exams Information",
-        "Test quiz on chapters 1, 2, 3, 5, 6, 8, 10"
+        "General information: 'Written exam (25 points): multiple choice, open questions. Oral exam (6 points)'",
+        "'Both written and oral part are mandatory'",
+        "'You must reach at least 12 pts with the written exam to get access to the oral exam'",
+        "quiz bonus = average of best 5, but 'to obtain the bonus points you must attend at least 5 quizzes' in class"
       ],
-      "notes": "Self-test quizzes per chapter, and the exam has separate written and oral appelli in the calendar. Memorisation-led rather than derivation-led."
+      "notes": "Not a soft option: the oral is compulsory and gated behind 12/25 on the written. The quiz bonus needs in-class attendance, so it is not available to you retroactively."
     },
     {
       "code": "504464",
