@@ -139,6 +139,20 @@ class Session:
         time.sleep(self.delay)
         return record
 
+    def post_json(self, url: str, payload, *, source: str, label: str) -> ArchivedResponse:
+        """POST a JSON body from inside the authenticated context."""
+        response = self.context.request.post(url, data=payload)
+        record = self.archive.save(
+            source=source,
+            label=label,
+            url=url,
+            payload=response.text(),
+            kind="json",
+            status=response.status,
+        )
+        time.sleep(self.delay)
+        return record
+
     def save_current(self, *, source: str, label: str) -> ArchivedResponse:
         return self.archive.save(
             source=source,

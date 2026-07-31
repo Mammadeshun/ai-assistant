@@ -39,7 +39,26 @@ def _text(node: Any) -> str:
     if node is None:
         return ""
     text = node.get_text(" ", strip=True)
-    return re.sub(r"\s+", " ", text)
+    # Esse3 pads activity names with zero-width spaces and non-breaking spaces.
+    text = text.replace("​", "").replace(" ", " ")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def split_mark_and_date(raw: str) -> tuple[str | None, date | None]:
+    """Split a combined 'Voto - Data Esame' cell.
+
+    The libretto reports the mark and the exam date in a single column, as
+    ``'23 - 09/09/2025'``. Older installations use separate columns, so both
+    shapes have to work.
+    """
+    if not raw:
+        return None, None
+    taken_on = parse_date(raw)
+    if taken_on is None:
+        return (raw.strip() or None), None
+    mark_part = re.split(r"\d{1,4}[/-]\d{1,2}[/-]\d{2,4}", raw)[0]
+    mark_part = mark_part.strip(" -–\t")
+    return (mark_part or None), taken_on
 
 
 def parse_date(raw: str | None) -> date | None:
@@ -163,7 +182,12 @@ def parse_activity_table(table, source: str, default_status: str | None = None) 
         mark_raw = texts[mapping["mark"]].strip() if "mark" in mapping and mapping["mark"] < len(texts) else None
         if mark_raw in {"", "-", "--"}:
             mark_raw = None
+
         taken_on = parse_date(texts[mapping["date"]]) if "date" in mapping and mapping["date"] < len(texts) else None
+        if mark_raw:
+            # 'Voto - Data Esame' arrives as one cell on current Esse3.
+            mark_raw, inline_date = split_mark_and_date(mark_raw)
+            taken_on = taken_on or inline_date
 
         status = default_status or _row_status(cells, texts, mapping)
         year = None

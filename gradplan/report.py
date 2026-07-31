@@ -54,8 +54,32 @@ def answer(assessments: Iterable[SessionAssessment], today: date) -> str:
 
     session = winner.session
     days = (session.date - today).days
-    lines.append(f"  >>> {_fmt_date(session.date)}  at {session.location}   ({days} days away)")
+    label = "  >>> " + _fmt_date(session.date)
+    if session.projected:
+        lines.append(f"{label}  ({days} days away)")
+        lines.append(
+            "       PROJECTED - the official calendar does not reach this far. "
+            "Date extrapolated"
+        )
+        lines.append("       from the published annual pattern; treat it as the session, not the day.")
+    else:
+        lines.append(f"{label}  at {session.location}   ({days} days away)")
     lines.append("")
+
+    forecast = winner.forecast
+    if forecast.get("cfu_outstanding"):
+        lines.append(
+            f"  Credits still to earn        {forecast['cfu_outstanding']:g} CFU"
+            f"  (at {forecast['pace_cfu_per_year']:g} CFU/year"
+            f" = {forecast['years_needed']:g} years)"
+        )
+        observed = forecast.get("observed_pace") or {}
+        if observed.get("available"):
+            lines.append(
+                f"  Pace so far                  {observed['cfu_per_year']:g} CFU/year"
+                f"  (since {observed['since']})"
+            )
+        lines.append("")
     lines.append(f"  Apply by                     {_fmt_date(session.application_deadline)}")
     lines.append("  Report uploaded and every")
     lines.append(f"  exam recorded by             {_fmt_date(session.records_deadline)}")
@@ -86,7 +110,8 @@ def answer(assessments: Iterable[SessionAssessment], today: date) -> str:
 
 
 def session_table(assessments: Iterable[SessionAssessment], today: date) -> str:
-    lines = [BAR, "ALL PUBLISHED SESSIONS", BAR]
+    lines = [BAR, "SESSIONS", BAR]
+    shown = 0
     for assessment in assessments:
         session = assessment.session
         if session.date <= today:
@@ -95,14 +120,23 @@ def session_table(assessments: Iterable[SessionAssessment], today: date) -> str:
             state = "REACHABLE"
         else:
             state = "blocked"
+        # Once a reachable session is found, later ones add nothing.
+        if state == "REACHABLE":
+            shown += 1
+            if shown > 1:
+                continue
+        tag = "~" if session.projected else " "
         lines.append(
-            f"  {_fmt_date(session.date)}  {session.location:<16s} "
+            f" {tag}{_fmt_date(session.date)}  {session.location:<16s} "
             f"apply by {_fmt_date(session.application_deadline)}  "
             f"records by {_fmt_date(session.records_deadline)}   {state}"
         )
         if not assessment.feasible and session.date > today:
             for blocker in assessment.blockers:
                 lines.append(f"        - {blocker}")
+    if any(a.session.projected for a in assessments):
+        lines.append("")
+        lines.append("  ~ = extrapolated from the published pattern, not an official date.")
     return "\n".join(lines)
 
 

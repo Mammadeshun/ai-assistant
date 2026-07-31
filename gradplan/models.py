@@ -113,6 +113,9 @@ class GraduationSession:
     application_deadline: date
     records_deadline: date
     academic_year: str = ""
+    # True when the session is extrapolated from the published pattern rather
+    # than taken from an official calendar.
+    projected: bool = False
 
     def to_json(self) -> dict[str, Any]:
         return {
@@ -121,6 +124,7 @@ class GraduationSession:
             "application_deadline": self.application_deadline.isoformat(),
             "records_deadline": self.records_deadline.isoformat(),
             "academic_year": self.academic_year,
+            "projected": self.projected,
         }
 
 
