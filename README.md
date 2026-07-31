@@ -42,16 +42,36 @@ python -m gradplan plan --remaining "Statistical modelling,Brain modelling" --in
 
 ## Authentication
 
-Nothing is hardcoded and nothing is written to the repo. Three modes:
+Nothing is hardcoded and nothing is written to the repo. Modes:
 
 | Mode | What it does |
 |---|---|
-| `--auth interactive` | Opens a visible browser; you sign in yourself, including any 2FA. The tool never handles your password. Recommended for the first run. |
-| `--auth storage` | Reuses the browser session saved by a previous run (`data/storage_state.json`, gitignored). No credentials involved. |
-| `--auth env` | Fills the SSO form from `UNIPV_USERNAME` / `UNIPV_PASSWORD` in the environment. |
+| `--auth auto` (default) | Reuse the saved session; else use `UNIPV_USERNAME` / `UNIPV_PASSWORD` if set; else open a browser and let you sign in. |
+| `--auth interactive` | Always sign in by hand in a visible browser, including any 2FA. The tool never handles your password. |
+| `--auth storage` | Only reuse the session saved by a previous run (`data/storage_state.json`, gitignored). |
+| `--auth env` | Only use `UNIPV_USERNAME` / `UNIPV_PASSWORD`. |
 
 If a login does not reach an authenticated page, the failing page is archived
-under `data/raw/debug/` so you can see what the SSO actually returned.
+under `data/raw/debug/` so you can see what the SSO actually returned. Only one
+credential attempt is ever made per login, so a wrong password cannot turn into
+a lockout loop.
+
+### Transports
+
+Playwright is the default. Where a headless browser has no network egress
+(hardened CI, an egress proxy that only tunnels for non-browser clients), pass
+`--transport http`: the same scrapers then run over a plain cookie jar that
+walks the UniPV Shibboleth chain explicitly —
+
+```
+Esse3 -> unipv.idp.cineca.it session probe (auto-submit)
+      -> login-method routing form (selected_flow=internal, auth_ctx=authn/Password)
+      -> credential form (j_username / j_password, _eventId_proceed)
+      -> SAML assertion posted back to the service provider
+```
+
+`--transport http` requires `UNIPV_USERNAME` / `UNIPV_PASSWORD`, since there is
+no browser for you to type into.
 
 ## Raw-first archiving
 
@@ -76,7 +96,21 @@ A graduation session is reachable only if all of these hold:
 2. every outstanding exam has a published sitting early enough to be
    **recorded** by the **records deadline** (one week before the day);
 3. the report can be finished and uploaded by that same deadline;
-4. the credits add up to 180.
+4. the credits add up to 180;
+5. the outstanding credits can actually be *earned* by then.
+
+Point 5 matters more than it looks. Deadline arithmetic alone will happily
+schedule twenty exams into one session, so the planner also bounds the answer
+by throughput: `--pace` CFU per academic year (default 60, the nominal
+full-time load). It reports the pace you have actually sustained so far
+alongside the assumed one.
+
+When the credits left cannot be earned before the official calendar runs out,
+the calendar is extended by repeating its annual pattern. Those sessions are
+marked `~` and labelled **PROJECTED** — they are an expectation of roughly
+*when*, not an announced date. Past the last published exam sheet, individual
+sittings cannot be checked at all, so those sessions are judged on throughput
+alone and flagged `sittings_known: false`.
 
 Rules and dates come from the *Final examination regulations* published on
 `bai.unipv.it` and are re-read on every `fetch-public` — they are not baked
@@ -122,16 +156,17 @@ Both are gitignored: they are personal academic records.
 .venv/bin/python -m pytest tests/ -q
 ```
 
-30 tests, all offline. The parser tests run against fixtures; the browser test
+36 tests, all offline. The parser tests run against fixtures; the browser test
 drives real Chromium against a local fake Esse3 (login form, redirect, cookie
 gate) to exercise the scraping path end to end.
 
-The Esse3 fixtures under `tests/fixtures/` are **synthetic** — modelled on the
-Cineca Esse3 libretto markup, not captured from a live account. The parser
-locates tables by header keywords (Italian and English) rather than by CSS
-classes or column positions, and reports anything it cannot parse instead of
-dropping it silently. Once you have archived a real libretto, re-run
-`build-career` and check the diagnostics it prints.
+The Esse3 fixtures under `tests/fixtures/` are modelled on the Cineca libretto
+markup rather than captured from a live account. The parser locates tables by
+header keywords (Italian and English) rather than by CSS classes or column
+positions, and reports anything it cannot parse instead of dropping it
+silently — which is how the real libretto's combined `Voto - Data Esame`
+column and its zero-width padding characters were found. Re-run `build-career`
+after any change and check the diagnostics it prints.
 
 ## Sources
 

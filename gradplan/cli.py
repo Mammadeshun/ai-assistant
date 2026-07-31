@@ -16,15 +16,24 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date
+from contextlib import contextmanager
+from datetime import date, timedelta
 
 from . import career as career_mod
 from . import config, report
 from .archive import RawArchive
 from .models import NOT_TAKEN, PASSED, Career, Exam
-from .planner import PlannerOptions, assess, earliest_feasible
+from .planner import (
+    PlannerOptions,
+    assess,
+    completion_forecast,
+    earliest_feasible,
+    extrapolate_sessions,
+    outstanding_requirements,
+)
 from .sources import bai, esse3, kiro
 from .sources.browser import AUTH_AUTO, AUTH_ENV, AUTH_INTERACTIVE, AUTH_STORAGE, session
+from .sources.http_session import http_session
 
 
 def _add_auth(parser: argparse.ArgumentParser) -> None:
@@ -45,6 +54,17 @@ def _add_auth(parser: argparse.ArgumentParser) -> None:
         type=float,
         default=config.REQUEST_DELAY_SECONDS,
         help="seconds to wait between requests (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--transport",
+        choices=["browser", "http"],
+        default="browser",
+        help=(
+            "browser (default): drive Chromium via Playwright; "
+            "http: follow the SSO form chain with a plain cookie jar, for "
+            "environments where a headless browser has no network egress. "
+            "http requires UNIPV_USERNAME / UNIPV_PASSWORD"
+        ),
     )
 
 
@@ -76,6 +96,15 @@ def _add_planner_options(parser: argparse.ArgumentParser) -> None:
         "--in-corso",
         action="store_true",
         help="graduating within the third year from enrolment (+2 points)",
+    )
+    parser.add_argument(
+        "--pace",
+        type=float,
+        default=60.0,
+        help=(
+            "CFU you expect to earn per academic year; 60 is the nominal "
+            "full-time load for this degree (default: %(default)s)"
+        ),
     )
     parser.add_argument(
         "--remaining",
@@ -138,26 +167,39 @@ def cmd_fetch_public(args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_fetch_esse3(args: argparse.Namespace) -> int:
+@contextmanager
+def _transport(args: argparse.Namespace, archive: RawArchive):
+    """Yield either a Playwright session or the HTTP one, per --transport."""
+    if args.transport == "http":
+        handle = http_session(archive, delay=args.delay)
+        try:
+            yield handle
+        finally:
+            handle.close()
+    else:
+        with session(
+            archive, auth_mode=args.auth, headless=False, delay=args.delay
+        ) as handle:
+            yield handle
+
+
+def _run_fetch(args: argparse.Namespace, module) -> int:
     config.ensure_dirs()
     archive = RawArchive()
-    with session(archive, auth_mode=args.auth, headless=False, delay=args.delay) as handle:
-        result = esse3.fetch_all(handle)
+    with _transport(args, archive) as handle:
+        result = module.fetch_all(handle)
     print(f"  archived: {', '.join(result['fetched']) or 'nothing'}")
     for failure in result["failed"]:
         print(f"  failed:   {failure}")
     return 0 if result["fetched"] else 1
+
+
+def cmd_fetch_esse3(args: argparse.Namespace) -> int:
+    return _run_fetch(args, esse3)
 
 
 def cmd_fetch_kiro(args: argparse.Namespace) -> int:
-    config.ensure_dirs()
-    archive = RawArchive()
-    with session(archive, auth_mode=args.auth, headless=False, delay=args.delay) as handle:
-        result = kiro.fetch_all(handle)
-    print(f"  archived: {', '.join(result['fetched']) or 'nothing'}")
-    for failure in result["failed"]:
-        print(f"  failed:   {failure}")
-    return 0 if result["fetched"] else 1
+    return _run_fetch(args, kiro)
 
 
 def cmd_build_career(args: argparse.Namespace) -> int:
@@ -205,7 +247,16 @@ def cmd_plan(args: argparse.Namespace) -> int:
         thesis_days_needed=args.thesis_days_needed,
         assumed_mark=args.assumed_mark,
         in_corso=args.in_corso,
+        pace_cfu_per_year=args.pace,
     )
+
+    # If the credits left cannot be earned before the calendar runs out, extend
+    # it by repeating the published pattern so the answer is still a date.
+    forecast = completion_forecast(
+        student_career, outstanding_requirements(student_career), today, options
+    )
+    horizon = date.fromisoformat(forecast["earliest_completion"])
+    sessions = extrapolate_sessions(sessions, until=horizon + timedelta(days=400))
     assessments = assess(student_career, sessions, sittings, today=today, options=options)
     print(report.render(student_career, assessments, today, sittings))
 

@@ -19,6 +19,8 @@ from gradplan.planner import (
     PlannerOptions,
     assess,
     earliest_feasible,
+    extrapolate_sessions,
+    observed_pace,
     outstanding_requirements,
     project_mark,
 )
@@ -90,14 +92,64 @@ def test_recording_lag_decides_between_two_sessions():
     assert earliest_feasible(lagged).session.date == date(2026, 10, 28)
 
 
-def test_exam_with_no_published_sitting_blocks_every_session():
+def test_exam_with_no_published_sitting_blocks_sessions_within_the_calendar():
     career = career_with(["Some Course Not In The Calendar"])
     results = assess(career, SESSIONS, sittings(), TODAY)
-    assert earliest_feasible(results) is None
+
     september = next(a for a in results if a.session.date == date(2026, 9, 23))
+    assert september.sittings_known
+    assert not september.feasible
     plan = september.exam_plans[0]
-    assert not plan.feasible
-    assert "no sitting" in plan.reason
+    assert not plan.feasible and "no sitting" in plan.reason
+
+
+def test_sessions_past_the_calendar_horizon_fall_back_to_the_forecast():
+    """Beyond the published sittings, a missing sitting proves nothing."""
+    career = career_with(["Some Course Not In The Calendar"])
+    results = assess(career, SESSIONS, sittings(), TODAY)
+
+    # The fixture's last sitting is 24 Sep 2026, so October is past the horizon.
+    october = next(a for a in results if a.session.date == date(2026, 10, 28))
+    assert not october.sittings_known
+    assert october.exam_plans == []
+    assert october.feasible
+
+
+def test_outstanding_credits_push_the_answer_past_the_calendar():
+    """A large backlog is bounded by pace, not by deadline arithmetic."""
+    career = Career(
+        exams=[Exam(name="passed", cfu=12.0, status=PASSED, mark_raw="25")]
+        + [Exam(name=f"todo {i}", cfu=12.0, status=NOT_TAKEN) for i in range(14)]
+    )
+    options = PlannerOptions(pace_cfu_per_year=60.0)
+    results = assess(career, SESSIONS, sittings(), TODAY, options)
+    assert earliest_feasible(results) is None  # 168 CFU cannot fit by Oct 2026
+    assert any("CFU still to earn" in b for a in results for b in a.blockers)
+
+
+def test_extrapolated_sessions_repeat_the_pattern_and_are_flagged():
+    extended = extrapolate_sessions(SESSIONS, until=date(2029, 12, 31))
+    future = [s for s in extended if s.projected]
+    assert future, "expected the calendar to be extended"
+    assert all(s.date > SESSIONS[-1].date for s in future)
+    # The published July/September/October pattern should recur.
+    assert any(s.date == date(2027, 9, 23) for s in future)
+    sample = next(s for s in future if s.date == date(2027, 9, 23))
+    # Deadlines follow the regulation leads: one month and one week.
+    assert sample.application_deadline == date(2027, 8, 24)
+    assert sample.records_deadline == date(2027, 9, 16)
+
+
+def test_observed_pace_is_reported_from_the_first_recorded_exam():
+    career = Career(
+        exams=[
+            Exam(name="a", cfu=6.0, status=PASSED, mark_raw="23", date=date(2025, 9, 9)),
+            Exam(name="b", cfu=6.0, status=PASSED, mark_raw="27", date=date(2025, 9, 17)),
+        ]
+    )
+    pace = observed_pace(career, date(2026, 9, 9))
+    assert pace["available"] and pace["since"] == "2025-09-09"
+    assert pace["cfu_per_year"] == pytest.approx(12.0, abs=0.2)
 
 
 def test_chosen_sitting_is_the_earliest_usable_one():
