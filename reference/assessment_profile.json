@@ -1,339 +1,936 @@
 {
-  "note": "How each outstanding activity is actually assessed. 'mode' and 'evidence' are observed from the archived Kiro course pages (data/raw/kiro/course-*.html) and the published exam calendars. 'effort' is a judgement call, not data: it ranks how much work a bare pass (18/30) plausibly takes given the material available, and should be overridden freely. Courses marked 'on Kiro but not enrolled' exist on the platform but hide their contents until self-enrolment, so their effort rating is the least evidenced in this file.",
-  "source": "Kiro course pages archived 2026-07-31; Regolamento L-AI 2025/26 art. 10 (no prerequisites, no attendance obligation); exam-rule documents and all 35 enrolled course instances archived 2026-07-31",
-  "modes": {
-    "coursework": "graded on submitted work; no sit-down exam to schedule",
-    "project": "a project replaces or dominates the written exam",
-    "assignment_plus_exam": "assignments during the course plus a written exam",
-    "written": "written exam",
-    "quiz": "written exam in closed/multiple-choice form"
+  "generated": "2026-07-31",
+  "note": "'findings' are quoted from archived sources with their path. 'judgement' is a rating, not an observation. UNVERIFIED means no source was found - see gaps.action for what would resolve it.",
+  "rubric": {
+    "1": "Solved past papers for many sessions, single assessment, no gate beyond 18 overall.",
+    "2": "Past papers or samples exist; one straightforward written or coursework assessment.",
+    "3": "Either no published papers, or two components to satisfy, or a large syllabus (12 CFU).",
+    "4": "Independent pass gates, negative marking, or a compulsory oral on top of a written part.",
+    "5": "Rules not published anywhere reachable, or several gates at once; cannot be drilled blind."
+  },
+  "tiers": {
+    "A": "quoted exam rules + past papers available",
+    "B": "quoted exam rules, no past papers",
+    "C": "course pages read, exam rules not published there",
+    "D": "thin or no evidence"
   },
   "activities": [
     {
-      "code": "509521",
-      "name": "Laboratory of Machine Learning",
-      "cfu": 3,
-      "mode": "coursework",
-      "consumes_exam_slot": false,
-      "past_papers": false,
-      "effort": "low",
-      "kiro_course": 5124,
-      "evidence": [
-        "Submission of the report on pet classification",
-        "report on audio classification",
-        "report on pet segmentation",
-        "report on ASR",
-        "report on handwritten text recognition",
-        "report on Audio Denoising Autoencoder",
-        "report on face generation",
-        "report on Audio GAN",
-        "report on manga character generation"
-      ],
-      "notes": "Nine report submissions, no exam. Deadline-driven, so it can run in parallel with exam preparation."
-    },
-    {
-      "code": "508207",
-      "name": "Project Work",
-      "cfu": 3,
-      "mode": "project",
-      "consumes_exam_slot": false,
-      "past_papers": false,
-      "effort": "low",
-      "kiro_course": 9643,
-      "evidence": [
-        "on Kiro but not enrolled: id 9643; the page shows an enrolment prompt"
-      ],
-      "notes": "F-ALTRO activity. Agree the brief with a supervisor; can overlap with the final report."
-    },
-    {
-      "code": "509496",
-      "name": "Information retrieval and recommender systems",
-      "cfu": 6,
-      "mode": "project",
-      "consumes_exam_slot": false,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": 9703,
-      "evidence": [
-        "Project Instructions 2026 June-July: build a search engine ranking clinical trials for precision-medicine oncology cases (TREC 2019 Precision Medicine subtask)",
-        "submission templates and dataset code published"
-      ],
-      "notes": "A real build, not a token exercise - but no exam to sit, and it overlaps heavily with Web and social media search."
-    },
-    {
-      "code": "509495",
-      "name": "Data mining and knowledge extraction",
-      "cfu": 6,
-      "mode": "assignment_plus_exam",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "low",
-      "kiro_course": 10353,
-      "evidence": [
-        "Mockup exam: 'You can get up to 30 points, which are then scaled to [0,18] and summed up to the assignment marks'",
-        "'The assignments are worth at most 12 points, and so the final mark is at most 30'",
-        "three assignments plus a published past assignment"
-      ],
-      "notes": "Best value in the plan: the three assignments carry up to 12 of the 30 points before you sit anything. Do them and the written part only has to deliver the remainder."
-    },
-    {
-      "code": "509483",
-      "name": "Computational logic",
-      "cfu": 6,
-      "mode": "assignment_plus_exam",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "low",
-      "kiro_course": 10047,
-      "evidence": [
-        "Exam_Assignments folder holds solved exams for EVERY session from 2022 to 2026 (Jan, Feb, Jun, Jul, Sep), most with full solution archives"
-      ],
-      "notes": "Five straight years of past papers with solutions - the most directly practicable exam in the plan."
-    },
-    {
-      "code": "510109",
-      "name": "Probability and statistical inference",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "high",
-      "kiro_course": 11783,
-      "evidence": [
-        "Syllabus: 'Exam: Written in the computer lab, including open and closed items. Exercises and theory'",
-        "'Homeworks and class exercises are on the same difficulty level as the exam'",
-        "past exams with full solutions from Jan 2023 to Feb 2025"
-      ],
-      "notes": "Computer-lab written exam. The published exercises are explicitly stated to match exam difficulty, and the solved-paper archive is the largest in the plan."
-    },
-    {
-      "code": "509481",
-      "name": "Calculus",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "high",
-      "kiro_course": 9942,
-      "evidence": [
-        "'The exam consists of a written test'; 'closed books test'; 'may be complemented by an oral part' with no extra preparation",
-        "theory question lists published per year for part 1 and part 2",
-        "past tests from every 2024 session"
-      ],
-      "notes": "Closed book, parts 1 and 2 examined separately. Published theory-question lists make the theory half fully predictable."
-    },
-    {
-      "code": "509478",
-      "name": "Knowledge representation and reasoning",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "high",
-      "kiro_course": 7609,
-      "evidence": [
-        "mod.1: past exams 2022/09, 2023/02, Mock Exam 2021 with solutions, exam instructions",
-        "mod.2: 2025 mock with solutions, June and July 2022 exams with solutions",
-        "'The full score of Knowledge Representation and Reasoning will be the mean between the scores of the two modules (KRR1 and KRR2)'"
-      ],
-      "notes": "Final mark is the MEAN of the two module scores, so a strong module can carry a weak one. Both publish solved papers."
-    },
-    {
-      "code": "509477",
-      "name": "Computer programming, algorithms and data structures",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "high",
-      "kiro_course": 9919,
-      "evidence": [
-        "mod.2 (Dondi) Exam Information: written, Theory up to 20 pts + Python up to 10; must reach >=12 theory AND >=6 programming; non-running or empty code = failed; ~2h20m",
-        "mod.1 (Ferrari, Statale) 2023-24 edition: 'The exam will consist in the development of a project in Python, and its presentation and discussion'",
-        "mod.1 2024-25 edition: 'Students of the previous editions (up to a.y. 2023-24) can choose between the project-based exam and the current written exam'"
-      ],
-      "notes": "YOU ARE A 2023/24 COHORT STUDENT, so for module 1 you may choose the project-based exam instead of the computer-based test. Module 2 stays a written paper with two independent minimums.",
-      "project_option": true
-    },
-    {
-      "code": "509486",
-      "name": "Machine learning, artificial neural networks and deep learning",
-      "cfu": 12,
-      "mode": "project",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "medium",
-      "kiro_course": 10341,
-      "evidence": [
-        "exam sessions are mod/assign submissions: 'Exam Session 16 June 2026', 'Exam Session 14 July 2026'",
-        "'Attached you can find the exam assignment, and the file input_data.zip'; solutions submitted as a Colab notebook plus a PDF",
-        "two published mock assignments with the same format"
-      ],
-      "notes": "The exam is take-home style coding submitted on the session date, not a closed-book paper. Part 1 + part 2 register as one overall grade - read the registration notice."
-    },
-    {
-      "code": "509487",
-      "name": "Fuzzy systems and evolutionary computing",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "low",
-      "kiro_course": 11127,
-      "evidence": [
-        "Exam 2026-01 is point-weighted and formulaic: definitions, pseudo-code of an evolutionary algorithm, fuzzy relation composition, alpha-cuts, centre of gravity",
-        "'Example of answer to the open questions' page gives model answers",
-        "Lab exam exercise samples with solutions"
-      ],
-      "notes": "Highly patterned: the same question types recur with published model answers. Strong candidate for a fast 18."
-    },
-    {
-      "code": "509488",
-      "name": "Text mining and natural language processing",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "medium",
-      "kiro_course": 11391,
-      "evidence": [
-        "Course Information: 'written exam, consists of open and closed questions (up to 32 points), minimum passing score 18'",
-        "practice paper: 'WRONG ANSWER WILL GET -0.5 POINT!'",
-        "question samples for 22_23, 23_24 and 2025_26"
-      ],
-      "notes": "Negative marking on the closed questions - guessing costs you. Otherwise well covered by samples."
-    },
-    {
-      "code": "509485",
-      "name": "Cognitive psychology",
-      "cfu": 6,
-      "mode": "quiz",
-      "consumes_exam_slot": true,
-      "past_papers": true,
-      "effort": "medium",
-      "kiro_course": 7392,
-      "evidence": [
-        "General information: 'Written exam (25 points): multiple choice, open questions. Oral exam (6 points)'",
-        "'Both written and oral part are mandatory'",
-        "'You must reach at least 12 pts with the written exam to get access to the oral exam'",
-        "quiz bonus = average of best 5, but 'to obtain the bonus points you must attend at least 5 quizzes' in class"
-      ],
-      "notes": "Not a soft option: the oral is compulsory and gated behind 12/25 on the written. The quiz bonus needs in-class attendance, so it is not available to you retroactively."
-    },
-    {
-      "code": "504464",
-      "name": "Organization theory and design",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "low",
-      "kiro_course": 8598,
-      "evidence": [
-        "EXAM"
-      ],
-      "notes": "Free-choice exam outside the AI degree, so its dates follow its own course, not the BAI session calendar. Check its appelli in Esse3."
-    },
-    {
-      "code": "509493",
-      "name": "Statistical modelling",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": 10217,
-      "evidence": [
-        "only 4 activities on Kiro"
-      ],
-      "notes": "Thin Kiro presence: material is likely distributed elsewhere by D'Angelo. Ask for past papers directly."
+      "code": "509498",
+      "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "lab exam (multi-part, with data files)",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 4,
+        "appelli_autumn_2026": [
+          "04/09/2026",
+          "18/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "'Lab exam assignment - 2026 Summer session' folder contains AI4CM_LabExam_Part1/2/3.pdf plus data.xlsx and marketing_campaign.csv, so the exam is applied lab work on supplied data.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "point split and whether a written theory part exists",
+        "action": "open the lab exam folder on Kiro 10959 and email Suriano"
+      },
+      "sources_read": {
+        "kiro_editions": 2,
+        "documents": 25,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
     },
     {
       "code": "509494",
-      "name": "Brain modelling",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": 10392,
-      "evidence": [
-        "only 3 activities on Kiro"
-      ],
-      "notes": "Thin Kiro presence. Casellato teaches it at Bicocca; check the Bicocca e-learning page."
+      "name": "BRAIN MODELLING",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "UNVERIFIED",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "03/09/2026",
+          "25/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "everything except the appelli dates and the course aims",
+        "action": "email Casellato; the course is co-taught with Dagliati (5+1 CFU split)"
+      },
+      "sources_read": {
+        "kiro_editions": 6,
+        "documents": 0,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509481",
+      "name": "CALCULUS",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "written, closed book; oral possible at the board's request",
+        "project_option": "no",
+        "partial_credit": "none found",
+        "pass_gates": "Part 1 must be passed with at least 15/30; parts examined separately; oral possible at the board's request",
+        "past_paper_count": 34,
+        "appelli_autumn_2026": [
+          "11/09/2026",
+          "25/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "pass_gate",
+            "quote": "The duration of the test is 1 hour Pass Part 1 of the Calculus exam with a score of at least 15/30 Pass the Calculus course Important: if you passed the OFA by passing Part 1 or the full exam of Calculus, you should contact the teacher so that your OFA exam can be properly registered.",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          },
+          {
+            "signal": "written",
+            "quote": "Seleziona attività Tutoring Tutoring URL Spunta come completato Seleziona sezione Exam rules and dates Minimizza Espandi Exam rules and dates The exam consists of a written test .",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          },
+          {
+            "signal": "oral",
+            "quote": "Upon request by the exam committee, the written exam may be complemented by an oral part.",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          },
+          {
+            "signal": "oral",
+            "quote": "For this oral exam no further preparation with respect to the written test is required.",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          },
+          {
+            "signal": "written",
+            "quote": "The written test is a closed books test : notes, books, calculators or similar instruments, items with a photocamera or able to connect to the internet are not allowed.",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          },
+          {
+            "signal": "written",
+            "quote": "In the written test, students should solve some exercises on the topics of the course and answer to some questions of theoretical character on the program of the course.",
+            "source": "kiro course/2771",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021037Z__course-2771.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 4,
+        "why": "Published theory-question lists per year make the theory half predictable, but Part 1 carries its own 15/30 minimum on top of the overall 18.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 10,
+        "documents": 34,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509485",
+      "name": "COGNITIVE PSYCHOLOGY",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "written (25 pts: 5 MCQ + 20 open) + oral (6 pts), both compulsory",
+        "project_option": "no",
+        "partial_credit": "class-attendance bonus (+2 in the oldest edition, quiz-average bonus in others) - requires in-class presence, not available retroactively",
+        "pass_gates": "written threshold to reach the oral DRIFTS BY EDITION: id 12 = >=16 and final is the AVERAGE; ids 4228/6850/7392 = >=12 and final is the SUM; id 11579 (current) = >=13 and final is the SUM",
+        "past_paper_count": 27,
+        "appelli_autumn_2026": [
+          "08/09/2026",
+          "25/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "pass_gate",
+            "quote": "•Both written and oral part are mandatory.",
+            "source": "Course Information slides (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+          },
+          {
+            "signal": "oral",
+            "quote": "You must reach at least 16 pts with the written exam to get access to the oral exam.",
+            "source": "Course Information slides (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+          },
+          {
+            "signal": "oral",
+            "quote": "•The final grade is the average of the written and oral exam.9 10 11 12 3/13/2022 4 Cognitive Psychology Grading•Written exam•Multiple choice questions: max 8 points•Open questions: max 24 points•Oral exam•Can add +/-3 points•In class participation up to two points at the end if the grade from previ",
+            "source": "Course Information slides (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020058Z__mod-resource-36326.pdf"
+          },
+          {
+            "signal": "written",
+            "quote": "Written exam (25 points max): multiple choice questions (5 points) open questions (20 points) on book materials Students who have obtained a score above or equal to 12 will have to take the 2.",
+            "source": "kiro course/6850",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+          },
+          {
+            "signal": "oral",
+            "quote": "Oral exam (6 points max): discussion of the written exam (can modulate the result of the written part) presentation/d iscussion of the research papers (6 points).",
+            "source": "kiro course/6850",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+          },
+          {
+            "signal": "lab_component",
+            "quote": "Failure to do so implies automatically that they will have to take the exam following the syllabus and the modalities of their class as of Departmental rules.",
+            "source": "kiro course/6850",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021048Z__course-6850.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 4,
+        "why": "Compulsory oral gated behind a written threshold. Subject is approachable; structure is not. Which threshold binds depends on which edition you sit under.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "which edition's rules bind for a 2023/24-cohort student sitting in 2026",
+        "action": "email Bricolo before booking - the course page requires previous-year students to message her at least three days before the appello if they want the current syllabus"
+      },
+      "sources_read": {
+        "kiro_editions": 10,
+        "documents": 37,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509483",
+      "name": "COMPUTATIONAL LOGIC",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "written (exam assignments)",
+        "project_option": "no",
+        "partial_credit": "none found",
+        "pass_gates": "none found",
+        "past_paper_count": 1,
+        "appelli_autumn_2026": [
+          "31/08/2026",
+          "23/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 1,
+        "why": "Solved exams for every session 2022-2026 in the Exam_Assignments folders. Nothing else to satisfy.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "the exam-rules statement itself; only the archive is published",
+        "action": "ask Ghilardi to confirm structure and whether the assignments are take-home"
+      },
+      "sources_read": {
+        "kiro_editions": 2,
+        "documents": 9,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509477",
+      "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "mod.2 written (theory + Python); mod.1 project OR computer-based test",
+        "project_option": "conditional - editions up to a.y. 2023-24 may choose the project; enrolment year 2023/24 qualifies",
+        "partial_credit": "none found",
+        "pass_gates": "mod.2: theory >=12/20 AND code >=6/10; non-running code fails outright",
+        "past_paper_count": 19,
+        "appelli_autumn_2026": [
+          "09/09/2026",
+          "24/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "project_option",
+            "quote": "Aggregazione dei criteri Spunta come completato The final exam will consist in the design and implementation of a software project in Python, in a report to document the project, and in a short presentation to summarize the report content and discuss the design and implementation of the project.",
+            "source": "Information about the project (page)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+          },
+          {
+            "signal": "project_option",
+            "quote": "Any student or team can choose a project among those published in their university career.",
+            "source": "Information about the project (page)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+          },
+          {
+            "signal": "project_option",
+            "quote": "Hence, if one is going to take the exam in the first year, can choose only the project published for the current year.",
+            "source": "Information about the project (page)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+          },
+          {
+            "signal": "project_option",
+            "quote": "Instead, if one is going to take the exam in the second year, can choose either the project published in the previous year or the one of the current year.",
+            "source": "Information about the project (page)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T015628Z__mod-page-17417.html"
+          },
+          {
+            "signal": "project_option",
+            "quote": "2023-24) can choose between the project-based exam and the current written exam.",
+            "source": "kiro course/7388",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+          },
+          {
+            "signal": "grade_formula",
+            "quote": "The final score results as sum of the score points accumulated, properly scaled to the usual grades interval.",
+            "source": "kiro course/7388",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020952Z__course-7388.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 4,
+        "why": "Two independent minimums on module 2 and an automatic fail for non-running code. The module 1 project option reduces risk but adds a deliverable.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 14,
+        "documents": 44,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509495",
+      "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "assignments + written",
+        "project_option": "no",
+        "partial_credit": "assignments up to 12 of 30 points",
+        "pass_gates": "none found",
+        "past_paper_count": 9,
+        "appelli_autumn_2026": [
+          "04/09/2026",
+          "24/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "12 of 30 points bankable before the written part, which is then scaled into 18.",
+        "timing_constraint": "assignments are set during delivery; they cannot be recovered by sitting a later appello"
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 6,
+        "documents": 165,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
     },
     {
       "code": "509519",
-      "name": "Ethics, law and AI",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": 5123,
-      "evidence": [
-        "only 7 activities on Kiro"
-      ],
-      "notes": "12 CFU but essay/discursive rather than technical. Three lecturers; confirm which parts are examined together."
-    },
-    {
-      "code": "509492",
-      "name": "Theoretical and quantum physics for AI",
-      "cfu": 12,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "high",
-      "kiro_course": 9893,
-      "evidence": [
-        "on Kiro but not enrolled: module 1 id 9893 (Gherardi), module 2 id 11668 (Guarnieri)",
-        "part 1 examined at Milano Statale, part 2 at Pavia"
-      ],
-      "notes": "Two modules examined independently at two universities. The Kiro courses exist but their contents stay hidden until you self-enrol; enrol to see past papers before judging the effort."
-    },
-    {
-      "code": "509498",
-      "name": "Artificial intelligence for communication and marketing",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "low",
-      "kiro_course": 10959,
-      "evidence": [
-        "on Kiro but not enrolled: id 10959 (Suriano)",
-        "examined at Milano-Bicocca in both summer and autumn"
-      ],
-      "notes": "Non-technical Bicocca course. Self-enrol on Kiro to reveal the material; effort is a guess until then."
-    },
-    {
-      "code": "510638",
-      "name": "Web and social media search and analysis",
-      "cfu": 6,
-      "mode": "written",
-      "consumes_exam_slot": true,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": 11076,
-      "evidence": [
-        "on Kiro but not enrolled: id 11076 (Viviani, Mancini)",
-        "examined at Milano-Bicocca"
-      ],
-      "notes": "Same track as Information retrieval, so material overlaps with the IR project. Self-enrol to confirm whether it is project-assessed too."
+      "name": "ETHICS, LAW AND AI",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "UNVERIFIED",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "02/09/2026",
+          "16/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "12 CFU, three lecturers, essayistic subject. Rated on subject type alone, which is weak.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "any statement of exam format; four editions read, none publishes rules",
+        "action": "email Faroldi/Redaelli/Larese, or check the UniPV scheda insegnamento for 509519"
+      },
+      "sources_read": {
+        "kiro_editions": 8,
+        "documents": 7,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
     },
     {
       "code": "509535",
-      "name": "Final exam",
-      "cfu": 3,
-      "mode": "project",
-      "consumes_exam_slot": false,
-      "past_papers": false,
-      "effort": "medium",
-      "kiro_course": null,
-      "evidence": [
-        "Final examination regulations a.y. 2025/26"
-      ],
-      "notes": "A report on a topic explored in a stage, project work or laboratory, supervised by a course lecturer. Must be uploaded in PDF/A one week before the graduation day."
+      "name": "FINAL EXAM",
+      "cfu": 3.0,
+      "findings": {
+        "assessment_format": "report + presentation to the degree board",
+        "project_option": "n/a",
+        "partial_credit": "n/a",
+        "pass_gates": "report uploaded in PDF/A one week before the graduation day",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [],
+        "evidence_tier": "D",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Rules come from the Final examination regulations, not Kiro. 3 CFU but gated on a supervisor and a deadline.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 0,
+        "documents": 0,
+        "official_syllabus": true,
+        "appelli_list": false
+      }
+    },
+    {
+      "code": "509487",
+      "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "written + lab component",
+        "project_option": "no",
+        "partial_credit": "none found",
+        "pass_gates": "none found",
+        "past_paper_count": 15,
+        "appelli_autumn_2026": [
+          "03/09/2026",
+          "17/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "oral",
+            "quote": "Depending on the degree of satisfaction of these three criteria the project can contribute up to 4 points to the final degree (such points will be directly added to the vote resulting from the written/oral examination, provided this latter is at least equal to 18).",
+            "source": "Project's Instructions (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020219Z__mod-resource-255209.pdf"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "Question types recur verbatim year to year with published model answers; lab samples solved.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 8,
+        "documents": 19,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509496",
+      "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "project (search engine build)",
+        "project_option": "yes - it is the assessment",
+        "partial_credit": "n/a",
+        "pass_gates": "none found",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "31/08/2026",
+          "15/09/2026"
+        ],
+        "evidence_tier": "B",
+        "evidence": [
+          {
+            "signal": "written",
+            "quote": "5.Project Presentations:Deadline -June, after the written exam, day to be decided.",
+            "source": "Project Instructions 2026 June - July (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012541Z__mod-resource-322356.pdf"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "No sitting to schedule; published instructions, templates and dataset code. Overlaps with Web and social media.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 6,
+        "documents": 71,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509478",
+      "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "written, two modules",
+        "project_option": "no",
+        "partial_credit": "none found",
+        "pass_gates": "final mark is the MEAN of the two module scores",
+        "past_paper_count": 52,
+        "appelli_autumn_2026": [
+          "10/09/2026",
+          "21/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "written",
+            "quote": "During the exam: The KRR1 exam is a written exam and no additional support is needed or allowed.",
+            "source": "kiro course/9884",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021023Z__course-9884.html"
+          },
+          {
+            "signal": "lab_component",
+            "quote": "SPARQL Exercises RDF & SPARQL Exercises File Spunta come completato Updates: 20/5: new exercise 5 21/5: added missing rdfs:label triples in the graph of exercise 5 Seleziona attività RDF &amp;",
+            "source": "kiro course/9232",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021031Z__course-9232.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Both modules publish solved papers, and the mean lets a strong module carry a weak one - but it is 12 CFU and two sittings.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 32,
+        "documents": 152,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509521",
+      "name": "LABORATORY OF MACHINE LEARNING",
+      "cfu": 3.0,
+      "findings": {
+        "assessment_format": "coursework - nine report submissions",
+        "project_option": "n/a",
+        "partial_credit": "the reports are the grade",
+        "pass_gates": "none found",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "01/09/2026",
+          "21/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "No exam. Deadline-driven, so it runs alongside exam preparation.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 6,
+        "documents": 90,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509486",
+      "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "upload (Colab notebook + PDF) on the session date",
+        "project_option": "n/a - the exam itself is an upload",
+        "partial_credit": "none found",
+        "pass_gates": "none found",
+        "past_paper_count": 4,
+        "appelli_autumn_2026": [
+          "01/09/2026",
+          "15/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "upload",
+            "quote": "Aggregazione dei criteri Aperto: mercoledì, 8 aprile 2026, 00:00 Data limite: sabato, 11 aprile 2026, 23:59 Please upload a unique pdf file, containing the description of your solution, by strictly respecting assignment numbering even in the provided answers.",
+            "source": "Mock Exam (assign)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012301Z__mod-assign-312518.html"
+          },
+          {
+            "signal": "upload",
+            "quote": "Aggregazione dei criteri Aperto: mercoledì, 6 maggio 2026, 00:00 Data limite: venerdì, 8 maggio 2026, 23:59 Please upload a unique pdf file, containing the description of your solution for laboratory 17 assignment, by strictly respecting its numbering even in the provided answers.",
+            "source": "Mock Exam 2 (assign)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012304Z__mod-assign-318439.html"
+          },
+          {
+            "signal": "upload",
+            "quote": "Aggregazione dei criteri Aperto: martedì, 16 giugno 2026, 00:00 Data limite: giovedì, 25 giugno 2026, 23:59 In this section you can to upload your exam notebook code.",
+            "source": "Exam Session 16 June 2026 (assign)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012306Z__mod-assign-324523.html"
+          },
+          {
+            "signal": "upload",
+            "quote": "WHAT Upload a unique pdf file ( surname_number.pdf ) file containing a link to a Colab notebook by ensuring to grant \"anyone with the link\" can \"Edit\" permissions, in the General access area of the share window menu (top right button).",
+            "source": "Exam Session 16 June 2026 (assign)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012306Z__mod-assign-324523.html"
+          },
+          {
+            "signal": "upload",
+            "quote": "Aggregazione dei criteri Aperto: martedì, 14 luglio 2026, 16:00 Data limite: mercoledì, 22 luglio 2026, 23:59 In this section you can to upload your exam notebook code.",
+            "source": "Exam Session 14 July 2026 (assign)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012308Z__mod-assign-325322.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "Take-home style coding with two published mock assignments in identical format; not a closed-book paper.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 2,
+        "documents": 4,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "504464",
+      "name": "ORGANIZATION THEORY AND DESIGN",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "UNVERIFIED",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 5,
+        "appelli_autumn_2026": [
+          "03/09/2026",
+          "17/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "Free-choice course outside the AI degree; 27 slide decks per edition but no rules statement.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "exam format",
+        "action": "email Greco; note its appelli follow its own degree's calendar, not the BAI sessions"
+      },
+      "sources_read": {
+        "kiro_editions": 10,
+        "documents": 130,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "510109",
+      "name": "PROBABILITY AND STATISTICAL INFERENCE",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "written in computer lab, open + closed items",
+        "project_option": "no",
+        "partial_credit": "homeworks stated to match exam difficulty",
+        "pass_gates": "none found",
+        "past_paper_count": 47,
+        "appelli_autumn_2026": [
+          "07/09/2026",
+          "21/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "lab_component",
+            "quote": "Ross File Spunta come completato Seleziona sezione Syllabus Part 1 (tentative) Minimizza Espandi Syllabus Part 1 (tentative) We shall discuss the following topics (all included in Chapters 1-4 of the textbook): 1.",
+            "source": "kiro course/10516",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021117Z__course-10516.html"
+          },
+          {
+            "signal": "written",
+            "quote": "Exam Written in the computer lab, including open and closed items.",
+            "source": "Syllabus (final) (page)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012545Z__mod-page-324185.html"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Largest solved archive in the plan (Jan 2023 - Feb 2025), but 12 CFU across two modules.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 12,
+        "documents": 61,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "508207",
+      "name": "PROJECT WORK",
+      "cfu": 3.0,
+      "findings": {
+        "assessment_format": "project",
+        "project_option": "yes - it is the assessment",
+        "partial_credit": "n/a",
+        "pass_gates": "none found",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "09/09/2026",
+          "14/10/2026",
+          "02/12/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 2,
+        "why": "Kiro page carries a proposals database rather than rules; appelli exist in Sep, Oct and Dec, which is unusually flexible.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "the brief and supervision requirements",
+        "action": "open the proposals database on Kiro course 9643 and pick a supervisor"
+      },
+      "sources_read": {
+        "kiro_editions": 2,
+        "documents": 1,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509493",
+      "name": "STATISTICAL MODELLING",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "UNVERIFIED",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "10/09/2026",
+          "24/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Cannot rate on evidence. All three Kiro editions contain a forum and nothing else.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "everything except the appelli dates",
+        "action": "email D'Angelo (Bicocca) for the syllabus and past papers; do NOT use the Bicocca 'Statistical Modeling' page by Pennoni, which is a different course"
+      },
+      "sources_read": {
+        "kiro_editions": 6,
+        "documents": 0,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509488",
+      "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "written, open + closed questions, up to 32 points",
+        "project_option": "no",
+        "partial_credit": "none found",
+        "pass_gates": "minimum 18; wrong closed answers score -0.5",
+        "past_paper_count": 7,
+        "appelli_autumn_2026": [
+          "10/09/2026",
+          "24/09/2026"
+        ],
+        "evidence_tier": "A",
+        "evidence": [
+          {
+            "signal": "written",
+            "quote": "Please note that all topics covered during the course may be included in the written exam.",
+            "source": "kiro course/11391",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021105Z__course-11391.html"
+          },
+          {
+            "signal": "written",
+            "quote": "Seleziona attività [TMNLP 22_23] Exam questions sample [TMNLP 22_23] Exam questions sample File Seleziona attività [TMNLP 23_24] Exam questions sample [TMNLP 23_24] Exam questions sample File Seleziona attività [TMNLP-2025_2026] Practice Written Exam [TMNLP-2025_2026] Practice Written Exam File",
+            "source": "kiro course/11391",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021105Z__course-11391.html"
+          },
+          {
+            "signal": "pass_gate",
+            "quote": "Course Information Assessment: Course Information Assessment: - written exam, consists of open and closed questions (up to 32 points) ○ minimum passing score: 18 - In case of a final half score, it will then be rounded up.",
+            "source": "Course Information (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T012326Z__mod-resource-302971.pdf"
+          },
+          {
+            "signal": "oral",
+            "quote": "Semester Second Semester Assessment method Written and optional oral individual examination, definition of a laboratory project that can be developed also by groups of students (up to three students).",
+            "source": "kiro course/2294",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021107Z__course-2294.html"
+          },
+          {
+            "signal": "written",
+            "quote": "The written examination is aimed at assessing the level of understanding of the basic aspects taught during the course;",
+            "source": "kiro course/2294",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T021107Z__course-2294.html"
+          },
+          {
+            "signal": "written",
+            "quote": "● These points will be added to the evaluation obtained in the written exam.",
+            "source": "Project Instructions (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020229Z__mod-resource-126913.pdf"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Well covered by three years of samples, but negative marking punishes the guess-everything strategy that a bare 18 usually relies on.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "",
+        "action": ""
+      },
+      "sources_read": {
+        "kiro_editions": 8,
+        "documents": 20,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "509492",
+      "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+      "cfu": 12.0,
+      "findings": {
+        "assessment_format": "UNVERIFIED",
+        "project_option": "UNVERIFIED",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 3,
+        "appelli_autumn_2026": [
+          "08/09/2026",
+          "22/09/2026"
+        ],
+        "evidence_tier": "C",
+        "evidence": []
+      },
+      "judgement": {
+        "effort": 4,
+        "why": "12 CFU split across two universities and examined independently; physics-heavy. Rated on structure, not on rules.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "exam format for both modules",
+        "action": "now enrolled in both Kiro shells (9893 Gherardi, 11668 Guarnieri) - read them, then email both lecturers"
+      },
+      "sources_read": {
+        "kiro_editions": 10,
+        "documents": 70,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
+    },
+    {
+      "code": "510638",
+      "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+      "cfu": 6.0,
+      "findings": {
+        "assessment_format": "project + written exam (both present)",
+        "project_option": "no - the project appears to be in addition to the written exam, not instead of it",
+        "partial_credit": "UNVERIFIED",
+        "pass_gates": "UNVERIFIED",
+        "past_paper_count": 0,
+        "appelli_autumn_2026": [
+          "08/09/2026",
+          "24/09/2026"
+        ],
+        "evidence_tier": "B",
+        "evidence": [
+          {
+            "signal": "written",
+            "quote": "Deadline: at least 7 days before the written examination.",
+            "source": "Project instructions (resource)",
+            "path": "/home/user/ai-assistant/data/raw/kiro/20260731T020911Z__mod-resource-303440.pdf"
+          }
+        ]
+      },
+      "judgement": {
+        "effort": 3,
+        "why": "Project instructions found with 'Deadline: at least 7 days before the written examination', so both components exist.",
+        "timing_constraint": ""
+      },
+      "gaps": {
+        "missing": "the point split between project and written exam",
+        "action": "read Kiro 11076 project instructions in full and email Viviani/Mancino"
+      },
+      "sources_read": {
+        "kiro_editions": 2,
+        "documents": 34,
+        "official_syllabus": false,
+        "appelli_list": true
+      }
     }
   ]
 }
