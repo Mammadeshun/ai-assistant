@@ -275,6 +275,86 @@ def cmd_plan(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_schedule(args: argparse.Namespace) -> int:
+    from . import schedule as sched
+
+    today = date.fromisoformat(args.today) if args.today else date.today()
+    if not config.CAREER_JSON.exists():
+        print("  No data/career.json. Run fetch-esse3 + build-career first.", file=sys.stderr)
+        return 2
+    student_career = career_mod.load()
+
+    assume = [n.strip() for n in (args.assume_passed or "").split(",") if n.strip()]
+    activities, unprofiled = sched.profile_outstanding(
+        student_career, assume_passed=assume
+    )
+    sessions, coursework = sched.build_schedule(
+        activities, today, session_budget=args.session_budget
+    )
+    summary = sched.summarise(sessions, coursework, unprofiled)
+
+    completion = summary["completion"]
+    print(report.BAR)
+    print("FASTEST ROUTE THROUGH THE REMAINING EXAMS")
+    print(report.BAR)
+    if assume:
+        print(f"  Assuming already passed: {', '.join(assume)}")
+    print(
+        f"  {len(activities)} activities left"
+        f"  ({sum(a.cfu for a in activities):g} CFU),"
+        f" effort budget {args.session_budget} points per session"
+    )
+    print()
+    for session in sessions:
+        print(
+            f"  {session.name.upper():7s} {session.start:%b %Y}"
+            f"   {session.points} pts, {session.cfu:g} CFU"
+        )
+        for activity in session.activities:
+            flag = "papers" if activity.past_papers else "no papers"
+            print(
+                f"      {activity.effort:6s} {activity.cfu:>2g} CFU  "
+                f"{activity.name[:46]:46s} {activity.mode:20s} {flag}"
+            )
+    if coursework:
+        print()
+        print("  In parallel (no exam slot - coursework or project):")
+        for activity in coursework:
+            print(
+                f"      {activity.effort:6s} {activity.cfu:>2g} CFU  "
+                f"{activity.name[:46]:46s} {activity.mode}"
+            )
+    if unprofiled:
+        print()
+        print(f"  No assessment profile ({len(unprofiled)}), assumed medium written:")
+        for name in unprofiled:
+            print(f"      - {name}")
+
+    print()
+    print(f"  Last exam session ends   {completion}")
+
+    sessions_gr = bai.load_graduation_sessions(archive := RawArchive())
+    sittings = bai.load_exam_sittings(archive)
+    if sessions_gr and completion:
+        done = date.fromisoformat(completion)
+        extended = extrapolate_sessions(sessions_gr, until=done + timedelta(days=400))
+        reachable = [s for s in extended if s.records_deadline >= done and s.application_deadline >= today]
+        if reachable:
+            target = min(reachable, key=lambda s: s.date)
+            tag = " (projected)" if target.projected else ""
+            print(f"  Earliest graduation      {target.date:%d %b %Y}{tag}")
+            print(f"      apply by             {target.application_deadline:%d %b %Y}")
+            print(f"      all exams recorded   {target.records_deadline:%d %b %Y}")
+            summary["earliest_graduation"] = target.to_json()
+
+    out = args.json_out or (config.DATA_DIR / "schedule.json")
+    config.ensure_dirs()
+    with open(out, "w", encoding="utf-8") as handle:
+        json.dump(summary, handle, indent=2, ensure_ascii=False)
+    print(f"\n  written: {out}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="gradplan",
@@ -300,6 +380,26 @@ def build_parser() -> argparse.ArgumentParser:
     plan = subparsers.add_parser("plan", help="compute the earliest graduation session")
     _add_planner_options(plan)
     plan.set_defaults(func=cmd_plan)
+
+    sched_p = subparsers.add_parser(
+        "schedule", help="pack the remaining exams into sessions"
+    )
+    sched_p.add_argument("--today", help="override today's date (YYYY-MM-DD)")
+    sched_p.add_argument(
+        "--session-budget",
+        type=int,
+        default=8,
+        help=(
+            "effort points per exam session; low exam = 1, medium = 2, high = 3 "
+            "(default: %(default)s)"
+        ),
+    )
+    sched_p.add_argument(
+        "--assume-passed",
+        help="comma-separated exams to treat as already passed",
+    )
+    sched_p.add_argument("--json", dest="json_out", help="write the schedule here")
+    sched_p.set_defaults(func=cmd_schedule)
 
     return parser
 
