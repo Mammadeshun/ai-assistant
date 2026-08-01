@@ -1,0 +1,16 @@
+{
+ "_note": "Explicit role overrides for documents whose name does not classify correctly. The automatic rules read a filename; these are cases where the content is known. 'paper' means questions should be extracted from it. Keyed by exact document name.",
+
+ "Cognitive Psychology - Esercizi chapter exercises": "paper",
+ "Cognitive Psychology - chapter quizzes with answers": "paper",
+ "Cognitive Psychology - full Q&A revision notes": "paper",
+ "TEXT MINING OPEN QUESTIONS - ANSWERS 2022-2023": "paper",
+ "Quantum module 2 - recalled exam questions with answers": "paper",
+ "Web and Social - graph question fragment": "paper",
+ "BRAIN MODELLING - RC circuit and Poisson": "paper",
+ "BRAIN MODELLING - Hodgkin-Huxley": "paper",
+ "BRAIN MODELLING - mean-field question": "paper",
+ "TMNLP - sentiment fragment": "paper",
+ "TMNLP - TF-IDF exercise": "paper",
+ "TMNLP - embeddings matching exercise": "paper"
+}

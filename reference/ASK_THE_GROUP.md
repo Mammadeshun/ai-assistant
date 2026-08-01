@@ -2,37 +2,39 @@
 
 Generated from `data/library.json`, so the counts are the real ones.
 
-The whole archive is 655 documents, 455 extracted questions and 353 published answer keys — but it is very unevenly spread. Two courses (Probability, KRR) carry more than half the questions between them. Four of your eleven September exams have **no exam material archived at all**.
+The whole archive is 739 documents, 679 extracted questions and 365 published answer keys. It is unevenly spread, and this document is about the thin end.
+
+**September exams with no exam material at all: 2.**
 
 Ranked by exam date, then by how thin the archive is.
 
 | Exam | Course | Papers | Keys | Questions | h |
 |---|---|---|---|---|---|
-| 31 Aug | Information Retrieval And Recommender  | 0 | 0 | 0 | 30 |
+| 31 Aug | Information Retrieval And Recommender  | 2 | 0 | 2 | 30 |
 | 01 Sep | Laboratory Of Machine Learning | 0 | 0 | 0 | 25 |
 | 02 Sep | Ethics, Law And Ai | 0 | 0 | 0 | 28 |
-| 03 Sep | Brain Modelling | 0 | 0 | 0 | 26 |
+| 03 Sep | Brain Modelling | 7 | 0 | 20 | 26 |
 | 04 Sep | Data Mining And Knowledge Extraction | 3 | 0 | 14 | 19 |
-| 08 Sep | Cognitive Psychology | 2 | 0 | 2 | 27 |
+| 08 Sep | Cognitive Psychology | 5 | 0 | 26 | 27 |
 | 09 Sep | Computer Programming, Algorithms And D | 6 | 16 | 19 | 44 |
-| 11 Sep | Calculus | 21 | 3 | 23 | 44 |
-| 15 Sep | Machine Learning, Artificial Neural Ne | 2 | 0 | 3 | 28 |
-| 22 Sep | Theoretical And Quantum Physics For Ai | 2 | 0 | 18 | 30 |
-| 24 Sep | Text Mining And Natural Language Proce | 4 | 0 | 33 | 30 |
-| Jan/Feb | Web And Social Media Search And Analys | 0 | 0 | 0 | 38 |
+| 11 Sep | Calculus | 21 | 4 | 23 | 44 |
+| 15 Sep | Machine Learning, Artificial Neural Ne | 20 | 0 | 107 | 28 |
+| 22 Sep | Theoretical And Quantum Physics For Ai | 3 | 0 | 28 | 30 |
+| 24 Sep | Text Mining And Natural Language Proce | 14 | 0 | 83 | 30 |
 | Jan/Feb | Organization Theory And Design | 1 | 0 | 1 | 45 |
+| Jan/Feb | Web And Social Media Search And Analys | 2 | 0 | 2 | 38 |
 | Jan/Feb | Artificial Intelligence For Communicat | 3 | 1 | 3 | 16 |
-| Jan/Feb | Statistical Modelling | 7 | 0 | 27 | 22 |
+| Jan/Feb | Statistical Modelling | 12 | 4 | 39 | 22 |
 
 ---
 
 ## 31 Aug — Information Retrieval And Recommender Systems
 
-*Archived: 0 papers, 0 answer keys, 0 extracted questions.*
+*Archived: 2 papers, 0 answer keys, 2 extracted questions.*
 
 **Ask for:** **A past project report and slide deck**, and whether anyone has presented in an autumn session.
 
-One stub page archived. The autumn presentation slot is unconfirmed and this is your first exam.
+RESOLVED for the written half — the two January papers you supplied come with full model answers, and they proved a written exam exists at all. The project side is still unseen.
 
 ## 01 Sep — Laboratory Of Machine Learning
 
@@ -40,23 +42,23 @@ One stub page archived. The autumn presentation slot is unconfirmed and this is 
 
 **Ask for:** **The nine lab assignment briefs**, and whether anyone has submitted in an autumn session.
 
-Only one stub page is archived. If the submission windows are closed the course cannot be sat, and that changes the September plan by 25 hours.
+Still only a stub page. If the submission windows are closed the course cannot be sat, which changes September by 25 hours.
 
 ## 02 Sep — Ethics, Law And Ai
 
 *Archived: 0 papers, 0 answer keys, 0 extracted questions.*
 
-**Ask for:** **Any past Ethics MCQ paper, and the current non-attending reading list.** Nothing at all is archived for this course — zero papers, zero questions.
+**Ask for:** **Any past Ethics MCQ paper, and the current non-attending reading list.** Still nothing at all archived — zero papers, zero questions. This is now the ONLY September exam with no material whatsoever.
 
-12 CFU for 28 h is the best rate in the plan, and I am currently sending you in blind. One recalled paper would be worth more here than anywhere else.
+12 CFU for 28 h is the best rate in the plan and it is the last blind spot left. One recalled paper is worth more here than anywhere else.
 
 ## 03 Sep — Brain Modelling
 
-*Archived: 0 papers, 0 answer keys, 0 extracted questions.*
+*Archived: 7 papers, 0 answer keys, 20 extracted questions.*
 
-**Ask for:** **The project-topics document** (it lives on a course Google Drive, not Kiro) and **any past written paper**.
+**Ask for:** **The project-topics document** (it lives on a course Google Drive, not Kiro).
 
-Zero documents are archived. The project is 30% of the mark and carries across sessions, so getting the topic list early is worth more than the paper.
+RESOLVED for the written half — seven past papers arrived, from zero. The project is 30% of the mark, carries across sessions, and its topic list is still missing.
 
 ## 04 Sep — Data Mining And Knowledge Extraction
 
@@ -64,63 +66,55 @@ Zero documents are archived. The project is 30% of the mark and carries across s
 
 **Ask for:** **The assignment texts set during delivery**, and any solved mockup.
 
-Three papers, zero answer keys. Novelty is 0.54, so past papers help less here than anywhere else and worked solutions matter more.
+Three papers, still zero answer keys. Novelty 0.54, so worked solutions matter more here than past papers do.
 
 ## 08 Sep — Cognitive Psychology
 
-*Archived: 2 papers, 0 answer keys, 2 extracted questions.*
+*Archived: 5 papers, 0 answer keys, 26 extracted questions.*
 
-**Ask for:** **Screenshots or notes from the chapter quizzes** (chapters 1, 2, 3, 5, 6, 8, 10) and **the research-paper questions** (STM, LTM, TPS, Language). Also anyone's recollection of the written paper's 20 open questions.
+**Ask for:** **Anyone's recollection of the written paper's 20 open questions**, and the oral questions they were actually asked.
 
-The quizzes were single-attempt, time-limited, and closed in 2025, so their content was never archivable. Someone who sat them may have saved them.
+MOSTLY RESOLVED: the chapter quizzes, their answers and a full Q&A revision set arrived from the group, taking this from 2 questions to 26. The written open section and the oral are still unseen.
 
 ## 09 Sep — Computer Programming, Algorithms And Data Structures
 
 *Archived: 6 papers, 16 answer keys, 19 extracted questions.*
 
-**Ask for:** **Any paper after 2023** — the archive stops at July 2023.
+**Ask for:** **Any paper after 2023** — the archive still stops at July 2023.
 
-Six papers, 16 keys, all from 2022-2023. Three years stale on an exam with two independent pass gates.
+Six papers, 17 keys, all 2022-2023. Three years stale on an exam with two independent pass gates.
 
 ## 11 Sep — Calculus
 
-*Archived: 21 papers, 3 answer keys, 23 extracted questions.*
+*Archived: 21 papers, 4 answer keys, 23 extracted questions.*
 
 **Ask for:** **Part 2 tests and their solutions**, and Part 1 tests from 2025 and 2026.
 
-21 papers but only 3 answer keys, and the archive stops at the 2024 sittings plus one 2026 Feb set.
+21 papers but only 4 answer keys, and the archive thins out after the 2024 sittings.
 
 ## 15 Sep — Machine Learning, Artificial Neural Networks And Deep Learning
 
-*Archived: 2 papers, 0 answer keys, 3 extracted questions.*
+*Archived: 20 papers, 0 answer keys, 107 extracted questions.*
 
-**Ask for:** **Solved notebooks for the June and July 2026 papers.**
+**Ask for:** **Solved notebooks for any recent paper**, and whether a 'Part 1' exists alongside the 'Part 2' the 2025-26 papers are labelled with.
 
-Both briefs are archived but no worked solutions. This exam is an upload, so seeing a full-mark submission is worth more than any theory.
+RESOLVED for coverage — 20 sittings from 2023 to 2026, and the top question type appears in 15 of them. Still zero worked solutions.
 
 ## 22 Sep — Theoretical And Quantum Physics For Ai
 
-*Archived: 2 papers, 0 answer keys, 18 extracted questions.*
+*Archived: 3 papers, 0 answer keys, 28 extracted questions.*
 
-**Ask for:** **Confirmation of the exam format**, and any real past paper rather than a mock.
+**Ask for:** **A real module-1 paper, and confirmation of whether the two modules are one sitting.** The module-2 recall you supplied resolved the format question.
 
-Only two mock exams exist. Both parse as multiple choice, which supports what you told me — but if it is actually a written physics paper the budget is wrong by 15 to 60 hours. This is the largest single uncertainty in the plan.
+PARTLY RESOLVED. The recalled module-2 paper shows short computational questions, not multiple choice — see the correction in the study pack. Module 1 still rests on two mocks.
 
 ## 24 Sep — Text Mining And Natural Language Processing
 
-*Archived: 4 papers, 0 answer keys, 33 extracted questions.*
+*Archived: 14 papers, 0 answer keys, 83 extracted questions.*
 
-**Ask for:** **Solutions to any of the three TMNLP samples.**
+**Ask for:** **Part 2 papers**, and solutions to the samples beyond the 2022-2023 open questions.
 
-Four papers, zero answer keys. With -0.5 for a wrong closed answer, knowing the right answer is worth double.
-
-## Jan/Feb — Web And Social Media Search And Analysis
-
-*Archived: 0 papers, 0 answer keys, 0 extracted questions.*
-
-**Ask for:** **A past project and the mark split** across project, presentation and written.
-
-No papers archived and the mark split is unverified, which is part of why it was deferred.
+LARGELY RESOLVED: 13 papers and 30 recurring question types, now the strongest prediction after KRR. The three-part structure only became visible from your photos.
 
 ## Jan/Feb — Organization Theory And Design
 
@@ -128,7 +122,15 @@ No papers archived and the mark split is unverified, which is part of why it was
 
 **Ask for:** **The per-Learning-Test example questions**, and anyone's recollection of the 240-question sitting.
 
-One document archived, one question extracted. You need ~73% net accuracy across 240 MCQs with -1 marking and I currently have almost nothing to drill.
+One document archived, one question extracted. You need ~73% net accuracy across 240 MCQs with -1 marking and there is almost nothing to drill.
+
+## Jan/Feb — Web And Social Media Search And Analysis
+
+*Archived: 2 papers, 0 answer keys, 2 extracted questions.*
+
+**Ask for:** **A past project, the figures referenced by the June 2025 paper, and the mark split.**
+
+PARTLY RESOLVED: one written paper recovered, so the syllabus is concrete. Its questions refer to Figure 1 and Figure 2, which the photograph does not show.
 
 ## Jan/Feb — Artificial Intelligence For Communication And Marketing
 
@@ -136,15 +138,15 @@ One document archived, one question extracted. You need ~73% net accuracy across
 
 **Ask for:** **Whether anyone has an open autumn lab window**, and a copy of a submitted lab project.
 
-The written half is solved by your own 85-question bank. The lab gate is the entire blocker.
+The written half is solved by your own 85-question bank. The lab gate is the entire blocker and no group material touched it.
 
 ## Jan/Feb — Statistical Modelling
 
-*Archived: 7 papers, 0 answer keys, 27 extracted questions.*
+*Archived: 12 papers, 4 answer keys, 39 extracted questions.*
 
-**Ask for:** **Text versions of the lecture notes, or anyone's typed notes.**
+**Ask for:** **Nothing urgent.**
 
-Thirty of the 48 archived PDFs are single-page image exports with no text layer — readable by eye, not searchable and not drillable. The six past exams are fine.
+RESOLVED by OCR rather than by the group: 30 image-only PDFs were read with tesseract, recovering the lecture notes and four exercise-set solutions. 12 papers, 39 questions.
 
 ## What I would not bother asking for
 

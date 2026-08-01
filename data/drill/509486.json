@@ -1,23 +1,280 @@
 {
  "course": "509486",
- "documents_resolved": 4,
+ "documents_resolved": 22,
  "papers_used": [
   "Exam Session 16 June 2026",
-  "Exam Session 14 July 2026"
+  "Exam Session 14 July 2026",
+  "ML exam 19 September 2023  2023",
+  "ML exam 23 June 2023  2023",
+  "ML exam 24 July 2023  2023",
+  "ML exam 5 September 2023  2023",
+  "ML exam 21 February 2024 copy  2024",
+  "ML exam 29 January 2024  2024",
+  "ML exam exam test JULY24  2024",
+  "ML exam exam test JUNE24  2024",
+  "ML exam exam test SEPT24 1  2024",
+  "ML exam exam test SEPT24 2  2024",
+  "ML exam exam 18SEPT 2025  2025",
+  "ML exam exam test 02SEPT 25  2025",
+  "ML exam exam test FEB25  2025",
+  "ML exam exam test JAN25  2025",
+  "ML exam exam test JULY 25  2025",
+  "ML exam exam test JUNE 25  2025",
+  "ML exam exam test FEB  2026",
+  "ML exam exam test JAN26  2026"
  ],
- "n_papers": 2,
- "n_items": 3,
+ "n_papers": 20,
+ "n_items": 108,
  "solution_keys": [],
  "papers_without_a_published_key": [
   "Exam Session 16 June 2026",
-  "Exam Session 14 July 2026"
+  "Exam Session 14 July 2026",
+  "ML exam 19 September 2023  2023",
+  "ML exam 23 June 2023  2023",
+  "ML exam 24 July 2023  2023",
+  "ML exam 5 September 2023  2023",
+  "ML exam 21 February 2024 copy  2024",
+  "ML exam 29 January 2024  2024",
+  "ML exam exam test JULY24  2024",
+  "ML exam exam test JUNE24  2024",
+  "ML exam exam test SEPT24 1  2024",
+  "ML exam exam test SEPT24 2  2024",
+  "ML exam exam 18SEPT 2025  2025",
+  "ML exam exam test 02SEPT 25  2025",
+  "ML exam exam test FEB25  2025",
+  "ML exam exam test JAN25  2025",
+  "ML exam exam test JULY 25  2025",
+  "ML exam exam test JUNE 25  2025",
+  "ML exam exam test FEB  2026",
+  "ML exam exam test JAN26  2026"
  ],
  "question_types": [
   {
    "rank": 1,
    "topic": "unclassified",
-   "seen_in_papers": 1,
+   "seen_in_papers": 15,
+   "share_of_papers": 0.75,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam exam 18SEPT 2025  2025 [extra]",
+    "ML exam exam test 02SEPT 25  2025 [extra]",
+    "ML exam exam test FEB  2026 [extra]",
+    "ML exam exam test FEB25  2025 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test JAN26  2026 [extra]",
+    "ML exam exam test JULY 25  2025 [extra]",
+    "ML exam exam test JULY24  2024 [extra]",
+    "ML exam exam test JUNE 25  2025 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]",
+    "ML exam exam test SEPT24 1  2024 [extra]",
+    "ML exam exam test SEPT24 2  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1. MODEL CHOICE Which architecture do you consider the most appropriate for this task, among \nthose covered in our course, and briefly explain why."
+  },
+  {
+   "rank": 2,
+   "topic": "supervised_basics",
+   "seen_in_papers": 14,
+   "share_of_papers": 0.7,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 24 July 2023  2023 [extra]",
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam exam 18SEPT 2025  2025 [extra]",
+    "ML exam exam test FEB  2026 [extra]",
+    "ML exam exam test FEB25  2025 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test JAN26  2026 [extra]",
+    "ML exam exam test JULY 25  2025 [extra]",
+    "ML exam exam test JULY24  2024 [extra]",
+    "ML exam exam test JUNE 25  2025 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]",
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. OUTPUT and LOSS.  \nHow would you design the output layer and which loss function would you use to train your model? \nWhy?; ho"
+  },
+  {
+   "rank": 3,
+   "topic": "evaluation",
+   "seen_in_papers": 12,
+   "share_of_papers": 0.6,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam exam 18SEPT 2025  2025 [extra]",
+    "ML exam exam test FEB  2026 [extra]",
+    "ML exam exam test FEB25  2025 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test JAN26  2026 [extra]",
+    "ML exam exam test JULY24  2024 [extra]",
+    "ML exam exam test JUNE 25  2025 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]",
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. INPUT\na Which input ﬁelds would you retain/use and why;\n1\nb How to (if) preprocess input data;\nc Which is, after the preprocessing step, the input of the model, and\nhow is it represented (e.g., shape, input value domain);"
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 10,
    "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam exam test FEB25  2025 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test JULY 25  2025 [extra]",
+    "ML exam exam test JULY24  2024 [extra]",
+    "ML exam exam test JUNE 25  2025 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]",
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. OUTPUT: How would you design the output layer and why. What is\nits shape;"
+  },
+  {
+   "rank": 5,
+   "topic": "unclassified",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 5 September 2023  2023 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION: How would you assess (in which setting) the\ngeneralization capabilities of the model on unseen data?\nWhen necessary, BRIEFLY motivate your choices.\nDedicate an answer to each of the points above (1-6), maintaining the same\nnumbering and sub-items format.\nPlease leave SPACE between answers.\nYou will have time till September 28th, 23:59, to upload the implementation\nof your solution in a Jupyter notebook. On the course webpage, at the link\nhttps://elearning.unipv.it/mod/assign/view.php?id=135287, you will ﬁnd the\ninstructions on how to submit your solution. After the exam, you will also\nﬁnd the abovementioned data to be used for the implementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 6,
+   "topic": "unclassified",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam 18SEPT 2025  2025 [extra]",
+    "ML exam exam test FEB  2026 [extra]",
+    "ML exam exam test JAN26  2026 [extra]",
+    "ML exam exam test JUNE 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL CONFIGURATION\na Model composition (composition of layers, regardless their number,\nor their dimension)\nb How do you intend to conﬁgure your model to optimize your\nchoice, mention a few hyperparameters most relevant in your opinion."
+  },
+  {
+   "rank": 7,
+   "topic": "neural_networks",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 24 July 2023  2023 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test JULY24  2024 [extra]",
+    "ML exam exam test JUNE24  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL CONFIGURATION\na Model composition (composition of layers, regardless their number,\nor their dimension)\nb Which activation functions would you use for the various layers;\nc How (if) would you regularize/initialize your model\nd On which hyperparameters would you perform the model selection.\nJust list the most relevant ones in your opinion: 1), 2), 3), ...;"
+  },
+  {
+   "rank": 8,
+   "topic": "neural_networks",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 19 September 2023  2023 [extra]",
+    "ML exam 21 February 2024 copy  2024 [extra]",
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam 5 September 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL CONFIGURATION:\n Model composition (composition of layers, regardless their number,\nor their dimension, which can be object of tuning)\n Which activation functions would you use;\n How (if) would you regularize/initialize your model\n On which hyperparameters would you perform the model selection\n(just list the most relevant ones in your opinion)"
+  },
+  {
+   "rank": 9,
+   "topic": "unclassified",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.15,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam 18SEPT 2025  2025 [extra]",
+    "ML exam exam test JAN25  2025 [extra]",
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL EVALUATION.  \nHow would you assess (in which setting) the generalization capabilities of the model on unseen data? \nIndit"
+  },
+  {
+   "rank": 10,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.1,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test 02SEPT 25  2025 [extra]",
+    "ML exam exam test JULY 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION. Describe how would you evaluate the reconstruction\ncapabilities of the model.\nHOW TO ANSWER: Motivate your choices. Povide technical/mathematical\ndescriptions when suitable. Writing more does not necessarily imply a higher\nevaluation, in general. Be precise.\nDedicate an answer to each of the points above (1-6), maintaining the\nsame numbering format, even for subitems .\nPlease leave SPACE after each point. Insert line breaks to help readability.\nDuring the exam, the use of electronic devices, including mobile\nphones, tablets, smartwatches, etc., is strictly prohibited. Any\ndetected instance of misconduct will be appropriately sanctioned\nand recorded in the student’s academic record .\nYou will have time till July 23rd, 23:59, to upload the implementation of\nyour solution in a Colab notebook. The notebook should totally adhere to\nthe proposed solution. On the web page of the course you will ﬁnd a link\nwith the instructions on how to submit your solution. At the same link,\nafter the exam, you will also ﬁnd the abovementioned data to be used for\nthe implementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of\nproblems in uploading your solut"
+  },
+  {
+   "rank": 11,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.1,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test FEB  2026 [extra]",
+    "ML exam exam test JAN26  2026 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL EV ALUATION. How would you assess (in which setting and how)\nthe generalization capabilities of the model on unseen data?\nHOW TO ANSWER\n Keep the same numbering of the questions, and their subitems as\nwell;\n Motivate your choices. Provide technical/mathematical descriptions when\nsuitable. Be precise.\n Please leave SPACE after each point. Insert line breaks to help readability.\nYou will have time till February 26th, 23:59, to upload the implementation of\nyour solution in a Colab notebook. The notebook should totally adhere to the\nproposed solution. On the web page of the course you will find a link with the\ninstructions on how to submit your solution. At the same link, after the exam,\nyou will also find the abovementioned data to be used for the implementation.\nIf no file is uploaded, the exam is considered as rejected. In case of problems in\nuploading your solution, write for the teacher BEFORE the deadline for submitting.\n2"
+  },
+  {
+   "rank": 12,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.1,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 29 January 2024  2024 [extra]",
+    "ML exam exam test JULY24  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION. How would you assess (in which setting) the\ngeneralization capabilities of the model on unseen data?\nBRIEFLY motivate your choices.\nDedicate an answer to each of the points above (1-6), maintaining the\nsame numbering format, even for subitems .\nPlease leave SPACE between answers.\nYou will have time till July 26th, 23:59, to upload the implementation\nof your solution in a Jupyter notebook. The notebook should totally adhere\nto the proposed solution. On the course webpage you will ﬁnd a link with\nthe instructions on how to submit your solution. At the same link, after\nthe exam, you will also ﬁnd the abovementioned data to be used for the\nimplementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 13,
+   "topic": "evaluation",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.1,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test 02SEPT 25  2025 [extra]",
+    "ML exam exam test JULY 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. INPUT. How to (if) preprocess input data;"
+  },
+  {
+   "rank": 14,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
    "typical_marks": null,
    "papers": [
     "Exam Session 16 June 2026 [324523]"
@@ -26,10 +283,94 @@
    "statement": "Aggregazione dei criteri\nAperto:\nmartedì, 16 giugno 2026, 00:00\nData limite:\ngiovedì, 25 giugno 2026, 23:59\nIn this section you can to upload your exam notebook code. Attached you can find the exam assignment, and the file\ninput_data.zip.\nAdhere as much you can to your written solution.\nEnsure your code runs without errors and terminates in at most 5 minutes.\nIN CASE OF NECESSARY CHANGES WRT THE PROPOSED SOLUTION\nEMPHASIZE them appropriately in textual cells with the string \"CHANGE\" in boldface font and uppercase. Clearly MOTIVATE any change. Absence of motivation or motivations that does not make sense would be penalized.\nBE AWARE\n:\nThe final performance of the model is NOT relevant for the evaluation, hence it cannot be a valid motivation.\nWHAT\nUpload a unique pdf  file (\nsurname_number.pdf\n) file containing a link to a Colab notebook by ensuring to grant \"anyone with the link\" can \"Edit\" permissions,  in the General access area of the share window menu (top right button).\nDATA DOWNLOAD AND NOTEBOOK RUN\nMake your notebook\nself-contained\n. The teacher should just run it, no further intervention should be required. DO NOT mount your personal drive to read input data.\nSuggestion: up"
   },
   {
-   "rank": 2,
+   "rank": 15,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test JAN25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "7. MODEL ITERPRETATION. How would you explain the prediction\nthe model provides on a given input sample? ‘Explain’ here means to\ntry to associate input features with their relevance with regard to the\noutput prediction or, in other words, which part of a given input has a\nhigher impact of the ﬁnal prediction.\nBRIEFLY motivate your choices. Writing more is not a proxy for a higher\nevaluation, in general.\nDedicate an answer to each of the points above (1-7), maintaining the\nsame numbering format, even for subitems .\nPlease leave SPACE between answers.\nYou will have time till February 5th, 23:59, to upload the implementation\nof your solution in a Jupyter notebook. The notebook should totally adhere\nto the proposed solution. On the course webpage you will ﬁnd a link with\nthe instructions on how to submit your solution. At the same link, after\nthe exam, you will also ﬁnd the abovementioned data to be used for the\nimplementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 16,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam 18SEPT 2025  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL INTERPRETATION. Describe in a mathematically sound way a method you know, among \nthose covered in our course, to explain the predictions the model provides on a given input sample.  \n \n \n \n \n \nHOW TO ANSWER Keep the same numbering of the questions, and their subitems as well Motivate \nyour choices. Provide technical/mathematical descriptions when suitable. Be precise. Please leave \nSPACE after each point. Insert line breaks to help readability.  \n \nYou will have time till September 26th, 23:59, to upload the implementation of your solution in a Colab \nnotebook. The notebook should totally adhere to the proposed solution. On the web page of the \ncourse you will find a link with the instructions on how to submit your solution. At the same link, after \nthe exam, you will also find the abovementioned data to be used for the implementation. If no file is \nuploaded, the exam is considered as rejected. In case of problems in uploading your solution, write for \nthe teacher BEFORE the deadline for submitting."
+  },
+  {
+   "rank": 17,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test JUNE 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION. How would you assess (in which setting) the\ngeneralization capabilities of the model on unseen data?\nHOW TO ANSWER : brieﬂy motivate your choices, but provide enough\ndetails. Writing more does not necessarily imply a higher evaluation, in\ngeneral. Be precise.\nDedicate an answer to each of the points above (1-6), maintaining the\nsame numbering format, even for subitems .\nPlease leave SPACE between answers.\nYou will have time till June 28th, 23:59, to upload the implementation\nof your solution in a Colab notebook. The notebook should totally adhere\nto the proposed solution. On the web page of the course you will ﬁnd a\nlink with the instructions on how to submit your solution. At the same link,\nafter the exam, you will also ﬁnd the abovementioned data to be used for\nthe implementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 18,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "7. MODEL ITERPRETATION. How would you explain the prediction\nthe model provides on a given input sample. ‘Explain’ here means to\ntry to say which input features of the sample lead to that prediction,\nand possibily which are more relevant for it.\nBRIEFLY motivate your choices.\nDedicate an answer to each of the points above (1-6), maintaining the\nsame numbering format, even for subitems.\nPlease leave SPACE between answers.\nYou will have time till September 11th, 23:59, to upload the implementation\nof your solution in a Jupyter notebook. The notebook should totally adhere\nto the proposed solution. On the course webpage you will find a link with\nthe instructions on how to submit your solution. At the same link, after\nthe exam, you will also find the abovementioned data to be used for the\nimplementation.\nIf no file is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 19,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 2  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL EVALUATION. Describe in details how would you assess the\ncapability of the model to store the patterns in P (setting, performance\nmeasures).\nMotivate your choices.\nDedicate an answer to each of the points above (1-5), maintaining the\nsame numbering format .\nPlease leave SPACE between answers.\nYou will have time till September 25th, 23:59, to upload the implementation\nof your solution in a Jupyter notebook. The notebook should totally adhere\nto the proposed solution. On the course webpage you will ﬁnd a link with\nthe instructions on how to submit your solution. At the same link, after\nthe exam, you will also ﬁnd the abovementioned data to be used for the\nimplementation.\nIf no ﬁle will be uploaded, the exam will be considered as rejected. In case\nof problems in uploading your solution, write for the teacher BEFORE the\nabove-mentioned deadline for delivering.\n2"
+  },
+  {
+   "rank": 20,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 24 July 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION: How would you assess (in which setting) the\ngeneralization capabilties of the model on unseen data.\nWhen necessary , BRIEFL Y motivate your choices .\nDedicate an answer to each of the points above (1-6), maintaining the same\nnumbering and sub-items.\nLEAVE space among answers.\nAfter the exam, you have time till August 5th, 23:59, to upload the\nimplementation of your solution in a Jupyter notebook. On the course\nwebpage, at the link https://elearning.unipv.it/mod/assign/view.php?id=\n130987, you will ﬁnd the instructions on how to submit your solution. There\nyou will also ﬁnd the data to be used, described above.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndealine for delivering.\n2"
+  },
+  {
+   "rank": 21,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test FEB25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. MODEL EVALUATION: How would you assess and measure the performance\nof the model?\nMotivate your choices in a complete way. Dedicate an answer to each of the\npoints above (1-6), maintaining the same numbering and sub-items format.\nPlease leave SPACE between answers.\nYou will have time till February 27th, 23:59, to upload the implementation\nof your solution in a Colab notebook. On the course webpage you will ﬁnd\nthe instructions about how to submit your solution just after the exam.\nTherein, you will also ﬁnd the abovementioned data to be used for the\nimplementation.\nIf no ﬁle is uploaded, the exam is considered as rejected. In case of problems\nin uploading your solution, write for the teacher BEFORE the above-mentioned\ndeadline for delivering.\n2"
+  },
+  {
+   "rank": 22,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
    "typical_marks": null,
    "papers": [
     "Exam Session 14 July 2026 [325322]"
@@ -38,16 +379,244 @@
    "statement": "1)\nof the corresponding node, and has length 1490.\nedges\nis a numpy ndarray of dimension (n_edges, 2), where the edges[i, 0] and  edges[i, 1] are the ids of the first and the second node incident to the\ni\n-th edge.\nexam_test.pdf\n14 luglio 2026, 19:53\ninput_data.zip\n14 luglio 2026, 19:53\nAggiungi consegna\nStato consegna\nStato consegna\nNon sono presenti consegne.\nStato valutazione\nNon valutata\nTempo rimasto\nConsegna in ritardo da: 8 giorni 3 ore"
   },
   {
-   "rank": 3,
+   "rank": 23,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 24 July 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. For each image we are also provided a coordinate vector, (c1, c2, c3, c4),\nrepresenting the bottom-left ( c1, c2) and the top-right corners of the\nbounding rectangle cointaining the animal within the image. Each\ncomponent of the vector is in [0 , 1], representing the fraction of the\nwidth and of the height respectively. c1 = 0(resp. 1) means the\nbottom-left corner of box lies on the left (resp. right) border of the\nﬁgure;"
+  },
+  {
+   "rank": 24,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test JULY 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. MODEL CONFIGURATION.\na Model composition: overall (graphical) outline;\nb How the image projection is modelled and realized (provide enough\ndetails);\nc How the image reconstruction is modelled and realized (provide\nenough details);\n1\nd How it is possible to generate new images not in the original\ndataset (provide enough details).\ne Are there hyperparameters to be tuned?"
+  },
+  {
+   "rank": 25,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test 02SEPT 25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. MODEL CHARACTERISTICS.\na Model composition: overall (graphical) outline;\nb Model formal description (mathematical properties and rationale\nof the solution);\nc How the labels for the authors with unknown primary research\nﬁeld are inferred;\ne Are there parameters/hyperparameters to be learnt/tuned?"
+  },
+  {
+   "rank": 26,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test FEB25  2025 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL CONFIGURATION:\n Model composition (composition of layers, regardless their number,\nor their dimension, which can be object of tuning)\n On which hyperparameters would you perform the model selection\n(just list the most relevant ones in your opinion)"
+  },
+  {
+   "rank": 27,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 24 July 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1. Each image is a 3-dimensional tensor of shape (224, 224, 3). The last\ndimension denotes the number of input channels;\n The numerosity of each class is 65, 65, 65 labelled samples;\n Values in each tensor entry are integers in [0 , 255];"
+  },
+  {
+   "rank": 28,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 5 September 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. Answer, text ﬁeld, the student answer. The number of words ranges\nfrom 116 to 577. Mean answer length is 256 words;"
+  },
+  {
+   "rank": 29,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
    "typical_marks": null,
    "papers": [
     "Exam Session 14 July 2026 [325322]"
    ],
    "solution_key": "",
    "statement": "1)\nof the corresponding node, and has length 1490;\nlabels[i] is the ground-truth label\n(integer -1 or"
+  },
+  {
+   "rank": 30,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. YearMonth, string, e.g. 2023-12. When the reviewer visited the theme\npark;"
+  },
+  {
+   "rank": 31,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 2  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "4. MODEL SELECTION. How are the hyper-parameters chosen (if any);"
+  },
+  {
+   "rank": 32,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 5 September 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1. Task type, integer equal to 1 or 2, the type of the task;"
+  },
+  {
+   "rank": 33,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "4. ReviewerLocation, string, country of origin of visitor;"
+  },
+  {
+   "rank": 34,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. ReviewText, text. The whole text of the visitor review;"
+  },
+  {
+   "rank": 35,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. Rating, ranging from 1 (unsatisﬁed) to 5 (satisﬁed);"
+  },
+  {
+   "rank": 36,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1. ReviewID, numeric and distinct code;"
+  },
+  {
+   "rank": 37,
+   "topic": "evaluation",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 2  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. EXECUTION. Which is in details the process that leads to the output\nstarting from a given input;"
+  },
+  {
+   "rank": 38,
+   "topic": "supervised_basics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 23 June 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. Branch, string, which branch of the park. It has three branches.\nMean and maximum length of ﬁeld ReviewText is 129 .7 and 3963 words,\nrespectively.\nDesign a deep neural network model trained to predict the Rating value\nof reviews. It is up to you to decide and clearly motivate each of the following\npoints:\n1\n1. Input\n Which ﬁelds to be used to predict the rating;\n How to (possibly) process/transform each used ﬁeld;\n Which is the input of the model, and how is it represented?\n2. How would you design the output layer;\n3. Which activation functions and which Loss function would you use;\n4. Which (possible) regularizers, initializers, normalizers, etc., and why;\n5. On which hyperparameters would you perform the model selection (if\nany), or why you would not perform it.\n6. How would you evalaute the generalization capabilties of the model on\nunseen data?\nMotivate your choices .\nDedicate an answer to each of the points above (1-6), maintaining the same\nnumbering.\nLEAVE space among answers.\nWrite in a clearly READABLE way.\nAfter the exam, you have time till July 1st, 23:59, to upload the implementation\nof your solution in a Colab notebook. On the course webpage, at the link\nhttps://"
+  },
+  {
+   "rank": 39,
+   "topic": "supervised_basics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 24 July 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. Further, we have some additional labelled images which have no bounding\nbox information, respectively 26, 2, and 0 for a1, a2 and a3 classes.\nASSIGNMENT\nDesign a deep neural network model trained to predict:\n1. The class of the image (which animal it contains among a1, a2, a3),\nassuming any image contains just one of these three animals;\n2. The location of the bounding box, intended as a vector of 4 coordinates,\nas described above.\n1\nTake 5 MINUTES to think about the problem, then provide a clear\nSKETCH (BRIEF description) of each of the following points. Write in a\nREADABLE way.\n1. MODEL: Which architecture you consider more appropriate for this\ntask, and WHY.\n2. INPUT:\n How to (if) preprocess input data and which data would you\nretain/use;\n Which is the input of the model, and how is it represented;\n3. OUTPUT: How would you design the output layer and why;"
+  },
+  {
+   "rank": 40,
+   "topic": "supervised_basics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam 5 September 2023  2023 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "4. Score, real value in the interval [1, 9]. Teacher’s assessment of student’s\nanswer.\nDesign a deep neural network model to predict the Score value of student\nanswers. TAKE 5 MINUTES to think about the problem, then provide a\nclear sketch of each of the following points. Write in a READABLE way.\n1. MODEL: Which architecture do you consider the most appropriate for\nthis task, and WHY;\n1\n2. INPUT:\n Which input ﬁelds would you retain/use and why;\n How to (if) preprocess input data;\n Which is, after the preprocessing step, the input of the model, and\nhow is it represented;\n3. OUTPUT: How would you design the output layer and why;\n4. LOSS: Which loss function would you use to train your model and why;"
+  },
+  {
+   "rank": 41,
+   "topic": "supervised_basics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 2  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. TRAINING. How the model parameters are trained and why. Describe\nthoroughly the training procedure, explaining why it is eﬀective for the\ntask at hand;"
+  },
+  {
+   "rank": 42,
+   "topic": "neural_networks",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.05,
+   "typical_marks": null,
+   "papers": [
+    "ML exam exam test SEPT24 1  2024 [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. MODEL CONFIGURATION\na Model composition (composition of layers, regardless their number,\nor their dimension)\nb How do you intend to configure your model (e.g., which activation\nfunction for hidden layers, number of layers to be used and so on)."
   }
  ],
  "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING"
