@@ -25,10 +25,16 @@ logging.getLogger("pypdf").setLevel(logging.CRITICAL)
 OUT = Path("data/bundle/pages")
 INDEX = Path("data/bundle/pages_index.json")
 
-SCALE = 1.55
-QUALITY = 50
+# Exam papers and answer keys are what you read closely, so they get the
+# quality. 'image-only' is the scanned lecture notes: worth having to hand,
+# not worth a third of the bundle.
+SETTINGS = {
+    "paper": (1.55, 50),
+    "solution": (1.55, 50),
+    "image-only": (1.10, 36),
+}
 MAX_PAGES = 6
-RENDER_ROLES = {"paper", "solution", "image-only"}
+RENDER_ROLES = set(SETTINGS)
 
 
 def photo_map() -> dict[str, Path]:
@@ -119,9 +125,10 @@ def main() -> int:
                     skipped += 1
                     total_bytes += target.stat().st_size
                     continue
+                scale, quality = SETTINGS[doc["role"]]
                 try:
-                    image = pdf[page].render(scale=SCALE).to_pil().convert("L")
-                    image.save(target, "WEBP", quality=QUALITY, method=5)
+                    image = pdf[page].render(scale=scale).to_pil().convert("L")
+                    image.save(target, "WEBP", quality=quality, method=5)
                     rendered += 1
                     total_bytes += target.stat().st_size
                 except Exception:  # noqa: BLE001
