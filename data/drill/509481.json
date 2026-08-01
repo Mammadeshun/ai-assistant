@@ -3,18 +3,6 @@
  "documents_resolved": 69,
  "papers_used": [
   "2023-24 TheoryQuestions for Part1 exam",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
   "Calculus part1 2024 feb7th a pdf",
   "Calculus part1 2024 feb7th b pdf",
   "Calculus part1 2024 feb7th c pdf",
@@ -36,8 +24,8 @@
   "Calculus part1 2024 sept 26 a pdf",
   "Calculus part1 2024 sept 26 b pdf"
  ],
- "n_papers": 33,
- "n_items": 35,
+ "n_papers": 21,
+ "n_items": 23,
  "solution_keys": [
   "Calculus-part1-2025-SampleTest-Solution",
   "Calculus1 July2024 solution pdf",
@@ -45,18 +33,6 @@
  ],
  "papers_without_a_published_key": [
   "2023-24 TheoryQuestions for Part1 exam",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
-  "2024 Feb 7th Test-Part1",
-  "2024-Feb21st-Test-Part1",
-  "2024-June25th-Test-Part1",
-  "2024-July17th-Test-Part1",
   "Calculus part1 2024 feb7th a pdf",
   "Calculus part1 2024 feb7th b pdf",
   "Calculus part1 2024 feb7th c pdf",
@@ -81,26 +57,9 @@
  "question_types": [
   {
    "rank": 1,
-   "topic": "unclassified",
-   "seen_in_papers": 6,
-   "share_of_papers": 0.182,
-   "typical_marks": null,
-   "papers": [
-    "2024 Feb 7th Test-Part1 [165631]",
-    "2024 Feb 7th Test-Part1 [197444]",
-    "2024 Feb 7th Test-Part1 [261990]",
-    "2024-Feb21st-Test-Part1 [190448]",
-    "2024-Feb21st-Test-Part1 [197445]",
-    "2024-Feb21st-Test-Part1 [261991]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nThe four version of the test of Feb. 7th 2024\nScarica cartella\n2024-Feb7th-Test\nCalculus_part1-2024-feb7th-a.pdf\nCalculus_part1-2024-feb7th-b.pdf\nCalculus_part1-2024-feb7th-c.pdf\nCalculus_part1-2024-feb7th-d.pdf"
-  },
-  {
-   "rank": 2,
    "topic": "derivatives",
    "seen_in_papers": 4,
-   "share_of_papers": 0.121,
+   "share_of_papers": 0.19,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 July17th a pdf [194746]",
@@ -112,38 +71,10 @@
    "statement": "Written exam of Calculus (part 1-d) July 17th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nAcademic Year you attended the course: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nID NUMBER: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet f be de\nned in a neigbhorhood of -2. Write the de\nnition of f ′(−2)\nANSWER:\n1.2 (3 POINTS)\nWrite the equation of the tangent line to the graph of f (x) =e−2x at the point of absissa x = −1.\nANSWER:\n1.3 (3 POINTS)\nHow many di\u001berent groups of \nve people can be chosen from a class of seven?\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(1 − cos x) log2(1 +x)\n(sin x − x) sin(2x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) = 1\ne2x − 3ex − 4\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem that relates the derivative to the decreasing of a function.\nST A "
   },
   {
-   "rank": 3,
-   "topic": "unclassified",
-   "seen_in_papers": 3,
-   "share_of_papers": 0.091,
-   "typical_marks": null,
-   "papers": [
-    "2024-July17th-Test-Part1 [194746]",
-    "2024-July17th-Test-Part1 [197447]",
-    "2024-July17th-Test-Part1 [261993]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\n2024-July-Part1\nScarica cartella\nCalculus_part1-2024-July17th-a.pdf\nCalculus_part1-2024-July17th-b.pdf\nCalculus_part1-2024-July17th-c.pdf\nCalculus_part1-2024-July17th-d.pdf\nCalculus1-July2024-solution.pdf"
-  },
-  {
-   "rank": 4,
-   "topic": "unclassified",
-   "seen_in_papers": 3,
-   "share_of_papers": 0.091,
-   "typical_marks": null,
-   "papers": [
-    "2024-June25th-Test-Part1 [190449]",
-    "2024-June25th-Test-Part1 [197446]",
-    "2024-June25th-Test-Part1 [261992]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nScarica cartella\nCalculus_part1-2024-jun25-a.pdf\nCalculus_part1-2024-Jun25th-b.pdf\nCalculus_part1-2024-Jun25th-c.pdf\nCalculus_part1-2024-jun25th-d.pdf\nCalculus1-June2024-Exam-Solution.pdf"
-  },
-  {
-   "rank": 5,
+   "rank": 2,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 8.0,
    "papers": [
     "Calculus part1 2024 sept a pdf [206436]",
@@ -153,10 +84,10 @@
    "statement": "2)\nx2 − 4x + 3> 0\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(x2 − 2x)(1 − cos(2x)\n(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 1\nlog2(x + 1)− 3 log(x +"
   },
   {
-   "rank": 6,
+   "rank": 3,
    "topic": "theory_questions",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 7.0,
    "papers": [
     "Calculus part1 2024 sept a pdf [206436]",
@@ -166,10 +97,10 @@
    "statement": "2) + 4\nSOLUTION:\n1.6 (7 POINTS)\nState amd prove Lagrange's Theorem\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 7,
+   "rank": 4,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 feb21 b pdf [190448]",
@@ -179,10 +110,10 @@
    "statement": "Written exam of Calculus (part 1-d) February 21st, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nGive the de\nnition of continuous function at x0 ∈ R\nANSWER:\n1.2 (3 POINTS)\nCompute the coe\ncient of x5 in the polinomial (x + 2)7\nANSWER:\n1.3 (3 POINTS)\nFind modulus and principal argument (i.e. in (−π, π]) of the complex number (1 +i)8.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(sin x − x) log2(1 +x))\n(1 + cosx)(ex − 1)(cos x − 1 +x2\n2 )\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = ex\nx + 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem about the limit of a monotone sequence.\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 8,
+   "rank": 5,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 feb21 a pdf [190448]",
@@ -192,10 +123,10 @@
    "statement": "Written exam of Calculus (part 1-c) February 21st, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet x0 ∈ R, de\nne\nlim\nx→x0\nf (x)\nANSWER:\n1.2 (3 POINTS)\nCompute the coe\ncient of x4 in the polinomial (x + 3)6\nANSWER:\n1.3 (3 POINTS)\nFind modulus and principal argument (i.e. in (−π, π]) of the complex number (1 − i)6.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\nsin 2x(sin x − x) log(1 +x))\n(1 + cosx)(ex − 1)(cos x − 1 +x2\n2 )\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = ex\nx − 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem about the uniqueness of the limit of a sequence\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 9,
+   "rank": 6,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 feb7th a pdf [165631]",
@@ -205,10 +136,10 @@
    "statement": "Written exam of Calculus (part 1-c) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nWrite the de\nnition of limit for a sequence of real numbers.\nANSWER:\n1.2 (3 POINTS)\nSolve the inequality log log(3x − 1) < 0\nANSWER:\n1.3 (3 POINTS)\nCompute:\nlim\nx→0\n−2x2 + sin2 x\nx2\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(ex − 1)2 sin(2x)\nx(ex − 1 − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) =x(2 − 1\nlog x )\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the formula for the derivative of the product of two di\u001berentiable functions.\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 10,
+   "rank": 7,
    "topic": "theory_questions",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 Jun25th c pdf [190449]",
@@ -218,10 +149,10 @@
    "statement": "Written exam of Calculus (part 1-c) June 25th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet A ⊂ R, non empty. De\nne sup A (distinguish between A bounded and unbounded above).\nANSWER:\n1.2 (3 POINTS)\nCompute the derivative of\nf (x) = (cos)sin x\nANSWER:\n1.3 (3 POINTS)\nSolve z2 + 4iz − 8 = 0in the complex plane.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\nlog(2 +x)(1 − cosx) tanx\narctan x − x\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 16 arctanx − log(1 +x2) + 3\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) = 1\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorems about the permanence of the sign for a sequence\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 11,
+   "rank": 8,
    "topic": "theory_questions",
    "seen_in_papers": 2,
-   "share_of_papers": 0.061,
+   "share_of_papers": 0.095,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 feb7th b pdf [165631]",
@@ -231,10 +162,10 @@
    "statement": "Written exam of Calculus (part 1-d) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nState Weierstrass' theorem.\nANSWER:\n1.2 (3 POINTS)\nSolve the inequality log log(1− 3x) < 0\nANSWER:\n1.3 (3 POINTS)\nCompute:\nlim\nx→0\nx2 + 3 sin2 x\nx2\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(e2x − 1)2(1 − cos x)\nx(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) =x(6 − 1\nlog x )\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the formula for the derivative of the quotient of two di\u001berentiable functions.\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 12,
+   "rank": 9,
    "topic": "theory_questions",
    "seen_in_papers": 1,
-   "share_of_papers": 0.03,
+   "share_of_papers": 0.048,
    "typical_marks": 8.0,
    "papers": [
     "Calculus part1 2024 Jun25th b pdf [190449]"
@@ -243,10 +174,10 @@
    "statement": "2x)\n(arctan x − x)\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = log(1 +x2) − 20 arctanx − 1\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) =−2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem of the zero\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 13,
+   "rank": 10,
    "topic": "derivatives",
    "seen_in_papers": 1,
-   "share_of_papers": 0.03,
+   "share_of_papers": 0.048,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 sept 26 b pdf [206438]"
@@ -255,10 +186,10 @@
    "statement": "Written exam of Calculus (part 1-b) September 26th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nAcademic Year you attended the course: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nID NUMBER: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nState the ratio test for series.\nANSWER:\n1.2 (3 POINTS)\nFind the coe\ncient of x3 in the polynomial P (x) = (1 +x)8\nANSWER:\n1.3 (3 POINTS)\nSolve\nsin x <0\nin the interval (−π, π]\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(ex − 1 − x) log2(1 +x)\n(1 − cos x)(1 − cos(2x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) =− 1\nx − log(x + 3\n4 )\nSOLUTION:\n1.6 (7 POINTS)\nGive the de\nnition of derivative and use it to compute the derivative of f (x) = cosx\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 14,
+   "rank": 11,
    "topic": "derivatives",
    "seen_in_papers": 1,
-   "share_of_papers": 0.03,
+   "share_of_papers": 0.048,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 sept 26 a pdf [206438]"
@@ -267,10 +198,10 @@
    "statement": "Written exam of Calculus (part 1-a) September 26th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nAcademic Year you attended the course: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nID NUMBER: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nState the rooth test for series.\nANSWER:\n1.2 (3 POINTS)\nFind the coe\ncient of x3 in the polynomial P (x) = (1 +x)7\nANSWER:\n1.3 (3 POINTS)\nSolve\ncos x >0\nin the interval (−π, π]\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(1 − cos x)(1 − cos(2x)\n(ex − 1 − x) log2(1 +x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 1\nx + log(x + 2)\nSOLUTION:\n1.6 (7 POINTS)\nGive the de\nnition of derivative and use it to compute the derivative of f (x) = sinx\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 15,
+   "rank": 12,
    "topic": "theory_questions",
    "seen_in_papers": 1,
-   "share_of_papers": 0.03,
+   "share_of_papers": 0.048,
    "typical_marks": 3.0,
    "papers": [
     "Calculus part1 2024 jun25 a pdf [190449]"
@@ -279,10 +210,10 @@
    "statement": "Written exam of Calculus (part 1-a) June 25th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet A ⊂ R, be non empty. De\nne sup A (distinguish between A bounded and unbounded above)\nANSWER:\n1.2 (3 POINTS)\nCompute the derivative of\nf (x) = (sinx)cos x\nANSWER:\n1.3 (3 POINTS)\nSolve z2 + 2iz − 5 = 0in the complex plane.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(ex + 1)(1− cos x) arctanx\n(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 10 arctanx − log(1 +x2) + 1\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) = 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorems about the permanence of the sign for a sequence\nST A TEMENTS:\nPROOFS:"
   },
   {
-   "rank": 16,
+   "rank": 13,
    "topic": "derivatives",
    "seen_in_papers": 1,
-   "share_of_papers": 0.03,
+   "share_of_papers": 0.048,
    "typical_marks": null,
    "papers": [
     "2023-24 TheoryQuestions for Part1 exam [165632]"

@@ -15,15 +15,14 @@
   "2025 Mock Exam",
   "June 2022 Exam",
   "July 2022 Exam",
-  "Students' questions",
   "2026 Mock Test",
   "Exam 2022/07/11",
   "Mock Exam 2022-2023",
   "Students' questions",
   "Mock Exam 2022 (Updated 9/6/2022)"
  ],
- "n_papers": 19,
- "n_items": 93,
+ "n_papers": 18,
+ "n_items": 92,
  "solution_keys": [
   "2023 Mock Exam Solution",
   "2024 Mock Exam Solution",
@@ -46,7 +45,6 @@
   "Students' questions",
   "Students' questions",
   "Students' questions",
-  "Students' questions",
   "Exam 2022/07/11",
   "Mock Exam 2022-2023",
   "Students' questions",
@@ -57,7 +55,7 @@
    "rank": 1,
    "topic": "rdf_sparql",
    "seen_in_papers": 6,
-   "share_of_papers": 0.316,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -74,7 +72,7 @@
    "rank": 2,
    "topic": "description_logic",
    "seen_in_papers": 5,
-   "share_of_papers": 0.263,
+   "share_of_papers": 0.278,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -90,7 +88,7 @@
    "rank": 3,
    "topic": "rdf_sparql",
    "seen_in_papers": 5,
-   "share_of_papers": 0.263,
+   "share_of_papers": 0.278,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -106,7 +104,7 @@
    "rank": 4,
    "topic": "unclassified",
    "seen_in_papers": 4,
-   "share_of_papers": 0.211,
+   "share_of_papers": 0.222,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -121,7 +119,7 @@
    "rank": 5,
    "topic": "description_logic",
    "seen_in_papers": 4,
-   "share_of_papers": 0.211,
+   "share_of_papers": 0.222,
    "typical_marks": null,
    "papers": [
     "2025 Mock Exam [236291]",
@@ -136,7 +134,7 @@
    "rank": 6,
    "topic": "rdf_sparql",
    "seen_in_papers": 4,
-   "share_of_papers": 0.211,
+   "share_of_papers": 0.222,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -151,7 +149,7 @@
    "rank": 7,
    "topic": "unclassified",
    "seen_in_papers": 3,
-   "share_of_papers": 0.158,
+   "share_of_papers": 0.167,
    "typical_marks": 2.0,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -163,23 +161,9 @@
   },
   {
    "rank": 8,
-   "topic": "ontology_modelling",
-   "seen_in_papers": 3,
-   "share_of_papers": 0.158,
-   "typical_marks": null,
-   "papers": [
-    "Students' questions [171178]",
-    "Students' questions [303792]",
-    "Students' questions [35322]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nForum dedicated to students' questions and discussions.\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nSottoscrivi il forum\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nElenco delle discussioni. Visualizzazione di 10 discussioni su 10\nStato\nDiscussione\nIniziato da\nUltimo intervento\nRepliche\nSottoscrivi\nAzioni\n[KRR] Final results June\nBloccata\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] July exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] Important information about KRR exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\nbottom up and top down procedures\nBloccata\nDILAN ECE DURMUSKAYA\n6 giu 2022\nGIAN CARLO MILANESE\n7 giu 2022\n1\nSottoscrivi questa discussione\nInserisci tra le preferite\na question from the exercises\nBloccata\nDILAN ECE DURMUSKAYA\n4 giu 2022\nGIAN CARLO MILANESE\n6 giu 2022\n1\nSottos"
-  },
-  {
-   "rank": 9,
    "topic": "datalog_rules",
    "seen_in_papers": 3,
-   "share_of_papers": 0.158,
+   "share_of_papers": 0.167,
    "typical_marks": null,
    "papers": [
     "2025 Mock Exam [236291]",
@@ -190,10 +174,10 @@
    "statement": "Question 5. SQL and Datalog 5 P.\nTable 1: ActsIn(actor, movie)\nactor movie\nDiCaprio Inception\nGordon-Levitt Inception\nHardy Inception\nMcConaughey Interstellar\nHardy Interstellar\nDiCaprio Catch Me If You Can\n. . . . . .\nTable 2: Directed(director, movie)\ndirector movie\nNolan Inception\nNolan Interstellar\nSpielberg Catch Me If You Can\n. . . . . .\nTable 3: Datalog KB corresponding to the tables of tables 1 and 2\nactsIn(\"DiCaprio\", \"Inception\").\nactsIn(\"Gordon-Levitt\", \"Inception\").\nactsIn(\"Hardy\", \"Inception\").\nactsIn(\"McConaughey\", \"Interstellar\").\nactsIn(\"Hardy\", \"Interstellar\").\nactsIn(\"DiCaprio\", \"Catch Me If You Can\").\n. . .\ndirected(\"Nolan\", \"Inception\").\ndirected(\"Nolan\", \"Interstellar\").\ndirected(\"Spielberg\", \"Catch Me If You Can\").\n. . .\nConsider the SQL tables of tables 1 and 2 and the corresponding Datalog KB in table 3\nExpress the following queries in SQL and Datalog 1 : 4 P.\n• Find movies that DiCaprio acted in.\n• List all actors who worked with Nolan.\nDefine the following predicate in Datalog : 1 P.\n• same director(X, Y) if X and Y are different actors that have worked for the same\ndirector (possibly in different movies).\n1For Datalog queries, use a new predicateanswer(X)"
   },
   {
-   "rank": 10,
+   "rank": 9,
    "topic": "unclassified",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]",
@@ -203,10 +187,23 @@
    "statement": "Question 6. Disjunctive ASP and Nonmonotonic Reasoning 5 P.\nConsider the following program P :\np(X) :- not q(X), s(X).\nq(X) :- not p(X), s(X).\ns(a).\n1. Specify the answer sets of P and motivate your answer. In the motivation, report\nthe result of the Gelfond-Lifschitz transformation of (ground) P for each answer\nset. When writing the transformation we recommend to strike through the deleted\nelements. 2 P.\n(Continues in the next page)\n2. Let P ′ = P∪S with S = s(b).. Write down all the ground rules in P ′ and provide\nthe answer sets of P ′ 2 P.\n3. Determine the number of answer sets for the program P ′′ = P ′∪ T with T =\n:- p(a),q(b). . 1 P."
   },
   {
+   "rank": 10,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.111,
+   "typical_marks": null,
+   "papers": [
+    "Students' questions [171178]",
+    "Students' questions [35322]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nSpunta come completato\nForum dedicated to students' questions and discussions.\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nSottoscrivi il forum\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nElenco delle discussioni. Visualizzazione di 10 discussioni su 10\nStato\nDiscussione\nIniziato da\nUltimo intervento\nRepliche\nSottoscrivi\nAzioni\n[KRR] Final results June\nBloccata\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] July exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] Important information about KRR exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\nbottom up and top down procedures\nBloccata\nDILAN ECE DURMUSKAYA\n6 giu 2022\nGIAN CARLO MILANESE\n7 giu 2022\n1\nSottoscrivi questa discussione\nInserisci tra le preferite\na question from the exercises\nBloccata\nDILAN ECE DURMUSKAYA\n4 giu 2022\nGIAN CARLO MILANESE\n6 giu 2022\n1\nSottos"
+  },
+  {
    "rank": 11,
    "topic": "ontology_modelling",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "June 2022 Exam [128721]",
@@ -219,7 +216,7 @@
    "rank": 12,
    "topic": "ontology_modelling",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]",
@@ -232,7 +229,7 @@
    "rank": 13,
    "topic": "description_logic",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]",
@@ -245,7 +242,7 @@
    "rank": 14,
    "topic": "description_logic",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "Exam 2023/02/06 [139470]",
@@ -258,7 +255,7 @@
    "rank": 15,
    "topic": "description_logic",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "Exam 2022/09/30 [139469]",
@@ -271,7 +268,7 @@
    "rank": 16,
    "topic": "datalog_rules",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "2023 Mock Exam [128923]",
@@ -284,7 +281,7 @@
    "rank": 17,
    "topic": "rdf_sparql",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]",
@@ -297,7 +294,7 @@
    "rank": 18,
    "topic": "rdf_sparql",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "June 2022 Exam [128721]",
@@ -310,7 +307,7 @@
    "rank": 19,
    "topic": "rdf_sparql",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]",
@@ -323,7 +320,7 @@
    "rank": 20,
    "topic": "rdf_sparql",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]",
@@ -336,7 +333,7 @@
    "rank": 21,
    "topic": "rdf_sparql",
    "seen_in_papers": 2,
-   "share_of_papers": 0.105,
+   "share_of_papers": 0.111,
    "typical_marks": null,
    "papers": [
     "June 2022 Exam [128721]",
@@ -349,7 +346,7 @@
    "rank": 22,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/09/30 [139469]"
@@ -361,7 +358,7 @@
    "rank": 23,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022-2023 [103371]"
@@ -373,7 +370,7 @@
    "rank": 24,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -385,7 +382,7 @@
    "rank": 25,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -397,7 +394,7 @@
    "rank": 26,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022 (Updated 9/6/2022) [51761]"
@@ -409,7 +406,7 @@
    "rank": 27,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]"
@@ -421,7 +418,7 @@
    "rank": 28,
    "topic": "ontology_modelling",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2023/02/06 [139470]"
@@ -433,7 +430,7 @@
    "rank": 29,
    "topic": "ontology_modelling",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]"
@@ -445,7 +442,7 @@
    "rank": 30,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]"
@@ -457,7 +454,7 @@
    "rank": 31,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -469,7 +466,7 @@
    "rank": 32,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022-2023 [103371]"
@@ -481,7 +478,7 @@
    "rank": 33,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -493,7 +490,7 @@
    "rank": 34,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2023/02/06 [139470]"
@@ -505,7 +502,7 @@
    "rank": 35,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/09/30 [139469]"
@@ -517,7 +514,7 @@
    "rank": 36,
    "topic": "description_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]"
@@ -529,7 +526,7 @@
    "rank": 37,
    "topic": "temporal_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2023/02/06 [139470]"
@@ -541,7 +538,7 @@
    "rank": 38,
    "topic": "temporal_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/09/30 [139469]"
@@ -553,7 +550,7 @@
    "rank": 39,
    "topic": "temporal_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -565,7 +562,7 @@
    "rank": 40,
    "topic": "temporal_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022-2023 [103371]"
@@ -577,7 +574,7 @@
    "rank": 41,
    "topic": "temporal_logic",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2021 [139466]"
@@ -589,7 +586,7 @@
    "rank": 42,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "June 2022 Exam [236293]"
@@ -601,7 +598,7 @@
    "rank": 43,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "July 2022 Exam [128723]"
@@ -613,7 +610,7 @@
    "rank": 44,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "June 2022 Exam [128721]"
@@ -625,7 +622,7 @@
    "rank": 45,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2023/02/06 [139470]"
@@ -637,7 +634,7 @@
    "rank": 46,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/09/30 [139469]"
@@ -649,7 +646,7 @@
    "rank": 47,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022 (Updated 9/6/2022) [51761]"
@@ -661,7 +658,7 @@
    "rank": 48,
    "topic": "datalog_rules",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Exam 2022/07/11 [78385]"
@@ -673,7 +670,7 @@
    "rank": 49,
    "topic": "rdf_sparql",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Students' questions [111893]"
@@ -685,7 +682,7 @@
    "rank": 50,
    "topic": "rdf_sparql",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Students' questions [236235]"
@@ -697,7 +694,7 @@
    "rank": 51,
    "topic": "rdf_sparql",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022 (Updated 9/6/2022) [51761]"
@@ -709,7 +706,7 @@
    "rank": 52,
    "topic": "rdf_sparql",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022 (Updated 9/6/2022) [51761]"
@@ -721,7 +718,7 @@
    "rank": 53,
    "topic": "reasoning_tasks",
    "seen_in_papers": 1,
-   "share_of_papers": 0.053,
+   "share_of_papers": 0.056,
    "typical_marks": null,
    "papers": [
     "Mock Exam 2022 (Updated 9/6/2022) [51761]"

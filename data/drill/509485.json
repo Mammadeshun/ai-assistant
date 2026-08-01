@@ -2,181 +2,22 @@
  "course": "509485",
  "documents_resolved": 33,
  "papers_used": [
-  "Forum - Questions, observations, comments",
   "Oral exam topics",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Test quiz on chapter 3",
-  "Questions on research paper",
-  "Questions on research paper (STM)",
-  "Questions on research paper (LTM)",
-  "Test quiz on chapter 5 + 6",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Questions on research paper",
-  "Test quiz on chapter 3",
-  "Questions on research paper (STM)",
-  "Test quiz on chapter 5",
-  "Test quiz on chapter 6",
-  "Questions on research paper (LTM)",
-  "Test quiz on chapter 8",
-  "Questions on research paper (TPS)",
-  "Questions on research paper (Language)",
-  "Test quiz on chapter 10",
-  "Forum - Questions, observations, comments",
-  "Papers (oral exam) final score",
-  "Articles discussion in class (oral exam) Scelta",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Test quiz on chapter 3",
-  "Test quiz on chapter 5",
-  "Test quiz on chapter 6",
-  "Test quiz on chapter 8",
-  "Test quiz on chapter 10"
+  "Papers (oral exam) final score"
  ],
- "n_papers": 31,
- "n_items": 31,
+ "n_papers": 2,
+ "n_items": 2,
  "solution_keys": [],
  "papers_without_a_published_key": [
-  "Forum - Questions, observations, comments",
   "Oral exam topics",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Test quiz on chapter 3",
-  "Questions on research paper",
-  "Questions on research paper (STM)",
-  "Questions on research paper (LTM)",
-  "Test quiz on chapter 5 + 6",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Questions on research paper",
-  "Test quiz on chapter 3",
-  "Questions on research paper (STM)",
-  "Test quiz on chapter 5",
-  "Test quiz on chapter 6",
-  "Questions on research paper (LTM)",
-  "Test quiz on chapter 8",
-  "Questions on research paper (TPS)",
-  "Questions on research paper (Language)",
-  "Test quiz on chapter 10",
-  "Forum - Questions, observations, comments",
-  "Papers (oral exam) final score",
-  "Articles discussion in class (oral exam) Scelta",
-  "Test quiz on chapter 1",
-  "Test quiz on chapter 2",
-  "Test quiz on chapter 3",
-  "Test quiz on chapter 5",
-  "Test quiz on chapter 6",
-  "Test quiz on chapter 8",
-  "Test quiz on chapter 10"
+  "Papers (oral exam) final score"
  ],
  "question_types": [
   {
    "rank": 1,
-   "topic": "unclassified",
-   "seen_in_papers": 7,
-   "share_of_papers": 0.226,
-   "typical_marks": 2.0,
-   "papers": [
-    "Test quiz on chapter 2 [169362]",
-    "Test quiz on chapter 2 [235343]",
-    "Test quiz on chapter 5 + 6 [169381]",
-    "Test quiz on chapter 5 [248968]",
-    "Test quiz on chapter 6 [235353]",
-    "Test quiz on chapter 6 [303474]",
-    "Test quiz on chapter 8 [303477]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nDa fare:\nRicevere una valutazione\nDa fare:\nOttenere la sufficienza\nAperto:\nlunedì, 13 maggio 2024, 09:15\nChiuso:\nlunedì, 13 maggio 2024, 09:45\nQuiz will be avaliable on May 13th at 9am. Time limit = 20 minutes. Only 1 attempt avaliable.\nIt is composed of 5 multiple choice questions (MCQ) and one open question (OQ).\nScoring: maximim score 2pts for clodes questions and 2 points for open question\nTentativi permessi: 2\nPer tentare questo quiz è necessario conoscere la password d'accesso.\nLimite di tempo: 20 min.\nMetodo di valutazione: Voto più alto\nSufficienza: 2,0 su 4,0\nTorna al corso"
-  },
-  {
-   "rank": 2,
-   "topic": "unclassified",
-   "seen_in_papers": 7,
-   "share_of_papers": 0.226,
-   "typical_marks": 2.0,
-   "papers": [
-    "Test quiz on chapter 10 [254130]",
-    "Test quiz on chapter 10 [303486]",
-    "Test quiz on chapter 2 [303466]",
-    "Test quiz on chapter 3 [169368]",
-    "Test quiz on chapter 3 [235344]",
-    "Test quiz on chapter 3 [303469]",
-    "Test quiz on chapter 8 [235356]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nDa fare:\nRicevere una valutazione\nDa fare:\nOttenere la sufficienza\nAperto:\nmercoledì, 16 aprile 2025, 09:15\nChiuso:\nmercoledì, 16 aprile 2025, 10:00\nQuiz will be avaliable on April 16th 9:00am. Time limit = 5 minutes. Only 1 attempt avaliable.\nIt is composed of 4 multiple choice questions (MCQ) for a maximum score of 2pts.\nTentativi permessi: 1\nPer tentare questo quiz è necessario conoscere la password d'accesso.\nLimite di tempo: 5 min.\nSufficienza: 1,0 su 2,0\nTorna al corso"
-  },
-  {
-   "rank": 3,
-   "topic": "methods",
-   "seen_in_papers": 4,
-   "share_of_papers": 0.129,
-   "typical_marks": null,
-   "papers": [
-    "Questions on research paper (LTM) [249897]",
-    "Questions on research paper (Language) [235357]",
-    "Questions on research paper (STM) [235346]",
-    "Questions on research paper (TPS) [250693]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nChiuso:\ndomenica, 27 aprile 2025, 12:00\nYou should accurately read the research paper of this chapter and respond to the questions taking in consideration the information present in the textbook and discussed in class and what is written on the paper\nThe quiz is due on Sunday April 27th at 12-noon and will be discussed in class on Wednesday April 30th.\nStudents who answer the questionnaire are expected to be present in class to answer questions and discuss topics on the paper.\nMetodo di valutazione: Voto più alto\nTorna al corso"
-  },
-  {
-   "rank": 4,
-   "topic": "methods",
-   "seen_in_papers": 3,
-   "share_of_papers": 0.097,
-   "typical_marks": null,
-   "papers": [
-    "Questions on research paper (LTM) [169382]",
-    "Questions on research paper (STM) [169374]",
-    "Questions on research paper [235345]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nChiuso:\nsabato, 12 aprile 2025, 23:59\nYou should accurately read the research paper of this chapter and respond to the questions taking in consideration the information present in the textbook and discussed in class and what is written on the paper\nThe quiz is due on Saturday April 12th at 12-midnight and will be discussed in class on Wednesday April 16th.\nStudents who answer the questionnaire are expected to be present in class to answer questions and discuss topics on the paper.\nMetodo di valutazione: Voto più alto\nTorna al corso"
-  },
-  {
-   "rank": 5,
-   "topic": "unclassified",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": 2.0,
-   "papers": [
-    "Test quiz on chapter 5 [303472]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nDa fare:\nRicevere una valutazione\nDa fare:\nOttenere la sufficienza\nAperto:\nvenerdì, 8 maggio 2026, 09:00\nChiuso:\nvenerdì, 8 maggio 2026, 12:00\nQuiz will be avaliable on May 8th from 9 to 12am. Time limit = 15 minutes. Only 1 attempt avaliable.\nIt is composed of one open question.\nScoring: maximim 2 points for open question\nTentativi permessi: 1\nLimite di tempo: 15 min.\nSufficienza: 2,0 su 2,0\nTorna al corso"
-  },
-  {
-   "rank": 6,
-   "topic": "unclassified",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Papers (oral exam) final score [303457]"
-   ],
-   "solution_key": "",
-   "statement": "503528 5,5\n512872 2\n534982 5\n535241 5,5\n535421 5,5\n535750 3\n535872 3\n536153 6\n552090 4\n554594 5\n571600 4\n572432 5,5\n572442 3,5\n572452 5,5\n572499 5\n572500 3,5\n572501 6\n572506 5\n572507 5\n572512 4\n573102 6\n573104 5\n573730 5\n574519 5,5\n574643 6\n574667 6\n574687 5,5\n574688 3\n574695 5,5\n574696 6\n574697 5,5\n574710 4\n574736 5\n574756 5,5\n574785 6\n574793 6\n574818 4,5\n574846 5\n574868 5\n575000 4\n575066 6\n575117 5\n575179 5,5\n575238 5,5\n575262 6\n575285 5,5\n575366 5\n575400 5\n575426 4\n575429 5\n575566 4\n575934 5\n575947 5\n575959 5,5\n575972 6\n575999 4\n576139 5\n576894 5\n577163 5,5\n577417 5\n577618 3\n577620 4\n583830 5\n583865 5,5\n584854 5\n586229 6"
-  },
-  {
-   "rank": 7,
-   "topic": "unclassified",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Forum - Questions, observations, comments [33306]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nThis Forum is a space where any student can write for questions, comments and observations.\nQuestions will be answered either in the forum or in class.\nThe forum is open so anybody can answer/comment on all the threads\nCerca nei forum\nCerca nei forum\nNon è più possibile intervenire nel forum poiché è trascorsa la data limite.\nAl momento in questo forum non sono presenti argomenti di discussione."
-  },
-  {
-   "rank": 8,
    "topic": "memory",
    "seen_in_papers": 1,
-   "share_of_papers": 0.032,
+   "share_of_papers": 0.5,
    "typical_marks": null,
    "papers": [
     "Oral exam topics [52911]"
@@ -185,76 +26,16 @@
    "statement": "Chapter 1 – Approches to human cognition \n• Approaches to human cognition: Cognitive Psychology \n• Approaches to human cognition: Cognitive Neuropsychology \n• Approaches to human cognition: Cognitive Neuroscience \n• Approaches to human cognition: Computational Cognitive Science \nChapter 2 – Basic Processes in Visual Perception \n• Perception and action model \n• Color Vision \n• Depth Perception \n• Perception without awareness \nChapter 3 – Object and face recognition \n• Perceptual organization \n• Approaches to object recognition \n• Object recognition: top-down processes \n• Face recognition \n• Visual imagery \nChapter 4 – Motion Perception and action \n• Direct Perception \n• Visually guided movements \n• Visually guided action \n• Perception of human motion \n• Change blindness \nChapter 5 – Attention and Performance \n• Focused auditory attention \n• Focused visual attention \n• Visual search \n• Cross-modal effects \n• Divided attention: dual task performance \n• “automatic” Processing. \nChapter 6 – Learning, Memory and forgetting \n• Short term vs long term memory \n• Working memory: Baddeley and Hitch \n• Working memory: individual differences and executive functions \n• Levels of processing (and "
   },
   {
-   "rank": 9,
-   "topic": "perception",
+   "rank": 2,
+   "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.032,
+   "share_of_papers": 0.5,
    "typical_marks": null,
    "papers": [
-    "Forum - Questions, observations, comments [303454]"
+    "Papers (oral exam) final score [303457]"
    ],
    "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nThis Forum is a space where any student can write for questions, comments and observations.\nQuestions will be answered either in the forum or in class.\nThe forum is open so anybody can answer/comment on all the threads\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nElenco delle discussioni. Visualizzazione di 4 discussioni su 4\nStato\nDiscussione\nIniziato da\nUltimo intervento\nRepliche\nAzioni\nMissing recordings\nBloccata\nBARBARA FACCENDONI\n31 mag 2026\nBARBARA FACCENDONI\n31 mag 2026\n0\nInserisci tra le preferite\nQuestion for next Wednesday\nBloccata\nBARBARA FACCENDONI\n29 mag 2026\nBARBARA FACCENDONI\n29 mag 2026\n0\nInserisci tra le preferite\nMissed quiz.\nBloccata\nSYED MESAM ALI RIZVI\n30 apr 2026\nEMANUELA BRICOLO\n5 mag 2026\n1\nInserisci tra le preferite\nrequest for quiz\nBloccata\nFAISAL MAQSOOD\n30 apr 2026\nFAISAL MAQSOOD\n30 apr 2026\n0\nInserisci tra le preferite"
-  },
-  {
-   "rank": 10,
-   "topic": "perception",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Test quiz on chapter 1 [169352]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nFatto:\nVisualizzare\nAperto:\ngiovedì, 14 marzo 2024, 07:00\nChiuso:\ngiovedì, 14 marzo 2024, 17:00\nQuiz will be avaliable till March 14th, 4pm. Time limit = 8 minutes. Only 1 attempt avaliable.\nIt is composed of 8 multiple choice questions (MCQ).\nScoring: .25 pt for each MCQ answered correctly.\nTentativi permessi: 1\nLimite di tempo: 8 min.\nSufficienza: 1,00 su 2,00\nIl tuo voto finale per questo quiz è 2,00/2,00\nI tuoi tentativi\nTentativo 1\nStato\nCompletato\nIniziato\ngiovedì, 14 marzo 2024, 13:43\nTerminato\ngiovedì, 14 marzo 2024, 13:47\nTempo impiegato\n4 min. 13 secondi\nPunteggio\n8,00/8,00\nValutazione\n2,00\nsu un massimo di 2,00 (\n100\n%)\nRevisione non consentita\nNon sono permessi altri tentativi\nTorna al corso"
-  },
-  {
-   "rank": 11,
-   "topic": "perception",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Test quiz on chapter 1 [235341]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nFatto:\nVisualizzare\nAperto:\nvenerdì, 21 marzo 2025, 11:00\nChiuso:\nvenerdì, 21 marzo 2025, 23:59\nQuiz will be avaliable from March 21th, 9:15am for inclass testing. It will be avaliable to non attending students at home from the end of classes  till the evening of March 21st.\nTime limit = 5 minutes. Only 1 attempt avaliable.\nIt is composed of 5 multiple choice questions (MCQ).\nScoring: .4 pt for each MCQ answered correctly.\nTentativi permessi: 1\nLimite di tempo: 5 min.\nSufficienza: 1,00 su 2,00\nTorna al corso"
-  },
-  {
-   "rank": 12,
-   "topic": "perception",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Test quiz on chapter 1 [303464]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nFatto:\nVisualizzare\nAperto:\nmercoledì, 18 marzo 2026, 09:00\nChiuso:\nmercoledì, 18 marzo 2026, 12:00\nQuiz will be avaliable on March 18th, from 9:00 am to 12:00 am.\nTime limit = 5 minutes. Only 1 attempt avaliable.\nIt is composed of 5 multiple choice questions (MCQ).\nScoring: .4 pt for each MCQ answered correctly.\nTentativi permessi: 1\nLimite di tempo: 5 min.\nSufficienza: 1,00 su 2,00\nTorna al corso"
-  },
-  {
-   "rank": 13,
-   "topic": "perception",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Articles discussion in class (oral exam) Scelta [312429]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nAperto:\nmercoledì, 8 aprile 2026, 09:10\nChiuso:\nmercoledì, 15 aprile 2026, 12:00\nI risultati non sono al momento visualizzabili."
-  },
-  {
-   "rank": 14,
-   "topic": "methods",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.032,
-   "typical_marks": null,
-   "papers": [
-    "Questions on research paper [169369]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nAperto:\nvenerdì, 12 aprile 2024, 12:00\nChiuso:\nsabato, 20 aprile 2024, 12:00\nYou should accurately read the research paper of this chapter and respond to the questions taking in consideration the information present in the textbook and discussed in class and what is written on the paper\nThe quiz is due on Saturday April 20th at 12-noon and will be discussed in class on Monday April 22th.\nStudents who answer the questionnaire are expected to be present in class to answer questions and discuss topics on the paper.\nMetodo di valutazione: Voto più alto\nTorna al corso"
+   "statement": "503528 5,5\n512872 2\n534982 5\n535241 5,5\n535421 5,5\n535750 3\n535872 3\n536153 6\n552090 4\n554594 5\n571600 4\n572432 5,5\n572442 3,5\n572452 5,5\n572499 5\n572500 3,5\n572501 6\n572506 5\n572507 5\n572512 4\n573102 6\n573104 5\n573730 5\n574519 5,5\n574643 6\n574667 6\n574687 5,5\n574688 3\n574695 5,5\n574696 6\n574697 5,5\n574710 4\n574736 5\n574756 5,5\n574785 6\n574793 6\n574818 4,5\n574846 5\n574868 5\n575000 4\n575066 6\n575117 5\n575179 5,5\n575238 5,5\n575262 6\n575285 5,5\n575366 5\n575400 5\n575426 4\n575429 5\n575566 4\n575934 5\n575947 5\n575959 5,5\n575972 6\n575999 4\n576139 5\n576894 5\n577163 5,5\n577417 5\n577618 3\n577620 4\n583830 5\n583865 5,5\n584854 5\n586229 6"
   }
  ],
  "name": "COGNITIVE PSYCHOLOGY"
