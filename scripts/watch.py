@@ -90,9 +90,19 @@ def parse_appelli(markup: str) -> list[dict[str, str]]:
         window = next((c for c in cells if re.match(r"\d{2}/\d{2}/\d{4}\s+\d{2}/\d{2}/\d{4}", c)), "")
         if not dates:
             continue
+        # The first cell is an empty icon column. Taking it as the course name
+        # blanks every row, and 43 sittings collapse into 21 unique dates.
+        course = next(
+            (
+                c
+                for c in cells
+                if c and not re.match(r"\d{2}/\d{2}/\d{4}", c) and len(c) > 3
+            ),
+            "",
+        )
         rows.append(
             {
-                "course": cells[0][:90],
+                "course": course[:90],
                 "appello": dates[0],
                 "iscrizione": window,
             }
@@ -101,12 +111,22 @@ def parse_appelli(markup: str) -> list[dict[str, str]]:
 
 
 def check_appelli(session, state: dict, findings: list[str]) -> list[dict[str, str]]:
+    # Esse3 answers an unauthenticated GET with a SAML bounce page, not the
+    # table, so the SSO chain has to be walked before anything is fetched.
+    session.login(config.ESSE3_LIBRETTO, success_marker="libretto")
     response = session.goto(
         config.ESSE3_AVAILABLE_EXAMS, source="esse3", label="watch-appelli"
     )
-    rows = parse_appelli(response.text)
+    rows = parse_appelli(response.read_text())
     seen = {f"{r['course']}|{r['appello']}" for r in rows}
     known = set(state.get("appelli_seen", []))
+
+    # First run has nothing to compare against: record the baseline rather than
+    # reporting every appello in the system as a change.
+    if not known:
+        state["appelli_seen"] = sorted(seen)
+        findings.append(f"baseline recorded: {len(seen)} appelli known")
+        return rows
 
     for key in sorted(seen - known):
         course, date = key.split("|", 1)
@@ -156,7 +176,7 @@ def check_lab_window(session, state: dict, findings: list[str]) -> None:
     except Exception as exc:  # noqa: BLE001
         findings.append(f"could not read the AI Marketing course page: {type(exc).__name__}")
         return
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(response.read_text(), "html.parser")
     assignments = sorted(
         a.get_text(" ", strip=True)
         for a in soup.select('a[href*="/mod/assign/view.php"]')
