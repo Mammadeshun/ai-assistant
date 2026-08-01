@@ -1,0 +1,1180 @@
+{
+ "course": "510109",
+ "documents_resolved": 44,
+ "papers_used": [
+  "Exam 27 January 2023",
+  "Exam 28 Feb 2023 (text)",
+  "Exam 3 July 2023",
+  "Exam 21 July 2023",
+  "Exam 27 Sep 2023",
+  "Exam 9 Feb 2024",
+  "Exam 6 Feb 2025, Questions 1-2 (text)",
+  "Exam 20 Jan 2026 (text)",
+  "Exam 5 Feb 2026 (text)",
+  "Mock exam",
+  "Exam attachment",
+  "Mock Exam"
+ ],
+ "n_papers": 12,
+ "n_items": 179,
+ "solution_keys": [
+  "Exam 1 July 2024, Solutions 1-2",
+  "Exam 10 Feb 2023, Text and Solutions",
+  "Exam 19 July 2024, Solutions 1-2",
+  "Exam 21 Jan 2025, Solutions 1-2",
+  "Exam 21 July 2023, Solutions 1-2",
+  "Exam 25 Sep 2024, Solutions 1-2",
+  "Exam 26 Jan 2024, Solutions 1-2",
+  "Exam 27 Feb 2024, Solutions 1-2",
+  "Exam 27 Jan 2023, Solutions",
+  "Exam 27 Sep 2023, Solutions 1-2",
+  "Exam 27 Sept 2023, Solution 3",
+  "Exam 28 Feb 2023, Solutions 1-2",
+  "Exam 3 July 2023, Solutions 1-2",
+  "Exam 6 Feb 2025, Solutions 1-2 (copy)",
+  "Exam 9 Feb 2024, Solutions 1-2",
+  "Examples of exam problems (with solutions)",
+  "Exercise sheet 6: mini-simulation of the exam (problems 1, 2) - with solutions (upd. 27/11/23)",
+  "Hypothesis testing (solution)",
+  "exam 20230726 solutions",
+  "previous exam solutions"
+ ],
+ "papers_without_a_published_key": [
+  "Exam 27 January 2023",
+  "Exam 28 Feb 2023 (text)",
+  "Exam 3 July 2023",
+  "Exam 21 July 2023",
+  "Exam 27 Sep 2023",
+  "Exam 9 Feb 2024",
+  "Exam 6 Feb 2025, Questions 1-2 (text)",
+  "Exam 20 Jan 2026 (text)",
+  "Exam 5 Feb 2026 (text)",
+  "Mock exam",
+  "Exam attachment",
+  "Mock Exam"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "independence_conditional",
+   "seen_in_papers": 7,
+   "share_of_papers": 0.583,
+   "typical_marks": 2.4,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 5 Feb 2026 (text) [296316]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "4d) Compute the conditional densityfX|Y ofX givenY =y [1 point]"
+  },
+  {
+   "rank": 2,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 7,
+   "share_of_papers": 0.583,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 5 Feb 2026 (text) [296316]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "2b) Let X denote the length of the chosen word. Determine the probability mass function of X. [2\npoints]"
+  },
+  {
+   "rank": 3,
+   "topic": "expectation_variance",
+   "seen_in_papers": 5,
+   "share_of_papers": 0.417,
+   "typical_marks": 3.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 5 Feb 2026 (text) [296316]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "4b) E[Z], E[W ], Var[Z], Var[W ] and Cov[Z, W] where Z := X + Y and W := Y + 1 [3\npoints]"
+  },
+  {
+   "rank": 4,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 5,
+   "share_of_papers": 0.417,
+   "typical_marks": 2.4,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "4c) the joint density of the random vector (U,V ) := (X + 2Y,X −Y ) [3 points]"
+  },
+  {
+   "rank": 5,
+   "topic": "unclassified",
+   "seen_in_papers": 5,
+   "share_of_papers": 0.417,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "4g) Compute the distribution function and the density ofZ =Y−X [3 points]\n2"
+  },
+  {
+   "rank": 6,
+   "topic": "expectation_variance",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.333,
+   "typical_marks": 2.2,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "1b) Compute the expectation and the variance of each of the random variables X,Y,S andD. [2\npoints]"
+  },
+  {
+   "rank": 7,
+   "topic": "expectation_variance",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.333,
+   "typical_marks": 1.5,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "4e) Var[T ], where T = XY . Hint: To compute E[T 2], exploit the conditional expectation\nE[T 2| X =x] =x2E[Y 2| X =x]. [3 points]\n4"
+  },
+  {
+   "rank": 8,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 10.7,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 4. (10 points) Let (X,Y ) : Ω → R2 be a (continuous) random vector having Gaussian\ndistribution with mean vector (mX,m Y ) = (−2,"
+  },
+  {
+   "rank": 9,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 3. (10 points) Let (X,Y ) : Ω → N2\n0 a (discrete) random vector with joint probability mass\nfunction (PMF) given by\np(X,Y )(m,n ) = e−2\nm!n! 1N0(m)1N0(n),\nwhere N0 ={0, 1, 2,... }. Find:"
+  },
+  {
+   "rank": 10,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 7.2,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 3. (10 points) The joint probability mass function p(X,Y ) of the random vector (X,Y ) : Ω→\n{0, 1, 2}×{− 1, 3} is given by\np(X,Y )(0,−1) = 1\n4 p(X,Y )(1,−1) = 0 p(X,Y )(2,−1) = 1\n8\np(X,Y )(0,"
+  },
+  {
+   "rank": 11,
+   "topic": "independence_conditional",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 2.2,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "3e) Cov[Z,W ], and show whetherZ andW are independent or not. [3 points]"
+  },
+  {
+   "rank": 12,
+   "topic": "unclassified",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 2.1,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "1c) Given that the chosen letter is O, what is the probability that the chosen word was OLD? [3\npoints]"
+  },
+  {
+   "rank": 13,
+   "topic": "independence_conditional",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 January 2023 [269019]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "1d) Are S and D independent (justify your answer: if they are, prove it, if they are not, provide a\ncounter-example)? [2 points]"
+  },
+  {
+   "rank": 14,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 1.7,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "3a) the joint PMF of(X, Y ) and the two marginal PMFs ofX and Y [3 points]"
+  },
+  {
+   "rank": 15,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 1.7,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 28 Feb 2023 (text) [269022]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "3e) the conditional PMF ofX givenZ =n, for ﬁxed n∈ N, withn≥ 2 [2 points]"
+  },
+  {
+   "rank": 16,
+   "topic": "expectation_variance",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 1.3,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "4e) Evaluate E[X|Y =y] and Var[X|Y =y] for ﬁxed y∈ (0,"
+  },
+  {
+   "rank": 17,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "3a) After drawing the graph, prove thatf is a probability density function. [1 point]"
+  },
+  {
+   "rank": 18,
+   "topic": "independence_conditional",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 Sep 2023 [269031]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "3f) the conditional probability mass functions ofX givenY [1 point]\nFor all these points it is required not only the answer, but also a mathematical explanation.\n3"
+  },
+  {
+   "rank": 19,
+   "topic": "expectation_variance",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.25,
+   "typical_marks": null,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 3 July 2023 [269025]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "0) and covariance matrix\nC =\n( σ2\nX ρσXσY\nρσXσY σ2\nY\n)\n=\n( 2 −1\n−1 1\n)\n.\nCompute:"
+  },
+  {
+   "rank": 20,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 11.5,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 4. (13 points)LetT⊂ R2 be the triangle with vertices at(0, 0), (1, 0), ( 1\n2,"
+  },
+  {
+   "rank": 21,
+   "topic": "expectation_variance",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 4. (10 points) Let (X,Y ) : Ω → R2 be a (continuous) random vector having Gaussian\ndistribution with mean vector (mX,m Y ) = (1,−2) and covariance matrix\nC =\n( σ2\nX ρσXσY\nρσXσY σ2\nY\n)\n=\n( 4 −1\n−1 1\n)\n.\nFind:"
+  },
+  {
+   "rank": 22,
+   "topic": "expectation_variance",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points) LetX andY be i.i.d random variables. Assume that µ is the expectation of\nX andν is its variance. Let a,b> 0 be positive real numbers. Deﬁne\nV = 2X− 2Y, W =X 2, Q =XY, Z =aW− 2bQ."
+  },
+  {
+   "rank": 23,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 3. (10 points)Answer all questions below.Please justify your answers.\nConsider an urn containing 18 balls, colored as follows: 5 White, 5 Red and 8 Green.\nOut of this urn, pick 3 balls at random, one by one without replacement. Denote byX the\nnumber of White balls and byY the number Red balls, respectively, in the sample of 3 balls.\nFind:"
+  },
+  {
+   "rank": 24,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "2e) Compute the probability that X1 =X2. [2 points]\n2\nAnswer the questions below. Please make sure to supply proofs to your claims."
+  },
+  {
+   "rank": 25,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 27 January 2023 [269019]",
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "2c) Assume thatp = 1. In this case, what is the value of the limit limn→∞P (Sn >n )? [4 points]"
+  },
+  {
+   "rank": 26,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 2.7,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "4a) the explicit expression of the joint PDFf(X,Y ), and that of the two marginal PDFsfX\nand fY [3 points]"
+  },
+  {
+   "rank": 27,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 2.5,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "4c) the joint moment generating function and the joint density of (Z,W ) [3 points]"
+  },
+  {
+   "rank": 28,
+   "topic": "expectation_variance",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]",
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "1c) Assume thata =b and assume again that E[Z] = 0. Compute the probability that X >µ. Justify\nyour answer. [2 points]"
+  },
+  {
+   "rank": 29,
+   "topic": "independence_conditional",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "2c) For each possible valuek ofX determine the conditional probabilityP (X =k|X≤ 3). [2 points]"
+  },
+  {
+   "rank": 30,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.167,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]",
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "2a) Is there a letter L so that P(L1 is L)̸= P(L2 is L)? [2 points]"
+  },
+  {
+   "rank": 31,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 12.0,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (12 points) We choose one of the words in the following sentence uniformly at random\nand then choose one of the letters of that word, again uniformly at random:\nDE GUSTIBUS NON EST DISPUTANDUM"
+  },
+  {
+   "rank": 32,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 12.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (12 points) Monica has two standard dice, that is, each of them lays on face i with\nprobability 1/6,i = 1, 2,..., 6.\nMonica rolls the two dice and observes their outcome. For each k∈{ 1, 2, 3, 4, 5, 6} we let Xk be\ndeﬁned as follows. If the outcome of the ﬁrst die isk thenXk =k. Otherwise, (i.e. if the outcome of the\nﬁrst die is not k),Xk =i, wherei is the outcome of the second die.\nWe assume that the outcomes of the dice rolls are independent of each other.\nFor each of the following 5 statements, prove either the statement (if it is correct) or its negation (if\nit is false). Only justiﬁed answers will be evaluated."
+  },
+  {
+   "rank": 33,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 12.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (12 points) Monica has two dice, standard and size-biased. The standard die lays on\nfacei with probability 1/6,i = 1, 2,..., 6, whereas the size-biased die lays on face i with probability i\n21,\ni = 1, 2,..., 6.\nMonica is playing a graded iterative game, so thatGn is the grade of then-th turn,n∈ N, according\nto the following rule.\nAt each turn n she rolls the two dice and observes their outcomes. The grade Gn of turn n is the\noutcome of the standard die if it is greater than or equal to 4. Otherwise Gn is the outcome of the\nsize-biased die.\nWe assume that the outcomes of all die rolls are independent of each other."
+  },
+  {
+   "rank": 34,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 12.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (12 points) Rachel has two coins: the ﬁrst coin comes out heads with probability p (and\ncomes out tails otherwise) while the second one comes out heads with probability q (and comes out\ntails otherwise), wherep,q∈ (0,"
+  },
+  {
+   "rank": 35,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (10 points)Alice and Bob observe the following sentence:\nMULTAE COGITATIONES IN CORDE HOMINIS\nAlice chooses one of the words in the sentence uniformly at random and then chooses one of the\nletters of that word, again uniformly at random. Let X1 denote the length of the word chosen by\nAlice and let L1 be the chosen letter.\nNext, independently, Bob chooses a letter uniformly at random among all letters in the sentence.\nDenote the chosen letter by L2 and let X2 be the length of the word containing the letter chosen\nby Bob."
+  },
+  {
+   "rank": 36,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 27 January 2023 [269019]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points) Let X and Y be two independent random variables which are uniformly\ndistributed on the set{1, 3}. Let S =X +Y be the sum ofX andY andD =X−Y be their difference."
+  },
+  {
+   "rank": 37,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (10 points) Let X ∼ Unif(0, 2), Y ∼ Pois(1) and T ∼ Ber( 1"
+  },
+  {
+   "rank": 38,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points)A biased coin is tossed repeatedly. The probability of heads is p∈ (0, 1).\nAssume all tosses are independent of each other.\nLet Y be the (random) time of the ﬁrst appearance of two consecutive heads. That is,\nY := min{n≥ 2 : the outcomes at times n− 1 and n are both heads}.\nHere by convention, we assign Y =∞ if there is no n≥ 2 so that the outcomes at times n−\n1 and n are both heads. Let An be the event that toss n is a head."
+  },
+  {
+   "rank": 39,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 27 January 2023 [269019]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 2. (10 points) Rachel has two coins and a dice. The dice is standard, whereas the coins\nare biased: the ﬁrst coin comes out heads with probability p (and comes out tails otherwise) while the\nsecond one comes out heads with probability q (and comes out tails otherwise), where p,q ∈ [0, 1] are\nparameters. Rachel is playing the following game. At each turn she tosses the ﬁrst coin. If it comes\nout heads she tosses the second coin, otherwise she rolls the dice. The score of the turn is the ﬁnal\nresult obtained, with score of 1, 2, 3, 4, 5, 6 for the faces of the dice and 0 or 1 for the sides of the coin (0\nfor tails and 1 for heads). Let Xn be the score of the n-th turn, and let Sn =X1 +... +Xn be the total\nscore achieved in the ﬁrst n turns,n∈ N."
+  },
+  {
+   "rank": 40,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points)Answer all questions below.Please justify your answers.\nA binary classiﬁer is used to detect whether an email is spam. LetS be the event “the\nemail is spam”.\nYou are told the following information:\n• 20% of emails are spam.\n• If an email is spam, the classiﬁer correctly ﬂags it as spam with probability75%.\n• If an email is not spam, the classiﬁer incorrectly ﬂags it as spam with probability25%.\nLet A be the event “the classiﬁer ﬂags the email as spam”."
+  },
+  {
+   "rank": 41,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points) Consider the following text:\nNEITHER RARE NOR OLD.\nLet w :{0, 1, 2, 3}→{ ‘NEITHER’, ‘RARE’, ‘NOR’, ‘OLD’} be the word order function, that is w(0) =\n‘NEITHER’,w"
+  },
+  {
+   "rank": 42,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 10.0,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 4. (10 points)Answer all questions below.Please justify your answers.\nLet (X, Y ) : Ω → R2 be a random vector such thatX∼N (1, 1), and the conditional\ndistribution of Y given X = x isN (−x, 2), for anyx∈ R. Find:"
+  },
+  {
+   "rank": 43,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "2e) LetS = X1+X2+X3+X4+X5+X6\n6 . Then E[S] = E[Y ] whereY is the outcome of the ﬁrst (equivalently,\nthe second) die, i.eY is uniformly distributed on{1, 2, 3, 4, 5, 6}. [4 points]\nHints:\n(i) Note that EXACTLY ONE of the 5 statements is correct.\n(ii) LetY be the outcome of the ﬁrst die and let Z be the outcome of the second die. Then, for each\nk = 1, 2, 3, 4, 5, 6,Xk can be represented asXk =\n{\nY, ifY =k\nZ, ifY ̸=k . Moreover, by the assumptionY andZ\nare two independent random variables which are uniformly distributed on{1, 2, 3, 4, 5, 6}.\n1"
+  },
+  {
+   "rank": 44,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "1d) LetFZ(z) := P(Z≤z) be the c.d.f ofZ. Compute FZ(−1). [4 points]\n[Hint: You may ﬁnd it useful to compute FZ(z) for all z∈ [−3/2,−1/2] (i.e. all z so that z + 1∈\n[−1/2, 1/2]).]"
+  },
+  {
+   "rank": 45,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "2d) LetT be the ﬁrst turn n∈ N so thatSn = 100. Determine the expected value of T . [4 point]\n1"
+  },
+  {
+   "rank": 46,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 3.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "1d) Assume that instead of choosing one of the letters of W uniformly at random, we choose either\nthe ﬁrst letter ofW or the the last letter ofW with equal probability. Given that the chosen letter\nis O, what is the probability that the chosen word was OLD? [3 points]"
+  },
+  {
+   "rank": 47,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 3.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "1c) Forn∈ N we setWn :=n−Z andQn := 1\nnWn.\n(a) Is it true that E[W1·W2] = E[W1]· E[W2]? Justify your answer. [3 points]\n(b) Compute E[Qn] and Var(Qn). [2 points]"
+  },
+  {
+   "rank": 48,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 3.0,
+   "papers": [
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "2) be independent random\nvariables. Deﬁne Z =TX andW = (1−T )Y\na) Compute the mean and variance ofW . [3 points]\nb) AreZ andW independent? Justify your answer. [2 points]\nc) Compute the cumulative distribution function (c.d.f) ofZ. [3 points]\nd) IsZ a continuous random variable? Is it a discrete random variable? Justify your answer. [2\npoints]\n2"
+  },
+  {
+   "rank": 49,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 6 Feb 2025, Questions 1-2 (text) [269043]"
+   ],
+   "solution_key": "",
+   "statement": "Problem 1. (10 points)\na) Assume that X is a continuous random variable with density function f so that f (x) > 0 for all\nx ∈ R. Prove or provide a counter-example to the following statement: X and −X must have the\nsame distribution. [2 points].\nb) Let n be a natural number. Assume that X is uniform on the set {−n, −n + 1, ...,0, ..., n− 1, n}.\nDo X and −X have the same distribution? Prove or provide a counter-example. [1 point]\nc) Let n be a natural number and assume thatX is a discrete random variable and its set of possible\nvalues is {−n, −n+1, ...,0, ..., n−1, n}. Assume further that X and −X have the same distribution.\nDoes it imply that X is uniform on the set {−n, −n + 1, ...,0, ..., n− 1, n}? Prove or provide a\ncounter-example. [2 points]\nd) Are there two independent random variables X and Y so that each natural number n ∈ N is a\npossible value for both X and Y and so that their difference Z := X − Y is Poisson(1) distributed?\nJustify your answer by finding an example or by proving that this is impossible. [2 points]\ne) Let X be a random variable so that E[X] = 3. Assume that there is some x ∈ R for which\nP(X ∈ {1, 2, x}) = 1.\ni) Assume that Var(X) = 0. Prove that x must be"
+  },
+  {
+   "rank": 50,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "2b) X6 is uniformly distributed on{1, 2,..., 6}. [2 points]"
+  },
+  {
+   "rank": 51,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 9 Feb 2024 [269036]"
+   ],
+   "solution_key": "",
+   "statement": "1) and consider a biased coin with has probability p to come out\nHEADS and 1−p to come out TAILS. We deﬁne a process in which in each step we add to an urn a\nball, according to the following rule:\nThe urn initially empty.\nFirst step: we ﬂip the coin. If it comes out HEADS we add one RED ball into the urn and otherwise\nwe add one GREEN ball.\nAt step n, for a natural number n≥ 2, we repeat the same procedure: we ﬂip the coin and add to\nthe urn a RED ball if it comes out HEADS, otherwise we add a GREEN ball.\nLetXn be the number of RED balls in the urn aftern steps.\na) Fix a natural numbern and assume we are aftern steps (that is, the urn contains now exactlyn\nballs out of whichXn are RED).\ni) Compute the probability mass function (p.m.f) ofXn and its expectation. [2 points].\nii) Out of the urn which now contains n balls we draw a ball. Compute the probability it is\nRED. Justify your answer. [3 points]\nii) We observe the ball we have just drew, realize it is RED and then put it back in the urn\n(so that there are now still n balls in the urn). In view of the new information, what is the\nprobability the urn contains exactlyk RED balls,k = 0, 1,...,n ? [3 points]\nb) LetT be the ﬁrst m∈ N "
+  },
+  {
+   "rank": 52,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "1d) LetW =X 2,Q =XY .\n(a) Is it true that E[W ] = 0 implies that E[Q] = 0 ? For an afﬁrmative answer provide a\njustiﬁcation, for a negative answer provide a counter-example. [2 points]\n(b) Is it true that E[Q] = 0 implies that E[W ] = 0 ? For an afﬁrmative answer provide a\njustiﬁcation, for a negative answer provide a counter-example. [2 points]"
+  },
+  {
+   "rank": 53,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 27 January 2023 [269019]"
+   ],
+   "solution_key": "",
+   "statement": "1e) Letf :{1, 3}→{ 1, 3} be deﬁned by f(1) = 3 andf(3) = 1. Let X ′ =f(X) and deﬁne S′ =X ′ +Y\nandD′ =X ′−Y . Compute the expectation and variance of S′ andD′. [2 points]"
+  },
+  {
+   "rank": 54,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]"
+   ],
+   "solution_key": "",
+   "statement": "3d) the covariance of the random vector (Z,W ) given that Y = 2. Precisely, this is the covariance\nevaluated with respect to the joint PMF found at 3c). [2 points]"
+  },
+  {
+   "rank": 55,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "1d) Prove or ﬁnd a counter-example for the following statement: E[W ]≥ E[Q]. [2 points]"
+  },
+  {
+   "rank": 56,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "1e) Find an example for a distribution ofX so that E[Q] = 0 but E[W ]̸= 0. [2 points]"
+  },
+  {
+   "rank": 57,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "1a) Assume thata =b =µ =ν = 1. Compute E[Z] and Var(V ). [2 points]."
+  },
+  {
+   "rank": 58,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 6 Feb 2025, Questions 1-2 (text) [269043]"
+   ],
+   "solution_key": "",
+   "statement": "1) and assume that Carl has two biased coins. The first comes out\nHeads with probability p and the second comes out Tails with probability 1 − p. Carl is recording the\nfollowing random list G1, G2, ...of numbers, as follows: for each n ∈ N he tosses the two coins and\nobserves their outcomes. If they are the same, then Gn = 1an if they are different then Gn = 0. We\nassume that the outcomes of all coin tosses are independent of each other.\nLet Xn = G1 · G2 · · ·Gn, for any n ∈ N.\na) Find the distribution of X1. [2 points]\nb) Are X1 and X2 independent? [2 points].\nc) What is the variance of Xn? [2 points]\nd) Let p(n) be the probability that Xn = 1. For which value/s of p ∈ (0,"
+  },
+  {
+   "rank": 59,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "2c) LetSn be the total number of the turns 1≤k≤n for whichGk = 4.\n(a) Are S1 andG1 independent? Justify your answer. [2 point]\n(b) Are S2 andS3 independent? Justify your answer. [2 point]\n(c) Identify the distribution of S3. [1 point].\n(d) Compute limn→∞ P(| Sn\nn −p|≥ 1\n12), wherep = P(G1 = 4). Justify your answer. [2 points]"
+  },
+  {
+   "rank": 60,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "1b) Compute P(S| A). [2 points]\nNow suppose the classiﬁer is run twice on the same email.\nLet B be the event “the classiﬁer ﬂags the email as spam on the second run”. Assume that\nconditional on S, the eventsA and B are independent, and conditional onSc, the eventsA\nand B are independent."
+  },
+  {
+   "rank": 61,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "1e) Are the events A and B independent (unconditionally)? Justify your answer. [2\npoints]\n1"
+  },
+  {
+   "rank": 62,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "3b) LetX be a (continuous) random variable with density f. Deﬁne the new random variable Y :=\nX 2. Find the density of Y . [2 points]"
+  },
+  {
+   "rank": 63,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "1a) Compute P(Z =x) for eachx∈ R. Justify your answer. [2 points]"
+  },
+  {
+   "rank": 64,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]"
+   ],
+   "solution_key": "",
+   "statement": "4c) Cov[X,Z ], Cov[X,W ], Cov[Y,Z ], Cov[Y,W ] [2 points]"
+  },
+  {
+   "rank": 65,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "2c) (Xk)k=1,...,6 are identically distributed. [2 point]"
+  },
+  {
+   "rank": 66,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 6 Feb 2025, Questions 1-2 (text) [269043]"
+   ],
+   "solution_key": "",
+   "statement": "1) it holds that {p(n) : n ∈ N}\nis a probability mass function? Prove your answer. [2 points]\ne) Find the distribution of Yn, where Yn, n ∈ N, is defined by Yn := X1 · X2 · · ·Xn, n ∈ N. [2\npoints].\n3"
+  },
+  {
+   "rank": 67,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 2.0,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "4b) Compute the marginal densitiesfX andfY [2 points]"
+  },
+  {
+   "rank": 68,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 1.5,
+   "papers": [
+    "Exam 27 January 2023 [269019]"
+   ],
+   "solution_key": "",
+   "statement": "1c) Conditioned onS <4, what is the probability thatD< 2? [2 points]"
+  },
+  {
+   "rank": 69,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "3f) E(X|Z = 5). [1 point]\n[Hint: recall the exponential series, that is∑∞\nn=0\nxn\nn! =ex.]"
+  },
+  {
+   "rank": 70,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 27 Sep 2023 [269031]"
+   ],
+   "solution_key": "",
+   "statement": "3f) E(X|Z = 5). [1 point]\n[Hint: recall the geometric series, that is∑∞\nn=0xn = 1\n1−x if|x|< 1.]"
+  },
+  {
+   "rank": 71,
+   "topic": "expectation_variance",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "2c) LetX :=S7,Y :=G2 +G4 andZ :=X−Y .\n(a) Compute the variance of Z. [1 point]\n(b) Are Z andY independent? Justify your answer. [2 points]"
+  },
+  {
+   "rank": 72,
+   "topic": "joint_and_transforms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": 1.0,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "4a) the marginal distributions (i.e., the densities) ofX andY and the correlation coefﬁcient ρ [1\npoint]"
+  },
+  {
+   "rank": 73,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam attachment [325063]"
+   ],
+   "solution_key": "",
+   "statement": "30)\n)\n# View data\ndata\nhead(data)\nDistributions in R\n# Normal distribution\ndnorm()\npnorm()\nqnorm()\nrnorm()\nPlots\nplot(x, y)\nhist(y)\nboxplot(y)\n2. Notable Derivatives\nFunctionf(x) Derivativef ′(x)\nc0\nx1\nxa axa−1\nax ax log(a)\nex ex\nlog(x) 1\nx\nloga(x) 1\nxlog(a)\nsin(x) cos(x)\ncos(x)−sin(x)\ntan(x) 1\ncos2(x)\n√x 1\n2√x\n1\nx − 1\nx2\nDerivative rules\nd\ndx [f(x) +g(x)] =f ′(x) +g′(x)\n2\nd\ndx [cf(x)] =cf ′(x)\nd\ndx [f(x)g(x)] =f ′(x)g(x) +f(x)g ′(x)\nd\ndx\n\u0014 f(x)\ng(x)\n\u0015\n= f ′(x)g(x)−f(x)g ′(x)\n[g(x)]2\nd\ndx f(g(x)) =f ′(g(x))g ′(x)\n3. Notable Integrals\nFunctionf(x) Integral\nR\nf(x)dx\nc cx+C\nxa, a̸=−1 xa+1\na+ 1 +C\n1\nx log|x|+C\nex ex +C\nax ax\nlog(a) +C\nsin(x)−cos(x) +C\ncos(x) sin(x) +C\n1\n1 +x2 arctan(x) +C\n1√\n1−x 2 arcsin(x) +C\nIntegral rules\nZ\n[f(x) +g(x)]dx=\nZ\nf(x)dx+\nZ\ng(x)dx\nZ\ncf(x)dx=c\nZ\nf(x)dx\nDefinite integrals\nZ b\na\nf(x)dx=F(b)−F(a),\nwhereF ′(x) =f(x).\n3"
+  },
+  {
+   "rank": 74,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "6. (a) Show the Gamma distribution with density f (x) = βα/Γ(α)xα−1e−βx belongs\nto the exponential family. Find its natural parameters.\n(b) Explain what is a Bayesian Maximum A Posteriori estimator.\n(c) How do you build the Coefficient of Determination R2 and what is its inter-\npretation?"
+  },
+  {
+   "rank": 75,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam attachment [325063]"
+   ],
+   "solution_key": "",
+   "statement": "2)\n# search in the manual\n?exp\n??\"normal distribution\"\nWorking with vectors\nlength(v)\nsum(v)\nmean(v)\nvar(v)\nmin(v)\nmax(v)\n# Accessing elements\nv[1]\nv[2:4]\nv[v > 5]\nData frames\n1\n# Create a data frame\ndata <- data.frame(\nname = c(\"A\", \"B\", \"C\"),\nscore = c(24, 27,"
+  },
+  {
+   "rank": 76,
+   "topic": "continuous_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 3 July 2023 [269025]"
+   ],
+   "solution_key": "",
+   "statement": "1) be a parameter. LetX andY be independent random variables\nso thatX∼ Unif(−1/2, 1/2) andY ∼ Geom(p) (i.e. P(Y =k) =p(1−p)k−1,k∈ N). Deﬁne\nZ =X−Y."
+  },
+  {
+   "rank": 77,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "(3) = ‘OLD’.\nWe ﬁrst choose a word W according to a Binomial random variable with parameter 1/2. More\nprecisely, letQ∼ Bin(3, 1/2), and let W = w(Q) (for example, if Q = 0 thenW = w(0) = ‘NEITHER’,\nwhereas ifQ = 1 thenW =w(1) = ‘RARE’).\nWe then choose one of the letters of the wordW uniformly at random."
+  },
+  {
+   "rank": 78,
+   "topic": "discrete_random_variables",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 5 Feb 2026 (text) [296316]"
+   ],
+   "solution_key": "",
+   "statement": "1) be ﬁxed. LetX, B1, B2, U be independent random variables\nsuch thatX∼ Bin(n, p), B1∼ Ber(p), B2∼ Ber(p), andU∼ Unif[−1, 1]. Let Y := B1−B2."
+  },
+  {
+   "rank": 79,
+   "topic": "independence_conditional",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 28 Feb 2023 (text) [269022]"
+   ],
+   "solution_key": "",
+   "statement": "1) are parameters.\nRachel is playing the following game. At each turn she tosses the ﬁrst coin and observes its outcome.\nIf it comes out tails then the turn is over, and if it comes out heads she tosses the second coin, observes\nthe outcome, and the turn is over. The game is graded according to the following rule: for each n∈ N,\nthe gradeGn in turnn equals 1 if the second coin (was used and) came heads. Otherwise Gn = 0. We\nassume that the outcomes of all coin tosses are independent. Let Sn be the total score achieved by the\nn-th turn,n∈ N, i.e. Sn =G1 +... +Gn."
+  },
+  {
+   "rank": 80,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock exam [325059]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nUse comma as a decimal delimiter\nTenta il quiz\nTempo limite\nTempo limite\nIl quiz ha un limite di tempo di 1 ora 30 min.. Il tempo sarà conteggiato a partire dall'inizio del tentativo senza possibilità di metterlo in pausa e il quiz dovrà essere inviato prima della scadenza. Sei sicuro di iniziare?\nLimite di tempo: 1 ora 30 min.\nMetodo di valutazione: Voto più alto"
+  },
+  {
+   "rank": 81,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam attachment [325063]"
+   ],
+   "solution_key": "",
+   "statement": "5)\nBasic calculations\n# Arithmetic\nx + y\nx - y\nx * y\nx / y\nx^2\n# Common mathematical functions\nsqrt(x)\nlog(x)# natural logarithm\nlog10(x)# base-10 logarithm\nexp(x)\nabs(x)\nround(x,"
+  },
+  {
+   "rank": 82,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 21 July 2023 [269028]"
+   ],
+   "solution_key": "",
+   "statement": "2) and letf : R2→ R\nbe the function deﬁned by\nf(x,y ) =\n{\n1 if (x,y )∈T\n0 otherwise."
+  },
+  {
+   "rank": 83,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Exam 20 Jan 2026 (text) [296317]"
+   ],
+   "solution_key": "",
+   "statement": "(1) = 1/2. Let Z =XY and W =X 2−Y . Compute:"
+  },
+  {
+   "rank": 84,
+   "topic": "estimation",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "2. Let’s assume a stock return X ∼ N(µ, σ2). We take a random sample of size 3,\nand in order to estimate the population mean µ, we define\nT := 1\n4 X1 + 1\n3 X2 + cX3\n(a) Compute E(T ).\n(b) Find the value of c for which the estimator T is unbiased.\n(c) With the value of c found in the previous point, compute V (T ) and M SEµ(T )\n(d) Consider now the estimator\nU := 3\nn X1 + 4\nn X2 + (n − 7)\nn(n − 3)\nnX\ni=3\nXi\nfor a generic sample size n. Is the estimator U strongly consistent? Is it\nweakly consistent? Motivate your answers."
+  },
+  {
+   "rank": 85,
+   "topic": "estimation",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "1. Suppose that X1, X2, · · ·, Xn is a random sample of industrial machines’ lifetimes,\nwith the following density:\nf (x) =\n\u001a\n3λe−(3λ−1)x − e−(3λ−1)x x ≥ 0\n0 otherwise\n(a) Find the Method of Moments estimator of λ.\n(b) Find the Maximum Likelihood estimator for λ. What are the properties of\nthis estimator?\n(c) Find the Maximum Likelihood estimator for\n√\nλ−3\nλ ."
+  },
+  {
+   "rank": 86,
+   "topic": "confidence_intervals",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "3. We collect, from a Gaussian population, the following i.i.d. sample of 5 daily stock\nreturns:\nx = (0.06, 0, −0.03, −0.05, 0.05)\n(a) Find the 95% confidence interval for the mean return.\n(b) How does your 95% confidence interval for the mean return change if you use\nthe normal approximation for such a small sample size?\n(c) Find the 99% confidence interval for the return standard deviation. State the\nhypothesis you need to make in order to build such inteval."
+  },
+  {
+   "rank": 87,
+   "topic": "hypothesis_testing",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "5. In R, the following command has been used to do a test:\nx <- c(1, 4, 11, 0, -2)\nt.test(x, mu = 10, altern = ’two.sided’, paired=F, conf.level = 0.95)\nand it has produced the following output:\nOne Sample t-test\ndata: x\nt = -3.1758, df = 4, p-value = 0.03367\nalternative hypothesis: true mean is not equal to 10\n95 percent confidence interval:\n-3.494636 9.094636\nsample estimates:\nmean of x\n2.8\n(a) Give the null and alternative hypothesis of the test.\n(b) Give the realized value of the test statistic and the p-value. What is the\ndefinition of the p-value in this setting?\n(c) What is the distribution of the test statistic?\n(d) If the probability of type one error is 0 .05, do you reject the null hypothesis?\n(e) Give the length of the confidence interval for µ at confidence level 0.95. If we\nincrease the confidence level, everything else being fixed, do you expect the\nlength of the CI to increase or decrease?"
+  },
+  {
+   "rank": 88,
+   "topic": "hypothesis_testing",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.083,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam [188662]"
+   ],
+   "solution_key": "",
+   "statement": "4. We want to find an interval estimation of the proportion of Italian companies op-\nerating in the financial industry. Let’s assume that the FTSE Italian All Shares\nIndex components are randomly selected from the Italian companies’ population.\nThe Index has 240 constituents and 60 of them can be considered financial com-\npanies. Give an asymptotic 90% confidence interval for the proportion of financial\nItalian companies. Can you reject H0 : p = 0 .25 against H1 : p ̸= 0 .25 with\nα = 0.05? Explain why or why not."
+  }
+ ],
+ "name": "PROBABILITY AND STATISTICAL INFERENCE"
+}

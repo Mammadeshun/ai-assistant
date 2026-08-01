@@ -1,0 +1,734 @@
+{
+ "course": "509478",
+ "documents_resolved": 36,
+ "papers_used": [
+  "Mock Exam 2021",
+  "Exam 2022/09/30",
+  "Exam 2023/02/06",
+  "Students' questions",
+  "2023 Mock Exam",
+  "June 2022 Exam",
+  "July 2022 Exam",
+  "Students' questions",
+  "2024 Mock Exam",
+  "Students' questions",
+  "2025 Mock Exam",
+  "June 2022 Exam",
+  "July 2022 Exam",
+  "Students' questions",
+  "2026 Mock Test",
+  "Exam 2022/07/11",
+  "Mock Exam 2022-2023",
+  "Students' questions",
+  "Mock Exam 2022 (Updated 9/6/2022)"
+ ],
+ "n_papers": 19,
+ "n_items": 93,
+ "solution_keys": [
+  "2023 Mock Exam Solution",
+  "2024 Mock Exam Solution",
+  "2025 Mock Exam Solutions",
+  "2026 Mock Test Solutions",
+  "Exam 2022/02/07 (with solutions)",
+  "Exam 2023/07/10 (with solutions)",
+  "Exercise 3 Exam Scheduling Solution",
+  "July 2022 Exam Solutions",
+  "June 2022 Exam Solutions",
+  "Mock Exam 2022 Solutions",
+  "Solutions to the Mock Exam 2021",
+  "exam dl",
+  "exam facts dl"
+ ],
+ "papers_without_a_published_key": [
+  "Mock Exam 2021",
+  "Exam 2022/09/30",
+  "Exam 2023/02/06",
+  "Students' questions",
+  "Students' questions",
+  "Students' questions",
+  "Students' questions",
+  "Exam 2022/07/11",
+  "Mock Exam 2022-2023",
+  "Students' questions",
+  "Mock Exam 2022 (Updated 9/6/2022)"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 6,
+   "share_of_papers": 0.316,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]",
+    "June 2022 Exam [128721]",
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "2023 Mock Exam Solution",
+   "statement": "Question 2. SP ARQL 5 P.\nConsider the following RDF graph:\n@prefix : <http://example.org/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n:MathStudent rdfs:subClassOf :Student .\n:Student rdfs:subClassOf :Person .\n:attends rdfs:domain :Student ; rdfs:range :Course .\n:studies rdfs:subPropertyOf :attends .\n:algebra a :MathCourse .\n:algorithms a :CSCourse .\n:physics a :Course .\n:alice a :Student .\n:bob a :MathStudent .\n:carol :attends :algebra .\n:bob :studies :algorithms .\n1. What are the results of the following queries? 2 P.\na) select * where { ?x a :Course }\nb) select * where { ?x a/rdfs:subClassOf :Student }\n2. Write a select query that retrieves the individuals who attend a math course. 1 P.\n3. Write a select query that retrieves the individuals who attend a math course or a\nCS course. 1 P.\n4. Write a query that constructs the graph of triples inferred according to the follow-\ning pattern. If\n• x and y are related by q,\n• q is a subproperty of p, and\n• the domain of p is c,\nthen x is an instance of c. 1 P."
+  },
+  {
+   "rank": 2,
+   "topic": "description_logic",
+   "seen_in_papers": 5,
+   "share_of_papers": 0.263,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]",
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "2026 Mock Test Solutions",
+   "statement": "Question 4. Modeling Knowledge with Description Logics (OWL) 5 P.\n1. Express the following using the Description Logic syntax: 3 P\na) Carol is a Math student who attends the Algebra course. Alice is a student\nwho attends the Algebra and Algorithms courses. The latter is a CS course.\nb) Students are defined as people who attend at least one course.\nc) Organized students are defined as students who attend exactly 2 courses.\nd) Specify which classes (resp., properties) are subclasses (subproperties) of\nwhich; specify the domain and range of each property.\ne) Math students attend only Math courses, and CS students attend only CS\ncourses.\n2. What can be inferred in the Abox about Alice, Carol, and the Algebra and Algo-\nrithm courses, if anything (justify your answer)? 2 P"
+  },
+  {
+   "rank": 3,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 5,
+   "share_of_papers": 0.263,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]",
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "2026 Mock Test Solutions",
+   "statement": "Question 3. RDFS 3 P.\nModel (only) with RDFS syntax a schema that is compliant with the following con-\nstraints:\n• Musicians and Bands are Music Artists;\n• Musicians are associated with Bands;\n• Musicians that sing in a band are associated with that band;\n• Singles and Albums are Music Works;\n• Singles are included in Albums;\n• Singles have titles, and Albums have titles too;\n• Titles are denoted with strings;\n• Musicians and Bands make Singles and Albums;\nand that guarantees the following inferences:\n• If it is known that Paul McCartney (PM) makes Waterfalls, infer that PM is a\nMusic Artist and Waterfalls is a Music Work;\n• If a literal value v is a title of a Music Work, infer that it is a String;\n• If it is known that PM sings in The Beatles, infer that PM is a Musician and The\nBeatles is a band;\n• If it is known that Waterfalls in included in McCartney II, infer that Waterfalls is\na Single and McCartney II is an Album.\nYou can skip the prefix section and use ex: as prefix for resources that are not classes\nor properties, and onto: as prefix for classes and properties (obvious exceptions apply\nto classes and properties defined in the rdf, rfds, and xsd vocabularies). Also you ca"
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.211,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]"
+   ],
+   "solution_key": "2026 Mock Test Solutions",
+   "statement": "Question 3 P.\nExplain what a poset is by making an example of a finite poset using a Hasse diagram.\nIn the explanation specify what is a minimal element and identify the minimal elements\n(if any) in the example diagram."
+  },
+  {
+   "rank": 5,
+   "topic": "description_logic",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.211,
+   "typical_marks": null,
+   "papers": [
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]",
+    "June 2022 Exam [128721]",
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 6. Disjunctive ASP and Nonmonotonic Reasoning 5 P.\n1. Consider the following program:\nq v -r :- not p.\np v s :- -r.\n-q.\na) Compute the Gelfond-Lifschitz transformation of the program with respect\nto the model S = { -q, -r, p } and show that S is not an answer set of\nthe program 2 P.\nb) Provide the answer sets of the program, if any. Justify your answer. 1 P\n(Continues in the next page)\n2. Consider the following KB containing only facts:\nstudent(carol). math_student(bob). cs_student(alice).\ncourse(physics). math_course(algebra). cs_course(dbs).\nattends(alice, dbs).\nExtend the KB with rules according to the following speciﬁcations: 2 P.\na) If X attends Y, then X is a student and Y is a course.\nb) Math students and CS students are students.\nc) Every student is a math student or a CS student.\nd) If X attends at least one CS course and does not attend any course other than\nCS courses, then X is a CS student.\nRDF, RDFS, XSD & OWL/DL Cheatsheet\n• rdf:type\n• rdf:Statement\n• rdf:subject\n• rdf:predicate\n• rdf:object\n• rdfs:subClassOf\n• rdfs:subPropertyOf\n• rdfs:label\n• rdfs:domain\n• rdfs:range\n• xsd:string\n• xsd:integer\n• xsd:decimal\nOWL 2 Constructors - Individuals From “A Descript"
+  },
+  {
+   "rank": 6,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.211,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]"
+   ],
+   "solution_key": "2023 Mock Exam Solution",
+   "statement": "Question 1. RDF 5 P.\nExpress the following statements using the Turtle syntax, using literals and language-\ntagged strings where relevant.\n1. Alice knows Bob who is a person.\n2. Alice’s name is ”Alice” and she was born on 1 December 1990.\n3. Alice knows Bob’s sister, who is called “Carol” and is 28 years old.\n4. Alice’s favourite book is Invisible Cities by Italo Calvino, which is called “Le citt` a\ninvisibili” in Italian.\n5. Alice knows that Bob is 28 years old.\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n@prefix owl: <http://www.w3.org/2002/07/owl##> .\n@prefix ex: <http://example.org/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema##> .\n## continue here"
+  },
+  {
+   "rank": 7,
+   "topic": "unclassified",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.158,
+   "typical_marks": 2.0,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]",
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "2023 Mock Exam Solution",
+   "statement": "Question 6. Disjunctive and Nonmonotonic Reasoning in ASP 5 P.\n1. Consider the following program:\nq v -r v p :- not p.\nd :- not r.\n-q.\na) Explain why p cannot be in any answer set 1.5 P\nb) Provide the answer sets of the program, if any. Justify your answer 1.5 P\n2. Write a program that implements the guess and check methodology in ASP ac-\ncording to the following speciﬁcations. 2 P\nYou have several socks of three colors and you want to organize them by assigning\neach sock to exactly one of three boxes:\n• Use the following predicates (and possibly more if you need):\n– white_sock(X), grey_sock(X) and black_sock(X) if X is, respectively,\na white, grey, or black sock.\n– assign(X, Y) means that the sock X is assigned to the box Y, where Y\nmust be one of white_box, grey_box and black_box.\n• The organization must satisfy the following:\n– Grey socks can only be assigned to the grey box;\n– White socks can be assigned to the white box or the grey box;\n– Black socks can be assigned to the grey box or the black box;\n– You cannot put white and black socks in the same box.\nAdditional question (not needed to get the full 2 points): How many possible\nways to organize your socks (i.e., how many ans"
+  },
+  {
+   "rank": 8,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.158,
+   "typical_marks": null,
+   "papers": [
+    "Students' questions [171178]",
+    "Students' questions [303792]",
+    "Students' questions [35322]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nSpunta come completato\nForum dedicated to students' questions and discussions.\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nSottoscrivi il forum\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nElenco delle discussioni. Visualizzazione di 10 discussioni su 10\nStato\nDiscussione\nIniziato da\nUltimo intervento\nRepliche\nSottoscrivi\nAzioni\n[KRR] Final results June\nBloccata\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\nRAFAEL PENALOZA NYSSEN\n6 lug 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] July exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\nRAFAEL PENALOZA NYSSEN\n30 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\n[KRR] Important information about KRR exams (both modules)\nBloccata\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\nRAFAEL PENALOZA NYSSEN\n14 giu 2022\n0\nSottoscrivi questa discussione\nInserisci tra le preferite\nbottom up and top down procedures\nBloccata\nDILAN ECE DURMUSKAYA\n6 giu 2022\nGIAN CARLO MILANESE\n7 giu 2022\n1\nSottoscrivi questa discussione\nInserisci tra le preferite\na question from the exercises\nBloccata\nDILAN ECE DURMUSKAYA\n4 giu 2022\nGIAN CARLO MILANESE\n6 giu 2022\n1\nSottos"
+  },
+  {
+   "rank": 9,
+   "topic": "datalog_rules",
+   "seen_in_papers": 3,
+   "share_of_papers": 0.158,
+   "typical_marks": null,
+   "papers": [
+    "2025 Mock Exam [236291]",
+    "2026 Mock Test [313862]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "2026 Mock Test Solutions",
+   "statement": "Question 5. SQL and Datalog 5 P.\nTable 1: ActsIn(actor, movie)\nactor movie\nDiCaprio Inception\nGordon-Levitt Inception\nHardy Inception\nMcConaughey Interstellar\nHardy Interstellar\nDiCaprio Catch Me If You Can\n. . . . . .\nTable 2: Directed(director, movie)\ndirector movie\nNolan Inception\nNolan Interstellar\nSpielberg Catch Me If You Can\n. . . . . .\nTable 3: Datalog KB corresponding to the tables of tables 1 and 2\nactsIn(\"DiCaprio\", \"Inception\").\nactsIn(\"Gordon-Levitt\", \"Inception\").\nactsIn(\"Hardy\", \"Inception\").\nactsIn(\"McConaughey\", \"Interstellar\").\nactsIn(\"Hardy\", \"Interstellar\").\nactsIn(\"DiCaprio\", \"Catch Me If You Can\").\n. . .\ndirected(\"Nolan\", \"Inception\").\ndirected(\"Nolan\", \"Interstellar\").\ndirected(\"Spielberg\", \"Catch Me If You Can\").\n. . .\nConsider the SQL tables of tables 1 and 2 and the corresponding Datalog KB in table 3\nExpress the following queries in SQL and Datalog 1 : 4 P.\n• Find movies that DiCaprio acted in.\n• List all actors who worked with Nolan.\nDefine the following predicate in Datalog : 1 P.\n• same director(X, Y) if X and Y are different actors that have worked for the same\ndirector (possibly in different movies).\n1For Datalog queries, use a new predicateanswer(X)"
+  },
+  {
+   "rank": 10,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 6. Disjunctive ASP and Nonmonotonic Reasoning 5 P.\nConsider the following program P :\np(X) :- not q(X), s(X).\nq(X) :- not p(X), s(X).\ns(a).\n1. Specify the answer sets of P and motivate your answer. In the motivation, report\nthe result of the Gelfond-Lifschitz transformation of (ground) P for each answer\nset. When writing the transformation we recommend to strike through the deleted\nelements. 2 P.\n(Continues in the next page)\n2. Let P ′ = P∪S with S = s(b).. Write down all the ground rules in P ′ and provide\nthe answer sets of P ′ 2 P.\n3. Determine the number of answer sets for the program P ′′ = P ′∪ T with T =\n:- p(a),q(b). . 1 P."
+  },
+  {
+   "rank": 11,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "June 2022 Exam [128721]",
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 4. Modeling Knowledge with OWL/DL 5 P.\n1. Express the following using the Description Logic syntax: 3 P.\na) EJ and VU are airlines. EJ oﬀers the ﬂights EJF1 and EJF2, while VU oﬀers\nthe ﬂight VUF3. The latter is a commercial ﬂight.\nb) Flights are either charter ﬂights or commercial ﬂights (but not both)\nc) Every airline oﬀers some ﬂight.\nd) Commercial airlines are airlines that oﬀer only commercial ﬂights.\ne) EJ oﬀers only commercial ﬂights.\nf) Small airlines are airlines that oﬀer at most two ﬂights.\n(Continues in the next page)\n2. Which of the following assertions can you infer? 2 P.\na) EJ is a commercial airline\nb) VU is a commercial airline\nc) EJ and VU are small airlines.\nd) EJF1 and EJF2 are commercial ﬂights.\nAnswer yes or no. If the answer is no, brieﬂy justify why."
+  },
+  {
+   "rank": 12,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]",
+    "Mock Exam 2022-2023 [103371]"
+   ],
+   "solution_key": "",
+   "statement": "(7)\nConsider the following probabilistic knowledge base:\n0.4 :: x←\n0.6 :: y←\nz←\nw← x, z\nu← t, z\nu← y\nt← x, u\n1. Compute the probability of u\n2. Compute the probability of t← u\n3. Repeat the previous questions with the additional probabilistic fact 0 .5 :: z←"
+  },
+  {
+   "rank": 13,
+   "topic": "description_logic",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 4. Modeling Knowledge with OWL/DL 5 P.\nConsider the following DL knowledge base.\nABox:\nOcean(atlantic) Ocean(paciﬁc)\nCountry(france) Country(spain)\nCountry(japan) Country(portugal)\nbordersWith(france, spain) bordersWith(france , atlantic)\nbordersWith(portugal, spain) bordersWith(portugal , atlantic)\nbordersWith(japan, paciﬁc).\nTBox:\nCountry⊓ Ocean ⊑ ⊥\n{portugal} ⊑ ∀ bordersWith.{spain, atlantic}\nOceanCountry = Country ⊓∃ bordersWith.Ocean\nIslandCountry = OceanCountry ⊓∀ bordersWith.Ocean\nPeninsulaCountry = OceanCountry ⊓\n≥1 bordersWith.Country⊓≤ 1 bordersWith.Country\nQuestions:\n1. Which of the following can you infer? 3 P.\na) OceanCountry(france).\nb) IslandCountry(japan).\nc) PeninsulaCountry(portugal).\nd) PeninsulaCountry(france).\ne) PeninsulaCountry⊑ IslandCountry.\nf) IslandCountry ⊑ OceanCountry.\nAnswer yes or no. If the answer is no, brieﬂy justify why.\n(Continues in the next page)\n2. Also consider the concepts City, Capital, Animal and Duck, and the roles has-\nCapital, walksLike and quacksLike. Express the following using the Description\nLogic (DL) syntax (using the DL syntax is a requirement; you can check the list\nof concept and role constructors in the cheatsheet as"
+  },
+  {
+   "rank": 14,
+   "topic": "description_logic",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2023/02/06 [139470]",
+    "Mock Exam 2022-2023 [103371]"
+   ],
+   "solution_key": "",
+   "statement": "Question 2. EL I 5 (+1) P.\nDecide which of the following subsumption relations hold. For those that do not hold,\nbuild a countermodel.\n1. ∃r.(A ⊓ ⊤) ⊑ ∃r.A ⊓ ∃r.⊤\n2. ∃r.A ⊓ ∃s.⊥ ⊑ ∃r.(A ⊓ ⊥)\n3. A ⊓ ∃r.A ⊓ ∃s.B ⊑ A ⊓ ∃r.(A ⊓ ∃s.B)\n4. A ⊓ ∃r.(B ⊓ ∃s.C) ⊑ A ⊓ ∃r.B ⊓ ∃s.C\nExtra: Construct two EL concepts C and D such that C ̸⊑ D and all countermodels\nhave at least 2 elements, or explain why it is not possible."
+  },
+  {
+   "rank": 15,
+   "topic": "description_logic",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/09/30 [139469]",
+    "Exam 2023/02/06 [139470]"
+   ],
+   "solution_key": "",
+   "statement": "Question 3. EL II 5 P.\nConsider the TBox\nT := { A ⊑ ∃r.B, C ⊓ D ⊑ ⊥, ∃r.C ⊑ D, B ⊑ C }\n1. Decide whether the following subsumption relations hold w.r.t. T :\na) A ⊓ C ⊑ ∃r.(A ⊓ B)\nb) ∃r.(B ⊓ D) ⊑ B ⊓ ∃r.⊤\nc) ∃r.(A ⊓ B) ⊑ C ⊓ ∃r.C\n2. Build a countermodel for ∃s.B ⊑ ∃s.A (do not forget T !)"
+  },
+  {
+   "rank": 16,
+   "topic": "datalog_rules",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "2023 Mock Exam [128923]",
+    "2024 Mock Exam [171224]"
+   ],
+   "solution_key": "2023 Mock Exam Solution",
+   "statement": "Question 5. Datalog 5 P.\n1. Which of the following are instances of the atom p(a, Y, Y, Z) ?\na) p(X, Y, Y, Z)\nb) p(a, a, a, b)\nc) p(a, Z, Z, c)\nd) p(a, b, a, b)\n2. Consider the following KB:\nr(a). r(e).\np(c).\nq(b).\ns(a, b). s(d, b). s(e, d).\np(X) :- q(X), r(X).\nq(X) :- s(X, Y), q(Y).\nShow that KB ⊢ p(e) by proceeding bottom-up."
+  },
+  {
+   "rank": 17,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 3. Modeling Knowledge with RDFS 3 P.\nConsider the following RDF knowledge graph G and schema S:\n@prefix : <http://example.org/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n## G\n:Marcelo :team :RealMadrid .\n:Messi :offenseTeam :BarcelonaFC .\n:Alves :defenseTeam :BarcelonaFC .\n:BarcelonaFC :location :Barcelona .\n:Barcelona :location :Spain .\n## S: taxonomies\n:offenseTeam rdfs:subPropertyOf :team .\n:defenseTeam rdfs:subPropertyOf :team .\n:team rdfs:subPropertyOf :memberOf .\n## S: domain and range restrictions\n:offenseTeam rdfs:domain :Forward , :SoccerPlayer .\n:offenseTeam rdfs:range :SoccerTeam .\n:defenseTeam rdfs:domain :Defender , :SoccerPlayer .\n:defenseTeam rdfs:range :SoccerTeam .\n:team rdfs:domain :SoccerPlayer , :Person .\n:team rdfs:range :SoccerTeam .\n:memberOf rdfs:domain :Person .\n:memberOf rdfs:range :Organization .\n:location rdfs:range :Place .\n1. List all the statements with predicate rdf:type (you can usea instead of rdf:type)\nthat are not in G and that can be inferred based on S. . 1 P.\n(Continues in the next page)\n2. Specify which inferences - if any - are added if the axioms below a"
+  },
+  {
+   "rank": 18,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "June 2022 Exam [128721]",
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 3. Modeling Knowledge with RDFS 3 P.\nConsider the following RDF knowledge graph G and schema S (below):\n@prefix : <http://example.org/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n## G\n:London a :City .\n:Glasgow a :City .\n:England a :Country .\n:UK a :SovereignCountry .\n:London :hasCountry :England .\n:Manchester :hasCountry :England .\n:Glasgow :hasCountry :Scotland .\n:Edinburgh :hasCountry :Scotland .\n:England :partOf :UK .\n:Scotland :partOf :UK .\n## S\n:City rdfs:subClassOf :Region .\n:Country rdfs:subClassOf :Region .\n:SovereignCountry rdfs:subClassOf :Region .\n:hasCountry rdfs:domain :City ; rdfs:range :Country .\n1. List all the statements with predicate rdf:type (you can usea instead of rdf:type)\nthat are not in G and that can be inferred based on S. 1 P.\n(Continues in the next page)\n2. Specify if “ :Edinburgh :partOf :Scotland . ” is an inference from S ∪ G and, if\nnot, propose a statement in RDFS to obtain such inference. 0.5 P.\n3. Specify the statements not in G that can be inferred by adding the following\ntwo statements to S as speciﬁed above (without changes proposed to answer the\nprevious q"
+  },
+  {
+   "rank": 19,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 2. SP ARQL 5 P.\nConsider the following RDF graph:\n## prefix definitions are omitted to save space\n:Professor rdfs:subClassOf :Teacher .\n:Professor rdfs:subClassOf :Researcher .\n:teaches rdfs:domain :Professor ; rdfs:range :Course .\n:algebra a :MathCourse .\n:algorithms a :CSCourse .\n:bob a :Teacher .\n:bob a :Researcher .\n:bob :teaches :algebra .\n:alice :teaches :algorithms .\n:carol :attends :algebra .\n:david :attends :algorithms .\n:elisa :attends :calculus , :algorithms.\n1. What are the results of the following queries (without reasoning)? 2 P.\na) select * where { ?x a :Teacher }\nb) select * where {\n?x :attends ?y .\n{ ?y a :MathCourse } UNION { ?y a :CSCourse }\n}\n(Continues in the next page)\n2. Write a select query that retrieves the individuals who attend a course taught by\nsomeone who is both a teacher and a researcher. 2 P.\n3. Write a construct query that extends the schema according to the following infer-\nence pattern.\nIf\n• the domain of p is c\n• c is a subclass of d\nthen the domain of p is d 1 P."
+  },
+  {
+   "rank": 20,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]",
+    "July 2022 Exam [236295]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 1. RDF 5 P.\n1. According to the semantics of simple interpretations , does the graph G1 entail\nthe graph G2? Justify your answer (provide a valid blank node assignment or a\ncounterexample) 2 P.\nG1 G2\nex:alice ex:parent _:x ex:alice ex:parent _:z\n_:y ex:parent ex:david _:z ex:parent ex:david\nRemark: preﬁx deﬁnitions are omitted; notation is Turtle.\n(Continues in the next page)\n2. Express the following statements using the Turtle syntax, using typed literals where\nrelevant. 3 P.\na) Alice is a parent of Carol, whose surname is “Rossi”.\nb) Alice works with someone that works with Bob.\nc) Alice knows that David works with Carol.\nYou can use preﬁxes, in particular the ones deﬁned below:\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema##> .\n@prefix : <http://example.org/> . ## use this for your IRIs\n## continue here"
+  },
+  {
+   "rank": 21,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.105,
+   "typical_marks": null,
+   "papers": [
+    "June 2022 Exam [128721]",
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 1. RDF 5 P.\n1. Express the following using the Turtle syntax, using typed literals where relevant.\na) Alice works with Carol, who is a musician.\nb) Alice works with Bob, whose full name is “Robert Minari” (the name must\nbe a string in English).\nc) The name of Bob’s mother is Alice.\nd) Alice knows that Bob is 55 years old (55 must be an integer).\ne) Bob knows that Alice knows that Bob lives in Milan.\nYou can use preﬁxes, in particular the ones deﬁned below:\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema##> .\n@prefix : <http://example.org/> . ## use this for your IRIs\n## continue here"
+  },
+  {
+   "rank": 22,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/09/30 [139469]"
+   ],
+   "solution_key": "",
+   "statement": "Question 1. Boolean functions 6 P.\nConsider the Boolean function φ defined by the truth table:\nx y z φ\n0 0 0 1\n0 0 1 0\n0 1 0 0\n0 1 1 0\n1 0 0 1\n1 0 1 0\n1 1 0 1\n1 1 1 1\n1. Rewrite φ as a CNF formula, or explain why it cannot be done\n2. Rewrite φ as a set of Horn clauses or explain why it cannot be done"
+  },
+  {
+   "rank": 23,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022-2023 [103371]"
+   ],
+   "solution_key": "",
+   "statement": "(6)\nConsider the following predicate KB K:\nR(a) ←\nP (b) ←\nP (c) ←\nR(d) ←\nQ(x, y) ← P (x), R(y)\nQ(x, y) ← Q(y, x)\n← Q(x, x)\n1. Construct the canonical interpretation of K\n2. Is this interpretation a model? Justify\n3. Is R(b) ← P (a) entailed by this KB? Justify"
+  },
+  {
+   "rank": 24,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 1. Boolean functions 4 P.\n1. Construct the ternary Boolean function which is true only when exactly one of its\nvariables is true.\n2. Transform the function from the previous point into a propositional KB or argue\nwhy it is not possible."
+  },
+  {
+   "rank": 25,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 5. DLs 4 P.\n1. Explain the notion of a nominal.\n2. Argue why it is impossible to express nominals in EL⊥"
+  },
+  {
+   "rank": 26,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "",
+   "statement": "Question 3 P.\nExplain the diﬀerences between lexical ontologies, taxonomies, and axiomatic ontologies."
+  },
+  {
+   "rank": 27,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]"
+   ],
+   "solution_key": "",
+   "statement": "(7)\n1. Construct a ternary Boolean function that returns true"
+  },
+  {
+   "rank": 28,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2023/02/06 [139470]"
+   ],
+   "solution_key": "",
+   "statement": "Question 6. Probabilistic Knowledge 5 P.\nWe are playing a game by rolling a die. In this game, we win if the die lands on an\neven number which is large (greater than 3).\nWe know the following probabilistic facts:\n• the probability of landing on an even number is 0.5\n• the probability of landing on a large number is 0.5\n1. Describe the rules and knowledge of the game as a probabilistic KB\n2. Compute the probability of winning, explaining any assumptions you make\n3. Discuss your answer"
+  },
+  {
+   "rank": 29,
+   "topic": "ontology_modelling",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]"
+   ],
+   "solution_key": "",
+   "statement": "(1) in exactly ﬁve inputs\n2. Express the function from the previous point as a propositional formula or argue\nwhy it is not possible\n3. Express the same function as a propositional Knowledge Base or argue why\nit is not possible"
+  },
+  {
+   "rank": 30,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]"
+   ],
+   "solution_key": "",
+   "statement": "(7)\nConsider the subsumption relation\n∃r.(A⊓ B)⊓∃ r.⊤ ⊑ ∃r.A⊓∃ r.(B⊓∃ r.⊤).\n1. Determine whether it holds or not without a TBox. If the answer is “no,” provide\na countermodel\n2. Determine whether it holds or not w.r.t. the TBox\nT :={⊤⊑∃ r.B}.\nIt is ok to simplify concepts (using the equivalences from the lecture) if needed.\n3. How would your answer change if T was extended with the GCI\n∃r.A⊑ B⊓∃ r.B ?\nExplain your answer"
+  },
+  {
+   "rank": 31,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 4. ALC 6 P.\nConsider the ALC TBox\nT := { A ⊑ ∃r.B, B ⊑ ∀s.C ∃r.⊤ ⊑ ∃r.∃s.D, ¬A ⊑ ¬C ⊔ ¬D }\n1. Use a tableau to show that T is consistent\n2. Construct a model of T which does not satisfy A ⊑ C, or argue why it is not\npossible.\n3. Construct a model of T which satisfies A ⊑ C, or argue why it is not possible."
+  },
+  {
+   "rank": 32,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022-2023 [103371]"
+   ],
+   "solution_key": "",
+   "statement": "(7)\nConsider the TBox\nT := {∃r.A ⊑ ¬∀s.⊤}\nand the assertion α := s(a, b)\n1. Construct a model of T that satisfies α or explain why it cannot be done.\n2. Is there a model of T ∪ {α} where b has no s-successor? Justify.\n3. Add a new GCI to T so that it becomes inconsistent, or argue why it cannot be\ndone."
+  },
+  {
+   "rank": 33,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 3. EL 5 P.\nConsider the EL⊥ TBox\nT := { A ⊑ ∃r.(B ⊓ C), B ⊓ ∃r.C ⊑ ∃r.A, D ⊑ A ⊓ B, ∃r.A ⊓ ∃r.C ⊑ ⊥ }\n1. Transform T to normal form.\n2. Find (if possible) one concept name that is unsatisfiable. Justify.\n3. Construct a model with only one element, or argue why it is not possible."
+  },
+  {
+   "rank": 34,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2023/02/06 [139470]"
+   ],
+   "solution_key": "",
+   "statement": "Question 4. ALC 5 (+1) P.\nConsider the ALC KB K = (A, T ) defined by:\nA := { A(a), B(b), r(a, b) },\nT := { A ⊑ ∀r.∃s.A, B ⊑ ∀s.∃r.B }.\nDecide, through a tableau, whether K is consistent. If it is so, build a model.\nExtra: Is there a model of K with only two elements? Justify"
+  },
+  {
+   "rank": 35,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/09/30 [139469]"
+   ],
+   "solution_key": "",
+   "statement": "Question 3. Description Logic Semantics 6 P.\n1. Explain the difference between an interpretation and a model\n2. Is there an EL concept that is satisfied by all interpretations? Justify\n3. Is there an ALC TBox that is satisfied by all interpretations? Justify"
+  },
+  {
+   "rank": 36,
+   "topic": "description_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]"
+   ],
+   "solution_key": "",
+   "statement": "(7)\n1. Show through a tableau that the concept A⊓∀ r.B is satisﬁable w.r.t. the TBox\nT :={B ⊑ ¬(A⊓∃ r.¬B), A ⊑ ∃r.(A⊔¬ B)}\n2. Build a satisfying model\n3. Add a new GCI to T so that it becomes inconsistent, or argue why it cannot be\ndone."
+  },
+  {
+   "rank": 37,
+   "topic": "temporal_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2023/02/06 [139470]"
+   ],
+   "solution_key": "",
+   "statement": "Question 5. T emporal Logic 5 (+1) P.\nFor an LTLf formula φ, we have constructed the following subsets of csub(φ):\nτ1 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, (a ∧ b) U ⃝¬a, ⃝¬a, a∧ b, a, b},\nτ2 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, (a ∧ b) U ⃝¬a, ⃝¬a, ¬(a ∧ b), ¬a, b },\nτ3 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, (a ∧ b) U ⃝¬a, ⃝¬a, ¬(a ∧ b), a, b},\nτ4 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ¬\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ¬⃝¬a, a∧ b, a, b},\nτ5 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ¬\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ⃝¬a, a∧ b, a, b},\nτ6 := { ¬⃝\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ¬\n\u0000\n(a ∧ b) U ⃝¬a\n\u0001\n, ¬⃝¬a, ¬(a ∧ b), ¬a, b },\n1. Determine which of these subsets are types\n2. Determine which types are final, or explain why it cannot be done\n3. Determine which types are initial, or explain why it cannot be done\n4. Construct the type graph (restricted to the known types)\nExtra: Extend the type graph with at least one more type"
+  },
+  {
+   "rank": 38,
+   "topic": "temporal_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/09/30 [139469]"
+   ],
+   "solution_key": "",
+   "statement": "Question 5. T emporal Logic 6 P.\nFor each of the following two LTLf formulas:\na) ♢x → □x\nb) □(x → ♢x)\n1. Explain in words what the formula means\n2. Build a temporal model M that satisfies the formula (or explain why it cannot\nexist)\n3. Build a temporal model M that does not satisfy the formula (or explain why it\ncannot exist)"
+  },
+  {
+   "rank": 39,
+   "topic": "temporal_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 6. T emporal Logic 5 P.\n1. Express the “eventually” ( ♢) and “always” ( □) operators using only Boolean op-\nerators, ⃝, and U .\n2. Construct an unsatisfiable (well-formed) LTL f formula. Explain why it is unsatis-\nfiable."
+  },
+  {
+   "rank": 40,
+   "topic": "temporal_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022-2023 [103371]"
+   ],
+   "solution_key": "",
+   "statement": "(5)\n1. Build an LTL f formula φ that can only be satisfied in temporal models of length\nat least2.\n2. For your formula φ, construct a final type.\n3. Can there be a type that is both, initial and final? Justify"
+  },
+  {
+   "rank": 41,
+   "topic": "temporal_logic",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2021 [139466]"
+   ],
+   "solution_key": "",
+   "statement": "(2)\nWrite an LTL formula that expresses:\nif b is observed, then a must have been observed before."
+  },
+  {
+   "rank": 42,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "June 2022 Exam [236293]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 5. SQL & Datalog 5 P.\nTable 1: ActsIn(actor, movie)\nactor movie\nDiCaprio Inception\nGordon-Levitt Inception\nHardy Inception\nMcConaughey Interstellar\nHardy Interstellar\nDiCaprio Catch Me If You Can\n. . . . . .\nTable 2: Directed(director, movie)\ndirector movie\nNolan Inception\nNolan Interstellar\nSpielberg Catch Me If You Can\n. . . . . .\n1. Consider the SQL tables of tables 1 and 2. Express the following queries in SQL\n3 P:\na) Find movies directed by Spielberg.\nb) Find pairs of actors that have acted in the same movie.\n2. Consider the following KB: 2 P.\n1 student(carol).\n2 student(alice).\n3 parent(alice, bob).\n4 has_access(X, library) :- student(X).\n5 has_access(X, library) :- has_access(Y, library), parent(Y, X).\nFind out who has access to the library by proceeding bottom-up."
+  },
+  {
+   "rank": 43,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "July 2022 Exam [128723]"
+   ],
+   "solution_key": "July 2022 Exam Solutions",
+   "statement": "Question 5. Datalog 5 P.\n1. Provide the most general uniﬁer of the following pair of terms, if it exists. Brieﬂy\njustify your answer. 2 P.\nq(X, c, Y, b) q(a, Z, X, Y)\n2. Consider the following KB: . 3 P.\nfree_drink(Y) :- bar_owner(X), friend(X, Y).\nfriend(X, Z) :- friend(X, Y), friend(Y, Z).\nfriend(X, Y) :- friend(Y, X).\nbar_owner(alice).\nfriend(alice, bob).\nfriend(bob, carol).\nFind all the people who get a free drink by proceeding bottom-up. In formulating\nyour answer, try to be concise by listing the additions to the set of clauses at each\niteration."
+  },
+  {
+   "rank": 44,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "June 2022 Exam [128721]"
+   ],
+   "solution_key": "June 2022 Exam Solutions",
+   "statement": "Question 5. Datalog 5 P.\n1. Provide the most general uniﬁer of the following pair of terms, if it exists. 2 P.\nf(Y, a, Z, b) f(W, X, X, W)\n2. Consider the following KB: 3 P.\nstudent(carol).\nstudent(alice).\nparent(alice, bob).\nhas_access(X, library) :- student(X).\nhas_access(X, library) :- has_access(Y, library), parent(Y, X).\nShow by proceeding top-down that has_access(bob, library) is an answer to\nthe query ?has_access(X, library) .\nSimpler alternative: you can prove ?has_access(bob, library) for max 2 P."
+  },
+  {
+   "rank": 45,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2023/02/06 [139470]"
+   ],
+   "solution_key": "",
+   "statement": "Question 1. Predicate Rules 5 P.\nConsider the following predicate KB K:\nP (a) ←\nP (b) ←\nR(c) ←\nQ(x, y) ← P (x), R(y)\nQ(x, y) ← R(x), P(y)\n← Q(x, x)\n1. Construct a model of K with only 2 elements or explain why it is not possible\n2. Is K consistent? Justify\n3. Decide whether K entails the following consequences:\n• Q(c, a) ←\n• Q(a, a) ←\n• Q(a, b) ← P (c)"
+  },
+  {
+   "rank": 46,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/09/30 [139469]"
+   ],
+   "solution_key": "",
+   "statement": "Question 2. Predicate KBs 6 P.\n1. Identify which of the following expressions are predicate rules:\n□ p(x, y) ← t(x), q(y)\n□ p(x, a) ← p(b, x)\n□ p(a, b) ←\n□ t(x) ← p(y, x)\n□ t(x) ←\n□ q(y) ← t(z), p(x, z)\n□ q(b) ←\n□ ← q(a)\n2. Construct the canonical model of the predicate KB K consisting of the selected\nrules\n3. Decide whether K entails t(a)"
+  },
+  {
+   "rank": 47,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "",
+   "statement": "Question 5. Datalog 5 P.\n1. Provide the most general uniﬁer of the following pair of terms, if it exists. Justify\nyour answer.\np(a, B, C, d, B) p(X, y, X, Z, X) .\n2. Consider the following KB:\nr(a). r(e).\np(c).\nq(b).\ns(a, b). s(d, b). s(e, d).\np(X) :- q(X), r(X).\nq(X) :- s(X, Y), q(Y).\nShow that KB ⊢ p(e) by proceeding bottom-up."
+  },
+  {
+   "rank": 48,
+   "topic": "datalog_rules",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Exam 2022/07/11 [78385]"
+   ],
+   "solution_key": "",
+   "statement": "Question 2. Predicate Rules 6 P.\nConsider the following predicate KB K:\nt(x, y) ← t(x, z), t(z, y)\ns(x, y) ← t(y, x)\nt(a, b) ←\nt(b, c) ←\ns(d, c) ←\n1. Construct the canonical model of K\n2. Decide whether t(c, a) is a consequence of K. Justify.\n3. Add one rule (not a fact) to K so that s(d, a) follows."
+  },
+  {
+   "rank": 49,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Students' questions [111893]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nSpunta come completato\nForum dedicated to students' questions and discussions.\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nElenco delle discussioni. Visualizzazione di 9 discussioni su 9\nStato\nDiscussione\nIniziato da\nUltimo intervento\nRepliche\nAzioni\nLattices\nBloccata\nCRISTINA SPINETTI\n4 giu 2023\nMATTEO LUIGI PALMONARI\n28 ago 2023\n1\nInserisci tra le preferite\nrecording exercise session\nBloccata\nCARLOTTA DE' CASTIGLIONI\n10 giu 2023\nCARLOTTA DE' CASTIGLIONI\n10 giu 2023\n0\nInserisci tra le preferite\nMock_Exam_Question\nBloccata\nADITYA RAVI XXX\n8 giu 2023\nADITYA RAVI XXX\n8 giu 2023\n1\nInserisci tra le preferite\nEx 2.3 from Exercise Sheet 5\nBloccata\nDOĞA TEKELI\n7 giu 2023\nGIAN CARLO MILANESE\n8 giu 2023\n1\nInserisci tra le preferite\nExercise 1.5 from sheet 2\nBloccata\nGIAN CARLO MILANESE\n2 mag 2023\nGIAN CARLO MILANESE\n2 mag 2023\n0\nInserisci tra le preferite\nEx. 5 from pdf 3, SPARQL Playground\nBloccata\nCRISTINA SPINETTI\n28 apr 2023\nGIAN CARLO MILANESE\n2 mag 2023\n4\nInserisci tra le preferite\nMost general unifiers\nBloccata\nCRISTINA SPINETTI\n23 mar 2023\nCRISTINA SPINETTI\n28 mar 2023\n5\nInseri"
+  },
+  {
+   "rank": 50,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Students' questions [236235]"
+   ],
+   "solution_key": "",
+   "statement": "3) form Knowledge Representation and...\nBloccata\nEMON HOWLADER\n6 lug 2025\nGIAN CARLO MILANESE\n6 lug 2025\n1\nInserisci tra le preferite\nDifficulty trying to understand a slide in datalog slides\nBloccata\nSHAYAN KHAN\n9 giu 2025\nMATTEO LUIGI PALMONARI\n16 giu 2025\n1\nInserisci tra le preferite\nQuestion Regarding Predicate Variation in RDF Exercises\nBloccata\nALBORZ SAADATMAND\n29 mag 2025\nGIAN CARLO MILANESE\n30 mag 2025\n1\nInserisci tra le preferite\n“Which exam session am I supposed to register for?” About the relationship between ...\nBloccata\nMATTEO LUIGI PALMONARI\n29 mag 2025\nMATTEO LUIGI PALMONARI\n29 mag 2025\n0\nInserisci tra le preferite\nDoubt regarding the property path in SPARQL\nBloccata\nSHAYAN KHAN\n24 mag 2025\nGIAN CARLO MILANESE\n25 mag 2025\n1\nInserisci tra le preferite\nA potential solution to the query in the DLV exercise.\nBloccata\nOUSSAMA ELMIR\n28 mar 2025\nGIAN CARLO MILANESE\n4 apr 2025\n1\nInserisci tra le preferite\nPrimary key\nBloccata\nISLAM BAGIROV\n12 mar 2025\nGIAN CARLO MILANESE\n20 mar 2025\n1\nInserisci tra le preferite"
+  },
+  {
+   "rank": 51,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "",
+   "statement": "Question 2. SP ARQL 5 P.\nConsider the following RDF graph:\n@prefix : <http://example.org/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n@prefix owl: <http://www.w3.org/2002/07/owl##> .\n:A rdfs:subClassOf :B .\n:B rdfs:subClassOf :C .\n:p rdfs:domain :A ; rdfs:range :C .\n:q rdfs:domain :B .\n:a rdf:type :A . :b rdf:type :B . :c rdf:type :C .\n:c :p :d . :d :q :e .\n1. What are the results of the following queries? 2 P\n• select * where { ?x a ?y }\n• select * where { ?x rdfs:subClassOf ?y } LIMIT 1\n2. Write the following queries and their results: 3 P\n• Retrieve all ?x and ?y such that ?x and ?y are related by :p or by :q.\n• Construct a graph containing the results of the following inference: if\n– ?c is the domain of the property ?p,\n– ?c is a subclass of ?d, and\n– ?x and ?y are related by ?p\nthen ?x is an instance of ?d"
+  },
+  {
+   "rank": 52,
+   "topic": "rdf_sparql",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "",
+   "statement": "Question 1 5 P.\nExpress the following using the Turtle syntax 2 and, where relevant, typed literals:\n1. Alice knows Bob who is a person\n2. Alice knows Mary, who is a Teacher and is 28 years old\n3. Alice knows Bob’s sister, who is 28 years old\n4. Alice knows that Bob is 28 years old\n5. Bob wants to prevent Alice from studying Law\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema##> .\n@prefix owl: <http://www.w3.org/2002/07/owl##> .\n@prefix ex: <http://example.org/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema##> .\n## continue here\n1In a real exam, the hint written within parentheses may be omitted\n2You can use preﬁxes, and, in particular ex: as a preﬁx"
+  },
+  {
+   "rank": 53,
+   "topic": "reasoning_tasks",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.053,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2022 (Updated 9/6/2022) [51761]"
+   ],
+   "solution_key": "",
+   "statement": "Question 1. RDF 5 P.\nAccording to the semantics of simple interpretations :\n1. Does the graph G1 entail the graph G2? Justify your answer (provide a valid blank\nnode assignment or a counterexample) 1. 2.5 P\n2. Does the graph G1 entail the graph G3? Justify your answer (provide a valid blank\nnode assignment or a counterexample). 2.5 P\nG1 G2 G3\nex:alice ex:parent ex:bob _:x ex:parent _:y _:x ex:parent ex:bob\nex:bob ex:parent ex:carol _:z ex:parent _:x ex:bob ex:parent _:x\nRemark: preﬁx deﬁnitions are omitted; notation is Turtle.\nAnother example for"
+  }
+ ],
+ "name": "KNOWLEDGE REPRESENTATION AND REASONING"
+}

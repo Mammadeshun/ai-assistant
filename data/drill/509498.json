@@ -1,0 +1,75 @@
+{
+ "course": "509498",
+ "documents_resolved": 7,
+ "papers_used": [
+  "LAB Exam June 2026",
+  "LAB Exam July 2026",
+  "AI4CM LabExam Part1 pdf",
+  "AI4CM LabExam Part2 pdf",
+  "AI4CM LabExam Part3 pdf"
+ ],
+ "n_papers": 5,
+ "n_items": 5,
+ "solution_keys": [
+  "marketing campaign csv"
+ ],
+ "papers_without_a_published_key": [
+  "LAB Exam June 2026",
+  "LAB Exam July 2026",
+  "AI4CM LabExam Part1 pdf",
+  "AI4CM LabExam Part2 pdf",
+  "AI4CM LabExam Part3 pdf"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.4,
+   "typical_marks": null,
+   "papers": [
+    "LAB Exam July 2026 [325147]",
+    "LAB Exam June 2026 [322460]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nAperto:\nmartedì, 26 maggio 2026, 00:00\nData limite:\nmercoledì, 24 giugno 2026, 00:00\nAggiungi consegna\nStato consegna\nStato consegna\nNon sono presenti consegne.\nStato valutazione\nNon valutata\nTempo rimasto\nConsegna in ritardo da: 37 giorni 4 ore"
+  },
+  {
+   "rank": 2,
+   "topic": "marketing_funnel",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part1 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "AI for Communication and Marketing \nLab Exam – part 1 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou have been hired as a Junior Data Scientist by a retail company. The Marketing Department has \ncollected two years’ worth of data on their customers but lacks the analytical framework to use it \neffectively. \nYour goal is to perform a complete end-to-end analysis - from assessing data integrity to identifying \nhigh-value customer segments - to drive a data-driven communication strategy. \n2. Dataset \nYou will use the marketing_campaign.csv dataset: \n \n\n \n3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb): Containing clean, commented Python code \n2. A Presentation (2-3 Slides .pdf format): Summarizing key findings and marketing \nrecommendations for non-technical stakeholders \nTask A: Data Audit & Quality \n• Perform a Data Audit: identify missing values, duplicates and data type inconsistencies \n• Identify and handle Outliers \n• Document your cleaning process: Why did you choose to drop, impute, or transform specific \ndata points? \nTask B: Exploratory Data Analysis (EDA) \n• Analyze the correlation between socio-demographic features a"
+  },
+  {
+   "rank": 3,
+   "topic": "recommendation_personalisation",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part2 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "AI for Communication and Marketing \nLab Exam – part 2 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou are a Data Scientist for a leading E-commerce platform. The Marketing department is concerned \nabout customer retention. You have been provided with a dataset named \"data.xlsx\" containing \ncustomer profiles, satisfaction scores, and transaction summaries. \nYour goal is to build a predictive model to identify customers at risk of churning and provide actionable \nmarketing insights. \n2. Dataset \nThe file \"data.xlsx\" includes features such as: \n• CustomerID - Unique customer ID \n• Churn - Churn Flag \n• Tenure - Tenure of customer with the company \n• PreferredLoginDevice - Preferred login device of customer \n• CityTier - City tier \n• WarehouseToHome - Distance in between warehouse to home of customer \n• PreferredPaymentMode - Preferred payment method of customer \n• Gender - Gender of customer \n• HourSpendOnApp - Number of hours spent on mobile application or website \n• NumberOfDeviceRegistered - Total number of deceives is registered on particular customer \n• PreferedOrderCat - Preferred order category of customer in last month \n• SatisfactionScore - Satisfactory score of custom"
+  },
+  {
+   "rank": 4,
+   "topic": "recommendation_personalisation",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part3 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "AI for Communication and Marketing \nLab Exam – part 3 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou have been appointed as the Lead Data Scientist for Olist, the largest Brazilian e-commerce \nmarketplace. The Marketing Department is planning its budget allocation and loyalty campaigns for \nthe upcoming quarter. They need to understand the future value of their current customer base to \nmake data-driven decisions. \nYour goal is to build a predictive framework that estimates the Customer Lifetime Value (CLTV) using \nboth probabilistic models and machine learning techniques. \n2. Dataset \nYou will use the \"Brazilian E-Commerce Public Dataset by Olist\" (available on Kaggle \nhttps://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). \n• Focus: You must aggregate the various relational tables (orders, customers, payments, items) \nto create a transactional dataset suitable for CLTV analysis. \n• Timeframe: Define a specific \"Calibration\" period to train your models and a \"Holdout\" period \nto validate your predictions. \n3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb) or standard Python .py scripts: Containing clean, commented \nPytho"
+  }
+ ],
+ "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING"
+}

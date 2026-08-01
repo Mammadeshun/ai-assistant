@@ -1,0 +1,256 @@
+{
+ "course": "509493",
+ "documents_resolved": 48,
+ "papers_used": [
+  "Esame1 pdf",
+  "Esame2 pdf",
+  "Esame3 pdf",
+  "Esame4 pdf",
+  "Esame5 pdf",
+  "Esame6 pdf",
+  "09 exam practice pdf"
+ ],
+ "n_papers": 7,
+ "n_items": 27,
+ "solution_keys": [],
+ "papers_without_a_published_key": [
+  "Esame1 pdf",
+  "Esame2 pdf",
+  "Esame3 pdf",
+  "Esame4 pdf",
+  "Esame5 pdf",
+  "Esame6 pdf",
+  "09 exam practice pdf"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "model_selection",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame1 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nThe data contained in the cement dataset represent the hardness ( hardness variable) of 13\ntypes of cement with different chemical compositions. Specifically, each type is obtained with\nvarying proportions of aluminium ( aluminium variable), silicate ( silicate variable), calcium\naluminoferrite (aluminium ferrite), and silicate bic (silicate bic). The interest is explaining\nhow the hardness of cement depends on the proportions of chemicals.\nA regression model was fitted for this purpose and produced the following result:\nEstimate Std. Error t statistic Pr( >|t|)\n(Intercept) 124.4809 26.7557 4.653 0.0016\naluminium 0.9739 ?? 3.435 0.0089\nsilicate -0.1405 0.2891 -0.486 0.6400\naluminium ferrite -0.4974 0.2751 ?? ??\nsilicate bic ?? 0.3214 -2.481 0.0381\nError sum of squares 49.378\nTotal sum of squares 2715.763\nR2 coefficient ??\na) Write the model formulation and assumptions.\nb) Complete the missing values in the table. For “Pr( > |t|)” of aluminium ferrite provide\nan approximate value. What variables have a statistically significant effect?\nc) Test the statistical hypothesis corresponding to the statement “the covariates do not have\nan effect on the hardness of cement”.\nd) On "
+  },
+  {
+   "rank": 2,
+   "topic": "glm",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame1 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nLet (y1, . . . , y5) and (y6, . . . , y10) be two independent samples from a Poisson distribution of mean\nexp{β1} and from a Poisson distribution of mean exp {β1 + β2}, respectively.\na) Formulate an appropriate Poisson regression model for the expected value of Yi, i =\n1, . . . ,10.\nb) Write the log-likelihood function of β = (β1, β2) and the score function. Find the maximum\nlikelihood estimate of ( β1, β2). Finally, obtain the observed information matrix.\nc) Determine an approximate distribution of the maximum likelihood estimator ˆβ of β =\n(β1, β2), and an approximate distribution of the maximum likelihood estimator ˆβ1 of β1.\nd) Provide the interpretation of the coefficient β2.\ne) Define the concept of “saturated model” and obtain the expression of maximum of the\nlog-likelihood for this model.\np\n0.90 0.95 0.975 0.99 0.995 0.9975 0.999\nstandard Normal zp 1.2816 1.6449 1.9600 2.3263 2.5758 2.8070 3.0902\nt with 4 df t4,p 1.5332 2.1318 2.7764 3.7469 4.6041 5.5976 7.1732\nt with 5 df t5,p 1.4759 2.0150 2.5706 3.3649 4.0321 4.7733 5.8934\nt with 6 df t6,p 1.4398 1.9432 2.4469 3.1427 3.7074 4.3168 5.2076\nt with 7 df t7,p 1.4149 1.8946 2.3646 2.9980 3.4995 4.0293 4.7853\nt with "
+  },
+  {
+   "rank": 3,
+   "topic": "glm",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame2 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nThe titanic dataset is a collection of data about 714 passengers, and the goal is to predict\nthe survival ( Survival: 1 if the passenger survived, 0 if they did not) based on some personal\ncharacteristics. In particular, here we consider the ticket class ( Class: 1 = first, 0 = second\nor third; dummy), the gender ( Gender: man = 1, woman = 0; dummy), and the age ( Age, in\nyears). Fitting a logistic regression model in R produces the following summary:\nEstimate Std. Error z value Pr( >|z|)\n(Intercept) 1.5003 0.2462 6.09 0.0000\nClass 2.0103 0.2479 8.11 0.0000\nGender -2.5473 0.2017 ?? 0.0000\nAge -0.0299 0.0074 -4.06 ??\nNull deviance: 964.52\nResidual deviance: 675.14\na) Write the corresponding theoretical model and the expression of the estimated model.\nb) Write the likelihood and log-likelihood function.\nc) Complete the missing values in the table. For Pr( >|z|) of Age, write an approximate value.\nWhat variables are statistically significant?\nd) Provide an estimate of the odds for a woman aged 30 with a ticket of first class (denote\nthis individual as “A”). How do you expect this value to change if you consider a person\nwith the same characteristics but aged 31 (denote this"
+  },
+  {
+   "rank": 4,
+   "topic": "glm",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame5 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 3\nConsider an experiment to study the resistance to the tension of a machine component. The\ndataset studies how many breaks occurred during 54 replications of the experiment for two types\nof material (A and B) and different levels of tension (L = low; M = medium; H = high).\nTo study such relationship we fit a Poisson regression model. The output of the model is the\nfollowing:\nEstimate Std. Error z value Pr( >|z|)\n(Intercept) 3.6920 0.0454 81.30 0.0000\nmaterial B -0.2060 0.0516 -3.99 0.0001\ntension M -0.3213 0.0603 -5.33 0.0000\ntension H -0.5185 0.0640 -8.11 0.0000\nNull deviance: 297.37 on 53 degrees of freedom\nResidual deviance: 210.39 on 50 degrees of freedom\na) Write the model formulation and assumptions.\nb) Derive and explain the interpretation of the coefficient associated with the variable “ma-\nterial B”.\nc) A second model (“model B”) assumes that the type of material and the level of tension\ndo not have an impact on the number of breaks. Specify the model and perform a test to\ncompare the model fitted in point (a) with model B.\n3\np\n0.90 0.95 0.975 0.99 0.995 0.9975 0.999\nstandard Normal zp 1.2816 1.6449 1.9600 2.3263 2.5758 2.8070 3.0902\nt with 18 d.o.f t18,p 1.3304 "
+  },
+  {
+   "rank": 5,
+   "topic": "glm",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame6 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nIn a study about the hiring process of a company, it is of interest to study the relationship\nbetween the outcome of a job interview (hired or not), and the age and gender of the individuals.\nIn particular, the outcome takes value 1 if the person has been hired and 0 otherwise; the age\nvariable is expressed in years; and the gender variable takes value 1 if the individual is a man\nand 0 otherwise. Fitting a logistic regression produces the following result:\nEstimate Std. Error z value Pr( >|z|)\nIntercept -2.0871 ?? -7.695 ??\nGender 1 0.2076 ?? ?? 0.101\nAge -0.0394 0.0053 ?? ??\nNull deviance: 136.66\nResidual deviance: 114.61\na) Write the model formulation and assumptions corresponding to such fitted model.\nb) What is the role of the link function in the specified model? Would it be possible to use\nthe identity function instead? Why?\nc) Compute the missing values in the output (for the p-values, provide an approximation or\na lower/upper bound). Which variables appear to have a significant effect on the response\nvariable? Comment on the output.\nd) Perform a test of level α = 0.01 to evaluate the significance of the overall model.\n3\np\n0.90 0.95 0.975 0.99 0.995 0.9975 0.999\n"
+  },
+  {
+   "rank": 6,
+   "topic": "glm",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "09 exam practice pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nGiven a set ofn = 30 observations, consider fitting the modelYi ∼ Bernoulli(πi) where logit(πi) =\nβ1 +β2xi, with xi is a dummy variable taking value 1 for the first 10 observations and 0 otherwise.\nFitting this model returns the following output\nEstimate Std. Error z value Pr( >|z|)\n(Intercept) 1.3863 0.5590 2.480 0.01314\nx -2.0794 0.7826 -2.657 0.00788\nNull deviance 47.111\nResidual deviance 39.112\na) Write the likelihood, log-likelihood and score functions for ( β1, β2). Write the fitted model.\nb) Compute the estimate of the probability ˆπ for x = 0 and x = 1. Obtain the odds for x = 0\nand x = 1 and interpret them. Give an estimate of the odds ratio and interpret it.\nc) Test the hypothesis H0 : β2 = −1 vs H1 : β2 < −1.\nd) What are the two quantities “Null deviance” and “Residual deviance”?\n2\np\n0.90 0.95 0.975 0.99 0.995 0.9975 0.999\nstandard Normal zp 1.2816 1.6449 1.9600 2.3263 2.5758 2.8070 3.0902\nt with 21 df t21,p 1.3232 1.7207 2.0796 2.5176 2.8314 3.1352 3.5272\nt with 22 df t22,p 1.3212 1.7171 2.0739 2.5083 2.8188 3.1188 3.5050\nt with 23 df t23,p 1.3195 1.7139 2.0687 2.4999 2.8073 3.1040 3.4850\nt with 31 df t31,p 1.3095 1.6955 2.0395 2.4528 2.7440 3.0221 3.3749\nt w"
+  },
+  {
+   "rank": 7,
+   "topic": "inference",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame4 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nThe CPS1985 dataset consists of a random sample of 534 individuals from the 1985 census, with\ninformation on wages and other characteristics of the workers, including gender, age, number\nof years of education, years of work experience, and union membership. We wish to determine\nwhether wages are related to these characteristics. Specifically, the covariates are\n EDUCATION: Number of years of education.\n SOUTH: Indicator variable for Southern Region (1=Lives in South, 0=Lives elsewhere).\n GENDER: Indicator variable for gender (1=Female, 0=Male).\n EXPERIENCE: Number of years of work experience.\n UNION: Indicator variable for union membership (1=Union member, 0=Not a member).\n W AGE: Wage (dollars per hour).\n AGE: Age (years).\n RACE: Race (1=Other, 2=Hispanic, 3=White).\n MARR: Marital Status (0=Unmarried, 1=Married)\nFitting a Gaussian linear model provides the following output\nEstimate Std. Error t value Pr( >|t|)\n(Intercept) -2.4282 6.7940 -0.36 0.7209\nEDUCATION 1.2699 1.1106 1.14 0.2534\nSOUTH1 -0.7187 0.4297 -1.67 0.0951\nGENDER1 -2.1837 0.3908 -5.59 0.0000\nEXPERIENCE 0.4717 1.1106 0.42 0.6712\nUNION1 1.4336 0.5087 ? ?\nAGE -0.3711 1.1098 -0.33 0.7382\nRACE2 0.7117 1"
+  },
+  {
+   "rank": 8,
+   "topic": "inference",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "09 exam practice pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nThe mtcars dataset comprises fuel consumption ( mpg: Miles/(US) gallon) and 8 aspects of\nautomobile design and performance for 32 automobiles. Specifically, the covariates are\n wt: Weight (1000 lbs)\n am: Transmission (0 = automatic, 1 = manual)\n cyl: Number of cylinders\n disp: Displacement (cu.in.)\n hp: Gross horsepower\n drat: Rear axle ratio\n qsec: 1/4 mile time\n vs: Engine (0 = V-shaped, 1 = straight)\nFitting a Gaussian linear model in R produces the following output\nEstimate Std. Error t value Pr( >|t|)\n(Intercept) 15.5731 16.3817 0.951 0.3517\nwt -3.9437 1.2874 -3.063 0.0055\nam = 1 2.7937 1.8682 1.495 0.1484\ncyl -0.2786 0.9348 -0.298 0.7683\ndisp 0.0147 0.0120 1.223 0.2338\nhp -0.0214 0.0162 ?? 0.1995\ndrat 0.8151 1.5101 0.540 0.5946\nqsec ?? 0.6587 1.229 0.2314\nvs = 1 0.3684 2.0116 0.183 ??\nResidual standard error\nqP32\ni=1(yi − ˆyi)2/23 = 2.544\nCoefficient R2 = 0.8678\na) Write the statistical model corresponding to the analysis (quantities and assumptions).\nDenote this model as “model A”.\nb) Write the parameter space and sample space.\nc) Complete the missing values in the table.\nFor “Pr(>|t|)” of vs1, write the meaning of the missing value and how to obtain it.\nd"
+  },
+  {
+   "rank": 9,
+   "topic": "inference",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame5 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nA corporation sells computer parts and performs maintenance and repair service. The data\nbelow have been collected from 18 recent calls to perform maintenance service; for each call,\nx1 is the number of repairs and y is the total number of minutes spent by the service person.\nMoreover, it is also available the information about the type of computer: in particular, the\nfirst 12 observations refer to business computers, while the last 6 refer to personal computers.\nSpecifically,\nbusiness computers\ni 1 2 3 4 5 6 7 8 9 10 11 12\nnumber of repairs 7 6 5 5 4 7 7 4 2 8 5 5\ntotal minutes 97 86 78 75 62 101 105 53 33 118 65 71\npersonal computers\ni 13 14 15 16 17 18\nnumber of repairs 2 1 3 1 4 3\ntotal minutes 25 10 39 17 49 28\nwith\n18X\ni=1\nyi = 1112\n18X\ni=1\nxi,1 = 79\ns2\ny = 1040.889 s2\nx1 = 4.4869\nR2 = 0.9808\na) Formulate an appropriate Gaussian linear model (“model A”) to study how the total min-\nutes of intervention depend on the number of repairs and the type of computer. Write the\nmodel formulation and assumptions.\nb) State the decomposition of the sum of squares and specify each term for the fitted model.\nc) Test the hypothesis about the overall significance of the model and i"
+  },
+  {
+   "rank": 10,
+   "topic": "inference",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame2 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nAt admission to a college an entrance test is administered to 20 randomly selected students. The\nstudy aims to determine whether a student’s grade point average (GPA) at the end of the first\nyear (y) can be predicted from the entrance test score (x). Assume that a Gaussian linear model\nYi = β1 + β2xi + εi is fitted. The observed values of the entrance test and of the GPA for the\nstudents are:\nunit 1 2 3 4 5 6 7 8 9 10\nx 5.50 4.80 4.70 3.90 4.50 6.20 6.00 5.20 4.70 4.30\ny 3.10 2.30 3.00 1.90 2.50 3.70 3.40 2.60 2.80 1.60\nunit 11 12 13 14 15 16 17 18 19 20\nx 4.90 5.40 5.00 6.30 4.60 4.30 5.00 5.90 4.10 4.70\ny 2.00 2.90 2.30 3.20 1.80 1.40 2.00 3.80 2.20 1.50\nFrom the data it is possible to compute the following useful quantities:\n20X\ni=1\nxi = 100.00\n20X\ni=1\nyi = 50\n20X\ni=1\nx2\ni = 509.12\n20X\ni=1\ny2\ni = 134.84\n20X\ni=1\nxiyi = 257.66\nMoreover, from fitting the model we know that\nˆvar( ˆβ1(Y )) = 0.72682 ˆvar( ˆβ2(Y )) = 0.14402\n20X\ni=1\n(yi − ˆyi)2 = 3.4063\na) State the assumptions on εi, i = 1, . . . ,20.\nb) Obtain the maximum likelihood estimates of ( β1, β2) and interpret them.\nc) Write the expression of the estimated regression function and plot it (in the figure below).\nd)"
+  },
+  {
+   "rank": 11,
+   "topic": "linear_regression",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame3 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nThe data contained in the chdage dataset represent the measurements on 100 patients of two\nvariables: the age expressed in years ( AGE) and a binary variable ( CHD) which assumes value 1 if\nthe individual has a coronary heart disease and 0 otherwise.\na) To investigate whether there is a relationship between the probability of having a coronary\nheard disease and the age of the individuals, a researcher fitted a generalized linear model\n(using the canonical link function) that produced the following output:\nEstimate Std. Error z value Pr( >|z|)\nIntercept -5.3095 1.1337 -4.68 0.0000\nage 0.1109 0.0241 4.610 0.0000\nNull deviance: 136.66\nResidual deviance: 107.35\na1) Write the statistical model corresponding to such output (assumptions and model\nspecification).\na2) Write the interpretation of the coefficient associated with the age variable.\na3) Write the system of hypotheses and perform a test to compare the fitted model with\na model that includes only the intercept. Comment the result.\nb) The researcher then wonders whether the age might have a quadratic effect and adds the\ncorresponding covariate to the model. The fitted model produced the following output:\nEstimate Std. Er"
+  },
+  {
+   "rank": 12,
+   "topic": "linear_regression",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame4 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2\nYou have been given a sample dataset of 10,000 individuals from the insured population with\nthe following characteristics:\n heart disease: an indicator corresponding to whether an individual has heart disease (1\n= yes, heart disease; 0 = no heart disease)\n coffee drinker: an indicator corresponding to whether an individual drinks coffee regu-\nlarly (1 = yes, coffee drinker; 0 = not a coffee drinker)\n fast food spend - a numerical variable corresponding to the annual spend of each indi-\nvidual on fast food\n income - a numerical variable corresponding to the individual’s annual income\nFitting a logistic regression model provides the following output\nEstimate Std. Error z value Pr( >|z|)\n(Intercept) ? 0.4923 -22.08 0.0000\ncoffee drinker -0.6468 0.2363 ? ?\nfast food spend 0.0023 0.0001 24.74 0.0000\nincome 0.0000 0.0000 0.37 0.7115\nNull deviance: 2920.6\nResidual deviance: 1571.5\n1. Write the statistical model corresponding to the analysis (model formulation and assump-\ntions).\n2. Complete the missing values in the table.\n3. What is the estimate of the probability of having a heart disease for an individual who\nregularly drinks coffee, spends 1000 in fast food and has an i"
+  },
+  {
+   "rank": 13,
+   "topic": "linear_regression",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame3 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nAssume that y1, . . . , y200 are realizations of independent Gaussian random variables with variance\nequal to 1 and and mean β1 + β2 exp{zi} for i = 1 , . . . ,120, and mean β1 + β3 exp{z2\ni } for\ni = 121, . . . ,200; where the zi are known constants and (β1, β2, β3) are unknown real parameters.\na) Are the assumptions of a Gaussian linear model satisfied in the above formulation? Moti-\nvate the answer.\nb) State the parameter space and sample space.\nc) Express the model in matrix form: Y = Xβ + ε, explicitly stating how Y , X, β, and ε are\ndefined and their dimensions. Write the distribution of Y and ε.\nd) Obtain the expression of the matrix X T X and the vector X T y; state how these elements\nshould be used to obtain the maximum likelihood estimate ˆβ.\ne) Write the distribution of the maximum likelihood estimator ˆβ(Y ).\nf) Let e = y − X ˆβ be the vector of the residuals. State which of the following identities are\nsatisfied and motivate the answer:\n200X\ni=1\nei = 0\n200X\ni=1\neizi = 0\n200X\ni=1\neiz2\ni = 0\n200X\ni=1\nei exp{zi} = 0\n200X\ni=1\nei exp{z2\ni } = 0\n120X\ni=1\nei exp{zi} = 0\n(hint: read the indices in the sum!)\n1"
+  },
+  {
+   "rank": 14,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame5 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nConsider the following models, for i = 1, . . . , n\n1. Y i = β1 + β2xi,2 + β3 log10 xi,3 + β4x2\ni,4 + εi and εi ∼ N (0, σ2) independent.\n2. Y i = β1 + β2xi,2\nβ3xi,1\n+ εi and εi ∼ N (0, σ2) independent.\n3. log(Yi) = β2xi,1 + β3 log(xi,3)\nxi,2\n+ εi and εi ∼ N (0, σ2) independent.\n4. Y i = β1 xi,2\nβ2 exp{εi} and εi ∼ N (0,"
+  },
+  {
+   "rank": 15,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame4 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "10) df f534,10;p 2.0614 2.5475 3.0935 3.9288 4.6638 5.5038 6.8037\nTable 2: Some quantiles of the F distribution: p = P(X ≤ fd f1,d f2;p). Columns correspond\nto probabilities p. Rows correspond to different distributions, in particular, each row\ncorresponds to different degrees of freedom (df).\n4"
+  },
+  {
+   "rank": 16,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame4 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "6) df f524,6;p 2.7268 3.6771 4.8619 6.9005 8.9074 11.4322 15.7996\nF with (524,"
+  },
+  {
+   "rank": 17,
+   "topic": "diagnostics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame6 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1\nA person’s muscle mass is expected to decrease with age. To explore this relationship in women,\na nutritionist randomly selected four women from each 10-year age group, beginning at age 40\nand ending at age 79, and recorded their muscle mass index.\nThe observed values of age ( x) and muscle mass ( y) are:\nunit 1 2 3 4 5 6 7 8\nx 71 64 43 67 56 73 68 56\ny 82 91 100 68 87 73 78 80\nunit 9 10 11 12 13 14 15 16\nx 76 65 45 58 45 53 49 78\ny 65 84 116 76 97 100 105 77\nMoreover, it is known that\n16X\ni=1\nxi = 967\n16X\ni=1\nyi = 1379\ns2\nx = 131.0625 s2\ny = 202.2958 sxy = 1\n15\n16X\ni=1\n(xi − ¯x)(yi − ¯y) = −134.1542\nwhere s2\nx and s2\ny are the unbiased estimates of the sample variances of x and y, respectively; and\n¯x and ¯y are the sample means.\nAssume that the following Gaussian linear model is appropriate:\nModel A: Yi = β1 + β2xi + εi, ε i\niid\n∼ N (0, σ2).\nThe estimates of the variances of the estimators are\nˆvar( ˆβ1) = 133.63 ˆ var( ˆβ2) = 0.03542\nwhile the unbiased estimate of the variance σ2 is\ns2 = 69.62.\nAnswer the following questions:\na) Write the expression of the estimated regression function.\nb) Derive and explain the interpretation of the coefficient associated with the ag"
+  },
+  {
+   "rank": 18,
+   "topic": "diagnostics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame5 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "1) independent.\nAnswer the following questions:\na) For each model, indicate whether it is a linear regression model. If it is not, explain why\nand whether it can be expressed in the form Yi = β1xi,1 + β2xi,2 + · · ·+ βpxi,p + εi by a\nsuitable transformation and write explicitly such transformation.\nb) Consider model 4 appropriately transformed, denoting with Y ∗, x∗\ni,2, ( β∗\n1 , β∗\n2 ) and ε∗\ni the\ntransformed quantities. Express it in the matrix form Y ∗ = X ∗β∗ + ε∗, explicitly stating\nY ∗ (and its distribution), X ∗, β∗, and ε∗.\nc) Write the expression of the maximum likelihood estimator ˆβ\n∗\nand its exact distribution.\nd) Let e = y∗ − X ∗ ˆβ∗ be the vector of the residuals. State which of the following identities\nare satisfied and motivate the answer:\nnX\ni=1\nei = 0\nnX\ni=1\neixi,2 = 0\nnX\ni=1\nei log(xi,2) = 0\nnX\ni=1\nei log(x2\ni,2) = 0\n1"
+  },
+  {
+   "rank": 19,
+   "topic": "diagnostics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.143,
+   "typical_marks": null,
+   "papers": [
+    "Esame6 pdf [dangelo]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 39.6505 24.5576 1.61 0.1324\nAge:Exercise -0.4713 0.4494 -1.05 0.3150\nWrite the expression of the regression function for women who do exercise regularly, and\nthe one for those who do not exercise. Make a (reasonable) sketch of the two lines.\nl) The figure below shows two plots regarding model C. Explain what they represent and\ninterpret them.\n75 80 85 90 95 100 105\n−10 −5 0 5 10\nFitted values\nResiduals\nlm(y ~ Age * Exercise)\nResiduals vs Fitted\n11\n5\n10\n−2 −1 0 1 2\n−1.0 0.0 1.0 2.0\nTheoretical Quantiles\nStandardized residuals\nlm(y ~ Age * Exercise)\nNormal Q−Q\n11\n5\n10\n2"
+  }
+ ],
+ "name": "STATISTICAL MODELLING"
+}

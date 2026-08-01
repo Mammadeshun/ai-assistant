@@ -1,0 +1,71 @@
+{
+ "course": "509486",
+ "documents_resolved": 4,
+ "papers_used": [
+  "Mock Exam",
+  "Mock Exam 2",
+  "Exam Session 16 June 2026",
+  "Exam Session 14 July 2026"
+ ],
+ "n_papers": 4,
+ "n_items": 5,
+ "solution_keys": [],
+ "papers_without_a_published_key": [
+  "Mock Exam",
+  "Mock Exam 2",
+  "Exam Session 16 June 2026",
+  "Exam Session 14 July 2026"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Mock Exam 2 [318439]",
+    "Mock Exam [312518]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nAperto:\nmercoledì, 6 maggio 2026, 00:00\nData limite:\nvenerdì, 8 maggio 2026, 23:59\nPlease upload a unique pdf file, containing the description of your solution for laboratory 17 assignment, by strictly respecting its numbering even in the provided answers.\nAggiungi consegna\nStato consegna\nStato consegna\nNon sono presenti consegne.\nStato valutazione\nNon valutata\nTempo rimasto\nConsegna in ritardo da: 83 giorni 3 ore\nUltima modifica\n-\nCommenti alle consegne\n___picture___\n___name___\n-\n___time___\n___content___\nVisualizza commenti\nCommenti (\n0\n)\nCommento\nSalva commento\n|\nAnnulla"
+  },
+  {
+   "rank": 2,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.25,
+   "typical_marks": null,
+   "papers": [
+    "Exam Session 16 June 2026 [324523]"
+   ],
+   "solution_key": "",
+   "statement": "Aggregazione dei criteri\nAperto:\nmartedì, 16 giugno 2026, 00:00\nData limite:\ngiovedì, 25 giugno 2026, 23:59\nIn this section you can to upload your exam notebook code. Attached you can find the exam assignment, and the file\ninput_data.zip.\nAdhere as much you can to your written solution.\nEnsure your code runs without errors and terminates in at most 5 minutes.\nIN CASE OF NECESSARY CHANGES WRT THE PROPOSED SOLUTION\nEMPHASIZE them appropriately in textual cells with the string \"CHANGE\" in boldface font and uppercase. Clearly MOTIVATE any change. Absence of motivation or motivations that does not make sense would be penalized.\nBE AWARE\n:\nThe final performance of the model is NOT relevant for the evaluation, hence it cannot be a valid motivation.\nWHAT\nUpload a unique pdf  file (\nsurname_number.pdf\n) file containing a link to a Colab notebook by ensuring to grant \"anyone with the link\" can \"Edit\" permissions,  in the General access area of the share window menu (top right button).\nDATA DOWNLOAD AND NOTEBOOK RUN\nMake your notebook\nself-contained\n. The teacher should just run it, no further intervention should be required. DO NOT mount your personal drive to read input data.\nSuggestion: up"
+  },
+  {
+   "rank": 3,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.25,
+   "typical_marks": null,
+   "papers": [
+    "Exam Session 14 July 2026 [325322]"
+   ],
+   "solution_key": "",
+   "statement": "1)\nof the corresponding node, and has length 1490.\nedges\nis a numpy ndarray of dimension (n_edges, 2), where the edges[i, 0] and  edges[i, 1] are the ids of the first and the second node incident to the\ni\n-th edge.\nexam_test.pdf\n14 luglio 2026, 19:53\ninput_data.zip\n14 luglio 2026, 19:53\nAggiungi consegna\nStato consegna\nStato consegna\nNon sono presenti consegne.\nStato valutazione\nNon valutata\nTempo rimasto\nConsegna in ritardo da: 8 giorni 3 ore"
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.25,
+   "typical_marks": null,
+   "papers": [
+    "Exam Session 14 July 2026 [325322]"
+   ],
+   "solution_key": "",
+   "statement": "1)\nof the corresponding node, and has length 1490;\nlabels[i] is the ground-truth label\n(integer -1 or"
+  }
+ ],
+ "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING"
+}

@@ -1,0 +1,258 @@
+{
+ "course": "509477",
+ "documents_resolved": 55,
+ "papers_used": [
+  "Queue test py",
+  "Stack test py",
+  "Exam 23 06 2022 pdf",
+  "Exam 14 07 2022 pdf",
+  "Exam 09 09 2022 pdf",
+  "Exam 21 07 2023 pdf"
+ ],
+ "n_papers": 6,
+ "n_items": 19,
+ "solution_keys": [
+  "Exam 09 09 22 NAME SURNAME py",
+  "Exam 09/09/2022 - with Solutions",
+  "Exam 14 07 2022 NAME SURNAME py",
+  "Exam 14/07/2022 - with Solutions",
+  "Exam 21 07 2023 SURNAME NAME py",
+  "Exam 21/07/2023 - Code Solution Only",
+  "Exam 23 06 2022 NAME SURNAME py",
+  "Exam 23/06/2022 - with Solutions",
+  "Queue py",
+  "Solution Exam 09 09 2022 pdf",
+  "Solution Exam 09 09 22 py",
+  "Solution Exam 14 07 2022 pdf",
+  "Solution Exam 14 07 2022 py",
+  "Solution Exam 21 07 2023 py",
+  "Solution Exam 23 06 2022 pdf",
+  "Solution Exam 23 06 2022 py",
+  "Stack py"
+ ],
+ "papers_without_a_published_key": [
+  "Queue test py",
+  "Stack test py",
+  "Exam 21 07 2023 pdf"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "linear_structures",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Queue test py [197287]",
+    "Stack test py [197287]"
+   ],
+   "solution_key": "",
+   "statement": "from LinearStructures import Stack\n\ns = Stack()\n\nprint(s.isEmpty())\ns.push(4)\ns.push('dog')\nprint(s.peek())\ns.push(True)\nprint(s.size())\nprint(s.isEmpty())\ns.push(8.4)\nprint(s.pop())\nprint(s.pop())\nprint(s.size())\n\n"
+  },
+  {
+   "rank": 2,
+   "topic": "linear_structures",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 6.0,
+   "papers": [
+    "Exam 21 07 2023 pdf [197321]"
+   ],
+   "solution_key": "",
+   "statement": "4) Graphs (6 points): \na) Explain the Topological Sorting. \nb) Apply the Prim’s algorithm to find the Minimum Spanning Tree of the graph in figure \n(start from vertex A). At each step, specify the current k attribute of each node (you \ncan omit infinity) and the content of the priority queue. You can draw the steps of the \nalgorithm on the images in attachment. \n \n\nProgramming (10 points total, 6 minimum) \n \nGiven a BST and a number K, return the path from the root to the node K as a list of numbers. \nReturn instead NONE if the node is not present in the BST. \n \nNOTE: You can use a Stack or a Queue, but it is not mandatory. \n \n E.g. \n 50 K = 55 -> [50, 60, 55] \n / \\ k = 20 -> [50, 18, 25, 20] \n 18 60 K = 50 -> [50] \n / \\ / \\ K = 75 -> NONE \n 11 25 55 80 \n / / \\ \n 3 20 57 \n \nINSTRUCTIONS FOR THE PC: \n• You will find all the files needed in the home folder on your desktop. \n• Rename the file “Exam_21_07_23_SURNAME_NAME.py” writing your surname and name. \n• IMPORTANT: only the files inside the home folder will be collected at the end of the exam. \nFile outside the folder will be discarded! \n \n \n \n \n \n \n P.Q.: P.Q.: \n \n \n \n P.Q.: P.Q.: \n \n \n \n P.Q.: P.Q.: \n \n \n\n \n \n \n P.Q.: P.Q.: \n \n \n"
+  },
+  {
+   "rank": 3,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 6.0,
+   "papers": [
+    "Exam 21 07 2023 pdf [197321]"
+   ],
+   "solution_key": "",
+   "statement": "3) Trees (6 points): \na) Given the AVL tree in figure add one by one nodes with the following keys: 32, 99, 55 \nNOTE: remember to verify the balancing after each addition and to apply the \nappropriate rotations if needed. \n \n \nb) Write the Preorder, Inorder and Postorder traversal of the tree obtained after the \nprevious question. \nc) Which of the following sentence about Binary Heap is FALSE (justify your answer)? \ni. The insertion of a new element starts from the root. \nii. It is usually implemented as a list. \niii. It can be a full tree."
+  },
+  {
+   "rank": 4,
+   "topic": "linear_structures",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 21 07 2023 pdf [197321]"
+   ],
+   "solution_key": "",
+   "statement": "1) General Concepts (4 points): \na) What is a Stack? \nb) Which are the pros and cons of a Greedy Algorithm?"
+  },
+  {
+   "rank": 5,
+   "topic": "sorting_searching",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 21 07 2023 pdf [197321]"
+   ],
+   "solution_key": "",
+   "statement": "2) Searching and Sorting (4 points): \na) What is the purpose of collision resolution in a Hash Table? \nb) Explain the Insertion Sort algorithm."
+  },
+  {
+   "rank": 6,
+   "topic": "linear_structures",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 09 09 2022 pdf [197320]"
+   ],
+   "solution_key": "Solution Exam 09 09 2022 pdf",
+   "statement": "1) Basic Concepts: \na) What is a Stack? \nb) Given a standard implementation of a Linked List, which of the following operation s is \nthe slowest and why? \ni. Add an element at the beginning of the list. \nii. Add an element in the middle of the list. \niii. Add an element at the end of the list."
+  },
+  {
+   "rank": 7,
+   "topic": "linear_structures",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 14 07 2022 pdf [197319]"
+   ],
+   "solution_key": "Solution Exam 14 07 2022 pdf",
+   "statement": "1) Basic concepts: \na) What is a Queue? \nb) What is the difference between a Queue and a Priority Queue?"
+  },
+  {
+   "rank": 8,
+   "topic": "linear_structures",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 23 06 2022 pdf [197318]"
+   ],
+   "solution_key": "Solution Exam 23 06 2022 pdf",
+   "statement": "1) Basic concepts: \na) What is an Abstract Data Type (ADT)? \nb) Describe the Stack ADT."
+  },
+  {
+   "rank": 9,
+   "topic": "sorting_searching",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 14 07 2022 pdf [197319]"
+   ],
+   "solution_key": "Solution Exam 14 07 2022 pdf",
+   "statement": "2) Sorting: \na) Explain how the Quick Sort algorithm works. \nb) Given the following list of numbers [47, 9, 85, 6, 22, 72, 7, 36, 78, 18, 29] perform the first \niteration of the Quick Sort algorithm assuming that the pivot is the first element."
+  },
+  {
+   "rank": 10,
+   "topic": "sorting_searching",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 09 09 2022 pdf [197320]"
+   ],
+   "solution_key": "Solution Exam 09 09 2022 pdf",
+   "statement": "2) Search and Sort \na) How does the Selection Sort algorithm work? \nb) Which of the search and sort algorithms studied during the course follow the Divide and \nConquer approach?"
+  },
+  {
+   "rank": 11,
+   "topic": "sorting_searching",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 23 06 2022 pdf [197318]"
+   ],
+   "solution_key": "Solution Exam 23 06 2022 pdf",
+   "statement": "2) Sorting: \na) Describe how the Merge Sort algorithm works. \nb) What are the pros and cons of this sorting algorithm?"
+  },
+  {
+   "rank": 12,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 09 09 2022 pdf [197320]"
+   ],
+   "solution_key": "Solution Exam 09 09 2022 pdf",
+   "statement": "4) Graphs: \na) What kind of graph is the one in the following figure? \n \n \n \nb) If the graph in the figure were weighted, would it be possible to apply both Dijkstra's \nand Prim's algorithm? (Justify the answer) \nc) Perform the Depth First Search on the graph in the figure starting from the vertex A (in \ncase of multiple valid directions follow the alphabetic order) . Write the discovery and \nfinish time for each vertex in the graph. At the end, specify how many trees there are in \nthe resulting DFS forest and by which vertices each tree is composed of. NOTE: you can \ndirectly draw the final step, there is no need to draw all the intermediate steps of DFS \none by one. There is no need to color the nodes. \n\nProgramming \n \nGiven a binary Tree and two nodes A and B determine whether A and B are siblings or not. \n \n E.g. \n 35 A=2 and B=12 are siblings \n / \\ A=40 and B=7 are siblings \n 18 10 A=7 and B=21 are NOT siblings \n / \\ / \\ A=18 and B=1 are NOT siblings \n 3 5 7 40 \n / \\ / \\ \n 2 12 21 1 \n \nNOTE: you can treat the problem as “verify if A and B have the same parent node” or “find a node \nthat has A and B as children”. You can use a Stack or a Queue, but it is not mandatory. \n \nINSTR"
+  },
+  {
+   "rank": 13,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 14 07 2022 pdf [197319]"
+   ],
+   "solution_key": "Solution Exam 14 07 2022 pdf",
+   "statement": "4) Graphs: \na) Which are the two most common ways to implement a graph? Explain their respective \npros and cons. \nb) Is Dijkstra’s algorithm the best algorithm to find the shortest path in a graph from one \nsource vertex to one destination vertex? (Justify the answer) \nc) Apply the Dijkstra’s algorithm to the graph in attachment to find the shortest paths from \nvertex A to all the other vertices. At each step specify the current distance value of each \nvertex (you can omit infinity). Write all the paths at the end (e.g., “Path from A to Z: A, \nX, Y, Z”). \n \n \n\nProgramming \n \nGiven a BST and a number K, return the node in the BST that is closest to K, i.e. the node with the minimum \nabsolute difference with K. \n \nE.g.: Given the following BST and K=7, the closest node to K is 5, since |7-5| = 2 is the minimum difference \n 15 \n / \\ \n 10 20 \n / \\ \\ \n 5 12 25 \n \nThe draft code is on your PC \n \nremember to rename the file adding your name and surname at the end. \n \n \nUse these images for drawing the steps of Dijkstra’s algorithm as specified in"
+  },
+  {
+   "rank": 14,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 23 06 2022 pdf [197318]"
+   ],
+   "solution_key": "Solution Exam 23 06 2022 pdf",
+   "statement": "4) Graphs: \n \na) Is it possible to apply a topological sorting to the graph in figure? (Justify the answer) \nb) What is a Minimum Spanning Tree? \nc) Apply the Prim’s algorithm to find the Minimum Spanning Tree of the graph in figure \n(start from vertex A). At each step, specify the current k attribute of each node (you can \nomit infinity). You can draw the steps of the algorithm on the images in attachment. \n \n \n\nProgramming \n \nGiven a Binary Tree, compute and print the sum of all the nodes present in a level for each level of the tree. \nE.g.: \n 20 Sum of level 0 = 20 \n / \\ \n 15 40 Sum of level 1 = 55 \n / \\ \\ \n 10 30 50 Sum of level 2 = 90 \n \\ / \n 22 3 Sum of level 3 = 25 \n \nNOTE: You can use a stack or a queue if you want, but it is not mandatory. \nHINT: Common ways to solve this problem involve a pre-order or a level-order traversal of the tree. \n \nYou can find the draft code with a sample binary tree on your PC desktop. \n \nremember to rename the file adding your name and surname at the end."
+  },
+  {
+   "rank": 15,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 14 07 2022 pdf [197319]"
+   ],
+   "solution_key": "Solution Exam 14 07 2022 pdf",
+   "statement": "3) Trees: \n \n \na) Given the AVL tree in figure add one by one nodes with the following keys: 20, 7, 16 \nNOTE: remember to verify the balancing after each addition and to apply the \nappropriate rotations if needed \nb) Write the preorder, postorder and inorder traversal of the tree obtained after step a. \nc) In which case is preferrable to use a n AVL tree instead of a Red -Black tree and, vice \nversa, in which case is preferrable to use a Red-Black tree instead of an AVL tree?"
+  },
+  {
+   "rank": 16,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 23 06 2022 pdf [197318]"
+   ],
+   "solution_key": "Solution Exam 23 06 2022 pdf",
+   "statement": "3) Trees: \na) Draw the Binary Search Tree (BST) that results from inserting nodes with the following \nkeys: 40, 15, 65, 58, 71, 84, 25, 17, 61, 3, 13, 22 \nb) Now, remove the node with key 15 and redraw the tree accordingly. \nc) After the previous step, is the tree perfectly height balanced? (Justify the answer) \nd) What are the advantages of an AVL tree respect to a generic BST?"
+  },
+  {
+   "rank": 17,
+   "topic": "trees_graphs",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 09 09 2022 pdf [197320]"
+   ],
+   "solution_key": "Solution Exam 09 09 2022 pdf",
+   "statement": "3) Trees: \na) What is a Binary Heap, and which are its more common uses? \nb) Given the following min-heap [2, 4, 5, 8, 6, 9, 7] remove the minimum value and update \nit accordingly. Draw all the steps of the procedure. \nc) Draw the Binary Search Tree (BST) that results from inserting nodes with the following \nkeys: 59, 24, 69, 62, 55, 84, 45, 16, 1, 57, 60, 91."
+  },
+  {
+   "rank": 18,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam 14 07 2022 pdf [197319]"
+   ],
+   "solution_key": "Solution Exam 14 07 2022 pdf",
+   "statement": "question 4b. Write \nthe shortest paths from A to all the vertices (check the other side of the sheet). \n \n \n \n \n \n \n \n \n\n \n \n \n \n \n \nShortest paths found: \n \n• Path from A to B: \n• Path from A to C: \n• Path from A to D: \n• Path from A to E: \n• Path from A to F:"
+  }
+ ],
+ "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES"
+}

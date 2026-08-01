@@ -1,535 +1,755 @@
 {
-  "_note": "Keyword maps used to classify exam items into topics. Deliberately explicit and editable: the topic x session matrix is only as good as these lists, so they are data, not code. An item is assigned the topic whose keywords it hits most often.",
-  "510109": {
-    "_course": "Probability and statistical inference",
-    "discrete_random_variables": [
-      "p.m.f",
-      "pmf",
-      "probability mass",
-      "binomial",
-      "poisson",
-      "geometric",
-      "bernoulli",
-      "ber(",
-      "bin(",
-      "pois("
-    ],
-    "continuous_random_variables": [
-      "density function",
-      "c.d.f",
-      "cdf",
-      "uniform",
-      "exponential",
-      "normal distribution",
-      "gaussian",
-      "unif("
-    ],
-    "expectation_variance": [
-      "expectation",
-      "expected value",
-      "variance",
-      "covariance",
-      "e[",
-      "var(",
-      "cov("
-    ],
-    "independence_conditional": [
-      "independent",
-      "independence",
-      "conditional probability",
-      "conditioned on",
-      "bayes",
-      "conditional"
-    ],
-    "joint_and_transforms": [
-      "joint",
-      "marginal",
-      "random vector",
-      "distribution of",
-      "find the distribution"
-    ],
-    "limit_theorems": [
-      "central limit",
-      "law of large numbers",
-      "converges",
-      "convergence",
-      "in probability",
-      "almost surely"
-    ],
-    "estimation": [
-      "estimator",
-      "unbiased",
-      "maximum likelihood",
-      "point estimation",
-      "sample mean",
-      "estimate"
-    ],
-    "hypothesis_testing": [
-      "hypothesis",
-      "null hypothesis",
-      "significance level",
-      "reject",
-      "p-value",
-      "test statistic"
-    ],
-    "confidence_intervals": [
-      "confidence interval",
-      "statistical interval",
-      "confidence level"
-    ],
-    "descriptive_statistics": [
-      "median",
-      "quartile",
-      "histogram",
-      "boxplot",
-      "frequency distribution"
-    ]
-  },
-  "509478": {
-    "_course": "Knowledge representation and reasoning",
-    "temporal_logic": [
-      "ltl",
-      "temporal",
-      "temporal model",
-      "eventually",
-      "globally",
-      "until",
-      "next state"
-    ],
-    "description_logic": [
-      "sroiq",
-      "description logic",
-      "alc",
-      "tbox",
-      "abox",
-      "concept",
-      "subsumption",
-      "role"
-    ],
-    "rdf_sparql": [
-      "sparql",
-      "rdf",
-      "triple",
-      "select query",
-      "blank node",
-      "select ?",
-      "graph pattern"
-    ],
-    "datalog_rules": [
-      "datalog",
-      "predicate rule",
-      "rule head",
-      "body of the rule",
-      "derivation",
-      "least model"
-    ],
-    "ontology_modelling": [
-      "ontology",
-      "owl",
-      "protege",
-      "protégé",
-      "class hierarchy",
-      "individuals"
-    ],
-    "reasoning_tasks": [
-      "entailment",
-      "entails",
-      "satisfiab",
-      "consistency",
-      "inference",
-      "reasoner",
-      "counterexample"
-    ]
-  },
-  "509481": {
-    "_course": "Calculus",
-    "limits_continuity": [
-      "limit",
-      "continuous",
-      "continuity",
-      "asymptote"
-    ],
-    "derivatives": [
-      "derivative",
-      "differentiab",
-      "tangent",
-      "monoton",
-      "maximum",
-      "minimum",
-      "taylor",
-      "de l'hopital",
-      "hopital"
-    ],
-    "integrals": [
-      "integral",
-      "integrate",
-      "primitive",
-      "antiderivative",
-      "area under"
-    ],
-    "series_sequences": [
-      "series",
-      "sequence",
-      "converge",
-      "diverge",
-      "radius of convergence"
-    ],
-    "multivariable": [
-      "partial derivative",
-      "gradient",
-      "double integral",
-      "two variables",
-      "level curve"
-    ],
-    "differential_equations": [
-      "differential equation",
-      "cauchy problem",
-      "ode",
-      "general solution"
-    ],
-    "theory_questions": [
-      "state and prove",
-      "definition of",
-      "theorem",
-      "prove that",
-      "enunciate"
-    ]
-  },
-  "509487": {
-    "_course": "Fuzzy systems and evolutionary computing",
-    "fuzzy_sets": [
-      "fuzzy set",
-      "membership function",
-      "alpha-cut",
-      "α-cut",
-      "core",
-      "support",
-      "cardinality",
-      "complement"
-    ],
-    "fuzzy_logic_control": [
-      "mamdani",
-      "takagi",
-      "sugeno",
-      "defuzzif",
-      "center of gravity",
-      "centre of gravity",
-      "fuzzy control",
-      "inference rule"
-    ],
-    "fuzzy_relations": [
-      "fuzzy relation",
-      "composition",
-      "t-norm",
-      "s-norm",
-      "owa"
-    ],
-    "evolutionary_algorithms": [
-      "crossover",
-      "mutation",
-      "selection",
-      "population",
-      "genetic",
-      "fitness",
-      "roulette",
-      "evolutionary algorithm",
-      "individuals"
-    ],
-    "fuzzy_clustering": [
-      "cluster",
-      "c-means",
-      "membership matrix",
-      "fuzzy clustering"
-    ],
-    "uncertainty_theory": [
-      "entropy",
-      "possibility",
-      "necessity",
-      "measure of fuzziness"
-    ]
-  },
-  "509488": {
-    "_course": "Text mining and natural language processing",
-    "language_models": [
-      "language model",
-      "n-gram",
-      "perplexity",
-      "bert",
-      "gpt",
-      "transformer",
-      "attention",
-      "llm",
-      "prompting"
-    ],
-    "embeddings": [
-      "embedding",
-      "word2vec",
-      "vector representation",
-      "cosine similarity",
-      "distributional"
-    ],
-    "tokenisation": [
-      "tokeniz",
-      "byte pair",
-      "bpe",
-      "subword",
-      "stemming",
-      "lemmatis"
-    ],
-    "sequence_models": [
-      "sequence-to-sequence",
-      "seq2seq",
-      "decoding",
-      "beam search",
-      "rnn",
-      "lstm",
-      "tagging"
-    ],
-    "evaluation": [
-      "precision",
-      "recall",
-      "f1",
-      "macro-averaging",
-      "micro-averaging",
-      "accuracy",
-      "confusion matrix"
-    ],
-    "linguistics": [
-      "syntax",
-      "morpholog",
-      "semantic",
-      "grammar",
-      "parse tree",
-      "constituent"
-    ]
-  },
-  "509485": {
-    "_course": "Cognitive psychology",
-    "memory": [
-      "memory",
-      "short-term",
-      "long-term",
-      "working memory",
-      "encoding",
-      "retrieval",
-      "forgetting"
-    ],
-    "attention": [
-      "attention",
-      "selective",
-      "spotlight",
-      "divided attention",
-      "cueing"
-    ],
-    "perception": [
-      "perception",
-      "visual",
-      "gestalt",
-      "object recognition",
-      "depth"
-    ],
-    "language_cognition": [
-      "language",
-      "lexical",
-      "speech",
-      "reading"
-    ],
-    "methods": [
-      "experiment",
-      "reaction time",
-      "paradigm",
-      "independent variable",
-      "empirical data",
-      "research paper"
-    ],
-    "executive_control": [
-      "executive",
-      "decision",
-      "problem solving",
-      "reasoning",
-      "cognitive control"
-    ]
-  },
-  "509477": {
-    "_course": "Computer programming, algorithms and data structures",
-    "linear_structures": [
-      "array",
-      "list",
-      "stack",
-      "queue",
-      "linked list"
-    ],
-    "trees_graphs": [
-      "tree",
-      "binary search tree",
-      "graph",
-      "bfs",
-      "dfs",
-      "dijkstra",
-      "heap"
-    ],
-    "sorting_searching": [
-      "sort",
-      "quicksort",
-      "mergesort",
-      "binary search",
-      "insertion sort"
-    ],
-    "complexity": [
-      "complexity",
-      "big-o",
-      "asymptotic",
-      "worst case",
-      "running time"
-    ],
-    "recursion": [
-      "recursion",
-      "recursive",
-      "base case"
-    ],
-    "dynamic_programming_greedy": [
-      "dynamic programming",
-      "greedy",
-      "memoization",
-      "optimal substructure"
-    ],
-    "python_coding": [
-      "write a function",
-      "implement",
-      "python",
-      "def ",
-      "code"
-    ]
-  },
-  "509495": {
-    "_course": "Data mining and knowledge extraction",
-    "er_relational": [
-      "e/r",
-      "entity",
-      "relational schema",
-      "ddl",
-      "primary key",
-      "foreign key"
-    ],
-    "sql_algebra": [
-      "sql",
-      "relational algebra",
-      "select",
-      "join",
-      "query"
-    ],
-    "frequent_itemsets": [
-      "itemset",
-      "apriori",
-      "support",
-      "confidence",
-      "association rule"
-    ],
-    "classification_clustering": [
-      "classif",
-      "cluster",
-      "decision tree",
-      "k-means"
-    ],
-    "preprocessing": [
-      "normalis",
-      "normaliz",
-      "missing value",
-      "data cleaning"
-    ]
-  },
-  "509492": {
-    "_course": "Theoretical and quantum physics for AI",
-    "quantum_states": [
-      "qubit",
-      "state vector",
-      "superposition",
-      "hilbert",
-      "bra",
-      "ket"
-    ],
-    "operators_measurement": [
-      "operator",
-      "hermitian",
-      "eigenvalue",
-      "measurement",
-      "observable"
-    ],
-    "dynamics": [
-      "hamiltonian",
-      "schrodinger",
-      "schrödinger",
-      "time evolution",
-      "unitary"
-    ],
-    "statistical_mechanics": [
-      "entropy",
-      "partition function",
-      "ensemble",
-      "boltzmann",
-      "thermodynamic"
-    ],
-    "information": [
-      "entanglement",
-      "density matrix",
-      "quantum information",
-      "fidelity"
-    ]
-  },
-  "509483": {
-    "_course": "Computational logic",
-    "_note": "Exams ship as SMT-LIB (.smt2) files plus PDFs with worked CNF derivations; solved sets exist for every session 2022-2026.",
-    "propositional_sat": [
-      "cnf",
-      "dpll",
-      "sat",
-      "clause",
-      "satisfiab",
-      "truth table",
-      "tautolog"
-    ],
-    "smt_encoding": [
-      "declare-const",
-      "assert",
-      "check-sat",
-      "smt",
-      "z3",
-      "declare-fun",
-      "get-model"
-    ],
-    "first_order": [
-      "quantifier",
-      "forall",
-      "exists",
-      "herbrand",
-      "unification",
-      "resolution",
-      "skolem"
-    ],
-    "theories": [
-      "array",
-      "arithmetic",
-      "uninterpreted function",
-      "integer",
-      "linear arithmetic",
-      "bitvector"
-    ],
-    "modelling_puzzles": [
-      "domino",
-      "purchase",
-      "puzzle",
-      "schedul",
-      "graph colou",
-      "colour",
-      "party",
-      "martian"
-    ],
-    "temporal_modal": [
-      "temporal",
-      "modal",
-      "kripke",
-      "transition system",
-      "model checking"
-    ]
-  }
+ "_note": "Keyword maps used to classify exam items into topics. Deliberately explicit and editable: the topic x session matrix is only as good as these lists, so they are data, not code. An item is assigned the topic whose keywords it hits most often.",
+ "510109": {
+  "_course": "Probability and statistical inference",
+  "discrete_random_variables": [
+   "p.m.f",
+   "pmf",
+   "probability mass",
+   "binomial",
+   "poisson",
+   "geometric",
+   "bernoulli",
+   "ber(",
+   "bin(",
+   "pois("
+  ],
+  "continuous_random_variables": [
+   "density function",
+   "c.d.f",
+   "cdf",
+   "uniform",
+   "exponential",
+   "normal distribution",
+   "gaussian",
+   "unif("
+  ],
+  "expectation_variance": [
+   "expectation",
+   "expected value",
+   "variance",
+   "covariance",
+   "e[",
+   "var(",
+   "cov("
+  ],
+  "independence_conditional": [
+   "independent",
+   "independence",
+   "conditional probability",
+   "conditioned on",
+   "bayes",
+   "conditional"
+  ],
+  "joint_and_transforms": [
+   "joint",
+   "marginal",
+   "random vector",
+   "distribution of",
+   "find the distribution"
+  ],
+  "limit_theorems": [
+   "central limit",
+   "law of large numbers",
+   "converges",
+   "convergence",
+   "in probability",
+   "almost surely"
+  ],
+  "estimation": [
+   "estimator",
+   "unbiased",
+   "maximum likelihood",
+   "point estimation",
+   "sample mean",
+   "estimate"
+  ],
+  "hypothesis_testing": [
+   "hypothesis",
+   "null hypothesis",
+   "significance level",
+   "reject",
+   "p-value",
+   "test statistic"
+  ],
+  "confidence_intervals": [
+   "confidence interval",
+   "statistical interval",
+   "confidence level"
+  ],
+  "descriptive_statistics": [
+   "median",
+   "quartile",
+   "histogram",
+   "boxplot",
+   "frequency distribution"
+  ]
+ },
+ "509478": {
+  "_course": "Knowledge representation and reasoning",
+  "temporal_logic": [
+   "ltl",
+   "temporal",
+   "temporal model",
+   "eventually",
+   "globally",
+   "until",
+   "next state"
+  ],
+  "description_logic": [
+   "sroiq",
+   "description logic",
+   "alc",
+   "tbox",
+   "abox",
+   "concept",
+   "subsumption",
+   "role"
+  ],
+  "rdf_sparql": [
+   "sparql",
+   "rdf",
+   "triple",
+   "select query",
+   "blank node",
+   "select ?",
+   "graph pattern"
+  ],
+  "datalog_rules": [
+   "datalog",
+   "predicate rule",
+   "rule head",
+   "body of the rule",
+   "derivation",
+   "least model"
+  ],
+  "ontology_modelling": [
+   "ontology",
+   "owl",
+   "protege",
+   "protégé",
+   "class hierarchy",
+   "individuals"
+  ],
+  "reasoning_tasks": [
+   "entailment",
+   "entails",
+   "satisfiab",
+   "consistency",
+   "inference",
+   "reasoner",
+   "counterexample"
+  ]
+ },
+ "509481": {
+  "_course": "Calculus",
+  "limits_continuity": [
+   "limit",
+   "continuous",
+   "continuity",
+   "asymptote"
+  ],
+  "derivatives": [
+   "derivative",
+   "differentiab",
+   "tangent",
+   "monoton",
+   "maximum",
+   "minimum",
+   "taylor",
+   "de l'hopital",
+   "hopital"
+  ],
+  "integrals": [
+   "integral",
+   "integrate",
+   "primitive",
+   "antiderivative",
+   "area under"
+  ],
+  "series_sequences": [
+   "series",
+   "sequence",
+   "converge",
+   "diverge",
+   "radius of convergence"
+  ],
+  "multivariable": [
+   "partial derivative",
+   "gradient",
+   "double integral",
+   "two variables",
+   "level curve"
+  ],
+  "differential_equations": [
+   "differential equation",
+   "cauchy problem",
+   "ode",
+   "general solution"
+  ],
+  "theory_questions": [
+   "state and prove",
+   "definition of",
+   "theorem",
+   "prove that",
+   "enunciate"
+  ]
+ },
+ "509487": {
+  "_course": "Fuzzy systems and evolutionary computing",
+  "fuzzy_sets": [
+   "fuzzy set",
+   "membership function",
+   "alpha-cut",
+   "α-cut",
+   "core",
+   "support",
+   "cardinality",
+   "complement"
+  ],
+  "fuzzy_logic_control": [
+   "mamdani",
+   "takagi",
+   "sugeno",
+   "defuzzif",
+   "center of gravity",
+   "centre of gravity",
+   "fuzzy control",
+   "inference rule"
+  ],
+  "fuzzy_relations": [
+   "fuzzy relation",
+   "composition",
+   "t-norm",
+   "s-norm",
+   "owa"
+  ],
+  "evolutionary_algorithms": [
+   "crossover",
+   "mutation",
+   "selection",
+   "population",
+   "genetic",
+   "fitness",
+   "roulette",
+   "evolutionary algorithm",
+   "individuals"
+  ],
+  "fuzzy_clustering": [
+   "cluster",
+   "c-means",
+   "membership matrix",
+   "fuzzy clustering"
+  ],
+  "uncertainty_theory": [
+   "entropy",
+   "possibility",
+   "necessity",
+   "measure of fuzziness"
+  ]
+ },
+ "509488": {
+  "_course": "Text mining and natural language processing",
+  "language_models": [
+   "language model",
+   "n-gram",
+   "perplexity",
+   "bert",
+   "gpt",
+   "transformer",
+   "attention",
+   "llm",
+   "prompting"
+  ],
+  "embeddings": [
+   "embedding",
+   "word2vec",
+   "vector representation",
+   "cosine similarity",
+   "distributional"
+  ],
+  "tokenisation": [
+   "tokeniz",
+   "byte pair",
+   "bpe",
+   "subword",
+   "stemming",
+   "lemmatis"
+  ],
+  "sequence_models": [
+   "sequence-to-sequence",
+   "seq2seq",
+   "decoding",
+   "beam search",
+   "rnn",
+   "lstm",
+   "tagging"
+  ],
+  "evaluation": [
+   "precision",
+   "recall",
+   "f1",
+   "macro-averaging",
+   "micro-averaging",
+   "accuracy",
+   "confusion matrix"
+  ],
+  "linguistics": [
+   "syntax",
+   "morpholog",
+   "semantic",
+   "grammar",
+   "parse tree",
+   "constituent"
+  ]
+ },
+ "509485": {
+  "_course": "Cognitive psychology",
+  "memory": [
+   "memory",
+   "short-term",
+   "long-term",
+   "working memory",
+   "encoding",
+   "retrieval",
+   "forgetting"
+  ],
+  "attention": [
+   "attention",
+   "selective",
+   "spotlight",
+   "divided attention",
+   "cueing"
+  ],
+  "perception": [
+   "perception",
+   "visual",
+   "gestalt",
+   "object recognition",
+   "depth"
+  ],
+  "language_cognition": [
+   "language",
+   "lexical",
+   "speech",
+   "reading"
+  ],
+  "methods": [
+   "experiment",
+   "reaction time",
+   "paradigm",
+   "independent variable",
+   "empirical data",
+   "research paper"
+  ],
+  "executive_control": [
+   "executive",
+   "decision",
+   "problem solving",
+   "reasoning",
+   "cognitive control"
+  ]
+ },
+ "509477": {
+  "_course": "Computer programming, algorithms and data structures",
+  "linear_structures": [
+   "array",
+   "list",
+   "stack",
+   "queue",
+   "linked list"
+  ],
+  "trees_graphs": [
+   "tree",
+   "binary search tree",
+   "graph",
+   "bfs",
+   "dfs",
+   "dijkstra",
+   "heap"
+  ],
+  "sorting_searching": [
+   "sort",
+   "quicksort",
+   "mergesort",
+   "binary search",
+   "insertion sort"
+  ],
+  "complexity": [
+   "complexity",
+   "big-o",
+   "asymptotic",
+   "worst case",
+   "running time"
+  ],
+  "recursion": [
+   "recursion",
+   "recursive",
+   "base case"
+  ],
+  "dynamic_programming_greedy": [
+   "dynamic programming",
+   "greedy",
+   "memoization",
+   "optimal substructure"
+  ],
+  "python_coding": [
+   "write a function",
+   "implement",
+   "python",
+   "def ",
+   "code"
+  ]
+ },
+ "509495": {
+  "_course": "Data mining and knowledge extraction",
+  "er_relational": [
+   "e/r",
+   "entity",
+   "relational schema",
+   "ddl",
+   "primary key",
+   "foreign key"
+  ],
+  "sql_algebra": [
+   "sql",
+   "relational algebra",
+   "select",
+   "join",
+   "query"
+  ],
+  "frequent_itemsets": [
+   "itemset",
+   "apriori",
+   "support",
+   "confidence",
+   "association rule"
+  ],
+  "classification_clustering": [
+   "classif",
+   "cluster",
+   "decision tree",
+   "k-means"
+  ],
+  "preprocessing": [
+   "normalis",
+   "normaliz",
+   "missing value",
+   "data cleaning"
+  ]
+ },
+ "509492": {
+  "_course": "Theoretical and quantum physics for AI",
+  "quantum_states": [
+   "qubit",
+   "state vector",
+   "superposition",
+   "hilbert",
+   "bra",
+   "ket"
+  ],
+  "operators_measurement": [
+   "operator",
+   "hermitian",
+   "eigenvalue",
+   "measurement",
+   "observable"
+  ],
+  "dynamics": [
+   "hamiltonian",
+   "schrodinger",
+   "schrödinger",
+   "time evolution",
+   "unitary"
+  ],
+  "statistical_mechanics": [
+   "entropy",
+   "partition function",
+   "ensemble",
+   "boltzmann",
+   "thermodynamic"
+  ],
+  "information": [
+   "entanglement",
+   "density matrix",
+   "quantum information",
+   "fidelity"
+  ]
+ },
+ "509483": {
+  "_course": "Computational logic",
+  "_note": "Exams ship as SMT-LIB (.smt2) files plus PDFs with worked CNF derivations; solved sets exist for every session 2022-2026.",
+  "propositional_sat": [
+   "cnf",
+   "dpll",
+   "sat",
+   "clause",
+   "satisfiab",
+   "truth table",
+   "tautolog"
+  ],
+  "smt_encoding": [
+   "declare-const",
+   "assert",
+   "check-sat",
+   "smt",
+   "z3",
+   "declare-fun",
+   "get-model"
+  ],
+  "first_order": [
+   "quantifier",
+   "forall",
+   "exists",
+   "herbrand",
+   "unification",
+   "resolution",
+   "skolem"
+  ],
+  "theories": [
+   "array",
+   "arithmetic",
+   "uninterpreted function",
+   "integer",
+   "linear arithmetic",
+   "bitvector"
+  ],
+  "modelling_puzzles": [
+   "domino",
+   "purchase",
+   "puzzle",
+   "schedul",
+   "graph colou",
+   "colour",
+   "party",
+   "martian"
+  ],
+  "temporal_modal": [
+   "temporal",
+   "modal",
+   "kripke",
+   "transition system",
+   "model checking"
+  ]
+ },
+ "509493": {
+  "_course": "Statistical modelling",
+  "linear_regression": [
+   "linear model",
+   "least squares",
+   "regression line",
+   "slope",
+   "intercept",
+   "design matrix"
+  ],
+  "inference": [
+   "hypothesis",
+   "p-value",
+   "t-test",
+   "f-test",
+   "confidence interval",
+   "significance",
+   "standard error"
+  ],
+  "diagnostics": [
+   "residual",
+   "leverage",
+   "influence",
+   "cook",
+   "qq-plot",
+   "heteroscedastic",
+   "normality"
+  ],
+  "glm": [
+   "logistic",
+   "poisson",
+   "link function",
+   "glm",
+   "deviance",
+   "odds ratio"
+  ],
+  "model_selection": [
+   "aic",
+   "bic",
+   "stepwise",
+   "r-squared",
+   "adjusted r",
+   "cross-valid"
+  ],
+  "anova_factors": [
+   "anova",
+   "factor",
+   "categorical predictor",
+   "interaction",
+   "dummy"
+  ]
+ },
+ "509498": {
+  "_course": "AI for communication and marketing",
+  "generative_ai": [
+   "generative",
+   "prompt",
+   "llm",
+   "chatgpt",
+   "diffusion",
+   "synthetic content"
+  ],
+  "marketing_funnel": [
+   "funnel",
+   "awareness",
+   "conversion",
+   "customer journey",
+   "segmentation",
+   "targeting"
+  ],
+  "recommendation_personalisation": [
+   "recommend",
+   "personalis",
+   "personaliz",
+   "collaborative filtering",
+   "profiling"
+  ],
+  "ethics_regulation": [
+   "gdpr",
+   "privacy",
+   "ethic",
+   "bias",
+   "transparen",
+   "regulation",
+   "consent"
+  ],
+  "metrics_analytics": [
+   "kpi",
+   "ctr",
+   "roi",
+   "engagement",
+   "metric",
+   "a/b test",
+   "analytics"
+  ],
+  "nlp_social": [
+   "sentiment",
+   "social media",
+   "text mining",
+   "chatbot",
+   "topic model"
+  ]
+ },
+ "504464": {
+  "_course": "Organization theory and design",
+  "structure_design": [
+   "structure",
+   "functional",
+   "divisional",
+   "matrix",
+   "departmental",
+   "hierarchy",
+   "span of control"
+  ],
+  "environment_strategy": [
+   "environment",
+   "uncertainty",
+   "strategy",
+   "porter",
+   "miles and snow",
+   "competitive"
+  ],
+  "technology_production": [
+   "technology",
+   "woodward",
+   "perrow",
+   "service technology",
+   "workflow",
+   "interdependence"
+  ],
+  "size_lifecycle": [
+   "life cycle",
+   "bureaucracy",
+   "size",
+   "decline",
+   "growth stage"
+  ],
+  "culture_ethics": [
+   "culture",
+   "values",
+   "ethic",
+   "social responsib",
+   "whistle"
+  ],
+  "innovation_change": [
+   "innovation",
+   "change",
+   "ambidextrous",
+   "product change",
+   "learning organization"
+  ],
+  "conflict_power": [
+   "power",
+   "politics",
+   "conflict",
+   "coalition",
+   "authority",
+   "influence"
+  ],
+  "decision_making": [
+   "decision",
+   "garbage can",
+   "incremental",
+   "carnegie",
+   "rational approach"
+  ]
+ },
+ "509486": {
+  "_course": "Machine learning, ANN and deep learning",
+  "supervised_basics": [
+   "regression",
+   "classif",
+   "overfit",
+   "train",
+   "validation",
+   "loss function",
+   "gradient descent"
+  ],
+  "neural_networks": [
+   "neural network",
+   "perceptron",
+   "backpropagation",
+   "activation",
+   "hidden layer",
+   "mlp"
+  ],
+  "deep_architectures": [
+   "convolution",
+   "cnn",
+   "recurrent",
+   "rnn",
+   "lstm",
+   "transformer",
+   "attention"
+  ],
+  "regularisation": [
+   "dropout",
+   "regularis",
+   "regulariz",
+   "weight decay",
+   "early stopping",
+   "batch norm"
+  ],
+  "evaluation": [
+   "accuracy",
+   "precision",
+   "recall",
+   "f1",
+   "confusion matrix",
+   "roc",
+   "cross-valid"
+  ],
+  "unsupervised": [
+   "cluster",
+   "autoencoder",
+   "dimensionality",
+   "pca",
+   "embedding"
+  ]
+ }
 }
