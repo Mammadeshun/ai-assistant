@@ -10,7 +10,7 @@
   "2023 09 Esame pdf"
  ],
  "n_papers": 6,
- "n_items": 15,
+ "n_items": 20,
  "solution_keys": [
   "Example of answer to the open questions",
   "Lab - Exam Sample Solutions"
@@ -70,10 +70,70 @@
     "Exam 2026-01 [320764]"
    ],
    "solution_key": "",
-   "statement": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING \n29.01.2026 \n \n \n1. [4points] Give the definition of a Gaussian fuzzy set \n2. [4points] Explain the difference between Mamdani and Tagagi-Sugeno rules \n3. [4 points] Give the pseudo-code of the general scheme of an Evolutionary Algorithm \n4. [4 points] Briefly explain the notion of Selection Pressure \n5. [3 points] Compute the composition of the following two fuzzy relations \n \nR y1 y2 y3 \nx1 0.4 1 0.5 \nx2 0 0 0.8 \n \n \n6. [4 points] Let us consider the fuzzy set g: ℕ → [0,1] defined as g(3)=0.1, g(4)=0.3, \ng(5)=0.5, g(6)= 0.7, g(7)=1, g(8)=1, g(9)=0.8, g(10)=0.5,g(11)=0.3, g(12)=0.1 and g(x) \n= 0 for all other values of x. \n \na) Compute the complement of g \nb) Compute the 𝛼-cut of g with 𝛼=0.5 \nc) Compute the center of gravity of g \n \n \n7 [7 points] Let us consider a population of arithmetic expressions (for instance (x*x) – (2+x)) \nwith operations in {+, -, *, /} and values in {0,1,2, x}. Execute one iteration of Genetic \nProgramming with the following steps \na. Randomly generate the initial population of 4 individuals, with full method and \ndepth = 3 \nb. Compute the fitness of all the individuals. The fitness function of an expression e \ni"
+   "statement": "6. [4 points] Let us consider the fuzzy set g: ℕ → [0,1] defined as g(3)=0.1, g(4)=0.3, \ng(5)=0.5, g(6)= 0.7, g(7)=1, g(8)=1, g(9)=0.8, g(10)=0.5,g(11)=0.3, g(12)=0.1 and g(x) \n= 0 for all other values of x. \n  \na) Compute the complement of g \nb) Compute the 𝛼-cut of g with 𝛼=0.5 \nc) Compute the center of gravity of g \n \n \n7 [7 points] Let us consider a population of arithmetic expressions (for instance (x*x) – (2+x)) \nwith operations in {+, -, *, /} and values in {0,1,2, x}. Execute one iteration of Genetic \nProgramming with the following steps \na. Randomly generate the initial population of 4 individuals, with full method and \ndepth = 3 \nb. Compute the fitness of all the individuals. The fitness function of an expression e \nis defined as ∑ |𝑔(𝑖) − 𝑒(𝑖)|2\n𝑖=0  with 𝑔(𝑥) = 𝑥2 + 2𝑥 + 2 \nc. Generate 2 new individuals by crossover of the two most fit parents \nd. Generate 2 new individuals by mutation of two least fit parents  \ne. As survivor selection use the generational replacement \n \nS z1 z2 \ny1 0.2 1 \ny2 0 0.6 \ny3 1 0.4"
   },
   {
    "rank": 5,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "3. [4 points] Give the pseudo-code of the general scheme of an Evolutionary Algorithm"
+  },
+  {
+   "rank": 6,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "4. [4 points] Briefly explain the notion of Selection Pressure"
+  },
+  {
+   "rank": 7,
+   "topic": "fuzzy_sets",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "1. [4points] Give the definition of a Gaussian fuzzy set"
+  },
+  {
+   "rank": 8,
+   "topic": "fuzzy_logic_control",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "2. [4points] Explain the difference between Mamdani and Tagagi-Sugeno rules"
+  },
+  {
+   "rank": 9,
+   "topic": "fuzzy_relations",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 3.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "5. [3 points] Compute the composition of the following two fuzzy relations \n \nR y1 y2 y3 \nx1 0.4 1 0.5 \nx2 0 0 0.8"
+  },
+  {
+   "rank": 10,
    "topic": "evolutionary_algorithms",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -85,7 +145,7 @@
    "statement": "Exercise 1. Write the fitness function for a genetic algorithm aimed at solving the Sudoku puzzle.\nA Sudoku puzzle consists of a 9x9 grid, in which each cell must contain a number between 1 and 9, \naccording to the following rules:\n• Each row must contain exactly one instance of each number (no repetitions on rows)\n• Each column must contain exactly one instance of each number (no repetitions on columns)\n• The grid is divided in 9 3x3 sub-grids: each sub-grid must contain exactly one instance of \neach number (no repetitions on sub-grids)\nYou can assume that the input to the function is given in the form of a matrix indexed as:\nindividual[row][column]\nin which each cell contains a number between 1 and 9."
   },
   {
-   "rank": 6,
+   "rank": 11,
    "topic": "evolutionary_algorithms",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -97,7 +157,7 @@
    "statement": "Exercise 2. Write the fitness function for a genetic algorithm aimed at solving the Knapsack \nproblem. In the Knapsack problem you are tasked with the goal of filling a knapsack (having \nmaximum capacity) with items from a list, maximizing the total value of the knapsack but without \nexceeding the capacity. There is a single copy of each item and each item has a weight and value.\nYou can assume that the input to the function is given in the form of:\n• A maximum weight (integer) capacity\n• An array of weights, indexed as weights[i]\n• An array of values, indexed as values[i]\n• A binary (0/1) array specifying which items are in the knapsack, indexed as individual[i]"
   },
   {
-   "rank": 7,
+   "rank": 12,
    "topic": "evolutionary_algorithms",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -109,7 +169,7 @@
    "statement": "7. Let us consider a population of vectors made of 8 bits. \nExecute one iteration of a Genetic algorithm with the following parameters \na. Random initial population of 4 individuals \nb. Compute the fitness function, defined as the number of positions equal to the vector \n10101010 \nc. Generate 4 new individuals using 2-point crossing and roulette wheel as parent \nselection  \nd. Apply mutation to the new individuals with pm = 1/8 \ne. Survivor selection: age based replacement with elitism"
   },
   {
-   "rank": 8,
+   "rank": 13,
    "topic": "evolutionary_algorithms",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -121,7 +181,7 @@
    "statement": "3. Consider a genome representation using real values. Give an example of mutation and \ncrossover operators."
   },
   {
-   "rank": 9,
+   "rank": 14,
    "topic": "fuzzy_sets",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -133,7 +193,7 @@
    "statement": "6. Let g: N →[0,1] be a fuzzy set defined as g(7)=0.4, g(8)=0.5, g(9)=0.9, g(10)=1, g(11)=0.9, \ng(12)=0.5, g(13)=0.4 g(x) = 0 for all other values of x. \na. Compute the complement of g \nb. Compute the 𝛼-cut of g with 𝛼=0.6 \nc. Compute the center of gravity of g"
   },
   {
-   "rank": 10,
+   "rank": 15,
    "topic": "fuzzy_sets",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -145,7 +205,7 @@
    "statement": "2. Which are the three semantics (meaning/interpretations) that we can give to a fuzzy set?"
   },
   {
-   "rank": 11,
+   "rank": 16,
    "topic": "fuzzy_sets",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -157,7 +217,7 @@
    "statement": "1. What is a trapezoidal fuzzy set?"
   },
   {
-   "rank": 12,
+   "rank": 17,
    "topic": "unclassified",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -169,7 +229,7 @@
    "statement": "5. Explain if (and why) the following relation is a fuzzy equivalence relation: \n \nR X1 X2 X3 \nX1 1 0.2 0.8 \nX2 0.2 1 0.5 \nX3 0.7 0.5 1"
   },
   {
-   "rank": 13,
+   "rank": 18,
    "topic": "unclassified",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -181,7 +241,7 @@
    "statement": "4. In evolutionary computing, what is speciation and how can we obtain it?"
   },
   {
-   "rank": 14,
+   "rank": 19,
    "topic": "fuzzy_logic_control",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,
@@ -193,7 +253,7 @@
    "statement": "Exercise 3. Write a function that implements centroid (center of gravity) defuzzification. You can \nassume that the input to the function is given in the form of:\n• An array of values, indexed as x_values[i]\n• An array of membership function values, indexed as membership[i]"
   },
   {
-   "rank": 15,
+   "rank": 20,
    "topic": "fuzzy_clustering",
    "seen_in_papers": 1,
    "share_of_papers": 0.167,

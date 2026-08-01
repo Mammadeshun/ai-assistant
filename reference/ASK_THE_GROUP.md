@@ -2,7 +2,7 @@
 
 Generated from `data/library.json`, so the counts are the real ones.
 
-The whole archive is 739 documents, 679 extracted questions and 365 published answer keys. It is unevenly spread, and this document is about the thin end.
+The whole archive is 739 documents, 988 extracted questions and 365 published answer keys. It is unevenly spread, and this document is about the thin end.
 
 **September exams with no exam material at all: 2.**
 
@@ -10,27 +10,27 @@ Ranked by exam date, then by how thin the archive is.
 
 | Exam | Course | Papers | Keys | Questions | h |
 |---|---|---|---|---|---|
-| 31 Aug | Information Retrieval And Recommender  | 2 | 0 | 2 | 30 |
+| 31 Aug | Information Retrieval And Recommender  | 2 | 0 | 9 | 30 |
 | 01 Sep | Laboratory Of Machine Learning | 0 | 0 | 0 | 25 |
 | 02 Sep | Ethics, Law And Ai | 0 | 0 | 0 | 28 |
-| 03 Sep | Brain Modelling | 7 | 0 | 20 | 26 |
-| 04 Sep | Data Mining And Knowledge Extraction | 3 | 0 | 14 | 19 |
+| 03 Sep | Brain Modelling | 7 | 0 | 28 | 26 |
+| 04 Sep | Data Mining And Knowledge Extraction | 3 | 0 | 19 | 19 |
 | 08 Sep | Cognitive Psychology | 5 | 0 | 26 | 27 |
 | 09 Sep | Computer Programming, Algorithms And D | 6 | 16 | 19 | 44 |
-| 11 Sep | Calculus | 21 | 4 | 23 | 44 |
-| 15 Sep | Machine Learning, Artificial Neural Ne | 20 | 0 | 107 | 28 |
+| 11 Sep | Calculus | 21 | 4 | 58 | 44 |
+| 15 Sep | Machine Learning, Artificial Neural Ne | 20 | 0 | 108 | 28 |
 | 22 Sep | Theoretical And Quantum Physics For Ai | 3 | 0 | 28 | 30 |
-| 24 Sep | Text Mining And Natural Language Proce | 14 | 0 | 83 | 30 |
+| 24 Sep | Text Mining And Natural Language Proce | 14 | 0 | 84 | 30 |
 | Jan/Feb | Organization Theory And Design | 1 | 0 | 1 | 45 |
-| Jan/Feb | Web And Social Media Search And Analys | 2 | 0 | 2 | 38 |
-| Jan/Feb | Artificial Intelligence For Communicat | 3 | 1 | 3 | 16 |
+| Jan/Feb | Web And Social Media Search And Analys | 2 | 0 | 5 | 38 |
+| Jan/Feb | Artificial Intelligence For Communicat | 3 | 1 | 9 | 16 |
 | Jan/Feb | Statistical Modelling | 12 | 4 | 39 | 22 |
 
 ---
 
 ## 31 Aug — Information Retrieval And Recommender Systems
 
-*Archived: 2 papers, 0 answer keys, 2 extracted questions.*
+*Archived: 2 papers, 0 answer keys, 9 extracted questions.*
 
 **Ask for:** **A past project report and slide deck**, and whether anyone has presented in an autumn session.
 
@@ -54,7 +54,7 @@ Still only a stub page. If the submission windows are closed the course cannot b
 
 ## 03 Sep — Brain Modelling
 
-*Archived: 7 papers, 0 answer keys, 20 extracted questions.*
+*Archived: 7 papers, 0 answer keys, 28 extracted questions.*
 
 **Ask for:** **The project-topics document** (it lives on a course Google Drive, not Kiro).
 
@@ -62,7 +62,7 @@ RESOLVED for the written half — seven past papers arrived, from zero. The proj
 
 ## 04 Sep — Data Mining And Knowledge Extraction
 
-*Archived: 3 papers, 0 answer keys, 14 extracted questions.*
+*Archived: 3 papers, 0 answer keys, 19 extracted questions.*
 
 **Ask for:** **The assignment texts set during delivery**, and any solved mockup.
 
@@ -86,7 +86,7 @@ Six papers, 17 keys, all 2022-2023. Three years stale on an exam with two indepe
 
 ## 11 Sep — Calculus
 
-*Archived: 21 papers, 4 answer keys, 23 extracted questions.*
+*Archived: 21 papers, 4 answer keys, 58 extracted questions.*
 
 **Ask for:** **Part 2 tests and their solutions**, and Part 1 tests from 2025 and 2026.
 
@@ -94,7 +94,7 @@ Six papers, 17 keys, all 2022-2023. Three years stale on an exam with two indepe
 
 ## 15 Sep — Machine Learning, Artificial Neural Networks And Deep Learning
 
-*Archived: 20 papers, 0 answer keys, 107 extracted questions.*
+*Archived: 20 papers, 0 answer keys, 108 extracted questions.*
 
 **Ask for:** **Solved notebooks for any recent paper**, and whether a 'Part 1' exists alongside the 'Part 2' the 2025-26 papers are labelled with.
 
@@ -110,7 +110,7 @@ PARTLY RESOLVED. The recalled module-2 paper shows short computational questions
 
 ## 24 Sep — Text Mining And Natural Language Processing
 
-*Archived: 14 papers, 0 answer keys, 83 extracted questions.*
+*Archived: 14 papers, 0 answer keys, 84 extracted questions.*
 
 **Ask for:** **Part 2 papers**, and solutions to the samples beyond the 2022-2023 open questions.
 
@@ -126,7 +126,7 @@ One document archived, one question extracted. You need ~73% net accuracy across
 
 ## Jan/Feb — Web And Social Media Search And Analysis
 
-*Archived: 2 papers, 0 answer keys, 2 extracted questions.*
+*Archived: 2 papers, 0 answer keys, 5 extracted questions.*
 
 **Ask for:** **A past project, the figures referenced by the June 2025 paper, and the mark split.**
 
@@ -134,7 +134,7 @@ PARTLY RESOLVED: one written paper recovered, so the syllabus is concrete. Its q
 
 ## Jan/Feb — Artificial Intelligence For Communication And Marketing
 
-*Archived: 3 papers, 1 answer keys, 3 extracted questions.*
+*Archived: 3 papers, 1 answer keys, 9 extracted questions.*
 
 **Ask for:** **Whether anyone has an open autumn lab window**, and a copy of a submitted lab project.
 
