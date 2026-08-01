@@ -1,0 +1,202 @@
+{
+ "course": "509495",
+ "documents_resolved": 6,
+ "papers_used": [
+  "Past Assignment 1 (24/10)",
+  "Mockup Exam (07/01/2026)",
+  "Mockup Exam (12/01)"
+ ],
+ "n_papers": 3,
+ "n_items": 19,
+ "solution_keys": [],
+ "papers_without_a_published_key": [
+  "Past Assignment 1 (24/10)",
+  "Mockup Exam (07/01/2026)",
+  "Mockup Exam (12/01)"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "unclassified",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.667,
+   "typical_marks": null,
+   "papers": [
+    "Mockup Exam (07/01/2026) [291497]",
+    "Mockup Exam (12/01) [161728]"
+   ],
+   "solution_key": "",
+   "statement": "3. A can be NULL but B cannot be NULL"
+  },
+  {
+   "rank": 2,
+   "topic": "sql_algebra",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.667,
+   "typical_marks": null,
+   "papers": [
+    "Mockup Exam (07/01/2026) [291497]",
+    "Mockup Exam (12/01) [161728]"
+   ],
+   "solution_key": "",
+   "statement": "4. A and B cannot be NULL\nExample questions\n• What of the following sentences is true for a Data Warehouse?\n1. It must be designed to make everyday business operations on\ndata as fast as possible\n2. Reduction of data redundancy is a priority\n3. Its main query workload is on read-only queries that perform\naggregations\n4. Cannot be implemented using the relational model, since it\ndeals with multidimensional data\nExample questions\n• What of the following sentences is correct about additive\nmeasures\n1. They can be aggregated using the SUM operator, regardless of\nthe considered dimension\n2. They can be aggregated using the SUM operator, w.r.t. the time\ndimension\n3. They might be aggregated using the SUM operator w.r.t. to some\nof the dimensions, but not necessarily all of them\n4. There is no such a thing as additive measures\nExample questions\n• What is the difference between a Flow measure and a Level measure\n1. The first is additive on both time and non-time dimensions, the second\nonly on time.\n2. The first is additive on time dimensions, the second on both.\n3. The first is additive on both time and non-time dimensions, the second\nonly on non-time.\n4. None of them are additive w.r.t. t"
+  },
+  {
+   "rank": 3,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "13. Wemuststoreinformationaboutordersthatabackofficerplacesforacertainbook,atacertaindealer.Forsuchanorder,\nwewanttostoretheorderdate,andtheamountofcopiesrequestedforthatbook.Ifthesamebackofficerordersthesame\nbookfromthesamedealerondifferentdates,wewantto keep the historyofallsuchordersinoursystem.Assumeanorder\nisidentifiedbyauniqueid.\nSincerely\nGiuseppeLibrano"
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "5. A collection is published by a publisher, and we can identify a collection only when both its name and the publisher that\npublishes it are known (there can be collections with the same name, but published by different publishers). In particular,\nwearenotinterestedinkeepinginformationaboutcollections,whenthepublisherisdeletedfromoursystems."
+  },
+  {
+   "rank": 5,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "11. Employeesforthefrontofficealsohaveadeskassigned.Moreover,frontofficersaretheonlyonesthatcanauthorizethe\nrenting of books for a customer (every rent must be authorized by precisely one front officer). So, we also need to keep\ntrackofthespecificfrontofficerthatauthorizedarent,andthedateoftheauthorization."
+  },
+  {
+   "rank": 6,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "8. Weallowourcustomerstorentbooksforacertainamountoftime,delimitedbyastartingdateandanendingdate.They\ncan of course rent different books. If a customer rents the same book multiple times, for different dates, we are only\ninterestedintrackingthelasttime."
+  },
+  {
+   "rank": 7,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "1. Thedatabaseshouldcontaininformationaboutbooks.EachbookischaracterizedbytheISBN.Wealsoneedtostorethe\ntitle,yearofpublication,thepublisherandtheauthorsofthebook"
+  },
+  {
+   "rank": 8,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "7. WealsowanttokeeptrackofallthecustomersofourLibrary.Inparticular,eachcustomerhasaregistrationnumber,and\nwewanttostoretheirname,surnameandbirthdaydateaswell."
+  },
+  {
+   "rank": 9,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "9. Regarding our employees, some of them can have a special role: \"front office\" (i.e., dealing with customers) and \"back\noffice”(i.e.,orderingbooks,etc.)."
+  },
+  {
+   "rank": 10,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "12. Regardingemployeesatthebackoffice,theyaremostlyinchargeoforderingbooksfromourdealers.Dealersareidentified\nbyanid,andwewanttostoretheirnameandaddress."
+  },
+  {
+   "rank": 11,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "6. Regarding publishers, we identify them with their Partita Iva (i.e., the fiscal code), and we need to store their name and\nHeadQuarteraddress."
+  },
+  {
+   "rank": 12,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "10. All our employees have a social security number that identifies them, and we also want to store their names, surnames,\nanddateofbirth."
+  },
+  {
+   "rank": 13,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "4. Abookcanalsobepartofacollection,ofwhichweneedtostorethenameanddateofpublication."
+  },
+  {
+   "rank": 14,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "3. Foreachauthor,wemustrecordtheirnames,birthdaydate,andnationality."
+  },
+  {
+   "rank": 15,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Past Assignment 1 (24/10) [277788]"
+   ],
+   "solution_key": "",
+   "statement": "2. Eachbookiswrittenbyoneormoreauthors."
+  }
+ ],
+ "name": "DATA MINING AND KNOWLEDGE EXTRACTION"
+}

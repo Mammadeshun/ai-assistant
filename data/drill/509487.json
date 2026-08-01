@@ -1,0 +1,209 @@
+{
+ "course": "509487",
+ "documents_resolved": 17,
+ "papers_used": [
+  "Text of the exam - June 2023",
+  "Text of the exam - July 2023",
+  "Exam example 5.6.2025",
+  "Exam 2026-01",
+  "Lab - Exam Exercise Samples",
+  "2023 09 Esame pdf"
+ ],
+ "n_papers": 6,
+ "n_items": 15,
+ "solution_keys": [
+  "Example of answer to the open questions",
+  "Lab - Exam Sample Solutions"
+ ],
+ "papers_without_a_published_key": [
+  "Text of the exam - June 2023",
+  "Text of the exam - July 2023",
+  "Exam example 5.6.2025",
+  "Exam 2026-01",
+  "Lab - Exam Exercise Samples",
+  "2023 09 Esame pdf"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 5.0,
+   "papers": [
+    "Text of the exam - June 2023 [130070]"
+   ],
+   "solution_key": "",
+   "statement": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 22.06.2023 1. [5 punti] Cosa sono fuzzyficazione e defuzzyficazione in un sistema basato su regole fuzzy? Qual è la connessione con un “frame of cognition” (anche noto come “fuzzy partition”)? 2. [3 punti] Si dia la definizione di cardinalità di un insieme fuzzy con un esempio 3. [4 punti] Crossover negli EA: cos’è? Quale è il suo ruolo? Si dia un esempio con individui rappresentati da permutazioni. 4. [5 punti] Si dia lo schema generale di un Algoritmo Evolutivo 5. [8 punti] Siano f e g due fuzzy set triangolari, definiti nella figura seguente dai punti ABC e DEF con A=1, B=2, C=3, D=2.5, E=3.5, F=4.5. \n a. [2] Si dia l’equazione delle funzioni f e g b. [2] Si calcoli l’intersezione di f e g usando una t-norm a propria scelta c. [2] Si calcoli il complemento di f d. [1] Si calcoli il support di f e. [1] Si calcoli l’𝛼-cut di f con 𝛼 = 0.5 5. [7 punti] Si consideri una popolazione di espressioni logiche (ad esempio, (AÚB)Ù(B Þ A)) con operazioni in {Ù, Ú, Þ} e variabili proposizionali in {A,B}. Si esegua un’iterazione di Genetic Programming con I seguenti parametri a. [2] Popolazione iniziale casuale di 4 individui con “full method” e profon"
+  },
+  {
+   "rank": 2,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "2023 09 Esame pdf [233726]"
+   ],
+   "solution_key": "",
+   "statement": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 07.09.2023 1. [4points] Give the definition of the (fuzzy) objective function in fuzzy c-means. Explain the difference with standard k-means objective function and explain the meaning of the parameters involved. / Si dia la definizione della funzione obiettivo in fuzzy c-means. Si spieghi la differenza con la funzione obiettivo di k-means standard e si spieghi il significato dei parametri coinvolti. 2. [4 points] Give the definition of Center of Gravity (CoG) of a fuzzy set. What is the CoG used for?/ Si dia la definizione di Centro di Gravità di un fuzzy set. Per cosa è utilizzato il CoG? 3. [4 points] Complete the following table with the typical setting of a simple genetic algorithm/ Si completi la seguente tabella con le impostazioni tipiche di un algoritmo genetico semplice. Representation Recombination Mutation Parent Selection Survivor Selection 4. [4 points] Mutation in Evolutionary Algorithms: what is it? Which is its role? Give an example with individuals represented by a sequence of integers. /Cos’è la mutazione negli algoritmi evolutivi? Quale è il suo ruolo? Si dia un esempio con individui rappresentati da una sequenza di interi"
+  },
+  {
+   "rank": 3,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Text of the exam - July 2023 [135762]"
+   ],
+   "solution_key": "",
+   "statement": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING 11.07.2023 1. [4points] Give the definition and an example of linguistic variable 2. [4 points] Explain how to define the AND and OR connectives in fuzzy logic and give an example 3. [4 points] Explain how individuals are represented in Particle Swarm Optimization 4. [4 points] What is parent selection? Explain one (and only one) method to do it 5. [8 points] Let us consider the fuzzy set 𝑔:ℕ→[0,1] defined as g(1)=0.2, g(2)=0.4, g(3)=0.6, g(4)= 0.8, g(5)=1, g(6)=1, g(7)=0.8, g(8)=0.6,g(9)=0.4, g(10)=0.2 and g(x) = 0 for all other values of x. a) [1] Compute the core of g b) [1] Compute the complement of g c) [1] Compute the 𝛼-cut of g with 𝛼=0.5 d) [3] Compute the cardinality of g and the ordered weighted average with wi=1/10 e) [2] Compute the center of gravity of g 6. [8 points] Let us consider a population of individuals represented by 6 binary digits, labeled as 𝑥!𝑥\"𝑥#𝑥$𝑥%𝑥&. The fitness function is defined as 𝑓(𝑥)=𝑥!−2𝑥\"+𝑥#+3𝑥$−3𝑥&. Apply a simple Genetic Algorithm with the following parameters: a. [1] Generate random initial population of 4 individuals b. [5] Generate 4 new individuals: parents selected by fitness-proportionate selecti"
+  },
+  {
+   "rank": 4,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": 4.0,
+   "papers": [
+    "Exam 2026-01 [320764]"
+   ],
+   "solution_key": "",
+   "statement": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING \n29.01.2026 \n \n \n1. [4points] Give the definition of a Gaussian fuzzy set \n2. [4points] Explain the difference between Mamdani and Tagagi-Sugeno rules \n3. [4 points] Give the pseudo-code of the general scheme of an Evolutionary Algorithm \n4. [4 points] Briefly explain the notion of Selection Pressure \n5. [3 points] Compute the composition of the following two fuzzy relations \n \nR y1 y2 y3 \nx1 0.4 1 0.5 \nx2 0 0 0.8 \n \n \n6. [4 points] Let us consider the fuzzy set g: ℕ → [0,1] defined as g(3)=0.1, g(4)=0.3, \ng(5)=0.5, g(6)= 0.7, g(7)=1, g(8)=1, g(9)=0.8, g(10)=0.5,g(11)=0.3, g(12)=0.1 and g(x) \n= 0 for all other values of x. \n \na) Compute the complement of g \nb) Compute the 𝛼-cut of g with 𝛼=0.5 \nc) Compute the center of gravity of g \n \n \n7 [7 points] Let us consider a population of arithmetic expressions (for instance (x*x) – (2+x)) \nwith operations in {+, -, *, /} and values in {0,1,2, x}. Execute one iteration of Genetic \nProgramming with the following steps \na. Randomly generate the initial population of 4 individuals, with full method and \ndepth = 3 \nb. Compute the fitness of all the individuals. The fitness function of an expression e \ni"
+  },
+  {
+   "rank": 5,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Lab - Exam Exercise Samples [324525]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 1. Write the fitness function for a genetic algorithm aimed at solving the Sudoku puzzle.\nA Sudoku puzzle consists of a 9x9 grid, in which each cell must contain a number between 1 and 9, \naccording to the following rules:\n• Each row must contain exactly one instance of each number (no repetitions on rows)\n• Each column must contain exactly one instance of each number (no repetitions on columns)\n• The grid is divided in 9 3x3 sub-grids: each sub-grid must contain exactly one instance of \neach number (no repetitions on sub-grids)\nYou can assume that the input to the function is given in the form of a matrix indexed as:\nindividual[row][column]\nin which each cell contains a number between 1 and 9."
+  },
+  {
+   "rank": 6,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Lab - Exam Exercise Samples [324525]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 2. Write the fitness function for a genetic algorithm aimed at solving the Knapsack \nproblem. In the Knapsack problem you are tasked with the goal of filling a knapsack (having \nmaximum capacity) with items from a list, maximizing the total value of the knapsack but without \nexceeding the capacity. There is a single copy of each item and each item has a weight and value.\nYou can assume that the input to the function is given in the form of:\n• A maximum weight (integer) capacity\n• An array of weights, indexed as weights[i]\n• An array of values, indexed as values[i]\n• A binary (0/1) array specifying which items are in the knapsack, indexed as individual[i]"
+  },
+  {
+   "rank": 7,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "7. Let us consider a population of vectors made of 8 bits. \nExecute one iteration of a Genetic algorithm with the following parameters \na. Random initial population of 4 individuals \nb. Compute the fitness function, defined as the number of positions equal to the vector \n10101010 \nc. Generate 4 new individuals using 2-point crossing and roulette wheel as parent \nselection  \nd. Apply mutation to the new individuals with pm = 1/8 \ne. Survivor selection: age based replacement with elitism"
+  },
+  {
+   "rank": 8,
+   "topic": "evolutionary_algorithms",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "3. Consider a genome representation using real values. Give an example of mutation and \ncrossover operators."
+  },
+  {
+   "rank": 9,
+   "topic": "fuzzy_sets",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "6. Let g: N →[0,1] be a fuzzy set defined as g(7)=0.4, g(8)=0.5, g(9)=0.9, g(10)=1, g(11)=0.9, \ng(12)=0.5, g(13)=0.4 g(x) = 0 for all other values of x. \na. Compute the complement of g \nb. Compute the 𝛼-cut of g with 𝛼=0.6 \nc. Compute the center of gravity of g"
+  },
+  {
+   "rank": 10,
+   "topic": "fuzzy_sets",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "2. Which are the three semantics (meaning/interpretations) that we can give to a fuzzy set?"
+  },
+  {
+   "rank": 11,
+   "topic": "fuzzy_sets",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "1. What is a trapezoidal fuzzy set?"
+  },
+  {
+   "rank": 12,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "5. Explain if (and why) the following relation is a fuzzy equivalence relation: \n \nR X1 X2 X3 \nX1 1 0.2 0.8 \nX2 0.2 1 0.5 \nX3 0.7 0.5 1"
+  },
+  {
+   "rank": 13,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Exam example 5.6.2025 [302652]"
+   ],
+   "solution_key": "",
+   "statement": "4. In evolutionary computing, what is speciation and how can we obtain it?"
+  },
+  {
+   "rank": 14,
+   "topic": "fuzzy_logic_control",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Lab - Exam Exercise Samples [324525]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 3. Write a function that implements centroid (center of gravity) defuzzification. You can \nassume that the input to the function is given in the form of:\n• An array of values, indexed as x_values[i]\n• An array of membership function values, indexed as membership[i]"
+  },
+  {
+   "rank": 15,
+   "topic": "fuzzy_clustering",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.167,
+   "typical_marks": null,
+   "papers": [
+    "Lab - Exam Exercise Samples [324525]"
+   ],
+   "solution_key": "",
+   "statement": "Exercise 4. Write a function that implements the centroid update step of the fuzzy c-means \nalgorithm. You can assume that the input to the function is given in the form of:\n• An array of d-dimensional instances, indexed as points[i][d]\n• A matrix of membership values assigning instances to (k) clusters, indexed as \nmemberships[i][c]\n• A regularized parameter m"
+  }
+ ],
+ "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING"
+}

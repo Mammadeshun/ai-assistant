@@ -1,0 +1,234 @@
+{
+ "course": "509492",
+ "documents_resolved": 2,
+ "papers_used": [
+  "Another mock exam",
+  "Yet another mock exam"
+ ],
+ "n_papers": 2,
+ "n_items": 18,
+ "solution_keys": [],
+ "papers_without_a_published_key": [
+  "Another mock exam",
+  "Yet another mock exam"
+ ],
+ "question_types": [
+  {
+   "rank": 1,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "9 Consider the simple symmetric random walk on Z, with transition probabilities\nπx,x+1 =πx,x−1 = 1/2.\nThe master equation for this random walk is an equation for the probability Pn(x) that the state of the system is\nx at time n. If the probability distribution at time n is Pn(−1) = Pn(0) = Pn(1) = 1 /3, or equivalently Pn =(\n..., 0, 0, 1\n3, 1\n3, 1\n3, 0, 0,...\n)\n, what is the probability distribution at timen + 1?\n1. Pn+1 =\n(\n..., 0, 1\n3, 0, 1\n3, 0, 1\n3, 0,...\n)\n2. Pn+1 =\n(\n..., 0, 1\n5, 1\n5, 1\n5, 1\n5, 1\n5, 0,...\n)\n3. Pn+1 =\n(\n..., 0, 1\n8, 1\n4, 1\n4, 1\n4, 1\n8, 0,...\n)\n4. Pn+1 =\n(\n..., 0, 1\n6, 1\n6, 1\n3, 1\n6, 1\n6, 0,...\n)"
+  },
+  {
+   "rank": 2,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "2 Imagine applying the Rayleigh method, with the aim of obtaining a formula for a physical quantityx as a function\nof two other physical quantitiesy andz. Which one of the following statements is true?\n1. The result must be a formula where both y andz appear explicitly in the right-hand side\n2. It may be that the method yields only an inverse formula, such as z =f(x,y ), but not a direct one, of the form\nx =f(y,z )\n3. Other physical quantities, besides y andz may appear in the formula obtained by the method\n4. The method may fail to specify completely the function f inx =f(y,z )"
+  },
+  {
+   "rank": 3,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "5 The dynamic of the logistic map xn+1 = rxn(1−xn) changes dramatically when the parameter r is varied in the\nrange (0,4). Which one of the following sentences is false?\n1. There are values of r for which there is a single fixed point and it is unstable\n2. For r small enough, the only fixed point isx = 0\n3. There are values of r for which one of the fixed points is an unstable spiral\n4. For every positive integer k there are values ofr such that there exists a cycle of period 2k"
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "6 The dynamic of the logistic mapxn+1 =rxn(1−xn) changes dramatically when the parameterr is varied in the\nrange (0, 4). Which one of the following sentences is false?\n1. there are values of r for which there are two fixed points and they are both spirals\n2. there is an infinite number of bifurcations in a finite interval of r\n3. for r large enough, the system is chaotic\n4. there are values of r for which there are two fixed points and they are both unstable"
+  },
+  {
+   "rank": 5,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "2 A model electric train can run at diﬀerent speeds, controlled by a knob that adjusts a parameterp. The train’s speed\nscales with this parameter asv∝pα. However, the faster the train moves, the less time it can run before exhausting its\nenergy. The maximum running time scales with speed as t∝ v−β. Therefore, there is a maximum distance d that the\ntrain can travel. Determine howd scales with the control parameterp.\n1. d∝p1−β\n2. d∝pα−β\n3. d∝p1−αβ\n4. d∝pα−αβ"
+  },
+  {
+   "rank": 6,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "4 The graph describing the transitions between the states in a deterministic discrete-time discrete-state dynamical\nsystem satisfies only one of the following properties. Which one?\n1. Each node must have exactly one outgoing arrow\n2. The number of connected components always equals the number of fixed points\n3. If there are transient states then there cannot be any cycle of period larger than 1\n4. Each transient state must have exactly one incoming arrow"
+  },
+  {
+   "rank": 7,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "7 The following sentences are statements about variational principles for an action. Which one is correct?\n1. The property of locality for an action implies that the action is a real function, instead of a functional\n2. A variational principle always requires maximizing the action\n3. The Euler-Lagrange equations allow to compute the action given the Lagrangian\n4. Stationarity of the action implies the Euler-Lagrange equations for the Lagrangian"
+  },
+  {
+   "rank": 8,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "3 A miniature model of a building has volumeV . The roof of this model is covered with solar panels, which generate\npowerP on a sunny day. A larger building is built based on this model, with its volume scaled up by a factor λ >1\n(i.e., the volume V′ of the larger building is V′ = λV ). How much power P′ will the solar panels on the roof of the\nlarger building generate?\n1. P′∝λ1/3P\n2. P′∝λ1/2P\n3. P′∝λ2/3P\n4. P′∝λ3/2P"
+  },
+  {
+   "rank": 9,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "3 The following sentences regard the representation of a deterministic discrete-time discrete-state dynamical system\nas a graph. Which one is true?\n1. if a connected component contains a cycle, it cannot contain a transient state\n2. If there exists a nontrivial conserved quantity, then there are no transient states\n3. A cycle of period 1 is a fixed point\n4. A given point can have more than one outgoing arrows"
+  },
+  {
+   "rank": 10,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "8 Consider the dynamical system (with continuous time and continuous state) specified by the following ordinary\ndiﬀerential equation:\n˙x(t) = 1− (1−x)4.\nThis system has 2 fixed points,x = ¯x1 andx = ¯x2, where ¯x1 < ¯x2. Which one of the following statements is true?\n1. both ¯x1 and ¯x2 are stable\n2. both ¯x1 and ¯x2 are unstable\n3. ¯x1 is stable and ¯x2 is unstable\n4. ¯x1 is unstable and ¯x2 is stable"
+  },
+  {
+   "rank": 11,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "5 Consider the dynamical systemxn+1 =f(xn), with discrete timen and discrete statex∈{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.\nThe functionf(x) is defined as\nf(x) = 3x− 5\n⌊x\n2\n⌋\n,\nwhere⌊·⌋ denotes the floor function.\nWhich one of the following statements is true?\n1. The largest cycle has period 4\n2. The smallest cycle has period 2\n3. There are 2 connected components\n4. There are no transient states"
+  },
+  {
+   "rank": 12,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "1 Consider the dimensional consistency of the formula\neax =by,\nwherex,y,a andb are physical quantities. Which one of the following statements is correct?\n1. x must be dimensionless\n2. The dimensions of x must be equal to those ofy\n3. The dimensions of x must be the equal to those ofa\n4. The dimensions of y must be the inverse of those ofb"
+  },
+  {
+   "rank": 13,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "7 Consider the dynamical systemxn+1 =f(xn), with discrete timen and continuous statex∈ R, specified by the\nfunction\nf(x) =x sin(α)\nwhere 0<α< 2π is a real parameter. What is the set of values ofα for which the fixed pointx = 0 is a stable spiral\n(not considering edge cases)?\n1. 0<α<π\n2. π <α< 2π\n3. π\n2 <α< 3\n2π\n4. 0<α< 2π"
+  },
+  {
+   "rank": 14,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "6 Consider the continuous-time dynamical system ˙x =f(x). The functionf is defined as\nf(x) =e1−ax− 1\nwherea is a real positive parametera> 0. There is a fixed point at ¯x = 1/a. This fixed point is\n1. always stable\n2. always unstable\n3. stable for a> 1 and unstable otherwise\n4. stable for a< 1 and unstable otherwise"
+  },
+  {
+   "rank": 15,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Another mock exam [290672]"
+   ],
+   "solution_key": "",
+   "statement": "1 What is a suﬀicient condition for the formula\nex2/a2\n=x\nto be dimensionally consistent? (x anda are physical quantities)\n1. x anda have the same dimensions\n2. the dimensions of a are the inverse of those ofx\n3. x has the dimensions of length\n4. x anda are dimensionless"
+  },
+  {
+   "rank": 16,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "9 Cast the second-order diﬀerential equation ¨x + ˙x + 1 = 0 into the standard form for a dynamical system. What is\nthe (vector) function appearing in the right-hand side of the first-order diﬀerential equation?\n1. (y,− ˙x− 1)\n2. (y,−y− 1)\n3. (y,z,− ˙x− 1)\n4. (y,z,−y− 1)"
+  },
+  {
+   "rank": 17,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "8 Consider a random walk on the integers Z, started fromx0 = 0, with transition probabilities\nπx,x−2 =a, π x,x−1 = a\n2, π x,x+3 = 1− 3\n2a\nwherea is a parameter. What is the expected position a/f_tern steps?\n1. (a + 3)n\n2. (a + 3)√n\n3. (3− 7a)n\n4. (3− 7a)√n"
+  },
+  {
+   "rank": 18,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.5,
+   "typical_marks": null,
+   "papers": [
+    "Yet another mock exam [290936]"
+   ],
+   "solution_key": "",
+   "statement": "4 Consider the dynamical system xn+1 = f(xn), with discrete time n and discrete state x∈S ={1, 2, 3,..., 100}.\nThe functionf(x) is defined as\nf(x) =\n{\nx/5 ifx is a multiple of 5\nx + 1 otherwise\nHow many cycles are there?\n1. 0\n2. 1\n3. 5\n4. 20"
+  }
+ ],
+ "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI"
+}
