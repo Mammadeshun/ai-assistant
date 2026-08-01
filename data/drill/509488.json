@@ -17,7 +17,7 @@
   "TMNLP   embeddings matching exercise"
  ],
  "n_papers": 13,
- "n_items": 82,
+ "n_items": 83,
  "solution_keys": [
   "TEXT MINING OPEN QUESTIONS   ANSWERS 2022 2023"
  ],
@@ -478,10 +478,10 @@
    "share_of_papers": 0.077,
    "typical_marks": null,
    "papers": [
-    "[TMNLP 22_23] Exam questions sample [321140]"
+    "TMNLP   TF IDF exercise [extra]"
    ],
    "solution_key": "",
-   "statement": "2. GiventhefollowingreferenceandtranslationsprovidedbysystemsAandB\nReference:Acatisonthetable.SystemA:Apenisonthemat.SystemB:Thecatwasonadesk.\nProvidethedefinitionofBLEUscoreandcalculateitsvalue(BLEUupto4-gram)forbothtranslations.Additionally,whatareadequacyandfluencyinthecontextofmachinetranslations?Whataretheproblemswithhumanevaluationinthecontextofmachinetranslations?"
+   "statement": "Provide the definition of TIDE for caleulati\n\nthe index terms; and calcula\ntable. V\n\ning the weight to be assigned to\nte this value for atleast tw\n\n0 of the terms in the\nhat is the advantage of using TF-IDF instead o\n\nfjust TF?\n4. Given the following reference and translations provided by ystems and 8\nReference: The large dog chased the man across the street\nSystem Ai the big dog chases a man across the street\nSystem B: A large mammal\n\n4\n\n'a5ed a person across the street. 4"
   },
   {
    "rank": 35,
@@ -493,10 +493,22 @@
     "[TMNLP 22_23] Exam questions sample [321140]"
    ],
    "solution_key": "",
-   "statement": "5. WhatismeantbytheSparsitychallengeinNLP?Pleaseelaborateonthisconcept."
+   "statement": "2. GiventhefollowingreferenceandtranslationsprovidedbysystemsAandB\nReference:Acatisonthetable.SystemA:Apenisonthemat.SystemB:Thecatwasonadesk.\nProvidethedefinitionofBLEUscoreandcalculateitsvalue(BLEUupto4-gram)forbothtranslations.Additionally,whatareadequacyandfluencyinthecontextofmachinetranslations?Whataretheproblemswithhumanevaluationinthecontextofmachinetranslations?"
   },
   {
    "rank": 36,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.077,
+   "typical_marks": null,
+   "papers": [
+    "[TMNLP 22_23] Exam questions sample [321140]"
+   ],
+   "solution_key": "",
+   "statement": "5. WhatismeantbytheSparsitychallengeinNLP?Pleaseelaborateonthisconcept."
+  },
+  {
+   "rank": 37,
    "topic": "language_models",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,
@@ -508,7 +520,7 @@
    "statement": "Question 2: What is the objective of text representation? What is meant by contextualized word embedding? Describe ELMo and BERT methods for text representation. Answer: The objective of text representation is to associate each word in a vocabulary with a vector that identifies the word, captures morphological/syntactic/semantic similarities, and helps solve downstream NLP tasks. • Contextualized Word Embedding: Traditional embeddings give the same static vector to a word type regardless of context, causing Meaning Conflation Deficiency (cannot handle polysemy). Contextualized embeddings dynamically change a word's vector depending on the entire sentence it appears in. • ELMo vs BERT: o ELMo: Uses a deep bidirectional LSTM (BiLSTM) language model. It combines left-to-right and right-to-left context shallowly by concatenating their internal states. o BERT: Uses a deep Bidirectional Transformer Encoder. It introduces the Masked Language Model (MLM) pre-training task, allowing tokens to look at context from both sides simultaneously without seeing themselves."
   },
   {
-   "rank": 37,
+   "rank": 38,
    "topic": "embeddings",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,
@@ -518,18 +530,6 @@
    ],
    "solution_key": "",
    "statement": "5. What is meant by the Sparsity challenge in NLP? Please elaborate on this\nconcept.\n3- An ngram language  model is a count based language model which tries to predict the probability\nof the next word using the n-1 previous words, so it needs the counts of the n-1 previous words in the\ntext and the counts of how many times the n-th word that follows has appeared after the previous words.\n \nA sentence can be computed by continous sampling, we can use beam search to compute its probability.\nData sparsity poses 2 challenges to ngram lms, 1: If some word W has never followed the previous n-1 \nwords in the training set, then it has probability 0 to be predicted, we don't want this to happen so we have\nmany different solutions (add one smoothing, good turing, linear interpolation with a n-1 ngram, Absolute disc\n2: if w1,...wn-1 has never appeared in the text we can't compute anything, so we use w2, ..., wn-1 in that case\n4- Positional encoding is a technique used in transformer embeddings to encode the position in \nthe word embedding itself. it is necessary because, differently from other techniques using RNN they have\nno time relation.\nPositional encoding should be deterministic (positi"
-  },
-  {
-   "rank": 38,
-   "topic": "embeddings",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.077,
-   "typical_marks": null,
-   "papers": [
-    "TMNLP   TF IDF exercise [extra]"
-   ],
-   "solution_key": "",
-   "statement": "[OCR from a photograph - expect transcription errors]\n\nSloe (23\n\n3. Given the following table\n\nthat contains the te\nferm frequencies in\nDoct, Doc2, and Doc3, ee are\n\nauto\nbest\n\nProvide the definition of TIDE for caleulati\n\nthe index terms; and calcula\ntable. V\n\ning the weight to be assigned to\nte this value for atleast tw\n\n0 of the terms in the\nhat is the advantage of using TF-IDF instead o\n\nfjust TF?\n4. Given the following reference and translations provided by ystems and 8\nReference: The large dog chased the man across the street\nSystem Ai the big dog chases a man across the street\nSystem B: A large mammal\n\n4\n\n'a5ed a person across the street. 4\n\nProvide the definition of BLEU score and calcu\n\nlate this value for both\ntranslations. Additionall\n\n', Provide a description of an alternative method for\ncomputing automatic evaluation of translations seen incl\n\n5. Provide a formal definition of text c\n\nsification, Moreover, what is the\ndifference between hard and soft classification? What are the ty\n\nypes of\nClassification discussed in class? Provide a description of each.\n\n6. What is the objective of text representation? What is meant by word\nembedding?-Provide an overview of the count"
   },
   {
    "rank": 39,
@@ -545,6 +545,18 @@
   },
   {
    "rank": 40,
+   "topic": "embeddings",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.077,
+   "typical_marks": null,
+   "papers": [
+    "TMNLP   TF IDF exercise [extra]"
+   ],
+   "solution_key": "",
+   "statement": "Provide the definition of BLEU score and calcu\n\nlate this value for both\ntranslations. Additionall\n\n', Provide a description of an alternative method for\ncomputing automatic evaluation of translations seen incl\n\n5. Provide a formal definition of text c\n\nsification, Moreover, what is the\ndifference between hard and soft classification? What are the ty\n\nypes of\nClassification discussed in class? Provide a description of each.\n\n6. What is the objective of text representation? What is meant by word\nembedding?-Provide an overview of the count-bo:\n\nrepresentation. \\/\n\n‘methods for text\n\n2\n7. What is the Sparsity issue in NLP:"
+  },
+  {
+   "rank": 41,
    "topic": "sequence_models",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,
@@ -556,7 +568,7 @@
    "statement": "2i) = cos(pos/10000^(2i/dmodel)) PE(pos, 2i+1) = cos(pos/10000^(2i/dmodel)) \n2023 – 2024 Question: What are the decoding algorithms in sequence-to-sequence models? What is beam search (e.g. its core idea) and why it has been introduced? Provide some properties of beam search. What are the stopping criteria for decoding? Answer:"
   },
   {
-   "rank": 41,
+   "rank": 42,
    "topic": "tokenisation",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,
@@ -568,7 +580,7 @@
    "statement": "Question 3: Explain the concept of Positive Pointwise Mutual Information (PPMI) and discuss its advantages over raw word frequency counts in measuring word association. Provide an example to illustrate how PPMI is computed (including its formula). What are the solutions for handling rare words with PPMI? Why do we need them? Answer: PPMI is a metric that measures whether two words co-occur within a context window more than expected by independent chance. Since raw PMI ranges down to −∞, and negative values are mathematically unreliable without huge corpora, PPMI simply replaces all negative PMI values with 0. • Advantage over raw frequency: Raw frequency counts are biased toward very frequent words (like stop words) that carry no real association. PPMI asks whether a context word is particularly informative about the target word instead. Formula: 𝑝𝑚𝑖#$=log%&!\"&!∗⋅&∗\" where 𝑝#$=(!\"∑∑(!\" 𝑝𝑝𝑚𝑖#$=max5𝑝𝑚𝑖#$,08 • Example: If 𝑝(\"digital\", \"computer\")=0.06, marginal 𝑝(\"digital\")=0.06, and marginal 𝑝(\"computer\")=0.07: \nRatio=0.060.06×0.07=14.28⟹𝑝𝑚𝑖=log%(14.28)≈3.84 Since 3.84>0, 𝑝𝑝𝑚𝑖=3.84. Rare Words Solutions: PMI is highly biased toward infrequent events because rare words get artificiall"
   },
   {
-   "rank": 42,
+   "rank": 43,
    "topic": "evaluation",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,
@@ -580,7 +592,7 @@
    "statement": "3) What are the five challenges of NLP that we have seen in class? \nExplain each of them. \n \n \n1- Productivity; 2 - Ambiguity; 3 - Variability 4- Diversity; 5- Sparsity\n2)Text classification = predicting to which category in a fixed amount of categories a document\nor a text item belongs to, in particular we have \n-Binary classification (document can belong to exactly one of 2 classes)\n-SLMC (Single label multi class) = a document can belong exactly to one of n classes\n-MLMC (Multi label multi class) = a document can belong to more classes in n total classes\nIt can be framed as n different binary classifications.\n-Ordinal classification = Classes have a total ordering, the document belongs to only one.\nEfficiency = time and resource can be optimized, training is done only once so is less import.\nEffectiveness = how well the classifier performs on a given measure, each type of classification\nuses its measure (binary --> f1; SLMC-->Accuracy; MLMC -->Macro/micro avg F1"
   },
   {
-   "rank": 43,
+   "rank": 44,
    "topic": "linguistics",
    "seen_in_papers": 1,
    "share_of_papers": 0.077,

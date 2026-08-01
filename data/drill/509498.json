@@ -7,7 +7,7 @@
   "AI4CM LabExam Part3 pdf"
  ],
  "n_papers": 3,
- "n_items": 3,
+ "n_items": 9,
  "solution_keys": [
   "marketing campaign csv"
  ],
@@ -19,6 +19,91 @@
  "question_types": [
   {
    "rank": 1,
+   "topic": "recommendation_personalisation",
+   "seen_in_papers": 2,
+   "share_of_papers": 0.667,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part2 pdf [322615]",
+    "AI4CM LabExam Part3 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb) or standard Python .py scripts: Containing clean, commented \nPython code \n2. A Presentation (max 2 Slides .pdf format): Summarizing key findings and marketing \nrecommendations for non-technical stakeholders \nTask A: Data Audit & Cleaning \n• Data Audit & Quality: Identify missing values, handle duplicate records, and investigate data \nanomalies.  \n• Data Cleaning & Preprocessing: Develop a pipeline to filter out invalid transactions, handle \nreturns/cancellations, and manage extreme outliers in order values or quantities.  \nTask B: Exploratory Data Analysis (EDA) \n• Visualize the distribution of purchase frequency, recency, and customer spend. Highlight \ninsights regarding customer retention.  \n• RFM Feature Engineering: Transform the transactional data into a customer-level table \ncontaining Recency, Frequency, Monetary Value, and T (customer tenure).  \n \nTask C: Modeling & Evaluation \n1. Probabilistic Modeling (BTYD): \no Fit a BG/NBD Model to predict the expected number of future purchases and the \nprobability of a customer being \"alive\" .  \no Fit a Gamma-Gamma Model to estimate the av"
+  },
+  {
+   "rank": 2,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part2 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "2. Dataset \nThe file \"data.xlsx\" includes features such as: \n• CustomerID - Unique customer ID \n• Churn - Churn Flag \n• Tenure - Tenure of customer with the company \n• PreferredLoginDevice - Preferred login device of customer \n• CityTier - City tier \n• WarehouseToHome - Distance in between warehouse to home of customer \n• PreferredPaymentMode - Preferred payment method of customer \n• Gender - Gender of customer \n• HourSpendOnApp - Number of hours spent on mobile application or website \n• NumberOfDeviceRegistered - Total number of deceives is registered on particular customer \n• PreferedOrderCat - Preferred order category of customer in last month \n• SatisfactionScore - Satisfactory score of customer on service \n• MaritalStatus - Marital status of customer \n• NumberOfAddress - Total number of address \n• Complain - Any complaint has been raised in last month \n• OrderAmountHikeFromlastYear - Percentage increases in order from last year \n• CouponUsed - Total number of coupon used last month \n• OrderCount - Total number of orders placed last month \n• DaySinceLastOrder - Day Since last order \n• CashbackAmount - Average cashback in last month"
+  },
+  {
+   "rank": 3,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part3 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "1. Business Scenario \nYou have been appointed as the Lead Data Scientist for Olist, the largest Brazilian e-commerce \nmarketplace. The Marketing Department is planning its budget allocation and loyalty campaigns for \nthe upcoming quarter. They need to understand the future value of their current customer base to \nmake data-driven decisions. \nYour goal is to build a predictive framework that estimates the Customer Lifetime Value (CLTV) using \nboth probabilistic models and machine learning techniques."
+  },
+  {
+   "rank": 4,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part3 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "2. Dataset \nYou will use the \"Brazilian E-Commerce Public Dataset by Olist\" (available on Kaggle \nhttps://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). \n• Focus: You must aggregate the various relational tables (orders, customers, payments, items) \nto create a transactional dataset suitable for CLTV analysis.  \n• Timeframe: Define a specific \"Calibration\" period to train your models and a \"Holdout\" period \nto validate your predictions."
+  },
+  {
+   "rank": 5,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part1 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "1. Business Scenario \nYou have been hired as a Junior Data Scientist by a retail company. The Marketing Department has \ncollected two years’ worth of data on their customers but lacks the analytical framework to use it \neffectively. \nYour goal is to perform a complete end-to-end analysis - from assessing data integrity to identifying \nhigh-value customer segments - to drive a data-driven communication strategy."
+  },
+  {
+   "rank": 6,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part2 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "1. Business Scenario \nYou are a Data Scientist for a leading E-commerce platform. The Marketing department is concerned \nabout customer retention. You have been provided with a dataset named \"data.xlsx\" containing \ncustomer profiles, satisfaction scores, and transaction summaries.  \nYour goal is to build a predictive model to identify customers at risk of churning and provide actionable \nmarketing insights."
+  },
+  {
+   "rank": 7,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "AI4CM LabExam Part1 pdf [322615]"
+   ],
+   "solution_key": "",
+   "statement": "2. Dataset \nYou will use the marketing_campaign.csv dataset:"
+  },
+  {
+   "rank": 8,
    "topic": "marketing_funnel",
    "seen_in_papers": 1,
    "share_of_papers": 0.333,
@@ -27,31 +112,7 @@
     "AI4CM LabExam Part1 pdf [322615]"
    ],
    "solution_key": "",
-   "statement": "AI for Communication and Marketing \nLab Exam – part 1 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou have been hired as a Junior Data Scientist by a retail company. The Marketing Department has \ncollected two years’ worth of data on their customers but lacks the analytical framework to use it \neffectively. \nYour goal is to perform a complete end-to-end analysis - from assessing data integrity to identifying \nhigh-value customer segments - to drive a data-driven communication strategy. \n2. Dataset \nYou will use the marketing_campaign.csv dataset: \n \n\n \n3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb): Containing clean, commented Python code \n2. A Presentation (2-3 Slides .pdf format): Summarizing key findings and marketing \nrecommendations for non-technical stakeholders \nTask A: Data Audit & Quality \n• Perform a Data Audit: identify missing values, duplicates and data type inconsistencies \n• Identify and handle Outliers \n• Document your cleaning process: Why did you choose to drop, impute, or transform specific \ndata points? \nTask B: Exploratory Data Analysis (EDA) \n• Analyze the correlation between socio-demographic features a"
-  },
-  {
-   "rank": 2,
-   "topic": "recommendation_personalisation",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.333,
-   "typical_marks": null,
-   "papers": [
-    "AI4CM LabExam Part2 pdf [322615]"
-   ],
-   "solution_key": "",
-   "statement": "AI for Communication and Marketing \nLab Exam – part 2 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou are a Data Scientist for a leading E-commerce platform. The Marketing department is concerned \nabout customer retention. You have been provided with a dataset named \"data.xlsx\" containing \ncustomer profiles, satisfaction scores, and transaction summaries. \nYour goal is to build a predictive model to identify customers at risk of churning and provide actionable \nmarketing insights. \n2. Dataset \nThe file \"data.xlsx\" includes features such as: \n• CustomerID - Unique customer ID \n• Churn - Churn Flag \n• Tenure - Tenure of customer with the company \n• PreferredLoginDevice - Preferred login device of customer \n• CityTier - City tier \n• WarehouseToHome - Distance in between warehouse to home of customer \n• PreferredPaymentMode - Preferred payment method of customer \n• Gender - Gender of customer \n• HourSpendOnApp - Number of hours spent on mobile application or website \n• NumberOfDeviceRegistered - Total number of deceives is registered on particular customer \n• PreferedOrderCat - Preferred order category of customer in last month \n• SatisfactionScore - Satisfactory score of custom"
-  },
-  {
-   "rank": 3,
-   "topic": "recommendation_personalisation",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.333,
-   "typical_marks": null,
-   "papers": [
-    "AI4CM LabExam Part3 pdf [322615]"
-   ],
-   "solution_key": "",
-   "statement": "AI for Communication and Marketing \nLab Exam – part 3 \nAcademic Year: 2025/2026 \n \n1. Business Scenario \nYou have been appointed as the Lead Data Scientist for Olist, the largest Brazilian e-commerce \nmarketplace. The Marketing Department is planning its budget allocation and loyalty campaigns for \nthe upcoming quarter. They need to understand the future value of their current customer base to \nmake data-driven decisions. \nYour goal is to build a predictive framework that estimates the Customer Lifetime Value (CLTV) using \nboth probabilistic models and machine learning techniques. \n2. Dataset \nYou will use the \"Brazilian E-Commerce Public Dataset by Olist\" (available on Kaggle \nhttps://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). \n• Focus: You must aggregate the various relational tables (orders, customers, payments, items) \nto create a transactional dataset suitable for CLTV analysis. \n• Timeframe: Define a specific \"Calibration\" period to train your models and a \"Holdout\" period \nto validate your predictions. \n3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb) or standard Python .py scripts: Containing clean, commented \nPytho"
+   "statement": "3. Exam Requirements \nYour submission must consist of two parts: \n1. A Jupyter Notebook (.ipynb): Containing clean, commented Python code \n2. A Presentation (2-3 Slides .pdf format): Summarizing key findings and marketing \nrecommendations for non-technical stakeholders \nTask A: Data Audit & Quality  \n• Perform a Data Audit: identify missing values, duplicates and data type inconsistencies \n• Identify and handle Outliers  \n• Document your cleaning process: Why did you choose to drop, impute, or transform specific \ndata points? \nTask B: Exploratory Data Analysis (EDA)  \n• Analyze the correlation between socio-demographic features and total spending \n• Visualize the distribution of purchases across different channels \n• Communication Insight: Identify one \"hidden\" trend in the data that could be used for a \ntargeted promotional campaign \nTask C: RFM Calculation & Heuristic Segmentation \n• Engineer the Recency, Frequency, and Monetary features \n• Assign scores to customers based on quintiles \n• Define at least 4 segments based on these scores \nTask D: Unsupervised Learning (Cluster Analysis) \n• Apply the K-Means algorithm to segment customers \n• Justify the optimal number of clusters u"
   }
  ],
  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING"

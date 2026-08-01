@@ -432,8 +432,11 @@ function qList(code,filter){
     qs.map(q=>`<div class="card"><div>
       <span class="pill a">${esc(q.topic)}</span>
       ${q.marks?`<span class="pill">${q.marks} marks</span>`:''}
-      ${q.mcq?'<span class="pill g">multiple choice</span>':''}</div>
+      ${q.mcq?'<span class="pill g">multiple choice</span>':''}
+      ${q.answer?'<span class="pill g">answer published</span>':''}</div>
       <blockquote>${esc(q.text)}</blockquote>
+      ${q.answer?`<details><summary>Show worked answer</summary>
+        <blockquote style="border-left:3px solid var(--ok)">${esc(q.answer)}</blockquote></details>`:''}
       <div class="xs faint">${esc(q.paper)}</div></div>`).join('');
 }
 
@@ -460,6 +463,8 @@ function drillCards(code){
       <span class="pill">${plural(q.seen,'paper')} · ${Math.round(q.share*100)}%</span>
       ${q.marks?`<span class="pill">${q.marks} marks</span>`:''}</div>
     <blockquote>${esc(q.text)}</blockquote>
+    ${q.answer?`<details><summary>Show worked answer</summary>
+      <blockquote style="border-left:3px solid var(--ok)">${esc(q.answer)}</blockquote></details>`:''}
     <div class="xs faint">${q.key?'Solution published in: <b>'+esc(q.key)+'</b>':'No published solution.'}</div>
     <div class="xs faint">In: ${q.papers.map(esc).join(' · ')}</div>
     <div class="rate"><button class="act" data-d="${i}" data-v="1">${done.has(i)?'✓ worked':'Mark worked'}</button></div>

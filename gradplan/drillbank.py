@@ -31,7 +31,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
 
-from .predictability import Item, classify, split_items
+from .predictability import Item, classify, extract_marks, split_items
 
 LOG = logging.getLogger(__name__)
 
@@ -460,17 +460,96 @@ def split_mcq(text: str, paper: str) -> list[Item]:
     return items
 
 
+# (1.1) (2.3) - Computational Logic numbers its parts this way and nothing else
+# in the archive does.
+DOTTED = re.compile(r"^\s*\((\d{1,2})\.(\d{1,2})\)\s+", re.M)
+
+# '1. [3 points] Illustrate...' or '1. [5] Describe...' - Web & Social and Brain
+# Modelling. The mark in brackets is what distinguishes a question from a list.
+NUMBERED = re.compile(r"^[ \t]*(\d{1,2})[.)][ \t]+(?=[\[\(A-Z])", re.M)
+
+# Information Retrieval writes each question as an instruction and follows it
+# with a full model answer, with no numbering anywhere.
+IMPERATIVE = re.compile(
+    r"^(?:Please[, ]|Draw\b|Describe\b|Explain\b|Discuss\b|Illustrate\b|Compute\b|"
+    r"Provide\b|Consider\b|Starting from\b|What (?:is|are)\b|Given\b)",
+    re.M,
+)
+
+# A list of theory questions, one per line, no numbering at all: Calculus
+# publishes its whole theory bank this way. The phrase has to be specific: a
+# bare 'theoretical' also appears in the title of the Quantum mock exam, and
+# matching it there split that paper into one item per line.
+LIST_HEADER = re.compile(
+    r"(possible questions|theory ?questions|theoretical questions|"
+    r"questions for the theoretical|elenco delle domande)",
+    re.I,
+)
+
+
+def _chunks(text: str, starts: list[int], paper: str, floor: int = 40) -> list[Item]:
+    bounds = starts + [len(text)]
+    items: list[Item] = []
+    for index, (start, end) in enumerate(zip(bounds, bounds[1:])):
+        chunk = text[start:end].strip()
+        if len(chunk) >= floor:
+            items.append(Item(paper=paper, index=index, marks=extract_marks(chunk), text=chunk[:2500]))
+    return items
+
+
+def split_dotted(text: str, paper: str) -> list[Item]:
+    return _chunks(text, [m.start() for m in DOTTED.finditer(text)], paper)
+
+
+def split_numbered(text: str, paper: str) -> list[Item]:
+    starts = [(m.start(), int(m.group(1))) for m in NUMBERED.finditer(text)]
+    return _chunks(text, _ascending_run(starts), paper)
+
+
+def split_imperative(text: str, paper: str) -> list[Item]:
+    return _chunks(text, [m.start() for m in IMPERATIVE.finditer(text)], paper, floor=120)
+
+
+def split_question_list(text: str, paper: str) -> list[Item]:
+    """One question per line, for papers that are a published question bank.
+
+    Only applied when the document says so in its header, because run on an
+    ordinary paper it would turn every line into a 'question'.
+    """
+    head = text[:400]
+    if not LIST_HEADER.search(head):
+        return []
+    # A numbered paper is not a question list, whatever its header says.
+    if len(NUMBERED.findall(text)) >= 3 or len(MCQ_STEM_BARE.findall(text)) >= 4:
+        return []
+    items: list[Item] = []
+    for index, line in enumerate(text.splitlines()):
+        line = line.strip()
+        if 22 <= len(line) <= 220 and not LIST_HEADER.search(line):
+            items.append(Item(paper=paper, index=index, marks=None, text=line))
+    return items if len(items) >= 4 else []
+
+
 def split_paper(text: str, paper: str) -> list[Item]:
     """Split a paper, using whichever strategy actually finds its questions.
 
-    The generic splitter looks for 'Exercise n' / 'Question n' and is right for
-    written papers. Multiple-choice papers number bare, and on those it returns
-    the whole paper as a single item - which is worse than useless, because it
-    silently reports one 'question type' covering 100% of the exam.
+    Six formats appear across the archive and no single pattern covers them.
+    Falling back to one strategy leaves a paper as a single item, which is worse
+    than useless: it reports one 'question type' covering 100% of the exam.
+    Each strategy is tried and the most productive one wins.
     """
-    generic = split_items(text, paper)
-    mcq = split_mcq(text, paper)
-    return mcq if len(mcq) > len(generic) else generic
+    candidates = [
+        split_items(text, paper),
+        split_mcq(text, paper),
+        split_dotted(text, paper),
+        split_numbered(text, paper),
+        split_imperative(text, paper),
+        split_question_list(text, paper),
+    ]
+    best = max(candidates, key=len)
+    # A single item means nothing was found; keep the generic result so the
+    # paper is still represented rather than dropped.
+    return best if best else candidates[0]
 
 
 def cluster(items: list[Item], threshold: float = CLUSTER_THRESHOLD) -> list[QuestionType]:

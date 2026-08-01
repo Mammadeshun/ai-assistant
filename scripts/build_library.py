@@ -18,19 +18,83 @@ from __future__ import annotations
 import json
 import re
 import sys
+from difflib import SequenceMatcher
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from gradplan.drillbank import (  # noqa: E402
+    SOLUTION_TOKENS,
     Document,
     _clean,
+    _slug,
     collect_documents,
     expand_zip,
     read_text,
     split_paper,
 )
 from gradplan.predictability import classify  # noqa: E402
+
+
+def match_key(stem: str, keys: dict[str, Document]) -> Document | None:
+    """Find the answer key for a paper stem.
+
+    Exact equality almost never fires: an answer key is named after the paper
+    plus which questions it covers, so 'Exam 3 July 2023' has to reach
+    'Exam 3 July 2023, Solutions 1-2'. Prefix first, then a similarity fallback
+    for the ones that also abbreviate the month.
+    """
+    if not stem:
+        return None
+    if stem in keys:
+        return keys[stem]
+    best, score = None, 0.0
+    for candidate, doc in keys.items():
+        if candidate.startswith(stem) or stem.startswith(candidate):
+            # Prefer the closest length: the shortest superstring of the paper.
+            ratio = min(len(stem), len(candidate)) / max(len(stem), len(candidate))
+            if ratio > score:
+                best, score = doc, ratio
+    if best is not None and score >= 0.55:
+        return best
+    for candidate, doc in keys.items():
+        ratio = SequenceMatcher(None, stem, candidate).ratio()
+        if ratio > score:
+            best, score = doc, ratio
+    return best if score >= 0.85 else None
+
+
+def pair_solutions_by_item(
+    paper: Document,
+    items: list,
+    keys: dict[str, Document],
+    siblings_of=lambda _: [],
+) -> list[str | None]:
+    """The worked answer for each question, where one can be located.
+
+    Naming a file that contains the answer is not much help at 1am. When the
+    answer key splits into the same number of items as the paper, the two line
+    up one-for-one and each question can carry its own worked solution. When
+    they do not, the whole key is attached to the first item rather than
+    guessing an alignment that would put the wrong answer under a question.
+    """
+    key = match_key(paper.stem, keys)
+    if key is not None and key.text.strip():
+        solved = split_paper(_clean(key.text), key.name)
+        if len(solved) == len(items) and len(items) > 1:
+            return [s.text[:2500] for s in solved]
+        whole = key.text.strip()[:6000]
+        return [whole] + [None] * (len(items) - 1)
+
+    # No name match. Computational Logic ships each sitting as a zip holding the
+    # question PDF and the SMT-LIB encodings that answer it: 'ex2_1A.txt' will
+    # never resemble '31_1_22A.pdf', but they are siblings, and that is the
+    # relationship. Attach the siblings as the paper's worked answer.
+    siblings = [d for d in siblings_of(paper) if d.text.strip()]
+    if siblings:
+        joined = "\n\n".join(f"--- {d.name} ---\n{d.text.strip()}" for d in siblings)
+        return [joined[:8000]] + [None] * (len(items) - 1)
+    return [None] * len(items)
 
 OUT = Path("data/library.json")
 
@@ -155,6 +219,21 @@ def main() -> int:
         documents = []
         questions = []
         topics = {k: v for k, v in taxonomy.get(code, {}).items() if not k.startswith("_")}
+        keys = {
+            d.stem: d
+            for d in expanded
+            if role_of(d) == "solution" and d.text.strip()
+        }
+        # Answer keys grouped by the zip or folder they came out of, for
+        # archives that pair a paper with its solutions by filing rather than
+        # by naming.
+        by_parent: dict[str, list[Document]] = {}
+        for d in expanded:
+            if role_of(d) == "solution" and d.parent:
+                by_parent.setdefault(d.parent, []).append(d)
+
+        def siblings_of(paper: Document) -> list[Document]:
+            return [d for d in by_parent.get(paper.parent, []) if d is not paper][:12]
 
         for index, doc in enumerate(expanded):
             text = doc.text.strip()
@@ -180,9 +259,10 @@ def main() -> int:
                 items = split_paper(_clean(text), doc.name)
                 if topics:
                     classify(items, topics)
-                for item in items:
+                answers = pair_solutions_by_item(doc, items, keys, siblings_of)
+                for item, answer in zip(items, answers):
                     body = item.text.strip()
-                    if len(body) < 40:
+                    if len(body) < 25:
                         continue
                     questions.append({
                         "doc": index,
@@ -191,6 +271,7 @@ def main() -> int:
                         "marks": item.marks,
                         "text": body,
                         "mcq": parse_mcq(body) is not None,
+                        "answer": answer,
                     })
 
         counts = {}

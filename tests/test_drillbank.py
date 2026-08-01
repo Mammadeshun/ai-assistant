@@ -151,3 +151,81 @@ class TestClustering:
             ],
         )
         assert group.representative.text.startswith("a much longer")
+
+
+class TestSplitStrategies:
+    """Six formats appear in the archive; one pattern never covered them."""
+
+    def test_dotted_parts_split(self):
+        """Computational Logic numbers its parts (1.1), (1.2)."""
+        from gradplan.drillbank import split_dotted
+        paper = (
+            "Part I: Questions.\n"
+            "(1.1) We are given a language L comprising binary predicate symbols R and S.\n"
+            "(1.2) The Herbrand universe for the language L mentioned above is finite.\n"
+            "(1.3) Which one of the following statements is correct about transformations?\n"
+        )
+        assert len(split_dotted(paper, "p")) == 3
+
+    def test_numbered_with_marks_split(self):
+        """Web & Social and Brain Modelling: '1. [3 points] Illustrate...'"""
+        from gradplan.drillbank import split_numbered
+        paper = (
+            "1. [3 points] Illustrate the main characteristics underlying complex networks.\n"
+            "2. [4 points] Given the undirected graph G, indicate the maximal cliques.\n"
+            "3. [5 points] Illustrate the concepts of Web 1.0 and Web 2.0 in detail.\n"
+            "4. [3 points] What is assortativity in network theory and why does it matter?\n"
+        )
+        assert len(split_numbered(paper, "p")) == 4
+
+    def test_imperative_prompts_split(self):
+        """Information Retrieval numbers nothing and answers in prose."""
+        from gradplan.drillbank import split_imperative
+        paper = (
+            "Please, describe how offline evaluations are conducted in Information "
+            "Retrieval, covering benchmark collections and how they are created in full.\n"
+            "Offline evaluation rests on the Cranfield paradigm and a test collection "
+            "which acts as a laboratory for simulating the behaviour of real users.\n"
+            "Explain the concept of the cold start problem in recommender systems and "
+            "describe briefly why it matters for a newly launched catalogue of items.\n"
+            "The cold start problem arises whenever a new user or a new item has no "
+            "interaction history at all, so collaborative signals are unavailable.\n"
+        )
+        assert len(split_imperative(paper, "p")) == 2
+
+    def test_question_list_needs_its_header(self):
+        """Calculus publishes a bank of one-line questions; other papers do not."""
+        from gradplan.drillbank import split_question_list
+        listed = (
+            "Calculus - Part 1\nPossible questions for the theoretical part of the test\n"
+            "Definitions of supremum, infimum, maximum and minimum.\n"
+            "Definition of limit for a sequence and for a function.\n"
+            "Uniqueness of the limit (with proof).\n"
+            "Weierstrass Theorem and its consequences.\n"
+        )
+        assert len(split_question_list(listed, "p")) == 4
+        assert split_question_list("An ordinary paper with no such header.\n" * 8, "p") == []
+
+    def test_theoretical_in_a_title_is_not_a_question_list(self):
+        """'theoretical & quantum physics' in a mock exam title split that paper
+        into one item per line."""
+        from gradplan.drillbank import split_question_list
+        mock = (
+            "theoretical & quantum physics for AI - MODULE 1\nMOCK EXAM\n"
+            "1 What is a sufficient condition for the formula to be consistent?\n"
+            "1. x and a have the same dimensions\n2. the dimensions are inverse\n"
+            "3. x has the dimensions of length\n4. x and a are dimensionless\n"
+            "2 Imagine applying the Rayleigh method to obtain a formula for x.\n"
+            "1. both y and z appear explicitly\n2. only an inverse formula results\n"
+            "3 A third numbered question follows here with its own set of options.\n"
+            "4 A fourth numbered question follows here with its own set of options.\n"
+        )
+        assert split_question_list(mock, "p") == []
+
+    def test_split_paper_picks_the_productive_strategy(self):
+        paper = (
+            "(1.1) First part of the question about Herbrand universes and models.\n"
+            "(1.2) Second part of the question about Skolemization of the sentence.\n"
+            "(1.3) Third part of the question about structural transformations here.\n"
+        )
+        assert len(split_paper(paper, "p")) == 3

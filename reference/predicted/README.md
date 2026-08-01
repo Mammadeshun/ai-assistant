@@ -13,15 +13,15 @@ A prediction is a drill order, not a prophecy. Where the archive cannot support 
 | Data Mining | 04 Sep | 3 | 19 | UNRELIABLE | only 3 papers in the archive (need 4) |
 | Cognitive Psychology | 08 Sep | 5 | 26 | UNRELIABLE | no question type appears in two or more papers — whatever th |
 | Computer Programming | 09 Sep | 6 | 19 | MODERATE |  |
-| Calculus | 11 Sep | 21 | 23 | UNRELIABLE | papers could not be split into questions (1.1 items/paper) — |
+| Calculus | 11 Sep | 21 | 59 | MODERATE |  |
 | Machine Learning / ANN / DL | 15 Sep | 20 | 108 | MODERATE |  |
 | Theoretical & Quantum Physics | 22 Sep | 3 | 28 | UNRELIABLE | no question type appears in two or more papers — whatever th |
-| Text Mining and NLP | 24 Sep | 13 | 82 | STRONG |  |
+| Text Mining and NLP | 24 Sep | 13 | 83 | STRONG |  |
 | Probability and Statistical Inference | Jan/Feb | 11 | 178 | MODERATE |  |
 | Knowledge Representation and Reasoning | Jan/Feb | 18 | 92 | STRONG |  |
 | Organization Theory and Design | Jan/Feb | 1 | 1 | UNRELIABLE | only 1 papers in the archive (need 4) |
 | Web and Social Media Search and Analysis | Jan/Feb | 0 | 0 | NO DATA | nothing archived |
-| Computational Logic | Jan/Feb | 28 | 28 | UNRELIABLE | papers could not be split into questions (1.0 items/paper) — |
-| Fuzzy Systems and Evolutionary Computing | Jan/Feb | 6 | 15 | UNRELIABLE | no question type appears in two or more papers — whatever th |
+| Computational Logic | Jan/Feb | 28 | 265 | STRONG |  |
+| Fuzzy Systems and Evolutionary Computing | Jan/Feb | 6 | 20 | UNRELIABLE | no question type appears in two or more papers — whatever th |
 | Statistical Modelling | Jan/Feb | 12 | 39 | UNRELIABLE | no question type appears in two or more papers — whatever th |
-| AI for Communication and Marketing | Jan/Feb | 3 | 3 | UNRELIABLE | no question type appears in two or more papers — whatever th |
+| AI for Communication and Marketing | Jan/Feb | 3 | 9 | UNRELIABLE | only 3 papers in the archive (need 4) |

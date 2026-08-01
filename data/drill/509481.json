@@ -25,7 +25,7 @@
   "Calculus part1 2024 sept 26 b pdf"
  ],
  "n_papers": 21,
- "n_items": 23,
+ "n_items": 59,
  "solution_keys": [
   "Calculus part1 2026 Feb solutions pdf",
   "Calculus-part1-2025-SampleTest-Solution",
@@ -58,6 +58,51 @@
  "question_types": [
   {
    "rank": 1,
+   "topic": "limits_continuity",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.19,
+   "typical_marks": 8.0,
+   "papers": [
+    "Calculus part1 2024 feb21 a pdf [190448]",
+    "Calculus part1 2024 feb21 b pdf [190448]",
+    "Calculus part1 2024 feb21 c pdf [190448]",
+    "Calculus part1 2024 feb21 d pdf [190448]"
+   ],
+   "solution_key": "",
+   "statement": "Compute\nlim\nx→0\nsin 2x(sin x − x) log(1 +x))\n(1 + cosx)(ex − 1)(cos x − 1 +x2\n2 )\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = ex\nx − 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem about the uniqueness of the limit of a sequence\nST A TEMENT:\nPROOF:"
+  },
+  {
+   "rank": 2,
+   "topic": "theory_questions",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.19,
+   "typical_marks": 8.0,
+   "papers": [
+    "Calculus part1 2024 Jun25th b pdf [190449]",
+    "Calculus part1 2024 Jun25th c pdf [190449]",
+    "Calculus part1 2024 jun25 a pdf [190449]",
+    "Calculus part1 2024 jun25th d pdf [190449]"
+   ],
+   "solution_key": "",
+   "statement": "Compute\nlim\nx→0\n(ex + 1)(1− cos x) arctanx\n(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 10 arctanx − log(1 +x2) + 1\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) = 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorems about the permanence of the sign for a sequence\nST A TEMENTS:\nPROOFS:"
+  },
+  {
+   "rank": 3,
+   "topic": "unclassified",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.19,
+   "typical_marks": 3.0,
+   "papers": [
+    "Calculus part1 2024 feb21 a pdf [190448]",
+    "Calculus part1 2024 feb21 b pdf [190448]",
+    "Calculus part1 2024 feb21 c pdf [190448]",
+    "Calculus part1 2024 feb21 d pdf [190448]"
+   ],
+   "solution_key": "",
+   "statement": "Compute the coe\ncient of x4 in the polinomial (x − 3)6\nANSWER:\n1.3 (3 POINTS)\nFind modulus and principal argument (i.e. in (−π, π]) of the complex number (1 − i)8.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)"
+  },
+  {
+   "rank": 4,
    "topic": "derivatives",
    "seen_in_papers": 4,
    "share_of_papers": 0.19,
@@ -72,7 +117,22 @@
    "statement": "Written exam of Calculus (part 1-d) July 17th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nAcademic Year you attended the course: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nID NUMBER: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet f be de\nned in a neigbhorhood of -2. Write the de\nnition of f ′(−2)\nANSWER:\n1.2 (3 POINTS)\nWrite the equation of the tangent line to the graph of f (x) =e−2x at the point of absissa x = −1.\nANSWER:\n1.3 (3 POINTS)\nHow many di\u001berent groups of \nve people can be chosen from a class of seven?\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(1 − cos x) log2(1 +x)\n(sin x − x) sin(2x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) = 1\ne2x − 3ex − 4\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem that relates the derivative to the decreasing of a function.\nST A "
   },
   {
-   "rank": 2,
+   "rank": 5,
+   "topic": "derivatives",
+   "seen_in_papers": 4,
+   "share_of_papers": 0.19,
+   "typical_marks": 3.0,
+   "papers": [
+    "Calculus part1 2024 Jun25th b pdf [190449]",
+    "Calculus part1 2024 Jun25th c pdf [190449]",
+    "Calculus part1 2024 jun25 a pdf [190449]",
+    "Calculus part1 2024 jun25th d pdf [190449]"
+   ],
+   "solution_key": "",
+   "statement": "Compute the derivative of\nf (x) = (sinx)cos x\nANSWER:\n1.3 (3 POINTS)\nSolve z2 + 2iz − 5 = 0in the complex plane.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)"
+  },
+  {
+   "rank": 6,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
    "share_of_papers": 0.095,
@@ -85,7 +145,7 @@
    "statement": "2)\nx2 − 4x + 3> 0\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(x2 − 2x)(1 − cos(2x)\n(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 1\nlog2(x + 1)− 3 log(x +"
   },
   {
-   "rank": 3,
+   "rank": 7,
    "topic": "theory_questions",
    "seen_in_papers": 2,
    "share_of_papers": 0.095,
@@ -98,33 +158,7 @@
    "statement": "2) + 4\nSOLUTION:\n1.6 (7 POINTS)\nState amd prove Lagrange's Theorem\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 4,
-   "topic": "limits_continuity",
-   "seen_in_papers": 2,
-   "share_of_papers": 0.095,
-   "typical_marks": 3.0,
-   "papers": [
-    "Calculus part1 2024 feb21 b pdf [190448]",
-    "Calculus part1 2024 feb21 d pdf [190448]"
-   ],
-   "solution_key": "",
-   "statement": "Written exam of Calculus (part 1-d) February 21st, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nGive the de\nnition of continuous function at x0 ∈ R\nANSWER:\n1.2 (3 POINTS)\nCompute the coe\ncient of x5 in the polinomial (x + 2)7\nANSWER:\n1.3 (3 POINTS)\nFind modulus and principal argument (i.e. in (−π, π]) of the complex number (1 +i)8.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(sin x − x) log2(1 +x))\n(1 + cosx)(ex − 1)(cos x − 1 +x2\n2 )\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = ex\nx + 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem about the limit of a monotone sequence.\nST A TEMENT:\nPROOF:"
-  },
-  {
-   "rank": 5,
-   "topic": "limits_continuity",
-   "seen_in_papers": 2,
-   "share_of_papers": 0.095,
-   "typical_marks": 3.0,
-   "papers": [
-    "Calculus part1 2024 feb21 a pdf [190448]",
-    "Calculus part1 2024 feb21 c pdf [190448]"
-   ],
-   "solution_key": "",
-   "statement": "Written exam of Calculus (part 1-c) February 21st, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet x0 ∈ R, de\nne\nlim\nx→x0\nf (x)\nANSWER:\n1.2 (3 POINTS)\nCompute the coe\ncient of x4 in the polinomial (x + 3)6\nANSWER:\n1.3 (3 POINTS)\nFind modulus and principal argument (i.e. in (−π, π]) of the complex number (1 − i)6.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\nsin 2x(sin x − x) log(1 +x))\n(1 + cosx)(ex − 1)(cos x − 1 +x2\n2 )\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = ex\nx − 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem about the uniqueness of the limit of a sequence\nST A TEMENT:\nPROOF:"
-  },
-  {
-   "rank": 6,
+   "rank": 8,
    "topic": "limits_continuity",
    "seen_in_papers": 2,
    "share_of_papers": 0.095,
@@ -137,20 +171,7 @@
    "statement": "Written exam of Calculus (part 1-c) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nWrite the de\nnition of limit for a sequence of real numbers.\nANSWER:\n1.2 (3 POINTS)\nSolve the inequality log log(3x − 1) < 0\nANSWER:\n1.3 (3 POINTS)\nCompute:\nlim\nx→0\n−2x2 + sin2 x\nx2\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(ex − 1)2 sin(2x)\nx(ex − 1 − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) =x(2 − 1\nlog x )\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the formula for the derivative of the product of two di\u001berentiable functions.\nST A TEMENT:\nPROOF:"
   },
   {
-   "rank": 7,
-   "topic": "theory_questions",
-   "seen_in_papers": 2,
-   "share_of_papers": 0.095,
-   "typical_marks": 3.0,
-   "papers": [
-    "Calculus part1 2024 Jun25th c pdf [190449]",
-    "Calculus part1 2024 jun25th d pdf [190449]"
-   ],
-   "solution_key": "",
-   "statement": "Written exam of Calculus (part 1-c) June 25th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet A ⊂ R, non empty. De\nne sup A (distinguish between A bounded and unbounded above).\nANSWER:\n1.2 (3 POINTS)\nCompute the derivative of\nf (x) = (cos)sin x\nANSWER:\n1.3 (3 POINTS)\nSolve z2 + 4iz − 8 = 0in the complex plane.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\nlog(2 +x)(1 − cosx) tanx\narctan x − x\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 16 arctanx − log(1 +x2) + 3\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) = 1\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorems about the permanence of the sign for a sequence\nST A TEMENT:\nPROOF:"
-  },
-  {
-   "rank": 8,
+   "rank": 9,
    "topic": "theory_questions",
    "seen_in_papers": 2,
    "share_of_papers": 0.095,
@@ -161,18 +182,6 @@
    ],
    "solution_key": "",
    "statement": "Written exam of Calculus (part 1-d) February 7th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nState Weierstrass' theorem.\nANSWER:\n1.2 (3 POINTS)\nSolve the inequality log log(1− 3x) < 0\nANSWER:\n1.3 (3 POINTS)\nCompute:\nlim\nx→0\nx2 + 3 sin2 x\nx2\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(e2x − 1)2(1 − cos x)\nx(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\nStudy the following function (domain, limits, sign, increasing /decreasing)\nf (x) =x(6 − 1\nlog x )\nand draw its graph.\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the formula for the derivative of the quotient of two di\u001berentiable functions.\nST A TEMENT:\nPROOF:"
-  },
-  {
-   "rank": 9,
-   "topic": "theory_questions",
-   "seen_in_papers": 1,
-   "share_of_papers": 0.048,
-   "typical_marks": 8.0,
-   "papers": [
-    "Calculus part1 2024 Jun25th b pdf [190449]"
-   ],
-   "solution_key": "",
-   "statement": "2x)\n(arctan x − x)\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = log(1 +x2) − 20 arctanx − 1\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) =−2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorem of the zero\nST A TEMENT:\nPROOF:"
   },
   {
    "rank": 10,
@@ -200,18 +209,54 @@
   },
   {
    "rank": 12,
-   "topic": "theory_questions",
+   "topic": "unclassified",
    "seen_in_papers": 1,
    "share_of_papers": 0.048,
-   "typical_marks": 3.0,
+   "typical_marks": null,
    "papers": [
-    "Calculus part1 2024 jun25 a pdf [190449]"
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
    ],
    "solution_key": "",
-   "statement": "Written exam of Calculus (part 1-a) June 25th, 2024\nIT IS FORBIDDEN TO USE CALCULA TORS, BOOKS, NOTES, AND SO ON\nTIME ALLOWED: 90 MINUTES\nP AR T A Write only the answer.\n1.1 (3 POINTS)\nLet A ⊂ R, be non empty. De\nne sup A (distinguish between A bounded and unbounded above)\nANSWER:\n1.2 (3 POINTS)\nCompute the derivative of\nf (x) = (sinx)cos x\nANSWER:\n1.3 (3 POINTS)\nSolve z2 + 2iz − 5 = 0in the complex plane.\nANSWER:\nP AR T B Write a complete solution.\n1.4 (8 POINTS)\nCompute\nlim\nx→0\n(ex + 1)(1− cos x) arctanx\n(sin x − x)\nSOLUTION:\n1.5 (8 POINTS)\na) Study the following function (domain, limits, sign, increasing /decreasing, graph)\nf (x) = 10 arctanx − log(1 +x2) + 1\n(Note that the zeros of f can be determined only in an approximate way).\nb) Find the number of solutions of f (x) = 2\nSOLUTION:\n1.6 (7 POINTS)\nState and prove the theorems about the permanence of the sign for a sequence\nST A TEMENTS:\nPROOFS:"
+   "statement": "More questions for June, July and September tests"
   },
   {
    "rank": 13,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "The Property of the sup and the Real numbers"
+  },
+  {
+   "rank": 14,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Comparison criterion (with proof)"
+  },
+  {
+   "rank": 15,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Artiﬁcial Intelligence"
+  },
+  {
+   "rank": 16,
    "topic": "derivatives",
    "seen_in_papers": 1,
    "share_of_papers": 0.048,
@@ -220,7 +265,223 @@
     "2023-24 TheoryQuestions for Part1 exam [165632]"
    ],
    "solution_key": "",
-   "statement": "Calculus - Part 1\nArtiﬁcial Intelligence\nacademic year 2023-24\nPossible questions for the theoretical part of the test\nDeﬁnitions of supremum, inﬁmum, maximum and minimum.\nThe Property of the sup and the Real numbers\nDeﬁnitions of limit for a sequence and for a function\nDeﬁnition of continuous function\nThe three kinds of points of discontinuity (deﬁnitions)\nUniqueness of the limit (with proof)\nExistence of the limit of a monotone sequence of real numbers (with proof)\nLimit of the sum of two sequences (with proof)\nPermanence of the sign in the limit of a sequence: case of non negative se-\nquences and case of positive limits (with proofs)\nWeierstrass Theorem\nExistence of zero Theorem (with proof)\nDeﬁnition of Derivative and deﬁnition of diﬀerentiable function\nDiﬀerentiable functions are continuous (with proof)\nDerivative of the sum, product and quotient of functions (with proof)\nDerivatives of the elementary functions e x , sin x , cos x , log x , x α (with proofs)\nDeﬁnitions of corner points, points with vertical tangent and cusps.\nFermat’s Theorem\nRolle’s Theorem (with proof)\nLagrange’s Theorem (with proof)\nCauchy’s Theorem\nde L’Hospital’s Theorem (with proof of the easiest form )\n"
+   "statement": "Derivatives of the elementary functions e x , sin x , cos x , log x , x α (with proofs)"
+  },
+  {
+   "rank": 17,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Monotone functions in an interval and sign of their deivatives (with proof)"
+  },
+  {
+   "rank": 18,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Statement of the theorem about convex functions and second derivatives in"
+  },
+  {
+   "rank": 19,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Taylor’s Formula, with Peano’s rest and Lagrange’s rest. (with proofs)"
+  },
+  {
+   "rank": 20,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnitions of corner points, points with vertical tangent and cusps."
+  },
+  {
+   "rank": 21,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnition of Derivative and deﬁnition of diﬀerentiable function"
+  },
+  {
+   "rank": 22,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnitions of supremum, inﬁmum, maximum and minimum."
+  },
+  {
+   "rank": 23,
+   "topic": "derivatives",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnition of the Taylor Polynomials"
+  },
+  {
+   "rank": 24,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Permanence of the sign in the limit of a sequence: case of non negative se-"
+  },
+  {
+   "rank": 25,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "The three kinds of points of discontinuity (deﬁnitions)"
+  },
+  {
+   "rank": 26,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnitions of limit for a sequence and for a function"
+  },
+  {
+   "rank": 27,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Diﬀerentiable functions are continuous (with proof)"
+  },
+  {
+   "rank": 28,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "quences and case of positive limits (with proofs)"
+  },
+  {
+   "rank": 29,
+   "topic": "limits_continuity",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Limit of the sum of two sequences (with proof)"
+  },
+  {
+   "rank": 30,
+   "topic": "theory_questions",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "de L’Hospital’s Theorem (with proof of the easiest form )"
+  },
+  {
+   "rank": 31,
+   "topic": "theory_questions",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Existence of zero Theorem (with proof)"
+  },
+  {
+   "rank": 32,
+   "topic": "series_sequences",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Convergence and sum of geometric series and Mengoli’s series (with proofs)"
+  },
+  {
+   "rank": 33,
+   "topic": "series_sequences",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Absolute convergence. Deﬁnition and related Theorem."
+  },
+  {
+   "rank": 34,
+   "topic": "series_sequences",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.048,
+   "typical_marks": null,
+   "papers": [
+    "2023-24 TheoryQuestions for Part1 exam [165632]"
+   ],
+   "solution_key": "",
+   "statement": "Deﬁnition of convergent series"
   }
  ],
  "name": "CALCULUS"

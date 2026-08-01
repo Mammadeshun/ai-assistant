@@ -86,14 +86,29 @@ def load_packs() -> dict[str, str]:
     }
 
 
-def load_drill() -> dict:
+def load_drill(library: dict) -> dict:
+    # Drill cards are clusters of questions, so the worked answer has to be
+    # carried across from the question it was paired with in the library.
+    def akey(text: str) -> str:
+        # The drill card holds the cluster representative's raw text and the
+        # library holds a stripped copy, so the two only line up once whitespace
+        # is normalised on both sides.
+        return " ".join(text.split())[:180]
+
+    answers = {
+        akey(q["text"]): q["answer"]
+        for course in library.values()
+        for q in course["questions"]
+        if q.get("answer")
+    }
     banks = {}
     for path in sorted(Path("data/drill").glob("*.json")):
         bank = json.loads(path.read_text())
         cards = [
             {"topic": q["topic"], "seen": q["seen_in_papers"], "share": q["share_of_papers"],
              "marks": q["typical_marks"], "key": q["solution_key"],
-             "text": q["statement"][:1400], "papers": q["papers"][:4]}
+             "text": q["statement"][:1400], "papers": q["papers"][:4],
+             "answer": answers.get(akey(q["statement"]))}
             for q in bank["question_types"] if q["seen_in_papers"] >= 2
         ]
         if cards:
@@ -134,7 +149,7 @@ def build_payload(pages: dict, pages_dir: str) -> str:
             {"code": c, "name": n, "hours": h, "cfu": cfu, "note": note}
             for c, n, h, cfu, note in WINTER
         ],
-        "drill": load_drill(),
+        "drill": load_drill(library["courses"]),
         "lib": library["courses"],
         "quiz": library["quiz_banks"],
         "pages": pages,
