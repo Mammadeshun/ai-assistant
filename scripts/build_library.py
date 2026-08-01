@@ -91,6 +91,18 @@ OVERRIDES = {
 }
 
 
+def tidy_name(name: str) -> str:
+    """Drop a year the filename already carries.
+
+    The nested archive is filed by year, so 'ML exam 19 September 2023' picked
+    up its folder and became 'ML exam 19 September 2023 2023'.
+    """
+    words = name.split()
+    if len(words) > 1 and words[-1].isdigit() and words[-1] in words[:-1]:
+        return " ".join(words[:-1])
+    return " ".join(name.split())
+
+
 def role_of(doc: Document) -> str:
     # The automatic rules read a filename. Where the content is known - a quiz
     # published together with its answers reads as an answer key, and a recalled
@@ -153,7 +165,7 @@ def main() -> int:
             role = role_of(doc) if text else "image-only"
             documents.append({
                 "i": index,
-                "name": doc.name,
+                "name": tidy_name(doc.name),
                 "kind": doc.kind,
                 "role": role,
                 "chars": len(text),

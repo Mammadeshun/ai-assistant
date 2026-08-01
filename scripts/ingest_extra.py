@@ -330,6 +330,19 @@ def main() -> int:
             text = f"[OCR from a photograph - expect transcription errors]\n\n{text}"
         if text.strip():
             save(course, name, provenance, text, "text", path)
+        # Keep the photograph itself. A transcription is searchable; the photo is
+        # what you actually want in front of you when the transcription is the
+        # only thing standing between you and a misread exam question.
+        slug = "".join(ch if ch.isalnum() else "-" for ch in name)[:70].strip("-")
+        archive.save(
+            source="whatsapp",
+            label=f"file-{course}-photo-{slug}",
+            url=f"whatsapp://photo/{path.name}",
+            payload=path.read_bytes(),
+            kind="image",
+            status=200,
+        )
+        added += 1
 
     save("509492", "Quantum module 2 - recalled exam questions with answers",
          "transcribed", QUANTUM_RECALL, "text", None)
