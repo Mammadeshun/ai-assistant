@@ -540,12 +540,34 @@ def build(
     documents = expanded
 
     solutions = pair_solutions(documents)
+
+    # Same explicit overrides the library uses: filenames misclassify a quiz
+    # published with its answers, and a recalled paper has no telling name at all.
+    roles_path = Path("reference/document_roles.json")
+    raw_roles = json.loads(roles_path.read_text()) if roles_path.exists() else {}
+    # Names round-trip through a filename slug, so punctuation becomes runs of
+    # spaces. Compare on collapsed, lowercased words or nothing ever matches.
+    overrides = {
+        " ".join(re.sub(r"[^0-9a-zA-Z]+", " ", k).split()).lower(): v
+        for k, v in raw_roles.items()
+        if not k.startswith("_")
+    }
+
+    def role_override(doc: Document) -> str | None:
+        return overrides.get(" ".join(re.sub(r"[^0-9a-zA-Z]+", " ", doc.name).split()).lower())
+
     papers = [
         d
         for d in documents
-        if not d.is_solution
-        and d.looks_like_paper
-        and not d.is_activity_stub
+        if (
+            role_override(d) == "paper"
+            or (
+                not d.is_solution
+                and d.looks_like_paper
+                and not d.is_activity_stub
+                and role_override(d) is None
+            )
+        )
         and len(d.text.strip()) > 150
     ]
 

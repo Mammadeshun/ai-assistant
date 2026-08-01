@@ -1,23 +1,42 @@
 {
  "course": "509485",
- "documents_resolved": 33,
+ "documents_resolved": 36,
  "papers_used": [
   "Oral exam topics",
-  "Papers (oral exam) final score"
+  "Papers (oral exam) final score",
+  "Cognitive Psychology   full Q A revision notes",
+  "Cognitive Psychology   Esercizi chapter exercises",
+  "Cognitive Psychology   chapter quizzes with answers"
  ],
- "n_papers": 2,
- "n_items": 2,
- "solution_keys": [],
+ "n_papers": 5,
+ "n_items": 26,
+ "solution_keys": [
+  "Cognitive Psychology   chapter quizzes with answers"
+ ],
  "papers_without_a_published_key": [
   "Oral exam topics",
-  "Papers (oral exam) final score"
+  "Papers (oral exam) final score",
+  "Cognitive Psychology   full Q A revision notes",
+  "Cognitive Psychology   Esercizi chapter exercises"
  ],
  "question_types": [
   {
    "rank": 1,
    "topic": "memory",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "6. Bartlett’s 'The War of the Ghosts' experiment demonstrated the occurrence of \na. distortion  \nb. feature overlap \nc. Confabulation \nd. flashbulb memory \n \nOpen question: Describe the forgetting curve, including the postulated drivers of forgetting. \n \nThe forgetting curve, introduced by Hermann Ebbinghaus in 1885, shows how memory retention declines over time without \nactive effort to retain information. Ebbinghaus found that forgetting happens rapidly within the first hours or days, and the n \nslows down. The curve is steep initially and then flattens, meaning that the rate of forgetting decreases over time. \nThere are several explanations for why forgetting occurs. One is decay, which suggests that memory traces fade over time if \nnot maintained. However, it’s difficult to isolate the effects of decay from other processes, so its role in forgetting is uncertain. \nA stronger explanation is interference, which occurs when other information disrupts memory. Proactive interference \nhappens when older memories interfere with new ones, while retroactive interference is when new information disrupts old \nmemories. Interference is particularly strong when the memories are similar. \nA "
+  },
+  {
+   "rank": 2,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
    "typical_marks": null,
    "papers": [
     "Oral exam topics [52911]"
@@ -26,16 +45,292 @@
    "statement": "Chapter 1 – Approches to human cognition \n• Approaches to human cognition: Cognitive Psychology \n• Approaches to human cognition: Cognitive Neuropsychology \n• Approaches to human cognition: Cognitive Neuroscience \n• Approaches to human cognition: Computational Cognitive Science \nChapter 2 – Basic Processes in Visual Perception \n• Perception and action model \n• Color Vision \n• Depth Perception \n• Perception without awareness \nChapter 3 – Object and face recognition \n• Perceptual organization \n• Approaches to object recognition \n• Object recognition: top-down processes \n• Face recognition \n• Visual imagery \nChapter 4 – Motion Perception and action \n• Direct Perception \n• Visually guided movements \n• Visually guided action \n• Perception of human motion \n• Change blindness \nChapter 5 – Attention and Performance \n• Focused auditory attention \n• Focused visual attention \n• Visual search \n• Cross-modal effects \n• Divided attention: dual task performance \n• “automatic” Processing. \nChapter 6 – Learning, Memory and forgetting \n• Short term vs long term memory \n• Working memory: Baddeley and Hitch \n• Working memory: individual differences and executive functions \n• Levels of processing (and "
   },
   {
-   "rank": 2,
+   "rank": 3,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "2) Looking at hubs of brain activations in healthy individuals performing an attentive task is a typical approach in: a. Cognitive modelling b. Experimental cognitive psychology c. Cognitive neuropsychology d. Cognitive neuroscience ChatGPT 3.5: The typical approach of looking at hubs of brain activations in healthy individuals performing an attentive task aligns with d. Cognitive neuroscience. Cognitive neuroscience is a field that investigates the biological processes underlying cognition, particularly focusing on the neural substrates of mental processes. It often involves using neuroimaging techniques such as fMRI (functional Magnetic Resonance Imaging) to study brain activity while individuals engage in cognitive tasks. This approach helps in understanding how different regions of the brain contribute to cognitive functions such as attention, memory, perception, and decision-making."
+  },
+  {
+   "rank": 4,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "3) Double dissociation' refers to a. pathological forgetting b. independent impairments in either of two cognitive functions while the other remains intact c. independent impairments in one of two cognitive functions while the other remains intact d. multiple personality ChatGPT 3.5: c. Independent impairments in one of two cognitive functions while the other remains intact. Double dissociation is a term used in neuropsychology to describe a situation where two different functions are shown to be independently impaired in two individuals, while the other function remains intact. This finding suggests that the two functions are served by separate neural systems. It's a crucial concept in understanding brain function and localization of cognitive processes. \n04/04 CHAPTER 2 QUIZ – 1 Open"
+  },
+  {
+   "rank": 5,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "3) Retrieval-induced forgetting (RIF) refers to the finding that a. the retrieval of a memory trace increases the strength of that trace b. the retrieval of a memory trace weakens the strength of that trace c. the retrieval of a memory trace suppresses the retrieval of rival traces d. the retrieval of a memory trace strengthens the retrieval of rival traces ChatGPT 3.5: Retrieval-induced forgetting (RIF) refers to c. the retrieval of a memory trace suppresses the retrieval of rival traces. This phenomenon occurs when the act of retrieving specific information from memory leads to the temporary inhibition of related, but competing, information. It's a fascinating aspect of memory dynamics, where retrieval of one memory can interfere with the retrieval of related memories."
+  },
+  {
+   "rank": 6,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "5) Implicit memory refers to a. memories for which the individual has no conscious awareness b. memories for which the individual has high conscious awareness c. memories which are impossible to retrieve d. memories which can be deliberately retrieved ChatGPT 3.5: a. memories for which the individual has no conscious awareness. Implicit memory refers to the retention of information or skills without conscious awareness or the ability to consciously recall that information. It often involves procedural memory (memory for skills and procedures) and priming effects (where exposure to a stimulus influences response to a later stimulus). \n27/05 CHAPTER 8 – 5 Multiple Choice Questions"
+  },
+  {
+   "rank": 7,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "4) Elaborative encoding improves retrieval performance because a. it increases the level of acoustic processing b. it increases the length of time for which the input is processed c. it increases the number of associative connections with previous memory traces d. it increases the level of structural processing ChatGPT 3.5: c. it increases the number of associative connections with previous memory traces. Elaborative encoding involves connecting new information with existing knowledge or memories, creating more associations and pathways for retrieval. This approach enhances retrieval performance by providing multiple cues and pathways to access the stored information."
+  },
+  {
+   "rank": 8,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "4) The 'problem space' discussed within Newell and Simon's research is a. the initial state, goals, instructions, constraints and all relevant long-term memory required to complete of a problem b. an abstract mental space in which an individual creates a model of a problem c. the name of the computer program with which they tested participants problem-solving abilities d. the physical space in which participants are required to complete a problem ChatGPT 4o: The 'problem space' discussed within Newell and Simon's research is: a. the initial state, goals, instructions, constraints and all relevant long-term memory required to complete a"
+  },
+  {
+   "rank": 9,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "Question 1) Bartlett’s 'The War of the Ghosts' experiment demonstrated the occurrence of a. flashbulb memory b. confabulation c. distortion d. feature overlap ChatGPT 3.5: Bartlett's \"The War of the Ghosts\" experiment primarily demonstrated the occurrence of c. distortion. This experiment explored how memory is influenced by cultural schemas and showed that when participants recalled the story, they altered details to fit more closely with their own cultural expectations and norms. This distortion is a central concept in Bartlett's theory of reconstructive memory."
+  },
+  {
+   "rank": 10,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "2) Ebbinghaus suggested that memory loss over time was caused by a. decay and interference b. retrieval inhibition c. decay and disuse d. low feature overlap ChatGPT 3.5: Ebbinghaus proposed that memory loss over time is primarily caused by a. decay and interference. Decay refers to the weakening or fading of memory traces over time, while interference occurs when new information interferes with the retrieval of old information. Ebbinghaus's research on forgetting and memory pioneered the study of human memory processes."
+  },
+  {
+   "rank": 11,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1. Double dissociation' refers to: \na. independent impairments in one of two cognitive functions while the other remains intact \nb. independent impairments in either of two cognitive functions while the other remains intact \nc. multiple personalities \nd. pathological forgetting"
+  },
+  {
+   "rank": 12,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "5. Ebbinghaus suggested that memory loss over time was caused by \na. decay and interference \nb. low feature overlap \nc. decay and disuse \nd. retrieval inhibition"
+  },
+  {
+   "rank": 13,
+   "topic": "memory",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2. The temporal lobes are believed to play a major part in: \na. encoding new memories \nb. visual processing \nc. speech production \nd. motor control"
+  },
+  {
+   "rank": 14,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.2,
    "typical_marks": null,
    "papers": [
     "Papers (oral exam) final score [303457]"
    ],
    "solution_key": "",
    "statement": "503528 5,5\n512872 2\n534982 5\n535241 5,5\n535421 5,5\n535750 3\n535872 3\n536153 6\n552090 4\n554594 5\n571600 4\n572432 5,5\n572442 3,5\n572452 5,5\n572499 5\n572500 3,5\n572501 6\n572506 5\n572507 5\n572512 4\n573102 6\n573104 5\n573730 5\n574519 5,5\n574643 6\n574667 6\n574687 5,5\n574688 3\n574695 5,5\n574696 6\n574697 5,5\n574710 4\n574736 5\n574756 5,5\n574785 6\n574793 6\n574818 4,5\n574846 5\n574868 5\n575000 4\n575066 6\n575117 5\n575179 5,5\n575238 5,5\n575262 6\n575285 5,5\n575366 5\n575400 5\n575426 4\n575429 5\n575566 4\n575934 5\n575947 5\n575959 5,5\n575972 6\n575999 4\n576139 5\n576894 5\n577163 5,5\n577417 5\n577618 3\n577620 4\n583830 5\n583865 5,5\n584854 5\n586229 6"
+  },
+  {
+   "rank": 15,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "2) The inability to adapt the use of an object due to prior experience of using it in a different way,was termed by Duncker (1945) as a. functional rigidity b. functional permanence c. functional inadaptability d. functional fixedness ChatGPT 4o: The inability to adapt the use of an object due to prior experience of using it in a different way was termed by Duncker (1945) as: d. functional fixedness"
+  },
+  {
+   "rank": 16,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "3) A potential hinderance to problem-solving is the rote application of learned rules, which is referred to as a. mental pack b. mental grouping c. mental range d. mental set ChatGPT 4o: A potential hindrance to problem-solving is the rote application of learned rules, which is referred to as: d. mental set"
+  },
+  {
+   "rank": 17,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "problem 5) Productive thinking is also known as: a. Insight \nb. Crystallized intelligence c. Fluid intelligence d. Analytical thinking ChatGPT 4o: Productive thinking is also known as: a. Insight"
+  },
+  {
+   "rank": 18,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "Question 22/04 CHAPTER 3 QUIZ – 4 Multiple Choice Questions"
+  },
+  {
+   "rank": 19,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   full Q A revision notes [extra]"
+   ],
+   "solution_key": "",
+   "statement": "1) but use more analytical thinking (System"
+  },
+  {
+   "rank": 20,
+   "topic": "language_cognition",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   full Q A revision notes [extra]"
+   ],
+   "solution_key": "",
+   "statement": "2) for complex, novel problems. \n \n#### Historical Background \nQ: What did Aristotle contribute to the study of thinking? \nA: Aristotle contributed early work on logic, seeking to understand the correct way of thinking. \n \nQ: How did George Boole's work impact modern computing? \nA: George Boole's introduction of Boolean logic provided the foundation for binary systems used in \nmodern computing. \n \nQ: What is the significance of Pascal and Fermat's work in probability theory? \nA: Their work laid the foundation for understanding and analyzing uncertain events, crucial for studying \ndecision-making processes. \n \nLanguage \n \n \nQ: What is the primary focus of cognitive psychology in relation to language? \nA: The primary focus is understanding how humans comprehend, produce, and acquire language. \n \nQ: What are the main components of the language system? \nA: The main components are phonology, morphology, syntax, semantics, and pragmatics. \n \nQ: How do psychology and linguistics intersect in the study of language? \nA: They intersect by examining how linguistic structures are processed in the mind and how cognitive \nprocesses influence language use and comprehension. \n \nQ: What is lexical "
+  },
+  {
+   "rank": 21,
+   "topic": "perception",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "4. Brocas area is mainly concerned with: \na. speech perception \nb. visual processing \nc. speech production \nd. memory storage \nOpen question: What are the strengths and limitations of bottom-up processing compared to top-down processing? \nBottom-up and top-down processing are two fundamental approaches the brain uses to interpret sensory information, each \nwith distinct strengths and limitations. These processes often work together, rather than in isolation, to form our perception of \nthe world. \nBottom-up processing is stimulus-driven. It begins at the sensory input level (e.g., the eyes, ears) and builds up toward higher \ncognitive functions. This type of processing relies entirely on the physical stimulus itself, without influence from prior \nknowledge or expectations. A key strength of bottom-up processing is its accuracy in detecting novel or sudden changes in \nthe environment, making it especially useful for identifying unfamiliar or unexpected stimuli. It is less biased because it \noperates purely from the data at hand. However, it is also limited: it can struggle when sensory input is ambiguous, \nincomplete, or poor in quality. Additionally, it does not account for the infl"
+  },
+  {
+   "rank": 22,
+   "topic": "perception",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "1) The statement that 'The whole is greater than the sum of its parts' typifies a. Mesmerism b. Psychoanalysis c. Gestalt psychology d. Behaviourism ChatGPT 3.5: The statement \"The whole is greater than the sum of its parts\" typifies c. Gestalt psychology. Gestalt psychology emphasizes that the whole of anything is greater than its parts when it comes to perception and understanding. It suggests that our perception of any object or situation is not just a sum of its individual elements but is influenced by the way those elements are organized or structured. This idea contrasts with reductionist approaches, which seek to understand complex phenomena by breaking them down into smaller, simpler components."
+  },
+  {
+   "rank": 23,
+   "topic": "perception",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   Esercizi chapter exercises [extra]"
+   ],
+   "solution_key": "",
+   "statement": "3. The statement that 'The whole is greater than the sum of its parts' typifies: \na. Gestalt psychology \nb. Mesmerism \nc. Psychoanalysis \nd. Behaviorism"
+  },
+  {
+   "rank": 24,
+   "topic": "attention",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "1) Attention works like a. a controller of general perceptual intensity b. glue that sticks the features of objects together c. a spotlight that shines on a particular part of the input field d. Both b and c ChatGPT 3.5: d. Both b and c Attention can be conceptualized in different ways depending on the context, but often it involves focusing on specific parts of a sensory input field while also binding together the features of objects or stimuli within that focused area. So, options b and c both capture aspects of how attention works."
+  },
+  {
+   "rank": 25,
+   "topic": "attention",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "2) Following experiments with the dichotic listening task, Broadbent’s (1958) proposed a filter model stating that selective attention involves a. late selection b. several bottlenecks c. early selection d. no bottleneck ChatGPT 3.5: c. early selection Broadbent's filter model proposes that selective attention involves early selection, where information is filtered based on physical characteristics such as location, pitch, or loudness before semantic processing occurs. \n13/05 CHAPTER 5+6 QUIZ – 5 Multiple Choice Questions + 1 Open"
+  },
+  {
+   "rank": 26,
+   "topic": "executive_control",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.2,
+   "typical_marks": null,
+   "papers": [
+    "Cognitive Psychology   chapter quizzes with answers [extra]"
+   ],
+   "solution_key": "Cognitive Psychology   chapter quizzes with answers",
+   "statement": "1) In examples of 'inductive reasoning' the individual's conclusions are a. completely certain b. highly improbable, but not completely uncertain c. highly probable, but uncertain d. completely uncertain ChatGPT 4o: Inductive reasoning involves making generalizations based on specific observations or evidence. The conclusions drawn from inductive reasoning are not guaranteed to be true, but they can be likely or probable. Therefore, in examples of inductive reasoning, the individual's conclusions are: c. highly probable, but uncertain This means that while the conclusions reached through inductive reasoning are plausible and likely, they do not have the certainty of deductive reasoning. There is always some degree of uncertainty because new evidence or observations might alter the conclusion."
   }
  ],
  "name": "COGNITIVE PSYCHOLOGY"

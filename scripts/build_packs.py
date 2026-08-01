@@ -22,16 +22,21 @@ DRILL = Path("data/drill")
 PACKS = {
     "509496": (
         "Information Retrieval and Recommender Systems", "31 Aug", 30, 6,
-        "Project + presentation. No written paper exists.",
+        "Written exam AND a project with presentation. CORRECTION: I previously told you "
+        "this was project-only with no written paper. That was wrong, and the evidence was "
+        "already in my own data — the project instructions say the presentations happen "
+        "'after the written exam'. Two past written papers now confirm it.",
         [
-            "Read `Project Instructions 2026 June - July` first — build to the spec, not to your own taste.",
-            "Email Peikos about an autumn presentation slot. Every slot in the forums is February, June or July. Without one there is no exam.",
-            "Build the IR half: index, retrieval, query expansion. Reuse the published dataset code.",
-            "Build the RecSys half on the same codebase.",
-            "Ten-minute deck: method, results, one honest limitation.",
+            "`IR past exam January 2025` and `IR past exam January 2026` — both come WITH full model answers. Work them first; they are the only two written papers in existence for this course.",
+            "From those papers the written half is: the standard IR pipeline diagram (offline vs online), extending it to Neural IR with bi- and cross-encoders, offline evaluation and the Cranfield paradigm, benchmark collections, and choosing an evaluation measure with justification.",
+            "Read `Project Instructions 2026 June - July` — build to the spec, not to your own taste.",
+            "Email Peikos about an autumn presentation slot. Every slot in the forums is February, June or July.",
+            "Build IR (index, retrieval, query expansion) and RecSys on one codebase; ten-minute deck.",
         ],
         "Do not start a second codebase for Web & Social — it is the same machinery.",
-        "This is work, not revision. It can be done tired, in the evening, which is why it sits first in the calendar.",
+        "The two papers are answered in full, so this went from the least-covered exam on your "
+        "calendar to one with model answers overnight. Budget more of the 30 hours to the "
+        "written half than I originally implied.",
     ),
     "509521": (
         "Laboratory of Machine Learning", "01 Sep", 25, 3,
@@ -58,14 +63,19 @@ PACKS = {
     ),
     "509494": (
         "Brain Modelling", "03 Sep", 26, 6,
-        "Coding project 30% + written 70% (open questions, ~2h).",
+        "Coding project 30% + written 70%. The written is 8 open questions (6 in 2026, with "
+        "marks in brackets summing to 32).",
         [
+            "Work the seven recovered papers in reverse date order: 18 June 2026, 29 January 2025, 11 Sept 2024, 10 July 2024, 20 June 2024, 1 March 2024, 12 February 2024.",
+            "The recurring spine, present in nearly every sitting: Nernst equation and reversal potentials · membrane capacitance/resistance numeric problems · encoding from dynamic stimuli to firing rates · entropy and mutual information of neural responses · Integrate-and-Fire and Leaky IF (including spike-rate adaptation and refractoriness) · Hodgkin-Huxley and gating variables · ion-channel state diagrams · synaptic conductance and release probability · STDP and Hebbian plasticity · FitzHugh-Nagumo · mean-field and whole-brain modelling.",
+            "Learn to actually compute two things — they open the paper almost every time: the Nernst reversal potential given RT/F, and a membrane capacitance or resistance problem.",
             "Email Casellato for the project-topics document and confirm the 30/70 split still holds.",
-            "Do the project first. Its mark carries across every session of the same academic year — it is the only work here that cannot be wasted.",
-            "Written: open questions on the lecture notes. No past papers exist.",
+            "Do the project. Its mark carries across every session of the same academic year — it is the only work here that cannot be wasted.",
         ],
-        "Coding in the written part — the forum states the project exists precisely so the written has none.",
-        "If you fall behind, sit the project and skip the written. You keep 30% and lose nothing.",
+        "Coding in the written part — the project exists precisely so the written has none.",
+        "This course went from zero archived material to seven past papers, and they repeat "
+        "heavily: the same twelve topics rotate through eight slots. That makes it one of the "
+        "more predictable exams you have, not one of the blindest.",
     ),
     "509495": (
         "Data Mining and Knowledge Extraction", "04 Sep", 19, 6,
@@ -83,16 +93,18 @@ PACKS = {
         "Cognitive Psychology", "08 Sep", 27, 6,
         "Written 25 pts (5 MCQ + 20 open) AND a compulsory oral (6 pts). Edition 7392 binds: threshold 12, final mark is the SUM.",
         [
-            "`Oral exam topics` (PDF) is the oral question bank and the only real exam material archived. Prepare a six-to-eight minute answer for every item.",
+            "`Cognitive Psychology - chapter quizzes with answers` — real chapter-quiz questions WITH the answers, recovered from the course group. Start here.",
+            "`Cognitive Psychology - Esercizi chapter exercises` — multiple-choice exercises by chapter, with options.",
+            "`Cognitive Psychology - full Q&A revision notes` — fourteen pages in question-and-answer form, which is exactly the shape of the written paper.",
+            "`Oral exam topics` (PDF) is the oral question bank. Prepare a six-to-eight minute answer for every item.",
             "Read the research papers behind the `Questions on research paper` activities (STM, LTM, TPS, Language). The oral draws on them.",
-            "Textbook chapters 1, 2, 3, 5, 6, 8, 10 — the chapter quizzes were set on these, so they bound the written syllabus.",
-            "Ask the course group for anyone's saved chapter-quiz questions; see the note below.",
         ],
         "The attendance bonus — it needed in-class presence and is not available to you.",
         "DO NOT email Bricolo about the syllabus. Silence keeps you on edition 7392, threshold 12 rather than 13. Asking costs you a mark. "
-        "Correction to an earlier report: this course does NOT have 31 past papers. Those were 31 Moodle quiz landing pages — "
+        "Correction to an earlier report: this course does NOT have 31 past papers on Kiro. Those were 31 Moodle quiz landing pages — "
         "opening times and 'only 1 attempt available', no questions. The quizzes were single-attempt and closed in 2024/25, "
-        "so their content was never archivable. Two real documents exist.",
+        "so their content was never archivable from Kiro. What the course group supplied fills exactly that hole: the chapter "
+        "quizzes, their answers, and a full Q&A revision set.",
     ),
     "509477": (
         "Computer Programming, Algorithms and Data Structures", "09 Sep", 44, 12,
@@ -125,33 +137,45 @@ PACKS = {
         "Machine Learning, ANN and Deep Learning", "15 Sep", 28, 12,
         "The exam IS an upload: Colab notebook + PDF, submitted on the session date. Not a closed-book paper.",
         [
-            "`Mock Exam`, then `Mock Exam 2` — both as timed dry runs.",
-            "`Exam Session 16 June 2026` and `Exam Session 14 July 2026` — these are real 2026 papers.",
-            "Build a reusable notebook: data loading, split, training loop, metrics, plots, numbered discussion sections.",
-            "Install and test the environment the day before.",
+            "Twenty real sittings are now archived, 2023 to 2026. Work backwards: Feb 2026, Jan 2026, 18 Sept 2025, 2 Sept 2025, 15 July 2025, 19 June 2025, 19 Feb 2025, 27 Jan 2025, then the four 2024 and four 2023 papers.",
+            "Sit the three September papers under time before anything else — 19 Sept 2023, 3 Sept 2024, 17 Sept 2024, 2 Sept 2025, 18 Sept 2025. Your exam is 15 September.",
+            "Every paper has the same shape: 'We are given a dataset containing N ... ' then design a model, justify the architecture, and analyse. Images, text reviews, graphs and tabular data all recur as the dataset type.",
+            "Note the 2025 and 2026 papers are labelled 'Part 2' — check whether a Part 1 exists and whether it binds for you.",
+            "`Mock Exam` and `Mock Exam 2` from Kiro as final dry runs.",
+            "Build a reusable notebook: data loading, split, training loop, metrics, plots, numbered discussion sections. Test the environment the day before.",
         ],
         "Deep theory. This is an applied upload, not a viva.",
         "The instructions say to respect the assignment numbering exactly. Formatting is a genuine failure mode here — more people lose marks to a mis-numbered answer than to bad modelling. Twelve credits for 28 hours.",
     ),
     "509492": (
         "Theoretical and Quantum Physics for AI", "22 Sep", 30, 12,
-        "Multiple choice per the archived mocks. Format NOT confirmed by the lecturers.",
+        "Module 1 mocks are multiple choice. MODULE 2 IS NOT — it is short computational "
+        "questions. Revise the budget upward: 30 h was costed on the assumption this was an "
+        "Ethics-style MCQ paper throughout, and it is not.",
         [
-            "Do `Another mock exam` and `Yet another mock exam` FIRST, before any study. An hour tells you what kind of exam this is.",
-            "Email Gherardi and Guarnieri: is it MCQ, and are the two modules one sitting?",
-            "Then the two modules' lecture notes, targeted at the mock question types.",
+            "Read `Quantum module 2 - recalled exam questions with answers` FIRST — a classmate's recall of ten module-2 questions with the expected answers. It is the only evidence of what module 2 actually asks.",
+            "Module 2 topics, straight from that recall: time evolution and expectation values (compute <Z> on |psi(t)>), information capacity (log2 of the state-space dimension), commutators and shared eigenbases, reduced density matrices, purity of a density matrix, Bloch vectors, wave-function normalisation, the uncertainty relation, and finding a state with a certain measurement outcome with probability 1.",
+            "Then `Another mock exam` and `Yet another mock exam` for module 1 — those are genuinely multiple choice, on dimensional analysis and the Rayleigh method.",
+            "Email Gherardi and Guarnieri: are the two modules examined in one sitting?",
         ],
-        "Derivations, if the MCQ format holds. Recognition beats reproduction on a multiple-choice paper.",
-        "Both archived mocks parse as bare-numbered multiple choice with four options, which corroborates your report — but two mocks are not the rules. If it turns out to be a written physics paper, 30 hours is wrong by 15 to 60. This is the largest single uncertainty in the plan.",
+        "Long derivations. Every recalled question is a short calculation with a numeric or one-line answer.",
+        "CORRECTION: I told you this was multiple choice on your verbal report, and the two "
+        "archived mocks (module 1) supported it. The module-2 recall shows five of ten "
+        "questions need real computation — density matrices, purity, expectation values under "
+        "time evolution — and only three are recognition items. Treat 30 h as a floor, not an "
+        "estimate, and confirm with the lecturers before you rely on it.",
     ),
     "509488": (
         "Text Mining and Natural Language Processing", "24 Sep", 30, 6,
-        "Up to 32 points, minimum 18. WRONG CLOSED ANSWERS SCORE -0.5.",
+        "Up to 32 points, minimum 18. WRONG CLOSED ANSWERS SCORE -0.5. The paper comes in "
+        "THREE PARTS (the recovered 2024 papers are labelled 'PART 1 OF 3' and 'PART 3 OF 3') "
+        "and there are lettered tracks — one photo shows 'Track 2.A'.",
         [
-            "`[TMNLP 22_23] Exam questions sample`.",
-            "`[TMNLP 23_24] Exam questions sample` and `[TM-NLP 23_24] Exam questions sample`.",
-            "`example of exam for linguistic part`.",
-            "`[TMNLP-2025_2026] Practice Written Exam` — most recent. Timed, last.",
+            "`TEXT MINING OPEN QUESTIONS - ANSWERS 2022-2023` FIRST. This is the only worked answer key the course has, and until now I had none.",
+            "The three-part structure, from the recovered papers: Part 1 is linguistics (morphology, arguments vs adjuncts, derivational vs inflectional suffixes), Part 2 is true/false with brief justification plus closed questions, Part 3 is long open questions (attention and Transformers, contextualised embeddings/ELMo/BERT, PPMI).",
+            "`[TMNLP 22_23]`, `[TMNLP 23_24]` and `[TM-NLP 23_24] Exam questions sample`.",
+            "The recovered photographs: PART 1 and PART 3 of 28/06/2024, the 30/06/2023 paper, the TF-IDF exercise and the embeddings matching exercise.",
+            "`[TMNLP-2025_2026] Practice Written Exam` — most recent, and it is PART 2 OF 3. Timed, last.",
         ],
         "Nothing on language models or sequence models — 67% of the paper.",
         "The paper is out of 32 and you need 18. Answer every open question (no penalty). On closed items, answer only where you can eliminate two options; otherwise leave blank. You can afford roughly six blanks. The guess-everything tactic that works elsewhere loses marks here.",
@@ -194,11 +218,14 @@ PACKS = {
     ),
     "510638": (
         "Web and Social Media Search and Analysis", "Jan/Feb", 38, 6,
-        "Project + presentation + written. Mark split UNVERIFIED.",
+        "Project + presentation + written. The written is now confirmed: Viviani, four "
+        "questions carrying [3], [4], [5] and [3] points on page one.",
         [
+            "`Web and Social Networks Search and Analysis - written exam 16 June 2025` — the only past paper, recovered from a photograph.",
+            "From it, the written syllabus is concrete: complex vs regular vs random networks; maximal cliques; local clustering coefficient; average degree via the Handshaking Lemma; delta centrality; Web 1.0 vs Web 2.0; bridges and articulation points; incidence matrices; betweenness centrality; assortativity.",
+            "Half the marks are hand computations on a small given graph. Practise those on paper, not in code.",
             "Email Viviani for the winter project deadline and the mark split.",
-            "Reuse the Information Retrieval codebase.",
-            "Submit at least 7 days before the written — that is the stated rule.",
+            "Reuse the Information Retrieval codebase; submit at least 7 days before the written.",
         ],
         "Building anything from scratch.",
         "Deferred out of September because its project deadline falls ~7 days before the written, which was already upon you, and because it is the worst credits-per-hour on the list.",

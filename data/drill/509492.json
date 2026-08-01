@@ -1,13 +1,16 @@
 {
  "course": "509492",
- "documents_resolved": 2,
+ "documents_resolved": 3,
  "papers_used": [
   "Another mock exam",
-  "Yet another mock exam"
+  "Yet another mock exam",
+  "Quantum module 2   recalled exam questions with answers"
  ],
- "n_papers": 2,
- "n_items": 18,
- "solution_keys": [],
+ "n_papers": 3,
+ "n_items": 28,
+ "solution_keys": [
+  "Quantum module 2   recalled exam questions with answers"
+ ],
  "papers_without_a_published_key": [
   "Another mock exam",
   "Yet another mock exam"
@@ -17,7 +20,7 @@
    "rank": 1,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -29,7 +32,7 @@
    "rank": 2,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -41,7 +44,7 @@
    "rank": 3,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -53,7 +56,7 @@
    "rank": 4,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -65,7 +68,7 @@
    "rank": 5,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -77,7 +80,7 @@
    "rank": 6,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -89,7 +92,7 @@
    "rank": 7,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -101,7 +104,7 @@
    "rank": 8,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -113,7 +116,7 @@
    "rank": 9,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -125,7 +128,7 @@
    "rank": 10,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -137,7 +140,7 @@
    "rank": 11,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -149,7 +152,7 @@
    "rank": 12,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -161,7 +164,7 @@
    "rank": 13,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -173,7 +176,7 @@
    "rank": 14,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -185,7 +188,7 @@
    "rank": 15,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Another mock exam [290672]"
@@ -197,7 +200,7 @@
    "rank": 16,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -209,7 +212,7 @@
    "rank": 17,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
@@ -221,13 +224,121 @@
    "rank": 18,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.5,
+   "share_of_papers": 0.333,
    "typical_marks": null,
    "papers": [
     "Yet another mock exam [290936]"
    ],
    "solution_key": "",
    "statement": "4 Consider the dynamical system xn+1 = f(xn), with discrete time n and discrete state x∈S ={1, 2, 3,..., 100}.\nThe functionf(x) is defined as\nf(x) =\n{\nx/5 ifx is a multiple of 5\nx + 1 otherwise\nHow many cycles are there?\n1. 0\n2. 1\n3. 5\n4. 20"
+  },
+  {
+   "rank": 19,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "8. Which of the following functions is (normalized and) a valid wave function?\n   Only two recalled: (1/2pi)cos x , e^(-|x|)/sqrt(pi)      (answer should be the second)"
+  },
+  {
+   "rank": 20,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "3. Information capacity of a system made of a spin-1/2 particle and a 4-level atom.\n                                              (answer should be log2 8)"
+  },
+  {
+   "rank": 21,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "5. Reduced matrix of B in |psi> = sqrt(3/7)|00> + e^(i*pi/3)*sqrt(4/7)|11>.\n                                  (answer should be 3/7|0><0| + 4/7|1><1|)"
+  },
+  {
+   "rank": 22,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "9. Uncertainty relation. A = [[0,1],[1,0]], B = [[0,-i],[i,0]], |psi> = |x+>.\n   Delta_A * Delta_B >= ?                     (answer should be 0)"
+  },
+  {
+   "rank": 23,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "7. To which state does this Bloch vector correspond?  a = (0, 1, 0)\n                                              (answer should be |y+>)"
+  },
+  {
+   "rank": 24,
+   "topic": "unclassified",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "1. Definition of information \"according to this course\"."
+  },
+  {
+   "rank": 25,
+   "topic": "dynamics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "10. On which of these states does A get outcome 1 with 100% probability?\n    A = [[0,0,0,0],[0,3/2,i/2,0],[0,-i/2,3/2,0],[0,0,0,-1]]\n                                    (answer should be (1/sqrt2)(0,1,i,0)^T)\n\nNOTE ON FORMAT - this contradicts the earlier assumption that 509492 is an\nEthics-style multiple-choice paper. Questions 2, 3, 5, 6, 9 require actual\ncomputation (time evolution and expectation values, reduced density matrices,\npurity, commutators); only 7, 8 and 10 are recognition items. Budgeting this as a\ncheap MCQ exam understates it."
+  },
+  {
+   "rank": 26,
+   "topic": "dynamics",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "2. Hamiltonian H = [[h*Omega, 0], [0, h*Omega]] in the basis {|0>, |1>}, initial state\n   |psi(0)> = sqrt(3/5)|0> + i*sqrt(2/5)|1>.\n   Compute <Z> on |psi(t)> for t > 0.        (answer should be 1/5)"
+  },
+  {
+   "rank": 27,
+   "topic": "operators_measurement",
+   "seen_in_papers": 1,
+   "share_of_papers": 0.333,
+   "typical_marks": null,
+   "papers": [
+    "Quantum module 2   recalled exam questions with answers [extra]"
+   ],
+   "solution_key": "Quantum module 2   recalled exam questions with answers",
+   "statement": "4. (Full text not recalled, but it was like:) What does \"[A,B] = 0\" say about\n   observables A and B?          (answer should be that they share an eigenbasis)"
   }
  ],
  "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI"

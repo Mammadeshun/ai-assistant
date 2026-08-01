@@ -78,7 +78,26 @@ def load_mcq_bank() -> list[dict]:
     return out
 
 
+def _key(name: str) -> str:
+    """Names survive a round trip through a filename slug, which turns
+    punctuation into runs of spaces. Compare on collapsed, lowercased words."""
+    return " ".join(re.sub(r"[^0-9a-zA-Z]+", " ", name).split()).lower()
+
+
+OVERRIDES = {
+    _key(k): v
+    for k, v in json.loads(Path("reference/document_roles.json").read_text()).items()
+    if not k.startswith("_")
+}
+
+
 def role_of(doc: Document) -> str:
+    # The automatic rules read a filename. Where the content is known - a quiz
+    # published together with its answers reads as an answer key, and a recalled
+    # paper reads as nothing at all - an explicit override wins.
+    override = OVERRIDES.get(_key(doc.name))
+    if override:
+        return override
     if doc.is_activity_stub:
         return "stub"
     if doc.is_solution:
