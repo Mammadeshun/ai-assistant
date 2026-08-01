@@ -96,6 +96,22 @@ class Document:
     parent: str = ""  # name of the folder module this file came out of
 
     @property
+    def is_activity_stub(self) -> bool:
+        """A Moodle activity page carrying no questions.
+
+        A closed quiz still publishes a page - completion criteria, an opening
+        window, 'Only 1 attempt available' - and nothing else. Counted as a
+        paper it inflates the archive with content that never existed:
+        Cognitive Psychology reported 31 papers this way, all of them empty.
+        Assignment briefs are deliberately not caught, because for Machine
+        Learning the brief *is* the exam.
+        """
+        text = self.text
+        if not text or "Aggregazione dei criteri" not in text:
+            return False
+        return text.count("?") < 2 and len(text) < 1200
+
+    @property
     def in_exam_folder(self) -> bool:
         return bool(self.parent and PAPER_TOKENS.search(_words(self.parent)))
 
@@ -527,7 +543,10 @@ def build(
     papers = [
         d
         for d in documents
-        if not d.is_solution and d.looks_like_paper and len(d.text.strip()) > 150
+        if not d.is_solution
+        and d.looks_like_paper
+        and not d.is_activity_stub
+        and len(d.text.strip()) > 150
     ]
 
     items: list[Item] = []

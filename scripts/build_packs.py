@@ -83,13 +83,16 @@ PACKS = {
         "Cognitive Psychology", "08 Sep", 27, 6,
         "Written 25 pts (5 MCQ + 20 open) AND a compulsory oral (6 pts). Edition 7392 binds: threshold 12, final mark is the SUM.",
         [
-            "Work the chapter quizzes: chapters 1, 2, 3, 5, 6, 8, 10. These are your MCQ drill and they are already extracted into the cockpit.",
-            "Read the research papers behind `Questions on research paper` (STM, LTM, TPS, Language). The oral draws on them.",
-            "`Oral exam topics` (PDF) is the oral question bank. Prepare a six-to-eight minute answer for every item.",
-            "`September 16th Oral exam questions' choice` shows how the question is picked.",
+            "`Oral exam topics` (PDF) is the oral question bank and the only real exam material archived. Prepare a six-to-eight minute answer for every item.",
+            "Read the research papers behind the `Questions on research paper` activities (STM, LTM, TPS, Language). The oral draws on them.",
+            "Textbook chapters 1, 2, 3, 5, 6, 8, 10 — the chapter quizzes were set on these, so they bound the written syllabus.",
+            "Ask the course group for anyone's saved chapter-quiz questions; see the note below.",
         ],
         "The attendance bonus — it needed in-class presence and is not available to you.",
-        "DO NOT email Bricolo about the syllabus. Silence keeps you on edition 7392, threshold 12 rather than 13. Asking costs you a mark.",
+        "DO NOT email Bricolo about the syllabus. Silence keeps you on edition 7392, threshold 12 rather than 13. Asking costs you a mark. "
+        "Correction to an earlier report: this course does NOT have 31 past papers. Those were 31 Moodle quiz landing pages — "
+        "opening times and 'only 1 attempt available', no questions. The quizzes were single-attempt and closed in 2024/25, "
+        "so their content was never archivable. Two real documents exist.",
     ),
     "509477": (
         "Computer Programming, Algorithms and Data Structures", "09 Sep", 44, 12,

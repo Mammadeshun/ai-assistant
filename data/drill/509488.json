@@ -5,19 +5,15 @@
   "[TMNLP 22_23] Exam questions sample",
   "[TMNLP 23_24] Exam questions sample",
   "[TMNLP-2025_2026] Practice Written Exam",
-  "Forum - Questions, observations, comments",
-  "Questions Regarding the Project aka your specific Stack Overflow forum",
   "example of exam for linguistic part"
  ],
- "n_papers": 6,
- "n_items": 35,
+ "n_papers": 4,
+ "n_items": 33,
  "solution_keys": [],
  "papers_without_a_published_key": [
   "[TMNLP 22_23] Exam questions sample",
   "[TMNLP 23_24] Exam questions sample",
   "[TMNLP-2025_2026] Practice Written Exam",
-  "Forum - Questions, observations, comments",
-  "Questions Regarding the Project aka your specific Stack Overflow forum",
   "example of exam for linguistic part"
  ],
  "question_types": [
@@ -25,7 +21,7 @@
    "rank": 1,
    "topic": "language_models",
    "seen_in_papers": 2,
-   "share_of_papers": 0.333,
+   "share_of_papers": 0.5,
    "typical_marks": 0.5,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]",
@@ -36,22 +32,9 @@
   },
   {
    "rank": 2,
-   "topic": "unclassified",
-   "seen_in_papers": 2,
-   "share_of_papers": 0.333,
-   "typical_marks": null,
-   "papers": [
-    "Forum - Questions, observations, comments [110990]",
-    "Questions Regarding the Project aka your specific Stack Overflow forum [126916]"
-   ],
-   "solution_key": "",
-   "statement": "Aggregazione dei criteri\nSpunta come completato\nThis Forum is a space where any student can write questions, comments and observations regarding the project and the implementation of specific systems.\nThe forum is open so anybody can answer/comment on all the threads.\nFeel free to use it to interact among yourselves, asking questions between groups, where anyone can answer\n(as in the\nStack Overflow website\n).\nCerca nei forum\nCerca nei forum\nAggiungi argomento di discussione\nSottoscrivi il forum\nOggetto\nMessaggio\nAnnulla\ncampi a compilazione obbligatoria\nAl momento in questo forum non sono presenti argomenti di discussione."
-  },
-  {
-   "rank": 3,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": 0.5,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -60,10 +43,10 @@
    "statement": "(15) In an encoder-decoder sequence-to-sequence model, the decoder can be viewed as: A. A conditional language model that predicts target tokens using previous target tokens and source information B. A classifier that predicts only one label for the whole input C. A tokenizer that merges frequent pairs D. A static dictionary lookup table E. None of the above \n \nWRONG ANSWER WILL GET -0.5 POINT! LEAVE IT BLANK FOR 0 POINT"
   },
   {
-   "rank": 4,
+   "rank": 3,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 22_23] Exam questions sample [321140]"
@@ -72,10 +55,10 @@
    "statement": "1. Giventhefollowingtablethatcontainswords(rows)andcontexts(columns)co-occurrences:\nandthefollowingsentences:● Thedogisaloyalandfriendlymammalthatmanypeoplechooseasapet● Mycatlovestoplaywithitstoysandisawonderfulpettohavearoundthehouse● Thecolorfulbirdchirpedmelodiouslyshowcasingitsbeautifulfeatheredplumage● Inthebackyardwehaveapondwhereavibrantorangefishgracefullyswimsamongaquaticplants● DespitebeingasmallbirdthecanaryhasstrikingfeatheredcolorsandadelightfulsongFirst,updatetheprevioustable(withoutaddingnewwordsandcontextwords)includingtheoccurrencesintheprovidedsentencesusingacontextwindowof5.ProvidethedefinitionofPPMI(includingtheformula),andcomputetheweightassignedtoatleasttwopairs(word,context)ofthetermsinthetable.WhatarethesolutionsforhandlingrarewordswithPPMI?Whydoweneedthem?"
   },
   {
-   "rank": 5,
+   "rank": 4,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 22_23] Exam questions sample [321140]"
@@ -84,10 +67,10 @@
    "statement": "2. GiventhefollowingreferenceandtranslationsprovidedbysystemsAandB\nReference:Acatisonthetable.SystemA:Apenisonthemat.SystemB:Thecatwasonadesk.\nProvidethedefinitionofBLEUscoreandcalculateitsvalue(BLEUupto4-gram)forbothtranslations.Additionally,whatareadequacyandfluencyinthecontextofmachinetranslations?Whataretheproblemswithhumanevaluationinthecontextofmachinetranslations?"
   },
   {
-   "rank": 6,
+   "rank": 5,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -96,10 +79,10 @@
    "statement": "(14) Which statement about learned MT evaluation metrics such as COMET or BLEURT is most accurate? A. They are trained to better approximate human quality judgments B. They require no training data and no model C. They only count exact word overlap D. They can never fail on empty or wrong-language outputs E. None of the above"
   },
   {
-   "rank": 7,
+   "rank": 6,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -108,10 +91,10 @@
    "statement": "(10) In multilingual machine translation, zero-shot translation refers to: A. Training without any data at all B. Translating with a beam size of zero C. Using only monolingual target-language data D. Translating a language pair not directly observed during training E. None of the above"
   },
   {
-   "rank": 8,
+   "rank": 7,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -120,10 +103,10 @@
    "statement": "2) Provide a formal definition of text classification. What are the four \nmain\n \ntypes\n \nof\n \nclassification\n \nwe\n \nhave\n \nseen\n \nin\n \nclass?\n \nProvide\n \na\n \ndescription\n \nof\n \neach.\n \nWhat\n \ndo\n \nwe\n \nmean\n \nby\n \nefficiency\n \nand\n \neffectiveness\n \nin\n \nclassification?"
   },
   {
-   "rank": 9,
+   "rank": 8,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "example of exam for linguistic part [240123]"
@@ -132,10 +115,10 @@
    "statement": "(3) decompose the following words in morphemes, say the part of speech of the original and \nderived word. What is the meaning conveyed by the affix? \nWinner Winn-er V → N \nFarmer \nExcusable \nNationality"
   },
   {
-   "rank": 10,
+   "rank": 9,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -144,10 +127,10 @@
    "statement": "(2) True or False Question (Provide the answer with a very brief, just a sentence, explanation): BART and mBART both use a denoising auto-encoder approach for reconstructing corrupted sentences."
   },
   {
-   "rank": 11,
+   "rank": 10,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "example of exam for linguistic part [240123]"
@@ -156,10 +139,10 @@
    "statement": "(2) Circle the arguments and put a cross on the adjuncts \nMary is trying to solve the problem in an hour"
   },
   {
-   "rank": 12,
+   "rank": 11,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -168,10 +151,10 @@
    "statement": "3) What are the five challenges of NLP that we have seen in class? \nExplain\n \neach\n \nof\n \nthem."
   },
   {
-   "rank": 13,
+   "rank": 12,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 22_23] Exam questions sample [321140]"
@@ -180,10 +163,10 @@
    "statement": "5. WhatismeantbytheSparsitychallengeinNLP?Pleaseelaborateonthisconcept."
   },
   {
-   "rank": 14,
+   "rank": 13,
    "topic": "unclassified",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "example of exam for linguistic part [240123]"
@@ -192,10 +175,10 @@
    "statement": "(1) One of these statements is correct. Find out which one."
   },
   {
-   "rank": 15,
+   "rank": 14,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -204,10 +187,10 @@
    "statement": "(16) Match the terms in Column A with their correct descriptions in Column B. (Write next to each element in Column A the related letter of Column B) Column A: Terms Column B: Descriptions \n1. BIO tagging _____ \nA. Predict masked tokens by exploiting bidirectional context. \n2. Dependency parsing _____ \nB. Use targeted examples to evaluate specific linguistic phenomena such as pronouns, agreement, ambiguity, or morphology. \n3. Cross-attention _____\n \nC. Mark entity spans with Begin/Inside/Outside tags. \n4. Masked Language Modeling _____ \nD. Convert a generated answer into the final required label, value, format, or action. \n5. Chain-of-thought prompting _____ \nE. Choose syntactic heads for tokens, usually forming a dependency tree. \n6. Output mapping / post-processing _____ \nF. Encourage the model to produce intermediate reasoning steps before the final answer. \n7. MT test suites _____ G. Let decoder representations attend to encoder representations. \n \nPART 3 OF 3 - Written Exam of TM&NLP 19/05/2026 Answer the following open questions clearly and concisely. Use examples \nwhenever\n \nuseful.\n 1. Explain the Byte Pair Encoding (BPE) algorithm. Why is it useful for neural NLP \nmodels,\n"
   },
   {
-   "rank": 16,
+   "rank": 15,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -216,10 +199,10 @@
    "statement": "(9) In a Transformer decoder, masked self-attention is used during training mainly to: A. Prevent each target position from attending to future target tokens B. Let each target position attend to future target tokens C. Remove the need for cross-attention D. Replace positional encoding E. None of the above"
   },
   {
-   "rank": 17,
+   "rank": 16,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -228,10 +211,10 @@
    "statement": "(3) What is the primary purpose of a language model in Natural Language Processing (NLP)? A) To identify the grammar rules of a language. B) To define probability distributions over strings in a language. C) To translate text from one language to another. D) To correct spelling errors in text."
   },
   {
-   "rank": 18,
+   "rank": 17,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -240,10 +223,10 @@
    "statement": "(13) Few-shot prompting / in-context learning means: A. Updating all model parameters using a few examples B. Providing examples in the prompt so the model can infer the task pattern C. Training a new tokenizer from scratch D. Using only one output label for all inputs E. None of the above"
   },
   {
-   "rank": 19,
+   "rank": 18,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -252,10 +235,10 @@
    "statement": "(4) What is the purpose of smoothing in n-gram language models? A) To remove irrelevant words from the vocabulary. B) To assign higher probabilities to frequent words. C) To avoid assigning zero probability to unseen n-grams. D) To reduce the model size."
   },
   {
-   "rank": 20,
+   "rank": 19,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -264,10 +247,10 @@
    "statement": "(3) True or False Question (Provide the answer with a very brief, just a sentence, explanation): In self-attention, the value vector is mainly used to decide how relevant a token is to another token's query."
   },
   {
-   "rank": 21,
+   "rank": 20,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 22_23] Exam questions sample [321140]"
@@ -276,10 +259,10 @@
    "statement": "3. Whatisann-gramlanguagemodel,andhowdoesitwork?Howistheprobabilityofasentencecomputed?Discussthechallengesposedbydatasparsityinn-gramlanguagemodelsandhowtoaddressthem."
   },
   {
-   "rank": 22,
+   "rank": 21,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 22_23] Exam questions sample [321140]"
@@ -288,10 +271,10 @@
    "statement": "4. WhatdoweintendforpositionalencodinginaTransformermodelandwhyhasitbeenintroduced?Whatarethecriteriathatshouldbesatisfiedforbuildingapositionalencodingmechanism?"
   },
   {
-   "rank": 23,
+   "rank": 22,
    "topic": "language_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -300,10 +283,10 @@
    "statement": "(8) Which of the following is typically a decoder-only pre-trained language model family? A. BERT B. T5 C. GPT D. mBART E. None of the above"
   },
   {
-   "rank": 24,
+   "rank": 23,
    "topic": "embeddings",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -312,10 +295,10 @@
    "statement": "(5) Match the terms in Column A with their correct descriptions in Column B. Column A: Terms \n Cosine Similarity Dot Product Orthogonal Vectors Vector Length Normalization Frequency Sensitivity Column B: Descriptions \na.\n \nHigh\n \nwhen\n \ntwo\n \nvectors\n \nhave\n \nlarge\n \nvalues\n \nin\n \nthe\n \nsame\n \ndimensions.\n b. A similarity measure that ranges from -1 to 1. c. A problem when similarity metrics are affected by word frequency. d. Vectors that result in a cosine similarity of 0. e. The process of dividing the dot product by the lengths of the two vectors. f. The measure that affects the dot product if the vectors are longer. \n \nWritten Exam of TM&NLP"
   },
   {
-   "rank": 25,
+   "rank": 24,
    "topic": "embeddings",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -324,10 +307,10 @@
    "statement": "(11) BLEU is mainly based on: A. Human adequacy judgments only B. N-gram overlap between system output and reference translations C. The cosine similarity of sentence embeddings only D. The number of parameters in the MT system E. None of the above"
   },
   {
-   "rank": 26,
+   "rank": 25,
    "topic": "sequence_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -336,10 +319,10 @@
    "statement": "(1) True or False Question (Provide the answer with a very brief, just a sentence, explanation): POS tagging can be formulated as a sequence labeling task where each token receives a grammatical \ncategory;\n \nunlike\n \nNER,\n \nit\n \ndoes\n \nnot\n \nnormally\n \nrequire\n \nfinding\n \nmulti-token\n \nentity\n \nspans."
   },
   {
-   "rank": 27,
+   "rank": 26,
    "topic": "sequence_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP 23_24] Exam questions sample [321141]"
@@ -348,10 +331,10 @@
    "statement": "1) What are the decoding algorithms in sequence-to-sequence \nmodels?\n \nWhat\n \nis\n \nbeam\n \nsearch\n \n(e.g.\n \nits\n \ncore\n \nidea)\n \nand\n \nwhy\n \nit\n \nhas\n \nbeen\n \nintroduced?\n \nProvide\n \nsome\n \nproperties\n \nof\n \nbeam\n \nsearch.\n \nWhat\n \nare\n \nthe\n \nstopping\n \ncriteria\n \nfor\n \ndecoding?"
   },
   {
-   "rank": 28,
+   "rank": 27,
    "topic": "sequence_models",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -360,10 +343,10 @@
    "statement": "(6) In BIO tagging for named entity recognition, what does B-ORG mean? A. A token outside any organization entity B. The first token of an organization entity span C. Any token after the first token of an organization entity D. A token that begins a sentence E. None of the above"
   },
   {
-   "rank": 29,
+   "rank": 28,
    "topic": "tokenisation",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -372,10 +355,10 @@
    "statement": "(7) Which statement best describes a main advantage of subword tokenization? A. It eliminates the need for embeddings B. It prevents models from using rare words C. It can decompose rare or unseen words into known units D. It always produces shorter sequences than word-level tokenization E. None of the above"
   },
   {
-   "rank": 30,
+   "rank": 29,
    "topic": "tokenisation",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -384,10 +367,10 @@
    "statement": "(2) True or False Question (Provide the answer with a very brief, just a sentence, explanation): Byte Pair Encoding starts from individual characters and iteratively merges the least frequent adjacent symbol \npairs."
   },
   {
-   "rank": 31,
+   "rank": 30,
    "topic": "evaluation",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -396,10 +379,10 @@
    "statement": "(12) Why can accuracy be misleading in an imbalanced binary text classification task? A. Because a classifier can obtain high accuracy by predicting only the majority class B. Because accuracy cannot be computed for binary tasks C. Because accuracy is always lower than precision D. Because accuracy ignores all true negatives E. None of the above"
   },
   {
-   "rank": 32,
+   "rank": 31,
    "topic": "evaluation",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "[TMNLP-2025_2026] Practice Written Exam [321142]"
@@ -408,10 +391,10 @@
    "statement": "(4) True or False Question (Provide the answer with a very brief, just a sentence, explanation): Macro-averaging computes a score for each class and then averages them, so minority classes can influence \nthe\n \nfinal\n \nscore\n \nas\n \nmuch\n \nas\n \nmajority\n \nclasses."
   },
   {
-   "rank": 33,
+   "rank": 32,
    "topic": "linguistics",
    "seen_in_papers": 1,
-   "share_of_papers": 0.167,
+   "share_of_papers": 0.25,
    "typical_marks": null,
    "papers": [
     "example of exam for linguistic part [240123]"
