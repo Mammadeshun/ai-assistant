@@ -86,34 +86,190 @@ def load_packs() -> dict[str, str]:
     }
 
 
-def load_drill(library: dict) -> dict:
-    # Drill cards are clusters of questions, so the worked answer has to be
-    # carried across from the question it was paired with in the library.
-    def akey(text: str) -> str:
-        # The drill card holds the cluster representative's raw text and the
-        # library holds a stripped copy, so the two only line up once whitespace
-        # is normalised on both sides.
-        return " ".join(text.split())[:180]
+def build_drill(library: dict) -> tuple[dict, dict, dict]:
+    """Drill cards, timed papers and topic frequency, all from the full question set.
 
-    answers = {
-        akey(q["text"]): q["answer"]
-        for course in library.values()
-        for q in course["questions"]
-        if q.get("answer")
-    }
-    banks = {}
+    The old drill bank held 161 clustered "question types" while the library
+    held 988 questions and 365 answer keys, so the best material - every solved
+    Computational Logic sitting, every Probability paper with its worked
+    solutions - was unreachable from the place you actually revise. Cards are
+    now built from the questions themselves and reference them by index, so
+    nothing is duplicated into the payload.
+
+    Recurrence is carried across from the clustered bank where a question
+    matches one, because "this appears in 25 of 28 papers" is the single most
+    useful thing to sort by.
+    """
+    recurrence: dict[str, dict[str, tuple[int, float, str]]] = {}
     for path in sorted(Path("data/drill").glob("*.json")):
         bank = json.loads(path.read_text())
-        cards = [
-            {"topic": q["topic"], "seen": q["seen_in_papers"], "share": q["share_of_papers"],
-             "marks": q["typical_marks"], "key": q["solution_key"],
-             "text": q["statement"][:1400], "papers": q["papers"][:4],
-             "answer": answers.get(akey(q["statement"]))}
-            for q in bank["question_types"] if q["seen_in_papers"] >= 2
+        for group in bank["question_types"]:
+            key = " ".join(group["statement"].split())[:140]
+            recurrence.setdefault(path.stem, {})[key] = (
+                group["seen_in_papers"], group["share_of_papers"], group["solution_key"] or ""
+            )
+
+    drill: dict[str, list] = {}
+    papers: dict[str, list] = {}
+    topics: dict[str, list] = {}
+
+    for code, course in library.items():
+        questions = course["questions"]
+        if not questions:
+            continue
+
+        cards = []
+        for index, question in enumerate(questions):
+            key = " ".join(question["text"].split())[:140]
+            seen, share, _ = recurrence.get(code, {}).get(key, (1, 0.0, ""))
+            cards.append({
+                "q": index,
+                "seen": seen,
+                "share": round(share, 3),
+                "keyed": bool(question.get("answer")),
+            })
+        # Most-recurring first, then answered ones ahead of unanswered: a card
+        # you cannot check is worth less than one you can.
+        cards.sort(key=lambda c: (-c["seen"], not c["keyed"]))
+        drill[code] = cards
+
+        by_paper: dict[str, list[int]] = {}
+        for index, question in enumerate(questions):
+            by_paper.setdefault(question["paper"], []).append(index)
+        docs = {d["name"]: d["i"] for d in course["documents"]}
+        papers[code] = [
+            {"name": name, "doc": docs.get(name), "qs": qs,
+             "keyed": sum(1 for i in qs if questions[i].get("answer"))}
+            for name, qs in by_paper.items()
+            if len(qs) >= 2
         ]
-        if cards:
-            banks[path.stem] = {"name": bank.get("name", path.stem).title(), "cards": cards}
-    return banks
+        papers[code].sort(key=lambda p: -len(p["qs"]))
+
+        counts: dict[str, int] = {}
+        keyed: dict[str, int] = {}
+        for question in questions:
+            topic = question["topic"]
+            counts[topic] = counts.get(topic, 0) + 1
+            if question.get("answer"):
+                keyed[topic] = keyed.get(topic, 0) + 1
+        total = sum(counts.values())
+        topics[code] = sorted(
+            (
+                {"topic": t, "n": n, "share": round(n / total, 3), "keyed": keyed.get(t, 0)}
+                for t, n in counts.items()
+            ),
+            key=lambda t: -t["n"],
+        )
+
+    return drill, papers, topics
+
+
+# The specific ways each paper takes marks off you. Verbatim on the exam card,
+# because these are the facts that are expensive to remember wrongly.
+TRAPS = {
+    "509488": [
+        "Wrong closed answers score −0.5. Leave one blank unless you can eliminate two options.",
+        "Answer every open question — no penalty there.",
+        "Three parts (PART 1/2/3 OF 3) and lettered tracks. Check which track you were given.",
+        "Paper is out of 32; you need 18. You can afford roughly six blanks.",
+    ],
+    "509477": [
+        "TWO independent gates: theory ≥12/20 AND code ≥6/10. Passing one does not carry the other.",
+        "Non-running code is an automatic fail. Run every function before you submit.",
+        "The theory gate is what fails people, not the code. AVL rotations recur in every paper.",
+    ],
+    "509481": [
+        "Part 1 needs ≥15/30 on top of the overall 18.",
+        "Closed book. Part 1 is one hour.",
+        "No Part 1 / Part 2 split exists in autumn 2026 — one combined sitting.",
+        "The published theory-question list is the exam's own bank, with answers.",
+    ],
+    "509485": [
+        "Compulsory ORAL as well as the written — both are mandatory.",
+        "Edition 7392 binds: written threshold 12, and the final mark is the SUM.",
+        "Do NOT contact Bricolo about the syllabus — silence keeps you on the lower threshold.",
+        "Bicocca, not Pavia.",
+    ],
+    "509486": [
+        "The exam IS an upload: Colab notebook + PDF, submitted on the day.",
+        "Respect the assignment numbering exactly — marks are lost to formatting.",
+        "Test the environment the day before.",
+    ],
+    "509492": [
+        "Module 1 is multiple choice; MODULE 2 IS NOT — short computational questions.",
+        "Expect: expectation values under time evolution, reduced density matrices, purity, commutators.",
+        "Statale, not Pavia.",
+        "30 h is a floor, not an estimate — the format is still unconfirmed by the lecturers.",
+    ],
+    "509496": [
+        "There IS a written exam as well as the project — I had this wrong until the January papers turned up.",
+        "Both past papers come with full model answers.",
+        "The autumn presentation slot is unconfirmed. Chase Peikos.",
+    ],
+    "509494": [
+        "Coding project is 30% and its mark CARRIES to later sessions of the same year.",
+        "Written is 6–8 open questions with marks in brackets.",
+        "Nernst reversal potential and a membrane capacitance/resistance calculation open almost every paper.",
+    ],
+    "509495": [
+        "The 12/30 of assignments were set during delivery and cannot be recovered — you sit for the full 30.",
+        "Novelty 0.54: half of each paper is genuinely new. Past papers give format, not answers.",
+    ],
+    "509519": [
+        "Multiple choice, single unsplit exam, no gate beyond 18.",
+        "Nothing is archived for this course. The non-attending reading list is the exam.",
+    ],
+    "509521": [
+        "Nine report submissions ARE the grade — there is no exam.",
+        "Check the submission windows are still open; closed windows killed AI Marketing.",
+    ],
+    "504464": [
+        "8 tests × 30 MCQ in one ~3h20 sitting, +1 correct / −1 wrong / 0 blank.",
+        "Final mark is the AVERAGE of the 8 sections — you cannot drop your worst.",
+        "You need net +18 per section: about 22 right, 4 wrong, 4 blank.",
+        "A random guess on four options has expected value −0.5. Answer only when two are eliminated.",
+    ],
+}
+
+
+def drop_scenarios() -> dict:
+    """What deferring each September exam to winter would actually free.
+
+    Computed by re-running the real scheduler without that course, not
+    estimated: 331 h in 52 days with five exams in five days has no slack, and
+    a guess about what dropping one buys you is worth nothing.
+    """
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("sched", "scripts/build_calendar.py")
+    sched = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sched)
+
+    full = [c for c in sched.PLAN]
+    out: dict[str, dict] = {}
+    for dropped, *_ in full:
+        subset = [c for c in full if c[0] != dropped]
+        try:
+            result = sched.plan_for(subset)
+        except AssertionError as exc:  # noqa: PERF203 - report, do not hide
+            out[dropped] = {"feasible": False, "why": str(exc)[:160]}
+            continue
+        out[dropped] = {
+            "feasible": True,
+            "freed_hours": round(sched.HOURS[dropped], 1),
+            "freed_cfu": sched.CFU[dropped],
+            "worst_gap": result["worst_gap"],
+            "overrun_days": result["overrun_days"],
+            "peak_day": result["peak_day"],
+            "slack": result["slack"],
+        }
+    baseline = sched.plan_for(full)
+    out["_current"] = {
+        "feasible": True, "freed_hours": 0, "freed_cfu": 0,
+        "worst_gap": baseline["worst_gap"], "overrun_days": baseline["overrun_days"],
+        "peak_day": baseline["peak_day"], "slack": baseline["slack"],
+    }
+    return out
 
 
 def build_payload(pages: dict, pages_dir: str) -> str:
@@ -126,6 +282,7 @@ def build_payload(pages: dict, pages_dir: str) -> str:
     for code, name, *_ in WINTER:
         names.setdefault(code, name)
 
+    drill, papers, topics = build_drill(library["courses"])
     docs = sum(len(c["documents"]) for c in library["courses"].values())
     questions = sum(len(c["questions"]) for c in library["courses"].values())
     keys = sum(
@@ -149,7 +306,11 @@ def build_payload(pages: dict, pages_dir: str) -> str:
             {"code": c, "name": n, "hours": h, "cfu": cfu, "note": note}
             for c, n, h, cfu, note in WINTER
         ],
-        "drill": load_drill(library["courses"]),
+        "drill": drill,
+        "papers": papers,
+        "topics": topics,
+        "scenarios": drop_scenarios(),
+        "traps": TRAPS,
         "lib": library["courses"],
         "quiz": library["quiz_banks"],
         "pages": pages,
@@ -174,17 +335,31 @@ def main() -> int:
         "STUDY BUNDLE\n"
         "============\n\n"
         "Unzip anywhere, then open  index.html  in any browser.\n"
-        "Everything works offline. Nothing is uploaded. Progress (drilled cards,\n"
-        "quiz answers, ticked days) is stored in the browser on that device, so use\n"
-        "the same browser to keep it.\n\n"
-        "  Today    countdown, the day's plan, booking deadlines closing soon\n"
-        "  Courses  one page per exam: Method, Papers, Questions, Files\n"
-        "  Drill    recurring question types, most frequent first\n"
+        "Everything works offline. Nothing is uploaded.\n\n"
+        "SECTIONS\n"
+        "  Today    countdown with campus, the day's plan split into new material\n"
+        "           and spaced review, a Start-now button, weakest topics, and a\n"
+        "           booking banner that turns red inside 48 hours\n"
+        "  Courses  per exam: Method, Papers, Drill, Topics, Questions, Files\n"
+        "  Drill    spaced repetition over every question, ordered by what is due\n"
+        "           and by how often it recurs. Grade Again / Hard / Good / Easy\n"
         "  Quiz     the 85 solved multiple-choice questions, scored\n"
-        "  Plan     every sitting, booking window and the full calendar\n"
-        "  Search   press / anywhere\n\n"
-        "In Papers, click any page to open it full size. Arrow keys move between\n"
-        "pages, Zoom enlarges, Esc closes.\n\n"
+        "  Plan     eight-week heatmap, every sitting and booking window\n"
+        "  Cards    one printable page per exam: gate, campus, scoring traps.\n"
+        "           Ctrl+P gives one A4 page per exam\n"
+        "  More     hours logged vs planned, re-flow, defer-an-exam simulator,\n"
+        "           daily digest, and progress export/import\n\n"
+        "KEYS\n"
+        "  Ctrl+K or /   command palette - jump to any course, paper or topic\n"
+        "  arrows        page through a paper when the viewer is open\n"
+        "  Esc           close\n\n"
+        "PAPERS\n"
+        "  Click any page to open it full size. Zoom enlarges, swipe pages on a\n"
+        "  phone, and 'Sit this paper timed' hides the answers and starts a clock.\n\n"
+        "PROGRESS\n"
+        "  Grading, quiz answers, ticked days and logged hours live in this\n"
+        "  browser's localStorage. That is one device and one browser: use\n"
+        "  More > Export regularly. Import merges a backup back in.\n\n"
         "The pages/ folder holds the rendered exam pages. Keep it beside\n"
         "index.html or the paper viewer will have nothing to show.\n"
     )

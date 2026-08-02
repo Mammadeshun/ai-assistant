@@ -531,6 +531,151 @@ BOOK_BY = {
 }
 
 
+def _pipeline() -> tuple[dict[str, list], float]:
+    """Build a merged schedule from whatever PLAN currently holds."""
+    learn_hours = {c[0]: q(c[3] * (1 - REVIEW_SHARE)) for c in PLAN}
+    review_budget = {c[0]: q(c[3] * REVIEW_SHARE) for c in PLAN}
+    review_used: dict[dt.date, float] = {}
+    learning: dict[dt.date, list] = {}
+    review: dict[dt.date, list] = {}
+
+    for _ in range(6):
+        learning, block_end = schedule_learning(learn_hours, review_used)
+        review = schedule_review(block_end, review_budget)
+        placed = {code: 0.0 for code in NAME}
+        review_used = {}
+        for day, slots in review.items():
+            for code, hours in slots:
+                placed[code] += hours
+                review_used[day] = review_used.get(day, 0.0) + hours
+        adjusted = {code: q(HOURS[code] - placed[code]) for code in NAME}
+        if adjusted == learn_hours:
+            break
+        learn_hours = adjusted
+    learning, block_end = schedule_learning(learn_hours, review_used)
+
+    merged: dict[str, list] = {}
+    for day in days():
+        slots = [[c, h, "learn"] for c, h in learning[day]]
+        slots += [[c, h, "review"] for c, h in review.get(day, [])]
+        merged[day.isoformat()] = slots
+
+    enforce_consolidation(merged)
+    enforce_gaps(merged)
+    top_up(merged)
+
+    for iso, slots in merged.items():
+        combined: dict[tuple[str, str], float] = {}
+        for code, hours, kind in slots:
+            combined[(code, kind)] = q(combined.get((code, kind), 0.0) + hours)
+        merged[iso] = [[code, hours, kind] for (code, kind), hours in combined.items()]
+
+    total = sum(s[1] for slots in merged.values() for s in slots)
+    return merged, total
+
+
+def plan_for(subset: list) -> dict:
+    """Schedule an alternative set of courses, for the drop simulator.
+
+    The module keeps its tables as globals because every helper reads them; the
+    honest way to schedule a different set is to rebind them for the duration
+    and put them back. Not elegant, but it means the simulator runs the real
+    scheduler rather than a second implementation that could drift from it.
+    """
+    global PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE
+    saved = (PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE)
+    try:
+        PLAN = subset
+        EXAM_DAYS = {c[2] for c in subset}
+        NAME = {c[0]: c[1] for c in subset}
+        EXAM = {c[0]: c[2] for c in subset}
+        CFU = {c[0]: c[4] for c in subset}
+        HOURS = {c[0]: c[3] for c in subset}
+        DUE = {c[0]: (c[6] or c[2] - dt.timedelta(days=1)) for c in subset}
+
+        merged, total = _pipeline()
+        cold = days_cold(merged)
+        overrun = [
+            iso for iso, slots in merged.items()
+            if sum(s[1] for s in slots) > day_capacity(dt.date.fromisoformat(iso)) + 0.01
+        ]
+        peak = max(
+            (sum(s[1] for s in slots) for slots in merged.values()), default=0.0
+        )
+        capacity = sum(day_capacity(d) for d in days())
+        return {
+            "total": round(total, 2),
+            # Slack is the number that decides whether a bad week is survivable.
+            "slack": round(capacity - total, 2),
+            "worst_gap": max((v[1] for v in cold.values()), default=0),
+            "overrun_days": len(overrun),
+            "peak_day": round(peak, 2),
+        }
+    finally:
+        PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE = saved
+
+
+def main() -> int:
+    # Compare against the original single-pass schedule, not against whatever
+    # this script wrote last time, or the table flatters itself.
+    baseline = Path("reference/calendar_baseline.json")
+    current = Path("data/audit/calendar.json")
+    if not baseline.exists() and current.exists():
+        payload = json.loads(current.read_text())
+        if not any(
+            len(s) > 2 and s[2] == "review"
+            for slots in payload["days"].values()
+            for s in slots
+        ):
+            baseline.write_text(json.dumps(payload, indent=1))
+    before = json.loads(baseline.read_text())["days"] if baseline.exists() else {}
+
+    merged, total = _pipeline()
+
+    return merged, total
+
+
+def plan_for(subset: list) -> dict:
+    """Schedule an alternative set of courses, for the drop simulator.
+
+    The module keeps its tables as globals because every helper reads them; the
+    honest way to schedule a different set is to rebind them for the duration
+    and put them back. Not elegant, but it means the simulator runs the real
+    scheduler rather than a second implementation that could drift from it.
+    """
+    global PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE
+    saved = (PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE)
+    try:
+        PLAN = subset
+        EXAM_DAYS = {c[2] for c in subset}
+        NAME = {c[0]: c[1] for c in subset}
+        EXAM = {c[0]: c[2] for c in subset}
+        CFU = {c[0]: c[4] for c in subset}
+        HOURS = {c[0]: c[3] for c in subset}
+        DUE = {c[0]: (c[6] or c[2] - dt.timedelta(days=1)) for c in subset}
+
+        merged, total = _pipeline()
+        cold = days_cold(merged)
+        overrun = [
+            iso for iso, slots in merged.items()
+            if sum(s[1] for s in slots) > day_capacity(dt.date.fromisoformat(iso)) + 0.01
+        ]
+        peak = max(
+            (sum(s[1] for s in slots) for slots in merged.values()), default=0.0
+        )
+        capacity = sum(day_capacity(d) for d in days())
+        return {
+            "total": round(total, 2),
+            # Slack is the number that decides whether a bad week is survivable.
+            "slack": round(capacity - total, 2),
+            "worst_gap": max((v[1] for v in cold.values()), default=0),
+            "overrun_days": len(overrun),
+            "peak_day": round(peak, 2),
+        }
+    finally:
+        PLAN, EXAM_DAYS, NAME, EXAM, CFU, HOURS, DUE = saved
+
+
 def main() -> int:
     # Compare against the original single-pass schedule, not against whatever
     # this script wrote last time, or the table flatters itself.
