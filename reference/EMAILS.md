@@ -9,12 +9,53 @@ are comfortable handling the reply in Italian; otherwise send the English and
 save yourself an awkward second exchange. The segreteria mail (no. 10) is the
 one exception — send that one in Italian.
 
-**Addresses are not verified.** UniPV is usually `nome.cognome@unipv.it`,
-Statale `nome.cognome@unimi.it`, Bicocca `nome.cognome@unimib.it`, but
-exceptions are common. Check each departmental staff page first.
+**Addresses are now resolved** — see the table below. Nine of eleven are
+filled into the Gmail drafts; the two that are not have a reason.
 
 Ordered by consequence. Each asks one question that can be answered in a line —
 in August, that is the difference between a reply and silence.
+
+
+## Verified recipients
+
+Filled into the Gmail drafts. Source column matters: an address found inside the
+archived Kiro pages was published by the university to you, which is stronger
+evidence than a departmental web page, which is in turn stronger than a search
+summary.
+
+| # | Recipient | Address | Source |
+|---|---|---|---|
+| 1 | Faroldi — Ethics | federico.faroldi@unipv.it | Dept. of Law staff page |
+| 2 | Suriano — AI Marketing | **not found** | see note below |
+| 3 | Peikos — IR&RS | georgios.peikos@unimib.it | archived Kiro pages (4 occurrences) |
+| 4 | Gherardi — Quantum | marco.gherardi@unimi.it | Dept. of Physics staff page |
+| 4 | Guarnieri — Quantum | giacomo.guarnieri@unipv.it | archived Kiro pages |
+| 5 | Casellato — Brain Modelling | claudia.casellato@unipv.it | UNIFIND / dept page |
+| 5 | Marta (cc) — Brain Modelling | alessio.marta@unipv.it | archived Kiro pages |
+| 6 | Cusano + Nocera — Lab of ML | claudio.cusano@unipv.it, antonino.nocera@unipv.it | Kiro course title names both |
+| 7 | Cusano — Project Work | claudio.cusano@unipv.it | as above |
+| 7 | Dondi — Project Work (alt) | piercarlo.dondi@unipv.it | Computer Vision group page |
+| 8 | Viviani — Web & Social | marco.viviani@unimib.it | DISCo / IKR3 lab page |
+| 9 | Ghilardi — Computational Logic | silvio.ghilardi@unimi.it | Dept. of Mathematics staff page |
+| 10 | Segreteria | **use Filo Diretto, not email** | see note below |
+
+**Suriano has no published address.** He is not in the UniPV mathematics
+department directory, not in UNIFIND, and not in any of the 3,000+ archived Kiro
+pages — which fits a *docente a contratto* brought in for an industry-facing
+course. Do not guess at `sergio.suriano@unipv.it`. Message him through Kiro
+instead: open course 509498 and use Moodle's own messaging, which reaches him
+wherever his mail actually lands.
+
+**The segreteria question is not an email.** UniPV routes enrolled-student
+queries through the *Filo Diretto* helpdesk rather than a public inbox. Paste
+the Italian text of mail 10 into that form.
+
+**Lab of Machine Learning is taught by Cusano and Nocera** — the archived Kiro
+course title says so ("PROFF. CUSANO CLAUDIO, NOCERA ANTONINO"), which also
+answers the "lecturer unknown" note in the earlier version of this file.
+
+**Project Work: the recipient depends on whose proposal you pick.** The draft is
+addressed to Cusano; switch it to Dondi if you choose one of his.
 
 ---
 
@@ -207,9 +248,9 @@ you can get hold of early.
 
 ## 6. Laboratory of Machine Learning (509521) · exam 1 September
 
-I have no lecturer name for this course — check the Kiro course page before
-sending. Worth asking: if the nine submission windows are closed, the course
-cannot be sat and 25 hours come straight back to you.
+Taught by Cusano and Nocera, both addressed. Worth asking: if the nine
+submission windows are closed, the course cannot be sat and 25 hours come
+straight back to you.
 
 **Oggetto: Laboratory of Machine Learning — consegne per la sessione autunnale**
 
