@@ -1,0 +1,36 @@
+{
+  "_purpose": "Facts that are NOT derivable from the collected files, and the exam routes they open. This file lives outside data/ deliberately: data/ is rebuilt from scratch by the tools, and a hand-entered fact must survive that.",
+  "_provenance": "Stated by the student, 2026-09-07, and corroborated where possible against Esse3 and Kiro. Each entry names its evidence.",
+
+  "cohort": {
+    "entry_year": "2023/2024",
+    "evidence": "Esse3 libretto files every year-1 activity under 2023/2024; the student confirms a 2023/24 entry.",
+    "why_it_matters": "Assessment rules on this degree are set per course edition, not per sitting. The rules that apply are the ones for the edition of the student's cohort, which is often NOT the newest edition on Kiro. Scoring a course from the current edition's page can therefore describe an exam this student will not sit."
+  },
+
+  "course_routes": {
+    "509477": {
+      "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+      "cfu": 12,
+      "structure": "Two Kiro modules under one Esse3 code.",
+      "modules": [
+        {"module": "MOD. 1", "subject": "Computer Programming",
+         "teacher": "FERRARI STEFANO",
+         "kiro_course_ids": ["4", "2848", "5360", "7388", "9811", "12131"]},
+        {"module": "MOD. 2", "subject": "Algorithms and Data Structures",
+         "teacher": "DONDI PIERCARLO",
+         "kiro_course_ids": ["7598", "9919", "12210"]}
+      ],
+      "route_for_this_cohort": "Submit the PROJECT for MOD. 1 and sit the WRITTEN for MOD. 2. The two together record the full 12 CFU.",
+      "route_for_new_students": "The project option is not available; MOD. 1 is examined by test.",
+      "evidence": "Stated by the student. Corroborated by the Kiro search: 509477 resolves to six MOD. 1 editions (Ferrari) and three MOD. 2 editions (Dondi), which is the module split the route depends on.",
+      "planning_consequence": "The project is calendar time, not revision time, and can be started before any sitting. Only the MOD. 2 written consumes an exam date. Hours-to-18 for this course must be split accordingly rather than treated as one written exam.",
+      "DATA_INCOMPLETE": "The project brief, its deadline and its rubric have not yet been located in the MOD. 1 editions. Confirm with Prof. Ferrari before relying on this route."
+    }
+  },
+
+  "_open_questions": [
+    "Do other multi-module courses (Quantum Physics, Ethics) carry cohort-dependent routes too? Each was found with several editions; the rules pages of the 2023/24 edition should be read before scoring them.",
+    "Italian Language (509536) has one edition whose self-enrolment needs a key. Ask for the key if that 3 CFU is wanted."
+  ]
+}

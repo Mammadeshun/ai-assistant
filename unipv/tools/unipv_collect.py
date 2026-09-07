@@ -165,6 +165,65 @@ def parse_bookings(html: str) -> list[dict]:
     return out
 
 
+# Esse3 renders an appello as a label/value list. A field with no value is
+# still rendered as a label, so "take the next line" silently reads the next
+# label as the value - which is how "Ora" came back as "Edificio e Aula".
+APPELLO_LABELS = (
+    "Ora", "Edificio", "Aula", "Indirizzo Edificio", "Docenti", "Note", "Tipo",
+    "Descrizione", "Sessioni", "Numero Iscrizione", "Data Prenotazione",
+    "Riservato per", "Svolgimento esame", "Partizionamento", "Data appello",
+    "Tipo esame", "Periodo", "Cancella Prenotazione", "Stampa prenotazione",
+)
+
+
+def appello_fields(markup: str) -> dict[str, str]:
+    """Label -> value, where a value may span several lines (several teachers)
+    or be absent entirely."""
+    soup = BeautifulSoup(markup, "lxml")
+    for tag in soup(["script", "style"]):
+        tag.decompose()
+    lines = [l.strip("\u200b ").strip()
+             for l in soup.get_text("\n", strip=True).split("\n")]
+    lines = [l for l in lines if l]
+    labels = set(APPELLO_LABELS)
+    values: dict[str, list[str]] = {}
+    current = None
+    for line in lines:
+        # "Note appello", "Note per il docente" and friends are labels too, and
+        # not listing them let them run on into whatever field came before.
+        if line.startswith("Note") or line.startswith("Iscrizione"):
+            current = "Note" if line.startswith("Note") else None
+            values.setdefault("Note", [])
+            continue
+        if line in labels:
+            current = line
+            values.setdefault(current, [])
+        elif current is not None:
+            values[current].append(line)
+            if len(values[current]) > 6:
+                current = None
+    # Docenti is a list of names; everything after it on the page is a summary
+    # table. Keeping only entries that look like a name stops the run-on
+    # without having to enumerate every label Esse3 might render next.
+    teacher = re.compile(r"^[A-ZÀ-ÜÖ'’\- ]{4,}(?:\s*\([^)]+\))?$")
+    people = []
+    for entry in values.get("Docenti", []):
+        if not teacher.match(entry):
+            break
+        people.append(entry)
+    values["Docenti"] = people
+    joined = {k: ", ".join(v) for k, v in values.items()}
+    return {
+        "time": joined.get("Ora", ""),
+        "room": ", ".join(x for x in (joined.get("Edificio", ""),
+                                      joined.get("Aula", "")) if x),
+        "type": joined.get("Tipo esame") or joined.get("Tipo", ""),
+        "teachers": joined.get("Docenti", ""),
+        "notes": joined.get("Note", ""),
+        "description": joined.get("Descrizione", ""),
+    }
+
+
 def collect_esse3() -> int:
     DATA.mkdir(parents=True, exist_ok=True)
     (RAW / "_esse3").mkdir(parents=True, exist_ok=True)
@@ -216,21 +275,8 @@ def collect_esse3() -> int:
             log("esse3", detail=key, error=repr(exc))
             continue
         (RAW / "_esse3" / f"appello-{key}.html").write_text(handle.content)
-        soup = BeautifulSoup(handle.content, "lxml")
-        for tag in soup(["script", "style"]):
-            tag.decompose()
-        flat = re.sub(r"[ \t]+", " ", soup.get_text("\n", strip=True))
-        grab = lambda label: (  # noqa: E731
-            (re.search(rf"{label}\s*\n\s*(.+)", flat) or [None, None])[1] or ""
-        )
-        details[key] = {
-            "time": grab("Ora"),
-            "room": grab("Aula") or grab("Edificio"),
-            "type": grab("Tipo"),
-            "teachers": grab("Docenti"),
-            "notes": grab("Note"),
-            "raw_file": f"raw/_esse3/appello-{key}.html",
-        }
+        details[key] = {**appello_fields(handle.content),
+                        "raw_file": f"raw/_esse3/appello-{key}.html"}
         row["detail"] = details[key]
         time.sleep(DELAY)
     handle.close()
@@ -497,6 +543,89 @@ def collect_kiro(only: list[str] | None) -> int:
     return 0
 
 
+# ------------------------------------------------------------- discover -----
+def search_courses(handle, term: str) -> list[dict]:
+    """Every Kiro course matching a term, enrolled or not.
+
+    The enrolled-courses API only lists what the student is already in, so a
+    course they were never enrolled on is invisible to it - which is exactly
+    the case that makes a course look like it has no material.
+    """
+    url = f"{config.KIRO_BASE}/course/search.php?search={urllib.parse.quote(term)}&perpage=100"
+    try:
+        handle.goto(url, source="kiro", label=f"search-{term}")
+    except Exception as exc:  # noqa: BLE001
+        log("discover", term=term, error=repr(exc))
+        return []
+    out, seen = [], set()
+    soup = BeautifulSoup(handle.content, "lxml")
+    for anchor in soup.select('a[href*="/course/view.php?id="]'):
+        found = re.search(r"id=(\d+)", anchor["href"])
+        if not found or found.group(1) in seen:
+            continue
+        seen.add(found.group(1))
+        out.append({"id": found.group(1), "fullname": text_of(anchor)})
+    return out
+
+
+def collect_discover(only: list[str] | None, enrol: bool) -> int:
+    """Find every edition of every remaining exam, and enrol where open.
+
+    A course with no downloadable material is ambiguous: it may genuinely
+    publish nothing, or the student may simply not be enrolled on that edition.
+    Searching separates the two, and self-enrolment resolves the second.
+    """
+    esse3 = json.loads((DATA / "esse3.json").read_text())
+    remaining = {a["code"]: a["name"] for a in esse3["remaining"]}
+    if only:
+        remaining = {k: v for k, v in remaining.items() if k in only}
+
+    handle = session()
+    handle.login(config.KIRO_SAML_LOGIN, success_marker="elearning.unipv.it")
+    enrolled = {str(c["id"]): c for c in enrolled_courses(handle)}
+    print(f"  enrolled in {len(enrolled)} courses; searching {len(remaining)} codes")
+
+    from gradplan.sources.kiro import self_enrol
+
+    report: dict[str, dict] = {}
+    for code in sorted(remaining):
+        editions = search_courses(handle, code)
+        rows = []
+        for edition in editions:
+            if code not in edition["fullname"] and code not in edition["id"]:
+                # The search is fuzzy; keep only courses whose name carries the code.
+                if not re.search(rf"\b{code}\b", edition["fullname"]):
+                    continue
+            state = "enrolled" if edition["id"] in enrolled else "not-enrolled"
+            if state == "not-enrolled" and enrol:
+                try:
+                    state = self_enrol(handle, edition["id"])
+                except Exception as exc:  # noqa: BLE001
+                    state = f"failed:{type(exc).__name__}"
+                log("discover", code=code, course=edition["id"], result=state)
+            rows.append({"id": edition["id"], "name": edition["fullname"], "state": state})
+        report[code] = {"name": remaining[code], "editions": rows}
+        gained = sum(1 for r in rows if r["state"] == "enrolled" and r["id"] not in enrolled)
+        print(f"    {code} {remaining[code][:34]:<36} found={len(rows):>2} "
+              + " ".join(sorted({r["state"] for r in rows})) 
+              + (f"  (+{gained} new)" if gained else ""))
+    handle.close()
+    (DATA / "kiro_editions.json").write_text(json.dumps(report, indent=1, ensure_ascii=False))
+    newly = [c for c, v in report.items()
+             if any(r["state"] == "enrolled" for r in v["editions"])]
+    print(f"\n  wrote {DATA/'kiro_editions.json'}")
+    print(f"  codes with at least one enrolled edition: {len(newly)}/{len(report)}")
+    blocked = {c: [r for r in v["editions"] if r["state"] in ("needs-key", "no-self-enrolment")]
+               for c, v in report.items()}
+    blocked = {c: v for c, v in blocked.items() if v}
+    if blocked:
+        print("  enrolment not open (needs a key, or self-enrolment disabled):")
+        for code, rows in blocked.items():
+            for row in rows:
+                print(f"    {code} course {row['id']} {row['name'][:44]} -> {row['state']}")
+    return 0
+
+
 # ------------------------------------------------------------- syllabus -----
 CATALOGUE = "https://unipv.coursecatalogue.cineca.it/api/v1"
 
@@ -672,7 +801,10 @@ def collect_inventory() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["esse3", "kiro", "syllabus", "inventory"])
+    parser.add_argument("mode",
+                        choices=["esse3", "kiro", "discover", "syllabus", "inventory"])
+    parser.add_argument("--no-enrol", action="store_true",
+                        help="discover only; do not self-enrol")
     parser.add_argument("--only", help="comma-separated course codes (kiro only)")
     args = parser.parse_args()
     for path in (RAW, DATA, ANALYSIS, LOGS):
@@ -681,6 +813,9 @@ def main() -> int:
         return collect_esse3()
     if args.mode == "kiro":
         return collect_kiro(args.only.split(",") if args.only else None)
+    if args.mode == "discover":
+        return collect_discover(args.only.split(",") if args.only else None,
+                                enrol=not args.no_enrol)
     if args.mode == "syllabus":
         return collect_syllabus()
     return collect_inventory()
