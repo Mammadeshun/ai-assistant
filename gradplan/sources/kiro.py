@@ -184,9 +184,6 @@ def self_enrol(session, course_id: str) -> str:
     so the whole form is parsed and resubmitted rather than named fields being
     guessed at.
     """
-    import urllib.parse
-    import urllib.request
-
     from .http_session import parse_forms
 
     base = config.KIRO_BASE
@@ -212,14 +209,13 @@ def self_enrol(session, course_id: str) -> str:
 
     fields = dict(form.fields)
     fields.setdefault("id", str(course_id))
-    request = urllib.request.Request(
-        form.action, data=urllib.parse.urlencode(fields).encode()
-    )
-    request.add_header("Content-Type", "application/x-www-form-urlencoded")
-    request.add_header("Referer", enrol_url)
     try:
-        with session.opener.open(request, timeout=60) as response:
-            body = response.read().decode("utf-8", errors="replace")
+        response = session._send(
+            "POST", form.action, data=fields,
+            headers={"Content-Type": "application/x-www-form-urlencoded",
+                     "Referer": enrol_url},
+        )
+        body = response.text
     except Exception as exc:  # noqa: BLE001
         return f"failed:{type(exc).__name__}"
 

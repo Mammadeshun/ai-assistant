@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-07T22:59:55.864951+00:00",
+ "fetched_at": "2026-09-07T23:40:31.288521+00:00",
  "student": {
   "matricola": "537373"
  },
@@ -472,11 +472,12 @@
    "enrolled": "6",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19715&ADSCE_ID=10923420&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "SURIANO SERGIO (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "SURIANO SERGIO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATION-AND-MARKETING-18-0.html"
    }
   },
@@ -489,11 +490,12 @@
    "enrolled": "9",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19711&ADSCE_ID=10923417&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "CASELLATO CLAUDIA (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CASELLATO CLAUDIA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-BRAIN-MODELLING-25-09-2026.html"
    }
   },
@@ -506,11 +508,12 @@
    "enrolled": "6",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19438&ADSCE_ID=10175005&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "RONDI LUCA (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "RONDI LUCA (Presidente), FONTANA LUIGI (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-CALCULUS-25-09-2026.html"
    }
   },
@@ -523,11 +526,12 @@
    "enrolled": "12",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=12&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19442&ADSCE_ID=10175007&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "BRICOLO EMANUELA (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Orale, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "BRICOLO EMANUELA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-COGNITIVE-PSYCHOLOGY-25-09-2026.html"
    }
   },
@@ -540,11 +544,12 @@
    "enrolled": "18",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=6&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19440&ADSCE_ID=10175008&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "GHILARDI SILVIO (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GHILARDI SILVIO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-COMPUTATIONAL-LOGIC-23-09-2026.html"
    }
   },
@@ -557,11 +562,12 @@
    "enrolled": "5",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19434&ADSCE_ID=10175009&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "FERRARI STEFANO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FERRARI STEFANO (Presidente), DONDI PIERCARLO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA-STRUCTURES-25-09-20.html"
    }
   },
@@ -574,11 +580,12 @@
    "enrolled": "0",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10868&ATT_DID_ESA_ID=21285&ADSCE_ID=10923423&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "PORTA MARCO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PORTA MARCO (Presidente), ALDEA EMANUEL (Membro Effettivo), LOMBARDI LUCA (Membro Effettivo)",
+    "notes": "Ora e aula sono riporati nel sito di Facoltà: http://webing.unipv.eu/didattica/appelli-desame/, Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-COMPUTER-VISION-22-09-2026.html"
    }
   },
@@ -591,11 +598,12 @@
    "enrolled": "1",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19712&ADSCE_ID=10923419&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "CALAUTTI MARCO (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CALAUTTI MARCO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-DATA-MINING-AND-KNOWLEDGE-EXTRACTION-24-09-2026.html"
    }
   },
@@ -608,11 +616,12 @@
    "enrolled": "5",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=24&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19705&ADSCE_ID=10508558&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "FAROLDI FEDERICO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FAROLDI FEDERICO (Presidente), REDAELLI ROBERTO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-ETHICS-LAW-AND-AI-16-09-2026.html"
    }
   },
@@ -625,11 +634,12 @@
    "enrolled": "11",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=22&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19699&ADSCE_ID=10508555&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "CIUCCI DAVIDE ELIO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CIUCCI DAVIDE ELIO (Presidente), CAMPAGNER ANDREA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING-17-09-2026.html"
    }
   },
@@ -642,11 +652,12 @@
    "enrolled": "1",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19713&ADSCE_ID=10923416&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "PASI GABRIELLA (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PASI GABRIELLA (Presidente), KASELA PRANAV  (Membro Effettivo), PEIKOS GEORGIOS (Membro Effettivo), PINKOSOVA ZUZANA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SYSTEMS-15-09-2026.html"
    }
   },
@@ -659,11 +670,12 @@
    "enrolled": "11",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19435&ADSCE_ID=10175006&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "PENALOZA NYSSEN RAFAEL (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PENALOZA NYSSEN RAFAEL (Presidente), PALMONARI MATTEO LUIGI (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-KNOWLEDGE-REPRESENTATION-AND-REASONING-21-09-2026.html"
    }
   },
@@ -676,11 +688,12 @@
    "enrolled": "2",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19737&ADSCE_ID=10923421&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "CUSANO CLAUDIO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Orale, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CUSANO CLAUDIO (Presidente), NOCERA ANTONINO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-LABORATORY-OF-MACHINE-LEARNING-21-09-2026.html"
    }
   },
@@ -693,11 +706,12 @@
    "enrolled": "30",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=68&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19698&ADSCE_ID=10508561&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "FRASCA MARCO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FRASCA MARCO (Presidente), MAGHOOL SAMIRA (Membro Effettivo), ZIGNANI MATTEO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWORKS-AND-DEEP-LEARNIN.html"
    }
   },
@@ -710,11 +724,12 @@
    "enrolled": "1",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=83&CDS_ESA_ID=10279&ATT_DID_ESA_ID=11068&ADSCE_ID=10923422&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "GRECO GIORGIO (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GRECO GIORGIO (Presidente)",
+    "notes": "Ora e aula sono riporati nel sito di Facoltà: http://webing.unipv.eu/didattica/appelli-desame/, Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-ORGANIZATION-THEORY-AND-DESIGN-17-09-2026.html"
    }
   },
@@ -727,11 +742,12 @@
    "enrolled": "6",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=61&CDS_ESA_ID=10589&ATT_DID_ESA_ID=20164&ADSCE_ID=10508557&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "SPINELLI DANIELE (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "SPINELLI DANIELE (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-PROBABILITY-AND-STATISTICAL-INFERENCE-25-09-2026.html"
    }
   },
@@ -762,11 +778,12 @@
    "enrolled": "7",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=19&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19710&ADSCE_ID=10923413&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "D'ANGELO LAURA (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "D'ANGELO LAURA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-STATISTICAL-MODELLING-24-09-2026.html"
    }
   },
@@ -779,11 +796,12 @@
    "enrolled": "7",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=22&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19700&ADSCE_ID=10508560&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "RAGANATO ALESSANDRO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "RAGANATO ALESSANDRO (Presidente), PASI GABRIELLA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESSING-24-09-2026.html"
    }
   },
@@ -796,11 +814,12 @@
    "enrolled": "6",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=68&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19704&ADSCE_ID=10508559&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "GUARNIERI GIACOMO (Presidente)",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GUARNIERI GIACOMO (Presidente), GHERARDI MARCO (Membro Effettivo), LISCIDINI MARCO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-THEORETICAL-AND-QUANTUM-PHYSICS-FOR-AI-22-09-2026.html"
    }
   },
@@ -813,11 +832,12 @@
    "enrolled": "1",
    "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=8&CDS_ESA_ID=10589&ATT_DID_ESA_ID=20711&ADSCE_ID=10923415&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
-    "time": "Edificio e Aula",
-    "room": "Indirizzo Edificio",
-    "type": "",
-    "teachers": "VIVIANI MARCO (Presidente) ​",
-    "notes": "",
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "VIVIANI MARCO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
     "raw_file": "raw/_esse3/appello-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS-24-09-2026.html"
    }
   }

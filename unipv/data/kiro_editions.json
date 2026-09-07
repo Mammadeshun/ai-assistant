@@ -1,0 +1,536 @@
+{
+ "504464": {
+  "name": "ORGANIZATION THEORY AND DESIGN",
+  "editions": [
+   {
+    "id": "8598",
+    "name": "504464 - ORGANIZATION THEORY AND DESIGN - PROF. GRECO GIORGIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "2838",
+    "name": "504464 - ORGANIZATION THEORY AND DESIGN - PROF. GRECO GIORGIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "5920",
+    "name": "504464 - ORGANIZATION THEORY AND DESIGN - PROF. GRECO GIORGIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "11489",
+    "name": "504464 - ORGANIZATION THEORY AND DESIGN - PROF. GRECO GIORGIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "574",
+    "name": "504464 - ORGANIZATION THEORY AND DESIGN - PROF. GRECO GIORGIO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "504703": {
+  "name": "COMPUTER VISION",
+  "editions": [
+   {
+    "id": "3316",
+    "name": "504703 - COMPUTER VISION - PROF. LOMBARDI LUCA",
+    "state": "enrolled"
+   },
+   {
+    "id": "5877",
+    "name": "504703 - COMPUTER VISION - PROF. LOMBARDI LUCA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "508207": {
+  "name": "PROJECT WORK",
+  "editions": [
+   {
+    "id": "9643",
+    "name": "508207 - PROJECT WORK",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509477": {
+  "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+  "editions": [
+   {
+    "id": "4",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "7388",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "2848",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "5360",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "9811",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "12131",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 1 - PROF. FERRARI STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "7598",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 2 - PROF. DONDI PIERCARLO",
+    "state": "enrolled"
+   },
+   {
+    "id": "9919",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 2 - PROF. DONDI PIERCARLO",
+    "state": "enrolled"
+   },
+   {
+    "id": "12210",
+    "name": "509477 - COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES - MOD. 2 - PROF. DONDI PIERCARLO",
+    "state": "failed:no-content-after-post"
+   }
+  ]
+ },
+ "509478": {
+  "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+  "editions": [
+   {
+    "id": "5401",
+    "name": "509479 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 1 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROF. PENALOZA NYSSEN RAFAEL",
+    "state": "enrolled"
+   },
+   {
+    "id": "9884",
+    "name": "509479 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 1 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROF. PENALOZA NYSSEN RAFAEL",
+    "state": "enrolled"
+   },
+   {
+    "id": "4811",
+    "name": "509480 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 2 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROFF. MILANESE GIAN CARLO, PALMONARI MATTEO LUIGI",
+    "state": "enrolled"
+   },
+   {
+    "id": "6926",
+    "name": "509480 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 2 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROFF. MILANESE GIAN CARLO, PALMONARI MATTEO LUIGI",
+    "state": "enrolled"
+   },
+   {
+    "id": "9232",
+    "name": "509480 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 2 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROFF. PALMONARI MATTEO LUIGI, MILANESE GIAN CARLO",
+    "state": "enrolled"
+   },
+   {
+    "id": "11588",
+    "name": "509480 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 2 ( 509478 - KNOWLEDGE REPRESENTATION AND REASONING ) - PROFF. PALMONARI MATTEO LUIGI, MILANESE GIAN CARLO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509481": {
+  "name": "CALCULUS",
+  "editions": [
+   {
+    "id": "8",
+    "name": "509481 - CALCULUS - PROF. RONDI LUCA",
+    "state": "failed:no-content-after-post"
+   },
+   {
+    "id": "2771",
+    "name": "509481 - CALCULUS - PROF. RONDI LUCA",
+    "state": "enrolled"
+   },
+   {
+    "id": "5344",
+    "name": "509481 - CALCULUS - PROF. RONDI LUCA",
+    "state": "enrolled"
+   },
+   {
+    "id": "7468",
+    "name": "509481 - CALCULUS - PROFF. RONDI LUCA, FONTANA LUIGI",
+    "state": "enrolled"
+   },
+   {
+    "id": "9942",
+    "name": "509481 - CALCULUS - PROFF. RONDI LUCA, FONTANA LUIGI",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509483": {
+  "name": "COMPUTATIONAL LOGIC",
+  "editions": [
+   {
+    "id": "10047",
+    "name": "509483 - COMPUTATIONAL LOGIC - PROF. GHILARDI SILVIO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509485": {
+  "name": "COGNITIVE PSYCHOLOGY",
+  "editions": [
+   {
+    "id": "12",
+    "name": "509485 - COGNITIVE PSYCHOLOGY - PROF.SSA BRICOLO EMANUELA",
+    "state": "enrolled"
+   },
+   {
+    "id": "6850",
+    "name": "509485 - COGNITIVE PSYCHOLOGY - PROF.SSA BRICOLO EMANUELA",
+    "state": "enrolled"
+   },
+   {
+    "id": "7392",
+    "name": "509485 - COGNITIVE PSYCHOLOGY - PROF.SSA BRICOLO EMANUELA",
+    "state": "enrolled"
+   },
+   {
+    "id": "11579",
+    "name": "509485 - COGNITIVE PSYCHOLOGY - PROF.SSA BRICOLO EMANUELA",
+    "state": "enrolled"
+   },
+   {
+    "id": "4228",
+    "name": "509485 - COGNITIVE PSYCHOLOGY - PROF.SSA BRICOLO EMANUELA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509486": {
+  "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+  "editions": [
+   {
+    "id": "10341",
+    "name": "509486 - MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING - PROFF. MAGHOOL SAMIRA, FRASCA MARCO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509487": {
+  "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+  "editions": [
+   {
+    "id": "4681",
+    "name": "509487 - FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING - PROF. CIUCCI DAVIDE ELIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "11127",
+    "name": "509487 - FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING - PROF. CIUCCI DAVIDE ELIO",
+    "state": "enrolled"
+   },
+   {
+    "id": "8774",
+    "name": "509487 - FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING - PROFF. CIUCCI DAVIDE ELIO, CAMPAGNER ANDREA",
+    "state": "enrolled"
+   },
+   {
+    "id": "6878",
+    "name": "509487 - FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING - PROFF. CIUCCI DAVIDE ELIO, CAMPAGNER ANDREA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509488": {
+  "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+  "editions": [
+   {
+    "id": "11391",
+    "name": "509488 - TEXT MINING AND NATURAL LANGUAGE PROCESSING - PROFF. GUASTI MARIA TERESA, RAGANATO ALESSANDRO",
+    "state": "enrolled"
+   },
+   {
+    "id": "2294",
+    "name": "509488 - TEXT MINING AND NATURAL LANGUAGE PROCESSING - PROFF. PASI GABRIELLA, GUASTI MARIA TERESA, RAGANATO ALESSANDRO",
+    "state": "enrolled"
+   },
+   {
+    "id": "5414",
+    "name": "509488 - TEXT MINING AND NATURAL LANGUAGE PROCESSING - PROFF. PASI GABRIELLA, GUASTI MARIA TERESA, RAGANATO ALESSANDRO",
+    "state": "enrolled"
+   },
+   {
+    "id": "8995",
+    "name": "509488 - TEXT MINING AND NATURAL LANGUAGE PROCESSING - PROFF. PASI GABRIELLA, GUASTI MARIA TERESA, RAGANATO ALESSANDRO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509492": {
+  "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+  "editions": [
+   {
+    "id": "11668",
+    "name": "509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI - MODULE 2 - PROF. GUARNIERI GIACOMO",
+    "state": "enrolled"
+   },
+   {
+    "id": "4264",
+    "name": "509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI - PROF. LISCIDINI MARCO",
+    "state": "enrolled"
+   },
+   {
+    "id": "6900",
+    "name": "509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI - PROF. LISCIDINI MARCO",
+    "state": "enrolled"
+   },
+   {
+    "id": "8923",
+    "name": "509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI - PROF. LISCIDINI MARCO",
+    "state": "enrolled"
+   },
+   {
+    "id": "9893",
+    "name": "509492 - THEORETICAL AND QUANTUM PHYSICS FOR AI (MODULE 1) - PROF. GHERARDI MARCO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509493": {
+  "name": "STATISTICAL MODELLING",
+  "editions": [
+   {
+    "id": "6198",
+    "name": "509493 - STATISTICAL MODELLING - PROF.SSA D'ANGELO LAURA",
+    "state": "enrolled"
+   },
+   {
+    "id": "7460",
+    "name": "509493 - STATISTICAL MODELLING - PROF.SSA D'ANGELO LAURA",
+    "state": "enrolled"
+   },
+   {
+    "id": "10217",
+    "name": "509493 - STATISTICAL MODELLING - PROF.SSA D'ANGELO LAURA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509494": {
+  "name": "BRAIN MODELLING",
+  "editions": [
+   {
+    "id": "5203",
+    "name": "509494 - BRAIN MODELLING - PROF.SSA CASELLATO CLAUDIA",
+    "state": "enrolled"
+   },
+   {
+    "id": "7863",
+    "name": "509494 - BRAIN MODELLING - PROF.SSA CASELLATO CLAUDIA",
+    "state": "enrolled"
+   },
+   {
+    "id": "10392",
+    "name": "509494 - BRAIN MODELLING - PROF.SSA CASELLATO CLAUDIA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509495": {
+  "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+  "editions": [
+   {
+    "id": "10353",
+    "name": "509495 - DATA MINING AND KNOWLEDGE EXTRACTION - PROF. CALAUTTI MARCO",
+    "state": "enrolled"
+   },
+   {
+    "id": "5756",
+    "name": "509495 - DATA MINING AND KNOWLEDGE EXTRACTION - PROF. CALAUTTI MARCO",
+    "state": "enrolled"
+   },
+   {
+    "id": "7669",
+    "name": "509495 - DATA MINING AND KNOWLEDGE EXTRACTION - PROF. CALAUTTI MARCO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509496": {
+  "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+  "editions": [
+   {
+    "id": "7951",
+    "name": "509496 - INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS - PROFF. PASI GABRIELLA, PEIKOS GEORGIOS, KASELA PRANAV",
+    "state": "enrolled"
+   },
+   {
+    "id": "5528",
+    "name": "509496 - INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS - PROFF. PASI GABRIELLA, PINKOSOVA ZUZANA",
+    "state": "enrolled"
+   },
+   {
+    "id": "9703",
+    "name": "509496 - INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS - PROFF. PEIKOS GEORGIOS, PASI GABRIELLA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509498": {
+  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+  "editions": [
+   {
+    "id": "10959",
+    "name": "509498 - ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING - PROF. SURIANO SERGIO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509519": {
+  "name": "ETHICS, LAW AND AI",
+  "editions": [
+   {
+    "id": "5123",
+    "name": "509519 - ETHICS, LAW AND AI - PROF. FAROLDI FEDERICO, REDAELLI ROBERTO, LARESE COSTANZA",
+    "state": "enrolled"
+   },
+   {
+    "id": "9646",
+    "name": "509519 - ETHICS, LAW AND AI - PROFF. FAROLDI FEDERICO, LARESE COSTANZA, REDAELLI ROBERTO",
+    "state": "enrolled"
+   },
+   {
+    "id": "12136",
+    "name": "509519 - ETHICS, LAW AND AI - PROFF. FAROLDI FEDERICO, LARESE COSTANZA, REDAELLI ROBERTO",
+    "state": "enrolled"
+   },
+   {
+    "id": "2842",
+    "name": "509519 - ETHICS, LAW AND AI - PROFF. FAROLDI FEDERICO, REDAELLI ROBERTO",
+    "state": "enrolled"
+   },
+   {
+    "id": "7302",
+    "name": "509519 - ETHICS, LAW AND AI - PROFF. FAROLDI FEDERICO, REDAELLI ROBERTO, LARESE COSTANZA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509521": {
+  "name": "LABORATORY OF MACHINE LEARNING",
+  "editions": [
+   {
+    "id": "5124",
+    "name": "509521 - LABORATORY OF MACHINE LEARNING - PROFF. CUSANO CLAUDIO, NOCERA ANTONINO",
+    "state": "enrolled"
+   },
+   {
+    "id": "8799",
+    "name": "509521 - LABORATORY OF MACHINE LEARNING - PROFF. CUSANO CLAUDIO, NOCERA ANTONINO",
+    "state": "enrolled"
+   },
+   {
+    "id": "11242",
+    "name": "509521 - LABORATORY OF MACHINE LEARNING - PROFF. CUSANO CLAUDIO, NOCERA ANTONINO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "509535": {
+  "name": "FINAL EXAM",
+  "editions": []
+ },
+ "509536": {
+  "name": "ITALIAN LANGUAGE FOR FOREIGN STUDENTS",
+  "editions": [
+   {
+    "id": "6646",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF. FRANCESCHINI FEDERICO",
+    "state": "failed:no-content-after-post"
+   },
+   {
+    "id": "4318",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF. FRANCESCHINI FEDERICO",
+    "state": "failed:no-content-after-post"
+   },
+   {
+    "id": "9317",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF. FRANCESCHINI FEDERICO",
+    "state": "failed:no-content-after-post"
+   },
+   {
+    "id": "11580",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF. FRANCESCHINI FEDERICO",
+    "state": "enrolled"
+   },
+   {
+    "id": "12080",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF. FRANCESCHINI FEDERICO",
+    "state": "failed:no-content-after-post"
+   },
+   {
+    "id": "4887",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA CHIAPEDI NICOLETTA",
+    "state": "enrolled"
+   },
+   {
+    "id": "3846",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA GREGORI LUISA",
+    "state": "enrolled"
+   },
+   {
+    "id": "5930",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA GREGORI LUISA",
+    "state": "enrolled"
+   },
+   {
+    "id": "8698",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA MORANO LAURA",
+    "state": "enrolled"
+   },
+   {
+    "id": "9598",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA MORANO LAURA",
+    "state": "needs-key"
+   },
+   {
+    "id": "8379",
+    "name": "509536 - ITALIAN LANGUAGE FOR FOREIGN STUDENTS - PROF.SSA TESTA SILVIA",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "510109": {
+  "name": "PROBABILITY AND STATISTICAL INFERENCE",
+  "editions": [
+   {
+    "id": "11783",
+    "name": "510109 - PROBABILITY AND STATISTICAL INFERENCE - MOD 2 - PROF. SPINELLI DANIELE",
+    "state": "enrolled"
+   },
+   {
+    "id": "7009",
+    "name": "510109 - PROBABILITY AND STATISTICAL INFERENCE - MOD. 2 - PROF. PELUSO STEFANO",
+    "state": "enrolled"
+   },
+   {
+    "id": "9297",
+    "name": "510109 - PROBABILITY AND STATISTICAL INFERENCE - PROF. PELUSO STEFANO",
+    "state": "enrolled"
+   }
+  ]
+ },
+ "510638": {
+  "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+  "editions": [
+   {
+    "id": "11076",
+    "name": "510638 - WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS - PROFF. VIVIANI MARCO, MANCINO DAVIDE",
+    "state": "enrolled"
+   }
+  ]
+ }
+}
