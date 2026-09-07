@@ -46,6 +46,10 @@ SCANNED_CHARS = 100
 # once means the text and figure passes below have a single input format.
 OFFICE_EXT = {".doc", ".docx", ".ppt", ".pptx", ".ppsx", ".pps", ".odt", ".odp",
               ".xls", ".xlsx", ".rtf"}
+# Photographed exam sheets. They carry no text layer at all, so without OCR
+# they are invisible to classification and contribute no questions - 30 of the
+# student's own past papers would simply vanish.
+IMAGE_EXT = {".jpg", ".jpeg", ".png"}
 FIGURE_DPI = 200
 MIN_FIGURE_PT = 60.0        # ignore bullets, rules and logos
 TEMPLATE_SHARE = 0.30       # an image on a third of the pages is furniture
@@ -78,6 +82,17 @@ def run(cmd: list[str], timeout: int = 180) -> tuple[int, str]:
         return done.returncode, done.stdout
     except (subprocess.TimeoutExpired, OSError) as exc:
         return 1, repr(exc)
+
+
+def ocr_image(source: Path, out: Path) -> int:
+    """OCR a photographed page. Italian and English: the papers mix both."""
+    if out.exists() and out.stat().st_size > 0:
+        return len(out.read_text(errors="replace").strip())
+    out.parent.mkdir(parents=True, exist_ok=True)
+    code, text = run(["tesseract", str(source), "stdout", "-l", "ita+eng"], timeout=180)
+    body = text if code == 0 else ""
+    out.write_text(body)
+    return len(body.strip())
 
 
 def to_pdf(source: Path, out_dir: Path) -> Path | None:
@@ -343,6 +358,37 @@ def main() -> int:
             if not args.skip_figures and role != "ADMIN":
                 figures += extract_figures(pdf, fig_dir, pdf.stem[:40],
                                            render_vector_pages=role != "SLIDES")
+
+        # Photographed papers: OCR, classify, and keep the photo itself as the
+        # figure - the picture of the page is the artefact worth printing.
+        images = sorted(p for p in folder.rglob("*")
+                        if p.is_file() and p.suffix.lower() in IMAGE_EXT
+                        and "_figures" not in p.parts)
+        for image in images:
+            out = text_dir / image.relative_to(folder).with_suffix(".txt")
+            chars = ocr_image(image, out)
+            head = out.read_text(errors="replace")[:4000]
+            role = classify(image, head)
+            entries.append({
+                "path": str(image.relative_to(ROOT)),
+                "original": str(image.relative_to(ROOT)),
+                "converted": False,
+                "text": str(out.relative_to(ROOT)),
+                "role": role,
+                "chars": chars,
+                "scanned": True,
+                "ocr": True,
+                "exam_date": exam_date(image, head),
+            })
+            if chars >= 120:
+                ocred += 1
+                figures.append({
+                    "png": str(image.relative_to(folder)),
+                    "source_pdf": str(image.relative_to(ROOT)),
+                    "page": 1,
+                    "bbox": None,
+                    "caption_guess": "[photographed exam sheet, supplied by the student]",
+                })
 
         for other in others:
             body = other.read_text(errors="replace")[:200000]
