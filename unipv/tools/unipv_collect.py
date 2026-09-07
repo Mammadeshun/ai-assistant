@@ -305,10 +305,31 @@ def collect_esse3() -> int:
 
 
 # ----------------------------------------------------------------- kiro -----
-def course_code(fullname: str) -> str | None:
-    """Kiro course names carry the Esse3 code: '509495 - DATA MINING - PROF...'"""
-    found = re.search(r"\b(5\d{5}|504\d{3}|510\d{3})\b", fullname)
-    return found.group(1) if found else None
+CODE = re.compile(r"\b(5\d{5}|504\d{3}|510\d{3})\b")
+
+
+def course_code(fullname: str, wanted: set[str] | None = None) -> str | None:
+    """The Esse3 code a Kiro course belongs to.
+
+    Usually the name simply starts with it: '509495 - DATA MINING - PROF...'.
+    But a course split into modules is published under its own sub-codes with
+    the parent in parentheses:
+
+        '509479 - KNOWLEDGE REPRESENTATION AND REASONING - MOD. 1 ( 509478 - ...'
+
+    Taking the first code found returns 509479, which is not an exam on the
+    transcript, so the whole 12 CFU course was dropped from the crawl without
+    a word. Match every code in the name against the ones actually wanted, and
+    prefer a match over position.
+    """
+    codes = CODE.findall(fullname)
+    if not codes:
+        return None
+    if wanted:
+        for code in codes:
+            if code in wanted:
+                return code
+    return codes[0]
 
 
 def sesskey(markup: str) -> str | None:
@@ -503,7 +524,7 @@ def collect_kiro(only: list[str] | None) -> int:
     # cohort, not the newest edition.
     by_code: dict[str, list[dict]] = {}
     for course in courses:
-        code = course_code(course["fullname"])
+        code = course_code(course["fullname"], set(remaining))
         if code in remaining:
             by_code.setdefault(code, []).append(course)
 
