@@ -39,7 +39,7 @@ from gradplan.sources.http_session import http_session  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, DATA, ANALYSIS, LOGS = ROOT / "raw", ROOT / "data", ROOT / "analysis", ROOT / "logs"
-DELAY = 1.0
+DELAY = 0.3
 
 # Downloaded, but never opened by this script.
 BINARY_EXT = {".pdf", ".zip", ".pptx", ".ppt", ".docx", ".doc", ".xlsx", ".png",
@@ -422,7 +422,7 @@ def collect_course(handle, course: dict, folder: Path) -> dict:
                                 got, size = download(handle, direct, folder / name)
                                 stats["files"] += got
                                 stats["bytes"] += size if got else 0
-                time.sleep(DELAY)
+                # No sleep here: goto() already waited self.delay.
 
             elif "/mod/forum/discuss.php" in href:
                 try:
