@@ -498,16 +498,35 @@ def collect_kiro(only: list[str] | None) -> int:
     print(f"  {len(courses)} enrolled Kiro courses; {len(remaining)} exams still to sit")
 
     # A course can have several editions; keep them all - old editions are
-    # where 'materiale vecchio' and past papers survive.
+    # where 'materiale vecchio' and past papers survive, and on this degree
+    # the assessment rules that apply are the ones for the student's own
+    # cohort, not the newest edition.
     by_code: dict[str, list[dict]] = {}
     for course in courses:
         code = course_code(course["fullname"])
         if code in remaining:
             by_code.setdefault(code, []).append(course)
 
+    # Crawl in booking-deadline order, not code order. The crawl takes hours;
+    # if it is cut short, what should already be on disk is the material for
+    # the exams that have to be booked first.
+    payload = json.loads(esse3.read_text())
+    deadline: dict[str, str] = {}
+    for row in payload["appelli"]:
+        for activity in payload["remaining"]:
+            if activity["name"].strip().upper() == row["activity"].strip().upper():
+                closes = row.get("booking_closes") or "31/12/2099"
+                day, month, year = closes.split("/")
+                key = f"{year}{month}{day}"
+                if activity["code"] not in deadline or key < deadline[activity["code"]]:
+                    deadline[activity["code"]] = key
+    order = sorted(by_code, key=lambda c: (deadline.get(c, "99999999"), c))
+    print("  order (by booking deadline): "
+          + ", ".join(f"{c}:{deadline.get(c,'-')[4:]}" for c in order))
+
     missing = sorted(set(remaining) - set(by_code))
     summary = {}
-    for code in sorted(by_code):
+    for code in order:
         name = remaining[code]
         folder = RAW / f"{code}-{slug(name, 40)}"
         folder.mkdir(parents=True, exist_ok=True)
