@@ -497,6 +497,107 @@ def collect_kiro(only: list[str] | None) -> int:
     return 0
 
 
+# ------------------------------------------------------------- syllabus -----
+CATALOGUE = "https://unipv.coursecatalogue.cineca.it/api/v1"
+
+
+def collect_syllabus() -> int:
+    """The official course catalogue, for cross-checking Kiro.
+
+    Cineca serves the catalogue as an Angular app whose per-course syllabus
+    endpoint is not reachable from outside the browser - Chromium cannot cross
+    this container's proxy, so the declared exam modality and reading lists are
+    marked DATA INCOMPLETE rather than invented. What /corsi does give is
+    authoritative and worth having: official CFU, taught hours, language,
+    teaching period, the TAF category that says whether an exam is compulsory
+    or elective, and which degree each elective is borrowed from.
+    """
+    import requests
+
+    esse3 = json.loads((DATA / "esse3.json").read_text())
+    want = {a["code"] for a in esse3["remaining"]}
+    names = {a["code"]: a["name"] for a in esse3["remaining"]}
+    http = requests.Session()
+    http.headers.update({"User-Agent": config.USER_AGENT, "Accept": "application/json"})
+
+    out: dict[str, dict] = {}
+    for year in ("2025", "2024"):
+        try:
+            payload = http.get(f"{CATALOGUE}/corsi?anno={year}", timeout=180).json()
+        except Exception as exc:  # noqa: BLE001
+            log("syllabus", year=year, error=repr(exc))
+            print(f"  {year}: FAILED ({type(exc).__name__}) - DATA INCOMPLETE")
+            continue
+        (RAW / "_syllabus").mkdir(parents=True, exist_ok=True)
+        (RAW / "_syllabus" / f"corsi-{year}.json").write_text(
+            json.dumps(payload, ensure_ascii=False))
+
+        found: list[dict] = []
+
+        def walk(node):
+            if isinstance(node, dict):
+                if str(node.get("adCod") or "") in want:
+                    found.append(node)
+                for value in node.values():
+                    walk(value)
+            elif isinstance(node, list):
+                for item in node:
+                    walk(item)
+
+        walk(payload)
+        for node in found:
+            code = str(node["adCod"])
+            if code in out:
+                continue
+            teachers = [d.get("des") for d in (node.get("docenti") or []) if d.get("des")]
+            out[code] = {
+                "code": code,
+                "name": node.get("des_en") or node.get("des_it"),
+                "cfu": node.get("crediti"),
+                "taught_hours": node.get("ore"),
+                "language": node.get("lingua_des_en"),
+                "period": node.get("periodo_didattico_en"),
+                "period_start": node.get("data_inizio_periodo_didattico"),
+                "period_end": node.get("data_fine_periodo_didattico"),
+                "taf": node.get("tafDes_en"),
+                "degree_cod": node.get("corso_cod"),
+                "cds_cod": node.get("cdsCod"),
+                "own_degree": str(node.get("cdsCod")) == config.DEGREE_CODE,
+                "af_id": node.get("afId"),
+                "teachers": teachers,
+                "catalogue_year": year,
+                "exam_modality": None,
+                "textbooks": None,
+                "DATA_INCOMPLETE": ("exam modality and reading list are on the "
+                                    "per-course syllabus page, which is not "
+                                    "reachable without a browser"),
+                "source": f"raw/_syllabus/corsi-{year}.json",
+            }
+        print(f"  {year}: {len(found)} entries matched, {len(out)} courses resolved")
+
+    missing = sorted(want - set(out))
+    (DATA / "syllabus.json").write_text(json.dumps(
+        {"courses": out, "not_in_catalogue": missing}, indent=1, ensure_ascii=False))
+
+    # Where the catalogue and Esse3 disagree on CFU, the conflict is the finding.
+    esse3_cfu = {a["code"]: a["cfu"] for a in esse3["remaining"]}
+    conflicts = [(c, esse3_cfu.get(c), v["cfu"]) for c, v in out.items()
+                 if v["cfu"] is not None and esse3_cfu.get(c) != v["cfu"]]
+    print(f"\n  {len(out)} courses in the catalogue, {len(missing)} not found")
+    for code in missing:
+        print(f"    DATA INCOMPLETE {code} {names.get(code,'')[:40]}")
+    if conflicts:
+        print("  CFU conflicts (Esse3 vs catalogue):")
+        for code, a, b in conflicts:
+            print(f"    {code} {names.get(code,'')[:34]:<36} Esse3={a} catalogue={b}")
+    borrowed = [v for v in out.values() if not v["own_degree"]]
+    if borrowed:
+        print(f"  {len(borrowed)} taken from another degree (electives): "
+              + ", ".join(f"{v['code']} (cds {v['cds_cod']})" for v in borrowed))
+    print(f"  wrote {DATA/'syllabus.json'}")
+    return 0
+
+
 # ------------------------------------------------------------ inventory -----
 def collect_inventory() -> int:
     """Count what is on disk. Reads names and sizes, never contents."""
@@ -571,7 +672,7 @@ def collect_inventory() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["esse3", "kiro", "inventory"])
+    parser.add_argument("mode", choices=["esse3", "kiro", "syllabus", "inventory"])
     parser.add_argument("--only", help="comma-separated course codes (kiro only)")
     args = parser.parse_args()
     for path in (RAW, DATA, ANALYSIS, LOGS):
@@ -580,6 +681,8 @@ def main() -> int:
         return collect_esse3()
     if args.mode == "kiro":
         return collect_kiro(args.only.split(",") if args.only else None)
+    if args.mode == "syllabus":
+        return collect_syllabus()
     return collect_inventory()
 
 
