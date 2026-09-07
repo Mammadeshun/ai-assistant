@@ -16,19 +16,30 @@ It implements the UniPV Shibboleth SAML2 flow used by Esse3 and Kiro:
 Every step is a form the browser would auto-submit; here they are submitted
 explicitly. Only one credential attempt is ever made per login, so a wrong
 password cannot turn into a lockout loop.
+
+The transport is a single keep-alive connection pool, and that is not an
+optimisation. Shibboleth binds a service-provider session to the client
+address (``consistentAddress``, on by default), while this container reaches
+the internet through a proxy that picks a different source address for every
+new TCP connection. ``urllib`` sends ``Connection: close`` on every request and
+so opens a new connection each time, which meant the SP saw the request that
+carried a freshly minted ``_shibsession_`` cookie arrive from a different
+address than the one the assertion was posted from, discarded the session and
+bounced the client back to the IdP. Authentication had succeeded every time;
+the session was thrown away one request later. Holding one connection per host
+keeps one source address, and the session survives.
 """
 
 from __future__ import annotations
 
 import time
-import urllib.error
 import urllib.parse
-import urllib.request
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from html import unescape
-from http.cookiejar import CookieJar
 from typing import Any
 import re
+
+import requests
 
 from .. import config
 from ..archive import ArchivedResponse, RawArchive
@@ -47,6 +58,8 @@ PASSWORD_FLOW = {
 }
 
 MAX_HOPS = 12
+TRANSPORT_RETRIES = 4
+POOL_SIZE = 8
 
 
 @dataclass
@@ -128,13 +141,20 @@ class HttpSession:
         self.archive = archive
         self.delay = config.REQUEST_DELAY_SECONDS if delay is None else delay
         self.credentials = credentials
-        self.jar = CookieJar()
-        self.opener = urllib.request.build_opener(
-            urllib.request.HTTPCookieProcessor(self.jar)
+        self.http = requests.Session()
+        self.http.headers["User-Agent"] = config.USER_AGENT
+        # One pooled connection per host, reused for the life of the run: see
+        # the module docstring for why this is load-bearing rather than tidy.
+        adapter = requests.adapters.HTTPAdapter(
+            pool_connections=POOL_SIZE, pool_maxsize=POOL_SIZE, max_retries=0
         )
-        self.opener.addheaders = [("User-Agent", config.USER_AGENT)]
+        self.http.mount("https://", adapter)
+        self.http.mount("http://", adapter)
+        self.jar = self.http.cookies
         self.url = ""
         self.content = ""
+        self._entry = ""
+        self._marker = ""
 
     # -- lifecycle ----------------------------------------------------------
     def start(self) -> "HttpSession":
@@ -144,18 +164,34 @@ class HttpSession:
         pass
 
     # -- primitives ---------------------------------------------------------
-    def _request(self, url: str, data: dict[str, str] | None = None) -> tuple[str, str, int]:
-        body = urllib.parse.urlencode(data).encode() if data is not None else None
-        request = urllib.request.Request(url, data=body)
+    def _send(self, method: str, url: str, **kwargs: Any) -> requests.Response:
+        """One request, retried only on transport failure.
+
+        A dropped pooled connection is the one error worth retrying: urllib3
+        opens a fresh one, and the source address changes with it, so a retry
+        that reaches the same host is also the moment an address-bound session
+        can be lost. That is what ``goto`` watches for.
+        """
+        headers = dict(kwargs.pop("headers", {}))
         if self.url:
-            request.add_header("Referer", self.url)
-        try:
-            with self.opener.open(request, timeout=60) as response:
-                text = response.read().decode("utf-8", errors="replace")
-                return response.url, text, response.status
-        except urllib.error.HTTPError as exc:
-            text = exc.read().decode("utf-8", errors="replace")
-            return exc.url, text, exc.code
+            headers.setdefault("Referer", self.url)
+        last: Exception | None = None
+        for attempt in range(TRANSPORT_RETRIES):
+            try:
+                return self.http.request(
+                    method, url, headers=headers, timeout=60, **kwargs
+                )
+            except (requests.ConnectionError, requests.Timeout) as exc:
+                last = exc
+                time.sleep(2 ** attempt)
+        raise LoginError(f"Could not reach {url}: {last}")
+
+    def _request(self, url: str, data: dict[str, str] | None = None) -> tuple[str, str, int]:
+        if data is None:
+            response = self._send("GET", url)
+        else:
+            response = self._send("POST", url, data=data)
+        return response.url, response.text, response.status_code
 
     def _submit(self, form: Form, overrides: dict[str, str] | None = None) -> None:
         target = urllib.parse.urljoin(self.url, form.action) if form.action else self.url
@@ -172,6 +208,14 @@ class HttpSession:
     # -- interface used by the scrapers -------------------------------------
     def goto(self, url: str, *, source: str, label: str) -> ArchivedResponse:
         self.url, self.content, status = self._request(url)
+        # A pooled connection that the far end closed is replaced by a new one
+        # on a new source address, and an address-bound SP session does not
+        # survive that. It shows up as a silent bounce to the IdP rather than
+        # an error, so check for it and sign in again before archiving a login
+        # page as if it were the requested one.
+        if self._bounced_to_login() and self._entry:
+            self.login(self._entry, success_marker=self._marker)
+            self.url, self.content, status = self._request(url)
         record = self.archive.save(
             source=source,
             label=label,
@@ -187,20 +231,10 @@ class HttpSession:
         self, url: str, payload: Any, *, source: str, label: str
     ) -> ArchivedResponse:
         """POST a JSON body and archive the JSON response."""
-        import json as _json
-
-        body = _json.dumps(payload).encode()
-        request = urllib.request.Request(url, data=body)
-        request.add_header("Content-Type", "application/json")
-        if self.url:
-            request.add_header("Referer", self.url)
-        try:
-            with self.opener.open(request, timeout=60) as response:
-                text = response.read().decode("utf-8", errors="replace")
-                status = response.status
-        except urllib.error.HTTPError as exc:
-            text = exc.read().decode("utf-8", errors="replace")
-            status = exc.code
+        response = self._send(
+            "POST", url, json=payload, headers={"Content-Type": "application/json"}
+        )
+        text, status = response.text, response.status_code
         record = self.archive.save(
             source=source, label=label, url=url, payload=text, kind="json", status=status
         )
@@ -209,6 +243,7 @@ class HttpSession:
 
     def login(self, entry_url: str, *, success_marker: str) -> None:
         """Walk the SSO chain until an authenticated page is reached."""
+        self._entry, self._marker = entry_url, success_marker
         self.url, self.content, _ = self._request(entry_url)
         credentials_sent = False
 
@@ -264,6 +299,10 @@ class HttpSession:
             "The last page was archived under data/raw/debug/. "
             + self._failure_hint()
         )
+
+    def _bounced_to_login(self) -> bool:
+        low = self.url.lower()
+        return "idp.cineca.it" in low or "logon.do" in low
 
     def _authenticated(self, success_marker: str) -> bool:
         low_url = self.url.lower()
