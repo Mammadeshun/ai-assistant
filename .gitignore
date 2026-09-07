@@ -17,3 +17,11 @@ ai_assistant.zip
 # Rendered exam page images: 32 MB of derived data, rebuild with scripts/render_pages.py
 data/bundle/pages/
 data/study-bundle.zip
+
+# Phase 1-2 working tree: downloads and derived artefacts, re-creatable by
+# unipv/tools/unipv_collect.py and unipv/tools/extract.py.
+unipv/raw/
+unipv/logs/
+unipv/output/
+unipv/data/classified.json
+unipv/data/questions.jsonl
