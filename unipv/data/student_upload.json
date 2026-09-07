@@ -1,0 +1,373 @@
+{
+ "files": [
+  {
+   "source": "extra mat/202501.pdf",
+   "stored": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_student/202501.pdf",
+   "course": "509496",
+   "why": "first pages contain 'information retrieval'",
+   "sha256": "9e100f1ac32e4e4ab280bd67a97aebefb67c3626c8c80d5ecb27bd58fa686f56",
+   "bytes": 188500
+  },
+  {
+   "source": "extra mat/202601.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/202601.pdf",
+   "course": "509488",
+   "why": "first pages contain 'natural language'",
+   "sha256": "cb7a1083a9f8728bbc7cd29dbdce32274302e47db4251bc9cd91b4b1919dbc16",
+   "bytes": 731146
+  },
+  {
+   "source": "extra mat/2fe5ef70-cb7f-4f4f-af75-4506ae73560d_260801_144248.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/2fe5ef70-cb7f-4f4f-af75-4506ae73560d_260801_144248.pdf",
+   "course": "509488",
+   "why": "first pages contain 'tm&nlp'",
+   "sha256": "e463feaee7bebc3d50dc7ef020296bf30b0f705087a1b5fc2176941c39c63637",
+   "bytes": 96902
+  },
+  {
+   "source": "extra mat/444c4d31-ddf0-422f-8dda-9fe9b41f1304_260801_144054.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/444c4d31-ddf0-422f-8dda-9fe9b41f1304_260801_144054.pdf",
+   "course": "509488",
+   "why": "first pages contain 'tm&nlp'",
+   "sha256": "50651d2cc1954a2a89e482d610e18fe102f3732b03116bb78049167a5cfe9343",
+   "bytes": 281125
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2023/19_September_2023.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2023_19_September_2023.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "a88d7842217e63629a979f533e4c38c2d6dcda954af7bee9aa922629a8955942",
+   "bytes": 72419
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2023/23_June_2023.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2023_23_June_2023.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "9fbdbea1582e3d8df847d24c465a8861b89842ddc67d6c203f7f6ec6bf44d18a",
+   "bytes": 61268
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2023/24_July_2023.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2023_24_July_2023.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "9c4bf88ede73c5db7ce5b4eb3e5cd785bc3161245108e8f453f863c1cc84ef0c",
+   "bytes": 87220
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2023/5_September_2023.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2023_5_September_2023.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "8a2c495fa94a254aced39f8ba02eb36ed58e85e11aecea52e576232dc79280fb",
+   "bytes": 65054
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/21_February_2024 copy.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_21_February_2024 copy.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "a3dee4d7639c25059b9c23f90007bc7ba209d004908bf26ed9e612aa000ec918",
+   "bytes": 52040
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/29_January_2024.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/2024_29_January_2024.pdf",
+   "course": "509488",
+   "why": "first pages contain 'tokeniz'",
+   "sha256": "46f5f49a6093e04309808fe35c55e75efc214845182d13f2c7fafdddbd23900c",
+   "bytes": 425763
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/exam_test_JULY24.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_JULY24.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "a47b7087d7d47b3b11fbcbba131f31223baee0aaccad4b09df8611ff7fc5bb10",
+   "bytes": 68868
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/exam_test_JUNE24.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_JUNE24.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "2a96106d7dc340a0d4f7e30d30f3b16eeb65a33405aa043c309d5ddd702feb80",
+   "bytes": 77627
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/exam_test_SEPT24_1.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_SEPT24_1.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "da1d19c22d7bf50f9e9f6a4e26f43209c2a0f0a66438c0ea5c4b63b1157b14f6",
+   "bytes": 57110
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2024/exam_test_SEPT24_2.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_SEPT24_2.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "e9e61650cb6523c9280c9bc4fbca1c08ffe525be5ed0235d4e76e59b95c85389",
+   "bytes": 86835
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_18SEPT_2025.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_18SEPT_2025.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "7f25cb5577b17422262b163239a7a675fbc1229f719a8809581a9868cfeb25cb",
+   "bytes": 45434
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_test_02SEPT_25.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_02SEPT_25.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "04bf05decea48c51fef9d11a5f8566decd4ba02c2d29500c9c367db072e798dc",
+   "bytes": 96467
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_test_FEB25.pdf",
+   "stored": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_student/2025_exam_test_FEB25.pdf",
+   "course": "509478",
+   "why": "first pages contain 'owl'",
+   "sha256": "c7405bec7977c91f12a7b6c98f33b3e57b5fa8f976f5d93ce5598bba5e950470",
+   "bytes": 90668
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_test_JAN25.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JAN25.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "be16125d9a1eec2b43f0e1007766a4d0052fffe55ae7695187fed4e50b5547d6",
+   "bytes": 55347
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_test_JULY_25.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JULY_25.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "0c4c04073899eb869a15d5221b367806e98c409d6805a412ac2f82c5c7d43feb",
+   "bytes": 72757
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2025/exam_test_JUNE_25.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JUNE_25.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "7572d1c08aabe8c093ff4fcce8b75475b68f9468102e75747bfbcb5b531d98b2",
+   "bytes": 68034
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2026/exam_test_FEB.pdf",
+   "stored": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2026_exam_test_FEB.pdf",
+   "course": "509486",
+   "why": "first pages contain 'neural network'",
+   "sha256": "068ec6a2fe833dc88c54f80bfa107a99e4c6033147c7105a52d6e046fd93a08b",
+   "bytes": 81902
+  },
+  {
+   "source": "extra mat/99189332-0aba-4ffc-bfba-56b3ad5f3216/2026/exam_test_JAN26.pdf",
+   "stored": "raw/509483-COMPUTATIONAL-LOGIC/_student/2026_exam_test_JAN26.pdf",
+   "course": "509483",
+   "why": "first pages contain 'resolution'",
+   "sha256": "f346dde3ae0f9b25800717a553024cc8b112f22dba4806d6816a7dbefa10df70",
+   "bytes": 79993
+  },
+  {
+   "source": "extra mat/Cg psy.pdf",
+   "stored": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cg psy.pdf",
+   "course": "509485",
+   "why": "filename matches /cog.?psy|\\bcog\\b|cg.?psy/",
+   "sha256": "33262cb44eb9cefa101468566f31e4e46e9159c481c1aaee8110cc7f750f9e6f",
+   "bytes": 240456
+  },
+  {
+   "source": "extra mat/Cog psy.pdf",
+   "stored": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog psy.pdf",
+   "course": "509485",
+   "why": "filename matches /cog.?psy|\\bcog\\b|cg.?psy/",
+   "sha256": "b9c65979088d1cf760f966570637e3645985ee941e357fb3459fff0ddfa3fbd3",
+   "bytes": 162781
+  },
+  {
+   "source": "extra mat/Cog.pdf",
+   "stored": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog.pdf",
+   "course": "509485",
+   "why": "filename matches /cog.?psy|\\bcog\\b|cg.?psy/",
+   "sha256": "1321c65ec65295331e3ac2d45324b2c5207a6a5f62408decb2e10e4363597cc3",
+   "bytes": 40519
+  },
+  {
+   "source": "extra mat/TM OPEN QUESTIONS_260801_143948.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/TM OPEN QUESTIONS_260801_143948.pdf",
+   "course": "509488",
+   "why": "filename matches /tmnlp|text.?min|\\btm\\b|nlp/",
+   "sha256": "dda26b499c6a86ec3d771f70d78fceae6493012744a9424f059c0c04679828ef",
+   "bytes": 123272
+  },
+  {
+   "source": "extra mat/[TMNLP 23_24] Exam questions sample_260801_144017.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/[TMNLP 23_24] Exam questions sample_260801_144017.pdf",
+   "course": "509488",
+   "why": "filename matches /tmnlp|text.?min|\\btm\\b|nlp/",
+   "sha256": "be4d4c71c55d803ea6f981e5fed9f434403f4aff7bee8df4c9c283d18064c55b",
+   "bytes": 176137
+  },
+  {
+   "source": "extra mat/[TMNLP-2025_2026] Practice Written Exam copy_260801_144001.pdf",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/[TMNLP-2025_2026] Practice Written Exam copy_260801_144001.pdf",
+   "course": "509488",
+   "why": "filename matches /tmnlp|text.?min|\\btm\\b|nlp/",
+   "sha256": "f29887e872f86fd6570ad872cf11e4a157facc7306869649ebbe8ba416105f40",
+   "bytes": 592565
+  },
+  {
+   "source": "extra mat/a3d73565-501d-4fb0-9662-886d00529784_260801_144042.pdf",
+   "stored": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/a3d73565-501d-4fb0-9662-886d00529784_260801_144042.pdf",
+   "course": "510109",
+   "why": "first pages contain 'probability'",
+   "sha256": "d10d65148ab1ca4d713acb73424054bee114e28feda4d59d4891abcf424e5b6f",
+   "bytes": 264796
+  },
+  {
+   "source": "extra mat/extra material/f12fcc72-65e9-4d85-9652-05cb92a47782_260801_144832.pdf",
+   "stored": "raw/_unassigned/f12fcc72-65e9-4d85-9652-05cb92a47782_260801_144832.pdf",
+   "course": null,
+   "why": "no filename or content match",
+   "sha256": "4dc2794869cbf40fe85a4e07718187e0a859e257b9520194e33519fdd78b8935",
+   "bytes": 547893
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-41-42.jpg",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/photo_2026-08-01_14-41-42.jpg",
+   "course": "509488",
+   "why": "first pages contain 'tm&nlp'",
+   "sha256": "8b63ac35228b3cd7a6580946ff037e7625df976f3fad37547ec187c9f06c30ac",
+   "bytes": 163655
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-41-51.jpg",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/photo_2026-08-01_14-41-51.jpg",
+   "course": "509488",
+   "why": "first pages contain 'tf-idf'",
+   "sha256": "3dc91d5ac233d852b9c2a18155baccda2d80cec393b3371eb8033bb269ae0c39",
+   "bytes": 82039
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-41-59.jpg",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/photo_2026-08-01_14-41-59.jpg",
+   "course": "509488",
+   "why": "first pages contain 'morpholog'",
+   "sha256": "181fb55aa8f594d4b255fb4ea9e82bf91ae8285539a3394c1df5a7c7fdf90836",
+   "bytes": 179971
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-42-10.jpg",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/photo_2026-08-01_14-42-10.jpg",
+   "course": "509488",
+   "why": "first pages contain 'text min'",
+   "sha256": "4f2339f6710933c2853d944144b0e8f7bb64e43c402f8539b6348651f7e4098d",
+   "bytes": 71947
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-42-21.jpg",
+   "stored": "raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/_student/photo_2026-08-01_14-42-21.jpg",
+   "course": "509488",
+   "why": "first pages contain 'word2vec'",
+   "sha256": "60326466c3207254b2da7283a3b510de1e8df4244a8f9dc1f44f431f9a33334a",
+   "bytes": 149691
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-16.jpg",
+   "stored": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-16.jpg",
+   "course": "509494",
+   "why": "first pages contain 'brain'",
+   "sha256": "49038c8c892eda2a4f34207b834a578b7e3c0f67742bbb50ebf710ed1b8ac60c",
+   "bytes": 239105
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-17 (2).jpg",
+   "stored": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17 (2).jpg",
+   "course": "509494",
+   "why": "first pages contain 'hodgkin'",
+   "sha256": "7259926dfb50f6483cb4732965c6bb360dab0073cc54b3c686fb199f3130f524",
+   "bytes": 118435
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-17.jpg",
+   "stored": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17.jpg",
+   "course": "509494",
+   "why": "first pages contain 'neuron'",
+   "sha256": "18ac0d6fa4f990d4e76d4928f88b82ec7e1124b84dcf1cd151fe760aedf421f1",
+   "bytes": 88200
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-18.jpg",
+   "stored": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-18.jpg",
+   "course": "509494",
+   "why": "first pages contain 'brain'",
+   "sha256": "df51172d6e57eafe7a4f249cfd3ac42f5dea7e4ecb4e23a911157cf1de4846a7",
+   "bytes": 36337
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-20.jpg",
+   "stored": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-20.jpg",
+   "course": "509494",
+   "why": "first pages contain 'brain'",
+   "sha256": "701044170de637717bd5413a338d693b7a72b6f12e966c5f7ddb3d6bfee7da13",
+   "bytes": 139181
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-21.jpg",
+   "stored": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/photo_2026-08-01_14-51-21.jpg",
+   "course": "510109",
+   "why": "first pages contain 'probability'",
+   "sha256": "89186037849a671d49a0ae809f4e12e23980fd2ee2f1661f535f98250057dbed",
+   "bytes": 117024
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-22.jpg",
+   "stored": "raw/_unassigned/photo_2026-08-01_14-51-22.jpg",
+   "course": null,
+   "why": "no filename or content match",
+   "sha256": "31661f170ea8cf176a62db2be956089817508586b367ecaa2179d304f074468b",
+   "bytes": 161237
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-23.jpg",
+   "stored": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/photo_2026-08-01_14-51-23.jpg",
+   "course": "510109",
+   "why": "first pages contain 'probability'",
+   "sha256": "906f849bf1e645e39165f155b844e9893bfe6ff72e54ac252024cd3ce91eb14b",
+   "bytes": 126035
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-24.jpg",
+   "stored": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/photo_2026-08-01_14-51-24.jpg",
+   "course": "510109",
+   "why": "first pages contain 'probability'",
+   "sha256": "6b54221b5c49081568b1bd55b15e600a2a2e44280765c4695431bf77d63cdb51",
+   "bytes": 132722
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-25.jpg",
+   "stored": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_student/photo_2026-08-01_14-51-25.jpg",
+   "course": "510638",
+   "why": "first pages contain 'centrality'",
+   "sha256": "f988967aa629bc9c684c2d4cac2ced7127680abb571aa1a7245d30221c308725",
+   "bytes": 133817
+  },
+  {
+   "source": "extra mat/extra material/photo_2026-08-01_14-51-28.jpg",
+   "stored": "raw/_unassigned/photo_2026-08-01_14-51-28.jpg",
+   "course": null,
+   "why": "no filename or content match",
+   "sha256": "2c09248a3a67ca2cb41f6a37426c78de67834470dcb62a3c2e9d04cc1866f9f3",
+   "bytes": 179068
+  }
+ ],
+ "duplicates_skipped": 46
+}
