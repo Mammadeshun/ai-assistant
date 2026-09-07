@@ -39,13 +39,54 @@ Two authenticated sources, one identity provider.
 a library forces a file, write a gitignored `.env`, and add it to `.gitignore`
 in the same commit.
 
-### 1.1 Do not use a headless browser
+### 1.1 Use one keep-alive connection — this is the whole ballgame
 
-Playwright/Chromium fails in sandboxed environments behind an egress proxy —
-every navigation dies with `ERR_CONNECTION_RESET` even for pages plain `urllib`
-fetches fine. Write a plain HTTP client: `urllib.request` with an
-`http.cookiejar.CookieJar`, a browser `User-Agent`, and `build_opener`. That is
-what actually works.
+Two rules, and the second one cost me five weeks.
+
+**Do not use a headless browser.** Playwright/Chromium fails in sandboxed
+environments behind an egress proxy — every navigation dies with
+`ERR_CONNECTION_RESET`, and with no X server it will not even launch.
+
+**Do not use `urllib`.** Use `requests.Session` with a pooled adapter, or
+anything else that keeps connections alive:
+
+```python
+import requests
+http = requests.Session()
+http.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) ... Chrome/120.0.0.0 Safari/537.36"
+adapter = requests.adapters.HTTPAdapter(pool_connections=8, pool_maxsize=8, max_retries=0)
+http.mount("https://", adapter)
+```
+
+Why it matters: **Shibboleth binds a service-provider session to the client IP
+address** (`consistentAddress`, on by default). A sandbox that reaches the
+internet through a proxy generally gets **a different source address on every
+new TCP connection** — measure it and see:
+
+```python
+[requests.get("https://api.ipify.org").text for _ in range(4)]
+# ['160.79.106.139', '160.79.106.132', '160.79.106.139', '160.79.106.129']  <- separate sessions
+s = requests.Session()
+[s.get("https://api.ipify.org").text for _ in range(4)]
+# ['160.79.106.129', '160.79.106.129', '160.79.106.129', '160.79.106.129']  <- one session
+```
+
+`urllib` sends `Connection: close` on every request, so it opens a new
+connection — and leaves from a new address — for every hop. The SP therefore
+saw the request carrying its own freshly minted `_shibsession_` cookie arrive
+from a stranger, discarded the session and restarted SSO.
+
+**The failure looks exactly like a wrong password**, which is the trap: you land
+back on the IdP login form with no error banner. Diagnose it by posting the
+assertion with redirects disabled — if the SP answers `302` *and*
+`Set-Cookie: _shibsession_...`, authentication is fine and you are losing the
+session on the next request, not failing to get one. Only the connections to
+the **SP** need a stable address; the IdP hops in between are irrelevant to it.
+
+A pooled connection the far end closes is replaced by one on a new address, so
+the same loss can recur mid-run. Detect the bounce (landing on
+`idp.cineca.it` or `Logon.do`) and re-login rather than archiving a login page
+as if it were the page you asked for.
 
 ### 1.2 The SSO chain, hop by hop
 
@@ -132,20 +173,24 @@ UNIPV flow. Submit routing first, once, then credentials.
   recording url, sha256, fetch time, HTTP status. Parse only from those files.
   I will want to re-parse many times; I do not want the servers hit again.
 
-### 1.7 ⚠ The credential currently fails
+### 1.7 The credential works — do not go looking for a password problem
 
-As of 7 September 2026 the password I have been using no longer authenticates.
-Two attempts were made, routing-first and credential-first; both ended back at
-the login form with no explicit error banner. It is either rotated/expired, or
-the IdP flow changed again. **Before you write any scraping code, do one login
-probe and tell me the result.** If it fails:
+This was the open question for weeks and it is now settled. The password is
+valid; the IdP issues a SAML assertion every time. What was broken was the
+transport, described in §1.1. Verified working end to end on 7 September 2026:
+Esse3 serves career, libretto, study plan, bookings and available sittings;
+Kiro reaches Moodle with a live `sesskey` and lists 73 enrolled courses.
 
-1. I log in manually at `https://studentionline.unipv.it` and confirm the
-   password works in a browser.
-2. If it does not, I reset it at the UniPV password-recovery link on that page.
-3. I then set `UNIPV_USERNAME` / `UNIPV_PASSWORD` in the environment.
+If a login probe fails, check in this order — the last item is the likely one:
 
-Do not burn turns retrying. One probe, then tell me exactly what to click.
+1. Are `UNIPV_USERNAME` / `UNIPV_PASSWORD` actually set in the environment?
+   (A scheduled watcher ran daily for five weeks doing nothing because they
+   were not.)
+2. Does the routing step still send `PASSWORD_FLOW`? (§1.2)
+3. Are you keeping one connection alive across the whole chain? (§1.1)
+
+**Still: exactly one credential attempt per login.** Never retry a rejected
+password — that is how an account gets locked.
 
 ---
 
