@@ -43,7 +43,12 @@ A4_PT = (595, 842)
 A4_TOLERANCE = 6
 MARGIN_CM = 2.0
 MARGIN_PT = MARGIN_CM * 72 / 2.54
-TOFU = re.compile(r"[�□■]")
+# U+FFFD only. U+25A1 WHITE SQUARE was in this list and fired 58 times on
+# Knowledge Representation, where it is the modal necessity operator - real
+# mathematics, sitting alongside diamond, subset-eq, sqcap, top and bottom.
+# A pack that flags its own notation as broken is worse than one that does not
+# check.
+TOFU = re.compile("\ufffd")
 TAG = re.compile(r"\[(PAST PAPER[^\]]*|GENERATED VARIANT)\]")
 FORMULA = re.compile(r"[=<>≤≥∑∏∫√±]|\\frac|\\sum|\\int")
 
@@ -104,6 +109,11 @@ def check_geometry(pdfs: list[Path]) -> list[str]:
                 box = page.rect
                 for block in page.get_text("blocks"):
                     x0, y0, x1, y1 = block[:4]
+                    # The running header and the page number sit outside the
+                    # body box on purpose - that is what a margin is for. Only
+                    # body content breaking out is a defect.
+                    if y1 < MARGIN_PT or y0 > box.height - MARGIN_PT:
+                        continue
                     if (x0 < MARGIN_PT - 2 or y0 < MARGIN_PT - 2
                             or x1 > box.width - MARGIN_PT + 2
                             or y1 > box.height - MARGIN_PT + 2):
@@ -126,7 +136,10 @@ def check_fabrication(pdfs: list[Path]) -> tuple[list[str], int, int]:
     problems, tagged, total = [], 0, 0
     for pdf in [p for p in pdfs if p.name.startswith("PRACTICE_")]:
         text = "\n".join(page_texts(pdf))
-        for match in re.finditer(r"(?m)^\s*(?:Q|Question\s*)(\d+)[.)]", text):
+        # The pack numbers questions as a heading line "Q7" or "Question 7",
+        # with no trailing punctuation; requiring "." or ")" matched almost
+        # nothing and then reported the rest as untagged.
+        for match in re.finditer(r"(?m)^\s*(?:Q|Question)\s*(\d+)\s*$", text):
             total += 1
             window = text[match.start(): match.start() + 1200]
             if TAG.search(window):
