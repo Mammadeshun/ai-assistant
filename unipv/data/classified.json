@@ -305,6 +305,166 @@
    "chars": 23105,
    "scanned": false,
    "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture1-SOLUTION/Lecture1.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture1-SOLUTION/Lecture1.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 45564,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture1-init/Lecture1_init.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture1-init/Lecture1_init.ipynb",
+   "role": "SLIDES",
+   "chars": 36869,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture10-lab/Lecture10_2026.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture10-lab/Lecture10_2026.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-2026-rnn-ini/Lecture12_2026_rnn_ini.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-2026-rnn-ini/Lecture12_2026_rnn_ini.ipynb",
+   "role": "SLIDES",
+   "chars": 148011,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-lab1/Lecture12.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-lab1/Lecture12.ipynb",
+   "role": "ASSIGNMENT",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-labSOLUTION/Lecture12_2026_rnn.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture12-labSOLUTION/Lecture12_2026_rnn.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 167644,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture14-2026-ini/Lecture14_2026_ini.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture14-2026-ini/Lecture14_2026_ini.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture14-2026-labSOLUTION/Lecture14_2026.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture14-2026-labSOLUTION/Lecture14_2026.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture16-AE-VAE/Lecture16_AE_VAE.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture16-AE-VAE/Lecture16_AE_VAE.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture17-lab/Lecture17_lab_p1.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture17-lab/Lecture17_lab_p1.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture17-lab/Lecture17_lab_p2.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture17-lab/Lecture17_lab_p2.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture18-2026/Lecture18_2026.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture18-2026/Lecture18_2026.ipynb",
+   "role": "SLIDES",
+   "chars": 109274,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture3-LABSOLUTION/Lecture3.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture3-LABSOLUTION/Lecture3.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture3-init/Lecture3_init.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture3-init/Lecture3_init.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture5-ini/Lecture5_ini.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture5-ini/Lecture5_ini.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture5-labSOLUTION/Lecture5.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture5-labSOLUTION/Lecture5.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture7-ini/Lecture7_ini.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture7-ini/Lecture7_ini.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture7-labSOLUTION/Lecture7.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture7-labSOLUTION/Lecture7.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture9-26-ini/Lecture9_26_ini.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture9-26-ini/Lecture9_26_ini.ipynb",
+   "role": "SLIDES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture9-26-labSOLUTION/Lecture9_26.ipynb",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_unzipped/Lecture9-26-labSOLUTION/Lecture9_26.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
   }
  ],
  "509496": [
@@ -543,7 +703,7 @@
    "original": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/INFORMATIO-509496-10589-2023/STU  Scores_IRRS Course FEB 24.pdf",
    "converted": false,
    "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_text/INFORMATIO-509496-10589-2023/STU  Scores_IRRS Course FEB 24.txt",
-   "role": "NOTES",
+   "role": "PAST_PAPER",
    "chars": 925,
    "scanned": false,
    "exam_date": "2024-02-01"
@@ -883,7 +1043,7 @@
    "original": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/IR-amp-RS-509496-10589-2025/IR_RS_Project_C___Health_Retrieval___2026___June_July.pdf",
    "converted": false,
    "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_text/IR-amp-RS-509496-10589-2025/IR_RS_Project_C___Health_Retrieval___2026___June_July.txt",
-   "role": "ASSIGNMENT",
+   "role": "PAST_PAPER",
    "chars": 22109,
    "scanned": false,
    "exam_date": "2026-06-01"
@@ -1005,6 +1165,16 @@
    "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_text/IR-amp-RS-509496-10589-2025/_IRRS 2025 - 2026_ 1. INTRODUCTION TO IR.txt",
    "role": "NOTES",
    "chars": 36342,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_converted/IR RS Project Report Template.pdf",
+   "original": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Project-Report-Templates-2026-June-July/IR RS Project Report Template.docx",
+   "converted": true,
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_text/_converted/IR RS Project Report Template.txt",
+   "role": "ASSIGNMENT",
+   "chars": 3303,
    "scanned": false,
    "exam_date": null
   },
@@ -1143,6 +1313,94 @@
    "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/IR-amp-RS-509496-10589-2025/RAG_Systems.ipynb",
    "role": "NOTES",
    "chars": 6761,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Code-to-get-collection-2026/Medical_Literature_Retrieval.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Code-to-get-collection-2026/Medical_Literature_Retrieval.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab-7-Libraries-For-RS-ipynb/Lab_7_Libraries_For_RS.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab-7-Libraries-For-RS-ipynb/Lab_7_Libraries_For_RS.ipynb",
+   "role": "NOTES",
+   "chars": 24646,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab2-Non-Personalized-Recommender-Systems-Solutions-ipynb/Lab2_Non_Personalized_Recommender_Systems_Solutions.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab2-Non-Personalized-Recommender-Systems-Solutions-ipynb/Lab2_Non_Personalized_Recommender_Systems_Solutions.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab2-Non-Personalized-Recommender-Systems-ipynb/Lab2_Non_Personalized_Recommender_Systems.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab2-Non-Personalized-Recommender-Systems-ipynb/Lab2_Non_Personalized_Recommender_Systems.ipynb",
+   "role": "ASSIGNMENT",
+   "chars": 130502,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Materials/Lab3_Filter_Bubbles_exercises.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Materials/Lab3_Filter_Bubbles_exercises.ipynb",
+   "role": "ASSIGNMENT",
+   "chars": 72144,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Materials/posts.csv",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Materials/posts.csv",
+   "role": "ASSIGNMENT",
+   "chars": 22190,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Real-World-Recommender-Systems-and-Consequences-Solutio/Lab3_Real_World_Recommender_Systems_and_Consequences.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab3-Real-World-Recommender-Systems-and-Consequences-Solutio/Lab3_Real_World_Recommender_Systems_and_Consequences.ipynb",
+   "role": "ASSIGNMENT",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab6-exercises-ipynb/Lab6_exercises.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Lab6-exercises-ipynb/Lab6_exercises.ipynb",
+   "role": "ASSIGNMENT",
+   "chars": 56618,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Starting-Point-Students/Starting_Point_Students.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Starting-Point-Students/Starting_Point_Students.ipynb",
+   "role": "NOTES",
+   "chars": 49534,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Starting-Point-solution-basic/Starting_Point_solution_basic.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/Starting-Point-solution-basic/Starting_Point_solution_basic.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 79133,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/sparse-ret-FiD-FlanT5/sparse_ret_FiD_FlanT5.ipynb",
+   "text": "raw/509496-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SY/_unzipped/sparse-ret-FiD-FlanT5/sparse_ret_FiD_FlanT5.ipynb",
+   "role": "NOTES",
+   "chars": 45370,
    "scanned": false,
    "exam_date": null
   }
@@ -3521,6 +3779,600 @@
    "chars": 3088,
    "scanned": false,
    "exam_date": "2022-06-23"
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowdiag-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowdiag-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowdiag-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowdiag-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowdiag-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowdiag-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowhor-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowhor-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowhor-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowhor-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowhor-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowhor-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowvert-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowvert-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowvert-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowvert-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/arrowvert-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/arrowvert-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-2.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-2.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-3.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-3.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-4.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-4.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-5.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-5.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-5.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-6.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-6.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-6.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-7.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/attack-7.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/attack-7.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/barracks.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/barracks.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/barracks.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-2.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-2.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-3.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-3.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-4.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-4.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-5.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-5.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-5.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-6.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-6.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-6.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-7.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-7.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-7.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-8.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/dig-8.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/dig-8.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-2.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-2.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-3.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-3.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-4.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-4.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-5.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/fallen-5.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/fallen-5.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/mine.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/mine.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/mine.txt",
+   "role": "NOTES",
+   "chars": 2,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/ready.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/ready.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/ready.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/repair-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/repair-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-2.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-2.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/repair-2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-3.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/repair-3.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/repair-3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-10.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-10.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-10.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-11.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-11.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-11.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-2.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-2.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-3.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-3.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-4.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-4.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-5.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-5.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-5.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-6.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-6.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-6.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-7.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-7.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-7.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-8.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-8.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-8.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-9.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/run-9.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/run-9.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/shoot-0.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/shoot-0.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/shoot-0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/shoot-1.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/shoot-1.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/shoot-1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/tower.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/tower.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/tower.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/wall.png",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/wall.png",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/sprites/wall.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/Rainbow_in_Budapest.jpg",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/Rainbow_in_Budapest.jpg",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/tutorial-data-and-code/Rainbow_in_Budapest.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/Rainbow_in_Budapest.jpg",
+   "original": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/Rainbow_in_Budapest.jpg",
+   "converted": false,
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/_unzipped/tutorial-data-and-code-v01/Rainbow_in_Budapest.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
   },
   {
    "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/Algorithms-Dondi/0-1_Knapsack.py",
@@ -8753,6 +9605,190 @@
    "chars": 75,
    "scanned": false,
    "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/01_test_right_justify.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/01_test_right_justify.py",
+   "role": "SOLUTIONS",
+   "chars": 464,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/02_test_do_twice.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/02_test_do_twice.py",
+   "role": "SOLUTIONS",
+   "chars": 427,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_a_grid_naive.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_a_grid_naive.py",
+   "role": "SOLUTIONS",
+   "chars": 393,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_b_grid_two_lines.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_b_grid_two_lines.py",
+   "role": "SOLUTIONS",
+   "chars": 281,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_c_grid_lines_pattern.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_c_grid_lines_pattern.py",
+   "role": "SOLUTIONS",
+   "chars": 373,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_d_grid_cells_pattern.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/code-sol-ex-ch3/03_d_grid_cells_pattern.py",
+   "role": "SOLUTIONS",
+   "chars": 913,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise.py",
+   "role": "NOTES",
+   "chars": 764,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise_orig.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise_orig.py",
+   "role": "NOTES",
+   "chars": 1212,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise_print.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/columnwise_print.py",
+   "role": "NOTES",
+   "chars": 1383,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/game_fifteen.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/game_fifteen.py",
+   "role": "NOTES",
+   "chars": 6094,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/wc_sol.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sol-additional-hw/wc_sol.py",
+   "role": "NOTES",
+   "chars": 1297,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/avatars.txt",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/sprites/avatars.txt",
+   "role": "NOTES",
+   "chars": 619,
+   "scanned": false,
+   "exam_date": "2019-01-22"
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_1.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_1.py",
+   "role": "NOTES",
+   "chars": 407,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_2.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_2.py",
+   "role": "NOTES",
+   "chars": 543,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_3.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_3.py",
+   "role": "NOTES",
+   "chars": 591,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_4.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_4.py",
+   "role": "NOTES",
+   "chars": 513,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_5.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/fig_5.py",
+   "role": "NOTES",
+   "chars": 235,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/interactive_fig.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code/interactive_fig.py",
+   "role": "NOTES",
+   "chars": 2060,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_1.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_1.py",
+   "role": "NOTES",
+   "chars": 407,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_2.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_2.py",
+   "role": "NOTES",
+   "chars": 543,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_3.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_3.py",
+   "role": "NOTES",
+   "chars": 591,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_4.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_4.py",
+   "role": "NOTES",
+   "chars": 513,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_5.py",
+   "text": "raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_unzipped/tutorial-data-and-code-v01/fig_5.py",
+   "role": "NOTES",
+   "chars": 235,
+   "scanned": false,
+   "exam_date": null
   }
  ],
  "509478": [
@@ -11147,6 +12183,344 @@
    "exam_date": null
   },
   {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-additional.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-additional.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-additional.txt",
+   "role": "NOTES",
+   "chars": 14482,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-federated.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-federated.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/BC2-sparql-tutorial-federated.txt",
+   "role": "SLIDES",
+   "chars": 15337,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/Glossary.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/Glossary.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/Glossary.txt",
+   "role": "NOTES",
+   "chars": 13419,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/bc2-uniprot-slides.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/bc2-uniprot-slides.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/bc2-uniprot-slides.txt",
+   "role": "SLIDES",
+   "chars": 10801,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/biocuration-uniprot-slides.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/biocuration-uniprot-slides.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/biocuration-uniprot-slides.txt",
+   "role": "SLIDES",
+   "chars": 10888,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-introduction.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-introduction.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-introduction.txt",
+   "role": "SLIDES",
+   "chars": 22758,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-nextprot.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-nextprot.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/lausanne2016-sparql-nextprot.txt",
+   "role": "NOTES",
+   "chars": 16196,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/model.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/model.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/model.txt",
+   "role": "NOTES",
+   "chars": 7400,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-model.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-model.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-model.txt",
+   "role": "NOTES",
+   "chars": 68,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-slides.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-slides.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/nextprot-slides.txt",
+   "role": "SLIDES",
+   "chars": 15438,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-intro.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-intro.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-intro.txt",
+   "role": "SLIDES",
+   "chars": 20701,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-playground.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-playground.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/sparql-playground.txt",
+   "role": "NOTES",
+   "chars": 1855,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-and-federated-queries.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-and-federated-queries.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-and-federated-queries.txt",
+   "role": "SLIDES",
+   "chars": 22656,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-model.pdf",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-model.pdf",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot-model.txt",
+   "role": "SLIDES",
+   "chars": 22656,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/animals.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/animals.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/animals.txt",
+   "role": "NOTES",
+   "chars": 362,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-female.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-female.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-female.txt",
+   "role": "NOTES",
+   "chars": 121,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-rdf-type.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-rdf-type.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/cartoon-rdf-type.txt",
+   "role": "NOTES",
+   "chars": 120,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/databases.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/databases.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/databases.txt",
+   "role": "NOTES",
+   "chars": 628,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/link-data.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/link-data.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/link-data.txt",
+   "role": "NOTES",
+   "chars": 174,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/logo.jpg",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/logo.jpg",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/logo.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/model.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/model.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/model.txt",
+   "role": "NOTES",
+   "chars": 7400,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/np.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/np.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/np.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-class-details.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-class-details.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-class-details.txt",
+   "role": "NOTES",
+   "chars": 765,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-classes.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-classes.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-classes.txt",
+   "role": "NOTES",
+   "chars": 771,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-properties.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-properties.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology-properties.txt",
+   "role": "NOTES",
+   "chars": 837,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/ontology.txt",
+   "role": "NOTES",
+   "chars": 124,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/poster-sparql.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/poster-sparql.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/poster-sparql.txt",
+   "role": "NOTES",
+   "chars": 4998,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-model.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-model.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-model.txt",
+   "role": "NOTES",
+   "chars": 906,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-phenotypes.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-phenotypes.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/rdf-phenotypes.txt",
+   "role": "NOTES",
+   "chars": 334,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/screenshot.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/screenshot.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/screenshot.txt",
+   "role": "NOTES",
+   "chars": 1229,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/taxonomy.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/taxonomy.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/taxonomy.txt",
+   "role": "NOTES",
+   "chars": 720,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot.png",
+   "original": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot.png",
+   "converted": false,
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_text/_unzipped/calipho-sib-sparql-playground-f4da99a/uniprot.txt",
+   "role": "NOTES",
+   "chars": 1553,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR-MOD2-2024-2025/2.5_datalog_asp_blackboard.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR-MOD2-2024-2025/2.5_datalog_asp_blackboard.md",
    "role": "NOTES",
@@ -11285,7 +12659,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/2_2324_datalog_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/2_2324_datalog_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 1659,
    "scanned": false,
    "exam_date": null
@@ -11293,7 +12667,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/2_2425_datalog_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/2_2425_datalog_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 3137,
    "scanned": false,
    "exam_date": null
@@ -11301,7 +12675,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/3_2324_asp_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/3_2324_asp_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 15175,
    "scanned": false,
    "exam_date": "2024-04-18"
@@ -11309,7 +12683,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/3_2425_asp_blackboard.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/3_2425_asp_blackboard.md",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 13042,
    "scanned": false,
    "exam_date": null
@@ -11317,7 +12691,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/4_2425_rdf_sparql_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/4_2425_rdf_sparql_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 5732,
    "scanned": false,
    "exam_date": null
@@ -11325,7 +12699,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/4_2425_sparql_blackboard.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/4_2425_sparql_blackboard.md",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 9389,
    "scanned": false,
    "exam_date": null
@@ -11333,7 +12707,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/5_2324_rdfs_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/5_2324_rdfs_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 1386,
    "scanned": false,
    "exam_date": "2023-05-24"
@@ -11341,7 +12715,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/5_2425_rdfs_blackboard.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/5_2425_rdfs_blackboard.md",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 4746,
    "scanned": false,
    "exam_date": "2027-05-25"
@@ -11349,7 +12723,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2324_dl_blackboard.txt",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2324_dl_blackboard.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 6231,
    "scanned": false,
    "exam_date": null
@@ -11357,7 +12731,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2425_dl_blackboard-2.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2425_dl_blackboard-2.md",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 2673,
    "scanned": false,
    "exam_date": null
@@ -11365,7 +12739,7 @@
   {
    "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2425_dl_blackboard.md",
    "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/KRR2-509480-10845-2025/7_2425_dl_blackboard.md",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 10936,
    "scanned": false,
    "exam_date": null
@@ -11377,6 +12751,118 @@
    "chars": 1168,
    "scanned": false,
    "exam_date": "2022-06-01"
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/01_Introduction.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/01_Introduction.md",
+   "role": "NOTES",
+   "chars": 517,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/02_Exercises.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/02_Exercises.md",
+   "role": "NOTES",
+   "chars": 460,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/02_Ontology.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/02_Ontology.md",
+   "role": "NOTES",
+   "chars": 809,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/03_Exercise1.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/03_Exercise1.md",
+   "role": "NOTES",
+   "chars": 713,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/04_Exercise2.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/04_Exercise2.md",
+   "role": "NOTES",
+   "chars": 826,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/05_Exercise3.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/05_Exercise3.md",
+   "role": "NOTES",
+   "chars": 791,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/06_Exercise4.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/06_Exercise4.md",
+   "role": "NOTES",
+   "chars": 1370,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/07_Phenotypes.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/07_Phenotypes.md",
+   "role": "NOTES",
+   "chars": 772,
+   "scanned": false,
+   "exam_date": "2016-09-01"
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/README.md",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/README.md",
+   "role": "NOTES",
+   "chars": 4332,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/entries-to-add.txt",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/entries-to-add.txt",
+   "role": "NOTES",
+   "chars": 1548,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/header.txt",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/header.txt",
+   "role": "NOTES",
+   "chars": 1215,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/stress-test.py",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/stress-test.py",
+   "role": "NOTES",
+   "chars": 2016,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/test.txt",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/test.txt",
+   "role": "NOTES",
+   "chars": 5,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/tuto-queries-draft.txt",
+   "text": "raw/509478-KNOWLEDGE-REPRESENTATION-AND-REASONING/_unzipped/calipho-sib-sparql-playground-f4da99a/tuto-queries-draft.txt",
+   "role": "NOTES",
+   "chars": 15907,
+   "scanned": false,
+   "exam_date": null
   }
  ],
  "509481": [
@@ -18269,6 +19755,14 @@
    "chars": 1235,
    "scanned": false,
    "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_unzipped/solutions-cruise-control/solutions_cruise_control.ipynb",
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_unzipped/solutions-cruise-control/solutions_cruise_control.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 117418,
+   "scanned": false,
+   "exam_date": null
   }
  ],
  "509488": [
@@ -20814,6 +22308,14 @@
    "chars": 14761,
    "scanned": false,
    "exam_date": null
+  },
+  {
+   "path": "raw/509495-DATA-MINING-AND-KNOWLEDGE-EXTRACTION/_unzipped/6d-Python-Tutorial/6d. Python Tutorial.py",
+   "text": "raw/509495-DATA-MINING-AND-KNOWLEDGE-EXTRACTION/_unzipped/6d-Python-Tutorial/6d. Python Tutorial.py",
+   "role": "NOTES",
+   "chars": 6762,
+   "scanned": false,
+   "exam_date": null
   }
  ],
  "509498": [
@@ -20962,7 +22464,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 1 2026 03 06.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 1 2026 03 06.txt",
-   "role": "PAST_PAPER",
+   "role": "SLIDES",
    "chars": 45370,
    "scanned": false,
    "exam_date": null
@@ -20972,7 +22474,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 2 2026 03 13 A.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 2 2026 03 13 A.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 33382,
    "scanned": false,
    "exam_date": null
@@ -20992,7 +22494,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 4 10 04 2026.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 4 10 04 2026.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 58764,
    "scanned": false,
    "exam_date": null
@@ -21002,7 +22504,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 5 24 04 2026.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 5 24 04 2026.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 38885,
    "scanned": false,
    "exam_date": null
@@ -21012,7 +22514,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 6 08 05 2026.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 6 08 05 2026.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 43698,
    "scanned": false,
    "exam_date": null
@@ -21022,7 +22524,7 @@
    "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/AI-for-C-amp-M-509498-10589-2025/Lesson 7 15 05 2026.pdf",
    "converted": false,
    "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/AI-for-C-amp-M-509498-10589-2025/Lesson 7 15 05 2026.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 36962,
    "scanned": false,
    "exam_date": null
@@ -21036,6 +22538,16 @@
    "chars": 40975,
    "scanned": false,
    "exam_date": "2026-05-29"
+  },
+  {
+   "path": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_converted/Online Retail.pdf",
+   "original": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_unzipped/Online-Retail-xlsx/Online Retail.xlsx",
+   "converted": true,
+   "text": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_text/_converted/Online Retail.txt",
+   "role": "NOTES",
+   "chars": 45667789,
+   "scanned": false,
+   "exam_date": null
   },
   {
    "path": "raw/509498-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATIO/_converted/data.pdf",
@@ -21800,7 +23312,7 @@
    "original": "raw/509536-ITALIAN-LANGUAGE-FOR-FOREIGN-STUDENTS/ITALIAN-LANG-509536-2023/ITALIAN LANGUAGE_1_08.03.pdf",
    "converted": false,
    "text": "raw/509536-ITALIAN-LANGUAGE-FOR-FOREIGN-STUDENTS/_text/ITALIAN-LANG-509536-2023/ITALIAN LANGUAGE_1_08.03.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 22009,
    "scanned": false,
    "exam_date": null
@@ -21820,7 +23332,7 @@
    "original": "raw/509536-ITALIAN-LANGUAGE-FOR-FOREIGN-STUDENTS/ITALIAN-LANG-509536-2023/ITALIAN LANGUAGE_2_15.03.pdf",
    "converted": false,
    "text": "raw/509536-ITALIAN-LANGUAGE-FOR-FOREIGN-STUDENTS/_text/ITALIAN-LANG-509536-2023/ITALIAN LANGUAGE_2_15.03.txt",
-   "role": "PAST_PAPER",
+   "role": "NOTES",
    "chars": 12402,
    "scanned": false,
    "exam_date": null
@@ -23872,6 +25384,142 @@
    "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/queries.csv",
    "role": "NOTES",
    "chars": 63378,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/01_Solution_WEB_Scraping.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/01_Solution_WEB_Scraping.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 96205,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/01_WEB_Scraping.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/01_WEB_Scraping.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/test_RE.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/01-notebooks/test_RE.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Bluesky_atproto.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Bluesky_atproto.ipynb",
+   "role": "NOTES",
+   "chars": 94557,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Excercises_Bluesky.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Excercises_Bluesky.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Excercises_Reddit.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Excercises_Reddit.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Reddit_PRAW.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/02-notebooks/02_Reddit_PRAW.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Examples_Bluesky.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Examples_Bluesky.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Examples_solutions_Bluesky.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Examples_solutions_Bluesky.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Exercise_Bluesky.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/03_SNA_Exercise_Bluesky.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/edges.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/edges.csv",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/nodes.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/03-notebooks/nodes.csv",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/04-notebooks/04_CD_Exercises.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/04-notebooks/04_CD_Exercises.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/04-notebooks/04_Community_Detection.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/04-notebooks/04_Community_Detection.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/06-NER-ipynb/06_NER.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/06-NER-ipynb/06_NER.ipynb",
+   "role": "NOTES",
+   "chars": 169698,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/2-Social-Analysis-and-Search-Exercises-ipynb/2_Social_Analysis_and_Search_Exercises.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/2-Social-Analysis-and-Search-Exercises-ipynb/2_Social_Analysis_and_Search_Exercises.ipynb",
+   "role": "NOTES",
+   "chars": 21887,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/2-Social-Analysis-and-Search-Solutions-ipynb/2_Social_Analysis_and_Search_Solutions.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_unzipped/2-Social-Analysis-and-Search-Solutions-ipynb/2_Social_Analysis_and_Search_Solutions.ipynb",
+   "role": "SOLUTIONS",
+   "chars": 200000,
    "scanned": false,
    "exam_date": null
   }
