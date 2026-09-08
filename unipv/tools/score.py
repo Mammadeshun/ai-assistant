@@ -57,6 +57,18 @@ FORMAT_PATTERNS = [
 ]
 
 
+# Language-switcher and messaging-drawer copies of the same page. The crawler
+# followed them before it knew better; they are duplicates, not content.
+CHROME_PAGE = re.compile(
+    r"(English-en|Italiano-it|Deutsch-de|Fran-ais-fr|Espa-ol|Portugu|Contacts?|"
+    r"Contatti|Kontakte|Contactos|Requests-0|Anfragen-0|Pedidos-0|Petic|"
+    r"conte-do-principal|contenu-principal|Passer-au|Ir-para|Saltar|Zum-Haupt|"
+    r"Mostrar-coment|Visualizza-comment|Show-comment)", re.I)
+
+
+def is_chrome(path) -> bool:
+    return bool(CHROME_PAGE.search(path.name))
+
 def load(name: str):
     path = DATA / name
     return json.loads(path.read_text()) if path.exists() else None
@@ -105,7 +117,9 @@ def course_text(code: str) -> str:
     if folder is None:
         return ""
     parts = []
-    for page in list(folder.rglob("_course_text.html")) + list(folder.rglob("_pages/*.html")):
+    pages = list(folder.rglob("_course_text.html")) + [
+        p for p in folder.rglob("_pages/*.html") if not is_chrome(p)]
+    for page in pages:
         try:
             raw = page.read_text(errors="replace")
         except OSError:

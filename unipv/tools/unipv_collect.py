@@ -437,6 +437,11 @@ def collect_course(handle, course: dict, folder: Path) -> dict:
                 stats["bytes"] += size if got else 0
                 continue
 
+            # Moodle renders a language switcher and a contacts/messaging
+            # drawer on every page, and following them produced 7873 duplicate
+            # renderings of the same pages in eight languages.
+            if re.search(r"[?&]lang=|/message/|/user/contactsis|#", href):
+                continue
             module = re.search(r"/mod/(\w+)/view\.php", href)
             if not module:
                 continue
