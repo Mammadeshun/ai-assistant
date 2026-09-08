@@ -59,11 +59,12 @@ MAX_FIGURES_PER_DOC = 80    # a runaway document should not swamp the index
 # honest and the text settles the rest.
 PATTERNS = {
     "SOLUTIONS": r"soluzion|solution|svolgiment|answer.?key|risolt|con.?sol|_sol\b|risposte",
+    # No bare date pattern here: /\d{1,2}[-_ .]\d{1,2}[-_ .]\d{2,4}/ matches the
+    # lecture numbering in "Prog2025_26_21b_inheritance_double" as though "25 26
+    # 21" were a date, which filed 154 slide decks as exam papers. Dates are
+    # handled by _dated_paper() below, which validates them.
     "PAST_PAPER": (r"appell|prova.?d.?esame|prova.?scritt|compito|esame\d*\b|exam\d*\b|"
-                   r"\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|gen|"
-                   r"mag|giu|lug|ago|set|ott|dic)[a-z]*\s+20\d\d|"
-                   r"esame.?di|past.?paper|mock|simulazione|testo.?esame|tema.?d.?esame|"
-                   r"\d{1,2}[-_ .]\d{1,2}[-_ .]\d{2,4}"),
+                   r"esame.?di|past.?paper|mock|simulazione|testo.?esame|tema.?d.?esame"),
     "ASSIGNMENT": r"assignment|homework|progett|project|consegna|rubric|elaborato|task\d|lab\d",
     "ADMIN": (r"programm|syllabus|regolament|calendari|orari|avvis|modalit|"
               r"info.?cors|presentazione.?cors|bibliograf"),
@@ -71,6 +72,11 @@ PATTERNS = {
     "SLIDES": r"slide|lezione|lecture|lez\d|deck|part[e]?\d|modul|week\d|unit\d|cap\d",
 }
 ORDER = ["SOLUTIONS", "PAST_PAPER", "ASSIGNMENT", "ADMIN", "NOTES", "SLIDES"]
+# Course material numbered by year and lecture: Prog2025_26_21b, Lecture 4,
+# Lez3, lab07. Never a paper on the strength of a date in the name.
+LECTURE = re.compile(
+    r"\bprog\d{4}|\blect(?:ure)?\s*\d|\blez(?:ione)?\s*\d|\blab\s*\d|"
+    r"\bslide|\bchapter\s*\d|\bcapitolo\s*\d|\bunit\s*\d|\bweek\s*\d", re.I)
 OCR_ROLES = {"PAST_PAPER", "SOLUTIONS"}
 
 DATE = re.compile(r"(\d{1,2})[-_ ./](\d{1,2})[-_ ./](\d{2,4})")
@@ -145,12 +151,16 @@ def classify(path: Path, head: str) -> str:
     name = _words(path.name.lower())
     parents = " ".join(_words(p.lower()) for p in path.parts[-3:-1])
     haystack = f"{parents} {name}"
-    for role in ORDER:
+    if re.search(PATTERNS["SOLUTIONS"], haystack):
+        return "SOLUTIONS"
+    if re.search(PATTERNS["PAST_PAPER"], haystack):
+        return "PAST_PAPER"
+    # A filename that carries a real, validated date and is not lecture
+    # material: '31 1 22A.pdf', '2023 19 September 2023.pdf'.
+    if exam_date(path, "") and not LECTURE.search(haystack):
+        return "PAST_PAPER"
+    for role in ("ASSIGNMENT", "ADMIN", "NOTES", "SLIDES"):
         if re.search(PATTERNS[role], haystack):
-            # A paper filed beside its answers is still a paper unless it says
-            # otherwise; check the stronger signal first.
-            if role == "PAST_PAPER" and re.search(PATTERNS["SOLUTIONS"], haystack):
-                return "SOLUTIONS"
             return role
     front = head[:1500].lower()
     if re.search(PATTERNS["SOLUTIONS"], front):
