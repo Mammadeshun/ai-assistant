@@ -221,6 +221,16 @@
    "exam_date": "2024-02-21"
   },
   {
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_29_January_2024.pdf",
+   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_29_January_2024.pdf",
+   "converted": false,
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2024_29_January_2024.txt",
+   "role": "PAST_PAPER",
+   "chars": 4940,
+   "scanned": false,
+   "exam_date": "2024-01-29"
+  },
+  {
    "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_JULY24.pdf",
    "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2024_exam_test_JULY24.pdf",
    "converted": false,
@@ -261,24 +271,14 @@
    "exam_date": "2024-09-01"
   },
   {
-   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_18SEPT_2025.pdf",
-   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_18SEPT_2025.pdf",
+   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_FEB25.pdf",
+   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_FEB25.pdf",
    "converted": false,
-   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2025_exam_18SEPT_2025.txt",
+   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2025_exam_test_FEB25.txt",
    "role": "PAST_PAPER",
-   "chars": 3732,
+   "chars": 3525,
    "scanned": false,
-   "exam_date": "2025-09-18"
-  },
-  {
-   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_02SEPT_25.pdf",
-   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_02SEPT_25.pdf",
-   "converted": false,
-   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2025_exam_test_02SEPT_25.txt",
-   "role": "PAST_PAPER",
-   "chars": 3555,
-   "scanned": false,
-   "exam_date": "2025-09-02"
+   "exam_date": "2025-02-01"
   },
   {
    "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JAN25.pdf",
@@ -289,36 +289,6 @@
    "chars": 3347,
    "scanned": false,
    "exam_date": "2025-01-01"
-  },
-  {
-   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JULY_25.pdf",
-   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JULY_25.pdf",
-   "converted": false,
-   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2025_exam_test_JULY_25.txt",
-   "role": "PAST_PAPER",
-   "chars": 3220,
-   "scanned": false,
-   "exam_date": "2025-07-01"
-  },
-  {
-   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JUNE_25.pdf",
-   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2025_exam_test_JUNE_25.pdf",
-   "converted": false,
-   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2025_exam_test_JUNE_25.txt",
-   "role": "PAST_PAPER",
-   "chars": 3162,
-   "scanned": false,
-   "exam_date": "2025-06-01"
-  },
-  {
-   "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2026_exam_test_FEB.pdf",
-   "original": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_student/2026_exam_test_FEB.pdf",
-   "converted": false,
-   "text": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/_text/_student/2026_exam_test_FEB.txt",
-   "role": "PAST_PAPER",
-   "chars": 3793,
-   "scanned": false,
-   "exam_date": "2026-02-01"
   },
   {
    "path": "raw/509486-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWO/ML-amp-DL-2025/1661-0.txt",
@@ -11397,6 +11367,4275 @@
    "chars": 1168,
    "scanned": false,
    "exam_date": "2022-06-01"
+  }
+ ],
+ "509481": [
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_21-22_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_21-22_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2022/Calculus_21-22_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2241,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_22-23_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_22-23_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2022/Calculus_22-23_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2249,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_progr_22-23.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Calculus_progr_22-23.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2022/Calculus_progr_22-23.txt",
+   "role": "ADMIN",
+   "chars": 5646,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Schedule-academic-year-21-22.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2022/Schedule-academic-year-21-22.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2022/Schedule-academic-year-21-22.txt",
+   "role": "NOTES",
+   "chars": 5553,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus-23-24-Theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus-23-24-Theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus-23-24-Theory.txt",
+   "role": "NOTES",
+   "chars": 1907,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus1-July2024-solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus1-July2024-solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus1-July2024-solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 3446,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus1-June2024-Exam-Solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus1-June2024-Exam-Solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus1-June2024-Exam-Solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 10003,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_21-22_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_21-22_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_21-22_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2241,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_22-23_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_22-23_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_22-23_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2249,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-a.txt",
+   "role": "SLIDES",
+   "chars": 1996,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-b.txt",
+   "role": "SLIDES",
+   "chars": 2005,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-c.txt",
+   "role": "SLIDES",
+   "chars": 2000,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-July17th-d.txt",
+   "role": "SLIDES",
+   "chars": 2006,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-b.txt",
+   "role": "SLIDES",
+   "chars": 1615,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-Jun25th-c.txt",
+   "role": "SLIDES",
+   "chars": 1653,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-b.txt",
+   "role": "SLIDES",
+   "chars": 1580,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-c.txt",
+   "role": "SLIDES",
+   "chars": 1850,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb21-d.txt",
+   "role": "SLIDES",
+   "chars": 1673,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-b.txt",
+   "role": "SLIDES",
+   "chars": 1785,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-c.txt",
+   "role": "SLIDES",
+   "chars": 1803,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-feb7th-d.txt",
+   "role": "SLIDES",
+   "chars": 1784,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25-a.txt",
+   "role": "SLIDES",
+   "chars": 1660,
+   "scanned": false,
+   "exam_date": "2025-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-2024-jun25th-d.txt",
+   "role": "SLIDES",
+   "chars": 1619,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-Sample2024.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part1-Sample2024.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part1-Sample2024.txt",
+   "role": "SLIDES",
+   "chars": 1519,
+   "scanned": false,
+   "exam_date": "2024-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part2_23-24_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_part2_23-24_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_part2_23-24_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1175,
+   "scanned": false,
+   "exam_date": "2023-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_progr_part2_23-24.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Calculus_progr_part2_23-24.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Calculus_progr_part2_23-24.txt",
+   "role": "PAST_PAPER",
+   "chars": 3154,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions1.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions1.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions1.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions2.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions2.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions2.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions3.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions3.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions3.txt",
+   "role": "NOTES",
+   "chars": 43,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions4.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions4.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions4.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions5.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions5.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions5.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions6.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions6.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions6.txt",
+   "role": "NOTES",
+   "chars": 40,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions7.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions7.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions7.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions8.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Questions8.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Questions8.txt",
+   "role": "NOTES",
+   "chars": 42,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Schedule-academic-year-21-22.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2023/Schedule-academic-year-21-22.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2023/Schedule-academic-year-21-22.txt",
+   "role": "NOTES",
+   "chars": 5553,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-23-24-Theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-23-24-Theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-23-24-Theory.txt",
+   "role": "NOTES",
+   "chars": 1907,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-1.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-1.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-1.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-10.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-10.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-10.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-11.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-11.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-11.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-12.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-12.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-12.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-13.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-13.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-13.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-14.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-14.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-14.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-15.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-15.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-15.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-2.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-2.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-2.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-3.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-3.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-3.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-4.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-4.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-4.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-5.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-5.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-5.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-6.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-6.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-6.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-7.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-7.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-7.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-8.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-8.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-8.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-9.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-9.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2024-Slides-9.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2025-SomeSolutions.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus-part1-2025-SomeSolutions.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus-part1-2025-SomeSolutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 12469,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus1-July2024-solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus1-July2024-solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus1-July2024-solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 3446,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus1-June2024-Exam-Solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus1-June2024-Exam-Solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus1-June2024-Exam-Solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 10003,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus2024-Slides-Exercises.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus2024-Slides-Exercises.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus2024-Slides-Exercises.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus2024-Slides-Theoretical.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus2024-Slides-Theoretical.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus2024-Slides-Theoretical.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_21-22_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_21-22_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_21-22_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2241,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_22-23_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_22-23_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_22-23_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2249,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-a.txt",
+   "role": "SLIDES",
+   "chars": 1996,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-b.txt",
+   "role": "SLIDES",
+   "chars": 2005,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-c.txt",
+   "role": "SLIDES",
+   "chars": 2000,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-July17th-d.txt",
+   "role": "SLIDES",
+   "chars": 2006,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-b.txt",
+   "role": "SLIDES",
+   "chars": 1615,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-Jun25th-c.txt",
+   "role": "SLIDES",
+   "chars": 1653,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-b.txt",
+   "role": "SLIDES",
+   "chars": 1580,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-c.txt",
+   "role": "SLIDES",
+   "chars": 1850,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb21-d.txt",
+   "role": "SLIDES",
+   "chars": 1673,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-b.txt",
+   "role": "SLIDES",
+   "chars": 1785,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-c.txt",
+   "role": "SLIDES",
+   "chars": 1803,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-feb7th-d.txt",
+   "role": "SLIDES",
+   "chars": 1784,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25-a.txt",
+   "role": "SLIDES",
+   "chars": 1660,
+   "scanned": false,
+   "exam_date": "2025-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-jun25th-d.txt",
+   "role": "SLIDES",
+   "chars": 1619,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-a.txt",
+   "role": "SLIDES",
+   "chars": 1973,
+   "scanned": false,
+   "exam_date": "2026-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-26-b.txt",
+   "role": "SLIDES",
+   "chars": 1997,
+   "scanned": false,
+   "exam_date": "2026-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-a.txt",
+   "role": "SLIDES",
+   "chars": 2160,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2024-sept-b.txt",
+   "role": "SLIDES",
+   "chars": 2148,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-a.txt",
+   "role": "SLIDES",
+   "chars": 2411,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-b.txt",
+   "role": "SLIDES",
+   "chars": 2520,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-c.txt",
+   "role": "SLIDES",
+   "chars": 2535,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-July-d.txt",
+   "role": "SLIDES",
+   "chars": 2464,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-a.txt",
+   "role": "SLIDES",
+   "chars": 2625,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-b.txt",
+   "role": "SLIDES",
+   "chars": 2657,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-c.txt",
+   "role": "SLIDES",
+   "chars": 2539,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-June-23-d.txt",
+   "role": "SLIDES",
+   "chars": 2663,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-a.txt",
+   "role": "SLIDES",
+   "chars": 2512,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-b.txt",
+   "role": "SLIDES",
+   "chars": 2603,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-c.txt",
+   "role": "SLIDES",
+   "chars": 2591,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-19-d.txt",
+   "role": "SLIDES",
+   "chars": 2742,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-a.txt",
+   "role": "SLIDES",
+   "chars": 2255,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-b.txt",
+   "role": "SLIDES",
+   "chars": 2279,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-c.txt",
+   "role": "SLIDES",
+   "chars": 2163,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-feb-5-d.txt",
+   "role": "SLIDES",
+   "chars": 2155,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-a.txt",
+   "role": "SLIDES",
+   "chars": 2086,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-b.txt",
+   "role": "SLIDES",
+   "chars": 2056,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-c.txt",
+   "role": "SLIDES",
+   "chars": 2081,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-2025-sept11th-d.txt",
+   "role": "SLIDES",
+   "chars": 1957,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-Sample2024.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-Sample2024.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-Sample2024.txt",
+   "role": "SLIDES",
+   "chars": 1519,
+   "scanned": false,
+   "exam_date": "2024-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025-Solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025-Solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025-Solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 5622,
+   "scanned": false,
+   "exam_date": "2025-01-16"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part1-SampleTest2025.txt",
+   "role": "SLIDES",
+   "chars": 2078,
+   "scanned": false,
+   "exam_date": "2025-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part2_23-24_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part2_23-24_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part2_23-24_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1175,
+   "scanned": false,
+   "exam_date": "2023-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part2_24-25_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_part2_24-25_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_part2_24-25_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1097,
+   "scanned": false,
+   "exam_date": "2024-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_progr_part2_24-25.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Calculus_progr_part2_24-25.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Calculus_progr_part2_24-25.txt",
+   "role": "PAST_PAPER",
+   "chars": 2942,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions1.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions1.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions1.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions2.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions2.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions2.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions3.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions3.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions3.txt",
+   "role": "NOTES",
+   "chars": 43,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions4.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions4.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions4.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions5.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions5.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions5.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions6.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions6.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions6.txt",
+   "role": "NOTES",
+   "chars": 40,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions7.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions7.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions7.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions8.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions8.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions8.txt",
+   "role": "NOTES",
+   "chars": 42,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions9.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10589-2024/Questions9.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10589-2024/Questions9.txt",
+   "role": "NOTES",
+   "chars": 80,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/2025-Slides-Series.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/2025-Slides-Series.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/2025-Slides-Series.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-23-24-Theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-23-24-Theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-23-24-Theory.txt",
+   "role": "NOTES",
+   "chars": 1907,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-1.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-1.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-1.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-10.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-10.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-10.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-11.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-11.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-11.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-12.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-12.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-12.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-13.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-13.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-13.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-14.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-14.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-14.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-15.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-15.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-15.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-2.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-2.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-2.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-3.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-3.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-3.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-4.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-4.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-4.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-5.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-5.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-5.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-6.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-6.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-6.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-7.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-7.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-7.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-8.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-8.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-8.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-9.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-9.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2024-Slides-9.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2025-Slides-DiffFcns.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2025-Slides-DiffFcns.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2025-Slides-DiffFcns.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2025-SomeSolutions.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2025-SomeSolutions.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2025-SomeSolutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 12469,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2026-Feb-solutions.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus-part1-2026-Feb-solutions.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus-part1-2026-Feb-solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 8912,
+   "scanned": true,
+   "exam_date": "2026-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus1-July2024-solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus1-July2024-solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus1-July2024-solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 3446,
+   "scanned": true,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus1-June2024-Exam-Solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus1-June2024-Exam-Solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus1-June2024-Exam-Solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 10003,
+   "scanned": true,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus2024-Slides-Exercises.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus2024-Slides-Exercises.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus2024-Slides-Exercises.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus2024-Slides-Theoretical.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus2024-Slides-Theoretical.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus2024-Slides-Theoretical.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_21-22_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_21-22_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_21-22_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2241,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_22-23_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_22-23_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_22-23_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 2249,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-a.txt",
+   "role": "SLIDES",
+   "chars": 1996,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-b.txt",
+   "role": "SLIDES",
+   "chars": 2005,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-c.txt",
+   "role": "SLIDES",
+   "chars": 2000,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-July17th-d.txt",
+   "role": "SLIDES",
+   "chars": 2006,
+   "scanned": false,
+   "exam_date": "2024-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-b.txt",
+   "role": "SLIDES",
+   "chars": 1615,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-Jun25th-c.txt",
+   "role": "SLIDES",
+   "chars": 1653,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-b.txt",
+   "role": "SLIDES",
+   "chars": 1580,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-c.txt",
+   "role": "SLIDES",
+   "chars": 1850,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb21-d.txt",
+   "role": "SLIDES",
+   "chars": 1673,
+   "scanned": false,
+   "exam_date": "2021-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-a.txt",
+   "role": "SLIDES",
+   "chars": 1811,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-b.txt",
+   "role": "SLIDES",
+   "chars": 1785,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-c.txt",
+   "role": "SLIDES",
+   "chars": 1803,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-feb7th-d.txt",
+   "role": "SLIDES",
+   "chars": 1784,
+   "scanned": false,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25-a.txt",
+   "role": "SLIDES",
+   "chars": 1660,
+   "scanned": false,
+   "exam_date": "2025-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-jun25th-d.txt",
+   "role": "SLIDES",
+   "chars": 1619,
+   "scanned": false,
+   "exam_date": "2024-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-a.txt",
+   "role": "SLIDES",
+   "chars": 1973,
+   "scanned": false,
+   "exam_date": "2026-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-26-b.txt",
+   "role": "SLIDES",
+   "chars": 1997,
+   "scanned": false,
+   "exam_date": "2026-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-a.txt",
+   "role": "SLIDES",
+   "chars": 2160,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2024-sept-b.txt",
+   "role": "SLIDES",
+   "chars": 2148,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-a.txt",
+   "role": "SLIDES",
+   "chars": 2411,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-b.txt",
+   "role": "SLIDES",
+   "chars": 2520,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-c.txt",
+   "role": "SLIDES",
+   "chars": 2535,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-July-d.txt",
+   "role": "SLIDES",
+   "chars": 2464,
+   "scanned": false,
+   "exam_date": "2025-07-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-a.txt",
+   "role": "SLIDES",
+   "chars": 2625,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-b.txt",
+   "role": "SLIDES",
+   "chars": 2657,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-c.txt",
+   "role": "SLIDES",
+   "chars": 2539,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-June-23-d.txt",
+   "role": "SLIDES",
+   "chars": 2663,
+   "scanned": false,
+   "exam_date": "2023-06-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-a.txt",
+   "role": "SLIDES",
+   "chars": 2512,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-b.txt",
+   "role": "SLIDES",
+   "chars": 2603,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-c.txt",
+   "role": "SLIDES",
+   "chars": 2591,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-19-d.txt",
+   "role": "SLIDES",
+   "chars": 2742,
+   "scanned": false,
+   "exam_date": "2019-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-a.txt",
+   "role": "SLIDES",
+   "chars": 2255,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-b.txt",
+   "role": "SLIDES",
+   "chars": 2279,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-c.txt",
+   "role": "SLIDES",
+   "chars": 2163,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-feb-5-d.txt",
+   "role": "SLIDES",
+   "chars": 2155,
+   "scanned": false,
+   "exam_date": "2025-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-a.txt",
+   "role": "SLIDES",
+   "chars": 2086,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-b.txt",
+   "role": "SLIDES",
+   "chars": 2056,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-c.txt",
+   "role": "SLIDES",
+   "chars": 2081,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2025-sept11th-d.txt",
+   "role": "SLIDES",
+   "chars": 1957,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-a.txt",
+   "role": "SLIDES",
+   "chars": 2315,
+   "scanned": false,
+   "exam_date": "2018-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-b.txt",
+   "role": "SLIDES",
+   "chars": 2317,
+   "scanned": false,
+   "exam_date": "2018-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-c.txt",
+   "role": "SLIDES",
+   "chars": 2314,
+   "scanned": false,
+   "exam_date": "2018-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-18-d.txt",
+   "role": "SLIDES",
+   "chars": 2315,
+   "scanned": false,
+   "exam_date": "2018-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-a.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-a.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-a.txt",
+   "role": "SLIDES",
+   "chars": 2302,
+   "scanned": false,
+   "exam_date": "2026-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-b.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-b.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-b.txt",
+   "role": "SLIDES",
+   "chars": 2377,
+   "scanned": false,
+   "exam_date": "2026-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-c.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-c.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-c.txt",
+   "role": "SLIDES",
+   "chars": 2330,
+   "scanned": false,
+   "exam_date": "2026-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-d.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-d.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-2026-feb-4-d.txt",
+   "role": "SLIDES",
+   "chars": 2317,
+   "scanned": false,
+   "exam_date": "2026-02-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-Sample2024.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-Sample2024.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-Sample2024.txt",
+   "role": "SLIDES",
+   "chars": 1519,
+   "scanned": false,
+   "exam_date": "2024-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025-Solution.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025-Solution.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025-Solution.txt",
+   "role": "SOLUTIONS",
+   "chars": 5622,
+   "scanned": true,
+   "exam_date": "2025-01-16"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part1-SampleTest2025.txt",
+   "role": "SLIDES",
+   "chars": 2078,
+   "scanned": false,
+   "exam_date": "2025-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_23-24_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_23-24_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part2_23-24_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1175,
+   "scanned": false,
+   "exam_date": "2023-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_24-25_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_24-25_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part2_24-25_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1097,
+   "scanned": false,
+   "exam_date": "2024-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_25-26_theory.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_part2_25-26_theory.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_part2_25-26_theory.txt",
+   "role": "PAST_PAPER",
+   "chars": 1097,
+   "scanned": false,
+   "exam_date": "2025-01-01"
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_progr_part2_25-26.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Calculus_progr_part2_25-26.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Calculus_progr_part2_25-26.txt",
+   "role": "PAST_PAPER",
+   "chars": 2942,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions1.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions1.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions1.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions2.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions2.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions2.txt",
+   "role": "NOTES",
+   "chars": 45,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions3.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions3.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions3.txt",
+   "role": "NOTES",
+   "chars": 43,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions4.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions4.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions4.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions5.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions5.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions5.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions6.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions6.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions6.txt",
+   "role": "NOTES",
+   "chars": 40,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions7.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions7.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions7.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions8.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions8.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions8.txt",
+   "role": "NOTES",
+   "chars": 42,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions9.pdf",
+   "original": "raw/509481-CALCULUS/CALCULUS-509481-10845-2025/Questions9.pdf",
+   "converted": false,
+   "text": "raw/509481-CALCULUS/_text/CALCULUS-509481-10845-2025/Questions9.txt",
+   "role": "NOTES",
+   "chars": 80,
+   "scanned": true,
+   "exam_date": null
+  }
+ ],
+ "509483": [
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/31-1-22A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/31-1-22A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/31-1-22A.txt",
+   "role": "PAST_PAPER",
+   "chars": 2872,
+   "scanned": false,
+   "exam_date": "2022-01-31"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.1.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.1.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs3.1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.2.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.2.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs3.2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.3.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.3.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs3.3.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.4.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs3.4.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs3.4.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs7.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs7.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs7.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs8.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AEs8.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AEs8.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AI_24.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AI_24.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AI_24.txt",
+   "role": "NOTES",
+   "chars": 297657,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AI_24English.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/AI_24English.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AI_24English.txt",
+   "role": "NOTES",
+   "chars": 287546,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/B31-1-22.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/B31-1-22.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/B31-1-22.txt",
+   "role": "PAST_PAPER",
+   "chars": 2899,
+   "scanned": false,
+   "exam_date": "2022-01-31"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/C31-1-22.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/C31-1-22.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/C31-1-22.txt",
+   "role": "PAST_PAPER",
+   "chars": 2962,
+   "scanned": false,
+   "exam_date": "2022-01-31"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CC.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC_ex.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC_ex.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CC_ex.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC_further_example.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CC_further_example.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CC_further_example.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_I.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_I.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CDCL_I.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_IDL_.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_IDL_.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CDCL_IDL_.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_II.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_II.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CDCL_II.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_III.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_III.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CDCL_III.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_T__Es7-8.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/CDCL_T__Es7-8.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/CDCL_T__Es7-8.txt",
+   "role": "NOTES",
+   "chars": 440,
+   "scanned": false,
+   "exam_date": "2023-01-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/D31-1-22.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/D31-1-22.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/D31-1-22.txt",
+   "role": "PAST_PAPER",
+   "chars": 3036,
+   "scanned": false,
+   "exam_date": "2022-01-31"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/E1.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/E1.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/E1.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/E2.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/E2.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/E2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Fourier-Motzkin.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Fourier-Motzkin.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/Fourier-Motzkin.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/IDL.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/IDL.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/IDL.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/NO.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/NO.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/NO.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_1.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_1.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/Res_1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_2.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_2.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/Res_2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_3.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_3.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/Res_3.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_4.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/Res_4.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/Res_4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/T-Propagate.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/T-Propagate.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/T-Propagate.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/array.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/array.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/array.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/barbers.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/barbers.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/barbers.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/cai.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/cai.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/cai.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/convex.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/convex.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/convex.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/essential_z3_syntax.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/essential_z3_syntax.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/essential_z3_syntax.txt",
+   "role": "NOTES",
+   "chars": 8184,
+   "scanned": false,
+   "exam_date": "2025-01-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/further.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/further.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/further.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/reduced-pen-and-paper.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/reduced-pen-and-paper.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/reduced-pen-and-paper.txt",
+   "role": "SOLUTIONS",
+   "chars": 1988,
+   "scanned": false,
+   "exam_date": "2021-12-17"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/syll1.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/syll1.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/syll1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/syll2.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/syll2.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/syll2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/taut1.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/taut1.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/taut1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/taut_0.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/taut_0.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/taut_0.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMA.txt",
+   "role": "NOTES",
+   "chars": 401,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMB.txt",
+   "role": "NOTES",
+   "chars": 438,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/NO1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/NO1.txt",
+   "role": "SOLUTIONS",
+   "chars": 2815,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/esCC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/esCC.txt",
+   "role": "SOLUTIONS",
+   "chars": 779,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/esIDL.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/esIDL.txt",
+   "role": "SOLUTIONS",
+   "chars": 609,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt",
+   "role": "SOLUTIONS",
+   "chars": 182,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1B.txt",
+   "role": "NOTES",
+   "chars": 250,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1C.txt",
+   "role": "NOTES",
+   "chars": 267,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1D.txt",
+   "role": "SOLUTIONS",
+   "chars": 290,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1_dimacs.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1_dimacs.txt",
+   "role": "NOTES",
+   "chars": 127,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1_smt2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1_smt2.txt",
+   "role": "NOTES",
+   "chars": 343,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1060,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1117,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1119,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1D.txt",
+   "role": "SOLUTIONS",
+   "chars": 1115,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2A.txt",
+   "role": "SOLUTIONS",
+   "chars": 840,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 753,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2C.txt",
+   "role": "SOLUTIONS",
+   "chars": 801,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2D.txt",
+   "role": "SOLUTIONS",
+   "chars": 579,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1087,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1090,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1106,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3D.txt",
+   "role": "SOLUTIONS",
+   "chars": 1175,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex_page59.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex_page59.txt",
+   "role": "SOLUTIONS",
+   "chars": 2061,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/feb23.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/feb23.txt",
+   "role": "SOLUTIONS",
+   "chars": 955,
+   "scanned": false,
+   "exam_date": "2023-02-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/installing_z3_macOS.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/installing_z3_macOS.txt",
+   "role": "NOTES",
+   "chars": 1546,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/jan22.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/jan22.txt",
+   "role": "SOLUTIONS",
+   "chars": 1060,
+   "scanned": false,
+   "exam_date": "2022-01-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/lug23.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/lug23.txt",
+   "role": "SOLUTIONS",
+   "chars": 954,
+   "scanned": false,
+   "exam_date": "2023-07-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansA.txt",
+   "role": "SOLUTIONS",
+   "chars": 841,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansB.txt",
+   "role": "SOLUTIONS",
+   "chars": 841,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansC.txt",
+   "role": "SOLUTIONS",
+   "chars": 843,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansD.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansD.txt",
+   "role": "SOLUTIONS",
+   "chars": 839,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyA.txt",
+   "role": "NOTES",
+   "chars": 894,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyB.txt",
+   "role": "NOTES",
+   "chars": 913,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyC.txt",
+   "role": "NOTES",
+   "chars": 864,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD.txt",
+   "role": "NOTES",
+   "chars": 981,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD_.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD_.txt",
+   "role": "NOTES",
+   "chars": 1264,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD_1_.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD_1_.txt",
+   "role": "NOTES",
+   "chars": 1210,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/sept23.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/sept23.txt",
+   "role": "NOTES",
+   "chars": 809,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/test.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/test.txt",
+   "role": "NOTES",
+   "chars": 89,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/z3_online.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/z3_online.txt",
+   "role": "NOTES",
+   "chars": 209,
+   "scanned": false,
+   "exam_date": null
+  }
+ ],
+ "509485": [
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/Art-509485-10589/AICP21_22 1.courseInformation.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/Art-509485-10589/AICP21_22 1.courseInformation.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/Art-509485-10589/AICP21_22 1.courseInformation.txt",
+   "role": "ADMIN",
+   "chars": 10687,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/Art-509485-10589/Oral exam topics.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/Art-509485-10589/Oral exam topics.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/Art-509485-10589/Oral exam topics.txt",
+   "role": "PAST_PAPER",
+   "chars": 1862,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 00.Introduction to course.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 00.Introduction to course.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 00.Introduction to course.txt",
+   "role": "PAST_PAPER",
+   "chars": 14669,
+   "scanned": false,
+   "exam_date": "2024-03-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 01.Chapter 1.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 01.Chapter 1.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 01.Chapter 1.txt",
+   "role": "PAST_PAPER",
+   "chars": 97976,
+   "scanned": false,
+   "exam_date": "2024-11-03"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 02.Chapter2.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 02.Chapter2.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 02.Chapter2.txt",
+   "role": "PAST_PAPER",
+   "chars": 148426,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 04.Chapter5.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 04.Chapter5.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 04.Chapter5.txt",
+   "role": "PAST_PAPER",
+   "chars": 81334,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 05.Chapter6.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 05.Chapter6.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 05.Chapter6.txt",
+   "role": "PAST_PAPER",
+   "chars": 175643,
+   "scanned": false,
+   "exam_date": "2024-08-05"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 06.Chapter8.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 06.Chapter8.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 06.Chapter8.txt",
+   "role": "PAST_PAPER",
+   "chars": 112175,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 Research paper howto.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/AICP23_24 Research paper howto.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/AICP23_24 Research paper howto.txt",
+   "role": "NOTES",
+   "chars": 10056,
+   "scanned": false,
+   "exam_date": "2024-07-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/Additional activities update.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/Additional activities update.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/Additional activities update.txt",
+   "role": "PAST_PAPER",
+   "chars": 616,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreLuglio24.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreLuglio24.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/FinalScoreLuglio24.txt",
+   "role": "NOTES",
+   "chars": 947,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreSept24A.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreSept24A.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/FinalScoreSept24A.txt",
+   "role": "NOTES",
+   "chars": 87,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreSept24b.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/FinalScoreSept24b.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/FinalScoreSept24b.txt",
+   "role": "NOTES",
+   "chars": 279,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/Final_score_june.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/Final_score_june.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/Final_score_june.txt",
+   "role": "NOTES",
+   "chars": 1961,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/quiz_scores.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/quiz_scores.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/quiz_scores.txt",
+   "role": "NOTES",
+   "chars": 2782,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/schemaLezioniMay25th.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2023/schemaLezioniMay25th.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2023/schemaLezioniMay25th.txt",
+   "role": "NOTES",
+   "chars": 1797,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 01.Chapter 1.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 01.Chapter 1.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 01.Chapter 1.txt",
+   "role": "PAST_PAPER",
+   "chars": 105178,
+   "scanned": false,
+   "exam_date": "2025-06-03"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 04.Chapter5.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 04.Chapter5.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 04.Chapter5.txt",
+   "role": "PAST_PAPER",
+   "chars": 81334,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 05.Chapter6.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 05.Chapter6.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 05.Chapter6.txt",
+   "role": "PAST_PAPER",
+   "chars": 175643,
+   "scanned": false,
+   "exam_date": "2024-08-05"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 06.Chapter8.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 06.Chapter8.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 06.Chapter8.txt",
+   "role": "PAST_PAPER",
+   "chars": 112175,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 07.Chapter10.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 07.Chapter10.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 07.Chapter10.txt",
+   "role": "PAST_PAPER",
+   "chars": 159221,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 Research paper howto.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP23_24 Research paper howto.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP23_24 Research paper howto.txt",
+   "role": "NOTES",
+   "chars": 10056,
+   "scanned": false,
+   "exam_date": "2024-07-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 00.Introduction to course.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 00.Introduction to course.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP24_25 00.Introduction to course.txt",
+   "role": "PAST_PAPER",
+   "chars": 14750,
+   "scanned": false,
+   "exam_date": "2024-03-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 02.Chapter2.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 02.Chapter2.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP24_25 02.Chapter2.txt",
+   "role": "PAST_PAPER",
+   "chars": 132315,
+   "scanned": false,
+   "exam_date": "2025-02-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 03.Chapter3.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/AICP24_25 03.Chapter3.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/AICP24_25 03.Chapter3.txt",
+   "role": "PAST_PAPER",
+   "chars": 87922,
+   "scanned": false,
+   "exam_date": "2025-02-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/schemaLezioni.19May25.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10589-2024/schemaLezioni.19May25.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10589-2024/schemaLezioni.19May25.txt",
+   "role": "NOTES",
+   "chars": 1892,
+   "scanned": false,
+   "exam_date": "2025-05-19"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP23_24 Research paper howto.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP23_24 Research paper howto.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP23_24 Research paper howto.txt",
+   "role": "NOTES",
+   "chars": 10056,
+   "scanned": false,
+   "exam_date": "2024-07-04"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 00.Introduction to course.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 00.Introduction to course.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 00.Introduction to course.txt",
+   "role": "PAST_PAPER",
+   "chars": 7428,
+   "scanned": false,
+   "exam_date": "2026-03-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 01.Chapter 1.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 01.Chapter 1.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 01.Chapter 1.txt",
+   "role": "PAST_PAPER",
+   "chars": 56964,
+   "scanned": false,
+   "exam_date": "2026-03-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 02.Chapter2.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 02.Chapter2.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 02.Chapter2.txt",
+   "role": "PAST_PAPER",
+   "chars": 80008,
+   "scanned": false,
+   "exam_date": "2026-03-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 03.Chapter3.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 03.Chapter3.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 03.Chapter3.txt",
+   "role": "PAST_PAPER",
+   "chars": 53526,
+   "scanned": false,
+   "exam_date": "2026-04-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 04.Chapter5.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 04.Chapter5.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 04.Chapter5.txt",
+   "role": "PAST_PAPER",
+   "chars": 44184,
+   "scanned": false,
+   "exam_date": "2026-04-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 05.Chapter6.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 05.Chapter6.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 05.Chapter6.txt",
+   "role": "PAST_PAPER",
+   "chars": 96997,
+   "scanned": false,
+   "exam_date": "2026-05-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 06.Chapter8.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 06.Chapter8.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 06.Chapter8.txt",
+   "role": "PAST_PAPER",
+   "chars": 65616,
+   "scanned": false,
+   "exam_date": "2026-05-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 07.Chapter10.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/AICP25_26 07.Chapter10.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/AICP25_26 07.Chapter10.txt",
+   "role": "PAST_PAPER",
+   "chars": 92916,
+   "scanned": false,
+   "exam_date": "2026-05-01"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/Oral_grade.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/Oral_grade.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/Oral_grade.txt",
+   "role": "NOTES",
+   "chars": 1340,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/QuizzesFinal2025_26.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/QuizzesFinal2025_26.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/QuizzesFinal2025_26.txt",
+   "role": "NOTES",
+   "chars": 1373,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/schemaLezioni_15.05.26.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/COGNITIVE-509485-10845-2025/schemaLezioni_15.05.26.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/COGNITIVE-509485-10845-2025/schemaLezioni_15.05.26.txt",
+   "role": "PAST_PAPER",
+   "chars": 2055,
+   "scanned": false,
+   "exam_date": "2026-05-15"
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cg psy.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cg psy.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/_student/Cg psy.txt",
+   "role": "NOTES",
+   "chars": 29908,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog psy.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog psy.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/_student/Cog psy.txt",
+   "role": "NOTES",
+   "chars": 23187,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog.pdf",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/Cog.pdf",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/_student/Cog.txt",
+   "role": "NOTES",
+   "chars": 9990,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/photo_2026-08-01_14-41-42.jpg",
+   "original": "raw/509485-COGNITIVE-PSYCHOLOGY/_student/photo_2026-08-01_14-41-42.jpg",
+   "converted": false,
+   "text": "raw/509485-COGNITIVE-PSYCHOLOGY/_text/_student/photo_2026-08-01_14-41-42.txt",
+   "role": "PAST_PAPER",
+   "chars": 950,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2024-06-28"
+  }
+ ],
+ "509487": [
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/1-FuzzyIntro.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/1-FuzzyIntro.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/1-FuzzyIntro.txt",
+   "role": "NOTES",
+   "chars": 11186,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-06-Exam.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-06-Exam.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2023-06-Exam.txt",
+   "role": "PAST_PAPER",
+   "chars": 3408,
+   "scanned": false,
+   "exam_date": "2023-06-22"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-07-Esame .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-07-Esame .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2023-07-Esame .txt",
+   "role": "PAST_PAPER",
+   "chars": 3013,
+   "scanned": false,
+   "exam_date": "2023-07-11"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-09-Esame .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2023-09-Esame .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2023-09-Esame .txt",
+   "role": "PAST_PAPER",
+   "chars": 3585,
+   "scanned": false,
+   "exam_date": "2023-09-07"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-06-text.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-06-text.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2024-06-text.txt",
+   "role": "ADMIN",
+   "chars": 2826,
+   "scanned": false,
+   "exam_date": "2024-06-21"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-07-Text.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-07-Text.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2024-07-Text.txt",
+   "role": "NOTES",
+   "chars": 3505,
+   "scanned": false,
+   "exam_date": "2024-07-09"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2025-exam example.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2025-exam example.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2025-exam example.txt",
+   "role": "PAST_PAPER",
+   "chars": 1389,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/25-intro-FuzzyEvo.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/25-intro-FuzzyEvo.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/25-intro-FuzzyEvo.txt",
+   "role": "SOLUTIONS",
+   "chars": 2196,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/FuzzyEvo-Program.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/FuzzyEvo-Program.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/FuzzyEvo-Program.txt",
+   "role": "ADMIN",
+   "chars": 929,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/FuzzyEvoExercises25.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/FuzzyEvoExercises25.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/FuzzyEvoExercises25.txt",
+   "role": "NOTES",
+   "chars": 3523,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/LinguisticVariable.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/LinguisticVariable.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/LinguisticVariable.txt",
+   "role": "NOTES",
+   "chars": 3874,
+   "scanned": false,
+   "exam_date": "2021-05-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/Project_Fuzzy_2024_2025.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/Project_Fuzzy_2024_2025.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/Project_Fuzzy_2024_2025.txt",
+   "role": "ASSIGNMENT",
+   "chars": 7952,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch01-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch01-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch01-lez.txt",
+   "role": "SLIDES",
+   "chars": 6166,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch02-EC_the_origins.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch02-EC_the_origins.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch02-EC_the_origins.txt",
+   "role": "ADMIN",
+   "chars": 9005,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch03-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch03-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch03-lez.txt",
+   "role": "ADMIN",
+   "chars": 18199,
+   "scanned": false,
+   "exam_date": "2025-04-07"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch04-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch04-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch04-lez.txt",
+   "role": "SLIDES",
+   "chars": 19688,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch05-Fitness_Selection_PopulationManagement-2025.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch05-Fitness_Selection_PopulationManagement-2025.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch05-Fitness_Selection_PopulationManagement-2025.txt",
+   "role": "SLIDES",
+   "chars": 14153,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch06-Popular_EA_Variants-2025.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/ch06-Popular_EA_Variants-2025.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/ch06-Popular_EA_Variants-2025.txt",
+   "role": "ADMIN",
+   "chars": 12912,
+   "scanned": false,
+   "exam_date": "2025-05-12"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/evo-fuzzy25.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/evo-fuzzy25.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/evo-fuzzy25.txt",
+   "role": "SLIDES",
+   "chars": 2967,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_control.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_control.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/fs_control.txt",
+   "role": "NOTES",
+   "chars": 38343,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_part01-2.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_part01-2.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/fs_part01-2.txt",
+   "role": "SLIDES",
+   "chars": 54188,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_part02_1.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_part02_1.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/fs_part02_1.txt",
+   "role": "SLIDES",
+   "chars": 18157,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_relations.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fs_relations.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/fs_relations.txt",
+   "role": "NOTES",
+   "chars": 13554,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fuzzy clustering.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/fuzzy clustering.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/fuzzy clustering.txt",
+   "role": "SLIDES",
+   "chars": 15041,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/2023-06-Exam.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/2023-06-Exam.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/2023-06-Exam.txt",
+   "role": "PAST_PAPER",
+   "chars": 3408,
+   "scanned": false,
+   "exam_date": "2023-06-22"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/2023-07-Esame .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/2023-07-Esame .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/2023-07-Esame .txt",
+   "role": "PAST_PAPER",
+   "chars": 3013,
+   "scanned": false,
+   "exam_date": "2023-07-11"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/3-val.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/3-val.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/3-val.txt",
+   "role": "SLIDES",
+   "chars": 2082,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/EC - exercises.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/EC - exercises.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/EC - exercises.txt",
+   "role": "NOTES",
+   "chars": 1693,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Final Exercises - update.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Final Exercises - update.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Final Exercises - update.txt",
+   "role": "NOTES",
+   "chars": 4013,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises - Solutions.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises - Solutions.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises - Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 5225,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Fuzzy Set Exercises .txt",
+   "role": "NOTES",
+   "chars": 1738,
+   "scanned": false,
+   "exam_date": "2022-09-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/FuzzyEvo-Syllabus.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/FuzzyEvo-Syllabus.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/FuzzyEvo-Syllabus.txt",
+   "role": "ADMIN",
+   "chars": 1042,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/FuzzyRules.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/FuzzyRules.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/FuzzyRules.txt",
+   "role": "SOLUTIONS",
+   "chars": 6003,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/IntroMV.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/IntroMV.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/IntroMV.txt",
+   "role": "NOTES",
+   "chars": 45903,
+   "scanned": false,
+   "exam_date": "2023-03-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Lesson 1.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Lesson 1.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Lesson 1.txt",
+   "role": "NOTES",
+   "chars": 16070,
+   "scanned": false,
+   "exam_date": "2023-03-13"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Linguistic Variable.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Linguistic Variable.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Linguistic Variable.txt",
+   "role": "NOTES",
+   "chars": 3874,
+   "scanned": false,
+   "exam_date": "2021-05-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Questions and Exercises .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/Questions and Exercises .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/Questions and Exercises .txt",
+   "role": "NOTES",
+   "chars": 2857,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/_2023_Paving the way to eXplainable Artificial Intelligence with fuzzy modeling.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/_2023_Paving the way to eXplainable Artificial Intelligence with fuzzy modeling.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/_2023_Paving the way to eXplainable Artificial Intelligence with fuzzy modeling.txt",
+   "role": "SLIDES",
+   "chars": 25827,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch01-Problems_to_be_solved.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch01-Problems_to_be_solved.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch01-Problems_to_be_solved.txt",
+   "role": "ADMIN",
+   "chars": 7315,
+   "scanned": false,
+   "exam_date": "2023-05-04"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch02-EC_the_origins.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch02-EC_the_origins.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch02-EC_the_origins.txt",
+   "role": "ADMIN",
+   "chars": 9042,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch03-What_is_an_EA.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch03-What_is_an_EA.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch03-What_is_an_EA.txt",
+   "role": "SLIDES",
+   "chars": 17335,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch04-Representation_Mutation_Recombination-2014.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch04-Representation_Mutation_Recombination-2014.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch04-Representation_Mutation_Recombination-2014.txt",
+   "role": "SLIDES",
+   "chars": 20297,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch05-Fitness_Selection_PopulationManagement.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch05-Fitness_Selection_PopulationManagement.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch05-Fitness_Selection_PopulationManagement.txt",
+   "role": "SLIDES",
+   "chars": 12497,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch06-Popular_EA_Variants.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/ch06-Popular_EA_Variants.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/ch06-Popular_EA_Variants.txt",
+   "role": "ADMIN",
+   "chars": 10764,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/evo-fuzzy.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/evo-fuzzy.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/evo-fuzzy.txt",
+   "role": "SLIDES",
+   "chars": 2964,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/fuzzy clustering.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/fuzzy clustering.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/fuzzy clustering.txt",
+   "role": "SLIDES",
+   "chars": 14406,
+   "scanned": false,
+   "exam_date": "2022-05-04"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/intro-FuzzyEvo.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/intro-FuzzyEvo.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/intro-FuzzyEvo.txt",
+   "role": "ADMIN",
+   "chars": 1844,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/intro-uncertainty2023.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2022/intro-uncertainty2023.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2022/intro-uncertainty2023.txt",
+   "role": "SLIDES",
+   "chars": 3312,
+   "scanned": false,
+   "exam_date": "2022-03-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-06-Exam.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-06-Exam.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/2023-06-Exam.txt",
+   "role": "PAST_PAPER",
+   "chars": 3408,
+   "scanned": false,
+   "exam_date": "2023-06-22"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-07-Esame .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-07-Esame .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/2023-07-Esame .txt",
+   "role": "PAST_PAPER",
+   "chars": 3013,
+   "scanned": false,
+   "exam_date": "2023-07-11"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-09-Esame .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/2023-09-Esame .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/2023-09-Esame .txt",
+   "role": "PAST_PAPER",
+   "chars": 3585,
+   "scanned": false,
+   "exam_date": "2023-09-07"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/24-intro-FuzzyEvo.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/24-intro-FuzzyEvo.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/24-intro-FuzzyEvo.txt",
+   "role": "SOLUTIONS",
+   "chars": 2242,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/Fuzzy Set Exercises .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/Fuzzy Set Exercises .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/Fuzzy Set Exercises .txt",
+   "role": "NOTES",
+   "chars": 2520,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/FuzzyEvo-Program.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/FuzzyEvo-Program.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/FuzzyEvo-Program.txt",
+   "role": "ADMIN",
+   "chars": 929,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/FuzzyEvoExercises2024.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/FuzzyEvoExercises2024.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/FuzzyEvoExercises2024.txt",
+   "role": "NOTES",
+   "chars": 3595,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/Linguistic Variable.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/Linguistic Variable.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/Linguistic Variable.txt",
+   "role": "NOTES",
+   "chars": 3874,
+   "scanned": false,
+   "exam_date": "2021-05-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/NeuroFuzzy2024.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/NeuroFuzzy2024.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/NeuroFuzzy2024.txt",
+   "role": "NOTES",
+   "chars": 15098,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch01-Problems_to_be_solved.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch01-Problems_to_be_solved.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch01-Problems_to_be_solved.txt",
+   "role": "ADMIN",
+   "chars": 7074,
+   "scanned": false,
+   "exam_date": "2024-04-15"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch02-EC_the_origins.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch02-EC_the_origins.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch02-EC_the_origins.txt",
+   "role": "ADMIN",
+   "chars": 9005,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch03-What_is_an_EA.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch03-What_is_an_EA.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch03-What_is_an_EA.txt",
+   "role": "SLIDES",
+   "chars": 17471,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch04-Representation_Mutation_Recombination-2024.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch04-Representation_Mutation_Recombination-2024.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch04-Representation_Mutation_Recombination-2024.txt",
+   "role": "SLIDES",
+   "chars": 19752,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch05-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch05-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch05-lez.txt",
+   "role": "SLIDES",
+   "chars": 14003,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch06-Popular_EA_Variants-2024.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/ch06-Popular_EA_Variants-2024.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/ch06-Popular_EA_Variants-2024.txt",
+   "role": "ADMIN",
+   "chars": 11169,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/evo-fuzzy24.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/evo-fuzzy24.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/evo-fuzzy24.txt",
+   "role": "SLIDES",
+   "chars": 3001,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_02.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_02.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/fs_02.txt",
+   "role": "NOTES",
+   "chars": 43259,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_03.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_03.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/fs_03.txt",
+   "role": "NOTES",
+   "chars": 13019,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_04 lezione.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_04 lezione.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/fs_04 lezione.txt",
+   "role": "SLIDES",
+   "chars": 28506,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_part01.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fs_part01.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/fs_part01.txt",
+   "role": "SLIDES",
+   "chars": 71206,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fuzzy clustering.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-509487-10589-2023/fuzzy clustering.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-509487-10589-2023/fuzzy clustering.txt",
+   "role": "SLIDES",
+   "chars": 15013,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/1-FuzzyIntro.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/1-FuzzyIntro.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/1-FuzzyIntro.txt",
+   "role": "NOTES",
+   "chars": 11186,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-06-text.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-06-text.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2024-06-text.txt",
+   "role": "ADMIN",
+   "chars": 2826,
+   "scanned": false,
+   "exam_date": "2024-06-21"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-07-Text.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-07-Text.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2024-07-Text.txt",
+   "role": "NOTES",
+   "chars": 3505,
+   "scanned": false,
+   "exam_date": "2024-07-09"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2025-exam example.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2025-exam example.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2025-exam example.txt",
+   "role": "PAST_PAPER",
+   "chars": 1389,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2026-01-Esame.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2026-01-Esame.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2026-01-Esame.txt",
+   "role": "PAST_PAPER",
+   "chars": 1713,
+   "scanned": false,
+   "exam_date": "2026-01-29"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2026-2- fs_part2.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2026-2- fs_part2.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2026-2- fs_part2.txt",
+   "role": "SLIDES",
+   "chars": 53263,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/26-intro-FuzzyEvo.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/26-intro-FuzzyEvo.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/26-intro-FuzzyEvo.txt",
+   "role": "SOLUTIONS",
+   "chars": 2311,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Exam Sample.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Exam Sample.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Exam Sample.txt",
+   "role": "PAST_PAPER",
+   "chars": 2473,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Exercises Evo - recombination.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Exercises Evo - recombination.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Exercises Evo - recombination.txt",
+   "role": "NOTES",
+   "chars": 954,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises - Solutions.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises - Solutions.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises - Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 5428,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises .pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises .pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Fuzzy Set Exercises .txt",
+   "role": "NOTES",
+   "chars": 2294,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/FuzzyEvo-Program.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/FuzzyEvo-Program.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/FuzzyEvo-Program.txt",
+   "role": "ADMIN",
+   "chars": 929,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/FuzzyEvoExercises.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/FuzzyEvoExercises.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/FuzzyEvoExercises.txt",
+   "role": "NOTES",
+   "chars": 3501,
+   "scanned": false,
+   "exam_date": "2024-09-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 1.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 1.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 1.txt",
+   "role": "SLIDES",
+   "chars": 2130,
+   "scanned": false,
+   "exam_date": "2026-03-12"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 2.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 2.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 2.txt",
+   "role": "SLIDES",
+   "chars": 2460,
+   "scanned": false,
+   "exam_date": "2026-03-29"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 3.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 3.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 3.txt",
+   "role": "SLIDES",
+   "chars": 4757,
+   "scanned": false,
+   "exam_date": "2026-04-07"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 4.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 4.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 4.txt",
+   "role": "SLIDES",
+   "chars": 1952,
+   "scanned": false,
+   "exam_date": "2026-05-04"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 5.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 5.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 5.txt",
+   "role": "SLIDES",
+   "chars": 4969,
+   "scanned": false,
+   "exam_date": "2026-05-05"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 6.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 6.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 6.txt",
+   "role": "SLIDES",
+   "chars": 3314,
+   "scanned": false,
+   "exam_date": "2026-05-11"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 7.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/Lezione 7.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/Lezione 7.txt",
+   "role": "SLIDES",
+   "chars": 4194,
+   "scanned": false,
+   "exam_date": "2026-05-21"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/LinguisticVariable.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/LinguisticVariable.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/LinguisticVariable.txt",
+   "role": "NOTES",
+   "chars": 3874,
+   "scanned": false,
+   "exam_date": "2021-05-01"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch01-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch01-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch01-lez.txt",
+   "role": "ADMIN",
+   "chars": 6769,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch02-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch02-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch02-lez.txt",
+   "role": "ADMIN",
+   "chars": 7869,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch03-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch03-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch03-lez.txt",
+   "role": "ADMIN",
+   "chars": 18199,
+   "scanned": false,
+   "exam_date": "2025-04-07"
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch04-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch04-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch04-lez.txt",
+   "role": "SLIDES",
+   "chars": 19672,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch05-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch05-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch05-lez.txt",
+   "role": "SLIDES",
+   "chars": 14369,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch06-lez.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch06-lez.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch06-lez.txt",
+   "role": "ADMIN",
+   "chars": 12676,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch16-Theory26.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/ch16-Theory26.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/ch16-Theory26.txt",
+   "role": "SOLUTIONS",
+   "chars": 5962,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/evo-fuzzy26.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/evo-fuzzy26.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/evo-fuzzy26.txt",
+   "role": "SLIDES",
+   "chars": 3129,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_control.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_control.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/fs_control.txt",
+   "role": "NOTES",
+   "chars": 38343,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_part02_1.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_part02_1.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/fs_part02_1.txt",
+   "role": "SLIDES",
+   "chars": 18157,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_relations.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fs_relations.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/fs_relations.txt",
+   "role": "NOTES",
+   "chars": 13554,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fuzzy clustering.pdf",
+   "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/fuzzy clustering.pdf",
+   "converted": false,
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/fuzzy clustering.txt",
+   "role": "SLIDES",
+   "chars": 14830,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_eulerian.py",
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_eulerian.py",
+   "role": "SOLUTIONS",
+   "chars": 2822,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_exam_example.py",
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_exam_example.py",
+   "role": "SOLUTIONS",
+   "chars": 2442,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_lesson1.py",
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_lesson1.py",
+   "role": "SOLUTIONS",
+   "chars": 3266,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_lesson3.py",
+   "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/solutions_lesson3.py",
+   "role": "SOLUTIONS",
+   "chars": 1235,
+   "scanned": false,
+   "exam_date": null
   }
  ]
 }
