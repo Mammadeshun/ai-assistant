@@ -67,3 +67,30 @@ class TestRolePrecedence:
 
     def test_numeric_date_still_works(self):
         assert when("31_1_22A.pdf") == "2022-01-31"
+
+
+class TestLectureMaterialIsNotAPaper:
+    """A bare date pattern matched lecture numbering: "Prog2025_26_21b" reads
+    as "25 26 21" and filed 154 Computer Programming slide decks as exam
+    papers, inflating that course to 1039 questions extracted from slides."""
+
+    def test_year_numbered_lecture_deck(self):
+        assert role("Prog2025_26_21b_inheritance_double.pdf") != "PAST_PAPER"
+        assert role("Prog2022_23_23_lab_inheritance_double.pdf") != "PAST_PAPER"
+
+    def test_a_real_exam_in_the_same_folder_still_reads_as_one(self):
+        assert role("Exam_09_09_2022.pdf") == "PAST_PAPER"
+        assert role("Exam_21_07_2023.pdf") == "PAST_PAPER"
+
+    def test_validated_date_alone_is_still_enough(self):
+        """Computational Logic names its sittings by date and nothing else."""
+        assert role("31_1_22A.pdf") == "PAST_PAPER"
+        assert role("2023_19_September_2023.pdf") == "PAST_PAPER"
+
+    def test_an_invalid_date_is_not_a_date(self):
+        """Month 26 does not exist; the old pattern did not check."""
+        from extract import exam_date
+        assert exam_date(Path("Prog2025_26_21b_inheritance_double.pdf"), "") is None
+
+    def test_dated_script_is_not_an_exam(self):
+        assert role("wordle_2025-11-05.py") != "PAST_PAPER"
