@@ -38,15 +38,46 @@ def parse_date(text: str) -> dt.date:
     return dt.date(int(year), int(month), int(day))
 
 
-def choose(rows: list[dict], budget_hours: float) -> tuple[list[dict], list[dict]]:
+def cost_of(row: dict) -> float:
+    """Hours to budget for a course. See the note in walk() on unmeasured ones."""
+    return row["hours_low"] if row.get("measured", True) else row["hours_high"]
+
+
+def feasible(picked: list[dict], today: dt.date, hours_per_day: float) -> bool:
+    """Can every exam's preparation actually happen before that exam sits?
+
+    A single total budget is the wrong constraint and was quietly producing
+    impossible plans. The autumn sittings cluster into ten days, so "216 hours
+    are available before the last exam" says nothing about whether the 42 hours
+    for an exam seven days away can be found. Preparation for an exam has to
+    fit before that exam, not before the last one.
+
+    This is the earliest-deadline-first feasibility test: walk the exams in
+    date order and require the running total of hours to fit in the days
+    available up to each one.
+    """
+    running = 0.0
+    for row in sorted(picked, key=lambda r: parse_date(r["sitting"]["exam_date"])):
+        running += cost_of(row)
+        days = (parse_date(row["sitting"]["exam_date"]) - today).days
+        if days <= 0 or running > days * hours_per_day:
+            return False
+    return True
+
+
+def choose(rows: list[dict], budget_hours: float, today: dt.date | None = None,
+           hours_per_day: float = 7.0) -> tuple[list[dict], list[dict]]:
     """Most CFU that fits both constraints. Exhaustive: the candidate set is
     small enough that there is no reason to approximate."""
+    today = today or dt.date.today()
     candidates = [r for r in rows if r.get("sitting")]
     best: dict = {"cfu": -1, "picked": []}
 
     def walk(index: int, used: set[str], hours: float, picked: list[dict]) -> None:
         nonlocal best
         if index == len(candidates):
+            if not feasible(picked, today, hours_per_day):
+                return
             cfu = sum(r["cfu"] for r in picked)
             expected = sum(r["cfu"] * r["p_pass"] for r in picked)
             if (cfu, expected) > (best["cfu"], best.get("expected", 0)):
@@ -55,7 +86,14 @@ def choose(rows: list[dict], budget_hours: float) -> tuple[list[dict], list[dict
             return
         row = candidates[index]
         date = row["sitting"]["exam_date"]
-        cost = row["hours_low"]
+        # For a course nothing could be measured about, hours_low is the floor
+        # the model emits with no evidence, not an estimate. Budgeting at that
+        # floor makes the unknown courses look like the cheapest on the board
+        # and pulls them into the plan ahead of courses that were actually
+        # counted - Computer Vision, Ethics and Web and Social took 24 of 66
+        # CFU that way. Cost them at the top of their range instead, so an
+        # unknown has to be worth committing to, not merely cheap to assume.
+        cost = cost_of(row)
         if date not in used and hours + cost <= budget_hours:
             picked.append(row)
             walk(index + 1, used | {date}, hours + cost, picked)
@@ -297,7 +335,10 @@ def main() -> int:
     span = (horizon - today).days
     budget = span * args.hours_per_day * (1 - LOST_DAY_PER_WEEK / 7)
 
-    chosen, dropped = choose(rows, budget)
+    # The realistic rate: one lost day a week is already absorbed into it, so
+    # feasibility is tested against what a normal week actually yields.
+    effective_rate = args.hours_per_day * (1 - LOST_DAY_PER_WEEK / 7)
+    chosen, dropped = choose(rows, budget, today, effective_rate)
     days = build_calendar(chosen, today + dt.timedelta(days=1), args.hours_per_day)
     ANALYSIS.mkdir(parents=True, exist_ok=True)
     write_plan(chosen, dropped, days, args.hours_per_day, budget, esse3)
