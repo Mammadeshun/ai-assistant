@@ -172,7 +172,8 @@ def build_practice(code: str, name: str, rows: list[dict]) -> str:
                     f"{esc(row['text'][:2200])}\n\n")
             doc += ruled(answer_space(row["text"]))
             doc += "\n#pagebreak(weak: true)\n"
-    return doc
+    # A weak break after the final question still emits an empty last page.
+    return doc.rstrip().removesuffix("#pagebreak(weak: true)").rstrip() + "\n"
 
 
 def build_solutions(code: str, name: str, rows: list[dict],
@@ -225,7 +226,7 @@ def build_mock(code: str, name: str, rows: list[dict], minutes: int = 120) -> st
                 f"archetype]]\n\n{esc(rep.text[:1800])}\n\n")
         doc += ruled(answer_space(rep.text))
         doc += "\n#pagebreak(weak: true)\n"
-    return doc
+    return doc.rstrip().removesuffix("#pagebreak(weak: true)").rstrip() + "\n"
 
 
 def build_essentials(code: str, name: str, content: dict, figures: list[dict],
