@@ -1,0 +1,1258 @@
+[
+ {
+  "code": "509521",
+  "name": "LABORATORY OF MACHINE LEARNING",
+  "cfu": 3,
+  "material": {
+   "files": 34,
+   "slides": 6,
+   "notes": 12,
+   "video_items": 114,
+   "figures": 0
+  },
+  "papers": 6,
+  "solutions": 7,
+  "year_range": "2025-2026",
+  "questions": 32,
+  "predictability": 5,
+  "predictability_basis": "13 distinct archetypes across 6 papers; 25 of 32 questions (78%) fall into 6 archetypes that recur in more than one paper; the commonest appears in 6 of 6 papers",
+  "hours_low": 24,
+  "hours_high": 27,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "H",
+  "format_evidence": {
+   "duration": [
+    "15 minutos Nota de aprovação: 4,00 de 6,00 Voltar à disciplina Mensa"
+   ]
+  },
+  "sitting": {
+   "activity": "LABORATORY OF MACHINE LEARNING",
+   "exam_date": "21/09/2026",
+   "booking_opens": "01/09/2026",
+   "booking_closes": "16/09/2026",
+   "attendance": "P",
+   "enrolled": "2",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19737&ADSCE_ID=10923421&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Orale, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CUSANO CLAUDIO (Presidente), NOCERA ANTONINO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-LABORATORY-OF-MACHINE-LEARNING-21-09-2026.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel"
+  ],
+  "p_pass": 0.85,
+  "cost_per_pass": 28,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509495",
+  "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
+  "cfu": 6,
+  "material": {
+   "files": 82,
+   "slides": 38,
+   "notes": 30,
+   "video_items": 39,
+   "figures": 0
+  },
+  "papers": 3,
+  "solutions": 9,
+  "year_range": null,
+  "questions": 9,
+  "predictability": 5,
+  "predictability_basis": "2 distinct archetypes across 3 papers; 9 of 9 questions (100%) fall into 2 archetypes that recur in more than one paper; the commonest appears in 3 of 3 papers",
+  "hours_low": 27,
+  "hours_high": 31,
+  "hours_workings": "content 5 topics x 3h = 15h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "M",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "DATA MINING AND KNOWLEDGE EXTRACTION",
+   "exam_date": "24/09/2026",
+   "booking_opens": "04/09/2026",
+   "booking_closes": "19/09/2026",
+   "attendance": "P",
+   "enrolled": "1",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19712&ADSCE_ID=10923419&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CALAUTTI MARCO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-DATA-MINING-AND-KNOWLEDGE-EXTRACTION-24-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.85,
+  "cost_per_pass": 32,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509483",
+  "name": "COMPUTATIONAL LOGIC",
+  "cfu": 6,
+  "material": {
+   "files": 82,
+   "slides": 13,
+   "notes": 39,
+   "video_items": 4,
+   "figures": 0
+  },
+  "papers": 4,
+  "solutions": 26,
+  "year_range": "2022-2022",
+  "questions": 36,
+  "predictability": 5,
+  "predictability_basis": "15 distinct archetypes across 4 papers; 28 of 36 questions (78%) fall into 7 archetypes that recur in more than one paper; the commonest appears in 4 of 4 papers",
+  "hours_low": 30,
+  "hours_high": 34,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "M",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "COMPUTATIONAL LOGIC",
+   "exam_date": "23/09/2026",
+   "booking_opens": "03/09/2026",
+   "booking_closes": "18/09/2026",
+   "attendance": "P",
+   "enrolled": "18",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=6&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19440&ADSCE_ID=10175008&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GHILARDI SILVIO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-COMPUTATIONAL-LOGIC-23-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.85,
+  "cost_per_pass": 35,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509487",
+  "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+  "cfu": 6,
+  "material": {
+   "files": 106,
+   "slides": 35,
+   "notes": 27,
+   "video_items": 80,
+   "figures": 0
+  },
+  "papers": 12,
+  "solutions": 11,
+  "year_range": "2023-2026",
+  "questions": 72,
+  "predictability": 5,
+  "predictability_basis": "31 distinct archetypes across 12 papers; 64 of 72 questions (89%) fall into 23 archetypes that recur in more than one paper; the commonest appears in 5 of 12 papers",
+  "hours_low": 30,
+  "hours_high": 34,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "H",
+  "format_evidence": {
+   "excluded": []
+  },
+  "sitting": {
+   "activity": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
+   "exam_date": "17/09/2026",
+   "booking_opens": "28/08/2026",
+   "booking_closes": "12/09/2026",
+   "attendance": "P",
+   "enrolled": "11",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=22&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19699&ADSCE_ID=10508555&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CIUCCI DAVIDE ELIO (Presidente), CAMPAGNER ANDREA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING-17-09-2026.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel"
+  ],
+  "p_pass": 0.85,
+  "cost_per_pass": 35,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509488",
+  "name": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+  "cfu": 6,
+  "material": {
+   "files": 132,
+   "slides": 85,
+   "notes": 10,
+   "video_items": 2,
+   "figures": 0
+  },
+  "papers": 15,
+  "solutions": 5,
+  "year_range": "2023-2026",
+  "questions": 83,
+  "predictability": 5,
+  "predictability_basis": "41 distinct archetypes across 15 papers; 69 of 83 questions (83%) fall into 28 archetypes that recur in more than one paper; the commonest appears in 4 of 15 papers",
+  "hours_low": 30,
+  "hours_high": 34,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "H",
+  "format_evidence": {
+   "format": [
+    "written exam by becoming familiar with the types of questions and activities related to the NLP part of the course",
+    "Written Exam [TMNLP-2025_2026] Practice Written Exam File Messaggistica Contatti Messaggi selezionati: 1 &times; Contatti 0 Hai 0 ri",
+    "written examination is aimed at assessing the level of understanding of the basic aspects taught during the course; it is constitute"
+   ],
+   "duration": [],
+   "project": [
+    "project that can be developed also by groups of students (up to three students)",
+    "project is the usage of open-source software that will be employed to develop technological solutions to the problems addressed",
+    "Project Contrair Expandir Project suggested Neural Machine Translation (NMT) toolkit&nbsp; https://github"
+   ]
+  },
+  "sitting": {
+   "activity": "TEXT MINING AND NATURAL LANGUAGE PROCESSING",
+   "exam_date": "24/09/2026",
+   "booking_opens": "04/09/2026",
+   "booking_closes": "19/09/2026",
+   "attendance": "P",
+   "enrolled": "7",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=22&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19700&ADSCE_ID=10508560&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "RAGANATO ALESSANDRO (Presidente), PASI GABRIELLA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESSING-24-09-2026.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel",
+   "project component"
+  ],
+  "p_pass": 0.85,
+  "cost_per_pass": 35,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509477",
+  "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+  "cfu": 12,
+  "material": {
+   "files": 859,
+   "slides": 8,
+   "notes": 575,
+   "video_items": 39,
+   "figures": 0
+  },
+  "papers": 28,
+  "solutions": 89,
+  "year_range": "2022-2023",
+  "questions": 114,
+  "predictability": 5,
+  "predictability_basis": "43 distinct archetypes across 28 papers; 105 of 114 questions (92%) fall into 34 archetypes that recur in more than one paper; the commonest appears in 9 of 28 papers",
+  "hours_low": 46,
+  "hours_high": 52,
+  "hours_workings": "content 7 topics x 4h = 28h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "H",
+  "format_evidence": {
+   "format": [],
+   "duration": [
+    "duration of the exam will be 3 hours",
+    "duration of the exam will be 1",
+    "15 minutes for the presentation"
+   ],
+   "project": [
+    "project in Python, and its presentation and discussion",
+    "project Information about the project Pagina Spunta come completato In this page you can find all the information about the fina",
+    "Project deliverables upload Project deliverables upload Compito Seleziona sezione Introduction and general information Minimizza"
+   ],
+   "gate": [
+    "at least in a tentative form; designing tools to ease the development: some auxiliary pro",
+    "at least two days before the discussion of the project"
+   ]
+  },
+  "sitting": {
+   "activity": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
+   "exam_date": "25/09/2026",
+   "booking_opens": "05/09/2026",
+   "booking_closes": "20/09/2026",
+   "attendance": "P",
+   "enrolled": "5",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19434&ADSCE_ID=10175009&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FERRARI STEFANO (Presidente), DONDI PIERCARLO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA-STRUCTURES-25-09-20.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel",
+   "project component"
+  ],
+  "p_pass": 0.85,
+  "cost_per_pass": 54,
+  "measured": true,
+  "tier": "A"
+ },
+ {
+  "code": "509486",
+  "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+  "cfu": 12,
+  "material": {
+   "files": 31,
+   "slides": 16,
+   "notes": 2,
+   "video_items": 1,
+   "figures": 0
+  },
+  "papers": 13,
+  "solutions": 0,
+  "year_range": "2023-2026",
+  "questions": 78,
+  "predictability": 4,
+  "predictability_basis": "36 distinct archetypes across 13 papers; 49 of 78 questions (63%) fall into 8 archetypes that recur in more than one paper; the commonest appears in 9 of 13 papers",
+  "hours_low": 42,
+  "hours_high": 48,
+  "hours_workings": "content 6 topics x 4h = 24h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "H",
+  "format_evidence": {
+   "duration": [
+    "21 hours remaining Last modified - Submission comments ___picture___",
+    "22 ore Ultima modifica - Commenti alle consegne ___picture___ ___n",
+    "2 hours Last modified - Submission comments ___picture___ ___name__"
+   ],
+   "project": [
+    "project submission's instruction (call 16th Feb",
+    "Project submission description Bloqueado SAMIRA MAGHOOL 17 de junho de 2026 SAMIRA MAGHOOL 17 de junho de 2026 0 Marcar este tóp",
+    "Project submission instruction (5th call) Bloqueado SAMIRA MAGHOOL 25 de agosto de 2026 SAMIRA MAGHOOL 25 de agosto de 2026 0 Ma"
+   ]
+  },
+  "sitting": {
+   "activity": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
+   "exam_date": "15/09/2026",
+   "booking_opens": "26/08/2026",
+   "booking_closes": "10/09/2026",
+   "attendance": "P",
+   "enrolled": "30",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=68&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19698&ADSCE_ID=10508561&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FRASCA MARCO (Presidente), MAGHOOL SAMIRA (Membro Effettivo), ZIGNANI MATTEO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-MACHINE-LEARNING-ARTIFICIAL-NEURAL-NETWORKS-AND-DEEP-LEARNIN.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel",
+   "project component"
+  ],
+  "p_pass": 0.75,
+  "cost_per_pass": 56,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "509481",
+  "name": "CALCULUS",
+  "cfu": 12,
+  "material": {
+   "files": 205,
+   "slides": 145,
+   "notes": 31,
+   "video_items": 16,
+   "figures": 0
+  },
+  "papers": 17,
+  "solutions": 11,
+  "year_range": "2022-2025",
+  "questions": 119,
+  "predictability": 5,
+  "predictability_basis": "9 distinct archetypes across 17 papers; 119 of 119 questions (100%) fall into 9 archetypes that recur in more than one paper; the commonest appears in 14 of 17 papers",
+  "hours_low": 46,
+  "hours_high": 52,
+  "hours_workings": "content 7 topics x 4h = 28h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "H",
+  "format_evidence": {
+   "format": [
+    "written exams , it is confirmed that they must be carried out in person to ensure their full regularity",
+    "written exams are held in presence , except for few exceptions related to the COVID-19, see the rules above",
+    "written exam may be complemented by an oral part",
+    "oral exam no further preparation with respect to the written test is required"
+   ],
+   "duration": [
+    "duration of the test is 1 hour Pass Part 1 of the Calculus exam with a score of at least",
+    "3 hours and is divided into two parts (with half time allowed for e"
+   ],
+   "materials": [
+    "closed books test : notes, books, calculators or similar instruments, items with a photocam"
+   ],
+   "project": [
+    "Progetto sulla didattica innovativa): students who are in one of the categories identified by \"progetto sulla didattica innovativ"
+   ],
+   "gate": [
+    "at least 15/30 Pass the Calculus course Important: if you passed the OFA by passing Part",
+    "minimum, supremum, infimum",
+    "minimum problems"
+   ]
+  },
+  "sitting": {
+   "activity": "CALCULUS",
+   "exam_date": "25/09/2026",
+   "booking_opens": "05/09/2026",
+   "booking_closes": "20/09/2026",
+   "attendance": "P",
+   "enrolled": "6",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19438&ADSCE_ID=10175005&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "RONDI LUCA (Presidente), FONTANA LUIGI (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-CALCULUS-25-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "project component",
+   "oral component"
+  ],
+  "p_pass": 0.8,
+  "cost_per_pass": 58,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "509478",
+  "name": "KNOWLEDGE REPRESENTATION AND REASONING",
+  "cfu": 12,
+  "material": {
+   "files": 268,
+   "slides": 46,
+   "notes": 115,
+   "video_items": 10,
+   "figures": 0
+  },
+  "papers": 35,
+  "solutions": 50,
+  "year_range": "2022-2027",
+  "questions": 175,
+  "predictability": 4,
+  "predictability_basis": "86 distinct archetypes across 35 papers; 128 of 175 questions (73%) fall into 39 archetypes that recur in more than one paper; the commonest appears in 8 of 35 papers",
+  "hours_low": 42,
+  "hours_high": 48,
+  "hours_workings": "content 6 topics x 4h = 24h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "H",
+  "format_evidence": {
+   "format": [
+    "written exam and no additional support is needed or allowed",
+    "Oral Exams and Checks Bloccata RAFAEL PENALOZA NYSSEN 18 feb 2024 RAFAEL PENALOZA NYSSEN 18 feb 2024 0 Inserisci tra le preferite",
+    "Oral Exams and Checks Bloqueado RAFAEL PENALOZA NYSSEN 18 feb 2024 RAFAEL PENALOZA NYSSEN 18 feb 2024 0 Marcar como favorita esta"
+   ],
+   "project": [
+    "Project is also a good starting point to learn the basics (and more advanced topics for those interested) Seleziona attività 03",
+    "Project - Submission Contrair Expandir Optional Final Project - Submission Selecionar a atividade Project - Constructing an RDF",
+    "Project - Constructing an RDF Knowledge Graph - 1st deadline Trabalho Marcar como concluída Selecionar a atividade Project - Con"
+   ]
+  },
+  "sitting": {
+   "activity": "KNOWLEDGE REPRESENTATION AND REASONING",
+   "exam_date": "21/09/2026",
+   "booking_opens": "01/09/2026",
+   "booking_closes": "16/09/2026",
+   "attendance": "P",
+   "enrolled": "11",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19435&ADSCE_ID=10175006&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PENALOZA NYSSEN RAFAEL (Presidente), PALMONARI MATTEO LUIGI (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-KNOWLEDGE-REPRESENTATION-AND-REASONING-21-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "project component",
+   "oral component"
+  ],
+  "p_pass": 0.7,
+  "cost_per_pass": 60,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "510109",
+  "name": "PROBABILITY AND STATISTICAL INFERENCE",
+  "cfu": 12,
+  "material": {
+   "files": 94,
+   "slides": 11,
+   "notes": 61,
+   "video_items": 51,
+   "figures": 0
+  },
+  "papers": 5,
+  "solutions": 17,
+  "year_range": "2026-2026",
+  "questions": 14,
+  "predictability": 5,
+  "predictability_basis": "8 distinct archetypes across 4 papers; 12 of 14 questions (86%) fall into 6 archetypes that recur in more than one paper; the commonest appears in 2 of 4 papers",
+  "hours_low": 58,
+  "hours_high": 66,
+  "hours_workings": "content 10 topics x 4h = 40h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "H",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "PROBABILITY AND STATISTICAL INFERENCE",
+   "exam_date": "25/09/2026",
+   "booking_opens": "05/09/2026",
+   "booking_closes": "20/09/2026",
+   "attendance": "P",
+   "enrolled": "6",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=61&CDS_ESA_ID=10589&ATT_DID_ESA_ID=20164&ADSCE_ID=10508557&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "SPINELLI DANIELE (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-PROBABILITY-AND-STATISTICAL-INFERENCE-25-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.85,
+  "cost_per_pass": 68,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "504464",
+  "name": "ORGANIZATION THEORY AND DESIGN",
+  "cfu": 6,
+  "material": {
+   "files": 32,
+   "slides": 11,
+   "notes": 19,
+   "video_items": 4,
+   "figures": 0
+  },
+  "papers": 2,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 2,
+  "predictability": null,
+  "predictability_basis": "not measurable - 2 questions from 2 paper(s)",
+  "hours_low": 32,
+  "hours_high": 43,
+  "hours_workings": "content 8 topics x 3h = 24h; drill 2 papers x 2h x 2 passes = 8h",
+  "confidence": "L",
+  "format_evidence": {
+   "project": [
+    "Project GLOBE (Global Leadership and Organizational Behavior Effectiveness) has extended Hofstede�s assessment",
+    "project areas, whereas the international matrix typically highlights managers for both regional areas and product or project are"
+   ]
+  },
+  "sitting": {
+   "activity": "ORGANIZATION THEORY AND DESIGN",
+   "exam_date": "17/09/2026",
+   "booking_opens": "28/08/2026",
+   "booking_closes": "14/09/2026",
+   "attendance": "P",
+   "enrolled": "1",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=83&CDS_ESA_ID=10279&ATT_DID_ESA_ID=11068&ADSCE_ID=10923422&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GRECO GIORGIO (Presidente)",
+    "notes": "Ora e aula sono riporati nel sito di Facoltà: http://webing.unipv.eu/didattica/appelli-desame/, Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-ORGANIZATION-THEORY-AND-DESIGN-17-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "predictability not measurable",
+   "project component"
+  ],
+  "p_pass": 0.4,
+  "cost_per_pass": 80,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "509485",
+  "name": "COGNITIVE PSYCHOLOGY",
+  "cfu": 6,
+  "material": {
+   "files": 42,
+   "slides": 0,
+   "notes": 33,
+   "video_items": 103,
+   "figures": 0
+  },
+  "papers": 4,
+  "solutions": 1,
+  "year_range": "2025-2026",
+  "questions": 4,
+  "predictability": null,
+  "predictability_basis": "not measurable - 4 questions from 4 paper(s)",
+  "hours_low": 34,
+  "hours_high": 45,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 4 papers x 2h x 2 passes = 16h",
+  "confidence": "L",
+  "format_evidence": {
+   "format": [
+    "Written exam (25 points max): multiple choice questions (5 points) open questions (20 points) on book materials Students who have ob",
+    "written exam (can modulate the result of the written part) presentation/d iscussion of the research papers (6 points)",
+    "written exam score cannot be \"kept\" for a later oral session",
+    "Oral exam (6 points max): discussion of the written exam (can modulate the result of the written part) presentation/d iscussion o",
+    "multiple choice questions (5 points) open questions (20 points) on book materials Students who have obtained a score above or equal to"
+   ],
+   "duration": [],
+   "gate": [
+    "at least three days before the exam",
+    "minimum grade for passing the written exam remainsa unchanged",
+    "at least one paper questionnaire and have been present in class will be able to complete"
+   ]
+  },
+  "sitting": {
+   "activity": "COGNITIVE PSYCHOLOGY",
+   "exam_date": "25/09/2026",
+   "booking_opens": "05/09/2026",
+   "booking_closes": "20/09/2026",
+   "attendance": "P",
+   "enrolled": "12",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=12&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19442&ADSCE_ID=10175007&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Orale, Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "BRICOLO EMANUELA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-COGNITIVE-PSYCHOLOGY-25-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "predictability not measurable",
+   "oral component"
+  ],
+  "p_pass": 0.35,
+  "cost_per_pass": 97,
+  "measured": true,
+  "tier": "B"
+ },
+ {
+  "code": "509494",
+  "name": "BRAIN MODELLING",
+  "cfu": 6,
+  "material": {
+   "files": 6,
+   "slides": 0,
+   "notes": 0,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 6,
+  "solutions": 0,
+  "year_range": "2024-2026",
+  "questions": 13,
+  "predictability": 1,
+  "predictability_basis": "13 distinct archetypes across 6 papers; 0 of 13 questions (0%) fall into 0 archetypes that recur in more than one paper",
+  "hours_low": 36,
+  "hours_high": 46,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 6 papers x 2h x 2 passes = 24h",
+  "confidence": "M",
+  "format_evidence": {
+   "format": [
+    "written exam Bloqueado CLAUDIA CASELLATO 30 de janeiro de 2024 CLAUDIA CASELLATO 30 de janeiro de 2024 0 Marcar este tópico com estr",
+    "written exam Locked CLAUDIA CASELLATO 30 Jan 2024 CLAUDIA CASELLATO 30 Jan 2024 0 Star this discussion pauses for lunch Locked CLAUD",
+    "written exam Bloccata CLAUDIA CASELLATO 30 gen 2024 CLAUDIA CASELLATO 30 gen 2024 0 Inserisci tra le preferite exam 1st march Blocca"
+   ],
+   "project": [
+    "project for exam Locked CLAUDIA CASELLATO 26 Nov 2025 CLAUDIA CASELLATO 26 Nov 2025 0 Star this discussion classrooms Locked CLA",
+    "project for exam Bloccata CLAUDIA CASELLATO 26 nov 2025 CLAUDIA CASELLATO 26 nov 2025 0 Inserisci tra le preferite laptop -hands",
+    "project for exam Bloccata CLAUDIA CASELLATO 26 nov 2025 CLAUDIA CASELLATO 26 nov 2025 0 Inserisci tra le preferite classrooms Bl"
+   ]
+  },
+  "sitting": {
+   "activity": "BRAIN MODELLING",
+   "exam_date": "25/09/2026",
+   "booking_opens": "05/09/2026",
+   "booking_closes": "20/09/2026",
+   "attendance": "P",
+   "enrolled": "9",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19711&ADSCE_ID=10923417&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "CASELLATO CLAUDIA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-BRAIN-MODELLING-25-09-2026.html"
+   }
+  },
+  "booked": true,
+  "flags": [
+   "already booked, cannot cancel",
+   "project component"
+  ],
+  "p_pass": 0.35,
+  "cost_per_pass": 103,
+  "measured": true,
+  "tier": "C"
+ },
+ {
+  "code": "509492",
+  "name": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+  "cfu": 12,
+  "material": {
+   "files": 40,
+   "slides": 23,
+   "notes": 10,
+   "video_items": 55,
+   "figures": 0
+  },
+  "papers": 3,
+  "solutions": 4,
+  "year_range": "2025-2026",
+  "questions": 22,
+  "predictability": 1,
+  "predictability_basis": "21 distinct archetypes across 3 papers; 0 of 22 questions (0%) fall into 0 archetypes that recur in more than one paper",
+  "hours_low": 38,
+  "hours_high": 49,
+  "hours_workings": "content 5 topics x 4h = 20h; drill 3 papers x 3h x 2 passes = 18h",
+  "confidence": "M",
+  "format_evidence": {
+   "excluded": [
+    "not required, but it is just a formalization of what we discussed by examples) Seleziona sezione Scaling 1 Minimizza Espandi Scaling",
+    "Not required, but a good read",
+    "not required for the exam; watch it if you want to delve deeper into scaling laws etc"
+   ]
+  },
+  "sitting": {
+   "activity": "THEORETICAL AND QUANTUM PHYSICS FOR AI",
+   "exam_date": "22/09/2026",
+   "booking_opens": "02/09/2026",
+   "booking_closes": "17/09/2026",
+   "attendance": "P",
+   "enrolled": "6",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=68&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19704&ADSCE_ID=10508559&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GUARNIERI GIACOMO (Presidente), GHERARDI MARCO (Membro Effettivo), LISCIDINI MARCO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-THEORETICAL-AND-QUANTUM-PHYSICS-FOR-AI-22-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.35,
+  "cost_per_pass": 109,
+  "measured": true,
+  "tier": "C"
+ },
+ {
+  "code": "509496",
+  "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+  "cfu": 6,
+  "material": {
+   "files": 86,
+   "slides": 46,
+   "notes": 23,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 2,
+  "solutions": 2,
+  "year_range": "2025-2026",
+  "questions": 6,
+  "predictability": 1,
+  "predictability_basis": "6 distinct archetypes across 2 papers; 0 of 6 questions (0%) fall into 0 archetypes that recur in more than one paper",
+  "hours_low": 41,
+  "hours_high": 53,
+  "hours_workings": "content 11 topics x 3h = 33h; drill 2 papers x 2h x 2 passes = 8h",
+  "confidence": "M",
+  "format_evidence": {
+   "project": [
+    "Project Minimizza Espandi Final Lab Project Seleziona attività Persona-based Information Retrieval - Course Project Proposal Per",
+    "Project Proposal File Seleziona sezione Labs on Recommender Systems Minimizza Espandi Labs on Recommender Systems Seleziona atti",
+    "Project Contrair Expandir Final Lab Project Selecionar a atividade Instructions and Timeline for the Final Project Instructions"
+   ]
+  },
+  "sitting": {
+   "activity": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+   "exam_date": "15/09/2026",
+   "booking_opens": "26/08/2026",
+   "booking_closes": "10/09/2026",
+   "attendance": "P",
+   "enrolled": "1",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19713&ADSCE_ID=10923416&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PASI GABRIELLA (Presidente), KASELA PRANAV  (Membro Effettivo), PEIKOS GEORGIOS (Membro Effettivo), PINKOSOVA ZUZANA (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SYSTEMS-15-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "project component"
+  ],
+  "p_pass": 0.35,
+  "cost_per_pass": 117,
+  "measured": true,
+  "tier": "C"
+ },
+ {
+  "code": "509498",
+  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+  "cfu": 6,
+  "material": {
+   "files": 40,
+   "slides": 8,
+   "notes": 13,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 11,
+  "solutions": 7,
+  "year_range": "2026-2027",
+  "questions": 31,
+  "predictability": 1,
+  "predictability_basis": "30 distinct archetypes across 11 papers; 2 of 31 questions (6%) fall into 1 archetypes that recur in more than one paper; the commonest appears in 2 of 11 papers",
+  "hours_low": 42,
+  "hours_high": 54,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 6 papers x 2h x 2 passes = 24h",
+  "confidence": "M",
+  "format_evidence": {
+   "duration": [
+    "2 ore Messaggistica Contatti Messaggi selezionati: 1 &times; Cont",
+    "2 hours Last modified - Submission comments ___picture___ ___name__",
+    "2 ore Ultima modifica - Commenti alle consegne ___picture___ ___n"
+   ],
+   "project": [
+    "project upload Bloqueado SERGIO SURIANO 19 de junho de 2026 SERGIO SURIANO 19 de junho de 2026 0 Marcar este tópico com estrela",
+    "project upload - exam session September 4th Bloqueado SERGIO SURIANO 2 de setembro de 2026 SERGIO SURIANO 2 de setembro de 2026",
+    "project upload - exam session September 4th Bloccata SERGIO SURIANO 2 set 2026 SERGIO SURIANO 2 set 2026 0 Inserisci tra le pref"
+   ]
+  },
+  "sitting": {
+   "activity": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+   "exam_date": "18/09/2026",
+   "booking_opens": "29/08/2026",
+   "booking_closes": "13/09/2026",
+   "attendance": "P",
+   "enrolled": "6",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19715&ADSCE_ID=10923420&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "SURIANO SERGIO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATION-AND-MARKETING-18-0.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "project component"
+  ],
+  "p_pass": 0.35,
+  "cost_per_pass": 120,
+  "measured": true,
+  "tier": "C"
+ },
+ {
+  "code": "509536",
+  "name": "ITALIAN LANGUAGE FOR FOREIGN STUDENTS",
+  "cfu": 3,
+  "material": {
+   "files": 110,
+   "slides": 6,
+   "notes": 83,
+   "video_items": 38,
+   "figures": 0
+  },
+  "papers": 14,
+  "solutions": 1,
+  "year_range": null,
+  "questions": 84,
+  "predictability": 1,
+  "predictability_basis": "77 distinct archetypes across 14 papers; 0 of 84 questions (0%) fall into 0 archetypes that recur in more than one paper",
+  "hours_low": 60,
+  "hours_high": 78,
+  "hours_workings": "content 12 topics x 3h = 36h; drill 6 papers x 2h x 2 passes = 24h",
+  "confidence": "M",
+  "format_evidence": {
+   "format": [
+    "esame orale Dialoghi esame orale Ficheiro Mensagens Contactos Mensagens selecionadas: 1 &times; Contactos 0 Tem 0 solicitações de c"
+   ]
+  },
+  "sitting": null,
+  "booked": false,
+  "flags": [
+   "oral component"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 200,
+  "measured": true,
+  "tier": "C"
+ },
+ {
+  "code": "504703",
+  "name": "COMPUTER VISION",
+  "cfu": 6,
+  "material": {
+   "files": 0,
+   "slides": 0,
+   "notes": 0,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 16,
+  "hours_high": 21,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 1 papers x 2h x 2 passes = 4h",
+  "confidence": "L",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "COMPUTER VISION",
+   "exam_date": "22/09/2026",
+   "booking_opens": "02/09/2026",
+   "booking_closes": "17/09/2026",
+   "attendance": "P",
+   "enrolled": "0",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10868&ATT_DID_ESA_ID=21285&ADSCE_ID=10923423&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "PORTA MARCO (Presidente), ALDEA EMANUEL (Membro Effettivo), LOMBARDI LUCA (Membro Effettivo)",
+    "notes": "Ora e aula sono riporati nel sito di Facoltà: http://webing.unipv.eu/didattica/appelli-desame/, Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-COMPUTER-VISION-22-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable",
+   "DATA INCOMPLETE - no material collected"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 53,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "C"
+ },
+ {
+  "code": "508207",
+  "name": "PROJECT WORK",
+  "cfu": 3,
+  "material": {
+   "files": 0,
+   "slides": 0,
+   "notes": 0,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 16,
+  "hours_high": 21,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 1 papers x 2h x 2 passes = 4h",
+  "confidence": "L",
+  "format_evidence": {
+   "project": [
+    "PROJECT WORK | Kiro Skip to main content 30 Notifications You have no notifications See all 0 There are 0 unread conversations Brick",
+    "Project work and thesis proposals Collapse Expand Project work and thesis proposals Select activity Proposals Proposals Database Top",
+    "Project Work or thesis"
+   ]
+  },
+  "sitting": {
+   "activity": "PROJECT WORK",
+   "exam_date": "14/10/2026",
+   "booking_opens": "24/09/2026",
+   "booking_closes": "09/10/2026",
+   "attendance": "P",
+   "enrolled": "0",
+   "detail_url": null
+  },
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable",
+   "DATA INCOMPLETE - no material collected",
+   "project component"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 53,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "C"
+ },
+ {
+  "code": "510638",
+  "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+  "cfu": 6,
+  "material": {
+   "files": 30,
+   "slides": 9,
+   "notes": 12,
+   "video_items": 12,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 16,
+  "hours_high": 21,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 1 papers x 2h x 2 passes = 4h",
+  "confidence": "L",
+  "format_evidence": {
+   "format": [
+    "Written Exam Bloqueado MARCO VIVIANI 7 de setembro de 2026 MARCO VIVIANI 7 de setembro de 2026 0 Marcar este tópico com estrela Publ",
+    "Written Exam &amp; Projects) Bloqueado MARCO VIVIANI 3 de agosto de 2026 MARCO VIVIANI 3 de agosto de 2026 0 Marcar este tópico com",
+    "Written Exam &amp; Projects) and Important Notice Bloqueado MARCO VIVIANI 4 de julho de 2026 MARCO VIVIANI 4 de julho de 2026 0 Marc"
+   ],
+   "project": [
+    "Project instructions Project instructions File Seleziona sezione Internet and Web Technologies Minimizza Espandi Internet and We",
+    "Project Presentations Bloqueado MARCO VIVIANI 27 de julho de 2026 MARCO VIVIANI 27 de julho de 2026 0 Marcar este tópico com est",
+    "Project Presentation Schedule and Options Bloqueado MARCO VIVIANI 14 de julho de 2026 MARCO VIVIANI 14 de julho de 2026 0 Marcar"
+   ]
+  },
+  "sitting": {
+   "activity": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
+   "exam_date": "24/09/2026",
+   "booking_opens": "04/09/2026",
+   "booking_closes": "19/09/2026",
+   "attendance": "P",
+   "enrolled": "1",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=8&CDS_ESA_ID=10589&ATT_DID_ESA_ID=20711&ADSCE_ID=10923415&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "VIVIANI MARCO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS-24-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable",
+   "project component"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 53,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "C"
+ },
+ {
+  "code": "509519",
+  "name": "ETHICS, LAW AND AI",
+  "cfu": 12,
+  "material": {
+   "files": 3,
+   "slides": 1,
+   "notes": 1,
+   "video_items": 9,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 22,
+  "hours_high": 29,
+  "hours_workings": "content 4 topics x 4h = 16h; drill 1 papers x 3h x 2 passes = 6h",
+  "confidence": "L",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "ETHICS, LAW AND AI",
+   "exam_date": "16/09/2026",
+   "booking_opens": "27/08/2026",
+   "booking_closes": "11/09/2026",
+   "attendance": "P",
+   "enrolled": "5",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=24&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19705&ADSCE_ID=10508558&AA_OFF_ID=2024&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "FAROLDI FEDERICO (Presidente), REDAELLI ROBERTO (Membro Effettivo)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-ETHICS-LAW-AND-AI-16-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 73,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "C"
+ },
+ {
+  "code": "509493",
+  "name": "STATISTICAL MODELLING",
+  "cfu": 6,
+  "material": {
+   "files": 0,
+   "slides": 0,
+   "notes": 0,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 22,
+  "hours_high": 29,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 1 papers x 2h x 2 passes = 4h",
+  "confidence": "L",
+  "format_evidence": {
+   "format": []
+  },
+  "sitting": {
+   "activity": "STATISTICAL MODELLING",
+   "exam_date": "24/09/2026",
+   "booking_opens": "04/09/2026",
+   "booking_closes": "19/09/2026",
+   "attendance": "P",
+   "enrolled": "7",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=19&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19710&ADSCE_ID=10923413&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "D'ANGELO LAURA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-STATISTICAL-MODELLING-24-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable",
+   "DATA INCOMPLETE - no material collected"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 73,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "C"
+ },
+ {
+  "code": "509535",
+  "name": "FINAL EXAM",
+  "cfu": 3,
+  "material": {
+   "files": 0,
+   "slides": 0,
+   "notes": 0,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 0,
+  "solutions": 0,
+  "year_range": null,
+  "questions": 0,
+  "predictability": null,
+  "predictability_basis": "not measurable - 0 questions from 0 paper(s)",
+  "hours_low": 16,
+  "hours_high": 21,
+  "hours_workings": "content 4 topics x 3h = 12h; drill 1 papers x 2h x 2 passes = 4h",
+  "confidence": "L",
+  "format_evidence": {},
+  "sitting": null,
+  "booked": false,
+  "flags": [
+   "no past papers",
+   "predictability not measurable",
+   "DATA INCOMPLETE - no material collected"
+  ],
+  "p_pass": 0.3,
+  "cost_per_pass": 53,
+  "measured": false,
+  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
+  "tier": "—"
+ }
+]
