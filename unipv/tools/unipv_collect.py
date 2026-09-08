@@ -588,6 +588,72 @@ def collect_kiro(only: list[str] | None) -> int:
     return 0
 
 
+# --------------------------------------------------------------- public -----
+# Some courses publish their material outside Kiro entirely. Statistical
+# Modelling links three GitHub Pages sites from its course page and puts
+# nothing on Kiro itself, which is why it scored zero material while having
+# years of worked exercises and an exam practice paper in the open.
+PUBLIC_SITES = {
+    "509493": [
+        "https://laura-dangelo.github.io/statistical_modelling2526/",
+        "https://laura-dangelo.github.io/statistical_modelling2425/",
+        "https://laura-dangelo.github.io/statistical_modelling/",
+    ],
+}
+PUBLIC_EXT = {".pdf", ".zip", ".csv", ".r", ".rmd", ".txt", ".ipynb"}
+
+
+def collect_public(only: list[str] | None) -> int:
+    """Fetch course material published on the open web, not on Kiro."""
+    esse3 = json.loads((DATA / "esse3.json").read_text())
+    names = {a["code"]: a["name"] for a in esse3["remaining"]}
+    targets = {c: v for c, v in PUBLIC_SITES.items() if not only or c in only}
+
+    import requests
+
+    http = requests.Session()
+    http.headers["User-Agent"] = config.USER_AGENT
+    total = 0
+    for code, sites in targets.items():
+        folder = RAW / f"{code}-{slug(names.get(code, code), 40)}" / "_public"
+        folder.mkdir(parents=True, exist_ok=True)
+        for site in sites:
+            try:
+                page = http.get(site, timeout=30)
+            except Exception as exc:  # noqa: BLE001
+                log("public", site=site, error=repr(exc))
+                print(f"    {site} FAILED {type(exc).__name__}")
+                continue
+            (folder / f"_index-{slug(site, 50)}.html").write_text(page.text)
+            hrefs = re.findall(r'href="([^"]+)"', page.text)
+            got = 0
+            for href in hrefs:
+                url = urllib.parse.urljoin(site, href)
+                if Path(urllib.parse.urlparse(url).path).suffix.lower() not in PUBLIC_EXT:
+                    continue
+                name = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+                target = folder / slug(Path(name).stem, 60) + Path(name).suffix \
+                    if False else folder / re.sub(r"[^0-9A-Za-z._-]+", "_", name)
+                if target.exists() and target.stat().st_size:
+                    continue
+                try:
+                    blob = http.get(url, timeout=60)
+                except Exception as exc:  # noqa: BLE001
+                    log("public", url=url, error=repr(exc))
+                    continue
+                if blob.status_code != 200 or not blob.content:
+                    continue
+                target.write_bytes(blob.content)
+                log("public", url=url, path=str(target.relative_to(ROOT)),
+                    bytes=len(blob.content))
+                got += 1
+                time.sleep(0.2)
+            total += got
+            print(f"    {code} {site.rsplit('/', 2)[-2]:<28} {got} files")
+    print(f"\n  {total} files fetched from public course sites")
+    return 0
+
+
 # ------------------------------------------------------------- discover -----
 def search_courses(handle, term: str) -> list[dict]:
     """Every Kiro course matching a term, enrolled or not.
@@ -846,8 +912,8 @@ def collect_inventory() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode",
-                        choices=["esse3", "kiro", "discover", "syllabus", "inventory"])
+    parser.add_argument("mode", choices=["esse3", "kiro", "discover", "public",
+                                        "syllabus", "inventory"])
     parser.add_argument("--no-enrol", action="store_true",
                         help="discover only; do not self-enrol")
     parser.add_argument("--only", help="comma-separated course codes (kiro only)")
@@ -858,6 +924,8 @@ def main() -> int:
         return collect_esse3()
     if args.mode == "kiro":
         return collect_kiro(args.only.split(",") if args.only else None)
+    if args.mode == "public":
+        return collect_public(args.only.split(",") if args.only else None)
     if args.mode == "discover":
         return collect_discover(args.only.split(",") if args.only else None,
                                 enrol=not args.no_enrol)
