@@ -60,6 +60,8 @@ MAX_FIGURES_PER_DOC = 80    # a runaway document should not swamp the index
 PATTERNS = {
     "SOLUTIONS": r"soluzion|solution|svolgiment|answer.?key|risolt|con.?sol|_sol\b|risposte",
     "PAST_PAPER": (r"appell|prova.?d.?esame|prova.?scritt|compito|esame\d*\b|exam\d*\b|"
+                   r"\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|gen|"
+                   r"mag|giu|lug|ago|set|ott|dic)[a-z]*\s+20\d\d|"
                    r"esame.?di|past.?paper|mock|simulazione|testo.?esame|tema.?d.?esame|"
                    r"\d{1,2}[-_ .]\d{1,2}[-_ .]\d{2,4}"),
     "ASSIGNMENT": r"assignment|homework|progett|project|consegna|rubric|elaborato|task\d|lab\d",
@@ -72,6 +74,19 @@ ORDER = ["SOLUTIONS", "PAST_PAPER", "ASSIGNMENT", "ADMIN", "NOTES", "SLIDES"]
 OCR_ROLES = {"PAST_PAPER", "SOLUTIONS"}
 
 DATE = re.compile(r"(\d{1,2})[-_ ./](\d{1,2})[-_ ./](\d{2,4})")
+# Papers are very often named by month rather than by number - '19 September
+# 2023', 'exam test JULY24', 'esame 5 giugno 2024'.
+MONTHS = {m: n for n, names in enumerate(
+    [("january", "gennaio", "jan", "gen"), ("february", "febbraio", "feb"),
+     ("march", "marzo", "mar"), ("april", "aprile", "apr"),
+     ("may", "maggio", "mag"), ("june", "giugno", "jun", "giu"),
+     ("july", "luglio", "jul", "lug"), ("august", "agosto", "aug", "ago"),
+     ("september", "settembre", "sep", "sept", "set"),
+     ("october", "ottobre", "oct", "ott"), ("november", "novembre", "nov"),
+     ("december", "dicembre", "dec", "dic")], start=1) for m in names}
+MONTH_DATE = re.compile(
+    r"\b(?:(\d{1,2})\s*)?(" + "|".join(sorted(MONTHS, key=len, reverse=True))
+    + r")\s*(\d{2,4})?\b", re.I)
 POINTS = re.compile(r"\b(?:punt[io]|points?|marks?|pt)\s*[:.]?\s*(\d{1,2})|\((\d{1,2})\s*"
                     r"(?:punt[io]|points?|marks?)\)", re.I)
 
@@ -108,14 +123,27 @@ def to_pdf(source: Path, out_dir: Path) -> Path | None:
     return target
 
 
+def _words(text: str) -> str:
+    """Separators to spaces, so word boundaries actually fire.
+
+    '_' '-' and '.' are word characters to a regex engine or sit inside one, so
+    /exam\d*\b/ never matches 'exam_test_JULY24.pdf' and
+    /\d{1,2}[-_ .]\d{1,2}/ never sees '19 September' in
+    '2023_19_September_2023'. Both silently classified 15 past papers as notes.
+    This is the third time this bug class has cost real data; it is the same
+    normalisation gradplan.drillbank already does.
+    """
+    return re.sub(r"[_\-.]+", " ", text)
+
+
 def classify(path: Path, head: str) -> str:
     """SLIDES / NOTES / PAST_PAPER / SOLUTIONS / ASSIGNMENT / ADMIN."""
     # A .ppsx called "Chapter 12" is a deck, not a chapter. The container
     # format is the more reliable signal, so it wins over the filename.
     if path.suffix.lower() in {".ppt", ".pptx", ".ppsx", ".pps", ".odp"}:
         return "SLIDES"
-    name = path.name.lower()
-    parents = " ".join(p.lower() for p in path.parts[-3:-1])
+    name = _words(path.name.lower())
+    parents = " ".join(_words(p.lower()) for p in path.parts[-3:-1])
     haystack = f"{parents} {name}"
     for role in ORDER:
         if re.search(PATTERNS[role], haystack):
@@ -136,11 +164,21 @@ def classify(path: Path, head: str) -> str:
 
 
 def exam_date(path: Path, head: str) -> str | None:
-    for source in (path.name, head[:600]):
+    for source in (_words(path.name), head[:600]):
         found = DATE.search(source)
         if not found:
-            continue
-        day, month, year = found.groups()
+            named = MONTH_DATE.search(source)
+            if not named:
+                continue
+            day = named.group(1) or "1"
+            month = str(MONTHS[named.group(2).lower()])
+            # The archive files sittings under a year folder, and that prefix
+            # survives into the name, so use it when the name carries no year.
+            year = named.group(3) or (re.search(r"\b(20\d\d)\b", source) or ["", ""])[1]
+            if not year:
+                continue
+        else:
+            day, month, year = found.groups()
         if not (1 <= int(day) <= 31 and 1 <= int(month) <= 12):
             continue
         year = int(year)
