@@ -50,6 +50,11 @@ OFFICE_EXT = {".doc", ".docx", ".ppt", ".pptx", ".ppsx", ".pps", ".odt", ".odp",
 # they are invisible to classification and contribute no questions - 30 of the
 # student's own past papers would simply vanish.
 IMAGE_EXT = {".jpg", ".jpeg", ".png"}
+# Several courses ship each sitting as a zip holding the paper beside its
+# solution files. Computational Logic publishes solved papers for 2022-2026
+# that way - 36 archives - and leaving them closed made a course with years of
+# sittings look like a single exam in four lettered variants.
+ARCHIVE_EXT = {".zip"}
 FIGURE_DPI = 200
 MIN_FIGURE_PT = 60.0        # ignore bullets, rules and logos
 TEMPLATE_SHARE = 0.30       # an image on a third of the pages is furniture
@@ -140,6 +145,39 @@ def _words(text: str) -> str:
     normalisation gradplan.drillbank already does.
     """
     return re.sub(r"[_\-.]+", " ", text)
+
+
+def expand_archives(folder: Path) -> int:
+    """Unpack every zip once, into _unzipped/<archive stem>/."""
+    import zipfile
+
+    made = 0
+    for archive in sorted(folder.rglob("*.zip")):
+        if "_unzipped" in archive.parts:
+            continue
+        target = folder / "_unzipped" / slugish(archive.stem)
+        if target.exists():
+            continue
+        try:
+            with zipfile.ZipFile(archive) as zf:
+                for member in zf.infolist():
+                    name = Path(member.filename).name
+                    if member.is_dir() or not name or name.startswith("."):
+                        continue
+                    if Path(name).suffix.lower() not in (
+                            {".pdf"} | OFFICE_EXT | IMAGE_EXT
+                            | {".txt", ".md", ".csv", ".py", ".ipynb", ".smt2"}):
+                        continue
+                    target.mkdir(parents=True, exist_ok=True)
+                    (target / name).write_bytes(zf.read(member))
+                    made += 1
+        except Exception:  # noqa: BLE001 - a corrupt archive is not fatal
+            continue
+    return made
+
+
+def slugish(text: str) -> str:
+    return re.sub(r"[^0-9A-Za-z]+", "-", text).strip("-")[:60] or "archive"
 
 
 def classify(path: Path, head: str) -> str:
@@ -382,6 +420,7 @@ def main() -> int:
         code = folder.name.split("-")[0]
         if only and code not in only:
             continue
+        unpacked = expand_archives(folder)
         # Convert Office documents first so everything downstream sees a PDF.
         converted: dict[Path, Path] = {}
         office = sorted(p for p in folder.rglob("*")
@@ -497,11 +536,12 @@ def main() -> int:
             "code": code, "name": folder.name.split("-", 1)[-1].replace("-", " ")[:34],
             "files": len(entries), "scanned": scanned, "ocred": ocred,
             "figures": len(figures), "papers": papers, "converted": len(converted),
+            "unpacked": unpacked,
             "questions": sum(1 for q in questions if q["course"] == code),
             "roles": Counter(e["role"] for e in entries),
         })
         print(f"  {code} done: {len(entries)} files, {len(figures)} figures, "
-              f"{papers} papers")
+              f"{papers} papers" + (f", {unpacked} unpacked from zips" if unpacked else ""))
 
     (DATA / "classified.json").write_text(json.dumps(classified, indent=1, ensure_ascii=False))
     with (DATA / "questions.jsonl").open("w") as handle:
