@@ -156,7 +156,9 @@ def classify(path: Path, head: str) -> str:
     if re.search(PATTERNS["SOLUTIONS"], front):
         return "SOLUTIONS"
     if re.search(r"prova.?scritt|appello|compito|esercizi[oz]|punti\s*\d|durata|"
-                 r"tempo a disposizione", front):
+                 r"tempo a disposizione|past exam|exam session|written exam|"
+                 r"esame scritto|mock exam|final exam|exam \d{1,2}[/ ]|"
+                 r"answer the following", front):
         return "PAST_PAPER"
     if re.search(PATTERNS["ADMIN"], front):
         return "ADMIN"
