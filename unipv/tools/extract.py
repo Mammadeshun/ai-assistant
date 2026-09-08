@@ -470,6 +470,11 @@ def main() -> int:
                                              entry["role"], paired)
 
         if figures:
+            # extract_figures() creates this directory, but the image-OCR path
+            # above appends photographed papers to `figures` without going
+            # through it. A course with photos and no PDFs - Brain Modelling -
+            # therefore reached this write with no directory and died.
+            fig_dir.mkdir(parents=True, exist_ok=True)
             (fig_dir / "index.json").write_text(json.dumps(figures, indent=1,
                                                            ensure_ascii=False))
         classified[code] = entries
