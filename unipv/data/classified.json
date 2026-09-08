@@ -20032,5 +20032,1293 @@
    "scanned": false,
    "exam_date": null
   }
+ ],
+ "510109": [
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/1_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/1_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/1_HMW.txt",
+   "role": "NOTES",
+   "chars": 2936,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/1_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/1_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/1_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 29200,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/2_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/2_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/2_HMW.txt",
+   "role": "NOTES",
+   "chars": 2463,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/2_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/2_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/2_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 15871,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/3_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/3_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/3_HMW.txt",
+   "role": "NOTES",
+   "chars": 2133,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/3_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/3_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/3_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 11146,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/4_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/4_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/4_HMW.txt",
+   "role": "NOTES",
+   "chars": 3139,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/4_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/4_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/4_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 26614,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/5_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/5_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/5_HMW.txt",
+   "role": "NOTES",
+   "chars": 4129,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/5_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/5_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/5_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 32504,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/ConfidenceIntervals.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/ConfidenceIntervals.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/ConfidenceIntervals.txt",
+   "role": "NOTES",
+   "chars": 48728,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/HypothesisTesting.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/HypothesisTesting.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/HypothesisTesting.txt",
+   "role": "NOTES",
+   "chars": 58972,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L1.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L1.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L1.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L10.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L10.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L10.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L11.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L11.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L11.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L12.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L12.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L12.txt",
+   "role": "SLIDES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L13.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L13.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L13.txt",
+   "role": "SLIDES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L14.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L14.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L14.txt",
+   "role": "NOTES",
+   "chars": 41,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L15.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L15.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L15.txt",
+   "role": "NOTES",
+   "chars": 40,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L16.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L16.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L16.txt",
+   "role": "SLIDES",
+   "chars": 40,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L2.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L2.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L2.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L3.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L3.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L3.txt",
+   "role": "SLIDES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L4.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L4.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L4.txt",
+   "role": "NOTES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L5.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L5.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L5.txt",
+   "role": "SLIDES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L6.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L6.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L6.txt",
+   "role": "SLIDES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L7.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L7.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L7.txt",
+   "role": "SLIDES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L8.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L8.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L8.txt",
+   "role": "SLIDES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L9.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/L9.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/L9.txt",
+   "role": "NOTES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/Linear Regression Model.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/Linear Regression Model.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/Linear Regression Model.txt",
+   "role": "NOTES",
+   "chars": 41038,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/exam_20230726_solutions.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/exam_20230726_solutions.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/exam_20230726_solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 16684,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/mock.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/mock.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/mock.txt",
+   "role": "PAST_PAPER",
+   "chars": 4236,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/pointEstimationModified.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/pointEstimationModified.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/pointEstimationModified.txt",
+   "role": "NOTES",
+   "chars": 190862,
+   "scanned": false,
+   "exam_date": "2023-03-01"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/previous_exam_solutions.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/previous_exam_solutions.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2023/previous_exam_solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 13840,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/1_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/1_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/1_HMW.txt",
+   "role": "NOTES",
+   "chars": 2936,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/1_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/1_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/1_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 29200,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/2_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/2_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/2_HMW.txt",
+   "role": "NOTES",
+   "chars": 2463,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/2_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/2_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/2_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 15871,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/3_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/3_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/3_HMW.txt",
+   "role": "NOTES",
+   "chars": 2133,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/3_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/3_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/3_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 11146,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/4_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/4_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/4_HMW.txt",
+   "role": "NOTES",
+   "chars": 3139,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/4_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/4_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/4_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 26614,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/5_HMW.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/5_HMW.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/5_HMW.txt",
+   "role": "NOTES",
+   "chars": 4129,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/5_HMW_sol.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/5_HMW_sol.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/5_HMW_sol.txt",
+   "role": "SOLUTIONS",
+   "chars": 32504,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/ConfidenceIntervals.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/ConfidenceIntervals.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/ConfidenceIntervals.txt",
+   "role": "NOTES",
+   "chars": 48728,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/HypothesisTesting.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/HypothesisTesting.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/HypothesisTesting.txt",
+   "role": "NOTES",
+   "chars": 58972,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L1.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L1.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L1.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L10.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L10.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L10.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L11.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L11.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L11.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L12.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L12.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L12.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L13.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L13.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L13.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L14.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L14.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L14.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L15.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L15.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L15.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L16.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L16.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L16.txt",
+   "role": "NOTES",
+   "chars": 10,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L2.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L2.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L2.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L3.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L3.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L3.txt",
+   "role": "SLIDES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L4.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L4.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L4.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L5.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L5.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L5.txt",
+   "role": "NOTES",
+   "chars": 39,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L6.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L6.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L6.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L7.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L7.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L7.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L8.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L8.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L8.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L9.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/L9.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/L9.txt",
+   "role": "NOTES",
+   "chars": 9,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/Linear Regression Model.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/Linear Regression Model.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/Linear Regression Model.txt",
+   "role": "NOTES",
+   "chars": 41038,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/mock.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/mock.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/mock.txt",
+   "role": "PAST_PAPER",
+   "chars": 4236,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/pointEstimationModified.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/pointEstimationModified.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILIT-510109-10589-2024/pointEstimationModified.txt",
+   "role": "NOTES",
+   "chars": 190862,
+   "scanned": false,
+   "exam_date": "2023-03-01"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/00_sampling.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/00_sampling.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/00_sampling.txt",
+   "role": "NOTES",
+   "chars": 62731,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/01_intro.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/01_intro.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/01_intro.txt",
+   "role": "NOTES",
+   "chars": 18546,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/02_frequency.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/02_frequency.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/02_frequency.txt",
+   "role": "NOTES",
+   "chars": 14339,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/03_graph.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/03_graph.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/03_graph.txt",
+   "role": "SLIDES",
+   "chars": 6813,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/04_location.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/04_location.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/04_location.txt",
+   "role": "NOTES",
+   "chars": 24089,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/05_variability.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/05_variability.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/05_variability.txt",
+   "role": "NOTES",
+   "chars": 16232,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/06_interval estimation.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/06_interval estimation.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/06_interval estimation.txt",
+   "role": "NOTES",
+   "chars": 87526,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/06_shape.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/06_shape.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/06_shape.txt",
+   "role": "SLIDES",
+   "chars": 4956,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/Notes 30 march.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/Notes 30 march.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/Notes 30 march.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/attachment R.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/attachment R.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/attachment R.txt",
+   "role": "NOTES",
+   "chars": 4684,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/class notes 17 04.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/class notes 17 04.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/class notes 17 04.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/esercizi.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/esercizi.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/esercizi.txt",
+   "role": "NOTES",
+   "chars": 8607,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/esericizi slides soluzioni.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/esericizi slides soluzioni.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/esericizi slides soluzioni.txt",
+   "role": "SOLUTIONS",
+   "chars": 33085,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/exe_loc_var.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/exe_loc_var.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/exe_loc_var.txt",
+   "role": "SOLUTIONS",
+   "chars": 22092,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/frequency_distribution_exercises.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/frequency_distribution_exercises.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/frequency_distribution_exercises.txt",
+   "role": "NOTES",
+   "chars": 30070,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer.txt",
+   "role": "NOTES",
+   "chars": 20261,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer_p1.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer_p1.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/hypothesis_testing_beamer_p1.txt",
+   "role": "NOTES",
+   "chars": 58125,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 04 05 2026.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 04 05 2026.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 04 05 2026.txt",
+   "role": "PAST_PAPER",
+   "chars": 2367,
+   "scanned": true,
+   "exam_date": "2026-05-04"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p1.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p1.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p1.txt",
+   "role": "PAST_PAPER",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": "2026-04-24"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p2.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p2.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 24 april 2026 p2.txt",
+   "role": "PAST_PAPER",
+   "chars": 718,
+   "scanned": true,
+   "exam_date": "2026-04-24"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/point estimation - p1.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/point estimation - p1.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/point estimation - p1.txt",
+   "role": "NOTES",
+   "chars": 51316,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/proofs.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/proofs.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/proofs.txt",
+   "role": "NOTES",
+   "chars": 6270,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/soluz_v2.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/soluz_v2.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/soluz_v2.txt",
+   "role": "SOLUTIONS",
+   "chars": 31254,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/soluzioni esercizi.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/soluzioni esercizi.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/PROBABILITY-AND-STATISTICAL-INFERENCE/soluzioni esercizi.txt",
+   "role": "SOLUTIONS",
+   "chars": 30177,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_converted/notes 1 30 march.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/notes 1 30 march.docx",
+   "converted": true,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/_converted/notes 1 30 march.txt",
+   "role": "NOTES",
+   "chars": 820,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/a3d73565-501d-4fb0-9662-886d00529784_260801_144042.pdf",
+   "original": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_student/a3d73565-501d-4fb0-9662-886d00529784_260801_144042.pdf",
+   "converted": false,
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/_text/_student/a3d73565-501d-4fb0-9662-886d00529784_260801_144042.txt",
+   "role": "SOLUTIONS",
+   "chars": 5119,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/Apple.csv",
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2023/Apple.csv",
+   "role": "NOTES",
+   "chars": 5762,
+   "scanned": false,
+   "exam_date": "2023-05-14"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/Apple.csv",
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILIT-510109-10589-2024/Apple.csv",
+   "role": "NOTES",
+   "chars": 5762,
+   "scanned": false,
+   "exam_date": "2023-05-14"
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/cure.csv",
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/cure.csv",
+   "role": "NOTES",
+   "chars": 106,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/students2.txt",
+   "text": "raw/510109-PROBABILITY-AND-STATISTICAL-INFERENCE/PROBABILITY-AND-STATISTICAL-INFERENCE/students2.txt",
+   "role": "NOTES",
+   "chars": 37586,
+   "scanned": false,
+   "exam_date": "2020-01-19"
+  }
+ ],
+ "510638": [
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/00_WSA_Intro _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/00_WSA_Intro _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/00_WSA_Intro _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 17347,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/00_WSA_Project _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/00_WSA_Project _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/00_WSA_Project _2025-26_.txt",
+   "role": "ASSIGNMENT",
+   "chars": 5791,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/01_WSA_Internet_Web _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/01_WSA_Internet_Web _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/01_WSA_Internet_Web _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 39970,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/02_WSA_The_Social_Web _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/02_WSA_The_Social_Web _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/02_WSA_The_Social_Web _2025-26_.txt",
+   "role": "NOTES",
+   "chars": 27860,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/03_WSA_Network_Graph_Theory _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/03_WSA_Network_Graph_Theory _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/03_WSA_Network_Graph_Theory _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 24391,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/04_WSA_Network_Graph_Theory _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/04_WSA_Network_Graph_Theory _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/04_WSA_Network_Graph_Theory _2025-26_.txt",
+   "role": "NOTES",
+   "chars": 19114,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/05_WSA_Complex_Networks _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/05_WSA_Complex_Networks _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/05_WSA_Complex_Networks _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 22756,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/06_WSA_Metrics_SNA _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/06_WSA_Metrics_SNA _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/06_WSA_Metrics_SNA _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 21274,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/07_WSA_Community_Detection _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/07_WSA_Community_Detection _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/07_WSA_Community_Detection _2025-26_.txt",
+   "role": "NOTES",
+   "chars": 23192,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/08_WSA_Community_Detection _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/08_WSA_Community_Detection _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/08_WSA_Community_Detection _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 36225,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/09_WSA_Sentiment_Analysis _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/09_WSA_Sentiment_Analysis _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/09_WSA_Sentiment_Analysis _2025-26_.txt",
+   "role": "NOTES",
+   "chars": 36323,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/10_WSA_Sentiment_Analysis _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/10_WSA_Sentiment_Analysis _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/10_WSA_Sentiment_Analysis _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 16003,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/11_WSA_NER_NEL_NED _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/11_WSA_NER_NEL_NED _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/11_WSA_NER_NEL_NED _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 35860,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/12_Search _2025-26_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/12_Search _2025-26_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/12_Search _2025-26_.txt",
+   "role": "SLIDES",
+   "chars": 32227,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB1_WEB.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB1_WEB.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB1_WEB.txt",
+   "role": "ASSIGNMENT",
+   "chars": 32283,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB2_WEB.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB2_WEB.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB2_WEB.txt",
+   "role": "ASSIGNMENT",
+   "chars": 6753,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB3_WEB.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB3_WEB.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB3_WEB.txt",
+   "role": "ASSIGNMENT",
+   "chars": 19620,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB4_WEB.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB4_WEB.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB4_WEB.txt",
+   "role": "ASSIGNMENT",
+   "chars": 11317,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB5_WEB.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB5_WEB.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB5_WEB.txt",
+   "role": "ASSIGNMENT",
+   "chars": 1684,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB6_WEB_2026_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB6_WEB_2026_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB6_WEB_2026_.txt",
+   "role": "ASSIGNMENT",
+   "chars": 3933,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB7_WEB_2026_.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB7_WEB_2026_.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB7_WEB_2026_.txt",
+   "role": "ASSIGNMENT",
+   "chars": 8092,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB8_Gen_IR.pdf",
+   "original": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB8_Gen_IR.pdf",
+   "converted": false,
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/_text/WEB-AND-SO-510638-10589-2025/LAB8_Gen_IR.txt",
+   "role": "ASSIGNMENT",
+   "chars": 10823,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/0.Basic Retrieval additional Examples.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/0.Basic Retrieval additional Examples.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/05_Sentiment_Analysis.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/05_Sentiment_Analysis.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/1.Basic_Retrieval_and_Social_Search.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/1.Basic_Retrieval_and_Social_Search.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB_8ipynb.ipynb",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/LAB_8ipynb.ipynb",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/edges.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/edges.csv",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/hp_script.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/hp_script.csv",
+   "role": "NOTES",
+   "chars": 67023,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/nodes.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/nodes.csv",
+   "role": "NOTES",
+   "chars": 200000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/queries.csv",
+   "text": "raw/510638-WEB-AND-SOCIAL-MEDIA-SEARCH-AND-ANALYSIS/WEB-AND-SO-510638-10589-2025/queries.csv",
+   "role": "NOTES",
+   "chars": 63378,
+   "scanned": false,
+   "exam_date": null
+  }
+ ],
+ "509494": [
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-16.jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-16.jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-16.txt",
+   "role": "PAST_PAPER",
+   "chars": 955,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2026-06-18"
+  },
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17 (2).jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17 (2).jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-17 (2).txt",
+   "role": "PAST_PAPER",
+   "chars": 523,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17.jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-17.jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-17.txt",
+   "role": "PAST_PAPER",
+   "chars": 457,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-18.jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-18.jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-18.txt",
+   "role": "PAST_PAPER",
+   "chars": 133,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-20.jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-20.jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-20.txt",
+   "role": "PAST_PAPER",
+   "chars": 714,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2024-02-01"
+  },
+  {
+   "path": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-21.jpg",
+   "original": "raw/509494-BRAIN-MODELLING/_student/photo_2026-08-01_14-51-21.jpg",
+   "converted": false,
+   "text": "raw/509494-BRAIN-MODELLING/_text/_student/photo_2026-08-01_14-51-21.txt",
+   "role": "PAST_PAPER",
+   "chars": 811,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2025-01-01"
+  }
  ]
 }
