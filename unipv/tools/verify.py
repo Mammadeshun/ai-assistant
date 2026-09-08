@@ -31,6 +31,7 @@ import json
 import re
 import subprocess
 import sys
+from functools import lru_cache
 from collections import defaultdict
 from pathlib import Path
 
@@ -43,6 +44,10 @@ A4_PT = (595, 842)
 A4_TOLERANCE = 6
 MARGIN_CM = 2.0
 MARGIN_PT = MARGIN_CM * 72 / 2.54
+# Sub-millimetre overhang is hinting, not a defect: a bullet run measured 2pt
+# past the box, which no printer will clip. Flag only what would actually be
+# lost off the edge of the paper.
+MARGIN_TOLERANCE_PT = 6.0
 # U+FFFD only. U+25A1 WHITE SQUARE was in this list and fired 58 times on
 # Knowledge Representation, where it is the modal necessity operator - real
 # mathematics, sitting alongside diamond, subset-eq, sqcap, top and bottom.
@@ -61,14 +66,23 @@ def run(cmd: list[str], timeout: int = 120) -> str:
         return f"ERROR {exc!r}"
 
 
-def page_texts(pdf: Path) -> list[str]:
-    out = []
-    info = run(["pdfinfo", str(pdf)])
-    pages = int((re.search(r"Pages:\s+(\d+)", info) or [0, 1])[1])
-    for number in range(1, pages + 1):
-        out.append(run(["pdftotext", "-f", str(number), "-l", str(number),
-                        "-layout", str(pdf), "-"]))
-    return out
+@lru_cache(maxsize=None)
+def page_texts(pdf: Path) -> tuple[str, ...]:
+    """Text of each page, extracted once.
+
+    This used to spawn one pdftotext per page and was called four times per
+    document - 6336 subprocesses over a 1584-page pack, which is why a check
+    that reads nothing new took longer than building the pack did. One pass
+    with a form-feed split gives the same answer.
+    """
+    body = run(["pdftotext", "-layout", str(pdf), "-"], timeout=300)
+    pages = body.split("\f")
+    # pdftotext writes a form feed after every page, including the last, so a
+    # plain split leaves a phantom empty page and every document reported one
+    # blank page that does not exist - p11 of a 10-page file.
+    if pages and not pages[-1].strip():
+        pages.pop()
+    return tuple(pages)
 
 
 def check_glyphs(pdfs: list[Path]) -> tuple[list[str], list[str]]:
@@ -114,9 +128,8 @@ def check_geometry(pdfs: list[Path]) -> list[str]:
                     # body content breaking out is a defect.
                     if y1 < MARGIN_PT or y0 > box.height - MARGIN_PT:
                         continue
-                    if (x0 < MARGIN_PT - 2 or y0 < MARGIN_PT - 2
-                            or x1 > box.width - MARGIN_PT + 2
-                            or y1 > box.height - MARGIN_PT + 2):
+                    if (x0 < MARGIN_PT - MARGIN_TOLERANCE_PT
+                            or x1 > box.width - MARGIN_PT + MARGIN_TOLERANCE_PT):
                         problems.append(
                             f"{pdf.name} p{number}: text outside the {MARGIN_CM}cm "
                             f"margin box")
@@ -139,7 +152,11 @@ def check_fabrication(pdfs: list[Path]) -> tuple[list[str], int, int]:
         # The pack numbers questions as a heading line "Q7" or "Question 7",
         # with no trailing punctuation; requiring "." or ")" matched almost
         # nothing and then reported the rest as untagged.
-        for match in re.finditer(r"(?m)^\s*(?:Q|Question)\s*(\d+)\s*$", text):
+        # The pack's own headings are exactly "Q7". Accepting "Question 7" too
+        # matched the papers' internal numbering inside question text - a KRR
+        # question that begins "Question 1 What's the meaning of ..." was
+        # counted as an untagged question of ours.
+        for match in re.finditer(r"(?m)^\s*Q(\d+)\s*$", text):
             total += 1
             window = text[match.start(): match.start() + 1200]
             if TAG.search(window):
