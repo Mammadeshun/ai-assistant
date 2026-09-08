@@ -94,3 +94,19 @@ class TestLectureMaterialIsNotAPaper:
 
     def test_dated_script_is_not_an_exam(self):
         assert role("wordle_2025-11-05.py") != "PAST_PAPER"
+
+
+class TestCourseFolderIsNotASignal:
+    """The course directory 509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA
+    contains "programm", which matches the ADMIN pattern, so all 859 of that
+    course's files classified as ADMIN purely from their own folder's name."""
+
+    def test_course_folder_does_not_leak_into_classification(self):
+        p = Path("unipv/raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/"
+                 "ed2025/Prog2025_26_21b_inheritance_double.pdf")
+        assert classify(p, "") != "ADMIN"
+
+    def test_a_real_folder_signal_still_counts(self):
+        """'Exam_Assignments' is genuinely informative about its contents."""
+        p = Path("unipv/raw/509483-COMPUTATIONAL-LOGIC/Exam_Assignments/ex2_1A.pdf")
+        assert classify(p, "") == "PAST_PAPER"
