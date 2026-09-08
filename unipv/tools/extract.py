@@ -149,7 +149,12 @@ def classify(path: Path, head: str) -> str:
     if path.suffix.lower() in {".ppt", ".pptx", ".ppsx", ".pps", ".odp"}:
         return "SLIDES"
     name = _words(path.name.lower())
-    parents = " ".join(_words(p.lower()) for p in path.parts[-3:-1])
+    # Folder names are a real signal - 'Exam_Assignments' tells you what is
+    # inside it - but the course's own directory is not. 509477-COMPUTER-
+    # PROGRAMMING-... contains "programm", which matches the ADMIN pattern, so
+    # every one of that course's 859 files inherited ADMIN from its own name.
+    parents = " ".join(_words(part.lower()) for part in path.parts[-3:-1]
+                       if not re.match(r"^\d{6}-", part))
     haystack = f"{parents} {name}"
     if re.search(PATTERNS["SOLUTIONS"], haystack):
         return "SOLUTIONS"
