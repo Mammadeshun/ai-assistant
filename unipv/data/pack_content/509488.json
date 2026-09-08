@@ -1,0 +1,490 @@
+{
+  "exam_brief": {
+    "Format": "Written exam with open and closed questions, worth up to 32 points. Source: _text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt — 'written exam, consists of open and closed questions (up to 32 points)'.",
+    "Structure": "THREE parts; the final score is the SUM of the three. PART 1: Linguistics (concepts covered with the Linguistics instructor). PART 2: NLP closed questions (multiple-choice / short closed answers). PART 3: NLP open questions (short explanations / reasoning). Source: _text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt — 'Written exam structure: The exam consists of three parts'. Confirmed on the paper itself: the 2025-26 practice sheet is headed 'PART 2 OF 3 - Written Exam of TM&NLP' and 'PART 3 OF 3', and a photographed 28/06/2024 sheet is headed 'PART 1 OF 3' (_text/_student/photo_2026-08-01_14-41-59.txt, _text/_student/photo_2026-08-01_14-41-42.txt).",
+    "Negative marking": "CONFIRMED. Two independent sources. (1) Course Information 2025-26: 'CAUTION on PART 2: penalty for wrong answers: -0.5, blank: 0' (_text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt). (2) The exam paper itself prints, three times, at the top of each closed-question block: 'WRONG ANSWER WILL GET -0.5 POINT! LEAVE IT BLANK FOR 0 POINT' (_text/TEXT-MININ-509488-10589-2025/_TMNLP-2025_2026_ Practice Written Exam.txt). The penalty is stated ONLY for PART 2 (closed questions); no penalty is stated for Parts 1 or 3.",
+    "Pass mark": "18. Source: _text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt — 'minimum passing score: 18'. Same file: 'In case of a final half score, it will then be rounded up. E.g., written exam: 24,5 -> Final score: 25 -> 25/30'; 'Praise (cum laude) is acquired with a final grade greater than (>) 30 -> 30 e lode'. So the paper is marked out of 32 and you need 18 of those 32 raw marks (56%).",
+    "Question count and type (most recent paper)": "PART 2 of the 2025-26 practice paper: 5 True/False items each requiring a one-sentence explanation, 10 five-option multiple-choice items (A-E, where E is always 'None of the above'), and 1 matching exercise with 7 terms and 7 descriptions = 16 items. PART 3: 4 open questions. Source: _text/TEXT-MININ-509488-10589-2025/_TMNLP-2025_2026_ Practice Written Exam.txt. Older sample (23_24): 2 True/False + 2 four-option MCQ + 1 matching (6 terms), then 3 open questions.",
+    "Part 1 marks (one observed instance)": "A photographed Part-1 sheet states its own tariff: 'Exercice 1 and 2 points: 1 (total 2)  Exercice 3, 4 and 5 points: 2 (total 6)' — i.e. 8 marks for that Part 1. Source: _text/TEXT-MININ-509488-10589-2024/example_exam.txt (identical text in _text/_student/2fe5ef70-cb7f-4f4f-af75-4506ae73560d_260801_144248.txt).",
+    "Per-item mark for Part 2": "NOT FOUND — verify with lecturer. No source states what a CORRECT closed answer is worth; only the -0.5 penalty and the 0 for blank are stated. [NOT IN SOURCE — VERIFY] A 32-point paper split 8 (Part 1, as tariffed above) + 16 (16 closed items at 1) + 8 (4 open at 2) is arithmetically consistent, but is a reconstruction, not a quoted fact. The blank-vs-guess arithmetic in 'traps' is given for both 1 mark and 0.5 marks per correct answer so it holds either way.",
+    "Duration": "NOT FOUND — verify with lecturer. No duration appears in any Course Information deck, in _course_text.html, or on any archived paper.",
+    "Allowed materials": "NOT FOUND — verify with lecturer. Nothing in the archived material states whether notes, textbook or calculator are permitted. Note that the papers require hand arithmetic (PPMI with log base 2, TF-IDF with log base 10, BLEU geometric means), so prepare to do it by hand.",
+    "Answer medium": "Answers are written on the question sheet itself: 'Write your answers on this sheet', with a Name / Surname / ID header on every part. Source: _text/TEXT-MININ-509488-10589-2025/_TMNLP-2025_2026_ Practice Written Exam.txt.",
+    "Project": "The 2025-26 Course Information deck contains NO project component — the word 'project' does not appear in it (_text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt). Earlier editions did: 2024-25 offered an OPTIONAL lab project worth -3 to +3 on top of a 30-point written exam (_text/TEXT-MININ-509488-10589-2024/_TMNLP 24-25_ 00. Course Information.pptx.txt); 2023-24 offered up to +3 (_text/TEXT-MININ-509488-10589-2023/_TMNLP 23-24_ 00. Course Information.pptx.txt). The 2025-26 rules moved the written exam from 30 to 32 points and dropped the project. [NOT IN SOURCE — VERIFY] that no project is expected for the September 2026 sitting.",
+    "Excluded this year": "Information Retrieval and Recommender Systems appear to be OUT. The 2025-26 course contents (from _course_text.html) run: Intro to Linguistics, Morphology, Syntax, Semantics and Pragmatics, Exercises, then NLP = Vector Semantics, ngram LM, Dense word vectors (x2), Neural Language Model, Text Classification, Sequence Generation, Transformers, Tokenization, Contextualized Word Embeddings, Pre-trained Models, Machine Translation Evaluation, LLMs. There is no IR or RecSys section, and the 2025-26 practice paper contains no IR or RecSys question. A student file _text/_student/202601.txt headed 'Past Exam January 2026' does contain IR-pipeline, BM25, MAP/P@5/nDCG, RAG, recommender-system and cold-start questions — but that material only ever appeared in the 2022-23 edition of this course (_text/NLP-509488-10589-2022/TEXT MINING AND NLP - INTRODUCTION TO INFORMATION RETRIEVAL.txt, _TEXT MINING AND NLP 2022-23_ DATA STRUCTURES.txt), when Prof. Pasi taught it. [NOT IN SOURCE — VERIFY] whether that file belongs to this course at all; do not spend revision time on IR or RecSys unless the lecturer says otherwise.",
+    "Date and board": "24/09/2026. Type: 'Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line'. Board: RAGANATO ALESSANDRO (Presidente), PASI GABRIELLA (Membro Effettivo). Booking 04/09/2026 - 19/09/2026. Source: unipv/data/scoring.json, row 509488, 'sitting'. Note the mismatch worth knowing about: the 2025-26 teaching pair is Raganato (NLP) + Guasti (Linguistics) per _TMNLP_ 00. Course Information.pptx.txt and _course_text.html, while the Esse3 board lists Pasi as second member.",
+    "Time and room": "NOT FOUND — verify. The Esse3 row for 24/09/2026 has empty 'time' and 'room' fields (unipv/data/scoring.json). The course announcement forum shows a thread '[TM&NLP] Written exam - 10 September 2026 - Updated Start Time', so start times do get revised by announcement — check the Kiro forum in the days before.",
+    "Language of the exam": "English. Every archived paper and every 2025-26 slide deck is in English (_text/TEXT-MININ-509488-10589-2025/*).",
+    "Source": "unipv/raw/509488-TEXT-MINING-AND-NATURAL-LANGUAGE-PROCESS/TEXT-MININ-509488-10589-2025/_course_text.html and _text/TEXT-MININ-509488-10589-2025/_TMNLP_ 00. Course Information.pptx.txt; scoring row unipv/data/scoring.json. Note on source quality: several archived papers are photographs of exam sheets run through OCR (_text/_student/photo_2026-08-01_*.txt) and are partly garbled; wherever they disagree with the clean PDF text of the practice papers, this pack follows the clean PDF text and says so."
+  },
+  "topics": [
+    {
+      "name": "Vector semantics: co-occurrence, PPMI, TF-IDF, cosine",
+      "frequency": "appeared in 9 of the 15 archived paper files — the single most examined block. It is the whole of question 1 in the 22_23 sample (PPMI on a co-occurrence table), the matching exercise in the 23_24 sample (cosine / dot product / orthogonal vectors / vector length / normalization / frequency sensitivity), question 3 of the photographed real paper (TF-IDF, computed by hand), and the Word2Vec/SVD matching item on another photographed sheet.",
+      "blocks": [
+        {"kind": "text", "text": "The distributional idea the course states verbatim: Firth (1957), 'You shall know a word by the company it keeps!' A word is represented by a vector of counts of the contexts it appears in. Raw counts are a bad association measure because they are skewed: 'the' and 'of' are very frequent but not discriminative. Two repairs are examined: PPMI (word-word association) and TF-IDF (word-document weighting)."},
+        {"kind": "heading", "text": "Definitions the examiner expects word for word"},
+        {"kind": "text", "text": "PMI (Church & Hanks 1989): 'Do words x and y co-occur more than if they were independent?' PMI ranges from minus infinity to plus infinity. Negative values are problematic — they mean things co-occur LESS than expected by chance, and they are unreliable without enormous corpora — 'so we just replace negative PMI values by 0'. That is PPMI."},
+        {"kind": "text", "text": "TF-IDF (the hyphen is a hyphen, not a minus sign) is the product of two factors: term frequency tf (Luhn 1957), the number of times t occurs in d, and inverse document frequency idf (Sparck Jones 1972), where N is the total number of documents and df_t is the number of documents containing t. The weight increases with the number of occurrences within a document and increases with the rarity of the term in the collection. The course notes that TF-IDF is 'not generally used for word-word similarity' but 'is by far the most common weighting when we are considering the relationship of words to documents'."},
+        {"kind": "text", "text": "Cosine: the dot product is high when two vectors have large values in the same dimensions, and 0 for orthogonal vectors. But the dot product is longer if the vector is longer, so more frequent words get higher dot products — 'that's bad: we don't want a similarity metric to be sensitive to word frequency'. Solution: divide the dot product by the length of the two vectors. Range: -1 opposite, +1 same direction, 0 orthogonal; with raw frequency or PPMI (non-negative) the range is 0 to 1."},
+        {"kind": "heading", "text": "Formulas in the course's own notation"},
+        {"kind": "math", "text": "\"PMI\"(w_1, w_2) = log_2 frac(P(w_1, w_2), P(w_1) P(w_2))"},
+        {"kind": "math", "text": "\"PPMI\"_(i j) = max(\"PMI\"_(i j), 0)"},
+        {"kind": "math", "text": "p_(i j) = frac(f_(i j), sum_(i=1)^W sum_(j=1)^C f_(i j)) , quad p_(i *) = frac(sum_(j=1)^C f_(i j), sum_(i=1)^W sum_(j=1)^C f_(i j)) , quad p_(* j) = frac(sum_(i=1)^W f_(i j), sum_(i=1)^W sum_(j=1)^C f_(i j))"},
+        {"kind": "math", "text": "\"idf\"_t = log frac(N, \"df\"_t)"},
+        {"kind": "math", "text": "w_(t,d) = frac(\"tf\"_(t,d), max_(t' in d) \"tf\"_(t',d)) dot log_10 frac(N, \"df\"_t)"},
+        {"kind": "math", "text": "cos(v, w) = frac(v dot w, |v| |w|) = frac(sum_(i=1)^N v_i w_i, sqrt(sum_(i=1)^N v_i^2) dot sqrt(sum_(i=1)^N w_i^2))"},
+        {"kind": "figure", "png": "_TMNLP_ 03. Vector Semantics.pptx-p066-7dedfe47.png", "caption": "PMI as the course defines it [_TMNLP_ 03. Vector Semantics.pptx.pdf, p66]", "width": "85%"},
+        {"kind": "figure", "png": "_TMNLP_ 05. Dense word vectors.pptx-p007-530e901f.png", "caption": "Cosine = dot product of unit vectors [_TMNLP_ 05. Dense word vectors.pptx.pdf, p7]", "width": "85%"},
+        {"kind": "heading", "text": "Method: PPMI from a co-occurrence table"},
+        {"kind": "steps", "items": [
+          "If the question gives you new sentences, first update the table: slide a context window of the stated size (5 in the 22_23 paper) over each sentence and add 1 to cell (word, context) for every context word inside the window. Do not add rows or columns that were not already there.",
+          "Sum every cell of the table to get the grand total; call it S.",
+          "For the pair you were asked about, compute p_ij = f_ij / S.",
+          "Compute the row marginal p_i* = (row sum) / S and the column marginal p_*j = (column sum) / S.",
+          "PMI = log base 2 of p_ij / (p_i* times p_*j).",
+          "PPMI = max(PMI, 0). Say out loud that you clip at zero and why.",
+          "Rare-word handling (always asked as a follow-up): PMI is biased toward infrequent events, so very rare words get artificially high values. Two fixes from the slides: (a) give rare context words slightly higher probability by raising the context counts to a power alpha = 0.75; (b) Laplace smoothing — add a small constant k (0.1 to 3 is common) to every count before computing PMI, which discounts the non-zero values; the larger k, the more they are discounted."
+        ]},
+        {"kind": "math", "text": "P_alpha (c) = frac(\"count\"(c)^alpha, sum_c \"count\"(c)^alpha) , quad alpha = 0.75"},
+        {"kind": "heading", "text": "Worked example 1 — PPMI (the course's own numbers)"},
+        {"kind": "text", "text": "From the term-context matrix in the Vector Semantics deck, with grand total 19: p(w = information, c = data) = 6/19 = .32; p(w = information) = 11/19 = .58; p(c = data) = 7/19 = .37."},
+        {"kind": "math", "text": "\"pmi\"(\"information\", \"data\") = log_2 frac(.32, .58 dot .37) = log_2 (1.49) = .58"},
+        {"kind": "text", "text": "Since .58 > 0, ppmi(information, data) = .58. (The deck notes '.57 using full precision' — either is accepted; show the fraction you divided.)"},
+        {"kind": "heading", "text": "Worked example 2 — TF-IDF by hand"},
+        {"kind": "text", "text": "Use the Shakespeare term-document table from the deck. Six documents (N = 6): d1 Antony and Cleopatra, d2 Julius Caesar, d3 The Tempest, d4 Hamlet, d5 Othello, d6 Macbeth. Column d1 reads Antony 157, Brutus 4, Caesar 232, Calpurnia 0, Cleopatra 57, mercy 2, worser 2, so the maximum tf in d1 is 232 (Caesar)."},
+        {"kind": "text", "text": "Term 'Antony': it occurs in d1 and d2 only, so df = 2 and idf = log10(6/2) = log10 3 = 0.477."},
+        {"kind": "math", "text": "w_(\"Antony\", d_1) = frac(157, 232) dot 0.477 = 0.677 dot 0.477 = 0.323"},
+        {"kind": "text", "text": "Term 'Caesar': it occurs in d1, d2, d4, d5, d6, so df = 5 and idf = log10(6/5) = 0.079."},
+        {"kind": "math", "text": "w_(\"Caesar\", d_1) = frac(232, 232) dot 0.079 = 0.079"},
+        {"kind": "text", "text": "This is the whole answer to 'what is the advantage of TF-IDF over plain TF?'. Caesar is the most frequent term in d1 — plain TF would make it the most important term in the document — but it is spread over five of the six documents, so it discriminates almost nothing and TF-IDF crushes its weight to 0.079. Antony is rarer across the collection and keeps a weight four times larger. TF alone is dominated by frequent, non-discriminative terms; IDF supplies the collection-level correction."},
+        {"kind": "figure", "png": "_TMNLP_ 03. Vector Semantics.pptx-p100-4b9ed0dd.png", "caption": "The term-document table used above, with tf for Antony in d1 [_TMNLP_ 03. Vector Semantics.pptx.pdf, p100]", "width": "90%"},
+        {"kind": "heading", "text": "Worked example 3 — cosine"},
+        {"kind": "text", "text": "The deck's three-dimensional example (contexts: large, data, computer): apricot = (2, 0, 0), digital = (0, 1, 2), information = (1, 6, 1). Arithmetic recomputed here from the deck's own table (the on-slide value is not legible in the extracted text)."},
+        {"kind": "math", "text": "cos(\"digital\", \"information\") = frac(0 dot 1 + 1 dot 6 + 2 dot 1, sqrt(0 + 1 + 4) dot sqrt(1 + 36 + 1)) = frac(8, 2.236 dot 6.164) = frac(8, 13.78) = 0.58"},
+        {"kind": "math", "text": "cos(\"apricot\", \"digital\") = frac(2 dot 0 + 0 dot 1 + 0 dot 2, sqrt(4) dot sqrt(5)) = frac(0, 4.47) = 0"},
+        {"kind": "text", "text": "Zero means orthogonal: the two words share no context dimension. That is exactly the matching-question answer 'Vectors that result in a cosine similarity of 0'."},
+        {"kind": "heading", "text": "The matching item, pre-solved (23_24 sample, verbatim answer from the answer key)"},
+        {"kind": "steps", "items": [
+          "Cosine Similarity -> b. A similarity measure that ranges from -1 to 1.",
+          "Dot Product -> a. High when two vectors have large values in the same dimensions.",
+          "Orthogonal Vectors -> d. Vectors that result in a cosine similarity of 0.",
+          "Vector Length -> f. The measure that affects the dot product if the vectors are longer.",
+          "Normalization -> e. The process of dividing the dot product by the lengths of the two vectors.",
+          "Frequency Sensitivity -> c. A problem when similarity metrics are affected by word frequency."
+        ]},
+        {"kind": "text", "text": "Source of this key: _text/_student/[TMNLP 23_24] Exam questions sample_260801_144017.txt and _text/_student/444c4d31-ddf0-422f-8dda-9fe9b41f1304_260801_144054.txt (two independent answered copies that agree)."},
+        {"kind": "heading", "text": "Dense vectors — the second matching item"},
+        {"kind": "text", "text": "A photographed paper asks you to match Word2Vec, Skip-gram, CBOW, GloVe, SVD and Negative Sampling to descriptions. The descriptions, from the sheet: Skip-gram = a model that creates embeddings by predicting the context from the target word; CBOW = a method that uses context words to predict the target word; GloVe = a global statistical model that uses co-occurrence matrices to learn embeddings; SVD = a matrix factorization technique used in count-based models for dimensionality reduction; Negative Sampling = a technique to efficiently train word embeddings by selecting a few negative samples; Word2Vec = a popular neural-network-based word embedding model. Source: _text/_student/photo_2026-08-01_14-42-21.txt (OCR of a photograph; the description letters are garbled on the sheet, so learn the pairings, not the letters)."}
+      ]
+    },
+    {
+      "name": "The five challenges of NLP (and Sparsity in detail)",
+      "frequency": "appeared in 8 of the 15 archived paper files — 'What is meant by the Sparsity challenge in NLP?' is question 5 of the 22_23 sample (3 files), 'What are the five challenges of NLP that we have seen in class? Explain each of them.' is open question 3 of the 23_24 sample (4 files), and 'What is the sparsity issue in NLP?' is question 7 of a photographed real paper.",
+      "blocks": [
+        {"kind": "text", "text": "This is the cheapest topic in the whole course: it is a five-item list you can memorise in ten minutes and it has been worth a full open question in most archived papers. Learn the five names in order and one sentence each."},
+        {"kind": "heading", "text": "The list, verbatim from the slides"},
+        {"kind": "steps", "items": [
+          "1. Productivity — 'property of the language-system which enables native speakers to construct and understand an indefinitely large number of utterances, including utterances that they have never previously encountered' (Lyons, 1977). New words, senses and structures are introduced all the time; the slides' example is that 'staycation' and 'social distance' were added to the Oxford Dictionary in 2021.",
+          "2. Ambiguity — most linguistic observations are open to several interpretations. Humans disambiguate using linguistic and extra-linguistic signals. Ambiguity appears at all levels: phonology, graphemics, morphology, syntax, semantics. Slide examples: syntactic, 'They ate the pizza with anchovies'; semantic polysemy, set / arm / head; named entity, 'Michael Jordan is a professor at Berkeley'; object-versus-colour, 'Your cherry coat'; pragmatic, 'Dealers will hear car talk at noon'.",
+          "3. Variability (the slides also title this 'Variation') — language varies at all levels: phonetic (accent), morphological and lexical (spelling), syntactic, semantic. Variability depends on social context, geography, sociology, date and topic.",
+          "4. Diversity — about 7000 languages are spoken in the world, about 60% exist in written form. Graphemic diversity (Latin, Cyrillic, Arabic, Greek); syntactic diversity: word order differs across languages, and the degree of freedom of word order also differs; word orders are characterised with Subject, Verb, Object.",
+          "5. Sparsity — the statistical shape of text. 'In natural language, there are a few very frequent terms and very few very rare terms.' Plotting occurrences against rank gives Zipf's curve. Luhn's analysis (1958): the ability of words to discriminate the content of documents is maximum in the intermediate position between the two cut-off levels."
+        ]},
+        {"kind": "heading", "text": "Sparsity, expanded (the version needed when Sparsity is the whole question)"},
+        {"kind": "text", "text": "Sparsity has three faces in this course, and a full-mark answer names all three."},
+        {"kind": "steps", "items": [
+          "Corpus-level (Zipf): a handful of word types carry most of the tokens, and a very long tail of types appears once or twice. Consequence: whatever corpus you have, most of the language you will meet at test time is not in it.",
+          "Representation-level: the word-word co-occurrence matrix is 'really 50,000 x 50,000 (even bigger)', so 'it's very sparse — most values are 0'. This is the motivation for dense vectors (SVD, Word2Vec) and for PPMI weighting instead of raw counts.",
+          "Model-level: in an n-gram language model, if 'students opened their w' never occurred, w gets probability 0; if the whole context 'students opened their' never occurred, no probability can be computed at all. 'Increasing n makes sparsity problems worse. Typically, we can't have n bigger than 5.' Fixes: add a small delta to every count (smoothing) for the first problem, back off to a shorter context for the second."
+        ]},
+        {"kind": "text", "text": "Tie-in worth a mark: subword tokenization (BPE) is the modern answer to sparsity at the token level — it gives an open vocabulary so that rare and unseen words are decomposed into known units instead of becoming UNK."}
+      ]
+    },
+    {
+      "name": "n-gram language models, smoothing and perplexity",
+      "frequency": "appeared in 7 of the 15 archived paper files — full open question ('What is an n-gram language model, and how does it work? How is the probability of a sentence computed? Discuss the challenges posed by data sparsity and how to address them') in the 22_23 sample across 3 files, plus two closed items ('What is the primary purpose of a language model in NLP?' and 'What is the purpose of smoothing in n-gram language models?') in the 23_24 sample across 4 files.",
+      "blocks": [
+        {"kind": "text", "text": "Definition the closed question tests: a language model is 'a system that assigns a probability to a piece of text' — formally it defines a probability distribution over strings in the language. That is the correct MCQ option; note that 'identify the grammar rules', 'translate text' and 'correct spelling errors' are all distractors."},
+        {"kind": "text", "text": "An n-gram model 'makes a Markov assumption: x(t+1) depends only on the preceding n-1 words'. The probabilities are obtained 'by counting them in some large corpus of text'; the relative-frequency estimate is the Maximum Likelihood Estimate (MLE) — 'given a model, the MLE yields the maximum possible probability that can be calculated using the given data for estimation'."},
+        {"kind": "heading", "text": "Formulas"},
+        {"kind": "math", "text": "P(w_1 ... w_n) = product_(i=1)^n P(w_i | w_1 ... w_(i-1))"},
+        {"kind": "math", "text": "\"Unigram:\" quad P(w^(1) ... w^(N)) = product_(i=1)^N P(w^(i))"},
+        {"kind": "math", "text": "\"Bigram:\" quad P(w^(1) ... w^(N)) = product_(i=1)^N P(w^(i) | w^(i-1))"},
+        {"kind": "math", "text": "\"Trigram:\" quad P(w^(1) ... w^(N)) = product_(i=1)^N P(w^(i) | w^(i-1), w^(i-2))"},
+        {"kind": "math", "text": "\"MLE:\" quad P(w_i | w_(i-1)) = frac(C(w_(i-1) w_i), C(w_(i-1)))"},
+        {"kind": "math", "text": "\"add-\" delta \" smoothing:\" quad P(w_i | w_(i-1)) = frac(C(w_(i-1) w_i) + delta, C(w_(i-1)) + delta dot |V|)"},
+        {"kind": "math", "text": "\"PP\"(W) = P(w_1 w_2 ... w_N)^(-1 \\/ N) = root(N, frac(1, P(w_1 w_2 ... w_N)))"},
+        {"kind": "figure", "png": "_TMNLP_ 04. ngram LM.pptx-p047-0092d774.png", "caption": "Unigram / bigram / trigram models and the Markov assumption [_TMNLP_ 04. ngram LM.pptx.pdf, p47]", "width": "85%"},
+        {"kind": "heading", "text": "Method: probability of a sentence under a bigram model"},
+        {"kind": "steps", "items": [
+          "Pad the sentence with a start symbol and an end symbol.",
+          "Break the sentence into bigrams: (start, w1), (w1, w2), ... , (wn, end).",
+          "For each bigram, count the pair in the training corpus and divide by the count of the first word alone. That is the MLE.",
+          "Multiply all the conditional probabilities together. In practice sum the logs instead, to avoid underflow.",
+          "If any bigram has count 0 the whole product is 0 — this is sparsity problem 1. Apply add-delta smoothing (add delta to every numerator and delta times the vocabulary size to every denominator).",
+          "If the CONTEXT itself was never seen, no probability can be estimated at all — this is sparsity problem 2. Back off to a shorter context, i.e. condition on fewer preceding words.",
+          "To evaluate the model, compute perplexity on a held-out test set: the inverse probability of the test set, normalized by the number of words. Perplexity ranges over [1, infinity]; minimizing perplexity is the same as maximizing probability; lower perplexity = better language model."
+        ]},
+        {"kind": "heading", "text": "Worked example — bigram probability, smoothing, perplexity"},
+        {"kind": "text", "text": "Training corpus (three sentences, s = start, e = end): 's I am Sam e' / 's Sam I am e' / 's I do not like green eggs and ham e'."},
+        {"kind": "text", "text": "Counts you need: C(s) = 3, C(s I) = 2; C(I) = 3, C(I am) = 2; C(am) = 2, C(am Sam) = 1; C(Sam) = 2, C(Sam e) = 1."},
+        {"kind": "math", "text": "P(\"I\" | s) = 2 \\/ 3, quad P(\"am\" | \"I\") = 2 \\/ 3, quad P(\"Sam\" | \"am\") = 1 \\/ 2, quad P(e | \"Sam\") = 1 \\/ 2"},
+        {"kind": "math", "text": "P(s \" I am Sam \" e) = 2/3 dot 2/3 dot 1/2 dot 1/2 = 4/36 = 1/9 = 0.111"},
+        {"kind": "text", "text": "Now an unseen bigram. C(do Sam) = 0, so the MLE gives P(Sam | do) = 0 and any sentence containing it gets probability 0. Vocabulary (excluding the start symbol): I, am, Sam, do, not, like, green, eggs, and, ham, e — so |V| = 11. With add-one smoothing and C(do) = 1:"},
+        {"kind": "math", "text": "P_(\"add-1\")(\"Sam\" | \"do\") = frac(0 + 1, 1 + 11) = frac(1, 12) = 0.083 , quad P_(\"add-1\")(\"not\" | \"do\") = frac(1 + 1, 1 + 11) = frac(2, 12) = 0.167"},
+        {"kind": "text", "text": "Note what smoothing did: it took probability mass away from the seen bigram (do not fell from 1.0 to 0.167) and gave it to the unseen ones. That trade-off IS the answer to 'what is the purpose of smoothing' — to avoid assigning zero probability to unseen n-grams."},
+        {"kind": "text", "text": "Perplexity of the unsmoothed model on the test sentence 'I am Sam e' (N = 4 predicted tokens, probability 1/9):"},
+        {"kind": "math", "text": "\"PP\" = (1/9)^(-1 \\/ 4) = 9^(1 \\/ 4) = 1.73"}
+      ]
+    },
+    {
+      "name": "Text classification and its evaluation measures",
+      "frequency": "appeared in 7 of the 15 archived paper files — open question 2 of the 23_24 sample ('formal definition of text classification, four main types, efficiency and effectiveness') in 4 files, question 5 of a photographed real paper ('hard and soft classification, types discussed in class'), and two MCQ items in the 2025-26 practice paper (macro-averaging True/False, and 'why can accuracy be misleading in an imbalanced binary task').",
+      "blocks": [
+        {"kind": "heading", "text": "Formal definition (quote this)"},
+        {"kind": "text", "text": "Classification is 'the activity of predicting to which, among a predefined finite set of groups (classes, or categories), a data item belongs to'. It is formulated as the task of generating a hypothesis (classifier, model) h from a domain of data items D to a set of classes C. In text classification the data items are textual (news articles, e-mails, tweets, product reviews, sentences, questions, queries) or partly textual (web pages)."},
+        {"kind": "math", "text": "h : D -> C, quad D = {x_1, x_2, ...}, quad C = {c_1, c_2, ..., c_n}"},
+        {"kind": "heading", "text": "The four main types (this is the list the question asks for)"},
+        {"kind": "steps", "items": [
+          "Binary classification: h maps D to C with each item in exactly one class, C = {c1, c2}. Example: assigning emails to Spam or Legitimate.",
+          "Single-Label Multi-Class (SLMC): h maps D to C, each item in exactly one class, C = {c1,...,cn} with n > 2. Example: assigning news articles to one of HomeNews, International, Entertainment, Lifestyles, Sports.",
+          "Multi-Label Multi-Class (MLMC): h maps D to the power set of C — each item may belong to zero, one or several classes, n > 1. Example: assigning computer-science articles to ACM Classification classes. 'May be solved as n independent binary classification problems.'",
+          "Ordinal classification (OC): as SLMC, except that there is a total order c1 <= c2 <= ... <= cn on C. Example: assigning product reviews to Excellent, Good, SoAndSo, Poor, Disastrous."
+        ]},
+        {"kind": "math", "text": "\"MLMC:\" quad h : D -> 2^C ; quad \"OC:\" quad c_1 <= c_2 <= ... <= c_n"},
+        {"kind": "heading", "text": "Hard vs soft classification"},
+        {"kind": "text", "text": "The four definitions above are HARD classification. SOFT classification 'denotes the task of predicting a score for each pair (d, c), where the score denotes the probability / strength of evidence / confidence that d belongs to c'. Hard classification is often built from a soft classifier: train something that outputs scores s(d,c), then pick a threshold t so that s(d,c) >= t predicts c1 and s(d,c) < t predicts c2. In soft classification the scores are used for ranking (ranking items for a class, or classes for an item). 'HC is used for fully autonomous classifiers, while SC is used for interactive classifiers (i.e., with humans in the loop).'"},
+        {"kind": "heading", "text": "Efficiency vs effectiveness (always the last part of the question)"},
+        {"kind": "text", "text": "Efficiency 'refers to the consumption of computational resources' and has two aspects: training efficiency (including feature selection and parameter optimization) and classification efficiency — the latter 'usually considered more important than training efficiency, since classifier training is carried out (a) offline and (b) only once'. Effectiveness (a.k.a. accuracy) 'refers to how frequently classification decisions taken by a classifier are correct', and is 'usually considered more important than efficiency, since accuracy issues are there to stay'."},
+        {"kind": "heading", "text": "Evaluation formulas"},
+        {"kind": "math", "text": "\"Precision\" = frac(\"TP\", \"TP\" + \"FP\") , quad \"Recall\" = frac(\"TP\", \"TP\" + \"FN\") , quad \"Accuracy\" = frac(\"TP\" + \"TN\", \"TP\" + \"FP\" + \"FN\" + \"TN\")"},
+        {"kind": "math", "text": "F_beta = frac((beta^2 + 1) dot P dot R, beta^2 dot P + R) , quad F_1 = frac(2 P R, P + R)"},
+        {"kind": "math", "text": "P_\"macro\" = frac(1, n) sum_(i=1)^n P_i , quad P_\"micro\" = frac(sum_(i=1)^n \"TP\"_i, sum_(i=1)^n (\"TP\"_i + \"FP\"_i))"},
+        {"kind": "text", "text": "The slides state 'We almost always use balanced F1 (i.e., beta = 1)'. Macroaveraging: 'compute the performance for each class, and then average over classes'. Microaveraging: 'collect decisions for all classes into one confusion matrix, compute precision and recall from that table'."},
+        {"kind": "heading", "text": "Why accuracy is misleading (the MCQ, in the slides' own words)"},
+        {"kind": "text", "text": "The Delicious Pie example: of 1 million tweets, 100 talk about Delicious Pie Co and 999,900 talk about something else. 'We could build a dumb classifier that just labels every tweet not about pie. It would get 99.99% accuracy!!! But useless!' Recall would be 0. 'Precision and recall, unlike accuracy, emphasize true positives: finding the things that we are supposed to be looking for.' The correct MCQ option is therefore 'a classifier can obtain high accuracy by predicting only the majority class'."},
+        {"kind": "figure", "png": "_TMNLP_ 08. Text classification.pptx-p040-ebd673ce.png", "caption": "Macro- vs micro-averaged precision, worked on 3 classes [_TMNLP_ 08. Text classification.pptx.pdf, p40]", "width": "100%"},
+        {"kind": "heading", "text": "Worked example — macro vs micro (the slide's own numbers, with F1 added)"},
+        {"kind": "text", "text": "Three classes with per-class confusion matrices. Urgent: TP 8, FP 11, FN 8. Normal: TP 60, FP 55, FN 40. Spam: TP 200, FP 33, FN 51."},
+        {"kind": "math", "text": "P_\"urgent\" = frac(8, 8+11) = .42 , quad P_\"normal\" = frac(60, 60+55) = .52 , quad P_\"spam\" = frac(200, 200+33) = .86"},
+        {"kind": "math", "text": "P_\"macro\" = frac(.42 + .52 + .86, 3) = .60"},
+        {"kind": "math", "text": "P_\"micro\" = frac(8 + 60 + 200, (8+11) + (60+55) + (200+33)) = frac(268, 268 + 99) = .73"},
+        {"kind": "text", "text": "Read off the point that earns the mark: micro (.73) is much higher than macro (.60) because the big Spam class dominates the pooled table, while macro gives the tiny Urgent class (precision .42) equal weight. That is exactly why the True/False item 'Macro-averaging computes a score for each class and then averages them, so minority classes can influence the final score as much as majority classes' is TRUE."},
+        {"kind": "text", "text": "Add F1 for one class to show you can: recall for Spam = 200/(200+51) = .80, so F1 = 2(.86)(.80)/(.86+.80) = 1.376/1.66 = .83."}
+      ]
+    },
+    {
+      "name": "Machine translation and its evaluation: BLEU, human evaluation, COMET/BLEURT",
+      "frequency": "appeared in 6 of the 15 archived paper files — 'Provide the definition of BLEU score and calculate its value (BLEU up to 4-gram) for both translations' is question 2 of the 22_23 sample (3 files) and question 4 of a photographed real paper; the 2025-26 practice paper adds three MCQ items (BLEU is based on n-gram overlap; zero-shot translation; learned metrics COMET/BLEURT) and open question 4 comparing all three evaluation families.",
+      "blocks": [
+        {"kind": "text", "text": "The slides frame the whole topic as a trade-off: 'Human evaluation is ultimately what we are interested in, very time consuming, not re-usable, subjective. Automatic evaluation is cheap and re-usable, not necessarily reliable.' The basic automatic strategy: 'provide a human reference translation, compute similarity between reference translation and machine translation output'. The similarity measures listed are precision/recall, WER/TER, BLEU, METEOR — 'these are usually called N-gram overlap metrics'."},
+        {"kind": "heading", "text": "Human evaluation: adequacy and fluency"},
+        {"kind": "text", "text": "Adequacy = how much the translation conveys the original meaning of the sentence. Fluency = how natural and comprehensible the output is in the target language. Both are usually scored 1 to 5. Problems with human evaluation, as the sources give them: source-based evaluation requires bilingual evaluators (reference-based does not) and results may differ; annotators disagree — the slides show a histogram of adequacy judgements by different evaluators; it is expensive, time-consuming and inconsistent depending on the method, which is why ranking translations is often preferred to direct assessment. Task-based alternatives: post-editing effort (time, or number of edit operations, HTER), content-understanding tests, and test suites focusing on particular linguistic phenomena."},
+        {"kind": "heading", "text": "BLEU"},
+        {"kind": "text", "text": "BLEU = BiLingual Evaluation Understudy. It is the geometric mean of the modified n-gram precisions of the candidate against the reference(s), multiplied by a brevity penalty. Use multiple reference translations to account for variability: n-grams may match in any of the references, and you use the closest reference length."},
+        {"kind": "math", "text": "p_n = frac(\"number of candidate n-grams that appear in a reference (clipped)\", \"total number of candidate n-grams\")"},
+        {"kind": "math", "text": "\"BLEU\" = \"BP\" dot (product_(n=1)^4 p_n)^(1 \\/ 4)"},
+        {"kind": "math", "text": "\"BP\" = min(1, frac(c, r)) quad \"where\" c = \"candidate length\", r = \"reference length\""},
+        {"kind": "text", "text": "The BP form above is the one the course's own worked table uses (brevity penalty 6/7 for a 6-token candidate against a 7-token reference). [NOT IN SOURCE — VERIFY] The exponential variant BP = e^(1 - r/c) used in some textbooks gives 0.85 rather than 0.857 here and changes the final figure by under 1 point; if you use it, say which you used."},
+        {"kind": "figure", "png": "_TMNLP_ 14. Machine Translation Evaluati-p055-82b548a3.png", "caption": "BLEU computed for two systems, with per-n-gram precisions and brevity penalty [_TMNLP_ 14. Machine Translation Evaluation.pptx.pdf, p55]", "width": "80%"},
+        {"kind": "text", "text": "Check the figure's arithmetic yourself so you can reproduce it: System B has p1 = 6/6, p2 = 4/5, p3 = 2/4, p4 = 1/3, BP = 6/7. Product = 1 x .8 x .5 x .333 = .1333; fourth root = .604; times .857 = .518, i.e. 52%. System A has p3 = 0, so the geometric mean is 0 and BLEU = 0% — even though it got 3 of 6 unigrams right."},
+        {"kind": "figure", "png": "_TMNLP_ 14. Machine Translation Evaluati-p056-8b90bb80.png", "caption": "Matching n-grams against MULTIPLE references [_TMNLP_ 14. Machine Translation Evaluation.pptx.pdf, p56]", "width": "100%"},
+        {"kind": "heading", "text": "Method: computing BLEU up to 4-gram by hand"},
+        {"kind": "steps", "items": [
+          "Tokenise and lowercase both the reference and the candidate; count tokens. State the convention you used — the marks are for the method, not for your capitalisation policy.",
+          "For n = 1, 2, 3, 4 in turn: list the candidate n-grams (there are c - n + 1 of them), and tick each one that appears in the reference. Clip: a candidate n-gram cannot be counted more times than it appears in the reference.",
+          "Write p_n as a fraction: ticks over total candidate n-grams. Do not simplify away the denominator — the examiner wants to see c - n + 1.",
+          "Multiply p1 p2 p3 p4 and take the fourth root.",
+          "Compute BP: if the candidate is at least as long as the reference, BP = 1; otherwise BP = c/r.",
+          "BLEU = BP times the fourth root. If any p_n = 0, say explicitly that the geometric mean collapses to zero and report the individual p_n — that is the marks-bearing observation, not a failure.",
+          "Add the discussion: BLEU is blind to synonyms and syntactic variation, which is why a perfectly valid paraphrase scores badly; the fix is multiple references, or a learned metric."
+        ]},
+        {"kind": "heading", "text": "Worked example — the exam's own sentences"},
+        {"kind": "text", "text": "From the 22_23 sample paper. Reference: 'A cat is on the table .' System A: 'A pen is on the mat .' System B: 'The cat was on a desk .' All three have 7 tokens, so r = c = 7 and BP = 1 for both systems. Working lowercased."},
+        {"kind": "text", "text": "System A. Unigrams: a, is, on, the, . match; pen, mat do not. p1 = 5/7. Bigrams (6 of them): 'is on' and 'on the' match; 'a pen', 'pen is', 'the mat', 'mat .' do not. p2 = 2/6. Trigrams (5): only 'is on the' matches. p3 = 1/5. 4-grams (4): 'a pen is on', 'pen is on the', 'is on the mat', 'on the mat .' — none match. p4 = 0/4."},
+        {"kind": "math", "text": "\"BLEU\"_A = 1 dot (5/7 dot 2/6 dot 1/5 dot 0/4)^(1 \\/ 4) = 0"},
+        {"kind": "text", "text": "System B. Unigrams: the, cat, on, a, . match; was, desk do not. p1 = 5/7. Bigrams (6): the reference bigrams are 'a cat', 'cat is', 'is on', 'on the', 'the table', 'table .'; the candidate bigrams are 'the cat', 'cat was', 'was on', 'on a', 'a desk', 'desk .' — none of them match. p2 = 0/6, so p3 = p4 = 0 as well."},
+        {"kind": "math", "text": "\"BLEU\"_B = 1 dot (5/7 dot 0/6 dot 0/5 dot 0/4)^(1 \\/ 4) = 0"},
+        {"kind": "text", "text": "Both score 0, and that is the answer — write it up as the point of the exercise. System B is semantically much closer to a plausible translation than System A, yet BLEU cannot see it, because 'cat' is in the right place but never in the right bigram. This demonstrates exactly what the answer key says: BLEU 'does not take into account synonyms and language variability', short sentences make the higher-order precisions collapse to zero, and the standard mitigations are multiple references and learned metrics."},
+        {"kind": "heading", "text": "The third family: learned metrics"},
+        {"kind": "text", "text": "BLEURT = BLEU + BERT: take a pretrained BERT, fine-tune it on synthetic tasks with perturbed data (a sentence z and a perturbed z', with regression objectives such as predicting BLEU or ROUGE), then fine-tune on small supervised datasets of human quality judgments. COMET = Cross-lingual Optimized Metric for Evaluation of Translation, a neural framework trained on human judgments. Strengths: they approximate human quality judgments far better and handle synonyms. Limitations the slides emphasise: COMET fails on an EMPTY string and on output in the WRONG language — 'while with n-gram based overlap, we can detect it'. That single contrast is the highest-value sentence in the whole open question, because it explains why n-gram metrics have not been retired."},
+        {"kind": "text", "text": "Zero-shot translation (MCQ): translating a language pair not directly observed during training — not 'training without any data', not 'beam size zero'."}
+      ]
+    },
+    {
+      "name": "Pre-trained models and the LLM pipeline: BERT, GPT, BART, SFT, RLHF, prompting",
+      "frequency": "appeared in 6 of the 15 archived paper files — two True/False items in the 23_24 sample across 4 files (BERT as a left-to-right decoder; BART/mBART as denoising auto-encoders), and in the 2025-26 practice paper a True/False on SFT and RLHF, MCQs on decoder-only families and few-shot prompting, matching entries for Masked Language Modeling and chain-of-thought prompting, and open question 3 on the whole pipeline.",
+      "blocks": [
+        {"kind": "heading", "text": "The three architecture families (memorise the table, it answers most closed items)"},
+        {"kind": "steps", "items": [
+          "Encoder-only: BERT. A deep bidirectional Transformer ENCODER, pre-trained with Masked Language Modeling — predict masked tokens by exploiting bidirectional context. Used for classification and tagging, not for generation. The True/False 'BERT is a left-to-right language model used only as a decoder' is FALSE.",
+          "Decoder-only: GPT. Left-to-right, next-token prediction. The MCQ answer to 'which is typically a decoder-only pre-trained language model family' is GPT (not BERT, not T5, not mBART).",
+          "Encoder-decoder: T5, BART, mBART. BART and mBART 'both use a denoising auto-encoder approach for reconstructing corrupted sentences' — TRUE."
+        ]},
+        {"kind": "heading", "text": "The training / alignment pipeline"},
+        {"kind": "text", "text": "The slides give the pipeline twice, as 'Pre-training -> Supervised Fine-tuning (SFT) -> RLHF' and as 'Pre-training -> Mid-training -> Post-training'. Their comparison table: pre-training uses a lot of data, roughly the internet, trillions of words, of low quality, and is where 'most learning occurs'; post-training uses a small amount, millions of examples, of high quality, and 'makes the model usable by the general public'."},
+        {"kind": "steps", "items": [
+          "Pre-training. Self-supervised training on massive unlabeled text (next-token prediction, or masked-token prediction for encoders). Produces general grammar, language regularities and world knowledge. It is called PRE-training because it happens before fine-tuning.",
+          "Supervised Fine-Tuning (SFT). 'Simply continue training the LM on other tasks' using 'a dataset with pairs of human created prompts and human created responses'. It 'starts with a large, unaligned pre-trained model', 'adds a small, carefully-labeled prompt -> response dataset', and its objective is 'to teach the model to be polite, helpful and on-task' — it 'turns raw capability into behaviour that matches human values'. Its weakness, stated on the slides: quality over quantity means a small dataset, so there is a high chance of memorisation — 'great for alignment, fragile for coverage'; classic symptoms are generic or repetitive answers and failure on semantically similar but unseen prompts.",
+          "RLHF (Reinforcement Learning from Human Feedback). The stated intuition: 'it is often much easier to compare Answers instead of writing Answers'. Humans rank model outputs; those rankings train a Reward Model; the language model is then optimised with reinforcement learning to maximise the reward. The Llama 2 slides note a large emphasis on safety in reward-model data collection.",
+          "Prompting at inference time. Few-shot prompting / in-context learning = 'providing examples in the prompt so the model can infer the task pattern' — it does NOT update parameters. Chain-of-thought prompting = 'encourage the model to produce intermediate reasoning steps before the final answer'. Output mapping / post-processing = 'convert a generated answer into the final required label, value, format, or action'."
+        ]},
+        {"kind": "text", "text": "Answer shape for the open question: one short paragraph per stage, each naming (a) what data, (b) what objective, (c) what capability it adds. Pre-training gives knowledge; SFT gives instruction-following; RLHF gives preference alignment. Say explicitly that SFT and RLHF are POST-training steps applied to an already pre-trained model — that is the exact wording of the True/False item, which is TRUE."}
+      ]
+    },
+    {
+      "name": "Sequence-to-sequence models and decoding (greedy, beam search, sampling)",
+      "frequency": "appeared in 6 of the 15 archived paper files — open question 1 of the 23_24 sample ('What are the decoding algorithms in sequence-to-sequence models? What is beam search, why was it introduced, its properties, and the stopping criteria for decoding?') across 4 files, plus the 2025-26 MCQ 'in an encoder-decoder seq2seq model, the decoder can be viewed as ...' in 2 files.",
+      "blocks": [
+        {"kind": "text", "text": "The MCQ answer, which is also the one-line definition to open your essay with: the decoder is a CONDITIONAL LANGUAGE MODEL that predicts target tokens using previous target tokens and source information. The encoder compresses the source into representations; the decoder generates the target one token at a time, feeding each output back in as the next input."},
+        {"kind": "heading", "text": "Greedy decoding and why it fails"},
+        {"kind": "text", "text": "'We saw how to generate (or decode) the target sentence by taking argmax on each step of the decoder — this is called greedy decoding.' The problem the slides state: 'Greedy decoding has no way to undo decisions!' Their example: after emitting a wrong first word, 'no going back now...'. Exhaustive search over all sequences would need to track V^t partial hypotheses at step t — 'this O(V^T) complexity is far too expensive'."},
+        {"kind": "heading", "text": "Beam search"},
+        {"kind": "text", "text": "Core idea, verbatim: 'On each step of decoder, keep track of the k most probable partial translations (which we call hypotheses)', where k is the beam size, 'in practice around 5 to 10'. Properties the slides list: scores are all negative and higher is better; beam search is NOT guaranteed to find the optimal solution, but is much more efficient than exhaustive search."},
+        {"kind": "math", "text": "\"score\"(y_1, ..., y_t) = log P_\"LM\" (y_1, ..., y_t | x) = sum_(i=1)^t log P_\"LM\" (y_i | y_1, ..., y_(i-1), x)"},
+        {"kind": "math", "text": "\"length-normalized score\" = frac(1, t) sum_(i=1)^t log P_\"LM\" (y_i | y_1, ..., y_(i-1), x)"},
+        {"kind": "heading", "text": "Method"},
+        {"kind": "steps", "items": [
+          "Start from the start symbol and compute the probability distribution over the next word.",
+          "Take the top k words and record their log probabilities as hypothesis scores.",
+          "For each of the k hypotheses, find the top k next words and add their log probabilities to the parent score. You now have k squared hypotheses.",
+          "Of these k squared, keep only the k with the highest scores. Repeat.",
+          "When a hypothesis produces the end token, that hypothesis is complete: place it aside and continue exploring the others.",
+          "Stopping criteria: continue until you reach timestep T (a pre-defined cutoff), OR until you have at least n completed hypotheses (n pre-defined). In plain greedy decoding you simply stop at the end token.",
+          "Selecting the winner: longer hypotheses have lower (more negative) scores, so normalize by length — divide the score by t — and pick the best."
+        ]},
+        {"kind": "heading", "text": "Worked example — the slides' own beam trace, k = 2"},
+        {"kind": "text", "text": "Step 1 from the start symbol, the two best words score -0.7 (Lopullinen) and -0.9 (Finaali)."},
+        {"kind": "text", "text": "Step 2 expands both. From Lopullinen: vastaus gives -1.7, lahtolaskenta gives -1.6. From Finaali: vuonna gives -2.9, ja gives -1.8. Four hypotheses; keep the best two: -1.6 (Lopullinen lahtolaskenta) and -1.7 (Lopullinen vastaus). Note that both survivors come from the same parent — beam search does not reserve slots per branch."},
+        {"kind": "text", "text": "Step 3 expands those two: from '... vastaus', on gives -2.8 and ilman gives -2.9; from '... lahtolaskenta', alkoi gives -2.5 and matkalle gives -3.8. Keep -2.5 and -2.8. Continue until the stopping criterion fires, then backtrack from the best complete hypothesis to read off the full sentence."},
+        {"kind": "text", "text": "Length normalization in action: a 3-token hypothesis scoring -2.5 has normalized score -0.83, while a 6-token hypothesis scoring -4.2 has -0.70 and therefore wins, even though its raw score is lower. Say this in the exam — it is the reason normalization exists."},
+        {"kind": "heading", "text": "Sampling (the third decoding family, worth a sentence)"},
+        {"kind": "text", "text": "Beyond greedy and beam there are sampling methods: 'produce scores S of all tokens, sample the next token from softmax P proportional to exp(S)'; 'this can generate any text with non-zero probability'. The slides also cover top-k sampling. Mention that beam search maximises likelihood while sampling maximises diversity, and that for open-ended generation the two goals conflict."}
+      ]
+    },
+    {
+      "name": "Transformers: self-attention, multi-head attention, positional encoding",
+      "frequency": "appeared in 5 of the 15 archived paper files — 'What do we intend for positional encoding in a Transformer model and why has it been introduced? What are the criteria that should be satisfied?' is question 4 of the 22_23 sample (3 files); the 2025-26 practice paper has a True/False on the role of the value vector, an MCQ on masked self-attention, a matching entry for cross-attention, and open question 2 on self-attention in full (2 files).",
+      "blocks": [
+        {"kind": "text", "text": "Definition to open with: 'Self-attention: learn dependencies between words in the sentence and use that information to capture the internal structure of the sentence.' Motivating example from the slides: in 'The animal didn't cross the street because it was too tired', what does 'it' refer to? 'As the model processes each word, self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for the word itself.'"},
+        {"kind": "heading", "text": "Query, Key, Value — the intuition the slides give"},
+        {"kind": "text", "text": "Query = what the token is seeking (what information it needs). Key = the information the token holds, i.e. how relevant it is to other tokens' queries. Value = the actual content the token shares if its key is found relevant. Their library analogy: you have a topic in mind (Query), you check titles and keywords of books (Keys), the dot products give attention weights, and you retrieve the books that match (Values) as a weighted sum."},
+        {"kind": "text", "text": "This is exactly the True/False trap: 'In self-attention, the value vector is mainly used to decide how relevant a token is to another token's query' is FALSE — that is the KEY's job; the Value holds the content that gets weighted."},
+        {"kind": "heading", "text": "The six steps of self-attention (numbered as the slides number them)"},
+        {"kind": "steps", "items": [
+          "Create three vectors from each word embedding at the encoder side — Query, Key and Value — by multiplying the embedding by three matrices trained during training.",
+          "Calculate a score: the dot product of the query vector with the key vector of the word being scored. For the word in position 1, the first score is q1 . k1, the second is q1 . k2, and so on.",
+          "Divide the scores by the square root of the dimension of the key vectors, for training stability.",
+          "Pass the result through a softmax, which normalizes the scores so they are all positive and add up to 1.",
+          "Multiply each value vector by its softmax score.",
+          "Sum up the weighted value vectors: this produces the output of the self-attention layer at that position."
+        ]},
+        {"kind": "math", "text": "\"Attention\"(Q, K, V) = \"softmax\"(frac(Q K^T, sqrt(d_k))) V"},
+        {"kind": "heading", "text": "Multi-head attention"},
+        {"kind": "text", "text": "'Multi-headed attention expands the model's ability to focus on different positions' and 'gives the attention layer multiple representation subspaces'. How it works: 'do the same self-attention calculation outlined before, just more times with different weight matrices, ending up with different output matrices', then concatenate the resulting Z matrices and multiply by an output weight matrix W_O. The slides' interpretability example: for the word 'it', one attention head focuses most on 'the animal' while another focuses on 'tired'."},
+        {"kind": "figure", "png": "_TMNLP_ 10. Transformers.pptx-p033-be48a980.png", "caption": "The five stages of multi-head attention, from embeddings to the concatenated output [_TMNLP_ 10. Transformers.pptx.pdf, p33]", "width": "100%"},
+        {"kind": "heading", "text": "The three attentions, and masking"},
+        {"kind": "steps", "items": [
+          "Encoder self-attention: every source position attends to every other source position.",
+          "Decoder masked self-attention: each target position attends only to positions at or before itself. The MCQ answer to 'masked self-attention is used during training mainly to' is: prevent each target position from attending to FUTURE target tokens. Without the mask, training would leak the answer.",
+          "Cross-attention: 'let decoder representations attend to encoder representations' — this is the matching-item description, learn it verbatim."
+        ]},
+        {"kind": "heading", "text": "Positional encoding — the question that has recurred most"},
+        {"kind": "text", "text": "Why it exists: the Transformer processes tokens in parallel, with no recurrence, so it has no inherent notion of order. 'The transformer adds a vector to each input embedding. These vectors follow a specific pattern that the model learns, which helps it determine the position of each word, or the distance between different words in the sequence.' It also 'gives the advantage of being able to scale to unseen lengths of sequences'."},
+        {"kind": "text", "text": "The four criteria, verbatim — this is the marks-bearing list:"},
+        {"kind": "steps", "items": [
+          "It should output a unique encoding for each time-step (word's position in a sentence).",
+          "Distance between any two time-steps should be consistent across sentences with different lengths.",
+          "The model should generalize to longer sentences without any effort; its values should be bounded.",
+          "It must be deterministic."
+        ]},
+        {"kind": "text", "text": "'We use sine and cosine functions of different frequencies' — because sine and cosine are bounded in [-1, 1], deterministic, and give a fixed offset relationship between positions."},
+        {"kind": "math", "text": "\"PE\"(\"pos\", 2i) = sin(frac(\"pos\", 10000^(2i \\/ d_\"model\"))) , quad \"PE\"(\"pos\", 2i+1) = cos(frac(\"pos\", 10000^(2i \\/ d_\"model\")))"},
+        {"kind": "text", "text": "[NOT IN SOURCE — VERIFY] The sin-for-even / cos-for-odd assignment above is the standard form. The only written formula in this course's archived material is in an answer key (_text/_student/TM OPEN QUESTIONS_260801_143948.txt) where BOTH lines are typed with cos — an obvious transcription slip; the slides state only 'sine and cosine functions of different frequencies'. If you are unsure, write the formula and add the sentence 'even dimensions use sine, odd dimensions use cosine' — the criteria list is what carries most of the marks."},
+        {"kind": "heading", "text": "Worked example — one attention score end to end"},
+        {"kind": "text", "text": "Two-token input 'Thinking Machines', d_k = 64. Step 1: from the embedding of 'Thinking' produce q1, k1, v1; from 'Machines' produce q2, k2, v2. Step 2: score(1,1) = q1 . k1 = 112, score(1,2) = q1 . k2 = 96. Step 3: divide by sqrt(64) = 8, giving 14 and 12. Step 4: softmax(14, 12) = (0.88, 0.12). Step 5 and 6: z1 = 0.88 v1 + 0.12 v2. Repeat with q2 for the second position. Numbers here are illustrative of the arithmetic; what the examiner marks is that you divide by sqrt(d_k) BEFORE the softmax and that the output is a weighted sum of VALUE vectors."}
+      ]
+    },
+    {
+      "name": "PART 1 Linguistics: morphology, part of speech, constituents, arguments vs adjuncts",
+      "frequency": "appeared in 3 of the 15 archived paper files as extractable questions — but it is PART 1 of every real exam sheet in the archive (28/06/2024 and 30/06/2023 photographs, plus the example_exam sheet), and Part 1 carried 8 marks on the one sheet that prints its own tariff. Judged by frequency of extracted questions this ranks ninth; judged by marks at stake on the actual paper it is worth roughly a quarter of the exam. Do not skip it.",
+      "blocks": [
+        {"kind": "text", "text": "Part 1 is taught by the Linguistics instructor (Prof. Guasti) and its questions have been remarkably stable across years: identify the incorrect statement about morphology; decompose words into morphemes and give the part of speech before and after; identify arguments versus adjuncts; apply constituency tests; build or complete a tree."},
+        {"kind": "heading", "text": "Morphemes: the taxonomy the papers test"},
+        {"kind": "figure", "png": "Lesson_3_morphology_2-p024-5187a4a2.png", "caption": "The morpheme taxonomy: free vs bound, lexical vs grammatical [Lesson_3_morphology_2.pdf, p24]", "width": "100%"},
+        {"kind": "steps", "items": [
+          "Derivational morphemes MAY CHANGE the meaning and/or the syntactic category of the word to which they apply. They form new words, sit close to the root, and are less productive. They can be prefixes, infixes or suffixes: ex-console, in-usuale, cant-icchi-are, insegn-ante, teach-er, anti-establishment.",
+          "Inflectional morphemes do NOT change the category. They attach to V and N, contribute to meaning, sit more distant from the root, and are very productive. Tense, aspect and mood are expressed by inflectional morphemes.",
+          "Order: root -> derivational morpheme -> inflectional morpheme. 'He simplifies things', not 'simple-s-fy'.",
+          "Base form = any word to which a derivational affix can be added. Stem = the form to which you add inflectional affixes.",
+          "Affix ordering is fixed and you know it intuitively: cipher, de-cipher, de-cipher-able (not 'cipherable' first); drink, drink-able, un-drinkable (not 'undrink' first)."
+        ]},
+        {"kind": "text", "text": "The recurring trap statement, from the 30/06/2023 photographed sheet: 'Inflectional morphology changes the category of the word to which it applies' — that one is INCORRECT (it is derivational morphology that may change the category). The statements 'Derivational morphology changes the meaning and the category of the word to which it applies', 'Derivational morphemes can be prefixes, infixes or suffixes' and 'Tense, aspect and mood are expressed by inflectional morphemes' are all correct."},
+        {"kind": "heading", "text": "Worked example — morpheme decomposition (the exam's own item)"},
+        {"kind": "text", "text": "The task, verbatim: 'decompose the following words in morphemes, say the part of speech of the original and derived word. What is the meaning conveyed by the affix?' The sheet supplies the model answer for the first item: Winner -> Winn-er, V to N."},
+        {"kind": "steps", "items": [
+          "Farmer -> farm-er. V to N. The suffix -er conveys the agent: 'one who does the action of the verb'. (Note farm is also a noun; say which reading you are taking.)",
+          "Excusable -> excus-able. V to ADJ. The suffix -able conveys capability or possibility: 'able to be V-ed'.",
+          "Nationality -> nation-al-ity, in two derivational steps. nation (N) + -al -> national (ADJ); national (ADJ) + -ity -> nationality (N). The suffix -al makes a relational adjective; the suffix -ity conveys the abstract state or quality of being ADJ.",
+          "Method to reuse on any word: split off one affix at a time from the outside in, name the category before and after each step, and gloss the affix's meaning in a short phrase."
+        ]},
+        {"kind": "heading", "text": "Part of speech: the three-way justification the paper demands"},
+        {"kind": "text", "text": "The 28/06/2024 sheet asks 'What part of speech (POS) are the words in List A and those in List B? Choose one word in List A and one in List B and motivate your answer using the model below', with the model: 'Readable = ADJ because it can be modified by very (very readable) or can modify a noun as in readable book'. So the required answer shape is a DISTRIBUTIONAL test, not a definition. The slides give the criteria in three columns: morphological, semantic, syntactic."},
+        {"kind": "steps", "items": [
+          "Noun: morphologically takes gender/number endings (in English only -s); semantically denotes objects (but abstract nouns exist); syntactically acts as subject or argument of the verb, is preceded by determiners, combines with demonstratives (this, that), articles (the, a), possessives (my, your).",
+          "Verb: morphologically takes endings for modality, tense, aspect, evidentiality (TAME) and the suffixes -s, -ed, -ing; semantically describes actions (but also states); syntactically agrees with the subject and takes arguments/complements.",
+          "The open content classes / lexical categories, in the slides' own list with tags: Noun NOUN, Proper noun PROPN, Verb VERB, Adjective ADJ, Adverb ADV, Interjection INTJ. Closed class = function words.",
+          "Always motivate with a substitution or modification frame, as in the 'very readable' model. That is what is being marked."
+        ]},
+        {"kind": "heading", "text": "Constituency tests"},
+        {"kind": "text", "text": "Motivation: 'The meanings of sentences depend on groupings into constituents.' The classic ambiguity is 'The policeman chased the thief with the motorcycle' — reading 1 has 'the thief' and 'with the motorcycle' as two distinct constituents, reading 2 has 'the thief with the motorcycle' as a single constituent. 'The origin of ambiguity is the possibility of having different ways of building constituents. To disambiguate sentences means to choose a certain analysis of constituents with respect to another.'"},
+        {"kind": "steps", "items": [
+          "Cleft test: put the candidate string into 'It is X that ...'. 'It is the thief with the motorcycle that the policeman chased' — grammatical, so that string is a single constituent, and the other reading is no longer possible.",
+          "Proform test: replace the candidate string with a pronoun or other proform. 'The policeman chased him with the motorcycle' shows that 'the thief' alone is a constituent under the other reading.",
+          "Apply the test, then state what the result proves. The mark is for the inference, not for the sentence."
+        ]},
+        {"kind": "heading", "text": "Worked example — the recurring constituency item"},
+        {"kind": "text", "text": "'Show which are the constituents of the following sentence using constituency tests: The students in the class voted for John.' The exam sheet itself prints the expected answers, so learn these three lines: cleft on the subject, 'It is the students in the class that voted for John'; cleft on the PP, 'It is for John that the students in the class voted'; proform on the subject, 'They voted for John'. Conclusion to write: '[the students in the class]' and '[for John]' are each single constituents, and 'voted for John' is the VP. The sheet also reminds you that 'IP stands for the sentence'."},
+        {"kind": "heading", "text": "Arguments vs adjuncts"},
+        {"kind": "text", "text": "Definitions from the Arguments lesson: arguments are 'participants that the verb requires: 1, 2, 3' and follow from the verb's meaning; complements are what the verb takes — subject, direct object, indirect object; adjuncts 'are not arguments, are not complements, but they can have a grammatical function: modifiers or adverbial function'. In X-bar terms: specifier, head, complement, then (adjunct) (adjunct) attached higher, at X''."},
+        {"kind": "steps", "items": [
+          "Obligatoriness test: remove the phrase. 'Kim put the pen on the table' vs '*Kim put the pen' — ungrammatical, so 'on the table' is an argument. If the sentence is ungrammatical without XP, XP is an argument. Beware optional arguments (promise, offer, eat).",
+          "Iteration test: arguments and complements cannot iterate. 'Kim gave Sandy a book' but '*Kim gave Sandy a book a record'; '*John offered a book to Sandy to Mary'. Adjuncts can iterate: 'Pat sent letters to Kim in Berlin on Saturday'.",
+          "Entailment / pro-form test: adjuncts are semantically independent of the verb, so you can replace the verb with a light verb. 'Pat slept until noon' entails 'Pat did something until noon' — adjunct. 'Pat put nuts in a cup' does NOT entail 'Pat did something in a cup' — argument. Likewise 'Pat relied on Chris' does not entail 'Pat did something on Chris', and '*Pat relied' is ungrammatical."
+        ]},
+        {"kind": "text", "text": "Worked example — the exam's own item: 'Circle the arguments and put a cross on the adjuncts: Mary is trying to solve the problem in an hour.' Arguments: 'Mary' (subject of try) and 'to solve the problem' (the complement clause of try); inside that clause, 'the problem' is the argument of solve. Adjunct: 'in an hour'. Justify with the tests: 'Mary is trying to solve the problem' is grammatical without the PP (so it is not obligatory), and 'Mary did something in an hour' is entailed (so the PP is semantically independent of solve). Both tests agree: adjunct."},
+        {"kind": "text", "text": "The last Part-1 exercise type is 'Insert words under the tree to make a possible sentence for that tree' — you are given a bare tree (in the 2024 photograph: an NP dominating N and a PP). Method: read the tree bottom-up, assign a word of the right category to each terminal, and check that your sentence has exactly the bracketing the tree shows. Source of this item: _text/_student/photo_2026-08-01_14-41-59.txt (OCR of a photograph; the tree itself is not legible in the text, so practise from the Syntax slides instead)."}
+      ]
+    },
+    {
+      "name": "Tokenization and Byte Pair Encoding",
+      "frequency": "appeared in 2 of the 15 archived paper files — but both are copies of the 2025-26 practice paper, the single most recent and most predictive document in the archive, where BPE carries a True/False item, an MCQ, and open question 1. Treat it as high priority despite the low historical count.",
+      "blocks": [
+        {"kind": "text", "text": "The wishlist the slides state, which is also the 'why is it useful' half of the open question: open-vocabulary (encode all words through a small vocabulary), encoding that generalizes to unseen words, and small text size."},
+        {"kind": "text", "text": "What BPE is: 'a subword segmentation algorithm originally used for data compression, adapted for NLP to iteratively merge the MOST FREQUENT pairs of symbols'. Goal: create a vocabulary of subword units that efficiently represent the training text. Key idea: start with a base vocabulary (e.g. all characters) and merge frequent pairs to form new tokens; the hyperparameter is when to stop, which controls vocabulary size."},
+        {"kind": "text", "text": "The True/False trap in the practice paper: 'Byte Pair Encoding starts from individual characters and iteratively merges the LEAST frequent adjacent symbol pairs' is FALSE — it merges the MOST frequent. The first half of the sentence is true, which is what makes it dangerous."},
+        {"kind": "heading", "text": "The algorithm, step by step (the slides' own numbering)"},
+        {"kind": "steps", "items": [
+          "Initialization: start with a vocabulary of individual characters; represent each word as a sequence of characters, with a special end-of-word marker if needed.",
+          "Counting pairs: count the frequency of each adjacent symbol pair in the training corpus.",
+          "Merging: identify the most frequent pair and merge it into a new symbol; update the corpus by replacing every occurrence of this pair with the new symbol.",
+          "Iteration: repeat counting and merging until you reach a predefined vocabulary size or another stopping criterion.",
+          "Final vocabulary: a mix of characters and subword units that capture common patterns."
+        ]},
+        {"kind": "heading", "text": "Worked example — the slides' own corpus"},
+        {"kind": "text", "text": "Dictionary with word frequencies: low 5, lower 2, newest 6, widest 3. Starting vocabulary: l, o, w, e, r, n, s, t, i, d."},
+        {"kind": "steps", "items": [
+          "Merge 1: the pair (e, s) has frequency 9 (6 from newest + 3 from widest), the highest. Add 'es'. Corpus becomes: low 5, lower 2, n e w es t 6, w i d es t 3.",
+          "Merge 2: the pair (es, t) now has frequency 9. Add 'est'. Corpus becomes: low 5, lower 2, n e w est 6, w i d est 3.",
+          "Merge 3: the pair (l, o) has frequency 7 (5 from low + 2 from lower). Add 'lo'. Corpus becomes: lo w 5, lo w e r 2, n e w est 6, w i d est 3.",
+          "Final vocabulary: l, o, w, e, r, n, s, t, i, d, es, est, lo. Merge list learned, in order: e s -> es; es t -> est; l o -> lo.",
+          "Applying it to an UNSEEN word, 'lowest': apply the learned merges in the order they were learned. l o -> lo, then e s -> es, then es t -> est, giving lo + w + est. The word was never in the training dictionary and is still fully encoded with no unknown token. That is the open-vocabulary property."
+        ]},
+        {"kind": "heading", "text": "The trade-off (the part of the open question people forget)"},
+        {"kind": "text", "text": "The number of merge operations controls the trade-off between vocabulary size and sequence length. Fewer merges means a SMALLER vocabulary, but words are broken into more, smaller pieces, so sequences get LONGER — more compute per sentence, and long-range dependencies span more positions. More merges means a LARGER vocabulary and SHORTER sequences, but a bigger embedding matrix, more memory, and more rare tokens that are poorly trained. The slides put it as 'compression of frequent character sequences improves efficiency' and 'trade-off between text length and vocabulary size'."},
+        {"kind": "text", "text": "MCQ answer to 'a main advantage of subword tokenization': it can decompose rare or unseen words into known units. Not 'eliminates the need for embeddings', not 'always produces shorter sequences than word-level tokenization' (word-level is almost always shorter — that distractor is the inverse of the real trade-off)."}
+      ]
+    },
+    {
+      "name": "Sequence labelling: POS tagging, NER, BIO tagging, dependency parsing",
+      "frequency": "appeared in 2 of the 15 archived paper files — both copies of the 2025-26 practice paper, where it carries True/False item 1, MCQ 6, and two entries of the matching exercise. New material relative to older papers, and therefore likely on the September 2026 sitting.",
+      "blocks": [
+        {"kind": "text", "text": "The contrast the True/False item tests: in POS tagging every token receives exactly one grammatical category and 'each word gets one tag'; in NER 'we have to find and segment the entities', which are multi-token spans. So 'POS tagging can be formulated as a sequence labeling task where each token receives a grammatical category; unlike NER, it does not normally require finding multi-token entity spans' is TRUE."},
+        {"kind": "heading", "text": "BIO tagging"},
+        {"kind": "text", "text": "The motivating question, verbatim: 'How can we turn this structured problem into a sequence problem like POS tagging, with one label per word?' The answer is the BIO scheme."},
+        {"kind": "steps", "items": [
+          "B: token that begins a span.",
+          "I: tokens inside a span.",
+          "O: tokens outside of any span.",
+          "Tag inventory size, where n is the number of entity types: 1 O tag, n B tags, n I tags, total 2n + 1.",
+          "Variants mentioned: IO (drops the B/I distinction) and BIOES (adds End and Single)."
+        ]},
+        {"kind": "text", "text": "MCQ answer: B-ORG means 'the first token of an organization entity span'. Not 'outside any organization entity' (that is O), not 'any token after the first' (that is I-ORG), not 'a token that begins a sentence'."},
+        {"kind": "heading", "text": "Worked example — the slides' own sentence"},
+        {"kind": "text", "text": "Span-annotated form: [PER Jane Villanueva] of [ORG United] , a unit of [ORG United Airlines Holding] , said the fare applies to the [LOC Chicago] route."},
+        {"kind": "steps", "items": [
+          "Jane B-PER ; Villanueva I-PER ; of O ; United B-ORG ; , O ; a O ; unit O ; of O ; United B-ORG ; Airlines I-ORG ; Holding I-ORG ; , O ; said O ; the O ; fare O ; applies O ; to O ; the O ; Chicago B-LOC ; route O .",
+          "Now we have one tag per token, so the same sequence-labelling machinery used for POS tagging applies.",
+          "With the three entity types above, n = 3, so the tag set has 2(3) + 1 = 7 tags: O, B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC."
+        ]},
+        {"kind": "text", "text": "Standard algorithms for NER, as listed: Hidden Markov Models; Conditional Random Fields (CRF) / Maximum Entropy Markov Models (MEMM); neural sequence models (RNNs or Transformers); large language models such as BERT, finetuned."},
+        {"kind": "heading", "text": "Dependency parsing (the matching entry)"},
+        {"kind": "text", "text": "'Dependency structure shows which words depend on (modify, attach to, or are arguments of) which other words.' 'Dependency syntax postulates that syntactic structure consists of relations between lexical items, normally binary asymmetric relations (arrows) called dependencies.' The matching description to memorise: 'Choose syntactic heads for tokens, usually forming a dependency tree.' Relation labels named in the slides: amod (adjectival modifier), case (case marking), obj (object), obl (oblique nominal), det (determiner), nmod (nominal modifier)."},
+        {"kind": "heading", "text": "The full matching key for the 2025-26 practice paper"},
+        {"kind": "steps", "items": [
+          "1. BIO tagging -> C. Mark entity spans with Begin/Inside/Outside tags.",
+          "2. Dependency parsing -> E. Choose syntactic heads for tokens, usually forming a dependency tree.",
+          "3. Cross-attention -> G. Let decoder representations attend to encoder representations.",
+          "4. Masked Language Modeling -> A. Predict masked tokens by exploiting bidirectional context.",
+          "5. Chain-of-thought prompting -> F. Encourage the model to produce intermediate reasoning steps before the final answer.",
+          "6. Output mapping / post-processing -> D. Convert a generated answer into the final required label, value, format, or action.",
+          "7. MT test suites -> B. Use targeted examples to evaluate specific linguistic phenomena such as pronouns, agreement, ambiguity, or morphology."
+        ]},
+        {"kind": "text", "text": "Source of this key: _text/_student/[TMNLP-2025_2026] Practice Written Exam copy_260801_144001.txt, an annotated copy in which the letters C, E, G are written next to items 1, 2 and 3; the remaining four follow uniquely from the descriptions. The clean unannotated PDF text (_text/TEXT-MININ-509488-10589-2025/_TMNLP-2025_2026_ Practice Written Exam.txt) is the source for the question wording."}
+      ]
+    }
+  ],
+  "formula_sheet": [
+    "\"PMI\"(w_1, w_2) = log_2 frac(P(w_1, w_2), P(w_1) P(w_2))",
+    "\"PPMI\"_(i j) = max(\"PMI\"_(i j), 0)",
+    "p_(i j) = frac(f_(i j), sum_(i=1)^W sum_(j=1)^C f_(i j)) , quad p_(i *) = frac(sum_(j=1)^C f_(i j), sum f_(i j)) , quad p_(* j) = frac(sum_(i=1)^W f_(i j), sum f_(i j))",
+    "P_alpha (c) = frac(\"count\"(c)^0.75, sum_c \"count\"(c)^0.75) quad (\"rare-word smoothing for PMI\")",
+    "\"idf\"_t = log frac(N, \"df\"_t)",
+    "w_(t,d) = frac(\"tf\"_(t,d), max_(t' in d) \"tf\"_(t',d)) dot log_10 frac(N, \"df\"_t)",
+    "v dot w = sum_(i=1)^N v_i w_i , quad |v| = sqrt(sum_(i=1)^N v_i^2)",
+    "cos(v, w) = frac(v dot w, |v| |w|) = frac(sum_(i=1)^N v_i w_i, sqrt(sum_(i=1)^N v_i^2) dot sqrt(sum_(i=1)^N w_i^2))",
+    "P(w_1 ... w_n) = product_(i=1)^n P(w_i | w_1 ... w_(i-1))",
+    "P(w^(1) ... w^(N)) = product_(i=1)^N P(w^(i) | w^(i-1)) quad (\"bigram\")",
+    "P(w^(1) ... w^(N)) = product_(i=1)^N P(w^(i) | w^(i-1), w^(i-2)) quad (\"trigram\")",
+    "P(w_i | w_(i-1)) = frac(C(w_(i-1) w_i), C(w_(i-1))) quad (\"MLE\")",
+    "P(w_i | w_(i-1)) = frac(C(w_(i-1) w_i) + delta, C(w_(i-1)) + delta dot |V|) quad (\"add-\" delta \" smoothing\")",
+    "\"PP\"(W) = P(w_1 w_2 ... w_N)^(-1 \\/ N) = root(N, frac(1, P(w_1 w_2 ... w_N)))",
+    "\"Precision\" = frac(\"TP\", \"TP\" + \"FP\") , quad \"Recall\" = frac(\"TP\", \"TP\" + \"FN\")",
+    "\"Accuracy\" = frac(\"TP\" + \"TN\", \"TP\" + \"FP\" + \"FN\" + \"TN\")",
+    "F_beta = frac((beta^2 + 1) dot P dot R, beta^2 dot P + R) , quad F_1 = frac(2 P R, P + R)",
+    "P_\"macro\" = frac(1, n) sum_(i=1)^n P_i , quad P_\"micro\" = frac(sum_(i=1)^n \"TP\"_i, sum_(i=1)^n (\"TP\"_i + \"FP\"_i))",
+    "p_n = frac(\"clipped candidate n-grams found in a reference\", \"total candidate n-grams\") = frac(\"matches\", c - n + 1)",
+    "\"BLEU\" = \"BP\" dot (product_(n=1)^4 p_n)^(1 \\/ 4) , quad \"BP\" = min(1, c \\/ r)",
+    "\"score\"(y_1, ..., y_t) = sum_(i=1)^t log P_\"LM\" (y_i | y_1, ..., y_(i-1), x)",
+    "\"normalized score\" = frac(1, t) sum_(i=1)^t log P_\"LM\" (y_i | y_1, ..., y_(i-1), x)",
+    "\"Attention\"(Q, K, V) = \"softmax\"(frac(Q K^T, sqrt(d_k))) V",
+    "\"PE\"(\"pos\", 2i) = sin(frac(\"pos\", 10000^(2i \\/ d_\"model\"))) , quad \"PE\"(\"pos\", 2i+1) = cos(frac(\"pos\", 10000^(2i \\/ d_\"model\")))",
+    "h : D -> C quad (\"binary, SLMC, ordinal\") , quad h : D -> 2^C quad (\"MLMC\")",
+    "\"BIO tag-set size\" = 2n + 1 quad (n = \"number of entity types\")",
+    "\"guess iff\" quad p > frac(0.5, m + 0.5) quad (m = \"marks for a correct closed answer, penalty\" = -0.5)"
+  ],
+  "traps": [
+    "NEGATIVE MARKING IS REAL AND IT IS ONLY IN PART 2. Two sources agree: the Course Information deck says 'CAUTION on PART 2: penalty for wrong answers: -0.5, blank: 0', and the paper itself prints 'WRONG ANSWER WILL GET -0.5 POINT! LEAVE IT BLANK FOR 0 POINT' three times. No penalty is stated for Part 1 or Part 3, so NEVER leave an open question blank — there is no downside to writing something.",
+    "THE GUESSING ARITHMETIC. Let m be the marks for a correct closed answer and p your probability of being right. Expected value of answering = p(m) + (1 - p)(-0.5) = p(m + 0.5) - 0.5. Answer only when p > 0.5 / (m + 0.5). If a correct answer is worth 1 mark, the break-even is p > 1/3; if it is worth 0.5 marks, the break-even is p > 1/2. The per-item mark is NOT stated anywhere in the sources, so use the stricter rule: answer when you can get your confidence above 50%, and leave it blank otherwise.",
+    "FIVE-OPTION MCQs ARE A TRAP FOR BLIND GUESSING. The 2025-26 paper uses A-E where E is always 'None of the above'. A blind guess has p = 0.2: expected value at m = 1 is 0.2(1.5) - 0.5 = -0.2 marks, and at m = 0.5 it is -0.3. Blank scores 0 and therefore beats a blind guess by 0.2 to 0.3 marks EVERY time. Ten such items guessed blind cost you 2 to 3 marks against leaving them blank — enough to turn 18 into 15.",
+    "ELIMINATION CHANGES THE ANSWER. Cross out options you can rule out and recount. Down to 3 options, p = 1/3: exactly break-even at m = 1, still negative at m = 0.5 — leave it. Down to 2 options, p = 0.5: expected value +0.25 at m = 1 and 0 at m = 0.5 — answer it. So the working rule on the day is: eliminate to two options or leave it blank.",
+    "TRUE/FALSE ITEMS ARE NOT FREE COIN FLIPS, BECAUSE THEY ASK FOR AN EXPLANATION. Every True/False item on the 2025-26 paper says 'Provide the answer with a very brief, just a sentence, explanation'. A coin flip gives p = 0.5, which is above break-even at m = 1, but a wrong one-sentence explanation attached to a right guess is unlikely to be treated as correct. Answer a True/False only if you can state WHY in one clause.",
+    "THE MATCHING EXERCISE IS SEVEN SEPARATE PENALTIES, NOT ONE. The 2025-26 matching item has 7 terms and 7 descriptions. If -0.5 applies per mismatch, filling in all seven from partial knowledge is expensive: place the ones you are sure of, and for the leftovers remember that guessing a random permutation of k unknowns gives you an expected 1 correct regardless of k, so with 3 unknowns you expect 1 right and 2 wrong = 1(m) - 1.0. At m = 1 that is break-even; at m = 0.5 it is a loss. Place what you know; leave genuinely unknown rows blank.",
+    "TRUE/FALSE STATEMENTS ARE BUILT AS HALF-TRUE SENTENCES. 'BPE starts from individual characters and iteratively merges the LEAST frequent adjacent symbol pairs' — the first half is right, the last three words are wrong. 'In self-attention, the VALUE vector is mainly used to decide how relevant a token is to another token's query' — right mechanism, wrong vector (that is the Key). Read to the end of the sentence and hunt for the single swapped word before deciding.",
+    "BLEU: A SINGLE ZERO PRECISION KILLS THE WHOLE SCORE. BLEU is a GEOMETRIC mean, so if p4 = 0 then BLEU = 0 no matter how good p1 is. In the 22_23 exam item both systems score 0. Do not assume you made an arithmetic error and fudge a non-zero number — write 0, then explain that the geometric mean collapsed and report the individual p_n. That explanation is where the marks are.",
+    "BLEU: COUNT THE DENOMINATOR PROPERLY. For a candidate of c tokens there are c - n + 1 n-grams, not c. Getting p2 = 2/7 instead of 2/6 loses the arithmetic marks even when the method is right. Also state your tokenisation and casing convention before you start — the archived items mix 'A cat' with 'The cat' and 'a desk', and the marker wants to see that you noticed.",
+    "TF-IDF: THIS COURSE NORMALISES tf BY THE MAXIMUM tf IN THE DOCUMENT AND USES log BASE 10. The slide formula is w = (tf_td / max_t' tf_t'd) x log10(N / df_t). If you write the raw-count version you will get numbers that do not match the expected answer. By contrast PMI uses log BASE 2. Two different log bases in the same exam is the commonest arithmetic slip in this paper.",
+    "PPMI: DIVIDING BY THE WRONG TOTAL. p_ij is the cell divided by the GRAND TOTAL of the whole table, and the marginals are the row and column sums divided by the SAME grand total. Dividing the cell by its row total instead gives a conditional probability, and the whole answer collapses. Also: do not forget the final clip at zero, and do not forget to answer the rare-word follow-up (alpha = 0.75 context smoothing, or add-k Laplace) — it is a separate mark.",
+    "PPMI TABLE QUESTIONS START WITH AN UPDATE STEP THAT PEOPLE SKIP. The 22_23 item says 'First, update the previous table (without adding new words and context words) including the occurrences in the provided sentences using a context window of 5'. Students dive straight into the formula and lose the first half of the marks. Do the counting, show the updated table, then compute.",
+    "PART 1 IS A THIRD OF THE PAPER AND IS THE MOST SKIPPED. Every real exam sheet in the archive opens with Linguistics, and the one sheet that prints its tariff gives Part 1 eight marks. It is also the cheapest to prepare: the same four exercise types recur (find the incorrect statement, decompose morphemes with POS, arguments vs adjuncts, constituency tests). Skipping Part 1 to revise Transformers is the single worst trade available.",
+    "DERIVATIONAL VS INFLECTIONAL IS THE STATEMENT THEY INVERT. Derivational morphology MAY change the category; inflectional does NOT. Any statement claiming that inflectional morphology changes the category is the incorrect one. Learn the direction, not the vibe.",
+    "'MOTIVATE YOUR ANSWER USING THE MODEL BELOW' MEANS USE A DISTRIBUTIONAL TEST. For POS questions the sheet supplies a model ('Readable = ADJ because it can be modified by very, or can modify a noun as in readable book'). A semantic definition ('it describes a quality') will not score. Give a frame the word fits into.",
+    "CONSTITUENCY QUESTIONS WANT THE TEST AND THE INFERENCE. Writing the cleft sentence is half the answer; you must then state what it proves ('therefore [the students in the class] is a single constituent'). Same for the proform test.",
+    "MACRO VS MICRO IS ASKED AS A TRUE/FALSE. Macro = compute per class, then average, so every class counts equally and minority classes matter as much as majority ones (TRUE as stated on the paper). Micro = pool all decisions into one confusion matrix, so the big class dominates. If you can only remember one thing: macro protects small classes.",
+    "MASKED SELF-ATTENTION IS ABOUT THE FUTURE, NOT ABOUT MASKED LANGUAGE MODELLING. In a Transformer DECODER, masking prevents a target position attending to LATER target tokens during training. That is a different mechanism from BERT's Masked Language Modeling, which predicts hidden tokens using bidirectional context. The paper tests both and the names invite the confusion.",
+    "N-GRAM SPARSITY HAS TWO DISTINCT PROBLEMS WITH TWO DISTINCT FIXES. Unseen n-gram with a seen context -> smoothing (add delta). Unseen CONTEXT -> backoff to a shorter context. Answering 'use smoothing' to both loses half the marks on the recurring open question.",
+    "DO NOT REVISE INFORMATION RETRIEVAL OR RECOMMENDER SYSTEMS ON THE STRENGTH OF THE 'Past Exam January 2026' FILE. That material (IR pipeline, BM25, MAP / P@5 / nDCG, RAG, cold start, personalized vs non-personalized) is absent from the 2025-26 course contents and from the 2025-26 practice paper; it belonged to the 2022-23 edition. [NOT IN SOURCE — VERIFY] with the lecturer before spending any of your six hours there.",
+    "THE PHOTOGRAPHED PAPERS ARE OCR OF PHONE PHOTOS AND ARE PARTLY WRONG. 'the big dog chases a man', 'lased a person', garbled matching letters, and an answer key that types cos twice in the positional-encoding formula. Where a photograph disagrees with the clean PDF text of the practice papers or with a slide deck, trust the clean source. Do not memorise a formula from an OCRed photograph."
+  ],
+  "six_hours": [
+    "HOUR 1 — Vector semantics arithmetic (highest frequency, 9 of 15 papers, and it is pure procedure). Learn the three formulas by writing them out: PPMI with log base 2, TF-IDF with max-normalised tf and log base 10, cosine. Then do the two worked examples in this pack with the book shut: PPMI for (information, data) from the 19-total table, and TF-IDF for Antony and for Caesar in d1. Finish by reciting the six-row cosine matching key.",
+    "HOUR 2 — Part 1 Linguistics (8 marks on the one sheet that prints its tariff, and the cheapest marks in the exam). Memorise the morpheme taxonomy table: free vs bound, lexical vs grammatical, derivational changes category and meaning, inflectional does not. Then drill the four recurring exercises: find the incorrect morphology statement; decompose Farmer / Excusable / Nationality with POS before and after; arguments vs adjuncts on 'Mary is trying to solve the problem in an hour' using obligatoriness, iteration and entailment; constituency tests on 'The students in the class voted for John' with cleft and proform.",
+    "HOUR 3 — The two list questions that cost nothing to learn and have appeared in 8 and 7 of 15 papers. First the five challenges of NLP with one sentence each (Productivity, Ambiguity, Variability, Diversity, Sparsity) and the three faces of Sparsity (Zipf, sparse matrices, zero n-gram counts). Then text classification: the definition h : D -> C, the four types (binary, SLMC, MLMC with h : D -> 2^C, ordinal), hard vs soft, efficiency vs effectiveness, and the accuracy-is-misleading argument.",
+    "HOUR 4 — n-gram language models and classification metrics, both of which are arithmetic you can be made to do. Work the three-sentence bigram corpus in this pack: sentence probability 1/9, add-one smoothing giving 1/12 for the unseen bigram, perplexity 1.73. Then recompute the macro (.60) and micro (.73) precision example, and add F1 for one class. Learn precision, recall, F1 and the macro-vs-micro one-liner.",
+    "HOUR 5 — Machine translation evaluation, which is a full open question in most years and three closed items in the newest paper. Compute BLEU by hand on the exam's own sentences ('A cat is on the table' vs the two systems) and get comfortable saying 'BLEU is 0 and here is why'. Learn adequacy vs fluency, the three problems with human evaluation, and the one killer fact about learned metrics: COMET fails on empty strings and wrong-language output, where n-gram overlap catches it.",
+    "HOUR 6 — The 2025-26-specific block, in this order. BPE: the five algorithm steps, the low/lower/newest/widest merge trace (es, est, lo), the segmentation of 'lowest', and the vocabulary-size vs sequence-length trade-off. Then the Transformer six steps of self-attention plus the four positional-encoding criteria. Then, in the last fifteen minutes, memorise the seven-row matching key and the three architecture families (BERT encoder, GPT decoder, BART/mBART encoder-decoder denoising) and the pre-training / SFT / RLHF chain.",
+    "IF YOU HAVE ONLY THREE HOURS: do hours 1, 2 and 3. They cover the three highest-frequency topics plus the whole of Part 1, they are all procedure or lists rather than understanding, and together they plausibly reach the 18 needed. Add hour 5 next, because BLEU is the single question most likely to be worth a large block of Part 3.",
+    "BEFORE YOU WALK IN: re-read the traps list once, and fix the guessing rule in your head — eliminate to two options or leave it blank. Then write the two log bases on your scrap paper as soon as you sit down: PMI is log base 2, TF-IDF is log base 10."
+  ]
+}

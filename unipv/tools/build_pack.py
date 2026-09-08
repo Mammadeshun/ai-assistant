@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -124,7 +125,10 @@ def preamble(title: str, subtitle: str) -> str:
 #show heading.where(level: 1): it => {{ set text(16pt, weight: "bold"); block(above: 1.2em, below: 0.7em, it) }}
 #show heading.where(level: 2): it => {{ set text(13pt, weight: "bold"); block(above: 1.0em, below: 0.5em, it) }}
 #show heading.where(level: 3): it => {{ set text(11.5pt, weight: "bold"); block(above: 0.8em, below: 0.4em, it) }}
-#show table: set block(breakable: false)
+// Reference tables here run longer than a page. Unbreakable means the whole
+// table is pushed to a fresh page and still does not fit, which left the exam
+// brief off the document entirely. Losing content is worse than a split.
+#show table: set block(breakable: true)
 #set table(stroke: 0.4pt)
 
 #align(center)[
@@ -257,7 +261,13 @@ def build_essentials(code: str, name: str, content: dict, figures: list[dict],
             elif kind == "figure":
                 path = fig_dir / block["png"]
                 if path.exists():
-                    doc += (f'#figure(image("{path.as_posix()}", width: '
+                    # Typst reads a leading "/" as project-root-relative, not
+                    # as a filesystem path, so an absolute path resolved to
+                    # output/home/user/... and the image was never found.
+                    # Root-relative, with the project root set to unipv/ at
+                    # compile time; Typst refuses any path that escapes it.
+                    rel = "/" + os.path.relpath(path, ROOT)
+                    doc += (f'#figure(image("{rel}", width: '
                             f'{block.get("width", "85%")}), caption: '
                             f'[{esc(block.get("caption", ""))}])\n\n')
             else:
@@ -285,7 +295,8 @@ def compile_typst(source: str, target: Path) -> tuple[bool, str]:
     try:
         import typst
 
-        typst.compile(str(src), output=str(target))
+        # Root is unipv/, so figures under raw/ are reachable as /raw/...
+        typst.compile(str(src), output=str(target), root=str(ROOT))
         return True, ""
     except Exception as exc:  # noqa: BLE001
         return False, str(exc)[:400]

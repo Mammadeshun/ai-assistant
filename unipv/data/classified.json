@@ -13843,6 +13843,581 @@
    "exam_date": null
   },
   {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/20-02-24A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/20-02-24A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Feb24-solutionsA/20-02-24A.txt",
+   "role": "SOLUTIONS",
+   "chars": 2593,
+   "scanned": false,
+   "exam_date": "2024-02-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/20-02-24B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/20-02-24B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Feb24-solutionsB/20-02-24B.txt",
+   "role": "SOLUTIONS",
+   "chars": 2712,
+   "scanned": false,
+   "exam_date": "2024-02-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/20-2-23A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/20-2-23A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/February2023-solutions/20-2-23A.txt",
+   "role": "SOLUTIONS",
+   "chars": 3245,
+   "scanned": false,
+   "exam_date": "2023-02-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/20-2-23B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/20-2-23B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/February2023-solutions/20-2-23B.txt",
+   "role": "SOLUTIONS",
+   "chars": 3320,
+   "scanned": false,
+   "exam_date": "2023-02-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/13-02-25A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/13-02-25A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/February25/13-02-25A.txt",
+   "role": "PAST_PAPER",
+   "chars": 2235,
+   "scanned": false,
+   "exam_date": "2025-02-13"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/13-02-25B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/13-02-25B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/February25/13-02-25B.txt",
+   "role": "PAST_PAPER",
+   "chars": 2349,
+   "scanned": false,
+   "exam_date": "2025-02-13"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/30-1-23A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/30-1-23A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Jan2023/30-1-23A.txt",
+   "role": "PAST_PAPER",
+   "chars": 2543,
+   "scanned": false,
+   "exam_date": "2023-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/30-1-23B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/30-1-23B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Jan2023/30-1-23B.txt",
+   "role": "PAST_PAPER",
+   "chars": 2531,
+   "scanned": false,
+   "exam_date": "2023-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/29-01-24A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/29-01-24A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Jan24-A/29-01-24A.txt",
+   "role": "PAST_PAPER",
+   "chars": 3277,
+   "scanned": false,
+   "exam_date": "2024-01-29"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/29-01-24B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/29-01-24B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Jan24-B/29-01-24B.txt",
+   "role": "PAST_PAPER",
+   "chars": 3320,
+   "scanned": false,
+   "exam_date": "2024-01-29"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/January25/27-01-25A.txt",
+   "role": "PAST_PAPER",
+   "chars": 2271,
+   "scanned": false,
+   "exam_date": "2025-01-27"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/January25/27-01-25B.txt",
+   "role": "PAST_PAPER",
+   "chars": 2342,
+   "scanned": false,
+   "exam_date": "2025-01-27"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25C.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25C.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/January25/27-01-25C.txt",
+   "role": "PAST_PAPER",
+   "chars": 2561,
+   "scanned": false,
+   "exam_date": "2025-01-27"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25D.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/27-01-25D.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/January25/27-01-25D.txt",
+   "role": "PAST_PAPER",
+   "chars": 2629,
+   "scanned": false,
+   "exam_date": "2025-01-27"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/24-07-23.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/24-07-23.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/July-2023/24-07-23.txt",
+   "role": "PAST_PAPER",
+   "chars": 2780,
+   "scanned": false,
+   "exam_date": "2023-07-24"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/22-07-24.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/22-07-24.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/July24/22-07-24.txt",
+   "role": "PAST_PAPER",
+   "chars": 3539,
+   "scanned": false,
+   "exam_date": "2024-07-22"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/29-06-23.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/29-06-23.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/June2023/29-06-23.txt",
+   "role": "PAST_PAPER",
+   "chars": 1947,
+   "scanned": false,
+   "exam_date": "2023-06-29"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/19-06-24A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/19-06-24A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/June24/19-06-24A.txt",
+   "role": "PAST_PAPER",
+   "chars": 2806,
+   "scanned": false,
+   "exam_date": "2024-06-19"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/20-09-24.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/20-09-24.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Sept20-2024/20-09-24.txt",
+   "role": "PAST_PAPER",
+   "chars": 2179,
+   "scanned": false,
+   "exam_date": "2024-09-20"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/1-09-23.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/1-09-23.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/September-1st-2023/1-09-23.txt",
+   "role": "PAST_PAPER",
+   "chars": 2798,
+   "scanned": false,
+   "exam_date": "2023-09-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/02-09-24.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/02-09-24.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/September2-2024/02-09-24.txt",
+   "role": "PAST_PAPER",
+   "chars": 2478,
+   "scanned": false,
+   "exam_date": "2024-09-02"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/23-09-23.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/23-09-23.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/September22-2023/23-09-23.txt",
+   "role": "PAST_PAPER",
+   "chars": 2548,
+   "scanned": false,
+   "exam_date": "2023-09-23"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/17-7-25.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/17-7-25.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Solutions-July25/17-7-25.txt",
+   "role": "SOLUTIONS",
+   "chars": 2313,
+   "scanned": false,
+   "exam_date": "2025-07-17"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/23-09-22.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/23-09-22.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions/23-09-22.txt",
+   "role": "SOLUTIONS",
+   "chars": 2402,
+   "scanned": false,
+   "exam_date": "2022-09-23"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/1-9-25.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/1-9-25.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-1-Sept-25/1-9-25.txt",
+   "role": "SOLUTIONS",
+   "chars": 2794,
+   "scanned": false,
+   "exam_date": "2025-09-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/23-9-25.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/23-9-25.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-23-09-25/23-9-25.txt",
+   "role": "SOLUTIONS",
+   "chars": 2056,
+   "scanned": false,
+   "exam_date": "2025-09-23"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/16-02-26A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/16-02-26A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Feb26A/16-02-26A.txt",
+   "role": "SOLUTIONS",
+   "chars": 2786,
+   "scanned": false,
+   "exam_date": "2026-02-16"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/16-02-26B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/16-02-26B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Feb26B/16-02-26B.txt",
+   "role": "SOLUTIONS",
+   "chars": 2856,
+   "scanned": false,
+   "exam_date": "2026-02-16"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/30-01-26A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/30-01-26A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Jan26A/30-01-26A.txt",
+   "role": "SOLUTIONS",
+   "chars": 2977,
+   "scanned": false,
+   "exam_date": "2026-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/30-01-26B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/30-01-26B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Jan26B/30-01-26B.txt",
+   "role": "SOLUTIONS",
+   "chars": 2956,
+   "scanned": false,
+   "exam_date": "2026-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/30-01-26C.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/30-01-26C.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Jan26C/30-01-26C.txt",
+   "role": "SOLUTIONS",
+   "chars": 3025,
+   "scanned": false,
+   "exam_date": "2026-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/30-01-26D.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/30-01-26D.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-Jan26D/30-01-26D.txt",
+   "role": "SOLUTIONS",
+   "chars": 2918,
+   "scanned": false,
+   "exam_date": "2026-01-30"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/14-07-26A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/14-07-26A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-July26A/14-07-26A.txt",
+   "role": "SOLUTIONS",
+   "chars": 3390,
+   "scanned": false,
+   "exam_date": "2026-07-14"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/14-07-26B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/14-07-26B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-July26B/14-07-26B.txt",
+   "role": "SOLUTIONS",
+   "chars": 3229,
+   "scanned": false,
+   "exam_date": "2026-07-14"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/16-06-26A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/16-06-26A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-June2026A/16-06-26A.txt",
+   "role": "SOLUTIONS",
+   "chars": 2547,
+   "scanned": false,
+   "exam_date": "2026-06-16"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/16-06-26B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/16-06-26B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-June2026B/16-06-26B.txt",
+   "role": "SOLUTIONS",
+   "chars": 2553,
+   "scanned": false,
+   "exam_date": "2026-06-16"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/16-6-25.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/16-6-25.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-June25/16-6-25.txt",
+   "role": "SOLUTIONS",
+   "chars": 2762,
+   "scanned": false,
+   "exam_date": "2025-06-16"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/31-08-26.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/31-08-26.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutions-august26/31-08-26.txt",
+   "role": "SOLUTIONS",
+   "chars": 2407,
+   "scanned": false,
+   "exam_date": "2026-08-31"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/21-2-22A.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/21-2-22A.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutionsA/21-2-22A.txt",
+   "role": "SOLUTIONS",
+   "chars": 2873,
+   "scanned": false,
+   "exam_date": "2022-02-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/21-2-22B.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/21-2-22B.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutionsB/21-2-22B.txt",
+   "role": "SOLUTIONS",
+   "chars": 2903,
+   "scanned": false,
+   "exam_date": "2022-02-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/21-2-22C.pdf",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/21-2-22C.pdf",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/solutionsC/21-2-22C.txt",
+   "role": "SOLUTIONS",
+   "chars": 2710,
+   "scanned": false,
+   "exam_date": "2022-02-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/1.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/1.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/1.txt",
+   "role": "ADMIN",
+   "chars": 1686,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/10.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/10.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/10.txt",
+   "role": "NOTES",
+   "chars": 54,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/11.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/11.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/11.txt",
+   "role": "NOTES",
+   "chars": 331,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/12.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/12.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/12.txt",
+   "role": "NOTES",
+   "chars": 273,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/2.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/2.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/2.txt",
+   "role": "NOTES",
+   "chars": 1372,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/3.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/3.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/3.txt",
+   "role": "NOTES",
+   "chars": 711,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/4.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/4.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/4.txt",
+   "role": "NOTES",
+   "chars": 159,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/5.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/5.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/5.txt",
+   "role": "NOTES",
+   "chars": 533,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2021-10-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/6.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/6.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/6.txt",
+   "role": "NOTES",
+   "chars": 302,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2021-10-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/7.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/7.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/7.txt",
+   "role": "NOTES",
+   "chars": 172,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2021-10-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/8.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/8.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/8.txt",
+   "role": "NOTES",
+   "chars": 416,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2021-10-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/9.jpeg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Add-z3-to-path-Windows/9.jpeg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Add-z3-to-path-Windows/9.txt",
+   "role": "NOTES",
+   "chars": 446,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": "2021-10-21"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/Map_of_region_of_Lombardy,_Italy,_with_provinces-it.svg.png",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/Map_of_region_of_Lombardy,_Italy,_with_provinces-it.svg.png",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Feb24-solutionsA/Map_of_region_of_Lombardy,_Italy,_with_provinces-it.svg.txt",
+   "role": "SOLUTIONS",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/Toscana.png",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/Toscana.png",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/Feb24-solutionsB/Toscana.txt",
+   "role": "SOLUTIONS",
+   "chars": 0,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mappa-politica-del-medio-oriente-con-ciascun-paese-selezionabile-in-modo-indipendente-2j7hccm (1).jpg",
+   "original": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mappa-politica-del-medio-oriente-con-ciascun-paese-selezionabile-in-modo-indipendente-2j7hccm (1).jpg",
+   "converted": false,
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_text/_unzipped/February25/mappa-politica-del-medio-oriente-con-ciascun-paese-selezionabile-in-modo-indipendente-2j7hccm (1).txt",
+   "role": "NOTES",
+   "chars": 455,
+   "scanned": true,
+   "ocr": true,
+   "exam_date": null
+  },
+  {
    "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMA.txt",
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/FMA.txt",
    "role": "NOTES",
@@ -14037,7 +14612,7 @@
   {
    "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/feb23.txt",
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/feb23.txt",
-   "role": "SOLUTIONS",
+   "role": "PAST_PAPER",
    "chars": 955,
    "scanned": false,
    "exam_date": "2023-02-01"
@@ -14053,7 +14628,7 @@
   {
    "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/jan22.txt",
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/jan22.txt",
-   "role": "SOLUTIONS",
+   "role": "PAST_PAPER",
    "chars": 1060,
    "scanned": false,
    "exam_date": "2022-01-01"
@@ -14061,7 +14636,7 @@
   {
    "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/lug23.txt",
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/lug23.txt",
-   "role": "SOLUTIONS",
+   "role": "PAST_PAPER",
    "chars": 954,
    "scanned": false,
    "exam_date": "2023-07-01"
@@ -14149,7 +14724,7 @@
   {
    "path": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/sept23.txt",
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/sept23.txt",
-   "role": "NOTES",
+   "role": "PAST_PAPER",
    "chars": 809,
    "scanned": false,
    "exam_date": "2023-09-01"
@@ -14167,6 +14742,2054 @@
    "text": "raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/z3_online.txt",
    "role": "NOTES",
    "chars": 209,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.1A.txt",
+   "role": "SOLUTIONS",
+   "chars": 706,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.2A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.2A.txt",
+   "role": "SOLUTIONS",
+   "chars": 838,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.3A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/2.3A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1486,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/Lombardia.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/Lombardia.txt",
+   "role": "SOLUTIONS",
+   "chars": 933,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/bubbleA.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/bubbleA.smt2",
+   "role": "SOLUTIONS",
+   "chars": 1541,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/questionsA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsA/questionsA.txt",
+   "role": "SOLUTIONS",
+   "chars": 380,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 802,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 841,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/2.3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1489,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/Toscana.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/Toscana.txt",
+   "role": "SOLUTIONS",
+   "chars": 770,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/bubbleB.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/bubbleB.smt2",
+   "role": "SOLUTIONS",
+   "chars": 1719,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/questionsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Feb24-solutionsB/questionsB.txt",
+   "role": "SOLUTIONS",
+   "chars": 348,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 737,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 684,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 898,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1021,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 401,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/2.3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 438,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/candies.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/candies.txt",
+   "role": "SOLUTIONS",
+   "chars": 427,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/elevator.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/elevator.txt",
+   "role": "SOLUTIONS",
+   "chars": 8816,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/elevatorB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/elevatorB.txt",
+   "role": "SOLUTIONS",
+   "chars": 9399,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/questions.txt",
+   "role": "SOLUTIONS",
+   "chars": 262,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/questionsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/questionsB.txt",
+   "role": "SOLUTIONS",
+   "chars": 264,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/snacks.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February2023-solutions/snacks.txt",
+   "role": "SOLUTIONS",
+   "chars": 426,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.1A.txt",
+   "role": "SOLUTIONS",
+   "chars": 346,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 259,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.2A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.2A.txt",
+   "role": "SOLUTIONS",
+   "chars": 723,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 811,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.3A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.3A.txt",
+   "role": "NOTES",
+   "chars": 825,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/2.3B.txt",
+   "role": "NOTES",
+   "chars": 817,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mapA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mapA.txt",
+   "role": "NOTES",
+   "chars": 658,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mapB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/mapB.txt",
+   "role": "NOTES",
+   "chars": 676,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/part_IA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/part_IA.txt",
+   "role": "NOTES",
+   "chars": 493,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/part_IB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/part_IB.txt",
+   "role": "NOTES",
+   "chars": 455,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/weightsA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/weightsA.txt",
+   "role": "NOTES",
+   "chars": 2104,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/weightsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/February25/weightsB.txt",
+   "role": "NOTES",
+   "chars": 2180,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 791,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 814,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1191,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1281,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.3.txt",
+   "role": "NOTES",
+   "chars": 1387,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/2.3B.txt",
+   "role": "NOTES",
+   "chars": 1356,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/MarsVenus.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/MarsVenus.txt",
+   "role": "NOTES",
+   "chars": 855,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/MarsVenusB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/MarsVenusB.txt",
+   "role": "NOTES",
+   "chars": 834,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/labyrinthA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/labyrinthA.txt",
+   "role": "NOTES",
+   "chars": 3330,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/labyrinthB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/labyrinthB.txt",
+   "role": "NOTES",
+   "chars": 3331,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan2023/questions.txt",
+   "role": "NOTES",
+   "chars": 272,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.1A.txt",
+   "role": "NOTES",
+   "chars": 838,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.2A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.2A.txt",
+   "role": "SOLUTIONS",
+   "chars": 999,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.3A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/2.3A.txt",
+   "role": "NOTES",
+   "chars": 902,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/grid+obstaclesA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/grid+obstaclesA.txt",
+   "role": "NOTES",
+   "chars": 2525,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/questionsA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/questionsA.txt",
+   "role": "NOTES",
+   "chars": 767,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/sausagesA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-A/sausagesA.txt",
+   "role": "SOLUTIONS",
+   "chars": 770,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.1B.txt",
+   "role": "NOTES",
+   "chars": 468,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 964,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/2.3B.txt",
+   "role": "NOTES",
+   "chars": 1218,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/grid+obstaclesB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/grid+obstaclesB.txt",
+   "role": "NOTES",
+   "chars": 2516,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/questionsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/questionsB.txt",
+   "role": "NOTES",
+   "chars": 844,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/sausagesB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Jan24-B/sausagesB.txt",
+   "role": "SOLUTIONS",
+   "chars": 822,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1.txt",
+   "role": "NOTES",
+   "chars": 246,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1B.txt",
+   "role": "NOTES",
+   "chars": 216,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1C.txt",
+   "role": "NOTES",
+   "chars": 200,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.1D.txt",
+   "role": "NOTES",
+   "chars": 213,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 807,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 822,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2C.txt",
+   "role": "SOLUTIONS",
+   "chars": 817,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.2D.txt",
+   "role": "SOLUTIONS",
+   "chars": 791,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3.txt",
+   "role": "NOTES",
+   "chars": 837,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3B.txt",
+   "role": "NOTES",
+   "chars": 857,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3C.txt",
+   "role": "NOTES",
+   "chars": 1342,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/2.3D.txt",
+   "role": "NOTES",
+   "chars": 1613,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25.txt",
+   "role": "PAST_PAPER",
+   "chars": 758,
+   "scanned": false,
+   "exam_date": "2025-01-01"
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25B.txt",
+   "role": "SOLUTIONS",
+   "chars": 740,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25C.txt",
+   "role": "SOLUTIONS",
+   "chars": 868,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/KK_Jan25D.txt",
+   "role": "SOLUTIONS",
+   "chars": 956,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/arrangeC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/arrangeC.txt",
+   "role": "NOTES",
+   "chars": 3079,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/arrangeD.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/arrangeD.txt",
+   "role": "NOTES",
+   "chars": 2592,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/blockslide.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/blockslide.txt",
+   "role": "SLIDES",
+   "chars": 2565,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/blockslideB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/blockslideB.txt",
+   "role": "SLIDES",
+   "chars": 2565,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1.txt",
+   "role": "SLIDES",
+   "chars": 920,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1B.txt",
+   "role": "SLIDES",
+   "chars": 838,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1C.txt",
+   "role": "SLIDES",
+   "chars": 408,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/January25/part1D.txt",
+   "role": "SLIDES",
+   "chars": 319,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 955,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 659,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/2.3.txt",
+   "role": "NOTES",
+   "chars": 1674,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/3.3.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/3.3.smt2",
+   "role": "NOTES",
+   "chars": 875,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/KK.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/KK.txt",
+   "role": "SOLUTIONS",
+   "chars": 500,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July-2023/questions.txt",
+   "role": "NOTES",
+   "chars": 401,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 786,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 811,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/2.3.txt",
+   "role": "NOTES",
+   "chars": 1647,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/3.2.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/3.2.smt2",
+   "role": "SOLUTIONS",
+   "chars": 410,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/3.3.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/3.3.smt2",
+   "role": "NOTES",
+   "chars": 3709,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/part1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/part1.txt",
+   "role": "SLIDES",
+   "chars": 641,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/variant-3x3.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/variant-3x3.smt2",
+   "role": "NOTES",
+   "chars": 2148,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/variante3x3.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/July24/variante3x3.smt2",
+   "role": "NOTES",
+   "chars": 2148,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartI.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartI.txt",
+   "role": "NOTES",
+   "chars": 406,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_1.txt",
+   "role": "NOTES",
+   "chars": 678,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_2.txt",
+   "role": "SOLUTIONS",
+   "chars": 659,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/PartII_3.txt",
+   "role": "NOTES",
+   "chars": 671,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/coloring.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/coloring.txt",
+   "role": "NOTES",
+   "chars": 930,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/pizzeria.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June2023/pizzeria.txt",
+   "role": "SOLUTIONS",
+   "chars": 1370,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 794,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 814,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/2.3.txt",
+   "role": "NOTES",
+   "chars": 418,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/marker-pens.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/marker-pens.smt2",
+   "role": "SOLUTIONS",
+   "chars": 527,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/partI.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/partI.txt",
+   "role": "NOTES",
+   "chars": 589,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/tetra.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/June24/tetra.smt2",
+   "role": "NOTES",
+   "chars": 1961,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.1.txt",
+   "role": "NOTES",
+   "chars": 848,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1010,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/2.3.txt",
+   "role": "NOTES",
+   "chars": 465,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/balls.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/balls.txt",
+   "role": "NOTES",
+   "chars": 2151,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/part1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/part1.txt",
+   "role": "SLIDES",
+   "chars": 576,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/regions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Sept20-2024/regions.txt",
+   "role": "NOTES",
+   "chars": 561,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 873,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 517,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/2.3.txt",
+   "role": "NOTES",
+   "chars": 308,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/Agatha.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/Agatha.txt",
+   "role": "NOTES",
+   "chars": 1278,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/greengrocer.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/greengrocer.txt",
+   "role": "NOTES",
+   "chars": 470,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September-1st-2023/questions.txt",
+   "role": "NOTES",
+   "chars": 658,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 801,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 820,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/2.3.txt",
+   "role": "NOTES",
+   "chars": 1827,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/KK.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/KK.txt",
+   "role": "SOLUTIONS",
+   "chars": 853,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/balls.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/balls.txt",
+   "role": "NOTES",
+   "chars": 2142,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/part1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September2-2024/part1.txt",
+   "role": "SLIDES",
+   "chars": 632,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.1.txt",
+   "role": "NOTES",
+   "chars": 809,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 971,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/2.3.txt",
+   "role": "NOTES",
+   "chars": 1877,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/coloringB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/coloringB.txt",
+   "role": "NOTES",
+   "chars": 485,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/labyrinth.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/labyrinth.txt",
+   "role": "NOTES",
+   "chars": 5169,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/September22-2023/questions.txt",
+   "role": "NOTES",
+   "chars": 437,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 477,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1130,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Ex2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 810,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 249,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/ex3-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/ex3-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 519,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/ex3-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/Solutions-July25/ex3-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 581,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 874,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 900,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/2.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 2436,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/3.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/3.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 526,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/3.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/3.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 579,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/questions.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions/questions.txt",
+   "role": "SOLUTIONS",
+   "chars": 650,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1132,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 637,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 809,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/3-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/3-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 293,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/3-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/3-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 1741,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-1-Sept-25/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 492,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 499,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 833,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 1197,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/3-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/3-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 632,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/3-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/3-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 596,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-23-09-25/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 265,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Eur.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Eur.txt",
+   "role": "SOLUTIONS",
+   "chars": 653,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 223,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 895,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Ex_2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 577,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Part_1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/Part_1.txt",
+   "role": "SOLUTIONS",
+   "chars": 400,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/brocche.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/brocche.py",
+   "role": "SOLUTIONS",
+   "chars": 3053,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/brocche.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26A/brocche.txt",
+   "role": "SOLUTIONS",
+   "chars": 2446,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/EurB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/EurB.txt",
+   "role": "SOLUTIONS",
+   "chars": 756,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 243,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1005,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Ex_2-3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 565,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Part_1_B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/Part_1_B.txt",
+   "role": "SOLUTIONS",
+   "chars": 523,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/broccheB.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/broccheB.py",
+   "role": "SOLUTIONS",
+   "chars": 3051,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/broccheB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Feb26B/broccheB.txt",
+   "role": "SOLUTIONS",
+   "chars": 2151,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 1083,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1047,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Ex_2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 1159,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/KK.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/KK.txt",
+   "role": "SOLUTIONS",
+   "chars": 607,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Part_1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/Part_1.txt",
+   "role": "SOLUTIONS",
+   "chars": 334,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/bmc_cards.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/bmc_cards.py",
+   "role": "SOLUTIONS",
+   "chars": 2387,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/cards.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26A/cards.txt",
+   "role": "SOLUTIONS",
+   "chars": 1525,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 742,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1031,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Ex_2-3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1087,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/KKB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/KKB.txt",
+   "role": "SOLUTIONS",
+   "chars": 606,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Part_1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/Part_1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 368,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/bmc_cardsB.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/bmc_cardsB.py",
+   "role": "SOLUTIONS",
+   "chars": 2514,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/cardsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26B/cardsB.txt",
+   "role": "SOLUTIONS",
+   "chars": 1694,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-1C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1077,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-2C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-2C.txt",
+   "role": "SOLUTIONS",
+   "chars": 920,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-3C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Ex_2-3C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1235,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/KKC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/KKC.txt",
+   "role": "SOLUTIONS",
+   "chars": 617,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Part_1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/Part_1C.txt",
+   "role": "SOLUTIONS",
+   "chars": 350,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/bmc_cards.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/bmc_cards.py",
+   "role": "SOLUTIONS",
+   "chars": 2387,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/cards.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26C/cards.txt",
+   "role": "SOLUTIONS",
+   "chars": 1525,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-1D.txt",
+   "role": "SOLUTIONS",
+   "chars": 1110,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-2D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-2D.txt",
+   "role": "SOLUTIONS",
+   "chars": 999,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-3D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Ex_2-3D.txt",
+   "role": "SOLUTIONS",
+   "chars": 1004,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/KKD.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/KKD.txt",
+   "role": "SOLUTIONS",
+   "chars": 526,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Part_1D.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/Part_1D.txt",
+   "role": "SOLUTIONS",
+   "chars": 397,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/bmc_cardsD.py",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/bmc_cardsD.py",
+   "role": "SOLUTIONS",
+   "chars": 2514,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/cardsD.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-Jan26D/cardsD.txt",
+   "role": "SOLUTIONS",
+   "chars": 1694,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 319,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1313,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex2.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 504,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex3.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex3.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1019,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex3.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Ex3.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 909,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Part-I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26A/Part-I.txt",
+   "role": "SOLUTIONS",
+   "chars": 336,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 338,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1220,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex2.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 561,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex3.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex3.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 939,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex3.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Ex3.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 909,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Part-I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-July26B/Part-I.txt",
+   "role": "SOLUTIONS",
+   "chars": 345,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 1022,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 731,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Ex_2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 1502,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 389,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/baskets.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/baskets.txt",
+   "role": "SOLUTIONS",
+   "chars": 332,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/boxes.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026A/boxes.txt",
+   "role": "SOLUTIONS",
+   "chars": 576,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 1018,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 763,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Ex_2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 836,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 361,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/basketsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/basketsB.txt",
+   "role": "SOLUTIONS",
+   "chars": 333,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/boxesB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June2026B/boxesB.txt",
+   "role": "SOLUTIONS",
+   "chars": 576,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 338,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-1.txt",
+   "role": "SOLUTIONS",
+   "chars": 602,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 1231,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex2-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 729,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex3-2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex3-2.txt",
+   "role": "SOLUTIONS",
+   "chars": 506,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex3-3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-June25/ex3-3.txt",
+   "role": "SOLUTIONS",
+   "chars": 3778,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.1.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.1.txt",
+   "role": "SOLUTIONS",
+   "chars": 524,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 680,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.3.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex2.3.txt",
+   "role": "SOLUTIONS",
+   "chars": 1550,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex3.2.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Ex3.2.txt",
+   "role": "SOLUTIONS",
+   "chars": 631,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Part_I.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/Part_I.txt",
+   "role": "SOLUTIONS",
+   "chars": 337,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/hanoi3_lists.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutions-august26/hanoi3_lists.txt",
+   "role": "SOLUTIONS",
+   "chars": 3794,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/dominoA.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/dominoA.smt2",
+   "role": "SOLUTIONS",
+   "chars": 2617,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/dominoA_simple.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/dominoA_simple.smt2",
+   "role": "SOLUTIONS",
+   "chars": 2108,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-1A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-1A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1000,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-2A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-2A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1079,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-3A.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/ex2-3A.txt",
+   "role": "SOLUTIONS",
+   "chars": 1583,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/purchaseA.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/purchaseA.smt2",
+   "role": "SOLUTIONS",
+   "chars": 367,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/questionsA.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsA/questionsA.txt",
+   "role": "SOLUTIONS",
+   "chars": 494,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/dominoB-simple.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/dominoB-simple.smt2",
+   "role": "SOLUTIONS",
+   "chars": 1657,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/dominoB.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/dominoB.smt2",
+   "role": "SOLUTIONS",
+   "chars": 2147,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-1B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-1B.txt",
+   "role": "SOLUTIONS",
+   "chars": 832,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-2B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-2B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1012,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-3B.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/ex2-3B.txt",
+   "role": "SOLUTIONS",
+   "chars": 1647,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/purchaseB.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/purchaseB.smt2",
+   "role": "SOLUTIONS",
+   "chars": 395,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/questionsB.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsB/questionsB.txt",
+   "role": "SOLUTIONS",
+   "chars": 402,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/dominoC-simple.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/dominoC-simple.smt2",
+   "role": "SOLUTIONS",
+   "chars": 2111,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/dominoC.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/dominoC.smt2",
+   "role": "SOLUTIONS",
+   "chars": 2623,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-1C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-1C.txt",
+   "role": "SOLUTIONS",
+   "chars": 890,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-2C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-2C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1010,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-3C.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/ex2-3C.txt",
+   "role": "SOLUTIONS",
+   "chars": 1643,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/purchaseC.smt2",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/purchaseC.smt2",
+   "role": "SOLUTIONS",
+   "chars": 364,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/questionsC.txt",
+   "text": "raw/509483-COMPUTATIONAL-LOGIC/_unzipped/solutionsC/questionsC.txt",
+   "role": "SOLUTIONS",
+   "chars": 402,
    "scanned": false,
    "exam_date": null
   }
