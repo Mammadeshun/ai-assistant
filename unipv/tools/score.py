@@ -37,6 +37,7 @@ from gradplan.predictability import Item  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 RAW, DATA, ANALYSIS = ROOT / "raw", ROOT / "data", ROOT / "analysis"
 TODAY = dt.date.today()
+FINAL_EXAM_CODE = "509535"
 
 # Phrases that state how a course is examined, in the two languages the course
 # pages mix. Matched against _course_text.html, and quoted verbatim in the
@@ -241,13 +242,40 @@ def main() -> int:
             base -= 0.05
         row["p_pass"] = round(max(0.15, min(0.9, base)), 2)
         row["cost_per_pass"] = round(row["hours_low"] / row["p_pass"])
+        # A course with no papers and no measurable predictability has no
+        # estimate - it has a fallback the model emits when it knows nothing.
+        # Computer Vision came out at 16-21h and ranked sixth cheapest on the
+        # board precisely because nothing about it could be counted. Mark it,
+        # so the number is never read as a finding.
+        row["measured"] = bool(row["papers"]) or row["predictability"] is not None
+        if not row["measured"]:
+            row["hours_note"] = ("NOT MEASURED - no papers and no questions were "
+                                 "found for this course. The hours are a floor "
+                                 "the model emits with no evidence, not an "
+                                 "estimate, and the cost per pass is unusable.")
 
-    rows.sort(key=lambda r: r["cost_per_pass"])
-    for index, row in enumerate(rows):
-        row["tier"] = "A" if index < 6 and row["sitting"] else \
-                      "B" if index < 12 and row["sitting"] else "C"
-        if not row["sitting"]:
+    # The final exam is the thesis, not a sitting to drill for; it is reported
+    # separately rather than ranked against taught courses.
+    thesis = [r for r in rows if r["code"] == FINAL_EXAM_CODE]
+    rows = [r for r in rows if r["code"] != FINAL_EXAM_CODE]
+
+    # Rank on what was measured. Unmeasured courses sort last whatever their
+    # fallback number says, and can never be Tier A - "take it" has to mean
+    # evidence exists, not that none does.
+    rows.sort(key=lambda r: (not r["measured"], r["cost_per_pass"]))
+    measured_with_sitting = 0
+    for row in rows:
+        if row["measured"] and row["sitting"]:
+            measured_with_sitting += 1
+            row["tier"] = "A" if measured_with_sitting <= 6 else \
+                          "B" if measured_with_sitting <= 12 else "C"
+        elif row["sitting"]:
             row["tier"] = "C"
+        else:
+            row["tier"] = "C"
+    rows += thesis
+    for row in thesis:
+        row["tier"] = "—"
 
     (DATA / "scoring.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False))
     ANALYSIS.mkdir(parents=True, exist_ok=True)
@@ -256,10 +284,11 @@ def main() -> int:
           f"{'hours':>10}{'P':>6}{'cost':>6}  tier")
     for row in rows:
         span = f"{row['hours_low']}-{row['hours_high']}h"
+        mark = "" if row.get("measured", True) else "  NOT MEASURED"
         print(f"{row['code']:<8}{row['name'][:32]:<34}{row['cfu']:>4}"
               f"{str(row['predictability'] or '-'):>5}{row['papers']:>5}"
               f"{row['questions']:>5}{span:>10}"
-              f"{row['p_pass']:>6}{row['cost_per_pass']:>6}  {row['tier']}")
+              f"{row['p_pass']:>6}{row['cost_per_pass']:>6}  {row['tier']}{mark}")
     print(f"\nwrote {DATA/'scoring.json'} and {ANALYSIS/'scoring.md'}")
     return 0
 
@@ -315,6 +344,8 @@ def write_markdown(rows: list[dict], esse3: dict) -> None:
                 + (f". Teachers: {detail['teachers']}" if detail.get("teachers") else "") + ".")
         else:
             out.append("- **Sitting**: none open. DATA INCOMPLETE or deferred to winter.")
+        if not row.get("measured", True):
+            out.append(f"- **⚠ {row['hours_note']}**")
         if row["flags"]:
             out.append(f"- **Risk flags**: {' · '.join(row['flags'])}.")
         if row["format_evidence"]:
