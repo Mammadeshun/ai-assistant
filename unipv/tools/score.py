@@ -89,14 +89,26 @@ def questions_by_course() -> dict[str, list[dict]]:
 def predictability(rows: list[dict]) -> tuple[int | None, str]:
     """1-5, plus the sentence that justifies it.
 
-    The measure is repetition across *papers*: a question type that appears in
-    several sittings is one you can drill; a paper of one-offs is not.
+    The measure is repetition across *sittings*, not across files. Courses
+    publish one exam as several lettered variants - Computational Logic's four
+    "papers" are versions A to D of a single sitting on 31/01/2022 - and
+    counting files scored that as maximum predictability on the strength of a
+    question recurring between variants of one exam. A question type that
+    comes back in a later session is one you can drill; the same question
+    reworded across four copies of one paper says nothing about the next one.
     """
-    papers = {r["source_file"] for r in rows}
-    if len(rows) < 6 or len(papers) < 2:
-        return None, (f"not measurable - {len(rows)} questions from "
-                      f"{len(papers)} paper(s)")
-    items = [Item(paper=r["source_file"], index=r["q_number"], marks=r["points"],
+    dated = [r for r in rows if r.get("exam_date")]
+    sittings = {r["exam_date"] for r in dated}
+    if len(rows) < 6:
+        return None, f"not measurable - only {len(rows)} questions extracted"
+    if len(sittings) < 2:
+        files = len({r["source_file"] for r in rows})
+        when = next(iter(sittings), "no date")
+        return None, (f"not measurable across sittings - all {files} papers are "
+                      f"from a single sitting ({when}); any repetition is "
+                      f"between lettered variants of one exam, not between years")
+    rows = dated
+    items = [Item(paper=r["exam_date"], index=r["q_number"], marks=r["points"],
                   text=r["text"]) for r in rows]
     groups = cluster(items)
     repeated = [g for g in groups if g.n_papers > 1]
@@ -105,11 +117,12 @@ def predictability(rows: list[dict]) -> tuple[int | None, str]:
     score = 5 if share >= 0.75 else 4 if share >= 0.55 else 3 if share >= 0.35 \
         else 2 if share >= 0.15 else 1
     top = sorted(repeated, key=lambda g: -g.n_papers)[:3]
-    detail = (f"{len(groups)} distinct archetypes across {len(papers)} papers; "
+    detail = (f"{len(groups)} distinct archetypes across {len(sittings)} sittings; "
               f"{covered} of {len(rows)} questions ({share:.0%}) fall into "
-              f"{len(repeated)} archetypes that recur in more than one paper")
+              f"{len(repeated)} archetypes that recur in more than one sitting")
     if top:
-        detail += f"; the commonest appears in {top[0].n_papers} of {len(papers)} papers"
+        detail += (f"; the commonest appears in {top[0].n_papers} of "
+                   f"{len(sittings)} sittings")
     return score, detail
 
 

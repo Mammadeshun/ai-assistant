@@ -1,0 +1,934 @@
+{
+  "exam_brief": {
+    "Format": "Written paper in English, divided into three parts: Part I 'Questions', Part II 'Exercises to be solved manually', Part III 'Exercises to be solved with z3'. The same three-part skeleton is used in all four archived papers of the 31/01/2022 sitting [raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/31-1-22A.txt, B31-1-22.txt, C31-1-22.txt, D31-1-22.txt]. Esse3 records the sitting type as 'Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale', i.e. written and oral jointly [unipv/data/scoring.json, sitting.detail.type].",
+    "Duration": "NOT FOUND — verify with lecturer. No archived paper or Moodle page states a time limit.",
+    "Questions": "9 numbered items per paper, identical numbering every time: (1.1) (1.2) (1.3) in Part I, (2.1) (2.2) (2.3) in Part II, (3.1) (3.2) (3.3) in Part III. 36 questions across the 4 archived papers = 9 x 4 [unipv/data/questions.jsonl, course 509483].",
+    "What each slot asks": "(1.1) free variables / ground instances / Skolemization; (1.2) state one rule of CDCL or CDCL(T); (1.3) one multiple-choice question on time/space cost of DPLL-CDCL, Resolution, Congruence Closure; (2.1) run CDCL on 5-6 propositional clauses; (2.2) decide a natural-language inference by Skolemization + Herbrand + ground Resolution; (2.3) run CDCL(IDL) on 4 difference-logic clauses; (3.1) redo one of (2.1)-(2.2)-(2.3) in z3; (3.2) the Martians/Venusians truth-teller puzzle; (3.3) a party/towns puzzle using declare-datatypes [raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/31-1-22A.txt and the three sibling papers].",
+    "Scoring": "NOT FOUND — verify with lecturer. No paper prints marks per question; the 'points' field is null for all 36 archived questions [unipv/data/questions.jsonl].",
+    "Pass mark": "NOT FOUND — verify with lecturer. Nothing in the archive states a threshold; 18/30 is the standard Italian minimum [NOT IN SOURCE — VERIFY].",
+    "Allowed": "NOT FOUND — verify with lecturer for notes/books. What is certain is that Part III is headed 'Exercises to be solved with z3', so an SMT-solver is in use for the last three items [raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/31-1-22A.txt]; the course supplies browser fall-backs (https://compsys-tools.ens-lyon.fr/z3/ and https://jfmc.github.io/z3-play/) if a local install fails [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/z3_online.txt]. Bitvector syntax is explicitly excluded: 'their syntax won't enter in the problems assigned within exams' [raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/essential_z3_syntax.txt].",
+    "Take-home?": "NOT FOUND — verify with lecturer. The Moodle folder is named 'Exam_Assignments' and every sitting is published as a paper plus per-question solution files; nothing says whether Part III is done in a lab session or at home [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/_pages/folder-262556-English-en.html].",
+    "Versions": "Each sitting is issued in lettered versions (A, B, C, D) that differ only in the numbers and in which rule (1.2) asks for; January 2022 had four (A-D), February 2026 two (A-B) [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/_pages/folder-262556-English-en.html].",
+    "Repeats": "Papers with published solutions exist for 2022, 2023, 2024, 2025 and 2026 (up to solutions_august26.zip), 6-8 sittings a year, all with the same 9-slot skeleton [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/_pages/folder-262556-English-en.html].",
+    "Date": "23/09/2026; booking opens 03/09/2026 and closes 18/09/2026; president GHILARDI SILVIO [unipv/data/scoring.json, sitting block].",
+    "Source": "Papers: raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/{31-1-22A,B31-1-22,C31-1-22,D31-1-22}.txt. Answer keys: raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/{ex1,ex2-1,ex2-2,ex2-3,martians,party}{A,B,C,D}.txt. Course notes: raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/AI_24English.txt (Ghilardi, 'Computational Logic: from SAT to SMT', 4 Oct 2024). Sitting data: unipv/data/scoring.json."
+  },
+  "topics": [
+    {
+      "name": "(1.1) Free variables, ground instances, Skolemization",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper; 4 of the 36 questions in questions.jsonl)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "Always the same three bullets, always the same language: a ternary predicate D, a binary R, a unary P and two or three individual constants. Only the formulas change between versions. Three separate marks for about ten minutes of work — do this slot first."
+        },
+        {
+          "kind": "figure",
+          "png": "31-1-22A-p001-81e00199.png",
+          "caption": "The real paper: Part I and the start of Part II, 31/01/2022 Version A [31-1-22A.pdf, p1]",
+          "width": "72%"
+        },
+        {
+          "kind": "heading",
+          "text": "A. Free variables — definition (notes 4.2)"
+        },
+        {
+          "kind": "text",
+          "text": "\"An occurrence of a variable x in a formula A is said to be bounded if it is located inside a subformula of the form (for all x)B or (exists x)B; if this is not the case, the occurrence is said to be free. A variable x is said to be free in A if some occurrence of it in A is free.\" A formula with no free variable is a sentence."
+        },
+        {
+          "kind": "text",
+          "text": "The bracket convention that decides the answer: \"quantifiers bind more strictly than and, or\". So a quantifier prefix written in front of a conjunction only governs the FIRST conjunct."
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Put back the brackets the convention removed: a quantifier grabs only the smallest following subformula, and it stops at the first and / or.",
+            "Underline the scope of each quantifier.",
+            "Go variable by variable: does it have at least one occurrence outside every scope that binds it? If yes it is free.",
+            "Answer with the list of variables, not the list of occurrences (one free occurrence is enough)."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Worked, version A"
+        },
+        {
+          "kind": "math",
+          "text": "forall x forall y (R(x, z) -> P(y)) and R(x, x)"
+        },
+        {
+          "kind": "text",
+          "text": "Key: \"the variables are z and x\" [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt]. Reason: the prefix (for all x)(for all y) covers only (R(x,z) -> P(y)), so z is free there; and the second conjunct R(x,x) sits outside the scope of (for all x), so x is free too. y is the only bound one."
+        },
+        {
+          "kind": "heading",
+          "text": "The other three papers — drill these"
+        },
+        {
+          "kind": "math",
+          "text": "B: forall z exists y (D(x, y, z) -> P(y)) or P(z)  ==>  \"free:\" x, z"
+        },
+        {
+          "kind": "math",
+          "text": "C: exists y forall x (D(x, y, x) -> P(y)) -> R(x, z)  ==>  \"free:\" x, z"
+        },
+        {
+          "kind": "math",
+          "text": "D: forall z exists y (D(z, y, x) -> P(y)) or R(z, z)  ==>  \"free:\" x, z"
+        },
+        {
+          "kind": "text",
+          "text": "Answers from raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1B.txt, ex1C.txt, ex1D.txt. In all four archived papers the answer is the same two-variable list {x, z}: the tail of the formula always sits outside the quantifier prefix."
+        },
+        {
+          "kind": "heading",
+          "text": "B. Ground instances (notes 4.5)"
+        },
+        {
+          "kind": "text",
+          "text": "\"A formula is ground iff it does not contain variables.\" \"If (for all x_1)...(for all x_n)A is a universal sentence, its ground instances are the sentences A(t_1/x_1, ..., t_n/x_n), where t_1, ..., t_n are ground terms.\" With no function symbols in the language, the ground terms are exactly the constants, so the answer is a finite list of size (number of constants) ^ (number of quantified variables)."
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Count the constants of L given in the header of the question (a, b or a, b, c) — these are the whole Herbrand universe, there are no function symbols.",
+            "Strip the universal prefix and substitute, for every quantified variable independently, every constant.",
+            "Write out all combinations: k constants and n quantified variables give k^n instances.",
+            "Leave any already-ground subformula untouched — do not substitute inside D(a, b, c)."
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Version A: for all x for all y R(x, y) with constants a, b gives four instances — R(a,a), R(b,b), R(a,b), R(b,a) [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt]."
+        },
+        {
+          "kind": "text",
+          "text": "Version B: for all x (R(x,x) -> P(a) or P(x)) with a, b, c gives three — R(a,a)->P(a) or P(a); R(b,b)->P(a) or P(b); R(c,c)->P(a) or P(c) [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1B.txt]. Version C: for all x (D(a,b,c) -> P(x) or R(x,x)) gives three, with D(a,b,c) copied unchanged into each [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1C.txt]. Version D: for all x for all y (D(a,b,b) -> P(x) or R(x,y)) with a, b gives four [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1D.txt]."
+        },
+        {
+          "kind": "heading",
+          "text": "C. Skolemization (notes 4.7)"
+        },
+        {
+          "kind": "text",
+          "text": "Every formula is logically equivalent to a prenex normal form Qx_1 ... Qx_n M with M quantifier-free. Skolemization then removes the existential quantifiers one at a time, preserving equisatisfiability (not equivalence): the result is a universal sentence in a language with new function symbols."
+        },
+        {
+          "kind": "math",
+          "text": "forall x_1 dots forall x_n exists y  Q z_1 dots Q z_m  C  ==>  forall x_1 dots forall x_n Q z_1 dots Q z_m  C(f(x_1, dots, x_n) \" for \" y)"
+        },
+        {
+          "kind": "text",
+          "text": "\"We extend the language by adding a new function symbol f of ariety n (f is a constant, if n = 0) ... The additional symbol f is called a Skolem function.\""
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "If the sentence is not already prenex, pull the quantifiers out (see the formula sheet; remember a quantifier crossing the antecedent of -> flips).",
+            "Read the prefix left to right. For each exists y, count how many for all come BEFORE it.",
+            "Zero preceding for all: replace y everywhere by a brand-new constant.",
+            "n preceding for all x_1 ... x_n: replace y everywhere by f(x_1, ..., x_n) with a brand-new f.",
+            "Use a different new symbol for each existential quantifier — never reuse one.",
+            "Drop the existential quantifiers, keep the universal ones, and write the resulting universal sentence."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "The four keyed answers — memorise the shapes"
+        },
+        {
+          "kind": "math",
+          "text": "A: exists x forall y exists z (R(x,y) -> D(y,z,x))  ==>  forall y (R(c, y) -> D(y, f(y), c))"
+        },
+        {
+          "kind": "math",
+          "text": "B: forall y exists x (D(x,y,x) or P(y))  ==>  forall y (D(f(y), y, f(y)) or P(y))"
+        },
+        {
+          "kind": "math",
+          "text": "C: exists y exists x (D(x,y,x) or P(y))  ==>  D(d, e, d) or P(e)"
+        },
+        {
+          "kind": "math",
+          "text": "D: forall y exists z (D(y,y,z) -> P(z))  ==>  forall y (D(y, y, f(y)) -> P(f(y)))"
+        },
+        {
+          "kind": "text",
+          "text": "Answers verbatim from raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt, ex1B.txt, ex1C.txt, ex1D.txt. Note version C: two existentials with no universal in front, so two DIFFERENT new constants d and e (a, b, c were already taken), and the result is ground — no quantifier is left."
+        },
+        {
+          "kind": "figure",
+          "png": "syll2-p003-8cde0ecc.png",
+          "caption": "Skolemization of a three-sentence inference, then instantiation over the Herbrand universe {c} [syll2.pdf, p3]",
+          "width": "78%"
+        }
+      ]
+    },
+    {
+      "name": "(2.1) CDCL on a set of propositional clauses",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "\"Apply CDCL to determine whether the following set of clauses is satisfiable or not\", followed by 5 or 6 clauses over 4 letters. In all four archived papers the clause set is the same puzzle with renamed letters, and in all four the answer is SAT after exactly one conflict, one Backjump and the learned unit clause not p_1."
+        },
+        {
+          "kind": "heading",
+          "text": "State notation (notes 3.1)"
+        },
+        {
+          "kind": "math",
+          "text": "(V | F | alpha)"
+        },
+        {
+          "kind": "text",
+          "text": "V is the ordered partial assignment, each literal marked decided or propagated; F is the current clause set; alpha is either the conventional byte * (search state) or a conflict clause (conflict state). The keys write a state as < p1[d], not p2[1], ... | 1-5 | * >: [d] means decided, [n] means propagated by clause number n, and 1-5 is the range of clauses currently in F. Start from < empty | F_0 | * >."
+        },
+        {
+          "kind": "heading",
+          "text": "The six rules (notes 3.2-3.3) — quote these for question (1.2) too"
+        },
+        {
+          "kind": "math",
+          "text": "\"Propagate:\"  (V | F, D or l | *) => (V, l^p | F, D or l | *)  \"if\" V models not D \"and\" l \"is not defined in\" V"
+        },
+        {
+          "kind": "math",
+          "text": "\"Conflict:\"  (V | F, C | *) => (V | F, C | C)  \"if\" V models not C"
+        },
+        {
+          "kind": "math",
+          "text": "\"Decide:\"  (V | F | *) => (V, l^d | F | *)  \"if the two rules above do not apply\""
+        },
+        {
+          "kind": "math",
+          "text": "\"Explain:\"  (V | F, D or overline(l) | l or C) => (V | F, D or overline(l) | D or C)  \"if\" V models not D"
+        },
+        {
+          "kind": "math",
+          "text": "\"Backjump:\"  (V_1, l^d, V_2 | F | C or m) => (V_1, m^p | F, C or m | *)  \"if\" V_1 models not C \"and\" m \"is not defined in\" V_1"
+        },
+        {
+          "kind": "math",
+          "text": "\"Failure:\"  (V | F | \"the empty clause\") => \"UNSAT\""
+        },
+        {
+          "kind": "text",
+          "text": "The empty clause is written as a small square in the notes. Second failure condition, used by every key: \"If we are in a conflict state (V | F | C) and there are no decided literals, we can nevertheless terminate the algorithm with an unsatisfiability outcome.\""
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Number the clauses 1, 2, 3, ... in the order printed; learned clauses continue the numbering.",
+            "Propagate every unit clause first; Decide only when nothing else applies.",
+            "Write every propagated literal with the number of the clause that forced it — you need it for Explain.",
+            "On conflict, copy the falsified clause into the third slot.",
+            "Explain = resolve the conflict clause with the clause that propagated its most recently assigned literal; repeat until only one literal of the conflict clause was assigned after the last decision.",
+            "Backjump: return to before that decision, add the conflict clause to F as a learned clause, and enter the flipped literal as propagated by that new clause.",
+            "Stop with SAT when every letter is assigned and no rule applies; stop with UNSAT on the empty clause or on a conflict with no decided literal in V."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Worked, version A (key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1A.txt)"
+        },
+        {
+          "kind": "math",
+          "text": "1. not p_1 or not p_2 quad 2. p_2 or p_3 quad 3. not p_1 or not p_3 or p_4 quad 4. p_2 or not p_3 or not p_4 quad 5. p_1 or p_4"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Decide:      < p1[d] | 1-5 | * >",
+            "Propagate:   < p1[d], ~p2[1] | 1-5 | * >",
+            "Propagate:   < p1[d], ~p2[1], p3[2] | 1-5 | * >",
+            "Propagate:   < p1[d], ~p2[1], p3[2], p4[3] | 1-5 | * >",
+            "Conflict:    < p1[d], ~p2[1], p3[2], p4[3] | 1-5 | p2 V ~p3 V ~p4 >",
+            "Explain (on p4, with clause 3):  | 1-5 | ~p1 V p2 V ~p3",
+            "Explain (on p3, with clause 2):  | 1-5 | p2 V ~p1",
+            "Explain (on p2, with clause 1):  | 1-5 | ~p1",
+            "Backjump, learning clause 6. ~p1:   < ~p1[6] | 1-6 | * >",
+            "Propagate:   < ~p1[6], p4[5] | 1-6 | * >",
+            "Decide:      < ~p1[6], p4[5], p2[d] | 1-6 | * >",
+            "Decide:      < ~p1[6], p4[5], p2[d], p3[d] | 1-6 | * >",
+            "All literals assigned without conflict: SAT."
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Model: p1 = 0, p2 = 1, p3 = 1, p4 = 1. Versions B, C, D add one extra clause at the top and rename the letters (q_i in C and D); the trace is the same down to the learned unit clause, only the final propagations differ [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-1B.txt, ex2-1C.txt, ex2-1D.txt]."
+        },
+        {
+          "kind": "figure",
+          "png": "CDCL_II-p001-68feb29a.png",
+          "caption": "A lecture drill of the same type: eight clauses to be settled with CDCL [CDCL_II.pdf, p1]",
+          "width": "70%"
+        },
+        {
+          "kind": "figure",
+          "png": "CDCL_II-p002-b5bb0e4f.png",
+          "caption": "The state notation the marker expects: decided literal a^d, propagated literals tagged with the clause number, conflict clause in the third slot [CDCL_II.pdf, p2]",
+          "width": "70%"
+        },
+        {
+          "kind": "heading",
+          "text": "Same exercise in z3 — this is a legal answer to (3.1)"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-const p1 Bool)",
+            "(declare-const p2 Bool)",
+            "(declare-const p3 Bool)",
+            "(declare-const p4 Bool)",
+            "(assert (or (not p1) (not p2)))",
+            "(assert (or p2 p3))",
+            "(assert (or (not p1) (not p3) p4))",
+            "(assert (or p2 (not p3) (not p4)))",
+            "(assert (or p1 p4))",
+            "(check-sat)",
+            "(get-value (p1 p2 p3 p4))"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(2.2) Word inference by Skolemization + Herbrand + ground Resolution",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "\"Determine whether the following inference is correct or not ... using Skolemization, Herbrand Theorem and ground Resolution.\" Three or four English sentences, the last one being the thesis. In all four archived papers the inference turns out to be VALID and the Herbrand universe is the single constant c."
+        },
+        {
+          "kind": "heading",
+          "text": "The two theorems you are being asked to apply"
+        },
+        {
+          "kind": "math",
+          "text": "A \" follows from \" T  <->  T union {not A} \" is unsatisfiable\""
+        },
+        {
+          "kind": "math",
+          "text": "\"Herbrand:\" quad T \" universal is unsatisfiable \" <-> \"gr\"(T) \" is unsatisfiable\""
+        },
+        {
+          "kind": "math",
+          "text": "\"Ground resolution:\" quad T \" clausal is unsatisfiable \" <-> \" the empty clause is in \" R(\"gr\"(T))"
+        },
+        {
+          "kind": "text",
+          "text": "gr(T) is the set of ground instances; R(S) is the closure of S under the resolution rule. Resolution rule (notes 2.3): from p or C and not p or D infer C or D."
+        },
+        {
+          "kind": "figure",
+          "png": "syll1-p001-8f7cf5d2.png",
+          "caption": "The standard opening move: formalise each premise, then negate the conclusion [syll1.pdf, p1]",
+          "width": "76%"
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Pick one unary predicate per property and one constant per named person; write the premises as universal formulas and the thesis separately.",
+            "NEGATE THE THESIS and add it to the premise set — you prove the set unsatisfiable, not the thesis true.",
+            "Skolemize anything existential (in these papers there is usually nothing to Skolemize; a proper name is already a constant).",
+            "Write the Herbrand universe: with no function symbols it is just the constants — in every archived paper, only c.",
+            "Instantiate every universal formula at every element of the Herbrand universe (one instance each here).",
+            "Convert each ground instance to clauses: A -> B becomes not A or B; not (A and B) becomes not A or not B; A and B splits into two clauses.",
+            "Resolve until you reach the empty clause. Empty clause found = the set is unsatisfiable = THE INFERENCE IS CORRECT.",
+            "If saturation finishes with no empty clause, the inference is not correct and the surviving assignment is your counter-model."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Worked, version A (key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2A.txt)"
+        },
+        {
+          "kind": "text",
+          "text": "Premises: all students attend either the Spanish or the French class; all students attending the French class saw the movie; Charles is a student. Thesis: if Charles did not see the movie, then he attends the Spanish class."
+        },
+        {
+          "kind": "math",
+          "text": "forall x (\"St\"(x) -> ((\"Sp\"(x) or \"Fr\"(x)) and not (\"Sp\"(x) and \"Fr\"(x))))"
+        },
+        {
+          "kind": "math",
+          "text": "forall x ((\"St\"(x) and \"Fr\"(x)) -> \"Saw\"(x)) quad , quad \"St\"(c)"
+        },
+        {
+          "kind": "math",
+          "text": "\"negated thesis:\" quad not \"Saw\"(c) and not \"Sp\"(c)"
+        },
+        {
+          "kind": "text",
+          "text": "Herbrand universe = {c}. Ground instances, then clauses (key, verbatim):"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "1. ~St(c) V Sp(c) V Fr(c)",
+            "2. ~St(c) V ~Sp(c) V ~Fr(c)",
+            "3. ~St(c) V ~Fr(c) V Saw(c)",
+            "4. St(c)",
+            "5. ~Saw(c)",
+            "6. ~Sp(c)",
+            "Resolution of 1 with 4, 6 gives 7. Fr(c)",
+            "Resolution of 3 with 4, 5 gives 8. ~Fr(c)",
+            "Resolution of 7 with 8 gives the empty clause: UNSAT — hence the inference is valid."
+          ]
+        },
+        {
+          "kind": "figure",
+          "png": "AEs3.1-p003-2a83a70a.png",
+          "caption": "What the marker wants to see: the ground clause list before any resolution step [AEs3.1.pdf, p3]",
+          "width": "62%"
+        },
+        {
+          "kind": "heading",
+          "text": "The other three papers, in one line each"
+        },
+        {
+          "kind": "text",
+          "text": "B: Sp(x)->Amer(x); St(c) and Rus(c); Rus(x)->not Amer(x); negated thesis Sp(c). Resolve to Amer(c) and not Amer(c): valid. C: Ind(x)->GetVR(x); St(x)->Ind(x) or Amer(x); St(c) and not GetVR(c); negated thesis not Amer(c): valid. D: F(x)->N(x) and P(x); N(c) and not P(c); negated thesis F(c): valid [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-2B.txt, ex2-2C.txt, ex2-2D.txt]."
+        },
+        {
+          "kind": "heading",
+          "text": "Same exercise in z3 — a legal answer to (3.1)"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-sort D)",
+            "(declare-fun Sp (D) Bool)",
+            "(declare-fun Fr (D) Bool)",
+            "(declare-fun St (D) Bool)",
+            "(declare-fun Saw (D) Bool)",
+            "(declare-const c D)",
+            "(assert (forall ((x D)) (=> (St x) (xor (Sp x) (Fr x)))))",
+            "(assert (forall ((x D)) (=> (and (St x) (Fr x)) (Saw x))))",
+            "(assert (St c))",
+            "(assert (and (not (Saw c)) (not (Sp c))))",
+            "(check-sat)   ; expected answer: unsat, i.e. the inference is correct"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(2.3) CDCL(IDL) on difference-logic clauses",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "Four clauses over three integer variables, two of them units and two of them binary disjunctions. The paper itself warns: \"solving this exercise by hand may require some time and patience\". The four archived versions split evenly: A and C end UNSAT, B and D end SAT. The whole outcome hangs on two constants — the weight of the first unit clause and the bound inside the third clause — so never guess it [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3A.txt, ex2-3B.txt, ex2-3C.txt, ex2-3D.txt]."
+        },
+        {
+          "kind": "heading",
+          "text": "Integer Difference Logic (notes 5.2)"
+        },
+        {
+          "kind": "text",
+          "text": "The atoms are equivalent to x - y <= n or x <= n with n an integer. Every literal is first rewritten into the shape x - y <= n; then a weighted directed graph is built and satisfiability is decided by the absence of negative cycles."
+        },
+        {
+          "kind": "math",
+          "text": "x <= n  ==>  x - 0 <= n"
+        },
+        {
+          "kind": "math",
+          "text": "x - y = n  ==>  (x - y <= n) and (y - x <= n)"
+        },
+        {
+          "kind": "math",
+          "text": "not (x - y <= n)  ==>  x - y > n  ==>  y - x <= -n - 1"
+        },
+        {
+          "kind": "math",
+          "text": "not (x <= n)  ==>  0 - x <= -n - 1"
+        },
+        {
+          "kind": "math",
+          "text": "\"edge \" y -> x \" with weight \" n  <->  \" the literal \" x - y <= n \" is present\""
+        },
+        {
+          "kind": "math",
+          "text": "\"set of such literals is satisfiable\"  <->  \"the graph has no negative-weight cycle\""
+        },
+        {
+          "kind": "heading",
+          "text": "The two extra rules (notes 5.1) — also asked as (1.2)"
+        },
+        {
+          "kind": "math",
+          "text": "\"T-Propagate:\" (V | F | *) => (V, l | F, D or l | *)  \"if\" not D and overline(l) \"is not\" T \"-satisfiable,\" V models not D"
+        },
+        {
+          "kind": "math",
+          "text": "\"T-Conflict:\" (V | F | *) => (V | F, C | C)  \"if\" C = l_1 or dots or l_n \"and\" {overline(l_1), dots, overline(l_n)} subset.eq V \"is not\" T \"-satisfiable\""
+        },
+        {
+          "kind": "text",
+          "text": "Every T-Propagate / T-Conflict step adds a theory lemma to F: the clause that is the negation of the T-inconsistent literal set. Number it and quote it — the keys always do."
+        },
+        {
+          "kind": "figure",
+          "png": "T-Propagate-p003-dd5bcec6.png",
+          "caption": "T-propagation justified by a negative cycle in the difference graph [T-Propagate.pdf, p3]",
+          "width": "76%"
+        },
+        {
+          "kind": "heading",
+          "text": "Method"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Number the four clauses. Propagate the two unit literals immediately.",
+            "For each remaining binary clause, test whether one of its literals is already T-refuted: add the negation of that literal to the assigned set and look for a negative cycle.",
+            "If a negative cycle appears, T-propagate the OTHER literal and record the theory lemma (the disjunction of the negations of the cycle literals).",
+            "Continue with ordinary Propagate on clauses that have become unit.",
+            "After each new literal, rewrite everything into x - y <= n form and re-check the graph.",
+            "Negative cycle over the whole assignment = T-Conflict; with no decided literals this is UNSAT.",
+            "All literals assigned and the cycle weights all non-negative = SAT."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Worked, version A — UNSAT (key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3A.txt)"
+        },
+        {
+          "kind": "math",
+          "text": "1. x - y <= -5 quad 2. y - z <= 0 quad 3. (x <= 0) or (z < 0) quad 4. (x > 1) or (z - x <= 3)"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Propagate: < x-y<=-5[1], y-z<=0[2] | 1-4 | * >",
+            "T-propagate z-x>3, because adding z-x<=3 gives the cycle z->y->x->z of weight 0-5+3 < 0.",
+            "Theory lemma 5. (x-y>-5) V (y-z>0) V (z-x>3).  State: < ..., (z-x>3)[5] | 1-5 | * >",
+            "Propagate x>1 from clause 4 (its other literal is now false).",
+            "T-propagate x>0, because x>1 and x<=0 is inconsistent. Theory lemma 6. x<=1 V x>0.",
+            "Propagate z<0 from clause 3.",
+            "Conflict: rewrite x>1 as 0-x<=-2, z<0 as z-0<=-1, z-x>3 as x-z<=-4; the cycle z->y->x->0->z has weight 0-5-2-1 < 0.",
+            "No decided literals in V, so: UNSAT."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Worked, version D — SAT (key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3D.txt)"
+        },
+        {
+          "kind": "math",
+          "text": "1. x_1 - x_2 <= -5 quad 2. x_2 - x_3 <= 0 quad 3. (x_1 <= 0) or (x_3 < 16) quad 4. (x_1 > 1) or (x_3 - x_1 <= 3)"
+        },
+        {
+          "kind": "text",
+          "text": "Identical trace down to the last step: propagate x_3 < 16 from clause 3, then rewrite x_1>1 as 0-x_1<=-2, x_1>0 as 0-x_1<=-1, x_3<16 as x_3-0<=15, x_3-x_1>3 as x_1-x_3<=-4. The cycle x_3 -> x_2 -> x_1 -> 0 -> x_3 now weighs 0-5-2+15 > 0: no negative cycle, all literals assigned, SAT. The only difference from version A is the constant 16 in place of 0."
+        },
+        {
+          "kind": "text",
+          "text": "Versions B and C run the identical trace and differ only in two numbers, which is exactly what you must check at the end. B: x-y<=-5 and z<18, final cycle 0-5-2+17 > 0, SAT. C: x-y<=-20 and z<18, final cycle 0-20-2+17 < 0, UNSAT [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex2-3B.txt, ex2-3C.txt]."
+        },
+        {
+          "kind": "figure",
+          "png": "T-Propagate-p004-513ab0a4.png",
+          "caption": "A full CDCL(IDL) trace with its theory lemma and the unsat core of the T-conflict [T-Propagate.pdf, p4]",
+          "width": "78%"
+        },
+        {
+          "kind": "heading",
+          "text": "Same exercise in z3 — a legal answer to (3.1)"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-const x Int)",
+            "(declare-const y Int)",
+            "(declare-const z Int)",
+            "(assert (<= (- x y) -5))",
+            "(assert (<= (- y z) 0))",
+            "(assert (or (<= x 0) (< z 0)))",
+            "(assert (or (> x 1) (<= (- z x) 3)))",
+            "(check-sat)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "(1.2) State a rule of the CDCL / CDCL(T) procedure",
+      "frequency": "appeared in 4 of 4 archived papers, each time asking for a different rule (T-Propagation in A, T-Conflict in B, Explain in C, Propagate in D)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "One line of bookwork. The published key says only \"see the course notes\" [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt], so the marker expects the rule exactly as stated in chapter 3 / section 5.1. Learn all nine — you cannot predict which one is asked, and each is two lines."
+        },
+        {
+          "kind": "figure",
+          "png": "T-Propagate-p001-f73c0e4b.png",
+          "caption": "The T-Propagation rule as stated in the lecture: learn the clause, assign the literal as propagated [T-Propagate.pdf, p1]",
+          "width": "80%"
+        },
+        {
+          "kind": "heading",
+          "text": "Search rules (notes 3.2)"
+        },
+        {
+          "kind": "math",
+          "text": "\"Propagate:\" (V | F, D or l | *) => (V, l^p | F, D or l | *) quad \"if\" V models not D \"and\" l \"undefined in\" V"
+        },
+        {
+          "kind": "math",
+          "text": "\"Conflict Entering:\" (V | F, C | *) => (V | F, C | C) quad \"if\" V models not C"
+        },
+        {
+          "kind": "math",
+          "text": "\"Decide:\" (V | F | *) => (V, l^d | F | *) quad \"if the previous two do not apply,\" l \"undefined in\" V \"and\" l \"or\" overline(l) \"occurs in\" F"
+        },
+        {
+          "kind": "heading",
+          "text": "Conflict rules (notes 3.3)"
+        },
+        {
+          "kind": "math",
+          "text": "\"Failure:\" (V | F | C) \" with \" C \" empty \" => \"terminate: UNSATISFIABLE\""
+        },
+        {
+          "kind": "math",
+          "text": "\"Explain:\" (V | F, D or overline(l) | l or C) => (V | F, D or overline(l) | D or C) quad \"if\" V models not D \"and\" overline(l) \"was assigned after all negations of literals of\" D"
+        },
+        {
+          "kind": "math",
+          "text": "\"Backjumping (with learning):\" (V_1, l^d, V_2 | F | C or m) => (V_1, m | F, C or m | *) quad \"if\" V_1 models not C \"and\" m \"undefined in\" V_1"
+        },
+        {
+          "kind": "heading",
+          "text": "The CDCL(T) rules (notes 5.1)"
+        },
+        {
+          "kind": "math",
+          "text": "\"T-Conflict:\" (V | F | *) => (V | F, C | C) quad \"if\" C = l_1 or dots or l_n, {overline(l_1), dots, overline(l_n)} subset.eq V \"and this set is not\" T \"-satisfiable\""
+        },
+        {
+          "kind": "math",
+          "text": "\"T-Propagation:\" (V | F | *) => (V, l | F, D or l | *) quad \"if\" not D and overline(l) \"is not\" T \"-satisfiable,\" V models not D \"and\" l \"undefined in\" V \"but occurs in\" F"
+        },
+        {
+          "kind": "math",
+          "text": "\"T-Explain:\" (V | F | l or C) => (V | F, D or overline(l) | D or C) quad \"if\" V models not D, not D and l \"is not\" T \"-satisfiable and\" overline(l) \"is assigned after all negations of literals of\" D"
+        },
+        {
+          "kind": "text",
+          "text": "Add the one-line gloss the notes give: for T-Conflict, \"we can choose a set that is minimal with respect to T-unsatisfiability (such a set is said to constitute an unsat core)\"; for Backjumping, the conflict clause is added to F because it is a logical consequence of F_0."
+        }
+      ]
+    },
+    {
+      "name": "(1.3) Which algorithm is expensive? (multiple choice)",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "A single free mark if you have memorised two sentences from the notes. The options are always drawn from {DPLL, CDCL, Resolution, Congruence Closure, quantifier-free satisfiability in IDL}."
+        },
+        {
+          "kind": "heading",
+          "text": "The two sentences that answer every version"
+        },
+        {
+          "kind": "text",
+          "text": "Notes 2.3: \"The main problem with resolution-based calculi consists in the inefficient use of memory space: saturating a set of clauses can in fact make it exponentially large, while this does not happen with the methods based on the backtracking that instead generally require a very minimal use of memory resources.\" So Resolution is the SPACE hog; DPLL/CDCL cost time, not space."
+        },
+        {
+          "kind": "text",
+          "text": "Notes 5.2: the congruence closure procedure \"can be implemented very efficiently (in time O(n log n))\". So Congruence Closure is the cheap one, in time and in space."
+        },
+        {
+          "kind": "heading",
+          "text": "The four keyed answers"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "A: 'may require large SPACE — (a) DPLL (b) Resolution (c) Congruence Closure' -> Resolution.",
+            "B: 'does NOT require large TIME — (a) DPLL (b) Resolution (c) Congruence Closure' -> congruence closure.",
+            "C: 'does NOT require large TIME — (a) CDCL (b) Resolution (c) Congruence Closure' -> congruence closure.",
+            "D: 'requires large SPACE — (a) quantifier-free satisfiability in IDL (b) Resolution (c) Congruence Closure' -> Resolution."
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Answers from raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/ex1A.txt, ex1B.txt, ex1C.txt, ex1D.txt. Rule of thumb that reproduces all four: Resolution = large space; DPLL / CDCL = large time, small space; congruence closure = cheap; satisfiability of IDL constraints is decided in quadratic time by Bellman-Ford (notes 5.2)."
+        }
+      ]
+    },
+    {
+      "name": "(3.1)-(3.3) SMT-LIB2 / z3 essentials",
+      "frequency": "Part III is 3 of the 9 items in 4 of 4 archived papers (12 of the 36 questions)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "Everything in Part III is written in the same dozen commands. Source: raw/509483-COMPUTATIONAL-LOGIC/_text/COMPUTATIO-509483-10589-2025/essential_z3_syntax.txt (handout 20/1/2025) and notes 6.1. Comments start with a semicolon."
+        },
+        {
+          "kind": "heading",
+          "text": "The whole syntax you need"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-sort D)                      ; a new uninterpreted sort — the domain of a puzzle",
+            "(declare-const c D)                   ; an individual constant of that sort",
+            "(declare-const x Int)                 ; predefined sorts: Int, Real, Bool",
+            "(declare-fun P (D) Bool)              ; a unary PREDICATE = a function into Bool",
+            "(declare-fun d (Towns Towns) Real)    ; a binary function, e.g. a distance",
+            "(declare-datatypes () ((S A B C D E)))  ; an enumerated finite sort with distinct elements",
+            "(define-fun Between ((x Real) (y Real)) Bool (> x y))   ; a MACRO, not a declaration",
+            "(assert (and p q)) (assert (or p q)) (assert (not p)) (assert (=> p q))  ; and, or, not, ->",
+            "(assert (= p q))                      ; = is used for <-> ; xor is predefined",
+            "(assert (forall ((x D)) (=> (P x) (Q x))))",
+            "(assert (exists ((x D) (y D)) (and (P x) (Q y))))",
+            "(assert (distinct A B C))             ; pairwise different",
+            "(assert ((at-most 1) p q r))          ; at most one of p, q, r",
+            "(check-sat)",
+            "(get-model)",
+            "(get-value (p1 p2 p3))                ; values of specific terms in the model",
+            "(push) ... (pop)                      ; retract the assertions in between"
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "How to read the answer"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "To prove a statement ALWAYS holds: assert its negation and expect unsat.",
+            "To show a situation CAN occur: assert the situation and expect sat, then (get-model) or (get-value ...) to display it.",
+            "To prove a solution is UNIQUE: after reading it off, assert the negation of the found values and check-sat again — unsat means unique.",
+            "Everything is LISP prefix notation: f(a, x) < 1 is written (< (f a x) 1)."
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Warnings from the handout, in its own words: \"confusing declarations of functions and definitions of functions is a frequent source of syntactic mistakes\"; predicates \"are treated as functions whose values are in Bool\"; \"(xor p q) means that exactly one of the two holds\". Bitvector syntax \"won't enter in the problems assigned within exams\". If z3 will not install, the course points at https://compsys-tools.ens-lyon.fr/z3/ and https://jfmc.github.io/z3-play/ [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/z3_online.txt]."
+        }
+      ]
+    },
+    {
+      "name": "(3.2) The Martians / Venusians truth-teller puzzle",
+      "frequency": "appeared in 4 of 4 archived papers (one instance per paper; only the four claims change, so only four assert lines change)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "\"Venusian women and Martian men always tell the truth and Venusian men and Martian women always lie.\" Then four claims by Ork and Bog, and the question \"Who's what? (sex and race)\". The file below is the whole answer — memorise its skeleton and only retype the four assert lines."
+        },
+        {
+          "kind": "heading",
+          "text": "Key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansA.txt, complete"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-sort D)",
+            "(declare-fun Mart (D) Bool)",
+            "(declare-fun Ven (D) Bool)",
+            "(declare-fun Man (D) Bool)",
+            "(declare-fun Wom (D) Bool)",
+            "(declare-const Bog D)",
+            "(declare-const Ork D)",
+            "(assert (forall ((x D)) (= (Man x) (not (Wom x)))))",
+            "(assert (forall ((x D)) (= (Mart x) (not (Ven x)))))",
+            "(define-fun Truth_teller ((x D)) Bool (or (and (Man x) (Mart x)) (and (Wom x) (Ven x))))",
+            "(assert (= (Truth_teller Ork) (Ven Bog)))    ; Ork says: Bog is from Venus",
+            "(assert (= (Truth_teller Bog) (Mart Ork)))   ; Bog says: Ork is from Mars",
+            "(assert (= (Truth_teller Ork) (Man Bog)))    ; Ork says: Bog is male",
+            "(assert (= (Truth_teller Bog) (Wom Ork)))    ; Bog says: Ork is female",
+            "(check-sat)",
+            "(get-value ((Mart Bog) (Ven Ork) (Man Ork) (Wom Bog)))",
+            "(get-value ((Truth_teller Ork) (Truth_teller Bog)))",
+            "(assert (not (and (Mart Bog) (Ven Ork) (Man Ork) (Wom Bog))))   ; solution unique",
+            "(check-sat)"
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "The three modelling ideas"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "Two complementary pairs of predicates, forced complementary by two forall assertions: Man = not Wom, Mart = not Ven.",
+            "One define-fun macro Truth_teller(x) = (Man x and Mart x) or (Wom x and Ven x) — read straight off the text of the puzzle.",
+            "Each claim becomes an equivalence, written with =: 'speaker tells the truth' <-> 'what the speaker said'. Never assert the claim itself."
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "The four keyed answers, read off the get-value / uniqueness lines of the four files: A — Bog is a Martian woman, Ork is a Venusian man (both liars). B — Ork is a Venusian woman, Bog is a Martian man (both truth-tellers). C — Ork is a Martian man (truth-teller), Bog is a Martian woman (liar). D — Ork is a Venusian man (liar), Bog is a Venusian woman (truth-teller). The four files differ only in the claim lines and in the terms passed to get-value [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/martiansA.txt, martiansB.txt, martiansC.txt, martiansD.txt]."
+        }
+      ]
+    },
+    {
+      "name": "(3.3) declare-datatypes puzzle: the party / the towns",
+      "frequency": "appeared in 4 of 4 archived papers, in four variants (6 persons unsat, 5 persons sat, 6 towns unsat, 5 towns sat)",
+      "blocks": [
+        {
+          "kind": "text",
+          "text": "The Ramsey-style question: among 6 people there are always 3 mutual acquaintances or 3 mutual strangers (prove by unsat); among 5 people it can happen that both groups exist (show by sat). The towns version replaces the relation by a Real-valued distance and 'well connected' by d(x,y) < 50. One template covers all four."
+        },
+        {
+          "kind": "heading",
+          "text": "Key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyA.txt (6 persons, prove it always happens)"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-datatypes () ((Persons p1 p2 p3 p4 p5 p6)))",
+            "(declare-fun familiar (Persons Persons) Bool)",
+            "(assert (forall ((x Persons) (y Persons)) (=> (familiar x y) (familiar y x))))   ; symmetry — the only property assumed",
+            "(assert (not (or",
+            "   (exists ((x Persons) (y Persons) (z Persons))",
+            "      (and (not (= x y)) (not (= y z)) (not (= x z))",
+            "           (not (familiar x y)) (not (familiar y z)) (not (familiar x z))))",
+            "   (exists ((x Persons) (y Persons) (z Persons))",
+            "      (and (not (= x y)) (not (= y z)) (not (= x z))",
+            "           (familiar x y) (familiar y z) (familiar x z))))))",
+            "(check-sat)   ; unsat = the situation described cannot fail to occur"
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "The four variants"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "A — 6 persons, 'we can ALWAYS choose 3 mutually familiar or 3 mutually unfamiliar': assert (not (or ...)), expect unsat.",
+            "B — 5 persons, 'it MIGHT happen that 3 are mutually familiar and 3 are mutually unfamiliar': assert (and ...), expect sat, add (get-model).",
+            "C — 6 towns, distance function d, well connected means (< (d x y) 50): assert the negation, expect unsat.",
+            "D — 5 towns: assert (and ...), expect sat, then (get-value ((d t1 t2) (d t1 t3) ...)) to display the distances."
+          ]
+        },
+        {
+          "kind": "heading",
+          "text": "Towns version (key raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD.txt), the lines that change"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            "(declare-datatypes () ((Towns t1 t2 t3 t4 t5)))",
+            "(declare-fun d (Towns Towns) Real)",
+            "(assert (forall ((x Towns) (y Towns)) (= (d x y) (d y x))))   ; symmetry is the only axiom asked for",
+            "; 'well connected' is (< (d x y) 50); 'not well connected' is (not (< (d x y) 50))",
+            "(check-sat)",
+            "(get-value ((d t1 t2) (d t1 t3) (d t1 t4) (d t1 t5) (d t2 t3) (d t2 t4) (d t2 t5) (d t3 t4) (d t3 t5) (d t4 t5)))"
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Three traps built into this exercise: declare-datatypes makes the elements automatically distinct (a plain declare-sort would not, you would have to add (assert (distinct ...))); the three witnesses must be forced pairwise different with (not (= x y)) etc.; and only symmetry is assumed — an optional extension of the key adds non-negativity, d(x,y)=0 iff x=y and the triangle inequality [raw/509483-COMPUTATIONAL-LOGIC/COMPUTATIO-509483-10589-2025/partyD_.txt]."
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    "\"NNF:\" quad C -> D  ==>  not C or D",
+    "not not C  ==>  C",
+    "not (C or D)  ==>  not C and not D",
+    "not (C and D)  ==>  not C or not D",
+    "not (C -> D)  ==>  C and not D",
+    "\"CNF (non-structural):\" quad C or (D_1 and D_2)  ==>  (C or D_1) and (C or D_2)",
+    "(D_1 and D_2) or C  ==>  (D_1 or C) and (D_2 or C)",
+    "\"CNF (structural, new letter\" a \"):\" quad A  ==>  A[a \" for \" D_1 and D_2] and (not a or D_1) and (not a or D_2)",
+    "\"Resolution:\" quad (p or C) \", \" (not p or D)  tack.r  C or D",
+    "C_0 \" unsatisfiable \" <-> \" the empty clause is in \" R(C_0)",
+    "\"Horn clause:\" quad p quad , quad not p_1 or dots or not p_n or q quad , quad not p_1 or dots or not p_n",
+    "\"Prenex (\" y \" not free in \" A_2 \"):\" quad not forall y C <-> exists y not C",
+    "not exists y C <-> forall y not C",
+    "(exists y A_1 and A_2) <-> exists y (A_1 and A_2)",
+    "(exists y A_1 or A_2) <-> exists y (A_1 or A_2)",
+    "(exists y A_1 -> A_2) <-> forall y (A_1 -> A_2)",
+    "(A_2 -> exists y A_1) <-> exists y (A_2 -> A_1)",
+    "(forall y A_1 and A_2) <-> forall y (A_1 and A_2)",
+    "(forall y A_1 or A_2) <-> forall y (A_1 or A_2)",
+    "(forall y A_1 -> A_2) <-> exists y (A_1 -> A_2)",
+    "(A_2 -> forall y A_1) <-> forall y (A_2 -> A_1)",
+    "\"Skolem:\" quad forall x_1 dots forall x_n exists y  Q z_1 dots Q z_m C  ==>  forall x_1 dots forall x_n Q z_1 dots Q z_m  C(f(x_1, dots, x_n) \" for \" y)",
+    "forall x_1 dots forall x_n (C_1 and dots and C_m) <-> (forall x_1 dots forall x_n C_1) and dots and (forall x_1 dots forall x_n C_m)",
+    "\"Refutation:\" quad T tack.r A  <->  T union {not A} \" is unsatisfiable\"",
+    "\"Herbrand:\" quad T \" universal is unsatisfiable \" <-> \"gr\"(T) \" is unsatisfiable\"",
+    "T \" clausal is unsatisfiable \" <-> \" the empty clause is in \" R(\"gr\"(T))",
+    "\"Identity axioms:\" quad forall x (x = x) quad , quad forall x forall y (x = y -> y = x)",
+    "forall x forall y forall z (x = y and y = z -> x = z)",
+    "forall x_1 dots forall x_n forall y_1 dots forall y_n ((x_1 = y_1 and dots and x_n = y_n) -> f(x_1, dots, x_n) = f(y_1, dots, y_n))",
+    "\"CDCL state:\" quad (V | F | alpha) quad \"with\" alpha = \"*\" \" (search) or a conflict clause\"",
+    "\"Propagate:\" (V | F, D or l | *) => (V, l^p | F, D or l | *) quad \"if\" V models not D",
+    "\"Conflict:\" (V | F, C | *) => (V | F, C | C) quad \"if\" V models not C",
+    "\"Decide:\" (V | F | *) => (V, l^d | F | *)",
+    "\"Explain:\" (V | F, D or overline(l) | l or C) => (V | F, D or overline(l) | D or C)",
+    "\"Backjump:\" (V_1, l^d, V_2 | F | C or m) => (V_1, m^p | F, C or m | *) quad \"if\" V_1 models not C",
+    "\"Failure:\" (V | F | \"empty clause\") => \"UNSAT\" quad \"(also: conflict with no decided literal in\" V \")\"",
+    "\"T-Propagate:\" (V | F | *) => (V, l | F, D or l | *) quad \"if\" not D and overline(l) \" is not \" T \"-satisfiable\"",
+    "\"T-Conflict:\" (V | F | *) => (V | F, C | C) quad \"if\" {overline(l_1), dots, overline(l_n)} subset.eq V \" is not \" T \"-satisfiable\"",
+    "\"T-Explain:\" (V | F | l or C) => (V | F, D or overline(l) | D or C) quad \"if\" not D and l \" is not \" T \"-satisfiable\"",
+    "\"IDL:\" quad x <= n  ==>  x - 0 <= n",
+    "x - y = n  ==>  (x - y <= n) and (y - x <= n)",
+    "not (x - y <= n)  ==>  y - x <= -n - 1",
+    "not (x <= n)  ==>  0 - x <= -n - 1",
+    "\"edge \" y -> x \" of weight \" n  <->  \" the literal \" x - y <= n",
+    "\"IDL constraint satisfiable\"  <->  \"no negative-weight cycle\"",
+    "\"Cost:\" quad \"Resolution: exponential SPACE; DPLL / CDCL: time, minimal space; congruence closure:\" O(n log n)"
+  ],
+  "traps": [
+    "Quantifiers bind more strictly than and / or. In (1.1) the prefix covers only the first conjunct, so in forall x forall y (R(x,z) -> P(y)) and R(x,x) the x of the second conjunct is FREE: the key answers 'z and x' [ex1A.txt]. Losing this loses the whole first mark.",
+    "Answer (1.1) with the list of VARIABLES that have some free occurrence, not with a count of occurrences and not with the bound ones as well.",
+    "Ground instances: substitute every quantified variable with every constant, in all combinations — k constants and n variables give k^n instances (4 in versions A and D, 3 in B and C). Do not touch a subformula that is already ground: D(a,b,c) is copied unchanged into each instance [ex1C.txt].",
+    "Skolemization: an existential with NO universal before it becomes a fresh CONSTANT, not a function. Version C has two such quantifiers and needs two different new constants d and e — reusing one symbol, or reusing a, b, c, is wrong [ex1C.txt].",
+    "Skolem functions take exactly the universally quantified variables that PRECEDE the existential: exists x forall y exists z gives a constant for x and f(y) for z [ex1A.txt]. Skolemization preserves equisatisfiability only, never claim the result is equivalent.",
+    "In (2.2) the thesis must be NEGATED and added to the premises; you prove the set unsatisfiable. Negating an implication gives a conjunction: 'if Charles did not see the movie then he attends Spanish' becomes not Saw(c) and not Sp(c), i.e. two separate unit clauses [ex2-2A.txt].",
+    "'attends either the Spanish or the French class' is exclusive in the key: (Sp or Fr) and not (Sp and Fr), written (xor (Sp x) (Fr x)) in z3, and it produces TWO clauses, not one [ex2-2A.txt].",
+    "The Herbrand universe is the set of GROUND TERMS. With no function symbols it is exactly the constants — in all four papers 'the Herbrand universe only contains c', so there is exactly one instance per universal premise. Say this sentence explicitly; it is part of what is being examined.",
+    "In a CDCL trace, tag every propagated literal with the number of the clause that forced it. The Explain rule resolves the conflict clause against exactly that clause, and a trace without the tags cannot be checked [ex2-1A.txt].",
+    "UNSAT is not only reached through the empty clause: a conflict reached with NO decided literals in V already means unsatisfiable, and that is how the keys terminate (feb23.txt, ex2-3A.txt: 'UNSAT because of conflict without decided literals').",
+    "Backjumping must (i) add the learned clause to F with the next free number and (ii) enter the flipped literal as PROPAGATED by that new clause: < ~p1[6] | 1-6 | * >. Writing it as a new decision breaks the invariant and the trace [ex2-1A.txt].",
+    "IDL: rewrite EVERY literal into the form x - y <= n before drawing the graph, and remember the integer shift on strict or negated atoms — z < 0 becomes z - 0 <= -1, x > 1 becomes 0 - x <= -2, not (u - x <= -1) becomes x - u <= 0. One missed -1 flips SAT into UNSAT [ex2-3A.txt, esIDL.txt].",
+    "IDL edge direction: the literal x - y <= n is the edge y -> x with weight n. Drawing it backwards reverses every cycle weight and gives the opposite answer.",
+    "Every T-propagation must be justified by an explicit negative cycle and must record its theory lemma as a numbered clause, e.g. 5. (x-y>-5) V (y-z>0) V (z-x>3). A T-propagated literal with no lemma is unmarked work [ex2-3A.txt].",
+    "Do not assume (2.3) is unsatisfiable: A and C end UNSAT but B and D end SAT, on the same trace, because the final cycle weighs 0-5-2+17 > 0 in B and 0-5-2+15 > 0 in D [ex2-3B.txt, ex2-3D.txt].",
+    "In z3, predicates are declare-fun ... Bool; define-fun is a macro. 'Confusing declarations of functions and definitions of functions is a frequent source of syntactic mistakes' (essential_z3_syntax.txt). Also: = is bi-implication, => is implication.",
+    "Direction of the z3 test: to prove something ALWAYS happens, assert its negation and expect unsat (partyA, partyC); to show something CAN happen, assert it and expect sat (partyB, partyD). Asserting the statement itself and getting sat proves nothing about the 'always' version.",
+    "In the puzzles, the three chosen witnesses must be forced pairwise distinct with (not (= x y)) etc., and declare-datatypes is what makes the named elements distinct — with a plain declare-sort you must add (assert (distinct ...)) [partyA.txt, essential_z3_syntax.txt].",
+    "For the truth-teller puzzle, assert an EQUIVALENCE between 'the speaker is a truth teller' and the content of the claim; asserting the claim itself makes everyone truthful and the file trivially wrong [martiansA.txt].",
+    "(1.3) is decided by two facts only: Resolution is the space hog (saturation is exponential in memory) and congruence closure is the cheap one (O(n log n)). CDCL/DPLL costs time, not space."
+  ],
+  "six_hours": [
+    "1h — (2.1) CDCL: learn the six rules by name and run the version A trace twice from memory, tags included. It is the single most mechanical mark on the paper and it also answers (1.2) and half of (3.1).",
+    "50m — (1.1) free variables, ground instances, Skolemization: three short drills, the four keyed answers are on one page of this pack. Cheapest marks in Part I.",
+    "1h — (2.2) Skolemization + Herbrand + ground Resolution: memorise the seven-step recipe (formalise, negate thesis, Herbrand universe = {c}, instantiate, clausify, resolve, conclude) and redo version A and version D.",
+    "50m — (3.1) and (3.2) in z3: type the ex2-2A file and the martiansA file once each, run them, and learn the header block (declare-sort, declare-fun ... Bool, declare-const, forall, check-sat, get-value) by heart.",
+    "1h — (2.3) CDCL(IDL): the rewriting table, the edge convention and the two worked traces (A unsat, D sat). Do this after the four items above; it is the longest exercise and the paper itself tells you to leave it for later.",
+    "30m — (3.3) the party/towns template: copy the partyA skeleton and adapt it to the four variants (6/5 persons, 6/5 towns, negation vs conjunction).",
+    "20m — (1.3) plus the wording of the rules for (1.2): two memorised sentences on cost, nine two-line rules.",
+    "Skipped on purpose, and safe to skip for a pass: congruence closure and the EUF/array/bitvector theories, Nelson-Oppen combination, Fourier-Motzkin and quantifier elimination, bounded model checking and the z3 Python API. None of them is asked in any of the four archived papers."
+  ]
+}

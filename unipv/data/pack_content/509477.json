@@ -1,0 +1,1323 @@
+{
+ "exam_brief": {
+  "Course": "509477 COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES, 12 CFU. One Esse3 code, two Kiro modules sat separately: MOD. 1 Computer Programming (Prof. Stefano Ferrari) and MOD. 2 Algorithms and Data Structures (Prof. Piercarlo Dondi). [unipv/reference/cohort_rules.json; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/Algorithms-Dondi/_course_text.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html]",
+  "How the two modules combine": "\"The final grade of the overall exam will be the average of the partial grades of Module 1 (Computer Programming) and Module 2 (Algorithms and Data Structures).\" \"You can take the exam of each module in any order, even if it is advised to complete Module 1 before Module 2.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "MOD. 1 - Route A: the project (open to your cohort)": "Verbatim on the 2024-25 and 2025-26 Kiro pages: \"Starting from the 2024-25 edition, the exam is a written computer-based exam, consisting in programming exercises. Students of the previous editions (up to a.y. 2023-24) can choose between the project-based exam and the current written exam.\" Your Esse3 libretto files year-1 activities under 2023/2024, so the project route is open to you. The project route is \"the design and implementation of a software project in Python, in a report to document the project, and in a short presentation to summarize the report content and discuss the design and implementation of the project.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html; unipv/reference/cohort_rules.json]",
+  "MOD. 1 project - which specification applies": "The specification published for your entry year is \"Cannon - Final exam project - A.Y. 2023/24\" (version 0.9, dated January 10, 2024): a single-player 2D side-view artillery game, to be realised with the kivy framework, running on any system with a Python 3 interpreter. The project page states \"The project has no expiration date. Any student or team can choose a project among those published in their university career.\" The 2024-25 and 2025-26 editions published no new specification because they moved to the written exam, so Cannon is the applicable spec. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/COMP-PROG-509477-10589-2023/2023_24_cannon.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html]",
+  "MOD. 1 project - teams, deliverables, deadline": "\"The project can be developed by a team of one or two students... The project complexity will be sized based on a single-person team, for a person who is skilled in programming.\" Deliverables are the code and the report, packageable \"in a single zip file... possibly named with the matriculation number and the name of the team members\", submitted by one member only; \"The submission page allows multiple submissions, so the deliverables can be updated (i.e., it can be used as a repository).\" \"There are no strict deadlines to submit the project code and report, which have to be submitted at least two days before the discussion of the project.\" The discussion date is set by appointment with the teacher. As of 08/09/2026 the upload page shows \"Non sono presenti consegne\" - nothing has ever been submitted and no Data limite is set. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/Art2-509477-10589/_pages/assign-26002-Project-deliverables-upload-Compito.html; unipv/reference/cohort_rules.json]",
+  "MOD. 1 project - scoring and pass gates": "\"Final exam projects will be graded on a maximum scale of 30 points, based equally on: The overall quality of the documentation. The understanding and appropriate use of Python features. The quality of the submitted code both in terms of performance and comments. Extra credit may be granted for solutions that are particularly creative.\" So three equal thirds, 10 points each. Discussion: \"approximately 15 minutes for the presentation\", supporting material in pdf or PowerPoint; \"Components of the team must defend their project together and be prepared to answer individual questions on the whole project.\" No separate minimum per criterion is stated: NOT FOUND - verify with lecturer. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html]",
+  "MOD. 1 - Route B: the written exam": "\"The exam is structured in several exercises, of different difficulty and proportional score. The final score results as sum of the score points accumulated, properly scaled to the usual grades interval. Each exercise requires usually of writing a function, which provide the output described in the specifications of the task. For some exercises, a partially completed source code can be provided and the student have to fill the blanks to implement the solution. The evaluation of the submitted code may assign a fraction of the points of the exercise in case of partial solution.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html]",
+  "MOD. 1 written - duration, environment, allowed materials": "\"Tentatively, the duration of the exam will be 3 hours\" (2025-26 page); the 2024-25 page said \"1.5 hours\" - the figure has changed between editions, so confirm it. \"The official documentation site (docs.python.org) will be accessible during the exam.\" \"The exam will be done in laboratory and will require the credentials of UniMi for accessing to the exam system. The environment setup for the exam is a Linux machine.\" Ferrari's own preparation lab adds: \"Familiarize with that environment to save time during exam.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2024/_course_text.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/COMP-PROG-509477-10589-2025/Prog2025_26_24_exam_preparation_double.txt]",
+  "MOD. 1 written - pass mark": "NOT FOUND - verify with lecturer. The page states only \"sum of the score points accumulated, properly scaled to the usual grades interval\"; no per-exercise minimum and no section gate is published. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html]",
+  "MOD. 2 - format (no alternative route)": "\"The exam is written, and it is composed by two sections: Theory (up to 20 points), Programming in Python (up to 10 points). The grade will be the sum of the two sections.\" \"The theoretical part will be done on paper, while the programming part will be done on the PC of the lab.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "MOD. 2 - pass gates (hard, both must be cleared)": "\"IMPORTANT: to pass the exam is necessary to reach a sufficient score in both Theory (>= 12 points) and Programming (>= 6 points).\" \"IMPORTANT: non-running or empty code means exam failed.\" \"NOTE: 30L is achieved with a very well explained theory and well-structured code.\" 12 + 6 = 18, so the two gates are exactly the 18/30 pass: there is no trade-off between the sections. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_21_07_2023.txt]",
+  "MOD. 2 - duration": "\"Approximate duration: 2h and 20m\" (2025/26 Exam Information). The 2022 answer keys are headed \"DURATION: 2h and 15 min\". [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_09_09_2022.txt]",
+  "MOD. 2 - paper structure and weights": "Four theory questions, each with two to four sub-questions, then one Python programming problem. The 21/07/2023 paper prints the weights: \"1) General Concepts (4 points)\", \"2) Searching and Sorting (4 points)\", \"3) Trees (6 points)\", \"4) Graphs (6 points)\" = 20, then \"Programming (10 points total, 6 minimum)\". The same four headings appear on all four archived papers. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_21_07_2023.txt; unipv/data/questions.jsonl (course 509477)]",
+  "MOD. 2 - what the theory section asks": "\"Open questions and/or multiple choices on all the topics discussed during the course, both long (e.g., explain Dijkstra's algorithm) and short (e.g., when it is possible to apply Dijkstra's algorithm?). Practical exercises as seen during lectures (e.g., perform Dijkstra's algorithm on a given graph).\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "MOD. 2 - what the programming section asks": "\"Solve a short problem applying the concepts seen during the course. It is enough to find a reasonable solution for the problem, not the most efficient one. Basic data structures (e.g., stack or queue) will be provided. IMPORTANT: an improper use of a data structure will lower the score, while a well-structured code will raise it. IMPORTANT: it is not allowed to modify the problem conditions (e.g., transform a tree into a list to simplify the assigned task). IMPORTANT: the default editor used for the exam is IDLE.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "MOD. 2 - allowed materials": "\"Only pen and pencil are allowed, answer sheets and drafts will be provided.\" \"IMPORTANT: the use of any electronic device (such as smartphone, smartwatch and similar) is strictly forbidden.\" \"IMPORTANT: students found copying or with electronic devices during the exam will have their exam canceled and may be referred to the university's disciplinary committee.\" No notes, textbook or calculator are listed as permitted. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "MOD. 2 - handing in the code file": "The papers carry explicit file instructions and they change between sittings. 09/09/2022: copy the files from the TESTO folder to the desktop, \"rename the file ... writing your name and surname at the end\", \"Remember to write your name and surname also in the first line of the file as comment\", then copy the file into the CONSEGNA folder (\"You will see the folder CONSEGNA empty even after the copy, it is not an error\"). 21/07/2023: \"You will find all the files needed in the home folder on your desktop... IMPORTANT: only the files inside the home folder will be collected at the end of the exam. File outside the folder will be discarded!\" Read the instruction block on the day. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_09_09_2022.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_21_07_2023.txt]",
+  "MOD. 2 - autumn 2026 sittings": "\"Autumn session 2026 in Pavia: September 3rd at 14:00 in Labs B1/B2; September 22nd at 9:00 in Labs C2/C3.\" \"IMPORTANT: rooms may change depending by the number of students enrolled.\" \"IMPORTANT: Check the official calendar on the BAI website and the course page on KIRO for updates.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "Your booked sitting - and the date to check": "Esse3 shows you booked 25/09/2026 for the activity \"COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES\", type \"Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line\", commission FERRARI STEFANO (Presidente) and DONDI PIERCARLO (Membro Effettivo); booking opened 05/09/2026 and closes 20/09/2026; time and room are blank. Dondi's own MOD. 2 autumn dates are 03/09/2026 and 22/09/2026, neither of which is 25/09. [NOT IN SOURCE - VERIFY] The most likely reading is that 25/09 is the verbalization appello (the round-icon session run by Ferrari) and that the MOD. 2 written must be sat on 22/09 under the partial session \"ALGORITHMS AND DAT\". Confirm with both lecturers before you plan revision around 25/09. [unipv/data/scoring.json row 509477 field 'sitting'; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "Registration and verbalization procedure": "\"Sign up on Esse3 for the partial exam session called 'ALGORITHMS AND DAT' (marked by a square icon).\" \"To verbalize the final grade: Sign up on Esse3 to the verbalization session called 'COMPUTER PROGRAMMING, ALGORITHMS AND DAT' marked with a ROUND ICON. IMPORTANT: To speed up the verbalization process it is advised to sign up for the verbalization session closest to the last exam session you intend to participate (even if it is in the same date). IMPORTANT: Prof. Ferrari handles the verbalization process, remember to write to him when you have passed both modules.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Exam Info.txt]",
+  "Textbook the answer keys point at": "MOD. 2 main textbook: \"Problem Solving with Algorithms and Data Structures using Python\" by Brad Miller and David Ranum. The published answer keys answer most theory sub-questions by naming a slide pdf and a numbered chapter of that book (e.g. \"See the definition of Stack in the pdf 'Linear Data Structures' and in the book starting from chapter 4.3\"), which tells you the expected answer is the lecture definition, not an improvisation. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/Algorithms-Dondi/_course_text.html; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_23_06_2022.txt]",
+  "Archive this sheet is built from": "114 extracted questions for code 509477: 34 from four MOD. 2 written papers (23/06/2022, 14/07/2022, 09/09/2022, 21/07/2023 - each archived twice), 8 from the four provided draft .py files, 2 from the MOD. 2 Exam Information deck, 4 from Ferrari's 2025/26 exam-preparation lab, and 66 from the three MOD. 1 project specifications (castles war 2021-22, planisuss 2022-23, cannon 2023-24). Published answer keys exist for three of the four MOD. 2 papers; 21/07/2023 has none. Topic order below follows the four MOD. 2 papers, because they are the only documents that are actual sat exams; the MOD. 1 sections come last even though the project specs are the largest block of extracted text. [unipv/data/questions.jsonl filtered to course 509477; unipv/data/scoring.json]"
+ },
+ "topics": [
+  {
+   "name": "Binary trees, traversals, and the Mod. 2 programming exercise",
+   "frequency": "The Python programming exercise is a binary-tree or BST problem in 4 of the 4 archived Mod. 2 papers; the traversals are written out by hand in 2 of 4. This section carries the 10 programming points and the hard 6-point gate.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Definitions, verbatim from the lecture pdf 'Trees - Part 1'. A tree is composed by a set of nodes connected by edges. A node has a name called key and can contain additional data; the root is the only node with no incoming edge. A node is the parent of all the nodes (children) it connects to with outgoing edges; each node has only one parent except the root. Children nodes of the same parent are called siblings. A node with no child is called leaf; a node with at least one child is called inner (or internal). A subtree is a set of nodes and edges comprised of a parent and all the descendants of that parent - each node is the root of a subtree. In a binary tree a node can have at most two children (called left and right). [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part1.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"level of a node\" n = \"number of edges on the path from the root to\" n"
+    },
+    {
+     "kind": "math",
+     "text": "\"height of a tree\" = \"maximum level of any node in the tree\""
+    },
+    {
+     "kind": "text",
+     "text": "Shape vocabulary the papers use, verbatim: a binary tree is complete if all its levels are entirely filled, except (eventually) the last one which is filled from the left to the right; full if each of its nodes has either 0 or 2 children; perfect if all inner nodes have two children and all leaves are at the same level. A perfect binary tree is also full and complete, and is perfectly height balanced (balance factor = 0 for every node). A binary tree is height balanced if the height of the left and right subtree of any node differ by not more than 1. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part1.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"Balance Factor\" = abs(\"height\"(\"leftSubTree\") - \"height\"(\"rightSubTree\"))"
+    },
+    {
+     "kind": "heading",
+     "text": "The four traversals - learn these as words, they are asked as words"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Preorder (Root-Left-Right): visit the root node first; recursively do a preorder traversal of the left subtree; recursively do a preorder traversal of the right subtree.",
+      "Inorder (Left-Root-Right): recursively do an inorder traversal on the left subtree; visit the root node; recursively do an inorder traversal of the right subtree.",
+      "Postorder (Left-Right-Root): recursively do a postorder traversal of the left subtree; recursively do a postorder traversal of the right subtree; visit the root node.",
+      "Level order (Breadth first): put the root in a queue; while the queue is not empty, dequeue the current node, print it, and enqueue its children if present."
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Properties stated in the lectures and worth one line in an answer: preorder can be used to copy a tree; inorder of a BST returns the keys in sorted order; postorder is used for evaluating a parse tree; the first element of a preorder listing is the root. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part1.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "The level-order template - the single most reusable piece of code"
+    },
+    {
+     "kind": "text",
+     "text": "The exam provides a Stack and a Queue class. The Queue provided in the lectures has enqueue(item), dequeue(), isEmpty() and size(). Level order is the pattern behind three of the four archived programming problems."
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def levelOrder(root):",
+      "    if root is None:",
+      "        return",
+      "    q = Queue()",
+      "    q.enqueue(root)",
+      "    while q.size() > 0:",
+      "        currentNode = q.dequeue()",
+      "        print(currentNode.key)",
+      "        if currentNode.leftChild is not None:",
+      "            q.enqueue(currentNode.leftChild)",
+      "        if currentNode.rightChild is not None:",
+      "            q.enqueue(currentNode.rightChild)"
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - 23/06/2022 programming problem"
+    },
+    {
+     "kind": "text",
+     "text": "Task, verbatim: \"Given a Binary Tree, compute and print the sum of all the nodes present in a level for each level of the tree.\" For the sample tree with root 20 the expected output is Sum of level 0 = 20, level 1 = 55, level 2 = 90, level 3 = 25. The paper's own hint: \"Common ways to solve this problem involve a pre-order or a level-order traversal of the tree.\" The draft file defines class Node with key, leftChild, rightChild, and the stub def compute_level_sum(root) returning a list totals. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_23_06_2022.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/Algorithms-Dondi/Exam_23_06_2022_NAME_SURNAME.py]"
+    },
+    {
+     "kind": "text",
+     "text": "Solution: level order, but drain the queue one whole level at a time by first reading its current size."
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def compute_level_sum(root):",
+      "    totals = []",
+      "    if root is None:",
+      "        return totals",
+      "    q = Queue()",
+      "    q.enqueue(root)",
+      "    while q.size() > 0:",
+      "        n = q.size()          # number of nodes on this level",
+      "        levelSum = 0",
+      "        for i in range(n):",
+      "            node = q.dequeue()",
+      "            levelSum = levelSum + node.key",
+      "            if node.leftChild is not None:",
+      "                q.enqueue(node.leftChild)",
+      "            if node.rightChild is not None:",
+      "                q.enqueue(node.rightChild)",
+      "        totals.append(levelSum)",
+      "    return totals"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Check against the sample: level 0 = 20; level 1 = 15 + 40 = 55; level 2 = 10 + 30 + 50 = 90; level 3 = 22 + 3 = 25. Matches the expected output printed in the draft file. [NOT IN SOURCE - VERIFY: the code is derived; no answer key for the programming section was published, only the theory keys.]"
+    },
+    {
+     "kind": "heading",
+     "text": "The other three archived programming problems, with solutions"
+    },
+    {
+     "kind": "text",
+     "text": "09/09/2022 - \"Given a binary Tree and two nodes A and B determine whether A and B are siblings or not.\" The paper's own hint: \"you can treat the problem as 'verify if A and B have the same parent node' or 'find a node that has A and B as children'. You can use a Stack or a Queue, but it is not mandatory.\" Note A and B are passed as key values, not as nodes. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_09_09_2022.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def areSiblings(root, nodeA, nodeB):",
+      "    if root is None or nodeA is None or nodeB is None:",
+      "        return False",
+      "    L = root.leftChild",
+      "    R = root.rightChild",
+      "    if L is not None and R is not None:",
+      "        if L.key == nodeA and R.key == nodeB:",
+      "            return True",
+      "        if L.key == nodeB and R.key == nodeA:",
+      "            return True",
+      "    return areSiblings(L, nodeA, nodeB) or areSiblings(R, nodeA, nodeB)"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "14/07/2022 - \"Given a BST and a number K, return the node in the BST that is closest to K, i.e. the node with the minimum absolute difference with K.\" Because it is a BST you never need to visit the whole tree: walk down, keeping the best key seen so far. Warning: in this paper's draft the Node fields are named left and right, not leftChild and rightChild, and the test code calls the function sometimes with the BST object and sometimes with bst1.root. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def getClosestValue(bst, val):",
+      "    node = bst",
+      "    if hasattr(bst, 'root'):      # called with the BST object, not a Node",
+      "        node = bst.root",
+      "    best = None",
+      "    while node is not None:",
+      "        if best is None or abs(node.key - val) < abs(best - val):",
+      "            best = node.key",
+      "        if val < node.key:",
+      "            node = node.left",
+      "        elif val > node.key:",
+      "            node = node.right",
+      "        else:",
+      "            return node.key",
+      "    return best"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "21/07/2023 - \"Given a BST and a number K, return the path from the root to the node K as a list of numbers. Return instead NONE if the node is not present in the BST.\" Expected: K = 55 gives [50, 60, 55]; K = 20 gives [50, 18, 25, 20]; K = 50 gives [50]; K = 75 gives NONE. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Exam_21_07_2023.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def getPath(root, k):",
+      "    path = []",
+      "    node = root",
+      "    while node is not None:",
+      "        path.append(node.key)",
+      "        if k == node.key:",
+      "            return path",
+      "        if k < node.key:",
+      "            node = node.leftChild",
+      "        else:",
+      "            node = node.rightChild",
+      "    return None"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Pattern to memorise: all four problems are (a) walk the tree, (b) accumulate something. Two are pure BST descents (no recursion needed), two are full traversals. If you can write the level-order template and the BST descent template from memory you can build every archived programming answer. [NOT IN SOURCE - VERIFY: pattern summary is derived from the four papers.]"
+    }
+   ]
+  },
+  {
+   "name": "Binary search trees: build, delete, and the balance question",
+   "frequency": "Question 3 is 'Trees' in 4 of the 4 archived papers. A BST is drawn from a list of keys by hand in 2 of 4 (23/06/2022, 09/09/2022) and is the data structure of the programming exercise in the other 2. Worth 6 of the 20 theory points on the 2023 paper.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Definition, verbatim: \"A binary search tree (BST) is a binary tree in which the nodes are ordered so that nodes with keys smaller than their parent's key are in the left subtree, nodes with keys greater than their parent's key are in the right subtree. NOTE: In standard implementations, no duplicate keys are allowed.\" \"In a BST, the average computational complexity for searching, inserting or deleting an element is O(log n).\" Each subtree of a BST is still a BST. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part2.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"BST average add / delete / get:\" O(log n), quad \"worst case (fully skewed):\" O(n)"
+    },
+    {
+     "kind": "text",
+     "text": "A BST is a possible implementation of the Map ADT. Hash tables are theoretically faster (O(1)) but use more memory and are more complex; a BST can additionally sort the keys with an inorder traversal and find minimum, maximum, predecessor and successor. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part2.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Method - build a BST from a list of keys"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Take the first element of the list: it becomes the root.",
+      "For each following key, start at the root.",
+      "If the key is smaller than the current node's key, go left; if greater, go right.",
+      "When the child you would go to is empty, insert the new node there.",
+      "Never reorder the input list and never rebalance - a plain BST does not self-balance."
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Method - delete a node from a BST"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Leaf node: simply remove it.",
+      "Node with only one child: replace the node with that child.",
+      "Node with two children: find the successor of the node (the smallest key in its right subtree), copy the successor's key into the node, then delete the successor from the right subtree.",
+      "Do not re-sort or rebuild the tree."
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - 23/06/2022 question 3, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "(a) \"Draw the Binary Search Tree (BST) that results from inserting nodes with the following keys: 40, 15, 65, 58, 71, 84, 25, 17, 61, 3, 13, 22.\" The published answer key draws this tree:"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_23_06_2022-p001-b88e4d6e.png",
+     "caption": "BST built from 40, 15, 65, 58, 71, 84, 25, 17, 61, 3, 13, 22 [Solution_Exam_23_06_2022.pdf, p1]",
+     "width": "85%"
+    },
+    {
+     "kind": "text",
+     "text": "(b) \"Now, remove the node with key 15 and redraw the tree accordingly.\" 15 has two children (3 and 25), so it is replaced by its successor - the smallest key in its right subtree, which is 17 - and 17 is then deleted from where it was:"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_23_06_2022-p001-317c5bb6.png",
+     "caption": "The same BST after removing key 15: the successor 17 has been promoted [Solution_Exam_23_06_2022.pdf, p1]",
+     "width": "85%"
+    },
+    {
+     "kind": "text",
+     "text": "(c) \"After the previous step, is the tree perfectly height balanced? (Justify the answer)\" Key, verbatim: \"No, the tree is only high balanced but not perfectly height balanced.\" Perfectly height balanced means balance factor = 0 at every node, which only a perfect binary tree achieves; this tree merely satisfies the weaker height-balanced condition (differences of at most 1)."
+    },
+    {
+     "kind": "text",
+     "text": "(d) \"What are the advantages of an AVL tree respect to a generic BST?\" Key, verbatim: \"An AVL tree is self-balancing, thus it always has a computational time of O(log n) to add, delete or get an element, while a generic BST has a worst-case scenario of O(n).\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_23_06_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Second worked example - 09/09/2022 question 3c, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Draw the Binary Search Tree (BST) that results from inserting nodes with the following keys: 59, 24, 69, 62, 55, 84, 45, 16, 1, 57, 60, 91.\" The key draws:"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_09_09_2022-p002-45618810.png",
+     "caption": "BST built from 59, 24, 69, 62, 55, 84, 45, 16, 1, 57, 60, 91 [Solution_Exam_09_09_2022.pdf, p2]",
+     "width": "85%"
+    },
+    {
+     "kind": "text",
+     "text": "Self-check that costs nothing in the exam: read the inorder traversal of your drawing. If it is not the input keys in ascending order, the tree is wrong."
+    }
+   ]
+  },
+  {
+   "name": "Graphs: Prim, Dijkstra, DFS and topological sorting",
+   "frequency": "Question 4 is 'Graphs' in 4 of the 4 archived papers, worth 6 of the 20 theory points on the 2023 paper. Hand-traces: Prim in 2 of 4, Dijkstra in 1 of 4, DFS in 1 of 4. Applicability questions ('would it be possible to apply...') appear in 3 of 4.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Definitions, verbatim: \"A graph, as a tree, is a non-linear data structure composed by vertices connected by edges.\" Differently from a tree, there is no hierarchy (no root, no parent/children) and cycles are possible. If all edges are one-way the graph is a directed graph or digraph; if all are two-way it is undirected. Edges can carry weights, positive or negative; with no weights the graph is unweighted. A path is a sequence of vertices connected by distinct edges; a cycle is a path that starts and ends at the same vertex; a graph with no cycles is an acyclic graph. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/7 - Graphs_Part1.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "G = (V, E), quad e = (v_i, v_j, w) \"with\" v_i, v_j in V \"and\" w \"the weight\""
+    },
+    {
+     "kind": "heading",
+     "text": "The two implementations - asked verbatim on 14/07/2022"
+    },
+    {
+     "kind": "text",
+     "text": "\"Which are the two most common ways to implement a graph? Explain their respective pros and cons.\" Key: adjacency matrix and adjacency list. Adjacency matrix pros: easy to read, good for dense graphs, O(1) to add/remove an edge and to test one. Cons: O(V^2) space, very inefficient for sparse graphs, adding or removing a vertex costs O(V^2). Adjacency list is the mirror image: O(V + E) space, good for sparse graphs. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/7 - Graphs_Part1.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "figure",
+     "png": "7 - Graphs_Part1-p013-5d1cda4c.png",
+     "caption": "Adjacency matrix of the six-vertex weighted digraph used through the graph lectures [7 - Graphs_Part1.pdf, p13]",
+     "width": "55%"
+    },
+    {
+     "kind": "math",
+     "text": "\"space:\" quad \"matrix\" O(V^2), quad \"list\" O(V + E)"
+    },
+    {
+     "kind": "math",
+     "text": "\"add vertex:\" O(V^2) \"/\" O(1); quad \"remove vertex:\" O(V^2) \"/\" O(V + E); quad \"check edge:\" O(1) \"/\" O(V)"
+    },
+    {
+     "kind": "heading",
+     "text": "Prim's algorithm - the trace asked most often"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given a connected undirected graph, a spanning tree is an acyclic subgraph that connects all the vertices of the graph... In a connected undirected weighted graph, a minimum spanning tree is a spanning tree in which the sum of the edge weights is minimized.\" Prim is a greedy algorithm: \"While the tree T is not yet a spanning tree: find edges that are 'safe' to add to T; add to T the safe edge with the lowest weight. An edge is safe if it connects a vertex that is already in the spanning tree to a vertex that is not in the spanning tree.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/7 - Graphs_Part2.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Put every vertex in a priority queue with attribute k set to infinity; set k of the start vertex to 0.",
+      "Dequeue the vertex with the smallest k - it joins the tree.",
+      "For every neighbour still in the priority queue, if the weight of the connecting edge is lower than that neighbour's current k, set its k to that weight and set its predecessor to the dequeued vertex.",
+      "Repeat until the priority queue is empty.",
+      "Write down, at every step, the k attribute of each vertex and the content of the priority queue - the papers ask for both explicitly."
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Note the difference from Dijkstra that the exam rewards: in Prim, k is the weight of the single connecting edge; in Dijkstra, the distance is the total weight of the whole path from the source."
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - Prim on the 23/06/2022 graph, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Apply the Prim's algorithm to find the Minimum Spanning Tree of the graph in figure (start from vertex A). At each step, specify the current k attribute of each node (you can omit infinity).\" The graph:"
+    },
+    {
+     "kind": "figure",
+     "png": "Exam_23_06_2022-p001-b07e3506.png",
+     "caption": "Weighted undirected graph used for both question 4a (topological sorting) and 4c (Prim) [Exam_23_06_2022.pdf, p1]",
+     "width": "72%"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_23_06_2022-p003-ff4aed0f.png",
+     "caption": "First step of the key: A dequeued with k = 0, its neighbours updated to k(F) = 1 and k(D) = 9 [Solution_Exam_23_06_2022.pdf, p3]",
+     "width": "62%"
+    },
+    {
+     "kind": "text",
+     "text": "The priority-queue contents printed in the key, in order: PQ: F, D, B, C, E - then PQ: D, E, C, B - then PQ: E, C, B - then PQ: C, B - then PQ: B - then PQ empty. Reading them back: dequeue A (k=0) sets k(F)=1, k(D)=9; dequeue F (k=1) sets k(D)=1, k(E)=4, k(C)=7; dequeue D (k=1) lowers k(C) to 4 and sets k(B)=7; dequeue E (k=4) changes nothing; dequeue C (k=4) lowers k(B) to 6; dequeue B. Final k values: A 0, F 1, D 1, E 4, C 4, B 6."
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_23_06_2022-p003-e9d98ab4.png",
+     "caption": "Final minimum spanning tree from the key, edges highlighted, with the final k of each vertex in red [Solution_Exam_23_06_2022.pdf, p3]",
+     "width": "68%"
+    },
+    {
+     "kind": "text",
+     "text": "MST edges: A-F (1), F-D (1), D-C (4), F-E (4), C-B (6); total weight 16. [NOT IN SOURCE - VERIFY: the total weight is derived; the key shows only the highlighted edges and the k values.]"
+    },
+    {
+     "kind": "heading",
+     "text": "Dijkstra's algorithm"
+    },
+    {
+     "kind": "text",
+     "text": "\"Dijkstra's algorithm solves the single-source shortest path problem on weighted graphs in which the weights are all positives.\" It maintains a set S of vertices whose shortest path from the source has been determined; at each iteration it selects the vertex u not in S with the estimated minimum shortest path, adds u to S, and relaxes all edges leaving u. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/7 - Graphs_Part2.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"edge relaxation for\" (u, v): quad d(u) + w(u, v) < d(v) ==> d(v) = d(u) + w(u, v)"
+    },
+    {
+     "kind": "text",
+     "text": "\"A new path is chosen only if it grants a strictly lower distance than the previous one\" - the inequality is strict, which decides a sub-question on the 14/07/2022 paper. Negative weights break Dijkstra (\"once it found a path to a vertex, that vertex cannot be reconsidered even if there is another path with less cost\"); for mixed-sign weights you need Bellman-Ford."
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - Dijkstra on the 14/07/2022 graph, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Apply the Dijkstra's algorithm to the graph in attachment to find the shortest paths from vertex A to all the other vertices. At each step specify the current distance value of each vertex (you can omit infinity). Write all the paths at the end.\""
+    },
+    {
+     "kind": "figure",
+     "png": "Exam_14_07_2022-p003-81b926d5.png",
+     "caption": "Weighted undirected graph for the Dijkstra trace [Exam_14_07_2022.pdf, p3]",
+     "width": "68%"
+    },
+    {
+     "kind": "text",
+     "text": "Priority-queue contents printed in the key: PQ: C, D, E, B, F - then PQ: E, F, B, D - then PQ: F, B, D - then PQ: B, D - then PQ: D - then empty. Reading them back: from A, d(C)=1, d(E)=5, d(D)=5; dequeue C (1) and relax to d(E)=2, d(F)=2, d(B)=3; dequeue E (2) - relaxing D would give 2+3=5, not strictly less than 5, so nothing changes; dequeue F (2) - same, D stays 5; dequeue B (3); dequeue D (5)."
+    },
+    {
+     "kind": "text",
+     "text": "Final answer, verbatim from the key: \"Path from A to B: A, C, B. Path from A to C: A, C. Path from A to D: A, D. Path from A to E: A, C, E. Path from A to F: A, C, F.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Applicability one-liners - these are pure marks"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Topological sorting: \"produces a linear ordering of the vertices such that if the graph G contains an edge (v, w) then the vertex v comes before the vertex w\". Applicable ONLY to a directed acyclic graph (DAG). Key for 23/06/2022 4a: \"No because topological sorting is applicable only to directed acyclic graphs.\" Multiple valid orders may exist, but the first vertex must have no incoming edges.",
+      "How to compute it: run DFS from any vertex; store the vertices in a stack in decreasing order of finish time; pop the stack.",
+      "Prim: only on undirected graphs. Key for 09/09/2022 4b: \"It is possible to apply only Dijkstra, Prim can be applied only on unidirected [undirected] graphs.\"",
+      "Dijkstra: weighted graphs with all-positive weights; solves single-source shortest path.",
+      "Is Dijkstra the best for one source to one destination? Key for 14/07/2022 4b: \"No, it is A*.\" A* is an extension of Dijkstra using a heuristic; it can only solve the single-pair problem, and it is optimally efficient.",
+      "Negative weights: use Bellman-Ford (which is the dynamic-programming shortest-path method).",
+      "Strongly connected components: Kosaraju's algorithm - DFS on G for finishing times, transpose G, DFS on the transpose taking vertices in decreasing finishing time; each resulting tree is an SCC. Time O(V + E)."
+     ]
+    },
+    {
+     "kind": "math",
+     "text": "\"A* selects the vertex minimising\" quad f(n) = g(n) + h(n)"
+    },
+    {
+     "kind": "heading",
+     "text": "Depth First Search with discovery and finish times"
+    },
+    {
+     "kind": "text",
+     "text": "DFS colours vertices white (not yet discovered), gray (discovered, not yet fully explored) and black (fully explored), and stamps two timestamps: discovery time when the vertex becomes gray and finish time when it becomes black. The counter increases by one at each colour change, so with V vertices the last finish time is 2V. \"While BFS creates a single search tree, DFS may create a group of search trees, called depth first forest.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/7 - Graphs_Part1.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Start from the given vertex, colour it gray, stamp its discovery time.",
+      "Move to the first unvisited adjacent vertex in the required order (the papers say: in case of multiple valid directions follow the alphabetic order) and recurse.",
+      "When a vertex has no white neighbour left, colour it black and stamp its finish time.",
+      "Backtrack; when the whole tree is finished and white vertices remain, pick the next one (alphabetically) as a new source - that starts a new tree of the forest.",
+      "State how many trees the forest has and which vertices belong to each."
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - DFS on the 09/09/2022 graph, with the published key"
+    },
+    {
+     "kind": "figure",
+     "png": "Exam_09_09_2022-p001-ab457d24.png",
+     "caption": "The directed acyclic graph of question 4; the key's answer to 4a is 'It is a directed acyclic graph' [Exam_09_09_2022.pdf, p1]",
+     "width": "58%"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_09_09_2022-p003-e188acaa.png",
+     "caption": "The key's DFS from A: each vertex labelled discovery/finish, tree edges solid, non-tree edges dashed [Solution_Exam_09_09_2022.pdf, p3]",
+     "width": "80%"
+    },
+    {
+     "kind": "text",
+     "text": "Times from the key: A 1/8, B 2/7, C 3/6, G 4/5, D 9/14, E 10/11, H 12/13, F 15/18, I 16/17. \"DFS forest composition: A, B, C, G / D, E, H / F, I\" - three trees. Note that the forest is three trees because A's tree cannot reach D or F, so DFS restarts at D and then at F. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_09_09_2022.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"DFS, BFS, Kosaraju:\" quad O(V + E)"
+    }
+   ]
+  },
+  {
+   "name": "Sorting algorithms",
+   "frequency": "Question 2 is 'Sorting' or 'Searching and Sorting' in 4 of the 4 archived papers, worth 4 of the 20 theory points on the 2023 paper. Asked as 'explain how X works' in 4 of 4 and as a hand-trace in 1 of 4.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "The question is always 'explain how algorithm X works', sometimes with 'what are the pros and cons'. Learn one short paragraph per algorithm plus the complexity row. The four algorithms actually asked in the archive are Merge sort (23/06/2022), Quick sort (14/07/2022), Selection sort (09/09/2022) and Insertion sort (21/07/2023)."
+    },
+    {
+     "kind": "heading",
+     "text": "Bubble sort"
+    },
+    {
+     "kind": "text",
+     "text": "Repeatedly pass over the list comparing adjacent items and swapping them when they are out of order; each pass pushes the largest remaining item to its place. Multiple swaps per pass. \"Very slow method!\" The short-bubble variant stops early when a pass makes no exchange, which is what gives it the O(n) best case. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Selection sort - asked 09/09/2022"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim procedure: \"Like Bubble sort but it makes only one exchange for every pass. When passing the list, search for the largest (or smallest) element; after completing the first pass, place the largest (or smallest) element in the proper location; repeat for placing the next largest (or smallest) element, until all elements are in order.\" Complexity: \"Still O(n^2), but it is in practice faster due to the lower number of swaps.\" At most one swap per pass; not stable. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Insertion sort - asked 21/07/2023"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim procedure: \"The algorithm maintains a sorted sub-list in the lower positions of the list. Each new item is inserted into the sub-list as follow: items in the sorted sub-list that are greater than the current item are shifted one position to the right; when we reach a smaller item or the end of the sub-list, the new item can be inserted.\" Execution starts at index 1 since the first element is assumed already in order. O(n^2) but in practice more efficient than bubble and selection sort; stable; O(1) extra space. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Merge sort - asked 23/06/2022"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim procedure: \"Merge sort is a recursive algorithm that adopts a divide and conquer strategy. It works by recursively dividing the list to be sorted in half. If the list is empty or has one item, it is sorted (base case). If the list has more than one item, the algorithm splits the list in half and recursively invokes a merge sort on both halves. Once the two halves are sorted, the merging is performed. Merging consists in taking two smaller sorted lists and combining them together into a single, sorted, new list.\" Pros and cons - the second half of the 23/06/2022 question: O(n log n) in every case (split O(log n), merge O(n)) and stable, but it needs O(n) auxiliary space, \"critical if the list is large\". [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Quick sort - asked 14/07/2022"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim procedure: \"Select a value in the list called pivot. Apply the partition process: rearrange the list until the pivot reaches a position (split point) in which all the elements less than the pivot will be at its left and all the elements greater than the pivot will be at its right. Split the list at the split point to obtain two smaller sub-lists. Recursively call the previous steps to sort the sub-lists.\" Leftmark moves left to right until it finds a value greater than the pivot; rightmark moves right to left until it finds a value less than the pivot; they swap; when rightmark crosses leftmark the pivot is swapped with the item at rightmark, which is the split point. Median-of-three (first, middle, last) is the alternative pivot choice that avoids degenerate splits. In-place, so O(log n) auxiliary space; not stable; worst case O(n^2) when the split point is always far left or far right. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - 14/07/2022 question 2b, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given the following list of numbers [47, 9, 85, 6, 22, 72, 7, 36, 78, 18, 29] perform the first iteration of the Quick Sort algorithm assuming that the pivot is the first element.\" The key prints exactly four lines:"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "47, 9, 85, 6, 22, 72, 7, 36, 78, 18, 29",
+      "47, 9, 29, 6, 22, 72, 7, 36, 78, 18, 85",
+      "47, 9, 29, 6, 22, 18, 7, 36, 78, 72, 85",
+      "36, 9, 29, 6, 22, 18, 7, 47, 78, 72, 85"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Read it as: pivot 47. Leftmark finds 85 (greater than 47), rightmark finds 29 (less than 47) - swap them, giving line 2. Leftmark finds 72, rightmark finds 18 - swap, giving line 3. Now the marks cross at 36, so the pivot 47 is swapped with 36 and lands on its split point at index 7, giving line 4. The answer must end with the pivot moved into position; stopping at line 3 loses the mark. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "The table to reproduce from memory"
+    },
+    {
+     "kind": "math",
+     "text": "\"Bubble sort:\" quad \"best\" n, quad \"average\" n^2, quad \"worst\" n^2, quad \"space\" 1, quad \"stable: yes\""
+    },
+    {
+     "kind": "math",
+     "text": "\"Selection sort:\" quad \"best\" n^2, quad \"average\" n^2, quad \"worst\" n^2, quad \"space\" 1, quad \"stable: no\""
+    },
+    {
+     "kind": "math",
+     "text": "\"Insertion sort:\" quad \"best\" n, quad \"average\" n^2, quad \"worst\" n^2, quad \"space\" 1, quad \"stable: yes\""
+    },
+    {
+     "kind": "math",
+     "text": "\"Merge sort:\" quad \"best\" n log n, quad \"average\" n log n, quad \"worst\" n log n, quad \"space\" n, quad \"stable: yes\""
+    },
+    {
+     "kind": "math",
+     "text": "\"Quick sort:\" quad \"best\" n log n, quad \"average\" n log n, quad \"worst\" n^2, quad \"space\" log n, quad \"stable: no\""
+    },
+    {
+     "kind": "math",
+     "text": "\"Tim sort:\" quad \"best\" n, quad \"average\" n log n, quad \"worst\" n log n, quad \"space\" n, quad \"stable: yes\""
+    },
+    {
+     "kind": "text",
+     "text": "Which of the studied algorithms follow Divide and Conquer? Key for 09/09/2022 2b, verbatim: \"Binary Search, Merge Sort, Quick Sort.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_09_09_2022.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Python's own sort, if it is ever asked: aList.sort() sorts ascending, aList.sort(reverse=True) descending, and a key function gives multi-field ordering, e.g. student_list.sort(key=lambda x: (x[1], x[2])). This is the idiom the Mod. 1 written exam needs as well. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    }
+   ]
+  },
+  {
+   "name": "Stacks, queues, deques, linked lists and the ADT idea",
+   "frequency": "Question 1 is 'Basic Concepts' / 'General Concepts' in 4 of the 4 archived papers, worth 4 of the 20 theory points on the 2023 paper. Stack asked in 3 of 4, queue and priority queue in 1 of 4, linked list in 1 of 4, ADT in 1 of 4.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Abstract data type, verbatim: \"An abstract data type (ADT) is the logical description of a data type and of its operations. An ADT is implementation-independent: we can have different implementations of the same ADT; each implementation must guarantee the same interface to the structure. A data structure is the implementation of an ADT.\" That two-sentence answer is the whole of 23/06/2022 question 1a. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/1 - Basic Concepts.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Linear data structures, verbatim: \"In linear data structures items are arranged sequentially and each item is adjacent to its previous and next items.\" They have two ends (left/right, top/bottom, head/tail) and differ by where items may be added and removed. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/2 - Linear Data Structures.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Stack"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A stack is a collection of items where the addition of a new item and the removal of an existing item always takes place at the same end. The order of insertion is the reverse of the order of removal. This kind of ordering is generally called LIFO (Last In, First Out).\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/2 - Linear Data Structures.txt]"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Stack() - creates a new empty stack",
+      "push(item) - adds a new item to the top of the stack",
+      "pop() - removes the top item from the stack and returns it",
+      "peak() - returns the top item from the stack but does not remove it",
+      "isEmpty() - returns True if the stack is empty, False otherwise",
+      "size() - returns the number of items in the stack"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Canonical use asked in lectures: checking balanced parentheses - push every opener, and on every closer pop and check that the popped opener matches the closer's type; the string is balanced only if the stack is empty at the end."
+    },
+    {
+     "kind": "heading",
+     "text": "Queue and priority queue - both halves of 14/07/2022 question 1"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A queue is a collection of items where the addition of a new item happens at one end ('rear' or 'back') and the removal of an existing item occurs at the other end ('front'). The order of insertion is the same of the order of removal. This kind of ordering is generally called FIFO (First In, First Out).\" Operations: Queue(), enqueue(item), dequeue(), isEmpty(), size()."
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim difference asked in 1b: \"A priority queue is a particular kind of queue in which: each element of the queue has a priority; the position of an element in the queue depends on its priority; the element with the highest priority is removed first.\" \"A priority queue is generally implemented with a heap data structure.\" So: a queue orders by arrival, a priority queue orders by priority. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/2 - Linear Data Structures.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Deque"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A deque (pronounced 'dek') also known as a double-ended queue is a structure similar to a queue where items can be added and removed at either the front or the rear. It is a sort of 'hybrid' between a stack and a queue.\" Operations: addFront, addRear, removeFront, removeRear, isEmpty, size."
+    },
+    {
+     "kind": "heading",
+     "text": "Linked lists - and the 09/09/2022 sub-question"
+    },
+    {
+     "kind": "text",
+     "text": "A linked list stores elements not in contiguous memory but linked using pointers; its elements are called nodes, and each node stores the data and a pointer to the next node. Types: single linked list (the default), doubly linked list, circular linked list. Common uses given in the lectures: undo/redo, browser back and forward, music player lists, implementing other data structures. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/2 - Linear Data Structures.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given a standard implementation of a Linked List, which of the following operations is the slowest and why? (i) Add an element at the beginning; (ii) add an element in the middle; (iii) add an element at the end.\" Key, verbatim: \"Adding an element at the end requires traversing the entire linked list.\" The counter-intuitive part is that the head insertion is O(1) precisely because the list has only a head pointer. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_09_09_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "The complexity table to reproduce"
+    },
+    {
+     "kind": "math",
+     "text": "\"unordered linked list:\" quad \"isEmpty\" O(1), quad \"size\" O(n), quad \"add\" O(1), quad \"remove\" O(n), quad \"search\" O(n)"
+    },
+    {
+     "kind": "math",
+     "text": "\"ordered linked list:\" quad \"isEmpty\" O(1), quad \"size\" O(n), quad \"add\" O(n), quad \"remove\" O(n), quad \"search\" O(n)"
+    },
+    {
+     "kind": "math",
+     "text": "\"Python list:\" quad \"isEmpty\" O(1), quad \"size\" O(1), quad \"add\" O(1), quad \"remove\" O(n), quad \"search\" O(n)"
+    },
+    {
+     "kind": "text",
+     "text": "Note the one difference between the two linked lists: add is O(1) unordered and O(n) ordered, because an ordered list has to find the insertion point. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/2 - Linear Data Structures.txt]"
+    }
+   ]
+  },
+  {
+   "name": "AVL trees: balance factor and the four rotation cases",
+   "frequency": "Asked in 2 of the 4 archived papers (14/07/2022 q3a-b and 21/07/2023 q3a-b), each time as 'add these three keys one by one, verify the balancing after each addition and apply the appropriate rotations', immediately followed by 'write the preorder, postorder and inorder traversal'. Plus one comparison question in 2 of 4 (AVL vs BST, AVL vs Red-Black).",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Verbatim: \"An AVL Tree (named after its inventors Adelson-Velsky and Landis) is a self-balancing BST that makes sure to remain height balanced after each insertion or deletion. In an AVL tree the difference between the heights of left and right subtrees cannot be more than one for all nodes.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part2.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"balanceFactor\" = \"height\"(\"leftSubTree\") - \"height\"(\"rightSubTree\")"
+    },
+    {
+     "kind": "text",
+     "text": "\"When the BF of a node becomes > 1 or < -1 the node is unbalanced, and thus the tree needs to be rebalanced.\" After an insertion or a deletion, update the BF of the parent and recursively of each ancestor until one of these is met: the root is reached, the BF of a parent becomes zero, or a node becomes unbalanced."
+    },
+    {
+     "kind": "heading",
+     "text": "The four rebalancing rules - verbatim, memorise these"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Left case: if a node has BF = -2 and its right child has BF = -1 or 0, perform a left rotation.",
+      "Right case: if a node has BF = 2 and its left child has BF = 0 or 1, perform a right rotation.",
+      "Right-Left case: if a node has BF = -2 and its right child has BF = 1, perform a right rotation of the right child followed by a left rotation.",
+      "Left-Right case: if a node has BF = 2 and its left child has BF = -1, perform a left rotation of the left child followed by a right rotation."
+     ]
+    },
+    {
+     "kind": "figure",
+     "png": "6 - Trees - Part2-p046-f76eb4af.png",
+     "caption": "The Right-Left case: A has BF = -2 and its right child C has BF = +1, so C is right-rotated first and only then is A left-rotated [6 - Trees - Part2.pdf, p46]",
+     "width": "85%"
+    },
+    {
+     "kind": "text",
+     "text": "The sign rule in one line: if the node and its offending child lean the same way, one rotation; if they lean opposite ways, rotate the child first, then the node. [NOT IN SOURCE - VERIFY: this is a restatement of the four rules above.]"
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - 14/07/2022 question 3, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given the AVL tree in figure add one by one nodes with the following keys: 20, 7, 16. NOTE: remember to verify the balancing after each addition and to apply the appropriate rotations if needed.\" Starting tree:"
+    },
+    {
+     "kind": "figure",
+     "png": "Exam_14_07_2022-p001-3d7077f3.png",
+     "caption": "The AVL tree to insert into: root 10, left child 6 with right child 8, right child 15 with right child 19 [Exam_14_07_2022.pdf, p1]",
+     "width": "55%"
+    },
+    {
+     "kind": "text",
+     "text": "The key's final tree, with the balance factor written next to each node that has one:"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_14_07_2022-p002-73533c3b.png",
+     "caption": "The AVL tree after inserting 20, 7 and 16, with balance factors [Solution_Exam_14_07_2022.pdf, p2]",
+     "width": "60%"
+    },
+    {
+     "kind": "text",
+     "text": "Reading the key's answer back: adding 20 as the right child of 19 makes 15 unbalanced, and the rotation leaves 19 as the parent of 15 and 20. Adding 7 makes 6 lean right; the rebalance leaves 7 as the parent of 6 and 8. Adding 16 as the right child of 15 keeps every BF within the allowed range, so no rotation is needed. Final shape: root 10 with BF = -1; left subtree 7 (children 6 and 8); right subtree 19 with BF = 1, whose left child is 15 with BF = -1 and right child is 20; 16 hangs under 15 with BF = 0."
+    },
+    {
+     "kind": "text",
+     "text": "(b) \"Write the preorder, postorder and inorder traversal of the tree obtained after step a.\" Key, verbatim: \"Preorder: 10, 7, 6, 8, 19, 15, 16, 20. Inorder: 6, 7, 8, 10, 15, 16, 19, 20. Postorder: 6, 8, 7, 16, 15, 20, 19, 10.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Drill - the same question on the 21/07/2023 paper (no published key)"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given the AVL tree in figure add one by one nodes with the following keys: 32, 99, 55.\" Starting tree:"
+    },
+    {
+     "kind": "figure",
+     "png": "Exam_21_07_2023-p001-7fc53275.png",
+     "caption": "The AVL tree of the 21/07/2023 paper: root 50, left child 25 with right child 33, right child 70 with right child 93 [Exam_21_07_2023.pdf, p1]",
+     "width": "55%"
+    },
+    {
+     "kind": "text",
+     "text": "[NOT IN SOURCE - VERIFY: no answer key was published for this paper; the following is worked out from the rules above.] Insert 32: it goes left of 33, making 33's BF = 1 while 25's BF = -2 - a Right-Left case, so right-rotate 33 then left-rotate 25, leaving 32 as the parent of 25 and 33. Insert 99: it goes right of 93, making 93's BF = -1 and 70's BF = -2 - a Left case (same sign), so a single left rotation at 70 leaves 93 as the parent of 70 and 99. Insert 55: it goes left of 70; every BF stays within [-1, 1], so no rotation. Final tree: root 50, left subtree 32 with children 25 and 33, right subtree 93 with children 70 (whose left child is 55) and 99."
+    },
+    {
+     "kind": "text",
+     "text": "Traversals of that final tree - Preorder: 50, 32, 25, 33, 93, 70, 55, 99. Inorder: 25, 32, 33, 50, 55, 70, 93, 99. Postorder: 25, 33, 32, 55, 70, 99, 93, 50. The inorder listing is sorted, which is the free self-check."
+    },
+    {
+     "kind": "heading",
+     "text": "AVL versus Red-Black - the comparison sub-question"
+    },
+    {
+     "kind": "text",
+     "text": "Red-Black properties, verbatim: \"1. Every node is either red or black. 2. The root is black. 3. Every leaf (NIL) is black. 4. The children of any red node are black. 5. For each node, all paths from the node to descendant leaves contain the same number of black nodes.\" These grant \"that there is no path from root to leaf that is more than twice as long as any other\"; recoloration is tried before rotation because it is cheaper, and no balance factor has to be computed. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part2.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Key for 14/07/2022 3c, verbatim: \"An AVL tree is preferrable when search is more frequent than insertion and deletion, vice-versa a Red-Black tree is preferrable when there are frequent insertions and deletions.\" The reason from the lectures: AVL trees are more strongly balanced at the expense of more frequent rotations; Red-Black trees are approximately balanced, accepting slight imbalance to reduce the number of adjustments. Both keep add, delete and get in O(log n). [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_14_07_2022.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "\"AVL and Red-Black add / delete / get:\" quad O(log n) \"always;\" quad \"generic BST worst case:\" O(n)"
+    }
+   ]
+  },
+  {
+   "name": "Binary heaps and priority queues",
+   "frequency": "Asked in 2 of the 4 archived papers (09/09/2022 q3a-b as a definition plus a delete-the-minimum trace, 21/07/2023 q3c as a true/false), and it is the structure Prim's priority queue is built on, so it is also load-bearing for the graphs question.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A binary heap is a complete binary tree where each node satisfies the heap property (either min or max). Complete - all levels are fully filled except, eventually, the last one which is filled from left to right. Min heap - the key of each node is less than (or equal to) the keys of its children (the root node has the smallest key). Max heap - the key of each node is greater than (or equal to) the keys of its children (the root node has the largest key).\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/6 - Trees - Part1.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Common uses, which is the second half of the 09/09/2022 question: \"Implementing a priority queue (the most common use)\" and \"Sorting (called heap sort)\"."
+    },
+    {
+     "kind": "heading",
+     "text": "The list representation and its index arithmetic"
+    },
+    {
+     "kind": "text",
+     "text": "\"Since it is a complete tree, a binary heap can be implemented in Python using a list.\" The first element of the list is never used - it is set to 0 - so that integer division gives the parent index directly."
+    },
+    {
+     "kind": "math",
+     "text": "\"parent of\" \"heap\"[i] \"is at\" \"heap\"[floor(i / 2)]"
+    },
+    {
+     "kind": "math",
+     "text": "\"left child of\" \"heap\"[i] \"is at\" \"heap\"[2 i], quad \"right child at\" \"heap\"[2 i + 1]"
+    },
+    {
+     "kind": "heading",
+     "text": "Insertion (min heap)"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Add the new element at the end of the list.",
+      "If the new element is less than its parent, swap their positions.",
+      "Repeat the swap until the new element is in the right position (this is percUp / heapify up)."
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Removal of the minimum (min heap)"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Remove the root node - that is the value returned.",
+      "Move the last node to the root; this operation does not alter the rest of the heap structure.",
+      "Restore the heap order by pushing the new root down the tree to its proper position, always swapping with the smaller of its two children (percDown / heapify down)."
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Worked exam example - 09/09/2022 question 3b, with the published key"
+    },
+    {
+     "kind": "text",
+     "text": "\"Given the following min-heap [2, 4, 5, 8, 6, 9, 7] remove the minimum value and update it accordingly. Draw all the steps of the procedure.\" The key draws the starting heap and every swap:"
+    },
+    {
+     "kind": "figure",
+     "png": "Solution_Exam_09_09_2022-p001-332d7a93.png",
+     "caption": "The key's full trace: [2,4,5,8,6,9,7] with 2 removed, the last element 7 moved to the root, then 7 swapped down past 4 and past 6, ending at [4,6,5,8,7,9] [Solution_Exam_09_09_2022.pdf, p1]",
+     "width": "95%"
+    },
+    {
+     "kind": "text",
+     "text": "Read as a list: [2, 4, 5, 8, 6, 9, 7] -> remove 2, move 7 to the root -> [7, 4, 5, 8, 6, 9] -> 7 > min(4, 5) = 4, swap -> [4, 7, 5, 8, 6, 9] -> 7 > min(8, 6) = 6, swap -> [4, 6, 5, 8, 7, 9]. The drawing must show every intermediate step, because the question says so."
+    },
+    {
+     "kind": "heading",
+     "text": "The 21/07/2023 true/false"
+    },
+    {
+     "kind": "text",
+     "text": "\"Which of the following sentences about Binary Heap is FALSE (justify your answer)? (i) The insertion of a new element starts from the root. (ii) It is usually implemented as a list. (iii) It can be a full tree.\" [NOT IN SOURCE - VERIFY: no key was published for this paper.] (i) is the false one: insertion adds the new element at the END of the list and percolates it up; it is removal that starts from the root. (ii) is true - a heap is complete, so the list representation with the index arithmetic above works. (iii) is true - a perfect binary tree is also full and complete, so a heap can be full."
+    },
+    {
+     "kind": "heading",
+     "text": "Heap sort, in case it is asked"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Build a max heap from the input data (can be done in-place).",
+      "Swap the root element (the largest item) with the last item of the list and reduce the heap size by 1.",
+      "Heapify the tree to get the new root.",
+      "Repeat from step 2 until the heap size is 1."
+     ]
+    },
+    {
+     "kind": "math",
+     "text": "\"heap sort:\" quad n log n \"average and worst\""
+    }
+   ]
+  },
+  {
+   "name": "Big-O and the complexity tables",
+   "frequency": "Not a standalone question in any of the 4 archived papers, but a complexity justification is demanded inside at least one sub-question of all 4 answer keys (23/06/2022 3d, 14/07/2022 4a, 09/09/2022 1b, 21/07/2023 2a). Cheapest marks on the paper: a correct O() plus one clause of reasoning.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Verbatim: \"The order of magnitude function describes the part of T(n) which increases the fastest as the value of n increases. Order of magnitude is often called Big-O notation (for 'order') and written as O(f(n)). The function f(n) provides a simple representation of the dominant part of the original T(n).\" \"Big-O notation is an asymptotic measure of the complexity of an algorithm; it tells us how fast the complexity of an algorithm grows.\" It characterises time complexity (how much time) and space complexity (how much memory). [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/1 - Basic Concepts.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "T(n) = n + 1 ==> f(n) = n ==> O(n)"
+    },
+    {
+     "kind": "math",
+     "text": "T(n) = 5 n^2 + 27 n + 1005 ==> f(n) = n^2 ==> O(n^2)"
+    },
+    {
+     "kind": "text",
+     "text": "The lecture example: summing the first n integers with a loop gives T(n) = 1 + n so O(n), while the closed form gives T(n) = 1 so O(1)."
+    },
+    {
+     "kind": "math",
+     "text": "sum_(i=1)^n i = frac(n (n + 1), 2)"
+    },
+    {
+     "kind": "heading",
+     "text": "The named classes"
+    },
+    {
+     "kind": "math",
+     "text": "O(1) \"constant\" < O(log n) \"logarithmic\" < O(n) \"linear\" < O(n log n) \"log linear\" < O(n^2) \"quadratic\" < O(n^3) \"cubic\" < O(2^n) \"exponential\""
+    },
+    {
+     "kind": "text",
+     "text": "The limitation to mention if the question asks for a critique, verbatim: \"Big-O is only an asymptotic analysis, so important implementation details are hidden\" - an algorithm can be slower asymptotically yet efficient on a limited amount of data, and two algorithms with the same asymptotic class can differ in practice because one performs fewer operations."
+    },
+    {
+     "kind": "text",
+     "text": "Notation the slides also use, worth one line if you are asked for best/average/worst: worst case is written with O, average case with Theta, best case with Omega - e.g. for linear search, worst O(n), average Theta(n), best Omega(1). [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    }
+   ]
+  },
+  {
+   "name": "Searching and hash tables",
+   "frequency": "Searching shares question 2 with sorting. Hashing is asked directly in 1 of the 4 archived papers (21/07/2023 q2a, 'What is the purpose of collision resolution in a Hash Table?'), and binary search is one of the three answers to the divide-and-conquer question in another (09/09/2022 q2b).",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Sequential (linear) search: \"Given an element to find, check each element in the list one by one from the first to the last.\" Worst case O(n) - searching for the last element or for an element not present. Average Theta(n) - on average only half the array, n/2 operations. Best Omega(1) - the first element. On an ordered list the only change is that a missing item can be reported after one comparison in the best case. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Binary search: \"a more efficient searching algorithm applicable only to ordered lists.\" Procedure, verbatim: \"Start from the middle item. If it is the searched item we have finished, otherwise: if the item we are searching for is greater than the middle item, we can exclude all the lower values; if the item we are searching for is lower than the middle item, we can exclude all the greater values. Repeat until the item is found (or not found if not present).\" \"At each step we remove half of the items; given an array of n elements the max number of comparisons will be log2 n.\" \"Binary search is a typical example of the Divide and Conquer strategy.\""
+    },
+    {
+     "kind": "math",
+     "text": "\"linear search\" O(n), quad \"binary search\" O(log n), quad \"hash table search\" O(1)"
+    },
+    {
+     "kind": "heading",
+     "text": "Hash tables"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A hash table is a collection of items which are stored in such a way as to make it easy to find them later - it can be searched in O(1) time! Each position in a hash table is called slot, and it is identified by an integer value. The hash function is the mapping between an item and the slot where that item belongs.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/5 - Searching and Sorting.txt]"
+    },
+    {
+     "kind": "math",
+     "text": "h(\"item\") = \"item\" mod \"len\"(\"table\")"
+    },
+    {
+     "kind": "text",
+     "text": "Answer to the 21/07/2023 collision question, from the lecture text: \"A perfect hash function, that never produces collisions, is (almost) impossible to find in a real scenario. Adopted hash functions are approximations of the ideal solution that minimize the collisions and are easy to compute. We need a collision resolution strategy to evaluate where to place a new item that hashes to an already filled slot - e.g., find the first free slot in sequential order.\" So the purpose of collision resolution is to decide where to put an item whose slot is already taken, without which the table could not store two items with the same hash. [NOT IN SOURCE - VERIFY: no key was published for the 2023 paper; the answer is assembled from the lecture pdf the keys normally point to.]"
+    },
+    {
+     "kind": "text",
+     "text": "The trade-off worth one extra clause: \"Good time efficiency at expense of space efficiency! Hash tables work better when the number of slots is higher than the number of elements to insert; bigger the table, lower the collisions.\" And: \"Even if the theoretical searching time is O(1), hash tables are efficient only when the number of entries is large - if we have few data a linear search can be faster.\""
+    },
+    {
+     "kind": "text",
+     "text": "Map ADT, since hash tables are its usual implementation: \"A Map Abstract Data Type is an unordered collection of associations between a key and a data value; the keys are all unique.\" Operations: put(key, val), get(key), del, in, len(). Python's dictionary is implemented using a hash table. A BST is the other implementation of the Map ADT."
+    }
+   ]
+  },
+  {
+   "name": "Divide and conquer, greedy algorithms, dynamic programming",
+   "frequency": "Asked in 2 of the 4 archived papers (09/09/2022 q2b 'which of the search and sort algorithms studied follow the Divide and Conquer approach', 21/07/2023 q1b 'which are the pros and cons of a Greedy Algorithm'), and named as the reason an algorithm works in several graph answers. Three short definitions, cheap to hold.",
+   "blocks": [
+    {
+     "kind": "heading",
+     "text": "Divide and conquer"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"The Divide and Conquer strategy consists in breaking a problem into subproblems easier to solve and then combine the partial solutions to solve the original problem. A Divide and Conquer algorithm is composed by 3 steps: Divide - splitting of the problem into smaller sub-problems; Conquer - solving each sub-problem recursively; Combine - combining the results of the sub-problems to get the final solution of the whole problem. IMPORTANT: Divide and Conquer should be used when the same subproblems are not evaluated many times, otherwise Dynamic Programming is better.\" Examples given: Binary Search, Merge Sort, Quick Sort - which is exactly the published answer to 09/09/2022 q2b. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Summary.txt; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/Solution_Exam_09_09_2022.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "Greedy algorithms"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"A greedy algorithm solves a problem by choosing at each step the local optimal choice (i.e., the best option available at that step), without reconsidering previous decisions. A greedy algorithm will find the optimal solution of a problem if it satisfies these two properties: Greedy choice property - a global optimal solution can be reached by choosing the local optimal choice at each step, without reconsidering the previous choices; Optimal sub-structure - a global optimal solution of the problem can be constructed from the optimal solutions of its sub-problems. IMPORTANT: if the greedy choice property is not satisfied, a greedy algorithm may still find a reasonable approximate solution, but it is not always guaranteed.\" Examples: fractional knapsack, Dijkstra's algorithm, Prim's algorithm. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Summary.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Pros and cons, the shape the 21/07/2023 answer needs. [NOT IN SOURCE - VERIFY: no key was published for that paper; this is assembled from the lecture statements above.] Pros: simple to design and implement, fast, low memory, and provably optimal when the greedy choice property and optimal sub-structure both hold. Cons: it never reconsiders a choice, so when the greedy choice property fails it can return a merely approximate answer - the lecture's own illustration is Dijkstra on a graph with a negative weight, where the greedy commitment gives the wrong shortest path."
+    },
+    {
+     "kind": "heading",
+     "text": "Dynamic programming"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"Dynamic programming is a programming approach to solve complex problems by splitting them in simpler sub-problems, solving each once, and storing their partial results to avoid redundant computations. To apply dynamic programming, the problem must satisfy two properties: Overlapping sub-problems - the solutions of the same sub-problems are needed multiple times; Optimal sub-structure - an optimal solution of the problem can be constructed from optimal solutions of its sub-problems. IMPORTANT: a dynamic programming method is generally slower than a greedy method and uses more memory, but, if applicable, it will always produce the optimal solution.\" Examples: change-making problem, 0-1 knapsack problem, Bellman-Ford algorithm. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/0 - Summary.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "The one-line discriminator worth memorising: divide and conquer when the sub-problems do not repeat; dynamic programming when they do; greedy when a local optimum provably composes into a global one."
+    }
+   ]
+  },
+  {
+   "name": "Recursion",
+   "frequency": "No standalone theory question in the 4 archived papers, but recursion is the natural implementation of every one of the 4 archived programming exercises, and the lecture set devotes a whole pdf to it. Included only because the programming gate depends on it.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Verbatim: \"Recursion is a problem-solving method that consists in breaking a problem down into smaller and smaller subproblems until you get to a base case that it can be solved trivially.\" [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/Algorithms-Dondi/3 - Recursion.txt]"
+    },
+    {
+     "kind": "heading",
+     "text": "The three laws of recursion - verbatim"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "A recursive function must have a base case.",
+      "A recursive function must move toward the base case.",
+      "A recursive function must call itself (directly or indirectly), repeatedly."
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "The mechanics worth one line in an answer: each call is stacked in memory and a different copy of the local variables is created for each call; when the base case is reached the function returns its value to the caller and its memory is de-allocated. \"IMPORTANT: With a high number of calls, it is possible to fill all the memory and get a stack overflow error.\""
+    },
+    {
+     "kind": "text",
+     "text": "The exam-shaped recursive skeleton for trees, which covers three of the four archived programming problems: test for None first (that is the base case), do the work at the current node, then combine the results of the two recursive calls on leftChild and rightChild. Preorder does the work before the calls, inorder between them, postorder after them."
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def walk(node):",
+      "    if node is None:",
+      "        return <neutral value>",
+      "    <work on node.key>",
+      "    left = walk(node.leftChild)",
+      "    right = walk(node.rightChild)",
+      "    return <combination of left, right and node.key>"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "MOD. 1 - the project route (Cannon, A.Y. 2023/24)",
+   "frequency": "66 of the 114 archived questions for this code are project specifications (three of them: castles war 2021-22, planisuss 2022-23, cannon 2023-24). This is the whole of Mod. 1 if you take the project route, which your cohort may and later cohorts may not.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "This is calendar work, not revision: the project can be built and submitted at any time and only needs to be handed in at least two days before a discussion appointment, so it does not consume the 25/09 exam date. Start it before, not after, revising for Mod. 2. [unipv/reference/cohort_rules.json; raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html]"
+    },
+    {
+     "kind": "heading",
+     "text": "What the project is"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"The final exam will consist in the design and implementation of a software project in Python, in a report to document the project, and in a short presentation to summarize the report content and discuss the design and implementation of the project.\" \"The goal of the project is to apply the principles of the design of a system and its implementation studied during the course. The project will be based on an existing project or library, with the aim of extending the functionalities of the existing software.\""
+    },
+    {
+     "kind": "text",
+     "text": "The specification for your cohort is Cannon, A.Y. 2023/24, version 0.9 of 10 January 2024: \"a videogame called 'Cannon', freely inspired to the artillery retrogames... a single-player 2D side-view artillery game. The player aims at a target by controlling the elevation angle of the cannon, and the muzzle velocity and the type of the projectile.\" \"The game has to be realized using the framework kivy.\" \"The source code is expected to run on any system with Python 3 interpreter and Kivy framework.\" The spec's own sections are: 1 The Cannon game (1.1 Specifications, 1.2 Projectiles / Bullet dynamics, 1.3 Obstacles), 2 Game functionalities, 3 Visualization, 4 Constants, 5 Resources (5.1 The kivy framework). [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/COMP-PROG-509477-10589-2023/2023_24_cannon.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "Design constraints named in the spec: the field is SCREEN_WIDTH x SCREEN_HEIGHT pixels, time in seconds with an optional frame rate FPS, velocity in pixels/s; all simulation parameters must be referred to through named constants rather than literals. Projectile types include Bullet (mass BULLET_MASS, gravity, parabolic trajectory, affects an obstacle up to BULLET_RADIUS) and Bombshell (mass BOMB_MASS, penetrates BOMB_DRILL from the impact point and affects up to BOMB_RADIUS). Each round ends when a projectile hits the target; the number of shots per round is set at the start and may be unlimited; the goal is to finish in the fewest shots."
+    },
+    {
+     "kind": "heading",
+     "text": "What is actually graded"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "The overall quality of the documentation - one third of the 30 points.",
+      "The understanding and appropriate use of Python features - one third.",
+      "The quality of the submitted code both in terms of performance and comments - one third.",
+      "Extra credit may be granted for solutions that are particularly creative."
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Read that split literally: the report is worth as much as the code. A working game with a thin report caps at roughly two thirds of the marks, which is the difference between passing comfortably and not."
+    },
+    {
+     "kind": "heading",
+     "text": "The report structure the page prescribes - use it as the table of contents"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "description of the goal(s) of the project (problems to be solved, constraints)",
+      "assumptions, methods, procedures",
+      "motivations of the design choices",
+      "logical structure of the solution",
+      "implementation",
+      "tools and resources; libraries used (with version); references (where you took inspiration and materials)",
+      "testing and results",
+      "possible improvements"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim caveats: \"It should not be a log of the project development, although major changes from the initial design can be documented (along with the motivation to the change). The report should describe the algorithms used in the solution and their implementation. The main blocks of code should be described in order to ease the work of coders for future updates and improvements.\""
+    },
+    {
+     "kind": "heading",
+     "text": "Submission and discussion"
+    },
+    {
+     "kind": "text",
+     "text": "Deliverables are the code and the report, packaged as a single zip named with the matriculation number and the team members' names, uploaded on the module's assignment page; multiple submissions are allowed so the page can be used as a repository, and only one team member needs to submit. \"There are no strict deadlines to submit the project code and report, which have to be submitted at least two days before the discussion of the project. The date of the discussion can be set by appointment with the teacher.\" Discussion: approximately 15 minutes, pdf or PowerPoint, every member answering on the whole project. Extra by-appointment dates exist beyond the official ones, held in Milano-Citta Studi, but enrolment in one of the official dates is still required. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2023/_pages/page-134071-Information-about-the-project-P-gina.html]"
+    },
+    {
+     "kind": "text",
+     "text": "On reuse, verbatim: \"reuse is possible (somehow encouraged), but the project evaluation will consider the original content. For instance, using a library (with the permission of the author) is possible and recommended, but it is poorly evaluated if the original content is limited to the call of one function from the library. Instead, if the library provides useful functions or classes that are customized and used inside the implemented solution, this can be positively evaluated.\" Everything reused must carry a reference; claiming someone else's work as your own is plagiarism and unacceptable."
+    },
+    {
+     "kind": "text",
+     "text": "Open point to settle before you commit to this route: the upload link on the 2023-24 page points at that edition's assignment (mod/assign/view.php?id=134075), and the 2021-22 page at id=26002, which as of 08/09/2026 shows no submissions and no deadline. Confirm with Prof. Ferrari which page to submit to and when a discussion can be scheduled. [NOT IN SOURCE - VERIFY]"
+    }
+   ]
+  },
+  {
+   "name": "MOD. 1 - the written route (if you choose it instead)",
+   "frequency": "4 of the 114 archived questions: Ferrari's 2025/26 'Lab: Exam preparation' deck, which is the published example of the written exam. No sat written paper for Mod. 1 is in the archive, so this is the only direct evidence of what that exam looks like.",
+   "blocks": [
+    {
+     "kind": "text",
+     "text": "Only take this route if the project is not going to be ready. The written exam is several exercises of different difficulty and proportional score, summed and scaled; each exercise usually asks for a function meeting a docstring, and some give partially completed source to fill in. Partial solutions earn a fraction of the exercise's points, so write something runnable for every exercise. Linux lab, UniMi credentials, docs.python.org accessible. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html]"
+    },
+    {
+     "kind": "heading",
+     "text": "Published example exercise 1 - Telephone numbers"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: write a Python function def phone_numbers(min_num, max_num) that \"Returns the number of integers such that: they fall in the [min_num, max_num] range; in decimal notation, they are 7-digit long; their decimal notation is composed of exactly 4 different digits; one of the digits is 1; none of the digits is 2 or 3.\" Examples: phone_numbers(100000, 200000) returns 0; phone_numbers(1000000, 1000045) returns 1; phone_numbers(1000000, 1000049) returns 5; phone_numbers(1234567, 7654321) returns 164189; phone_numbers(1000000, 1000100) returns 30. [raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/_text/COMP-PROG-509477-10589-2025/Prog2025_26_24_exam_preparation_double.txt]"
+    },
+    {
+     "kind": "text",
+     "text": "The lecturer's own hints, verbatim: \"The digits of a number can be computed using iteratively divmod(), or by using the string representation. The latter can simplify the testing of the properties. The length of the string representation is the number of digits. The histogram can reveal how many digits are in the number. The presence of a given digit is easily tested as element of a sequence.\""
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "def phone_numbers(min_num, max_num):",
+      "    count = 0",
+      "    for n in range(min_num, max_num + 1):",
+      "        s = str(n)",
+      "        if len(s) != 7:",
+      "            continue",
+      "        if len(set(s)) != 4:",
+      "            continue",
+      "        if '1' not in s:",
+      "            continue",
+      "        if '2' in s or '3' in s:",
+      "            continue",
+      "        count = count + 1",
+      "    return count"
+     ]
+    },
+    {
+     "kind": "heading",
+     "text": "Published example exercise 2 - Collinear points"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: \"Three points A, B, and C on a plane are collinear if they lie on the same line. A necessary and sufficient condition for collinearity is\" the equation below, \"where (xP, yP) are the coordinates of the point P. Write a function to list the subsets of three collinear points (triad) among a given set of points. Each triad (A, B, C) must be counted only once (i.e., permutations such as (B, A, C) or (C, B, A) should not be counted). Instead, if 4 points are collinear, all the four triads must be listed.\""
+    },
+    {
+     "kind": "math",
+     "text": "(y_C - y_A)(x_B - x_A) = (x_C - x_A)(y_B - y_A)"
+    },
+    {
+     "kind": "text",
+     "text": "Input and output format, verbatim: \"The set of points is contained in a text file, where the points are listed one per line, in the format X Y, to represent the point (X, Y). The triads must be printed one per line, in the format: (xA, yA), (xB, yB), (xC, yC) where A, B, and C are in the order in which they are found in the input file. All the coordinates are integers and such must be printed.\" Hints, verbatim: three stages - data reading (\"Pay attention to the input format specifications\"), computation of the triads (\"Every combination of three points (no repetitions) must be evaluated; three nested loops seems the simplest solution\"), and triads output (\"Pay attention to the output format specifications\")."
+    },
+    {
+     "kind": "text",
+     "text": "The 'counted only once' requirement is implemented by indices, not by sets: loop i over the points, j from i+1, k from j+1. Using integer coordinates means the equation can be tested exactly, with no floating-point comparison."
+    },
+    {
+     "kind": "heading",
+     "text": "Published example exercise 3 - Ranking"
+    },
+    {
+     "kind": "text",
+     "text": "Verbatim: a championship of several match days; \"The list of the results is given in a text file, one match day per line. The teams are identified by a single character, and the match as the concatenation of the teams identifier. E.g., FH for team F vs. team H. The results are reported as the scores of the two teams, separated by an hyphen ('-'). E.g., 3-0. Teams identifier and the result of the match are separated by a blank space. On the same line all the matches of the day are reported, separated by a blank space. For instance: DF 1-0 CE 2-2 GA 1-1 HB 1-2\""
+    },
+    {
+     "kind": "text",
+     "text": "Scoring rules, verbatim: \"A victory (that is when the score of a team is higher than the one of the opponent) assigns 3 points in the ranking for the winner and 0 for the loser. A tie with at least one goal is worth two points for each of the teams. A tie with no goals is worth one point for each of the teams.\" Note the three-way tie rule - it is not the standard football one. Output, verbatim: \"The ranking must be written in a text file, in which the teams are sorted in decreasing order of the achieved number of points, one per line. On each line, the id of the team, the points, and the goal difference, separated by a blank space. If two teams have the same number of points and the same goal difference, the alphabetic order is used.\" Goal difference is \"the difference between the scored and conceded goals in all the matches by a team\"."
+    },
+    {
+     "kind": "text",
+     "text": "Hints, verbatim: \"Each line have to be splitted to obtain the matches; each match have to be splitted to separate teams from scores; each score have to be splitted to obtain the goals. Not all the teams play every match day. Keep the goal difference and points for each team. Tuples helps in multi-value sorting.\""
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "teams = {}                                  # id -> [points, goal difference]",
+      "with open(infile) as fin:",
+      "    for line in fin:",
+      "        tokens = line.split()",
+      "        for i in range(0, len(tokens), 2):",
+      "            pair = tokens[i]",
+      "            g1, g2 = tokens[i + 1].split('-')",
+      "            g1 = int(g1)",
+      "            g2 = int(g2)",
+      "            ... update teams[pair[0]] and teams[pair[1]] ...",
+      "ranking = sorted(teams.items(), key=lambda x: (-x[1][0], -x[1][1], x[0]))"
+     ]
+    },
+    {
+     "kind": "text",
+     "text": "The sort key is the whole exercise: negate the two numeric fields so they sort descending while the team id still sorts ascending, exactly the tie-break the specification asks for. [NOT IN SOURCE - VERIFY: the code sketch is derived; the deck gives the hints, not a solution.]"
+    },
+    {
+     "kind": "heading",
+     "text": "The three Python idioms these exercises live on"
+    },
+    {
+     "kind": "steps",
+     "items": [
+      "Reading a file line by line: with open(filename) as fin: for line in fin: ... - the with statement opens the file and closes it at the end of the body.",
+      "Splitting: line.split() with no argument splits on any run of blanks; s.split('-') splits on the hyphen. int(...) converts each field.",
+      "Sorting with a key: aList.sort(key=lambda x: (x[1], x[2])) sorts on the second field then the third; negate a numeric field to reverse only that field."
+     ]
+    }
+   ]
+  }
+ ],
+ "formula_sheet": [
+  "O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(n^3) < O(2^n)",
+  "T(n) = n + 1 ==> O(n); quad T(n) = 5 n^2 + 27 n + 1005 ==> O(n^2); quad T(n) = 1 ==> O(1)",
+  "sum_(i=1)^n i = frac(n (n + 1), 2)",
+  "\"linear search\" O(n); quad \"binary search (ordered list only)\" O(log n); quad \"hash table\" O(1)",
+  "h(\"item\") = \"item\" mod \"len\"(\"table\")",
+  "\"Bubble\" quad n \"/\" n^2 \"/\" n^2, quad \"space\" 1, quad \"stable\"",
+  "\"Selection\" quad n^2 \"/\" n^2 \"/\" n^2, quad \"space\" 1, quad \"not stable\"",
+  "\"Insertion\" quad n \"/\" n^2 \"/\" n^2, quad \"space\" 1, quad \"stable\"",
+  "\"Merge\" quad n log n \"/\" n log n \"/\" n log n, quad \"space\" n, quad \"stable\"",
+  "\"Quick\" quad n log n \"/\" n log n \"/\" n^2, quad \"space\" log n, quad \"not stable\"",
+  "\"Tim\" quad n \"/\" n log n \"/\" n log n, quad \"space\" n, quad \"stable\"  quad (\"best / average / worst\")",
+  "\"unordered linked list:\" quad \"isEmpty\" O(1), \"add\" O(1), \"size\" O(n), \"remove\" O(n), \"search\" O(n)",
+  "\"ordered linked list:\" quad \"isEmpty\" O(1), \"add\" O(n), \"size\" O(n), \"remove\" O(n), \"search\" O(n)",
+  "\"Python list:\" quad \"isEmpty\" O(1), \"size\" O(1), \"add\" O(1), \"remove\" O(n), \"search\" O(n)",
+  "\"generic BST add / delete / get:\" quad O(log n) \"average,\" quad O(n) \"worst case\"",
+  "\"AVL and Red-Black add / delete / get:\" quad O(log n) \"always\"",
+  "\"level of a node\" = \"edges from the root to it;\" quad \"height of a tree\" = \"maximum level\"",
+  "\"Balance Factor\" = abs(\"height\"(\"leftSubTree\") - \"height\"(\"rightSubTree\")) <= 1 \" for every node\" ==> \"height balanced\"",
+  "\"AVL:\" quad \"balanceFactor\" = \"height\"(\"leftSubTree\") - \"height\"(\"rightSubTree\"); quad \"rebalance when\" \"BF\" > 1 \"or\" \"BF\" < -1",
+  "\"BF\" = -2 \"and right child\" -1 \"or\" 0 ==> \"left rotation\"; quad \"BF\" = 2 \"and left child\" 0 \"or\" 1 ==> \"right rotation\"",
+  "\"BF\" = -2 \"and right child\" +1 ==> \"right rotation of the child, then left rotation\"",
+  "\"BF\" = 2 \"and left child\" -1 ==> \"left rotation of the child, then right rotation\"",
+  "\"heap as a list:\" quad \"parent of\" i \"at\" floor(i / 2), quad \"left child at\" 2 i, quad \"right child at\" 2 i + 1, quad \"index\" 0 \"unused\"",
+  "G = (V, E), quad e = (v_i, v_j, w), quad v_i, v_j in V",
+  "\"adjacency matrix: space\" O(V^2), \"add / remove vertex\" O(V^2), \"add / remove / check edge\" O(1)",
+  "\"adjacency list: space\" O(V + E), \"add vertex\" O(1), \"remove vertex\" O(V + E), \"remove edge\" O(E), \"check edge\" O(V)",
+  "\"BFS, DFS, Kosaraju:\" quad O(V + E)",
+  "\"edge relaxation (Dijkstra):\" quad d(u) + w(u, v) < d(v) ==> d(v) = d(u) + w(u, v) quad (\"strictly less\")",
+  "\"A*:\" quad f(n) = g(n) + h(n), quad g = \"cost from the source to\" n, quad h = \"heuristic estimate from\" n \"to the goal\"",
+  "\"Prim:\" quad k(v) = \"minimum weight of any edge joining\" v \"to a vertex already in the tree\"",
+  "\"Mod. 2 pass:\" quad \"theory\" >= 12 \"of\" 20 quad \"and\" quad \"programming\" >= 6 \"of\" 10 quad (= 18 \"of\" 30)"
+ ],
+ "traps": [
+  "Prim only on undirected graphs. Key, 09/09/2022 q4b, verbatim: \"It is possible to apply only Dijkstra, Prim can be applied only on unidirected [undirected] graphs.\" Answering 'both apply' to a directed graph is the single most repeated applicability error.",
+  "Topological sorting only on DAGs. Key, 23/06/2022 q4a, verbatim: \"No because topological sorting is applicable only to directed acyclic graphs.\" The graph on that paper is undirected, so the answer is No before you even look for a cycle.",
+  "Dijkstra is not the best single-pair shortest path algorithm. Key, 14/07/2022 q4b, verbatim: \"No, it is A*.\" The expected justification is that A* adds a heuristic and is optimally efficient, but can only solve the single-pair problem.",
+  "'Height balanced' is not 'perfectly height balanced'. Key, 23/06/2022 q3c, verbatim: \"No, the tree is only high balanced but not perfectly height balanced.\" Perfectly height balanced means balance factor zero at every node, which only a perfect binary tree achieves.",
+  "The slowest linked-list insertion is at the END, not in the middle. Key, 09/09/2022 q1b, verbatim: \"Adding an element at the end requires traversing the entire linked list.\"",
+  "Edge relaxation is strict. On the 14/07/2022 Dijkstra trace, d(D) stays 5 via the direct edge A-D even though the route A, C, E, D also totals 5, because a new path is chosen only if it is strictly lower. Writing A, C, E, D as the path to D contradicts the published key.",
+  "Quick sort partitions must end with the pivot moved onto its split point. The 14/07/2022 key's fourth and final line is 36, 9, 29, 6, 22, 18, 7, 47, 78, 72, 85 - stopping after the last leftmark/rightmark swap loses the mark.",
+  "Postorder is not inorder. The published AVL answer is Preorder 10, 7, 6, 8, 19, 15, 16, 20 / Inorder 6, 7, 8, 10, 15, 16, 19, 20 / Postorder 6, 8, 7, 16, 15, 20, 19, 10. Check your inorder is the keys in ascending order before writing anything else down; if it is not, the tree is wrong and all three traversals fail together.",
+  "AVL: re-check the balance after EVERY single insertion, not once at the end - the question says so explicitly. And when the unbalanced node and its offending child lean opposite ways (BF -2 with child +1, or BF 2 with child -1), a single rotation is wrong: rotate the child first.",
+  "BST deletion of a node with two children means promoting the SUCCESSOR (smallest key of the right subtree) and then deleting the successor from the right subtree - the 23/06/2022 key promotes 17 in place of 15. Rebuilding the tree from a re-sorted key list is a different tree and scores nothing.",
+  "Heap insertion starts at the END of the list and percolates up; only removal starts at the root. This is the falsehood the 21/07/2023 heap true/false question is built on.",
+  "The two Mod. 2 gates are independent: \"to pass the exam is necessary to reach a sufficient score in both Theory (>= 12 points) and Programming (>= 6 points)\". A 20/20 theory cannot rescue a 5/10 program.",
+  "\"IMPORTANT: non-running or empty code means exam failed.\" Never hand in code with a syntax error or a stub. If time runs out, delete the broken branch and hand in something that runs and solves part of the case - partial credit exists, a crash does not.",
+  "\"An improper use of a data structure will lower the score\" and \"it is not allowed to modify the problem conditions (e.g., transform a tree into a list to simplify the assigned task)\". Flattening the tree into a Python list to make the problem easy is explicitly penalised even when the output is right. Use the provided Stack/Queue.",
+  "The provided class changes between papers: the 09/09/2022, 23/06/2022 and 21/07/2023 drafts use node.leftChild / node.rightChild, the 14/07/2022 draft uses node.left / node.right, and that one wraps the tree in a BST object whose test code sometimes passes bst1 and sometimes bst1.root. Read the 'DO NOT MODIFY' block before writing a line.",
+  "The drafts' own comments can be wrong: the 14/07/2022 file says \"N = 18 # expected result 19\" for a tree containing 5, 10, 12, 15, 20, 25 - there is no 19, and the closest key is 20. Trust the specification text over the comment. [NOT IN SOURCE - VERIFY: the discrepancy is observed, not documented.]",
+  "The papers ask for the bookkeeping, not just the answer: 'at each step specify the current distance value of each vertex', 'specify the current k attribute of each node and the content of the priority queue', 'write the discovery and finish time for each vertex... specify how many trees there are in the resulting DFS forest and by which vertices each tree is composed'. A correct final MST or shortest path with no per-step trace loses most of the sub-question.",
+  "File handover is graded by whether the file is where it should be. 2023 instruction, verbatim: \"only the files inside the home folder will be collected at the end of the exam. File outside the folder will be discarded!\" 2022 instruction: rename the file with your surname and name, put your name in the first line as a comment, copy it into CONSEGNA - and \"You will see the folder CONSEGNA empty even after the copy, it is not an error\".",
+  "Selection sort is not bubble sort: at most one swap per pass versus multiple swaps per pass. Both are O(n^2), but selection sort's best case is also n^2 while bubble sort's (short-bubble variant) is n.",
+  "Hash tables are O(1) only asymptotically: \"if we have few data a linear search can be faster, since the cost of computing a good hash function is higher than running a short loop\". Say this if the question asks for a critique rather than a definition.",
+  "On the Mod. 1 project, the report is worth exactly as much as the code: the 30 points are 'based equally on' documentation, use of Python features, and code quality. A finished game with a two-page report is a low pass at best.",
+  "Do not assume 25/09/2026 is the Mod. 2 written. Dondi's published autumn 2026 dates are 03/09 and 22/09; the 25/09 Esse3 entry is the joint/verbalization appello with Ferrari as president. Registration for Mod. 2 is a separate square-icon session named \"ALGORITHMS AND DAT\". [NOT IN SOURCE - VERIFY]"
+ ],
+ "six_hours": [
+  "1. (15 min) Read the exam brief above and settle two logistics questions: which Esse3 session carries the Mod. 2 written, and whether you are taking the Mod. 1 project or the Mod. 1 written. Everything below assumes the Mod. 2 written on 22/09 and the project for Mod. 1.",
+  "2. (75 min) Trees and BSTs - the 6-point question 3 that appears on every paper. Learn the definitions (tree, node, key, root, parent, sibling, leaf, subtree, level, height; complete / full / perfect; height balanced vs perfectly height balanced), then redraw both archived BST exercises from their key lists (23/06/2022 and 09/09/2022), delete key 15 from the first one, and check each drawing by reading its inorder traversal.",
+  "3. (90 min) The programming exercise - the 10 points with the 6-point gate. Write out, by hand, all four archived solutions in this sheet: level sums (queue, level by level), siblings (recursive descent), closest key in a BST (iterative descent), root-to-key path (iterative descent building a list). Then type each into IDLE and run it against the test block. Do not skip the typing: 'non-running code means exam failed'.",
+  "4. (75 min) Graphs - the other 6-point question. Trace Prim on the 23/06/2022 graph and Dijkstra on the 14/07/2022 graph, writing the k values / distances and the priority-queue contents at every step, and check them against the published keys. Then do the DFS discovery/finish times on the 09/09/2022 DAG and state the three trees of the forest.",
+  "5. (30 min) The applicability one-liners, which are the cheapest marks on the paper: topological sorting needs a DAG; Prim needs an undirected graph; Dijkstra needs non-negative weights and solves single-source; A* is the single-pair answer; Bellman-Ford handles negative weights; the divide-and-conquer algorithms are binary search, merge sort and quick sort; greedy pros and cons; what collision resolution is for.",
+  "6. (45 min) Sorting - the 4-point question 2. One short paragraph each for selection, insertion, merge and quick sort, plus the six-row complexity table, plus the quick-sort first-partition trace from the 14/07/2022 key.",
+  "7. (40 min) AVL trees - half of question 3 in two of four papers. The balance-factor formula and the four rebalancing rules verbatim, then redo the 14/07/2022 insertion of 20, 7, 16 against its key and the 21/07/2023 insertion of 32, 99, 55 against the worked answer here, writing the three traversals both times.",
+  "8. (30 min) Binary heaps - definition, the list index arithmetic, insertion up / removal down, and the 09/09/2022 delete-the-minimum trace on [2, 4, 5, 8, 6, 9, 7].",
+  "9. (25 min) Question 1 material - ADT, stack (LIFO), queue (FIFO), priority queue, deque, linked list, plus the three-column operation complexity table. These are pure recall and they open every paper.",
+  "10. (20 min) Read the traps list end to end, twice. Most of it is marks lost on questions you already know how to answer.",
+  "Not in the six hours, and deliberately so: Red-Black tree insertion and deletion case analysis, Kosaraju step by step, A* implementation, backtracking and the Knight Tour, parse trees, dynamic-programming algorithms. They appear in the lectures but never as a marked exercise in the four archived papers - one-line definitions are enough.",
+  "Separately, and not competing with the above: the Mod. 1 Cannon project is calendar work. Open the specification, list the constants, get a kivy window drawing a parabolic trajectory, and start the report from the prescribed section list. It does not consume an exam date."
+ ]
+}
