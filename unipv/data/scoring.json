@@ -688,6 +688,55 @@
   "tier": "B"
  },
  {
+  "code": "509493",
+  "name": "STATISTICAL MODELLING",
+  "cfu": 6,
+  "material": {
+   "files": 157,
+   "slides": 3,
+   "notes": 122,
+   "video_items": 0,
+   "figures": 0
+  },
+  "papers": 15,
+  "solutions": 17,
+  "year_range": "2024-2025",
+  "questions": 62,
+  "predictability": 1,
+  "predictability_basis": "42 distinct archetypes across 7 sittings; 0 of 55 questions (0%) fall into 0 archetypes that recur in more than one sitting",
+  "hours_low": 42,
+  "hours_high": 54,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 6 papers x 2h x 2 passes = 24h",
+  "confidence": "M",
+  "format_evidence": {
+   "format": []
+  },
+  "sitting": {
+   "activity": "STATISTICAL MODELLING",
+   "exam_date": "24/09/2026",
+   "booking_opens": "04/09/2026",
+   "booking_closes": "19/09/2026",
+   "attendance": "P",
+   "enrolled": "7",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=19&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19710&ADSCE_ID=10923413&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "D'ANGELO LAURA (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-STATISTICAL-MODELLING-24-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.35,
+  "cost_per_pass": 120,
+  "measured": true,
+  "tier": "C"
+ },
+ {
   "code": "509496",
   "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
   "cfu": 6,
@@ -749,16 +798,16 @@
   "material": {
    "files": 110,
    "slides": 6,
-   "notes": 83,
+   "notes": 85,
    "video_items": 38,
    "figures": 0
   },
-  "papers": 14,
+  "papers": 12,
   "solutions": 1,
   "year_range": null,
-  "questions": 84,
+  "questions": 74,
   "predictability": null,
-  "predictability_basis": "not measurable across sittings - all 14 papers are from a single sitting (no date); any repetition is between lettered variants of one exam, not between years",
+  "predictability_basis": "not measurable across sittings - all 11 papers are from a single sitting (no date); any repetition is between lettered variants of one exam, not between years",
   "hours_low": 60,
   "hours_high": 81,
   "hours_workings": "content 12 topics x 3h = 36h; drill 6 papers x 2h x 2 passes = 24h",
@@ -793,7 +842,7 @@
   "papers": 28,
   "solutions": 95,
   "year_range": "2022-2023",
-  "questions": 114,
+  "questions": 48,
   "predictability": 1,
   "predictability_basis": "20 distinct archetypes across 4 sittings; 4 of 42 questions (10%) fall into 1 archetypes that recur in more than one sitting; the commonest appears in 2 of 4 sittings",
   "hours_low": 64,
@@ -1162,60 +1211,6 @@
   "flags": [
    "no past papers",
    "predictability not measurable"
-  ],
-  "p_pass": 0.3,
-  "cost_per_pass": 73,
-  "measured": false,
-  "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
-  "tier": "C"
- },
- {
-  "code": "509493",
-  "name": "STATISTICAL MODELLING",
-  "cfu": 6,
-  "material": {
-   "files": 0,
-   "slides": 0,
-   "notes": 0,
-   "video_items": 0,
-   "figures": 0
-  },
-  "papers": 0,
-  "solutions": 0,
-  "year_range": null,
-  "questions": 0,
-  "predictability": null,
-  "predictability_basis": "not measurable - only 0 questions extracted",
-  "hours_low": 22,
-  "hours_high": 29,
-  "hours_workings": "content 6 topics x 3h = 18h; drill 1 papers x 2h x 2 passes = 4h",
-  "confidence": "L",
-  "format_evidence": {
-   "format": []
-  },
-  "sitting": {
-   "activity": "STATISTICAL MODELLING",
-   "exam_date": "24/09/2026",
-   "booking_opens": "04/09/2026",
-   "booking_closes": "19/09/2026",
-   "attendance": "P",
-   "enrolled": "7",
-   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=19&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19710&ADSCE_ID=10923413&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
-   "detail": {
-    "time": "",
-    "room": "",
-    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
-    "teachers": "D'ANGELO LAURA (Presidente)",
-    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
-    "description": "",
-    "raw_file": "raw/_esse3/appello-STATISTICAL-MODELLING-24-09-2026.html"
-   }
-  },
-  "booked": false,
-  "flags": [
-   "no past papers",
-   "predictability not measurable",
-   "DATA INCOMPLETE - no material collected"
   ],
   "p_pass": 0.3,
   "cost_per_pass": 73,

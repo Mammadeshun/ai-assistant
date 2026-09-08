@@ -21487,7 +21487,1576 @@
    "exam_date": null
   }
  ],
- "509493": [],
+ "509493": [
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_01_probability_prerequisites.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_01_probability_prerequisites.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_01_probability_prerequisites.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_01_probability_review.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_01_probability_review.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_01_probability_review.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_02_probability_prerequisites.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_02_probability_prerequisites.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_02_probability_prerequisites.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_02_probability_review.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_02_probability_review.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_02_probability_review.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_03_statistics_prerequisites.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_03_statistics_prerequisites.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_03_statistics_prerequisites.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_03_statistics_review.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_03_statistics_review.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_03_statistics_review.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_04_statistics_prerequisites.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_04_statistics_prerequisites.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_04_statistics_prerequisites.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/00_04_statistics_review.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/00_04_statistics_review.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/00_04_statistics_review.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01-01_introduction.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01-01_introduction.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01-01_introduction.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01-02_simple_linear_model.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01-02_simple_linear_model.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01-02_simple_linear_model.txt",
+   "role": "NOTES",
+   "chars": 1052,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_01_SimpleLM_ex.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_01_SimpleLM_ex.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_01_SimpleLM_ex.txt",
+   "role": "NOTES",
+   "chars": 2039,
+   "scanned": false,
+   "exam_date": "2023-11-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_01_introduction.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_01_introduction.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_01_introduction.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_02_SimpleGaussianLM_ex.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_02_SimpleGaussianLM_ex.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_02_SimpleGaussianLM_ex.txt",
+   "role": "NOTES",
+   "chars": 2808,
+   "scanned": false,
+   "exam_date": "2023-11-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_02_simple_linear_model.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_02_simple_linear_model.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_02_simple_linear_model.txt",
+   "role": "NOTES",
+   "chars": 1048,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_03_SimpleGaussianLM_ex2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_03_SimpleGaussianLM_ex2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_03_SimpleGaussianLM_ex2.txt",
+   "role": "SLIDES",
+   "chars": 4813,
+   "scanned": false,
+   "exam_date": "2023-11-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_03_properties_of_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_03_properties_of_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_03_properties_of_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_exerciseLM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_exerciseLM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_exerciseLM.txt",
+   "role": "SLIDES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/01_introduction.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/01_introduction.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/01_introduction.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02-01_properties_of_ols.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02-01_properties_of_ols.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02-01_properties_of_ols.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02-02_Gaussian_simple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02-02_Gaussian_simple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02-02_Gaussian_simple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_01_simple_gaussian_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_01_simple_gaussian_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_01_simple_gaussian_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_02_inference_about_beta.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_02_inference_about_beta.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_02_inference_about_beta.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_03_prediction.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_03_prediction.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_03_prediction.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_SimpleGaussianLM_ex3.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_SimpleGaussianLM_ex3.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_SimpleGaussianLM_ex3.txt",
+   "role": "NOTES",
+   "chars": 2509,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_SimpleGaussianLM_ex3_solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_SimpleGaussianLM_ex3_solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_SimpleGaussianLM_ex3_solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 6538,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/02_simple_linear_model.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/02_simple_linear_model.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/02_simple_linear_model.txt",
+   "role": "NOTES",
+   "chars": 1048,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03-01_inference_parameters.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03-01_inference_parameters.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03-01_inference_parameters.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03-02_deviance_decomposition_and_R2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03-02_deviance_decomposition_and_R2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03-02_deviance_decomposition_and_R2.txt",
+   "role": "NOTES",
+   "chars": 94,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03_01_SS_partition.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03_01_SS_partition.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03_01_SS_partition.txt",
+   "role": "NOTES",
+   "chars": 94,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03_02_coeff_R2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03_02_coeff_R2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03_02_coeff_R2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03_03_test_overall_significance.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03_03_test_overall_significance.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03_03_test_overall_significance.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03_04_equivalence_tests.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03_04_equivalence_tests.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03_04_equivalence_tests.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/03_properties_of_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/03_properties_of_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/03_properties_of_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04-01_test_F.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04-01_test_F.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04-01_test_F.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04-02_diagnostics__residuals.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04-02_diagnostics__residuals.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04-02_diagnostics__residuals.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04_01_residuals.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04_01_residuals.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04_01_residuals.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04_02_diagnostics.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04_02_diagnostics.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04_02_diagnostics.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04_MultipleLM_ex.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04_MultipleLM_ex.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04_MultipleLM_ex.txt",
+   "role": "SLIDES",
+   "chars": 5407,
+   "scanned": false,
+   "exam_date": "2023-12-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04_MultipleLM_ex_solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04_MultipleLM_ex_solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04_MultipleLM_ex_solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 21551,
+   "scanned": true,
+   "exam_date": "2023-12-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/04_simple_gaussian_linear_model.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/04_simple_gaussian_linear_model.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/04_simple_gaussian_linear_model.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05-01_multiple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05-01_multiple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05-01_multiple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05-02_estimation_multiple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05-02_estimation_multiple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05-02_estimation_multiple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05-03_geometric_interpretation.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05-03_geometric_interpretation.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05-03_geometric_interpretation.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05_01_multiple_LM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05_01_multiple_LM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05_01_multiple_LM.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05_02_estimation_multiple_LM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05_02_estimation_multiple_LM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05_02_estimation_multiple_LM.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05_MultipleLM_ex2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05_MultipleLM_ex2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05_MultipleLM_ex2.txt",
+   "role": "NOTES",
+   "chars": 6731,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05_MultipleLM_ex2_solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05_MultipleLM_ex2_solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05_MultipleLM_ex2_solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 24635,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/05_inference_on_beta.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/05_inference_on_beta.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/05_inference_on_beta.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06-01_exercise_cuckoos.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06-01_exercise_cuckoos.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06-01_exercise_cuckoos.txt",
+   "role": "NOTES",
+   "chars": 1137,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06-02_properties_estimators_mlm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06-02_properties_estimators_mlm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06-02_properties_estimators_mlm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06-03_gauss_markov.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06-03_gauss_markov.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06-03_gauss_markov.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06_01_geometric_interpretation.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06_01_geometric_interpretation.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06_01_geometric_interpretation.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06_02_distribution_estimators_mlm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06_02_distribution_estimators_mlm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06_02_distribution_estimators_mlm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/06_inference_on_mu.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/06_inference_on_mu.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/06_inference_on_mu.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07-01_test_beta_and_entire_model.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07-01_test_beta_and_entire_model.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07-01_test_beta_and_entire_model.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07-02_test_subset.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07-02_test_subset.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07-02_test_subset.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07-03_R2_and_adjR2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07-03_R2_and_adjR2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07-03_R2_and_adjR2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_01_gauss_markov.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_01_gauss_markov.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_01_gauss_markov.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_02_test_beta.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_02_test_beta.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_02_test_beta.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_03_subset_parameters.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_03_subset_parameters.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_03_subset_parameters.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_04_geometry_test.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_04_geometry_test.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_04_geometry_test.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_05_special_cases_test.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_05_special_cases_test.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_05_special_cases_test.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_GLM_Solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_GLM_Solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_GLM_Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 30176,
+   "scanned": true,
+   "exam_date": "2021-12-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_GLM_ex.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_GLM_ex.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_GLM_ex.txt",
+   "role": "NOTES",
+   "chars": 9176,
+   "scanned": false,
+   "exam_date": "2021-12-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/07_sum_of_squares_dec.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/07_sum_of_squares_dec.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/07_sum_of_squares_dec.txt",
+   "role": "NOTES",
+   "chars": 94,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/08-01_anova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/08-01_anova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/08-01_anova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/08-02_ancova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/08-02_ancova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/08-02_ancova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/08_01_adjusted_R2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/08_01_adjusted_R2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/08_01_adjusted_R2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/08_coeff_R2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/08_coeff_R2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/08_coeff_R2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09-01_glm_intro.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09-01_glm_intro.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09-01_glm_intro.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09-02_Poisson_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09-02_Poisson_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09-02_Poisson_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_01_cuckoos_exercise_t-test.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_01_cuckoos_exercise_t-test.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_01_cuckoos_exercise_t-test.txt",
+   "role": "NOTES",
+   "chars": 911,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_02_cuckoos_exercise_LM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_02_cuckoos_exercise_LM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_02_cuckoos_exercise_LM.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_03_anova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_03_anova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_03_anova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_1_test_goodness_fit.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_1_test_goodness_fit.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_1_test_goodness_fit.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_2_test_goodness_fit.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_2_test_goodness_fit.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_2_test_goodness_fit.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/09_exam_practice.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/09_exam_practice.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/09_exam_practice.txt",
+   "role": "PAST_PAPER",
+   "chars": 6729,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10-01_intro_binary_data_glm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10-01_intro_binary_data_glm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10-01_intro_binary_data_glm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10-02_logistic_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10-02_logistic_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10-02_logistic_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10-03_probit_threshold.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10-03_probit_threshold.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10-03_probit_threshold.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_01_anova_p2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_01_anova_p2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_01_anova_p2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_02_two_way_anova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_02_two_way_anova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_02_two_way_anova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_03_ancova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_03_ancova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_03_ancova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_1_residuals.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_1_residuals.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_1_residuals.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_2_diagnostics.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_2_diagnostics.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_2_diagnostics.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_exam00_es1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_exam00_es1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_exam00_es1.txt",
+   "role": "PAST_PAPER",
+   "chars": 9379,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/10_exam00_es2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/10_exam00_es2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/10_exam00_es2.txt",
+   "role": "PAST_PAPER",
+   "chars": 7859,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11-01_logistic_regression_grouped.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11-01_logistic_regression_grouped.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11-01_logistic_regression_grouped.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11-02_exercise_multiple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11-02_exercise_multiple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11-02_exercise_multiple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11_00_glm_intro.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11_00_glm_intro.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11_00_glm_intro.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11_01_poisson_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11_01_poisson_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11_01_poisson_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11_02_poisson_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11_02_poisson_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11_02_poisson_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/11_multiple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/11_multiple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/11_multiple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/12_00_binary_data_glm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/12_00_binary_data_glm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/12_00_binary_data_glm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/12_01_logistic_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/12_01_logistic_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/12_01_logistic_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/12_02_logistic_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/12_02_logistic_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/12_02_logistic_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/12_03_threshold_models.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/12_03_threshold_models.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/12_03_threshold_models.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/12_estimation_multiple_lm.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/12_estimation_multiple_lm.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/12_estimation_multiple_lm.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/13_geometric_interpretation.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/13_geometric_interpretation.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/13_geometric_interpretation.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/14_properties_estimators.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/14_properties_estimators.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/14_properties_estimators.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/15_gauss_markov.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/15_gauss_markov.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/15_gauss_markov.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/16_1_test_beta.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/16_1_test_beta.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/16_1_test_beta.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/16_2_subset.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/16_2_subset.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/16_2_subset.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/16_3_geom_interpretation_of_the_test.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/16_3_geom_interpretation_of_the_test.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/16_3_geom_interpretation_of_the_test.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/16_4_special_cases.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/16_4_special_cases.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/16_4_special_cases.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/17_01_cuckoo_exercise.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/17_01_cuckoo_exercise.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/17_01_cuckoo_exercise.txt",
+   "role": "NOTES",
+   "chars": 909,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/17_02_anova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/17_02_anova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/17_02_anova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/17_03_two_way_anova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/17_03_two_way_anova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/17_03_two_way_anova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/18_ancova.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/18_ancova.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/18_ancova.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/19_adjusted_R2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/19_adjusted_R2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/19_adjusted_R2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/20_glm_intro.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/20_glm_intro.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/20_glm_intro.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/21_01_poisson_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/21_01_poisson_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/21_01_poisson_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/21_02_poisson_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/21_02_poisson_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/21_02_poisson_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/22_binary_data_intro.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/22_binary_data_intro.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/22_binary_data_intro.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/23_01_logistic_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/23_01_logistic_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/23_01_logistic_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/23_02_logistic_regression.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/23_02_logistic_regression.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/23_02_logistic_regression.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/24_threshold_models.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/24_threshold_models.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/24_threshold_models.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/25_binomial.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/25_binomial.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/25_binomial.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/AbrahamLedolterIntroductiontoRegressionModelingBOOK.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/AbrahamLedolterIntroductiontoRegressionModelingBOOK.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/AbrahamLedolterIntroductiontoRegressionModelingBOOK.txt",
+   "role": "NOTES",
+   "chars": 1720630,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E00_SimpleLinearModel.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E00_SimpleLinearModel.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E00_SimpleLinearModel.txt",
+   "role": "NOTES",
+   "chars": 1872,
+   "scanned": false,
+   "exam_date": "2018-10-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E01_SimpleGausLinearModel_1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E01_SimpleGausLinearModel_1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E01_SimpleGausLinearModel_1.txt",
+   "role": "NOTES",
+   "chars": 2542,
+   "scanned": false,
+   "exam_date": "2018-10-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E01_Solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E01_Solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E01_Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 9428,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E01_exercise_simple_LM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E01_exercise_simple_LM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E01_exercise_simple_LM.txt",
+   "role": "PAST_PAPER",
+   "chars": 13224,
+   "scanned": false,
+   "exam_date": "2024-09-24"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E01_solutions_ex1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E01_solutions_ex1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E01_solutions_ex1.txt",
+   "role": "SOLUTIONS",
+   "chars": 10204,
+   "scanned": true,
+   "exam_date": "2024-09-24"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E02_SimpleGausLinearModel_2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E02_SimpleGausLinearModel_2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E02_SimpleGausLinearModel_2.txt",
+   "role": "NOTES",
+   "chars": 4456,
+   "scanned": false,
+   "exam_date": "2018-10-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E02_Solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E02_Solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E02_Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 9334,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E02_exercise_2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E02_exercise_2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E02_exercise_2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E02_exercises_3_4.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E02_exercises_3_4.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E02_exercises_3_4.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E03_MultipleLinearRegression_1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E03_MultipleLinearRegression_1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E03_MultipleLinearRegression_1.txt",
+   "role": "NOTES",
+   "chars": 4126,
+   "scanned": false,
+   "exam_date": "2024-11-01"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E03_Solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E03_Solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E03_Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 8166,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercise1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercise1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E03_exercise1.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercise2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercise2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E03_exercise2.txt",
+   "role": "NOTES",
+   "chars": 0,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercises_multiple_LM1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E03_exercises_multiple_LM1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E03_exercises_multiple_LM1.txt",
+   "role": "PAST_PAPER",
+   "chars": 11273,
+   "scanned": false,
+   "exam_date": "2024-09-03"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E04_Solutions.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E04_Solutions.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E04_Solutions.txt",
+   "role": "SOLUTIONS",
+   "chars": 8454,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E04_exercises_multiple_LM_p2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E04_exercises_multiple_LM_p2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E04_exercises_multiple_LM_p2.txt",
+   "role": "PAST_PAPER",
+   "chars": 10547,
+   "scanned": false,
+   "exam_date": "2024-06-27"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E04_solutions_ex1.txt",
+   "role": "SOLUTIONS",
+   "chars": 6324,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E04_solutions_ex2.txt",
+   "role": "SOLUTIONS",
+   "chars": 15518,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex3.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E04_solutions_ex3.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E04_solutions_ex3.txt",
+   "role": "SOLUTIONS",
+   "chars": 5141,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E05_ANOVA.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E05_ANOVA.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E05_ANOVA.txt",
+   "role": "NOTES",
+   "chars": 4140,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E05_exercises_GLM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E05_exercises_GLM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E05_exercises_GLM.txt",
+   "role": "PAST_PAPER",
+   "chars": 5812,
+   "scanned": false,
+   "exam_date": "2024-02-22"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E05_solutions_ex1.txt",
+   "role": "SOLUTIONS",
+   "chars": 11145,
+   "scanned": true,
+   "exam_date": "2024-02-22"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E05_solutions_ex2.txt",
+   "role": "SOLUTIONS",
+   "chars": 16571,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex3.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E05_solutions_ex3.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E05_solutions_ex3.txt",
+   "role": "SOLUTIONS",
+   "chars": 2604,
+   "scanned": true,
+   "exam_date": "2024-09-03"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E06_GLM.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E06_GLM.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E06_GLM.txt",
+   "role": "NOTES",
+   "chars": 15864,
+   "scanned": false,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E06_exercises_GLM2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E06_exercises_GLM2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E06_exercises_GLM2.txt",
+   "role": "PAST_PAPER",
+   "chars": 5085,
+   "scanned": false,
+   "exam_date": "2024-01-25"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E06_solutions_ex1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E06_solutions_ex1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E06_solutions_ex1.txt",
+   "role": "SOLUTIONS",
+   "chars": 7005,
+   "scanned": true,
+   "exam_date": "2024-04-25"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E06_solutions_ex2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E06_solutions_ex2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E06_solutions_ex2.txt",
+   "role": "SOLUTIONS",
+   "chars": 11376,
+   "scanned": true,
+   "exam_date": null
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E08_Exercise.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E08_Exercise.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E08_Exercise.txt",
+   "role": "NOTES",
+   "chars": 7342,
+   "scanned": false,
+   "exam_date": "2024-12-10"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/E08_GLM_R.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/E08_GLM_R.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/E08_GLM_R.txt",
+   "role": "NOTES",
+   "chars": 29937,
+   "scanned": false,
+   "exam_date": "2024-12-11"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame1.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame1.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame1.txt",
+   "role": "PAST_PAPER",
+   "chars": 5582,
+   "scanned": false,
+   "exam_date": "2024-01-25"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame2.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame2.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame2.txt",
+   "role": "PAST_PAPER",
+   "chars": 7336,
+   "scanned": false,
+   "exam_date": "2024-02-22"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame3.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame3.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame3.txt",
+   "role": "PAST_PAPER",
+   "chars": 4864,
+   "scanned": false,
+   "exam_date": "2024-06-27"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame4.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame4.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame4.txt",
+   "role": "PAST_PAPER",
+   "chars": 11258,
+   "scanned": false,
+   "exam_date": "2024-07-23"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame5.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame5.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame5.txt",
+   "role": "PAST_PAPER",
+   "chars": 6022,
+   "scanned": false,
+   "exam_date": "2024-09-03"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame6.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame6.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame6.txt",
+   "role": "PAST_PAPER",
+   "chars": 7982,
+   "scanned": false,
+   "exam_date": "2024-09-24"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/Esame7.pdf",
+   "original": "raw/509493-STATISTICAL-MODELLING/_public/Esame7.pdf",
+   "converted": false,
+   "text": "raw/509493-STATISTICAL-MODELLING/_text/_public/Esame7.txt",
+   "role": "PAST_PAPER",
+   "chars": 7052,
+   "scanned": false,
+   "exam_date": "2025-02-20"
+  },
+  {
+   "path": "raw/509493-STATISTICAL-MODELLING/_public/JOIN_WEBEX_MEETING.txt",
+   "text": "raw/509493-STATISTICAL-MODELLING/_public/JOIN_WEBEX_MEETING.txt",
+   "role": "NOTES",
+   "chars": 1618,
+   "scanned": false,
+   "exam_date": null
+  }
+ ],
  "509495": [
   {
    "path": "raw/509495-DATA-MINING-AND-KNOWLEDGE-EXTRACTION/DATA-MININ-509495-10589-2023/1. Course Presentation.pdf",
