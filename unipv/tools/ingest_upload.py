@@ -90,10 +90,21 @@ def route(path: Path, text: str) -> tuple[str | None, str]:
     for code, (by_name, _) in ROUTES.items():
         if re.search(by_name, name):
             return code, f"filename matches /{by_name}/"
+    # Score every course rather than taking the first hit. A January IR paper
+    # says "tokens" once while explaining indexing, and that single generic
+    # word was enough to file it under Text Mining ahead of the course whose
+    # name appears throughout. Frequency settles it.
+    scores: dict[str, tuple[int, str]] = {}
     for code, (_, by_text) in ROUTES.items():
-        found = re.search(by_text, text)
-        if found:
-            return code, f"first pages contain {found.group(0)!r}"
+        hits = re.findall(by_text, text)
+        if hits:
+            scores[code] = (len(hits), str(hits[0]))
+    if scores:
+        best = max(scores, key=lambda c: scores[c][0])
+        count, sample = scores[best]
+        runners = sorted((v[0] for c, v in scores.items() if c != best), reverse=True)
+        margin = f", ahead of {runners[0]}" if runners else ""
+        return best, (f"first pages match {count}x on {sample!r}{margin}")
     return None, "no filename or content match"
 
 
