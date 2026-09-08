@@ -53,18 +53,65 @@
   "tier": "A"
  },
  {
+  "code": "509483",
+  "name": "COMPUTATIONAL LOGIC",
+  "cfu": 6,
+  "material": {
+   "files": 394,
+   "slides": 22,
+   "notes": 112,
+   "video_items": 4,
+   "figures": 0
+  },
+  "papers": 27,
+  "solutions": 232,
+  "year_range": "2022-2025",
+  "questions": 220,
+  "predictability": 4,
+  "predictability_basis": "88 distinct archetypes across 17 sittings; 143 of 220 questions (65%) fall into 27 archetypes that recur in more than one sitting; the commonest appears in 12 of 17 sittings",
+  "hours_low": 30,
+  "hours_high": 34,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 3 papers x 2h x 2 passes = 12h",
+  "confidence": "H",
+  "format_evidence": {},
+  "sitting": {
+   "activity": "COMPUTATIONAL LOGIC",
+   "exam_date": "23/09/2026",
+   "booking_opens": "03/09/2026",
+   "booking_closes": "18/09/2026",
+   "attendance": "P",
+   "enrolled": "18",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=6&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19440&ADSCE_ID=10175008&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "detail": {
+    "time": "",
+    "room": "",
+    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
+    "teachers": "GHILARDI SILVIO (Presidente)",
+    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
+    "description": "",
+    "raw_file": "raw/_esse3/appello-COMPUTATIONAL-LOGIC-23-09-2026.html"
+   }
+  },
+  "booked": false,
+  "flags": [],
+  "p_pass": 0.75,
+  "cost_per_pass": 40,
+  "measured": true,
+  "tier": "A"
+ },
+ {
   "code": "509486",
   "name": "MACHINE LEARNING, ARTIFICIAL NEURAL NETWORKS AND DEEP LEARNING",
   "cfu": 12,
   "material": {
-   "files": 31,
-   "slides": 16,
+   "files": 51,
+   "slides": 28,
    "notes": 2,
    "video_items": 1,
    "figures": 0
   },
   "papers": 13,
-  "solutions": 0,
+  "solutions": 7,
   "year_range": "2023-2026",
   "questions": 78,
   "predictability": 4,
@@ -190,9 +237,9 @@
   "name": "DATA MINING AND KNOWLEDGE EXTRACTION",
   "cfu": 6,
   "material": {
-   "files": 82,
+   "files": 83,
    "slides": 38,
-   "notes": 30,
+   "notes": 31,
    "video_items": 39,
    "figures": 0
   },
@@ -286,55 +333,6 @@
   ],
   "p_pass": 0.4,
   "cost_per_pass": 80,
-  "measured": true,
-  "tier": "A"
- },
- {
-  "code": "509483",
-  "name": "COMPUTATIONAL LOGIC",
-  "cfu": 6,
-  "material": {
-   "files": 82,
-   "slides": 13,
-   "notes": 39,
-   "video_items": 4,
-   "figures": 0
-  },
-  "papers": 4,
-  "solutions": 26,
-  "year_range": "2022-2022",
-  "questions": 36,
-  "predictability": null,
-  "predictability_basis": "not measurable across sittings - all 4 papers are from a single sitting (2022-01-31); any repetition is between lettered variants of one exam, not between years",
-  "hours_low": 34,
-  "hours_high": 45,
-  "hours_workings": "content 6 topics x 3h = 18h; drill 4 papers x 2h x 2 passes = 16h",
-  "confidence": "L",
-  "format_evidence": {},
-  "sitting": {
-   "activity": "COMPUTATIONAL LOGIC",
-   "exam_date": "23/09/2026",
-   "booking_opens": "03/09/2026",
-   "booking_closes": "18/09/2026",
-   "attendance": "P",
-   "enrolled": "18",
-   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=6&CDS_ESA_ID=10845&ATT_DID_ESA_ID=19440&ADSCE_ID=10175008&AA_OFF_ID=2023&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
-   "detail": {
-    "time": "",
-    "room": "",
-    "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
-    "teachers": "GHILARDI SILVIO (Presidente)",
-    "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
-    "description": "",
-    "raw_file": "raw/_esse3/appello-COMPUTATIONAL-LOGIC-23-09-2026.html"
-   }
-  },
-  "booked": false,
-  "flags": [
-   "predictability not measurable"
-  ],
-  "p_pass": 0.4,
-  "cost_per_pass": 85,
   "measured": true,
   "tier": "A"
  },
@@ -517,49 +515,54 @@
   "tier": "B"
  },
  {
-  "code": "509496",
-  "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+  "code": "509498",
+  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
   "cfu": 6,
   "material": {
-   "files": 86,
-   "slides": 46,
-   "notes": 23,
+   "files": 41,
+   "slides": 9,
+   "notes": 19,
    "video_items": 0,
    "figures": 0
   },
-  "papers": 2,
-  "solutions": 2,
-  "year_range": "2025-2026",
-  "questions": 6,
+  "papers": 5,
+  "solutions": 7,
+  "year_range": "2026-2027",
+  "questions": 15,
   "predictability": 1,
   "predictability_basis": "6 distinct archetypes across 2 sittings; 0 of 6 questions (0%) fall into 0 archetypes that recur in more than one sitting",
-  "hours_low": 41,
-  "hours_high": 53,
-  "hours_workings": "content 11 topics x 3h = 33h; drill 2 papers x 2h x 2 passes = 8h",
+  "hours_low": 38,
+  "hours_high": 49,
+  "hours_workings": "content 6 topics x 3h = 18h; drill 5 papers x 2h x 2 passes = 20h",
   "confidence": "M",
   "format_evidence": {
+   "duration": [
+    "2 ore Messaggistica Contatti Messaggi selezionati: 1 &times; Cont",
+    "2 hours Last modified - Submission comments ___picture___ ___name__",
+    "2 ore Ultima modifica - Commenti alle consegne ___picture___ ___n"
+   ],
    "project": [
-    "Project Minimizza Espandi Final Lab Project Seleziona attività Persona-based Information Retrieval - Course Project Proposal Per",
-    "Project Proposal File Seleziona sezione Labs on Recommender Systems Minimizza Espandi Labs on Recommender Systems Seleziona atti",
-    "Project Contrair Expandir Final Lab Project Selecionar a atividade Instructions and Timeline for the Final Project Instructions"
+    "project upload Bloqueado SERGIO SURIANO 19 de junho de 2026 SERGIO SURIANO 19 de junho de 2026 0 Marcar este tópico com estrela",
+    "project upload - exam session September 4th Bloqueado SERGIO SURIANO 2 de setembro de 2026 SERGIO SURIANO 2 de setembro de 2026",
+    "project upload - exam session September 4th Bloccata SERGIO SURIANO 2 set 2026 SERGIO SURIANO 2 set 2026 0 Inserisci tra le pref"
    ]
   },
   "sitting": {
-   "activity": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
-   "exam_date": "15/09/2026",
-   "booking_opens": "26/08/2026",
-   "booking_closes": "10/09/2026",
+   "activity": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+   "exam_date": "18/09/2026",
+   "booking_opens": "29/08/2026",
+   "booking_closes": "13/09/2026",
    "attendance": "P",
-   "enrolled": "1",
-   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19713&ADSCE_ID=10923416&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "enrolled": "6",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19715&ADSCE_ID=10923420&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
     "time": "",
     "room": "",
     "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
-    "teachers": "PASI GABRIELLA (Presidente), KASELA PRANAV  (Membro Effettivo), PEIKOS GEORGIOS (Membro Effettivo), PINKOSOVA ZUZANA (Membro Effettivo)",
+    "teachers": "SURIANO SERGIO (Presidente)",
     "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
     "description": "",
-    "raw_file": "raw/_esse3/appello-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SYSTEMS-15-09-2026.html"
+    "raw_file": "raw/_esse3/appello-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATION-AND-MARKETING-18-0.html"
    }
   },
   "booked": false,
@@ -567,7 +570,7 @@
    "project component"
   ],
   "p_pass": 0.35,
-  "cost_per_pass": 117,
+  "cost_per_pass": 109,
   "measured": true,
   "tier": "B"
  },
@@ -576,14 +579,14 @@
   "name": "FUZZY SYSTEMS AND EVOLUTIONARY COMPUTING",
   "cfu": 6,
   "material": {
-   "files": 106,
+   "files": 107,
    "slides": 35,
    "notes": 27,
    "video_items": 80,
    "figures": 0
   },
   "papers": 12,
-  "solutions": 11,
+  "solutions": 12,
   "year_range": "2023-2026",
   "questions": 72,
   "predictability": 1,
@@ -685,54 +688,49 @@
   "tier": "B"
  },
  {
-  "code": "509498",
-  "name": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
+  "code": "509496",
+  "name": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
   "cfu": 6,
   "material": {
-   "files": 40,
-   "slides": 8,
-   "notes": 13,
+   "files": 98,
+   "slides": 46,
+   "notes": 26,
    "video_items": 0,
    "figures": 0
   },
-  "papers": 11,
-  "solutions": 7,
-  "year_range": "2026-2027",
-  "questions": 31,
+  "papers": 4,
+  "solutions": 4,
+  "year_range": "2024-2026",
+  "questions": 14,
   "predictability": 1,
-  "predictability_basis": "6 distinct archetypes across 2 sittings; 0 of 6 questions (0%) fall into 0 archetypes that recur in more than one sitting",
-  "hours_low": 42,
-  "hours_high": 54,
-  "hours_workings": "content 6 topics x 3h = 18h; drill 6 papers x 2h x 2 passes = 24h",
+  "predictability_basis": "14 distinct archetypes across 4 sittings; 0 of 14 questions (0%) fall into 0 archetypes that recur in more than one sitting",
+  "hours_low": 52,
+  "hours_high": 67,
+  "hours_workings": "content 12 topics x 3h = 36h; drill 4 papers x 2h x 2 passes = 16h",
   "confidence": "M",
   "format_evidence": {
-   "duration": [
-    "2 ore Messaggistica Contatti Messaggi selezionati: 1 &times; Cont",
-    "2 hours Last modified - Submission comments ___picture___ ___name__",
-    "2 ore Ultima modifica - Commenti alle consegne ___picture___ ___n"
-   ],
    "project": [
-    "project upload Bloqueado SERGIO SURIANO 19 de junho de 2026 SERGIO SURIANO 19 de junho de 2026 0 Marcar este tópico com estrela",
-    "project upload - exam session September 4th Bloqueado SERGIO SURIANO 2 de setembro de 2026 SERGIO SURIANO 2 de setembro de 2026",
-    "project upload - exam session September 4th Bloccata SERGIO SURIANO 2 set 2026 SERGIO SURIANO 2 set 2026 0 Inserisci tra le pref"
+    "Project Minimizza Espandi Final Lab Project Seleziona attività Persona-based Information Retrieval - Course Project Proposal Per",
+    "Project Proposal File Seleziona sezione Labs on Recommender Systems Minimizza Espandi Labs on Recommender Systems Seleziona atti",
+    "Project Contrair Expandir Final Lab Project Selecionar a atividade Instructions and Timeline for the Final Project Instructions"
    ]
   },
   "sitting": {
-   "activity": "ARTIFICIAL INTELLIGENCE FOR COMMUNICATION AND MARKETING",
-   "exam_date": "18/09/2026",
-   "booking_opens": "29/08/2026",
-   "booking_closes": "13/09/2026",
+   "activity": "INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS",
+   "exam_date": "15/09/2026",
+   "booking_opens": "26/08/2026",
+   "booking_closes": "10/09/2026",
    "attendance": "P",
-   "enrolled": "6",
-   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=16&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19715&ADSCE_ID=10923420&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
+   "enrolled": "1",
+   "detail_url": "auth/studente/Appelli/DatiPrenotazioneAppello.do?APP_ID=18&CDS_ESA_ID=10589&ATT_DID_ESA_ID=19713&ADSCE_ID=10923416&AA_OFF_ID=2025&CDS_ID=10589&PDS_ID=9999&AA_ORD_ID=2021&ISCR_APERTA=1&TIPO_ATTIVITA=1&TIPO_APP_COD=0",
    "detail": {
     "time": "",
     "room": "",
     "type": "Scritto e Orale (Congiunti), Verbalizzazione, Appello On-Line (silenzio - assenso) con firma digitale",
-    "teachers": "SURIANO SERGIO (Presidente)",
+    "teachers": "PASI GABRIELLA (Presidente), KASELA PRANAV  (Membro Effettivo), PEIKOS GEORGIOS (Membro Effettivo), PINKOSOVA ZUZANA (Membro Effettivo)",
     "notes": "Calendario delle prove, Data - Ora, Edificio e Aula",
     "description": "",
-    "raw_file": "raw/_esse3/appello-ARTIFICIAL-INTELLIGENCE-FOR-COMMUNICATION-AND-MARKETING-18-0.html"
+    "raw_file": "raw/_esse3/appello-INFORMATION-RETRIEVAL-AND-RECOMMENDER-SYSTEMS-15-09-2026.html"
    }
   },
   "booked": false,
@@ -740,7 +738,7 @@
    "project component"
   ],
   "p_pass": 0.35,
-  "cost_per_pass": 120,
+  "cost_per_pass": 149,
   "measured": true,
   "tier": "C"
  },
@@ -786,14 +784,14 @@
   "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
   "cfu": 12,
   "material": {
-   "files": 859,
+   "files": 936,
    "slides": 8,
-   "notes": 575,
+   "notes": 646,
    "video_items": 39,
    "figures": 0
   },
   "papers": 28,
-  "solutions": 89,
+  "solutions": 95,
   "year_range": "2022-2023",
   "questions": 114,
   "predictability": 1,
@@ -852,18 +850,18 @@
   "name": "KNOWLEDGE REPRESENTATION AND REASONING",
   "cfu": 12,
   "material": {
-   "files": 268,
-   "slides": 46,
-   "notes": 115,
+   "files": 314,
+   "slides": 54,
+   "notes": 164,
    "video_items": 10,
    "figures": 0
   },
-  "papers": 35,
+  "papers": 24,
   "solutions": 50,
-  "year_range": "2022-2027",
-  "questions": 175,
+  "year_range": "2022-2023",
+  "questions": 142,
   "predictability": 1,
-  "predictability_basis": "56 distinct archetypes across 10 sittings; 4 of 120 questions (3%) fall into 1 archetypes that recur in more than one sitting; the commonest appears in 2 of 10 sittings",
+  "predictability_basis": "44 distinct archetypes across 7 sittings; 4 of 108 questions (4%) fall into 1 archetypes that recur in more than one sitting; the commonest appears in 2 of 7 sittings",
   "hours_low": 60,
   "hours_high": 78,
   "hours_workings": "content 6 topics x 4h = 24h; drill 6 papers x 3h x 2 passes = 36h",
@@ -1062,21 +1060,21 @@
   "name": "WEB AND SOCIAL MEDIA SEARCH AND ANALYSIS",
   "cfu": 6,
   "material": {
-   "files": 30,
+   "files": 47,
    "slides": 9,
-   "notes": 12,
+   "notes": 26,
    "video_items": 12,
    "figures": 0
   },
   "papers": 0,
-  "solutions": 0,
+  "solutions": 3,
   "year_range": null,
   "questions": 0,
   "predictability": null,
   "predictability_basis": "not measurable - only 0 questions extracted",
-  "hours_low": 16,
-  "hours_high": 21,
-  "hours_workings": "content 4 topics x 3h = 12h; drill 1 papers x 2h x 2 passes = 4h",
+  "hours_low": 19,
+  "hours_high": 25,
+  "hours_workings": "content 5 topics x 3h = 15h; drill 1 papers x 2h x 2 passes = 4h",
   "confidence": "L",
   "format_evidence": {
    "format": [
@@ -1115,7 +1113,7 @@
    "project component"
   ],
   "p_pass": 0.3,
-  "cost_per_pass": 53,
+  "cost_per_pass": 63,
   "measured": false,
   "hours_note": "NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.",
   "tier": "C"

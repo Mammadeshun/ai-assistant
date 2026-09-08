@@ -368,9 +368,14 @@ def split_questions(course: str, path: Path, body: str, role: str,
     items = split_paper(_clean(body), path.name)
     when = exam_date(path, body[:800])
     out = []
+    # A run of dot leaders is a table-of-contents entry, not a question. The
+    # project specifications are long enough to carry a contents page, and 66
+    # of Computer Programming's 114 "questions" were lines like
+    # "1  Rules . . . . . . . . . . . ." - more than half its practice set.
+    leaders = re.compile(r"\.\s?\.\s?\.\s?\.\s?\.")
     for index, item in enumerate(items, start=1):
         text = item.text.strip()
-        if len(text) < 25:
+        if len(text) < 25 or leaders.search(text[:300]):
             continue
         marks = item.marks
         if marks is None:
