@@ -133,10 +133,10 @@ Winter dates are not published yet — Esse3 lists nothing beyond 2 December 202
 | ARTIFICIAL INTELLIGENCE FOR COMM | 6 | 38h | outside the hours budget | **start the project now** — it is calendar time, not study time |
 | FUZZY SYSTEMS AND EVOLUTIONARY C | 6 | 42h | outside the hours budget | — |
 | TEXT MINING AND NATURAL LANGUAGE | 6 | 42h | date clash on 24/09/2026 | **start the project now** — it is calendar time, not study time |
+| STATISTICAL MODELLING | 6 | 42h | date clash on 24/09/2026 | — |
 | INFORMATION RETRIEVAL AND RECOMM | 6 | 52h | outside the hours budget | **start the project now** — it is calendar time, not study time |
 | COMPUTER VISION | 6 | 16h | outside the hours budget | ask the lecturer for papers; there are none in the archive |
 | WEB AND SOCIAL MEDIA SEARCH AND  | 6 | 19h | date clash on 24/09/2026 | **start the project now** — it is calendar time, not study time |
-| STATISTICAL MODELLING | 6 | 22h | date clash on 24/09/2026 | ask the lecturer for papers; there are none in the archive |
 | LABORATORY OF MACHINE LEARNING | 3 | 24h | outside the hours budget | — |
 | ITALIAN LANGUAGE FOR FOREIGN STU | 3 | 60h | no open sitting | — |
 | FINAL EXAM | 3 | 16h | no open sitting | ask the lecturer for papers; there are none in the archive |

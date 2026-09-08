@@ -18,16 +18,16 @@ Every figure below is counted from files under `unipv/raw/`, collected 2026-09-0
 | 10 | 509498 | ARTIFICIAL INTELLIGENCE FOR COMMUNICAT | 6 | 41 | 5 | 7 | 15 | 1 | 38–49h | M | 0.35 | 109 | 18/09/2026 | 13/09/2026 | B |
 | 11 | 509487 | FUZZY SYSTEMS AND EVOLUTIONARY COMPUTI | 6 | 107 | 12 | 12 | 72 | 1 | 42–54h | M | 0.35 | 120 | 17/09/2026 | 12/09/2026 | B |
 | 12 | 509488 | TEXT MINING AND NATURAL LANGUAGE PROCE | 6 | 132 | 15 | 5 | 83 | 1 | 42–54h | M | 0.35 | 120 | 24/09/2026 | 19/09/2026 | B |
-| 13 | 509496 | INFORMATION RETRIEVAL AND RECOMMENDER  | 6 | 98 | 4 | 4 | 14 | 1 | 52–67h | M | 0.35 | 149 | 15/09/2026 | 10/09/2026 | C |
-| 14 | 509536 | ITALIAN LANGUAGE FOR FOREIGN STUDENTS | 3 | 110 | 14 | 1 | 84 | — | 60–81h | L | 0.35 | 171 | — | — | C |
-| 15 | 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND D | 12 | 936 | 28 | 95 | 114 | 1 | 64–83h | M | 0.35 | 183 | 25/09/2026 | 20/09/2026 | C |
-| 16 | 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | 314 | 24 | 50 | 142 | 1 | 60–78h | M | 0.3 | 200 | 21/09/2026 | 16/09/2026 | C |
-| 17 | 510109 | PROBABILITY AND STATISTICAL INFERENCE | 12 | 94 | 5 | 17 | 14 | 1 | 70–91h | M | 0.35 | 200 | 25/09/2026 | 20/09/2026 | C |
-| 18 | 504703 | COMPUTER VISION | 6 | 0 | 0 | 0 | 0 | — | 16–21h | L | 0.3 | 53 | 22/09/2026 | 17/09/2026 | C |
-| 19 | 508207 | PROJECT WORK | 3 | 0 | 0 | 0 | 0 | — | 16–21h | L | 0.3 | 53 | 14/10/2026 | 09/10/2026 | C |
-| 20 | 510638 | WEB AND SOCIAL MEDIA SEARCH AND ANALYS | 6 | 47 | 0 | 3 | 0 | — | 19–25h | L | 0.3 | 63 | 24/09/2026 | 19/09/2026 | C |
-| 21 | 509519 | ETHICS, LAW AND AI | 12 | 3 | 0 | 0 | 0 | — | 22–29h | L | 0.3 | 73 | 16/09/2026 | 11/09/2026 | C |
-| 22 | 509493 | STATISTICAL MODELLING | 6 | 0 | 0 | 0 | 0 | — | 22–29h | L | 0.3 | 73 | 24/09/2026 | 19/09/2026 | C |
+| 13 | 509493 | STATISTICAL MODELLING | 6 | 157 | 15 | 17 | 62 | 1 | 42–54h | M | 0.35 | 120 | 24/09/2026 | 19/09/2026 | C |
+| 14 | 509496 | INFORMATION RETRIEVAL AND RECOMMENDER  | 6 | 98 | 4 | 4 | 14 | 1 | 52–67h | M | 0.35 | 149 | 15/09/2026 | 10/09/2026 | C |
+| 15 | 509536 | ITALIAN LANGUAGE FOR FOREIGN STUDENTS | 3 | 110 | 12 | 1 | 74 | — | 60–81h | L | 0.35 | 171 | — | — | C |
+| 16 | 509477 | COMPUTER PROGRAMMING, ALGORITHMS AND D | 12 | 936 | 28 | 95 | 48 | 1 | 64–83h | M | 0.35 | 183 | 25/09/2026 | 20/09/2026 | C |
+| 17 | 509478 | KNOWLEDGE REPRESENTATION AND REASONING | 12 | 314 | 24 | 50 | 142 | 1 | 60–78h | M | 0.3 | 200 | 21/09/2026 | 16/09/2026 | C |
+| 18 | 510109 | PROBABILITY AND STATISTICAL INFERENCE | 12 | 94 | 5 | 17 | 14 | 1 | 70–91h | M | 0.35 | 200 | 25/09/2026 | 20/09/2026 | C |
+| 19 | 504703 | COMPUTER VISION | 6 | 0 | 0 | 0 | 0 | — | 16–21h | L | 0.3 | 53 | 22/09/2026 | 17/09/2026 | C |
+| 20 | 508207 | PROJECT WORK | 3 | 0 | 0 | 0 | 0 | — | 16–21h | L | 0.3 | 53 | 14/10/2026 | 09/10/2026 | C |
+| 21 | 510638 | WEB AND SOCIAL MEDIA SEARCH AND ANALYS | 6 | 47 | 0 | 3 | 0 | — | 19–25h | L | 0.3 | 63 | 24/09/2026 | 19/09/2026 | C |
+| 22 | 509519 | ETHICS, LAW AND AI | 12 | 3 | 0 | 0 | 0 | — | 22–29h | L | 0.3 | 73 | 16/09/2026 | 11/09/2026 | C |
 | 23 | 509535 | FINAL EXAM | 3 | 0 | 0 | 0 | 0 | — | 16–21h | L | 0.3 | 53 | — | — | — |
 
 ## Per exam
@@ -195,6 +195,16 @@ Every figure below is counted from files under `unipv/raw/`, collected 2026-09-0
   - *project*: “project that can be developed also by groups of students (up to three students)”
   - *project*: “project is the usage of open-source software that will be employed to develop technological solutions to the problems addressed”
 
+### 509493 · STATISTICAL MODELLING — 6 CFU — Tier C
+
+- **Material**: 157 files (3 slide decks, 122 notes), 0 figures extracted, 0 video items listed (not downloaded).
+- **Past-paper supply**: 15 papers, 17 with published solutions, 62 questions extracted, 2024-2025.
+- **Predictability**: 1 — 42 distinct archetypes across 7 sittings; 0 of 55 questions (0%) fall into 0 archetypes that recur in more than one sitting.
+- **Hours to 18**: 42–54h (confidence M). content 6 topics x 3h = 18h; drill 6 papers x 2h x 2 passes = 24h.
+- **Cost per pass**: 42h ÷ P(pass) 0.35 = **120**.
+- **Sitting**: 24/09/2026. Booking closes 19/09/2026. 7 enrolled. Teachers: D'ANGELO LAURA (Presidente).
+- **Format, quoted from the course pages**:
+
 ### 509496 · INFORMATION RETRIEVAL AND RECOMMENDER SYSTEMS — 6 CFU — Tier C
 
 - **Material**: 98 files (46 slide decks, 26 notes), 0 figures extracted, 0 video items listed (not downloaded).
@@ -210,9 +220,9 @@ Every figure below is counted from files under `unipv/raw/`, collected 2026-09-0
 
 ### 509536 · ITALIAN LANGUAGE FOR FOREIGN STUDENTS — 3 CFU — Tier C
 
-- **Material**: 110 files (6 slide decks, 83 notes), 0 figures extracted, 38 video items listed (not downloaded).
-- **Past-paper supply**: 14 papers, 1 with published solutions, 84 questions extracted.
-- **Predictability**: not measurable — not measurable across sittings - all 14 papers are from a single sitting (no date); any repetition is between lettered variants of one exam, not between years.
+- **Material**: 110 files (6 slide decks, 85 notes), 0 figures extracted, 38 video items listed (not downloaded).
+- **Past-paper supply**: 12 papers, 1 with published solutions, 74 questions extracted.
+- **Predictability**: not measurable — not measurable across sittings - all 11 papers are from a single sitting (no date); any repetition is between lettered variants of one exam, not between years.
 - **Hours to 18**: 60–81h (confidence L). content 12 topics x 3h = 36h; drill 6 papers x 2h x 2 passes = 24h.
 - **Cost per pass**: 60h ÷ P(pass) 0.35 = **171**.
 - **Sitting**: none open. DATA INCOMPLETE or deferred to winter.
@@ -223,7 +233,7 @@ Every figure below is counted from files under `unipv/raw/`, collected 2026-09-0
 ### 509477 · COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES — 12 CFU — Tier C
 
 - **Material**: 936 files (8 slide decks, 646 notes), 0 figures extracted, 39 video items listed (not downloaded).
-- **Past-paper supply**: 28 papers, 95 with published solutions, 114 questions extracted, 2022-2023.
+- **Past-paper supply**: 28 papers, 95 with published solutions, 48 questions extracted, 2022-2023.
 - **Predictability**: 1 — 20 distinct archetypes across 4 sittings; 4 of 42 questions (10%) fall into 1 archetypes that recur in more than one sitting; the commonest appears in 2 of 4 sittings.
 - **Hours to 18**: 64–83h (confidence M). content 7 topics x 4h = 28h; drill 6 papers x 3h x 2 passes = 36h.
 - **Cost per pass**: 64h ÷ P(pass) 0.35 = **183**.
@@ -315,18 +325,6 @@ Every figure below is counted from files under `unipv/raw/`, collected 2026-09-0
 - **⚠ NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.**
 - **Risk flags**: no past papers · predictability not measurable.
 - **Format**: nothing stating the exam format was found in the collected pages. DATA INCOMPLETE — ask the lecturer.
-
-### 509493 · STATISTICAL MODELLING — 6 CFU — Tier C
-
-- **Material**: 0 files (0 slide decks, 0 notes), 0 figures extracted, 0 video items listed (not downloaded).
-- **Past-paper supply**: 0 papers, 0 with published solutions, 0 questions extracted.
-- **Predictability**: not measurable — not measurable - only 0 questions extracted.
-- **Hours to 18**: 22–29h (confidence L). content 6 topics x 3h = 18h; drill 1 papers x 2h x 2 passes = 4h.
-- **Cost per pass**: 22h ÷ P(pass) 0.3 = **73**.
-- **Sitting**: 24/09/2026. Booking closes 19/09/2026. 7 enrolled. Teachers: D'ANGELO LAURA (Presidente).
-- **⚠ NOT MEASURED - no papers and no questions were found for this course. The hours are a floor the model emits with no evidence, not an estimate, and the cost per pass is unusable.**
-- **Risk flags**: no past papers · predictability not measurable · DATA INCOMPLETE - no material collected.
-- **Format, quoted from the course pages**:
 
 ### 509535 · FINAL EXAM — 3 CFU — Tier —
 
