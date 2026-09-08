@@ -344,8 +344,23 @@ def main() -> int:
     only = set(args.only.split(",")) if args.only else None
 
     DATA.mkdir(parents=True, exist_ok=True)
-    classified: dict[str, list[dict]] = {}
-    questions: list[dict] = []
+    # Merge into whatever a previous run already produced, rather than
+    # overwrite it. run_extract.sh invokes this once per course precisely so a
+    # bad file in one course cannot take the whole batch down - but a fresh
+    # `classified = {}` on every invocation means each course's own run
+    # clobbers every course written before it, so only the last course
+    # processed ever survives to disk. Load what is there first; --only then
+    # updates just the requested codes' entries, leaving the rest intact.
+    classified_path = DATA / "classified.json"
+    questions_path = DATA / "questions.jsonl"
+    classified: dict[str, list[dict]] = (
+        json.loads(classified_path.read_text()) if classified_path.exists() else {}
+    )
+    questions: list[dict] = [
+        json.loads(line) for line in questions_path.read_text().splitlines() if line.strip()
+    ] if questions_path.exists() else []
+    if only:
+        questions = [q for q in questions if q["course"] not in only]
     rows = []
 
     for folder in sorted(RAW.glob("[0-9]*")):
