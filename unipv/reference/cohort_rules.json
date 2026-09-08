@@ -1,34 +1,61 @@
 {
   "_purpose": "Facts that are NOT derivable from the collected files, and the exam routes they open. This file lives outside data/ deliberately: data/ is rebuilt from scratch by the tools, and a hand-entered fact must survive that.",
   "_provenance": "Stated by the student, 2026-09-07, and corroborated where possible against Esse3 and Kiro. Each entry names its evidence.",
-
   "cohort": {
     "entry_year": "2023/2024",
     "evidence": "Esse3 libretto files every year-1 activity under 2023/2024; the student confirms a 2023/24 entry.",
     "why_it_matters": "Assessment rules on this degree are set per course edition, not per sitting. The rules that apply are the ones for the edition of the student's cohort, which is often NOT the newest edition on Kiro. Scoring a course from the current edition's page can therefore describe an exam this student will not sit."
   },
-
   "course_routes": {
     "509477": {
       "name": "COMPUTER PROGRAMMING, ALGORITHMS AND DATA STRUCTURES",
       "cfu": 12,
       "structure": "Two Kiro modules under one Esse3 code.",
       "modules": [
-        {"module": "MOD. 1", "subject": "Computer Programming",
-         "teacher": "FERRARI STEFANO",
-         "kiro_course_ids": ["4", "2848", "5360", "7388", "9811", "12131"]},
-        {"module": "MOD. 2", "subject": "Algorithms and Data Structures",
-         "teacher": "DONDI PIERCARLO",
-         "kiro_course_ids": ["7598", "9919", "12210"]}
+        {
+          "module": "MOD. 1",
+          "subject": "Computer Programming",
+          "teacher": "FERRARI STEFANO",
+          "kiro_course_ids": [
+            "4",
+            "2848",
+            "5360",
+            "7388",
+            "9811",
+            "12131"
+          ]
+        },
+        {
+          "module": "MOD. 2",
+          "subject": "Algorithms and Data Structures",
+          "teacher": "DONDI PIERCARLO",
+          "kiro_course_ids": [
+            "7598",
+            "9919",
+            "12210"
+          ]
+        }
       ],
       "route_for_this_cohort": "Submit the PROJECT for MOD. 1 and sit the WRITTEN for MOD. 2. The two together record the full 12 CFU.",
       "route_for_new_students": "The project option is not available; MOD. 1 is examined by test.",
-      "evidence": "Stated by the student. Corroborated by the Kiro search: 509477 resolves to six MOD. 1 editions (Ferrari) and three MOD. 2 editions (Dondi), which is the module split the route depends on.",
+      "evidence": "CONFIRMED verbatim on the Kiro course pages for the 2024-25 and 2025-26 editions of 509477: \"Starting from the 2024-25 edition, the exam is a written computer-based exam, consisting in programming exercises. Students of the previous editions (up to a.y. 2023-24) can choose between the project-based exam and the current written exam.\" Source: unipv/raw/509477-COMPUTER-PROGRAMMING-ALGORITHMS-AND-DATA/COMP-PROG-509477-10589-2025/_course_text.html",
       "planning_consequence": "The project is calendar time, not revision time, and can be started before any sitting. Only the MOD. 2 written consumes an exam date. Hours-to-18 for this course must be split accordingly rather than treated as one written exam.",
-      "DATA_INCOMPLETE": "The project brief, its deadline and its rubric have not yet been located in the MOD. 1 editions. Confirm with Prof. Ferrari before relying on this route."
+      "project_route": {
+        "what": "A software project in Python extending an existing project or library, plus a report and a short presentation to discuss the design and implementation.",
+        "team": "One or two students. Complexity is sized for a single person.",
+        "deliverables": "Code and report, uploadable as one zip named LastName_FirstName_Number. Multiple submissions allowed. Submitted a few days before the presentation.",
+        "upload_page": "https://elearning.unipv.it/mod/assign/view.php?id=26002",
+        "submission_status_2026_09_08": "Non sono presenti consegne - nothing has ever been submitted; the Add submission button is live and no Data limite is set.",
+        "source": "unipv/raw/509477-.../Art2-509477-10589/_pages/page-17417-Information-about-the-project-Pagina.html and assign-26002-Project-deliverables-upload-Compito.html"
+      },
+      "written_route": {
+        "what": "Computer-based written exam: several programming exercises of differing difficulty and proportional score, summed and scaled to the grade interval. Often write a function to a specification; sometimes fill blanks in partially completed source. Partial solutions earn a fraction of the exercise's points.",
+        "duration": "3 hours per the 2025-26 page (1 hour per the 2024-25 page).",
+        "example_published": "The course page says an example exam has been published."
+      },
+      "still_unknown": "The project SPECIFICATIONS folder exists only in the 2021-22 and 2022-23 editions, and the 2023-24 edition was not found on Kiro. Which specification applies now, and when a presentation can be scheduled, must be confirmed with Prof. Ferrari."
     }
   },
-
   "_open_questions": [
     "Do other multi-module courses (Quantum Physics, Ethics) carry cohort-dependent routes too? Each was found with several editions; the rules pages of the 2023/24 edition should be read before scoring them.",
     "Italian Language (509536) has one edition whose self-enrolment needs a key. Ask for the key if that 3 CFU is wanted."
