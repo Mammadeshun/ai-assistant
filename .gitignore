@@ -23,5 +23,3 @@ data/study-bundle.zip
 unipv/raw/
 unipv/logs/
 unipv/output/
-unipv/data/classified.json
-unipv/data/questions.jsonl
