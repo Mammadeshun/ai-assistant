@@ -300,6 +300,19 @@ def load_answers(code: str, rows: list[dict]) -> dict[int, str]:
         path = ROOT / entry["text"]
         if path.exists():
             texts[Path(entry["path"]).stem.lower()] = path.read_text(errors="replace")
+    # Keys are rarely named after the paper they answer. Computational Logic
+    # ships each sitting as a folder holding the question PDF beside the
+    # SMT-LIB encodings that solve it: 'ex2_1A.txt' will never resemble
+    # '31-1-22A.pdf', but they are siblings, and that filing IS the pairing.
+    # Matching on names alone found answers for 2 courses out of 14.
+    by_folder: dict[str, list[str]] = defaultdict(list)
+    for entry in keys:
+        path = ROOT / entry["text"]
+        if path.exists():
+            by_folder[str(Path(entry["path"]).parent)].append(
+                f"--- {Path(entry['path']).name} ---\n"
+                + path.read_text(errors="replace"))
+
     out: dict[int, str] = {}
     by_topic: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
@@ -313,6 +326,10 @@ def load_answers(code: str, rows: list[dict]) -> dict[int, str]:
                 if stem[:14] in key or key[:14] in stem:
                     out[number] = body
                     break
+            else:
+                siblings = by_folder.get(str(Path(row["source_file"]).parent))
+                if siblings:
+                    out[number] = "\n\n".join(siblings[:6])
     return out
 
 
