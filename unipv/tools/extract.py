@@ -202,6 +202,11 @@ def classify(path: Path, head: str) -> str:
     # material: '31 1 22A.pdf', '2023 19 September 2023.pdf'.
     if exam_date(path, "") and not LECTURE.search(haystack):
         return "PAST_PAPER"
+    # Some courses file a sitting by year and month alone, with no other clue:
+    # Fuzzy Systems publishes '2024-06-text.pdf' and '2026-01-Esame.pdf'. Two
+    # genuine exam papers read as notes because "text" is not an exam word.
+    if re.match(r"^20\d\d[ _-]\d{1,2}\b", name.strip()) and not LECTURE.search(haystack):
+        return "PAST_PAPER"
     for role in ("ASSIGNMENT", "ADMIN", "NOTES", "SLIDES"):
         if re.search(PATTERNS[role], haystack):
             return role
