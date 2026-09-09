@@ -30,28 +30,49 @@ DATA, OUT = ROOT / "data", ROOT / "output"
 
 
 def preamble(title: str, subtitle: str) -> str:
-    return f"""#set page(paper: "a4", margin: (x: 2cm, y: 1.9cm), numbering: "1 / 1",
+    """A4, 2cm margins, black on white. The visual system is four labelled
+    block styles and grey shading only - this gets printed, and a colour fill
+    is a cartridge of ink."""
+    return f"""#set page(paper: "a4", margin: (x: 1.9cm, y: 1.8cm), numbering: "1 / 1",
   header: context {{ if counter(page).get().first() > 1 {{
-    set text(8pt); emph[{esc(subtitle)}]; h(1fr); emph[{esc(title)}] }} }})
+    set text(7.5pt, fill: luma(35%))
+    emph[{esc(subtitle)}]; h(1fr); emph[{esc(title)}]
+    v(-0.5em); line(length: 100%, stroke: 0.3pt + luma(70%)) }} }})
 #set text(font: ("DejaVu Serif", "Liberation Serif"), size: 10.5pt,
           fill: black, lang: "en", hyphenate: true)
 #set par(justify: false, leading: 0.62em)
-#show heading.where(level: 1): it => {{ set text(15pt, weight: "bold")
-  block(above: 1.1em, below: 0.6em, it) }}
+#show heading.where(level: 1): it => {{
+  block(above: 1.2em, below: 0.55em, width: 100%)[
+    #text(15pt, weight: "bold")[#it.body]
+    #v(-0.45em) #line(length: 100%, stroke: 1.1pt)
+  ]}}
 #show heading.where(level: 2): it => {{ set text(12pt, weight: "bold")
-  block(above: 0.9em, below: 0.4em, it) }}
+  block(above: 0.85em, below: 0.35em, it) }}
 #show heading.where(level: 3): it => {{ set text(10.5pt, weight: "bold")
-  block(above: 0.7em, below: 0.3em, it) }}
+  block(above: 0.6em, below: 0.25em, it) }}
 #show table: set block(breakable: true)
-#set table(stroke: 0.4pt, inset: 5pt)
-#let box_(body) = block(inset: 7pt, stroke: 0.6pt, width: 100%, body)
-#let key(body) = block(inset: 7pt, fill: luma(94%), width: 100%, body)
+#set table(stroke: 0.4pt + luma(45%), inset: 5pt)
+#show table.cell.where(y: 0): set text(weight: "bold")
+
+// --- the four block styles -------------------------------------------------
+#let tag(label, body, fill: white, accent: black) = block(
+  width: 100%, above: 0.7em, below: 0.7em,
+  stroke: (left: 2.5pt + accent, rest: 0.4pt + luma(60%)),
+  fill: fill, inset: (left: 8pt, rest: 7pt))[
+  #text(7.5pt, weight: "bold", tracking: 0.6pt)[#upper(label)]
+  #v(-0.35em) #body]
+
+#let recipe(body) = tag("recipe", body, fill: luma(97%))
+#let worked(body) = tag("worked example — official solution", body, fill: luma(93%))
+#let trap(body)   = tag("where marks are lost", body)
+#let onthday(body) = tag("on the day", body, fill: luma(96%))
+#let brief(body)  = block(width: 100%, inset: 8pt, stroke: 0.9pt, body)
 
 #align(center)[
-  #text(18pt, weight: "bold")[{esc(title)}]
-  #v(0.25em) #text(10pt)[{esc(subtitle)}]
+  #text(19pt, weight: "bold")[{esc(title)}]
+  #v(0.2em) #text(9.5pt, fill: luma(30%))[{esc(subtitle)}]
 ]
-#v(0.5em) #line(length: 100%, stroke: 0.7pt) #v(0.7em)
+#v(0.4em) #line(length: 100%, stroke: 1.4pt) #v(0.7em)
 """
 
 
@@ -79,9 +100,12 @@ def practice_block(rows: list[dict], heading: str, note: str,
     for index, row in enumerate(rows[:limit], start=1):
         src = Path(row["source_file"]).name
         when = row.get("exam_date") or "undated"
-        marks = f" · {row['points']} marks" if row.get("points") else ""
-        doc += (f"\n== Q{index}\n\n#text(8pt)[\\[PAST PAPER — {esc(src)}, "
-                f"{esc(when)}\\]{esc(marks)}]\n\n"
+        marks = f"{row['points']} marks" if row.get("points") else ""
+        doc += (f"\n#block(above: 1.1em, below: 0.3em)[#grid(columns: (1fr, auto),"
+                f"[#text(11pt, weight: \"bold\")[Q{index}]"
+                f"#h(0.6em)#text(7.5pt, fill: luma(35%))"
+                f"[\\[PAST PAPER — {esc(src)}, {esc(when)}\\]]],"
+                f"[#text(8.5pt, weight: \"bold\")[{esc(marks)}]])]\n\n"
                 f"{esc(' '.join(row['text'].split())[:1500])}\n\n")
         doc += ruled(space)
     return doc
@@ -107,7 +131,7 @@ def machine_learning() -> str:
     doc += """
 = How this exam works — read this first
 
-#box_[
+#brief[
 *This is the same exam every single time.* Twelve archived sittings from June
 2023 to June 2026 were compared. Every one of them is: a page describing a
 dataset, then the *same numbered questions*, asking you to design a deep
@@ -131,7 +155,7 @@ mapping from dataset type to decision, and you can answer any sitting.
 )
 
 #v(0.4em)
-#key[
+#trap[
 *Instructions repeated verbatim on every paper.* Keep the same numbering and
 sub-items. Motivate your choices. Leave SPACE between answers. And, from the
 January 2025 paper: *"Writing more is not a proxy for a higher evaluation."*
@@ -144,7 +168,7 @@ Every paper ends with the same clause: you have roughly 8–9 days after the
 sitting to upload a Colab/Jupyter notebook implementing *the solution you just
 wrote*. The notebook must *totally adhere to the written answers*.
 
-#box_[
+#brief[
 *If no file is uploaded, the exam is considered rejected.* Requirements taken
 from the September 2026 assignment page: one PDF named `Surname_Number.pdf`
 containing a link to a Colab notebook shared as *anyone with the link can
@@ -235,7 +259,7 @@ mark is for the justification, not the length.
 State the architecture, then one sentence of why tied to a property of *this*
 dataset.
 
-#key[
+#recipe[
 "I use #underline[architecture]. The input is #underline[property of the data],
 so #underline[architecture] is appropriate because #underline[it handles that
 property]. #underline[Alternative] would also work but #underline[reason it is
@@ -268,7 +292,7 @@ Give the *number of units* and the *activation*, then why.
 - Binary → 1 unit, sigmoid.
 - Regression → 1 unit, linear.
 
-#key[
+#trap[
 *The single most common trap in this exam.* Multi-label is not multi-class.
 If a sample can carry 2–3 labels at once, softmax is wrong: it forces the
 outputs to compete. Use sigmoid per label with binary cross-entropy.
@@ -372,9 +396,9 @@ that label. For the BoW branch the input is already interpretable, so gradient
 magnitude maps directly onto vocabulary terms. Limitation: attributions are
 local to one sample and do not establish a causal effect.
 
-= Before you walk in
+= On the day
 
-#box_[
+#onthday[
 + *The dataset page is the only thing you have not seen.* Read it first and
   classify it: text / image / tabular / graph / unlabelled. Everything else
   follows from the table on page 2.
@@ -413,6 +437,7 @@ local to one sample and do not establish a causal effect.
 )
 """
     rows = unique_questions("509486")
+    doc += "\n#pagebreak()\n"
     doc += practice_block(
         rows,
         "Practice — every distinct question in the archive",
@@ -431,42 +456,42 @@ def fuzzy_systems() -> str:
     doc = preamble(FZ_TITLE, FZ_SUB)
 
     doc += """
-= How this exam works — read this first
+= Start here: what this paper is
 
-#box_[
-A single written paper of *6 to 8 questions, each carrying its marks in the
-question* (seen: 3, 4, 5 and 8 points), summing to about 30. Papers exist in
-*Italian and English* — the 2023 sittings are Italian, January 2026 is English.
-Answer in either.
+#brief[
+*6 to 8 questions, each printing its own marks* (seen: 3, 4, 5, 7 and 8),
+summing to about 30. Papers are *bilingual* — the question is given in English
+and Italian, so answer in whichever is faster for you.
 
-Every paper is the same two halves:
-- *Fuzzy set theory* — definitions, set operations, relations, rule-based systems
-- *Evolutionary computing* — the general EA scheme, operators, selection
+Every paper is the same two halves, and the same shapes recur:
 
-and mixes *short definitions* (3–4 marks each, memorise them) with *one or two
-computational exercises* (5–8 marks, drill them). The computational questions
-are where the marks concentrate and where the archive is richest: Prof. Ciucci
-publishes worked solutions.
-]
-
-== What each sitting actually asked
-
-#table(columns: (auto, 1fr),
-  [June 2023], [fuzzification/defuzzification + frame of cognition (5) · cardinality with example (3) · crossover in EA with permutations (4) · general scheme of an EA (5) · triangular sets f,g: equations, intersection, union, complement, support, core (8)],
-  [July 2023], [same shape, different numbers],
-  [Sept 2023], [same shape, different numbers],
-  [Jan 2026], [Gaussian fuzzy set definition (4) · Mamdani vs Takagi-Sugeno (4) · pseudo-code of an EA (4) · selection pressure (4) · composition of two fuzzy relations (3) · discrete fuzzy set g: complement, α-cut, cardinality (4)],
+#table(columns: (auto, auto, 1fr),
+  [*Type*], [*Typical marks*], [*What it is*],
+  [Definition], [3–4 each], [Recall. Four or five of them per paper. Free marks.],
+  [Settings table], [4], [Fill a 5-row table for GP or PSO. Pure recall.],
+  [Set exercise], [7–8], [Triangular or discrete fuzzy sets, or a relation composition.],
+  [EA by hand], [7], [Run a genetic algorithm or genetic programming for one generation.],
 )
 
-#v(0.3em)
-#key[
-*The same handful of things is asked every time.* Definitions of fuzzy set
-notions; the general EA scheme; one operator explained; one exercise on
-triangular or discrete fuzzy sets; sometimes a relation composition. Learn the
-six exercise recipes below and the definition list, and the paper is covered.
+*Where the marks actually are:* roughly half the paper is recall you can
+memorise in an evening. The other half is two big exercises that follow fixed
+recipes. Learn the definitions and the six recipes and you are at 18 without
+understanding a single proof.
 ]
 
-= Part A — Fuzzy sets: the definitions asked
+== Every question asked across the seven archived sittings
+
+#table(columns: (auto, 1fr),
+  [*22 Jun 2023*], [fuzzification/defuzzification + frame of cognition (5) · cardinality (3) · crossover with permutations (4) · general EA scheme (5) · triangular sets f,g (8)],
+  [*11 Jul 2023*], [same shapes, different numbers],
+  [*07 Sep 2023*], [same shapes, different numbers],
+  [*21 Jun 2024*], [k-means vs fuzzy c-means (4) · t-norm definition + example (4) · *GP settings table* (4) · exploration vs exploitation (4) · relation composition (3) · discrete set: core, α-cut, centre of gravity (4) · *run a GA by hand* (7)],
+  [*09 Jul 2024*], [linguistic variable (4) · reflexive/symmetric/transitive relation (4) · *PSO settings table* (4) · mutation with permutations (4) · triangular sets + strong α-cut (7) · *run GP by hand* (7)],
+  [*2025 example*], [published sample paper, same shapes],
+  [*29 Jan 2026*], [Gaussian fuzzy set (4) · Mamdani vs Takagi–Sugeno (4) · EA pseudo-code (4) · selection pressure (4) · relation composition (3) · discrete set: complement, α-cut, cardinality (4)],
+)
+
+= Part A — Fuzzy sets
 
 A fuzzy set on universe $X$ is a function $f: X -> [0,1]$; $f(x)$ is the
 *membership degree* of $x$.
@@ -474,57 +499,102 @@ A fuzzy set on universe $X$ is a function $f: X -> [0,1]$; $f(x)$ is the
 #table(columns: (auto, 1fr),
   [*Support*], [$"supp"(f) = {x : f(x) > 0}$],
   [*Core*], [$"core"(f) = {x : f(x) = 1}$],
-  [*Height*], [$sup_x f(x)$. The set is #emph[normal] if the height is 1],
-  [*α-cut*], [$f_alpha = {x : f(x) >= alpha}$ — everything at or above the threshold],
-  [*Cardinality*], [$|f| = sum_x f(x)$ (discrete) or $integral f(x) d x$ (continuous)],
+  [*Height*], [$sup_x f(x)$; the set is #emph[normal] if the height is 1],
+  [*α-cut*], [$f_alpha = {x : f(x) >= alpha}$],
+  [*Strong α-cut*], [$f_alpha^+ = {x : f(x) > alpha}$ — strictly greater. Asked in July 2024.],
+  [*Cardinality*], [$|f| = sum_x f(x)$],
   [*Complement*], [$not f(x) = 1 - f(x)$],
-  [*Intersection*], [$(f and g)(x) = T(f(x), g(x))$, a *t-norm* — default $min$],
-  [*Union*], [$(f or g)(x) = S(f(x), g(x))$, a *t-conorm* — default $max$],
-  [*Entropy*], [$H(f) = - sum_x f(x) log f(x)$ #emph[(as used in the published solution)]],
-  [*Fuzziness (Hamming)*], [$1/n sum_x |f(x) - not f(x)|$],
-  [*OWA*], [weighted average of the values sorted in order, weights $w_i$ summing to 1],
+  [*Entropy*], [$H(f) = - sum_x f(x) log f(x)$],
+  [*Fuzziness*], [$1/n sum_x |f(x) - not f(x)|$ (Hamming)],
+  [*Centre of gravity*], [$(sum_x x dot f(x)) / (sum_x f(x))$ — same formula as centroid defuzzification],
 )
 
-== The membership functions to be able to write down
+== t-norms and t-conorms — asked verbatim, June 2024
 
-*Triangular*, corners $A < B < C$ — the one that appears most:
+A *t-norm* $T: [0,1]^2 -> [0,1]$ models fuzzy *intersection*. It is
+commutative, associative, monotone (non-decreasing in each argument), and has
+*1 as neutral element*: $T(x, 1) = x$.
+
+#table(columns: (auto, auto, auto),
+  [*Name*], [*t-norm (AND)*], [*t-conorm (OR)*],
+  [Gödel / minimum], [$min(x, y)$], [$max(x, y)$],
+  [Product], [$x dot y$], [$x + y - x y$],
+  [Łukasiewicz], [$max(0, x + y - 1)$], [$min(1, x + y)$],
+)
+
+A *t-conorm* is the dual: neutral element *0*, models *union*. Quoting one
+named pair with its formula is what earns the 4 marks.
+
+== Membership functions to be able to write from memory
+
+*Triangular*, corners $A < B < C$ — by far the most asked:
 $ f(x) = cases((x - A)/(B - A) "if" x in [A,B], (C - x)/(C - B) "if" x in [B,C], 0 "otherwise") $
 
-*Trapezoidal*, corners $A<B<C<D$: rises on $[A,B]$, equals 1 on $[B,C]$, falls
-on $[C,D]$.
+*Trapezoidal*, $A<B<C<D$: rises on $[A,B]$, is 1 on $[B,C]$, falls on $[C,D]$.
 
-*Gaussian* — asked verbatim in January 2026:
-$ f(x) = e^(-((x - m)^2) / (2 sigma^2)) $
-with $m$ the centre (where membership is 1) and $sigma$ the width.
+*Gaussian* — asked January 2026: $ f(x) = e^(-((x - m)^2) / (2 sigma^2)) $
+$m$ is the centre (membership 1), $sigma$ the width.
 
-== Rule-based systems — the wording the lecturer uses
+== Linguistic variable — asked July 2024
 
-*Fuzzification* converts a crisp input into membership degrees over the
-linguistic terms. *Defuzzification* converts the fuzzy output set back into a
-single crisp value — most often by the *centroid*:
-$ x^* = (sum_i x_i mu(x_i)) / (sum_i mu(x_i)) $
+#worked[
+From the lecturer's own answer sheet
+(#emph[Final Exercises - update.pdf]): a linguistic variable is a variable
+*taking words as values*, whose meaning is given by a fuzzy set. Formally a
+tuple $(L, T(L), U, G, M)$ — $L$ the name, $T(L)$ the linguistic terms it can
+take, $U$ the universe, $G$ the grammar of modifiers, $M$ the mapping from
+each term to a fuzzy set.
 
-A *frame of cognition* (also called a *fuzzy partition*) is the family of
-linguistic terms covering the universe of discourse — "very small, small,
-medium, large, very large" over an interval $[l, r]$. Fuzzification is exactly
-the step that maps a crisp value onto that frame; that is the connection the
-June 2023 paper asks for.
-#emph[Source: raw/509487-.../FuzzyRules.pdf, Ciucci, Fuzzy Rule-Based Systems.]
+*Example:* $L$ = Temperature, $T(L) = {"cold", "warm", "hot"}$,
+$U = [-20, 50]$, $G = {"very", "not"}$, and $M$ assigns a fuzzy set to each
+term. The modifier *very* is $"very"(f)(x) = f(x)^2$.
+*Draw at least one of the sets* — the answer sheet says so explicitly.
+]
 
-*Mamdani rule*: `IF (X1 is LT1) and ... and (Xn is LTn) THEN Y is LT0` — the
-consequent is itself a *fuzzy set*, so the output must be defuzzified.
-*Takagi–Sugeno rule*: the consequent is a *function of the inputs*, typically
-linear, `THEN y = a0 + a1 x1 + ... + an xn` — the output is already crisp, so
-no defuzzification is needed. That difference is the answer to the January 2026
-question.
+== Fuzzy relations
 
-= Part B — Evolutionary computing: the definitions asked
+A fuzzy relation is $R: X × Y -> [0,1]$. Asked July 2024, the three properties
+(for $R$ on $X × X$):
 
-*General scheme of an Evolutionary Algorithm* — asked in essentially every
-paper, sometimes as prose, sometimes as pseudo-code. Learn it as pseudo-code
-and you can answer either:
+#table(columns: (auto, 1fr),
+  [*Reflexive*], [$R(x, x) = 1$ for every $x$],
+  [*Symmetric*], [$R(x, y) = R(y, x)$ for every $x, y$],
+  [*Transitive*], [$R(x, z) >= max_y min(R(x,y), R(y,z))$ (max–min transitivity)],
+)
 
-#box_[
+All three together make it a *fuzzy equivalence* relation.
+
+== Rule-based systems
+
+*Fuzzification* maps a crisp input onto membership degrees over the linguistic
+terms. *Defuzzification* maps the fuzzy output back to one crisp value, usually
+the *centroid* $x^* = (sum_i x_i mu(x_i)) / (sum_i mu(x_i))$.
+
+A *frame of cognition* (a *fuzzy partition*) is the family of linguistic terms
+covering the universe — "very small, small, medium, large, very large" over
+$[l, r]$. Fuzzification is precisely the step that maps a crisp value onto that
+frame: that is the connection the June 2023 paper asks for.
+#emph[Source: FuzzyRules.pdf, Ciucci.]
+
+*Mamdani*: `IF (X1 is LT1) and ... THEN Y is LT0` — the consequent is a *fuzzy
+set*, so the output *must* be defuzzified.
+*Takagi–Sugeno*: the consequent is a *function of the inputs*, typically linear
+`THEN y = a0 + a1 x1 + ...` — output already crisp, *no defuzzification*.
+
+== k-means vs fuzzy c-means — asked June 2024
+
+k-means assigns each point to *exactly one* cluster (hard membership, 0 or 1).
+Fuzzy c-means gives each point a *degree of membership in every* cluster, with
+memberships summing to 1 across clusters, controlled by a fuzzifier $m > 1$.
+Centres are then membership-weighted means:
+$ c_j = (sum_i u_(i j)^m x_i) / (sum_i u_(i j)^m) $
+Larger $m$ means fuzzier boundaries; as $m -> 1$ it degenerates to k-means.
+
+= Part B — Evolutionary computing
+
+== The general scheme — free marks, appears on nearly every paper
+
+#recipe[
 ```
 INITIALISE population with random candidate solutions
 EVALUATE each candidate
@@ -535,154 +605,191 @@ REPEAT until (termination condition satisfied):
     EVALUATE new candidates
     SELECT individuals for the next generation
 ```
+Asked as prose or as pseudo-code. Learn the pseudo-code and you can answer
+either.
 ]
 
-*Crossover* recombines two parents into offspring, exploiting existing genetic
-material — the exploitation half of the search, against mutation's
-exploration. *With permutation representations* ordinary one-point crossover
-breaks validity (it repeats and drops elements), so order-preserving operators
-are used: PMX, order crossover (OX), cycle crossover.
+== Operators, and the exploration/exploitation split — asked June 2024
 
-*Mutation* makes a small random change to one individual, keeping diversity
-and allowing escape from local optima.
+*Exploration* searches new regions of the space; *exploitation* refines what
+is already good. *Mutation* provides exploration, *crossover (recombination)*
+provides exploitation, and *selection* pushes towards exploitation. Too much
+exploitation converges prematurely; too much exploration never converges.
 
-*Selection pressure* is how strongly the algorithm favours fitter individuals.
-High pressure converges fast but risks premature convergence on a local
-optimum; low pressure explores more but converges slowly.
+*Crossover* recombines two parents. With *permutation* representations
+one-point crossover breaks validity (it duplicates and drops elements), so
+order-preserving operators are used: *PMX*, *order crossover (OX)*, *cycle
+crossover*. *n-point crossover* cuts the parents at $n$ points and alternates
+the segments.
 
-*Fitness function* scores a candidate. Two published examples from the course's
-own solution file, both worth knowing as templates:
-- *Sudoku*: count duplicate entries across every row, column and 3×3 box as a
-  penalty, then $"fitness" = 1 / (1 + "penalty")$ — higher is better.
-- *Knapsack*: sum the values of selected items; if total weight exceeds
-  capacity, subtract a penalty proportional to the excess; clamp at zero.
-#emph[Source: raw/509487-.../solutions\\_exam\\_example.py]
+*Mutation* is a small random change to one individual — bit-flip for binary,
+*swap / insert / inversion* for permutations, creep for integers.
 
-= The six exercise recipes — where the marks are
+*Selection pressure* is how strongly fitter individuals are favoured. High:
+fast convergence, risk of a local optimum. Low: more exploration, slow.
 
-These are worked from Prof. Ciucci's *own published solutions*
-(#emph[raw/509487-.../Fuzzy Set Exercises - Solutions.pdf]). The numbers change
-between sittings; the recipes do not.
+== The settings table — 4 marks, pure recall
 
-== Recipe 1 — Triangular sets: equations, operations, support, core
-Given $f$ by corners $A,B,C$ and $g$ by $D,E,F$:
-+ *Equations*: write each as the triangular formula above.
-+ *Intersection* $f and g$ = $min$: find where the two lines cross, then the
-  intersection is the lower of the two on each side of the crossing point.
-+ *Union* $f or g$ = $max$: the upper envelope — follow $f$ up, across to the
-  crossing, then $g$ down.
-+ *Complement*: $1 - f(x)$ piecewise; it is 1 outside the support.
-+ *Support / core*: $[A, C]$ and $\\{B\\}$.
+Asked for *genetic programming* (June 2024) and *particle swarm optimisation*
+(July 2024). Same five rows every time.
 
-#key[
-*Worked, from the official solution.* $A=1, B=3, C=5$; $D=4, E=6, F=8$.
+#table(columns: (auto, 1fr, 1fr),
+  [ ], [*Genetic Programming*], [*Particle Swarm Optimisation*],
+  [Representation], [Tree structures (expressions)], [Real-valued vector, plus a velocity vector],
+  [Recombination], [Exchange of subtrees], [None],
+  [Mutation], [Random change in the tree (replace a subtree)], [None — movement is by velocity update],
+  [Parent selection], [Fitness proportional], [None — every particle is a parent],
+  [Survivor selection], [Generational replacement], [Replaces the particle itself],
+)
+
+#emph[Source: Eiben & Smith, Introduction to Evolutionary Computing, the
+course textbook; chapter decks ch06-Popular\_EA\_Variants are in the archive.]
+
+= The exercise recipes — where the big marks are
+
+== Recipe 1 — Triangular sets (7–8 marks)
++ *Equations*: apply the triangular formula to each set's corners.
++ *Intersection* ($min$): find where the two lines cross; the intersection is
+  the lower of the two on each side of that point.
++ *Union* ($max$): the upper envelope.
++ *Complement*: $1 - f(x)$ piecewise; it equals *1 outside the support*.
++ *Support / core*: $[A, C]$ and $\{B\}$.
+
+#worked[
+$A=1, B=3, C=5$; $D=4, E=6, F=8$.
 $f(x) = (x-1)/2$ on $[1,3]$, $(5-x)/2$ on $[3,5]$, else 0.
 $g(x) = (x-4)/2$ on $[4,6]$, $(8-x)/2$ on $[6,8]$, else 0.
-They cross at $x = 4.5$. So $f and g = (x-4)/(4.5-4)$ on $[4,4.5]$,
-$(5-x)/(5-4.5)$ on $[4.5,5]$, else 0.
-$"supp"(f) = [1,5]$, $"core"(f) = \\{3\\}$; $"supp"(g) = [4,8]$, $"core"(g) = \\{6\\}$.
+They cross at $x = 4.5$, so
+$f and g = (x-4)/0.5$ on $[4, 4.5]$, $(5-x)/0.5$ on $[4.5, 5]$, else 0.
+$"supp"(f) = [1,5]$, $"core"(f) = \{3\}$; $"supp"(g) = [4,8]$, $"core"(g) = \{6\}$.
 ]
 
 == Recipe 2 — Discrete set: core, support, complement, cardinality, α-cut
-Read the values off the list and apply the definitions. Cardinality is the
-plain sum of memberships. The α-cut is the set of points at or above α.
+Read values off the list and apply the definitions. Cardinality is the plain
+sum. The α-cut takes everything at or above α — the *strong* α-cut takes
+strictly above.
 
-#key[
-*Worked, from the official solution.* $g(10)=0.3, g(15)=0.5, g(20)=1,
-g(25)=1, g(30)=0.5, g(35)=0.3$, zero elsewhere.
-core $= \\{20, 25\\}$; supp $= \\{10,15,20,25,30,35\\}$.
-$not g$: $0.7, 0.5, 0, 0, 0.5, 0.7$, and *1 everywhere else*.
-$|g| = 0.3+0.5+1+1+0.5+0.3 = 3.6$.
-α-cut at $alpha = 0.4$: $\\{15, 20, 25, 30\\}$.
+#worked[
+$g(10)=0.3, g(15)=0.5, g(20)=1, g(25)=1, g(30)=0.5, g(35)=0.3$, else 0.
+core $= \{20, 25\}$; supp $= \{10,...,35\}$.
+$not g$: $0.7, 0.5, 0, 0, 0.5, 0.7$ — and *1 at every other point*.
+$|g| = 3.6$. α-cut at $0.4$: $\{15, 20, 25, 30\}$.
 ]
 
 == Recipe 3 — Entropy and fuzziness
-$H(g) = -sum g(x) log g(x)$. Note that terms with membership 0 or 1 contribute
-nothing.
-
-#key[
-*Worked, same set.* $H(g) = -(0.3 log 0.3 + 0.5 log 0.5 + 0 + 0 + 0.5 log 0.5
-+ 0.3 log 0.3) = 0.6148$.
-Fuzziness by Hamming distance:
-$(|0.3-0.7| + |0.5-0.5| + |1-0| + |1-0| + |0.5-0.5| + |0.3-0.7|)/6 = 2.4/6 = 0.4$.
+#worked[
+Same set. $H(g) = -(0.3 log 0.3 + 0.5 log 0.5 + 0.5 log 0.5 + 0.3 log 0.3) = 0.6148$
+(terms at 0 and 1 contribute nothing).
+Fuzziness: $(0.4 + 0 + 1 + 1 + 0 + 0.4)/6 = 2.4/6 = 0.4$.
 ]
 
-== Recipe 4 — Ordered weighted average
-With all weights equal to $1/n$ the OWA is just the mean: for the set above,
-$3.6/6 = 0.6$. With unequal weights, *sort the two membership values for each
-point in decreasing order first*, then apply $w_1$ to the larger and $w_2$ to
-the smaller.
+== Recipe 4 — Centre of gravity
+$(sum x dot g(x)) / (sum g(x))$. Multiply each point by its membership, sum,
+divide by the cardinality.
 
-== Recipe 5 — Composition of fuzzy relations
-For relations $R$ on $X × Y$ and $S$ on $Y × Z$, the max–min composition is
+== Recipe 5 — Composition of fuzzy relations (3 marks)
 $ (R compose S)(x, z) = max_y min(R(x,y), S(y,z)) $
-Work it like a matrix product with $min$ for multiply and $max$ for add: take
-row $x$ of $R$ and column $z$ of $S$, pair them off, take the minimum of each
-pair, then the maximum of those.
+A matrix product with $min$ for multiply and $max$ for add.
 
-#key[
-*From the January 2026 paper.* $R$ row $x_1 = (0.4, 1, 0.5)$; $S$ column
-$z_1 = (0.2, 0, 1)$. Pairwise minima: $min(0.4,0.2)=0.2$, $min(1,0)=0$,
-$min(0.5,1)=0.5$. Maximum of those $= 0.5$. So $(R compose S)(x_1, z_1) = 0.5$.
-Repeat for every $(x, z)$ cell.
+#worked[
+June 2024. $R$ row $x_1 = (0.4, 0, 0.8)$, $S$ column $z_1 = (1, 0, 0.8)$.
+Pairwise minima: $min(0.4,1)=0.4$, $min(0,0)=0$, $min(0.8,0.8)=0.8$.
+Maximum $= 0.8$. So $(R compose S)(x_1,z_1) = 0.8$. Repeat per cell.
 ]
 
-== Recipe 6 — Defuzzification and fuzzy c-means
-Centroid defuzzification is the weighted mean given above. For fuzzy c-means,
-the centre of cluster $j$ is the membership-weighted mean of the points:
-$ c_j = (sum_i u_(i j)^m x_i) / (sum_i u_(i j)^m) $
-with $m$ the fuzzifier. #emph[Both appear as worked Python in
-raw/509487-.../solutions\\_exam\\_example.py.]
+== Recipe 6 — Run a Genetic Algorithm by hand (7 marks)
+Asked June 2024 on 6 binary digits with $f(x) = x_1 + x_2 + 2x_3 + 3x_4 + x_5 + 2x_6$.
 
-= Before you walk in
+#recipe[
++ *Initial population*: invent 4 random bitstrings and *write them down*, e.g.
+  `101010`, `110011`, `001101`, `111000`.
++ *Fitness*: evaluate $f$ on each. For `101010`: $1+0+2+0+1+0 = 4$.
++ *Fitness-proportionate selection*: compute $p_i = f_i / sum_j f_j$; show the
+  proportions, then say which parents you drew.
++ *2-point crossover*: pick two cut points, swap the middle segment between
+  the two parents. Show both children.
++ *Bit-wise mutation, $p = 1/6$*: with 6 bits that is one expected flip per
+  individual — flip one bit and say which, and that others were left.
++ *Generational replacement*: the 4 children replace the 4 parents entirely.
+]
 
-#box_[
-+ *Check the marks on each question and spend time in proportion.* An 8-mark
-  triangular-sets exercise is worth two definitions.
-+ *Definitions first.* They are 3–4 marks each, they are pure recall, and they
-  appear on every paper. Support, core, α-cut, cardinality, complement,
-  Gaussian set, selection pressure, crossover, the EA scheme.
-+ *For every exercise, state the formula before you use it.* Partial credit is
-  attached to the method.
-+ *Sketch the triangular sets.* The intersection and union questions become
-  obvious once drawn, and the crossing point is where the answer lives.
-+ *Do not forget the "0 otherwise" and "1 everywhere else"* clauses when
-  writing piecewise membership functions and complements. The official
-  solutions always include them.
-+ *The EA scheme is free marks* — write the pseudo-code block from memory.
-+ Answer in *English or Italian*, whichever is faster for you.
+#trap[
+Marks here are for *showing the mechanism*, not for finding the optimum. Write
+the population at every step, show the fitness arithmetic for at least one
+individual, and name each operator as you apply it. Inventing the random draws
+is expected — say "suppose the roulette selects ...".
+]
+
+== Recipe 7 — Genetic Programming by hand (7 marks)
+Asked July 2024 on arithmetic expressions over $\{+,-,*,/\}$ and $\{0,1,-1,x\}$,
+fitness $sum_i |g(i) - e(i)|$ with $g(x) = 2x^2 + 2x + 1$ — *lower is better*.
+
+#recipe[
++ *Initial population, grow method, max depth 4*: draw 4 expression *trees*.
+  Grow means each node is randomly an operator or a terminal, so branches end
+  at different depths. Write them both as trees and in infix, e.g.
+  $(x * x) - (1 + x)$.
++ *Fitness*: evaluate each expression at the required points, take
+  $sum |g(i) - e(i)|$. Show the arithmetic for one.
++ *Selection and recombination*: subtree crossover — pick a node in each
+  parent, swap the subtrees. Draw the result.
++ *Mutation*: replace a randomly chosen subtree with a new random one.
+]
+
+#trap[
+Draw the trees. A GP answer written only in infix loses the marks for
+representation, and subtree crossover cannot be shown without them.
+]
+
+= On the day
+
+#onthday[
++ *Read the marks on every question first* and budget time in proportion. A
+  7-mark GA-by-hand is worth nearly two definitions plus a relation composition.
++ *Do the definitions first* — they are recall, they are on every paper, and
+  they are the cheapest marks on it.
++ *State the formula before using it.* Partial credit attaches to method.
++ *Sketch the triangular sets.* The crossing point is where the answer lives.
++ *Never omit "0 otherwise" and "1 everywhere else"* in piecewise membership
+  functions and complements — the official solutions always write them.
++ *Write the EA pseudo-code from memory.* Free marks, nearly every sitting.
++ For the by-hand EA questions, *show every generation and name every
+  operator*. The mark is for mechanism, not for the optimum.
++ Answer in *English or Italian*, whichever is faster.
 ]
 
 = Formula sheet
 
 #table(columns: (auto, 1fr),
   [Fuzzy set], [$f: X -> [0,1]$],
-  [Support / core], [$\\{x: f(x)>0\\}$ / $\\{x: f(x)=1\\}$],
-  [α-cut], [$f_alpha = \\{x : f(x) >= alpha\\}$],
+  [Support / core], [$\{x: f(x)>0\}$ / $\{x: f(x)=1\}$],
+  [α-cut / strong], [$\{x: f(x) >= alpha\}$ / $\{x: f(x) > alpha\}$],
   [Cardinality], [$|f| = sum_x f(x)$],
   [Complement], [$not f(x) = 1 - f(x)$],
-  [Intersection / union], [$min(f,g)$ / $max(f,g)$ (default t-norm / t-conorm)],
-  [Other t-norms], [product $f dot g$; Łukasiewicz $max(0, f+g-1)$],
+  [t-norms (AND)], [$min(x,y)$; $x y$; $max(0, x+y-1)$],
+  [t-conorms (OR)], [$max(x,y)$; $x+y-x y$; $min(1, x+y)$],
   [Triangular], [$(x-A)/(B-A)$ on $[A,B]$; $(C-x)/(C-B)$ on $[B,C]$; 0 otherwise],
-  [Gaussian], [$e^(-(x-m)^2 / (2 sigma^2))$],
+  [Gaussian], [$e^(-(x-m)^2 / (2 sigma^2))$], 
   [Entropy], [$H(f) = -sum_x f(x) log f(x)$],
-  [Fuzziness], [$1/n sum_x |f(x) - (1 - f(x))|$],
+  [Fuzziness], [$1/n sum_x |f(x) - (1-f(x))|$],
+  [Centre of gravity], [$(sum_x x f(x)) / (sum_x f(x))$],
   [Max–min composition], [$(R compose S)(x,z) = max_y min(R(x,y), S(y,z))$],
-  [Centroid defuzzification], [$x^* = (sum_i x_i mu(x_i)) / (sum_i mu(x_i))$],
+  [Relation properties], [reflexive $R(x,x)=1$; symmetric $R(x,y)=R(y,x)$; transitive $R(x,z) >= max_y min(R(x,y),R(y,z))$],
   [c-means centre], [$c_j = (sum_i u_(i j)^m x_i) / (sum_i u_(i j)^m)$],
-  [Sudoku fitness], [$1 / (1 + "duplicates in rows, cols, boxes")$],
-  [Knapsack fitness], [$sum "values"$, minus a penalty proportional to excess weight],
+  [Very (modifier)], [$"very"(f)(x) = f(x)^2$],
+  [Sudoku fitness], [$1/(1 + "duplicates")$],
+  [Knapsack fitness], [$sum "values"$ minus penalty for excess weight],
 )
 """
     rows = unique_questions("509487")
+    doc += "\n#pagebreak()\n"
     doc += practice_block(
         rows,
         "Practice — every distinct question in the archive",
-        "Real questions from the six archived papers, de-duplicated. Marks are "
-        "printed where the paper printed them. Solutions to the computational "
-        "types are the recipes above, which come from the lecturer's own "
-        "published answers.",
-        space=6.0, limit=35)
+        "Real questions from the archived sittings, de-duplicated, with the "
+        "marks the paper printed. The computational types are solved by the "
+        "recipes above, which come from the lecturer's own published answers.",
+        space=6.0, limit=40)
     return doc
 
 
