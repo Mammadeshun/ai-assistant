@@ -110,3 +110,17 @@ class TestCourseFolderIsNotASignal:
         """'Exam_Assignments' is genuinely informative about its contents."""
         p = Path("unipv/raw/509483-COMPUTATIONAL-LOGIC/Exam_Assignments/ex2_1A.pdf")
         assert classify(p, "") == "PAST_PAPER"
+
+
+class TestYearMonthFiledSittings:
+    """Fuzzy Systems files a sitting as '2024-06-text.pdf' — year and month and
+    nothing else. Two real exam papers read as notes because 'text' is not an
+    exam word and the date pattern needs three numeric groups."""
+
+    def test_year_month_prefix_is_a_paper(self):
+        assert role("2024-06-text.pdf") == "PAST_PAPER"
+        assert role("2024-07-Text.pdf") == "PAST_PAPER"
+        assert role("2026-01-Esame.pdf") == "PAST_PAPER"
+
+    def test_lecture_with_a_year_prefix_is_not(self):
+        assert role("2024-06-Lezione 3.pdf") != "PAST_PAPER"
