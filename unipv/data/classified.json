@@ -18749,7 +18749,7 @@
    "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-06-text.pdf",
    "converted": false,
    "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2024-06-text.txt",
-   "role": "ADMIN",
+   "role": "PAST_PAPER",
    "chars": 2826,
    "scanned": false,
    "exam_date": "2024-06-21"
@@ -18759,7 +18759,7 @@
    "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZ/2024-07-Text.pdf",
    "converted": false,
    "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZ/2024-07-Text.txt",
-   "role": "NOTES",
+   "role": "PAST_PAPER",
    "chars": 3505,
    "scanned": false,
    "exam_date": "2024-07-09"
@@ -19409,7 +19409,7 @@
    "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-06-text.pdf",
    "converted": false,
    "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2024-06-text.txt",
-   "role": "ADMIN",
+   "role": "PAST_PAPER",
    "chars": 2826,
    "scanned": false,
    "exam_date": "2024-06-21"
@@ -19419,7 +19419,7 @@
    "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2024-07-Text.pdf",
    "converted": false,
    "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2024-07-Text.txt",
-   "role": "NOTES",
+   "role": "PAST_PAPER",
    "chars": 3505,
    "scanned": false,
    "exam_date": "2024-07-09"
@@ -19449,7 +19449,7 @@
    "original": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/FUZZY-SYST-EVOL-COMP/2026-2- fs_part2.pdf",
    "converted": false,
    "text": "raw/509487-FUZZY-SYSTEMS-AND-EVOLUTIONARY-COMPUTING/_text/FUZZY-SYST-EVOL-COMP/2026-2- fs_part2.txt",
-   "role": "SLIDES",
+   "role": "PAST_PAPER",
    "chars": 53263,
    "scanned": false,
    "exam_date": null
