@@ -1,0 +1,16 @@
+# Secrets - never commit these
+credentials.json
+token.json
+.env
+*.env
+!.env.example
+
+# Local assistant state
+data/
+*.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
