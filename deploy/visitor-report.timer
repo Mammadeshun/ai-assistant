@@ -1,0 +1,12 @@
+[Unit]
+Description=Run the switchers.events visitor report every morning
+
+[Timer]
+# Server clock is UTC; the suffix pins this to Momo's local time year-round.
+OnCalendar=*-*-* 08:00:00 Europe/Rome
+# Fire on next boot if the machine was down at 08:00.
+Persistent=true
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

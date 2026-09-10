@@ -1,0 +1,18 @@
+[Unit]
+Description=Daily switchers.events visitor report to Telegram
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+# Holds TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID. Kept out of git on purpose.
+EnvironmentFile=/etc/visitor-report.env
+ExecStart=/usr/bin/python3 /opt/visitor-report/visitor_report.py --daily --send --quiet
+
+# The log is the only thing this needs to touch.
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+NoNewPrivileges=true
+ReadOnlyPaths=/var/log/caddy
