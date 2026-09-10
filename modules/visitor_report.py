@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import gzip
 import hashlib
 import json
 import os
@@ -44,9 +45,16 @@ ROTATED_GLOB = "{stem}-*{ext}"
 BOT_PATTERN = re.compile(
     r"""
     bot\b | \bbots\b | spider | crawl | slurp | scraper | fetcher | archiver
-    | google(?!\ chrome) | bingpreview | yandex | baidu | duckduck | sogou | exabot
+    # Vendor names must be matched in their CRAWLER form only. Bare "google",
+    # "duckduck" or "pinterest" also appear in the User-Agents of real in-app
+    # browsers (the Google app, the DuckDuckGo browser, Pinterest's webview),
+    # and matching those silently deletes real visitors from every report.
+    | googlebot | googleother | google-inspectiontool | google-read-aloud
+    | mediapartners-google | apis-google | feedfetcher-google | googleweblight
+    | bingpreview | yandex\w*bot | baiduspider | duckduckbot | exabot
     | facebookexternalhit | facebot | twitterbot | slackbot | telegrambot | discordbot
-    | whatsapp | linkedinbot | pinterest | redditbot | embedly | quora | skypeuripreview
+    | whatsapp/ | linkedinbot | pinterestbot | redditbot | embedly | quorabot
+    | skypeuripreview
     | semrush | ahrefs | mj12 | dotbot | blexbot | dataforseo | serpstat | seokicks
     | petalbot | bytespider | applebot | amazonbot | ia_archiver | archive\.org
     | gptbot | claudebot | claude-web | anthropic | ccbot | perplexity | youbot
@@ -96,12 +104,23 @@ _SALT = os.urandom(16)
 # --------------------------------------------------------------------------
 
 def log_paths(primary: str) -> list[str]:
-    """The live log plus any rotated siblings, oldest first."""
+    """The live log plus any rotated siblings, oldest first.
+
+    Rotated files may be gzipped, so those are matched too - missing them would
+    drop whole days from the window without any visible error.
+    """
     stem, ext = os.path.splitext(primary)
     found = set(glob.glob(ROTATED_GLOB.format(stem=stem, ext=ext)))
+    found |= set(glob.glob(ROTATED_GLOB.format(stem=stem, ext=ext) + ".gz"))
     if os.path.exists(primary):
         found.add(primary)
     return sorted(found)
+
+
+def _open_log(path: str):
+    if path.endswith(".gz"):
+        return gzip.open(path, "rt", errors="replace")
+    return open(path, "r", errors="replace")
 
 
 def _header(headers: dict, name: str) -> str:
@@ -116,7 +135,7 @@ def iter_records(paths, tz):
     """Yield normalised request records from Caddy JSON access logs."""
     for path in paths:
         try:
-            fh = open(path, "r", errors="replace")
+            fh = _open_log(path)
         except OSError as e:
             print(f"warning: cannot read {path}: {e}", file=sys.stderr)
             continue
@@ -243,6 +262,7 @@ def analyze(records, start_day, end_day):
     pages = Counter()
     referrers = Counter()
     bot_uas = Counter()
+    bot_full_uas = Counter()  # kept in full for --show-bots audits
     statuses = Counter()
     not_found = Counter()
     all_visitors = set()
@@ -260,6 +280,7 @@ def analyze(records, start_day, end_day):
         if is_bot(rec):
             totals["bots"] += 1
             bot_uas[bot_name(rec["ua"])] += 1
+            bot_full_uas[rec["ua"] or "(no user-agent)"] += 1
             continue
 
         if rec["status"] == 404:
@@ -287,6 +308,7 @@ def analyze(records, start_day, end_day):
         "pages": pages,
         "referrers": referrers,
         "bot_uas": bot_uas,
+        "bot_full_uas": bot_full_uas,
         "statuses": statuses,
         "not_found": not_found,
         "unique_total": len(all_visitors),
@@ -427,6 +449,8 @@ def main(argv=None):
                     help="scheduled mode: last 7 complete days, ending yesterday")
     ap.add_argument("--tz", default=DEFAULT_TZ, help="timezone for day boundaries")
     ap.add_argument("--send", action="store_true", help="send the report to Telegram")
+    ap.add_argument("--show-bots", action="store_true",
+                    help="list every filtered User-Agent, to audit for false positives")
     ap.add_argument("--quiet", action="store_true", help="do not print to stdout")
     args = ap.parse_args(argv)
 
@@ -442,6 +466,16 @@ def main(argv=None):
 
     if not args.quiet:
         print(report)
+
+    # The filter can only be trusted if you can see what it removed. In-app
+    # browsers (Instagram, WhatsApp) send odd User-Agents; if one ever matches
+    # the bot pattern, a real visitor disappears with no other trace.
+    if args.show_bots and stats:
+        print("\nFiltered User-Agents (check for real visitors caught by mistake)")
+        if not stats["bot_full_uas"]:
+            print("  (none)")
+        for ua, c in stats["bot_full_uas"].most_common():
+            print(f"  {c:>5}  {ua}")
 
     if args.send:
         return 0 if send_telegram(report) else 1

@@ -55,7 +55,26 @@ journalctl -u visitor-report -n 30
   not referrals.
 
 Filtered totals are still printed at the bottom, so you can see how much of the
-traffic was crawlers.
+traffic was crawlers. To audit the filter itself:
+
+```bash
+python3 /opt/visitor-report/visitor_report.py --days 30 --show-bots
+```
+
+That lists every User-Agent that was removed. Worth a look occasionally: if a
+real visitor is ever caught by the bot pattern they vanish from the report with
+no other trace, and aggregates alone will never reveal it.
+
+`tests/test_bot_filter.py` guards this. It asserts that 17 real browsers -
+including the Instagram, Facebook, Google-app, DuckDuckGo and Pinterest in-app
+browsers - are never classified as bots, while 22 known crawlers always are.
+An early version of the pattern matched bare `google`, `duckduck` and
+`pinterest`, which silently deleted three classes of real mobile visitor; run
+the test after touching `BOT_PATTERN`.
+
+```bash
+python3 tests/test_bot_filter.py
+```
 
 ## How a "unique visitor" is counted
 
