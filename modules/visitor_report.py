@@ -23,6 +23,7 @@ import argparse
 import glob
 import gzip
 import hashlib
+import html
 import json
 import os
 import re
@@ -387,8 +388,25 @@ def format_report(stats, start_day, end_day, title="switchers.events"):
 # telegram
 # --------------------------------------------------------------------------
 
+def _post_telegram(token, payload, timeout):
+    data = json.dumps(payload).encode()
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=data,
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return bool(json.loads(resp.read()).get("ok", False))
+
+
 def send_telegram(message: str, token=None, chat_id=None, timeout=20) -> bool:
-    """Send plain text via the Telegram Bot API using only the stdlib."""
+    """Send the report via the Telegram Bot API using only the stdlib.
+
+    Sent inside a <pre> block: the report is column-aligned with a bar chart,
+    and Telegram's default proportional font would leave it ragged. Falls back
+    to plain text if the formatted send is rejected, so a markup problem can
+    never cost the whole report.
+    """
     token = token or os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = chat_id or os.environ.get("TELEGRAM_CHAT_ID", "")
     if not token or not chat_id:
@@ -396,21 +414,27 @@ def send_telegram(message: str, token=None, chat_id=None, timeout=20) -> bool:
               file=sys.stderr)
         return False
 
-    if len(message) > TELEGRAM_LIMIT:
-        message = message[: TELEGRAM_LIMIT - 20] + "\n... (truncated)"
+    # Leave room for the <pre> wrapper and for HTML escaping to expand the text.
+    budget = TELEGRAM_LIMIT - 200
+    if len(message) > budget:
+        message = message[:budget] + "\n... (truncated)"
 
-    data = json.dumps({"chat_id": chat_id, "text": message}).encode()
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendMessage",
-        data=data,
-        headers={"Content-Type": "application/json"},
-    )
+    formatted = {
+        "chat_id": chat_id,
+        "text": f"<pre>{html.escape(message)}</pre>",
+        "parse_mode": "HTML",
+    }
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            ok = json.loads(resp.read()).get("ok", False)
-            if not ok:
-                print("error: telegram rejected the message", file=sys.stderr)
-            return bool(ok)
+        if _post_telegram(token, formatted, timeout):
+            return True
+        print("warning: formatted send rejected, retrying as plain text",
+              file=sys.stderr)
+    except Exception as e:
+        print(f"warning: formatted send failed ({e}), retrying as plain text",
+              file=sys.stderr)
+
+    try:
+        return _post_telegram(token, {"chat_id": chat_id, "text": message}, timeout)
     except Exception as e:  # network, auth, rate limit
         print(f"error: telegram send failed: {e}", file=sys.stderr)
         return False
