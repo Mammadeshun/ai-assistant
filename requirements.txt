@@ -1,0 +1,18 @@
+# Runs on the server (Linux) and on your PC.
+# Windows-only extras live in requirements-windows.txt.
+
+requests>=2.31
+schedule>=1.2
+
+# Kiro scraper
+selenium>=4.15
+webdriver-manager>=4.0
+beautifulsoup4>=4.12
+
+# Volume-tier models
+groq>=0.11
+
+# Gmail
+google-api-python-client>=2.100
+google-auth>=2.23
+google-auth-oauthlib>=1.1

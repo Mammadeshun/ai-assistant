@@ -1,8 +1,17 @@
 import os
 import shutil
-import winshell
+import platform
 import subprocess
 from pathlib import Path
+
+IS_WINDOWS = platform.system() == "Windows"
+
+# winshell is a Windows-only package. Importing it on Linux raises ImportError,
+# which would take down main.py at startup, so it stays optional.
+try:
+    import winshell
+except Exception:
+    winshell = None
 
 USER_HOME = str(Path.home())
 
@@ -34,7 +43,7 @@ def purge_developer_caches():
     try:
         subprocess.run(["pip", "cache", "purge"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run(["conda", "clean", "--all", "-y"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    except:
+    except Exception:
         pass
 
 def aggressive_clean():
@@ -56,14 +65,25 @@ def aggressive_clean():
             except Exception:
                 pass
 
-    print("   -> Emptying Windows Recycle Bin...")
-    try:
-        winshell.recycle_bin().empty(confirm=False, show_progress=False, sound=False)
-    except Exception:
-        pass
+    if winshell is not None:
+        print("   -> Emptying Windows Recycle Bin...")
+        try:
+            winshell.recycle_bin().empty(confirm=False, show_progress=False, sound=False)
+        except Exception:
+            pass
     print("✅ Daily System Clean Complete!")
 
 def run_janitor():
+    """Clean the local machine's caches.
+
+    This only ever runs on Windows. On the server the assistant shares a disk
+    with the client sites, so a job that deletes whatever it finds has no
+    business running there.
+    """
+    if not IS_WINDOWS:
+        print("🧹 Janitor skipped (Windows-only job, this host is "
+              f"{platform.system()}).")
+        return
     aggressive_clean()
 
 if __name__ == "__main__":

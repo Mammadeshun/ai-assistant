@@ -1,0 +1,5 @@
+# Install on your PC only — the file janitor's recycle-bin step needs these.
+# The server never runs the janitor (see modules/file_janitor.py).
+-r requirements.txt
+winshell>=0.6
+pywin32>=306

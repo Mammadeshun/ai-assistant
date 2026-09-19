@@ -1,0 +1,40 @@
+# The Telegram assistant: scheduler + command listener.
+#   cp deploy/assistant.service /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now assistant
+#   journalctl -u assistant -f
+
+[Unit]
+Description=AI Assistant (Telegram bot + scheduled jobs)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agent
+Group=agent
+WorkingDirectory=/opt/ai-assistant
+
+# systemd parses this itself: plain KEY=value lines, no `export`, no quotes.
+EnvironmentFile=/opt/ai-assistant/.env
+Environment=PYTHONUNBUFFERED=1
+
+ExecStart=/opt/ai-assistant/.venv/bin/python main.py
+
+Restart=always
+RestartSec=10
+# Don't let a crash-loop hammer the Telegram API.
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+# The assistant reads mail and scrapes a course portal. It has no business
+# touching anything outside its own directory.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/ai-assistant/data
+# webdriver-manager caches the chromedriver binary under the home directory.
+ReadWritePaths=/home/agent/.wdm
+
+[Install]
+WantedBy=multi-user.target

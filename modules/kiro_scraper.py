@@ -82,7 +82,20 @@ def check_kiro_updates():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
     
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    # On the server Chrome lives at a known path and a matching chromedriver is
+    # usually already installed; downloading one on every run is slow and fails
+    # whenever the download host is unreachable. Both are overridable by env.
+    chrome_binary = os.environ.get("CHROME_BINARY", "")
+    if chrome_binary:
+        chrome_options.binary_location = chrome_binary
+
+    chromedriver = os.environ.get("CHROMEDRIVER_PATH", "")
+    if chromedriver and os.path.exists(chromedriver):
+        service = Service(chromedriver)
+    else:
+        service = Service(ChromeDriverManager().install())
+
+    driver = webdriver.Chrome(service=service, options=chrome_options)
     
     try:
         print("   -> Logging in via SAML2...")
