@@ -58,7 +58,8 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
 apt-get install -y -qq \
   python3 python3-venv python3-pip \
-  git curl ca-certificates gnupg tmux ufw unzip
+  git curl ca-certificates gnupg tmux unzip
+# ufw is not in this list on purpose: see the Firewall section.
 
 # ── Google Chrome (for the Selenium scraper) ────────────────────────────────
 # Ubuntu's chromium is a snap on recent releases, which does not play well with
@@ -100,15 +101,37 @@ fi
 install -d -o "$APP_USER" -g "$APP_USER" "$APP_DIR"
 install -d -o "$APP_USER" -g "$APP_USER" "$APP_DIR/data"
 
+# `ssh agent@server` and the token.json scp both need a key on this user.
+# Reuse root's, once; never overwrite keys that are already there.
+AGENT_KEYS="/home/$APP_USER/.ssh/authorized_keys"
+if [[ -s "$AGENT_KEYS" ]]; then
+  echo "$AGENT_KEYS already present"
+elif [[ -s /root/.ssh/authorized_keys ]]; then
+  install -d -m 0700 -o "$APP_USER" -g "$APP_USER" "/home/$APP_USER/.ssh"
+  install -m 0600 -o "$APP_USER" -g "$APP_USER" /root/.ssh/authorized_keys "$AGENT_KEYS"
+  echo "copied root's authorized_keys to $APP_USER"
+fi
+
 # ── Firewall ────────────────────────────────────────────────────────────────
 # Belt and braces alongside the Hetzner Cloud Firewall. The router port is
 # deliberately absent: it binds to localhost and must stay unreachable.
+#
+# Skipped when iptables-persistent already manages the rules. Installing ufw
+# makes apt remove iptables-persistent, and with it any saved rule ufw knows
+# nothing about, e.g. a DOCKER-USER drop that keeps a container port private.
+# ufw cannot filter Docker-published ports anyway.
 say "Firewall"
-ufw allow 22/tcp
-ufw allow 80/tcp
-ufw allow 443/tcp
-ufw --force enable
-ufw status verbose
+if dpkg-query -W -f='${Status}' iptables-persistent 2>/dev/null | grep -q '^install ok installed'; then
+  echo "skipped: iptables-persistent manages this host's firewall; leaving it alone"
+  iptables -S DOCKER-USER 2>/dev/null || true
+else
+  apt-get install -y -qq ufw
+  ufw allow 22/tcp
+  ufw allow 80/tcp
+  ufw allow 443/tcp
+  ufw --force enable
+  ufw status verbose
+fi
 
 # ── SSH hardening (opt-in) ──────────────────────────────────────────────────
 say "SSH hardening"
