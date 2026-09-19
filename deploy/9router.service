@@ -1,0 +1,51 @@
+# 9router — the local AI router (https://github.com/decolua/9router).
+#
+# Routes Claude Code and other CLI tools through a subscription -> cheap -> free
+# fallback chain, and compresses tool output before it reaches the model.
+#
+#   sudo npm install -g 9router
+#   which 9router          # confirm the path below matches
+#   cp deploy/9router.service /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now 9router
+#
+# Bound to 127.0.0.1 on purpose. The dashboard holds OAuth tokens for your
+# Claude, Copilot and Cursor accounts — exposing it on 0.0.0.0 puts your
+# subscriptions behind nothing but a JWT secret. Reach it over an SSH tunnel:
+#   ssh -L 20128:127.0.0.1:20128 agent@<server-ip>
+
+[Unit]
+Description=9router (AI router: subscription -> cheap -> free fallback)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agent
+Group=agent
+WorkingDirectory=/home/agent
+
+Environment=HOME=/home/agent
+Environment=NODE_ENV=production
+Environment=PORT=20128
+Environment=HOSTNAME=127.0.0.1
+Environment=DATA_DIR=/home/agent/.9router
+
+# JWT_SECRET for the dashboard, plus any provider API keys.
+EnvironmentFile=/opt/ai-assistant/.env
+
+ExecStart=/usr/bin/9router
+
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=false
+# OAuth tokens and quota state live in the SQLite db here.
+ReadWritePaths=/home/agent/.9router
+
+[Install]
+WantedBy=multi-user.target

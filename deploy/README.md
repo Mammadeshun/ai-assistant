@@ -14,10 +14,19 @@ Target: `ubuntu-4gb-hel1-1` — 2 vCPU, 4 GB RAM, 80 GB disk, Helsinki.
 | **Volume** | Groq / Gemini (free) | Unattended, 24/7, on the server | Summarising, classifying, drafting — everything high-volume |
 | **Brain** | Claude Opus (your subscription) | Interactive, when you SSH in | Judgement calls, building, anything that has to be right |
 
-They do not mix, for one concrete reason: **the subscription login is
-interactive and cannot be scripted.** So the brain never runs from a timer.
-Instead the volume tier writes anything it can't confidently judge to a queue,
-and you drain that queue with `./deploy/brain.sh`.
+Two ways to connect them:
+
+1. **Through 9router** — it puts the subscription at the top of a
+   subscription → cheap → free chain and drops down a tier when quota runs
+   out. Best for *coding* work, where you want the brain first and a cheaper
+   model rather than a dead end. See the 9router section below.
+2. **Through the escalation queue** — for the Python app's own unattended
+   jobs. A timer runs at 03:00 with nobody watching, so the cheap tier does
+   the work and writes anything it can't judge to a queue you drain later
+   with `./deploy/brain.sh`.
+
+Use both. The router handles interactive coding; the queue handles the
+unattended jobs, where an escalation has to wait for a human anyway.
 
 The volume tier falls through providers on rate limits (`groq` → `gemini` →
 `groq-small`), the same way the router does for Claude Code. One capped free
@@ -97,7 +106,7 @@ Both `token.json` and `credentials.json` are gitignored. Keep them that way.
 
 ```bash
 sudo cp deploy/assistant.service /etc/systemd/system/
-sudo cp deploy/ccr.service       /etc/systemd/system/
+sudo cp deploy/9router.service    /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now assistant
 ```
@@ -113,33 +122,63 @@ You should get a Telegram message when you send the bot `good morning`.
 
 ---
 
-## The router
+## 9router
+
+[9router](https://github.com/decolua/9router) routes CLI tools through a
+**subscription → cheap → free** fallback chain, and trims tokens on the way
+past. Your Claude subscription sits at the top of that chain as an OAuth
+provider, so it is the brain by default and the cheaper tiers catch the
+overflow automatically when quota runs out.
 
 ```bash
-sudo npm install -g @musistudio/claude-code-router
-ccr -h          # confirm the serve subcommand for your version
+sudo npm install -g 9router
+which 9router          # confirm it matches ExecStart in the unit file
+
+sudo cp deploy/9router.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now 9router
 ```
 
-`ccr.service` uses `ccr serve --no-open`. Older releases use `ccr start` —
-**check `ccr -h` and fix `ExecStart` before enabling the unit.**
+Dashboard on `http://127.0.0.1:20128`. Reach it from your laptop over a tunnel:
 
 ```bash
-sudo systemctl enable --now ccr
+ssh -L 20128:127.0.0.1:20128 agent@<server-ip>
 ```
 
-It binds to localhost. Leave it that way: an exposed router port is an open
-endpoint for draining your API keys. If you need it remotely, tunnel it:
+**Do not set `HOSTNAME=0.0.0.0`.** The upstream docs offer it for VPS use, but
+that dashboard holds live OAuth tokens for every account you connect — Claude,
+Copilot, Cursor. On a public IP the only thing between those tokens and the
+internet is `JWT_SECRET`. The tunnel costs nothing and removes the question.
+Set a long random `JWT_SECRET` in `.env` regardless.
 
-```bash
-ssh -L 3456:127.0.0.1:3456 agent@<server-ip>
+### Point Claude Code at it
+
+```json
+// ~/.claude/config.json
+{
+  "anthropic_api_base": "http://127.0.0.1:20128/v1",
+  "anthropic_api_key": "<your 9router api key>"
+}
 ```
 
-Then, on the server:
+State (accounts, tokens, quota counters) lives in `~/.9router/db/data.sqlite`.
+Back that up — re-authenticating every provider is tedious.
 
-- `ccr code` — Claude Code on free models, for grunt work
-- `claude` — Claude Code on your subscription, for the brain work
+### What it gives you
 
----
+| Feature | Effect |
+|---|---|
+| Auto fallback | Subscription → cheap (GLM, MiniMax, Kimi) → free (Kiro, OpenCode, Vertex) when quota exhausts |
+| Multi-account | Several accounts per provider, round-robin or priority |
+| Quota tracking | Live consumption and reset countdowns in the dashboard |
+| RTK token saver | Compresses `git diff`, `grep`, `ls` output before it hits the model |
+| Caveman / Ponytail | Cuts output tokens and biases toward minimal diffs |
+
+**One thing to weigh yourself:** routing a subscription's OAuth credential
+through third-party software is not obviously within Anthropic's terms, and the
+downside if it's judged not to be lands on your account. The volume tier in
+`modules/llm.py` is unaffected either way — it calls provider APIs with your own
+keys. Your call; just make it knowingly rather than by accident.
 
 ## Daily use
 

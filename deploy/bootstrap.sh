@@ -147,8 +147,8 @@ Next steps — see deploy/README.md for the detail:
   3. Copy token.json from your laptop — Gmail OAuth cannot run headless
   4. Install the services:
        cp deploy/assistant.service /etc/systemd/system/
-       cp deploy/ccr.service       /etc/systemd/system/
+       cp deploy/9router.service    /etc/systemd/system/
        systemctl daemon-reload
-       systemctl enable --now assistant ccr
+       systemctl enable --now assistant 9router
 
 NEXT

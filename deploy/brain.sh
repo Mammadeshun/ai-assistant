@@ -7,7 +7,8 @@
 #
 # This is interactive on purpose. The subscription login cannot be scripted, so
 # the brain never runs from a timer — it drains the queue when you show up.
-# For unattended work use the volume tier (modules/llm.py) or `ccr code`.
+# For unattended work use the volume tier (modules/llm.py). For interactive
+# coding on cheaper models, point Claude Code at 9router (see deploy/README.md).
 
 set -euo pipefail
 
