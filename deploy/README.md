@@ -260,8 +260,22 @@ A combo is a named fallback chain, selected by putting its name in the
 
 | Combo | Chain | Used by |
 |---|---|---|
-| `brain` | Claude subscription (`cc/claude-opus-5`) → ChatGPT/Codex (`cx/gpt-6-astra`) → cheap → free | Claude Code, `brain.sh`, interactive work |
-| `volume` | cheap (GLM, MiniMax, Kimi) → free (Kiro, OpenCode, Vertex) | this app — `VOLUME_MODEL=volume` in `.env` |
+| `brain` | `cc/claude-opus-5` → `cx/gpt-6-astra` → `cc/claude-sonnet-5` → `groq/openai/gpt-oss-120b` | Claude Code (`ANTHROPIC_MODEL=brain`), `brain.sh` |
+| `volume` | `groq/openai/gpt-oss-120b` → `gcli/grok-4.6` → `cx/gpt-5.5` → `cc/claude-haiku-*` | this app — `VOLUME_MODEL=volume` |
+
+Free tiers lead the volume chain so unattended work never spends a
+subscription; the subscriptions sit at the back so a capped free tier
+degrades the briefing instead of failing it. Measured latencies when this was
+built: groq 0.3s, grok 8.7s, gpt-5.5 1.3s, haiku 0.7s.
+
+Combos live in the router's `combos` table and a client selects one by name
+in the `model` field. Claude Code logs `unrecognized_model` for a combo name
+and works anyway. `VOLUME_CHAIN` keeps one plain model behind the combo, so a
+renamed or deleted combo cannot stop the briefing.
+
+Most `groq/*` ids in the catalogue are retired and answer 404 - only
+`groq/openai/gpt-oss-120b` works. It is a reasoning model: give it room, or
+it spends the whole budget thinking and returns an empty completion.
 
 Keep unattended traffic on `volume`. Auto-fallback only drops a tier when
 quota runs *out*, so a subscription at the top of the bot's chain would spend
