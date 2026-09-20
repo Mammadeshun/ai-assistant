@@ -19,7 +19,15 @@ ENV_FILE="${ENV_FILE:-/opt/ai-assistant/.env}"
 VENV_PY="${VENV_PY:-/opt/ai-assistant/.venv/bin/python}"
 
 read -rsp "Composio API key: " COMPOSIO_API_KEY; echo
+# A pasted key often carries a trailing newline or space, which the API then
+# rejects as invalid - indistinguishable from a wrong key in the 401.
+COMPOSIO_API_KEY="${COMPOSIO_API_KEY//[[:space:]]/}"
 [[ -n "$COMPOSIO_API_KEY" ]] || { echo "nothing entered, aborting" >&2; exit 1; }
+
+# Echo only what the API itself echoes back in errors, so you can compare it
+# with the dashboard without exposing the key.
+printf 'read %d characters: %s…%s\n' "${#COMPOSIO_API_KEY}" \
+  "${COMPOSIO_API_KEY:0:3}" "${COMPOSIO_API_KEY: -4}"
 
 # ── 1. the assistant ────────────────────────────────────────────────────────
 say() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }
