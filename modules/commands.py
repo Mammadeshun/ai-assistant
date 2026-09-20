@@ -7,6 +7,7 @@ mean exactly that, every time, with no model in the loop.
     /lead <id>            everything known about one
     /scan [n]             scan unscanned leads and draft openers
     /digest               the 08:00 summary, now
+    /shot <id>            the screenshot of what is wrong
     /wa <id>              one-tap WhatsApp link, message pre-filled
     /draft <id>           read the email before it goes
     /email <id>           send that email (this is the approval)
@@ -116,7 +117,25 @@ def handle(text, send):
         else:
             message = lead.get("draft") or outreach.draft_opener(lead, store.findings_of(lead)) or ""
             link = outreach.whatsapp_link(lead, message)
-            send(f"{lead['name']}\n\n{message}\n\n👉 {link}\n\nDopo l'invio: /sent {lead['id']}")
+            extra = ""
+            if os.path.exists(os.path.join(scanner.SHOTS_DIR, f"lead-{lead['id']}.png")):
+                extra = f"\n/shot {lead['id']} per lo screenshot da allegare"
+            send(f"{lead['name']}\n\n{message}\n\n👉 {link}\n\n"
+                 f"Dopo l'invio: /sent {lead['id']}{extra}")
+
+    elif command == "shot":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        else:
+            path = os.path.join(scanner.SHOTS_DIR, f"lead-{lead['id']}.png")
+            if not os.path.exists(path):
+                send(f"Nessuno screenshot per {lead['name']}. "
+                     f"Lo scatto si crea quando la scansione trova un problema di layout.")
+            else:
+                from . import telegram_bot
+                telegram_bot.send_telegram_photo(
+                    path, f"{lead['name']}: {outreach.describe(store.findings_of(lead))}")
 
     elif command == "draft":
         lead, error = _lead_or_error(first)

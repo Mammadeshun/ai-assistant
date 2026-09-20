@@ -43,6 +43,30 @@ def send_telegram_message(message):
     except Exception as e:
         print(f"Telegram connection error: {e}")
 
+def send_telegram_photo(path, caption=""):
+    """Send an image - the evidence an opener refers to.
+
+    Captions are capped at 1024 characters by Telegram, so a long draft goes
+    as a separate message rather than being silently truncated.
+    """
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+    try:
+        with open(path, "rb") as photo:
+            response = _session.post(url, data={"chat_id": CHAT_ID,
+                                                "caption": caption[:1024]},
+                                     files={"photo": photo},
+                                     timeout=REQUEST_TIMEOUT)
+        if response.status_code == 200:
+            print("📱 Screenshot sent!")
+            return True
+        print(f"Failed to send screenshot: {response.text[:200]}")
+    except OSError as e:
+        print(f"Screenshot not readable: {e}")
+    except Exception as e:
+        print(f"Telegram connection error: {e}")
+    return False
+
+
 # Let's test it immediately!
 if __name__ == "__main__":
     test_msg = "🤖 Hello! I am your Python Assistant.\n\nYour PC cleanup is done and I am watching your emails!"
