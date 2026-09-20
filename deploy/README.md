@@ -387,6 +387,47 @@ dedup rules and the phone-number parsing, standard library only.
 sending is refused while it is unset, because an unsigned cold email is what
 these rules exist to prevent.
 
+## From your phone
+
+Telegram is the dashboard. There is no second login to keep track of.
+
+```
+/status              units, uptime, RAM, disk, a live model round-trip,
+                     today's requests per provider and cost, lead counts,
+                     backup age, next scheduled job
+/logs 50             the service journal
+/restart [unit]      assistant (default) or 9router
+/digest  /leads  /lead 3  /wa 3  /draft 3  /email 3
+```
+
+A unit that fails announces itself: `OnFailure=` sends the unit name and the
+last dozen log lines to Telegram, so you learn about a crash then rather than
+when the 08:00 briefing fails to arrive.
+
+Install the pieces:
+
+```bash
+sudo install -m 700 deploy/notify-failure /usr/local/bin/notify-failure
+sudo cp deploy/notify-failure@.service /etc/systemd/system/
+sudo install -m 440 deploy/assistant.sudoers /etc/sudoers.d/assistant
+sudo usermod -aG systemd-journal agent
+for u in assistant 9router; do
+  sudo mkdir -p /etc/systemd/system/$u.service.d
+  printf '[Unit]\nOnFailure=notify-failure@%%N.service\n' \
+    | sudo tee /etc/systemd/system/$u.service.d/onfailure.conf
+done
+sudo systemctl daemon-reload
+```
+
+`/restart` works through a sudoers rule limited to restarting those two
+units. The bot reads input from the internet, so it gets two commands and no
+shell; `visudo -c` after any edit.
+
+**What this cannot tell you:** that the server itself is unreachable. Nothing
+running on a box can report the box being down. If that matters, point an
+external check (healthchecks.io, UptimeRobot) at a site Caddy serves, or have
+the backup timer ping a dead-man's switch.
+
 ## Daily use
 
 ```bash
