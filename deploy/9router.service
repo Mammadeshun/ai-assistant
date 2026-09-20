@@ -28,8 +28,6 @@ WorkingDirectory=/home/agent
 
 Environment=HOME=/home/agent
 Environment=NODE_ENV=production
-Environment=PORT=20128
-Environment=HOSTNAME=127.0.0.1
 Environment=DATA_DIR=/home/agent/.9router
 
 # The router's own secrets: JWT_SECRET, API_KEY_SECRET, MACHINE_ID_SALT,
@@ -39,7 +37,17 @@ Environment=DATA_DIR=/home/agent/.9router
 # it as root before dropping to the service user.
 EnvironmentFile=/etc/9router.env
 
-ExecStart=/usr/bin/9router
+# --host is the only thing that binds this to localhost. Setting HOSTNAME in
+# the environment does nothing: cli.js parses --host (default 0.0.0.0) and
+# passes HOSTNAME=<host> to the server itself, overwriting whatever is set
+# here. Without the flag the dashboard, and the OAuth tokens behind it, would
+# listen on the public IP. Verify after any change:
+#   ss -tlnp | grep 20128     # must show 127.0.0.1:20128, never 0.0.0.0
+#
+# --skip-update stops a service that holds live OAuth credentials from
+# upgrading itself unattended; update deliberately with npm -g.
+# --log sends the server's output to the journal instead of /dev/null.
+ExecStart=/usr/bin/9router --host 127.0.0.1 --port 20128 --no-browser --log --skip-update
 
 Restart=always
 RestartSec=5
