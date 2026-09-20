@@ -49,6 +49,16 @@ EnvironmentFile=/etc/9router.env
 # --log sends the server's output to the journal instead of /dev/null.
 ExecStart=/usr/bin/9router --host 127.0.0.1 --port 20128 --no-browser --log --skip-update
 
+# Type=simple means systemd calls this "active" the moment the process is
+# spawned, even if it never serves anything. That is exactly what happened on
+# the first reboot: cli.js runs ensureTrayRuntime() before it parses argv, that
+# shelled out to `npm install systray2` as the service user, the install hung,
+# and the unit sat "active" for minutes without a listening socket. Pre-install
+# systray2 into the package as root so the install never runs:
+#   cd /usr/lib/node_modules/9router && npm install systray2@2.1.4 --no-save
+# and fail the unit if the port is not up, so a hang restarts instead of lying.
+ExecStartPost=/bin/bash -c 'for i in $(seq 1 30); do ss -ltn | grep -q "127.0.0.1:20128" && exit 0; sleep 2; done; echo "9router did not listen within 60s" >&2; exit 1'
+
 Restart=always
 RestartSec=5
 
