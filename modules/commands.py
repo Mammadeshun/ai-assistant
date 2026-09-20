@@ -43,7 +43,8 @@ CATALOGUE = [
     ("/restart [unit]", "riavvia l'assistente o il router"),
     ("/leads [stato]", "elenco dei lead, eventualmente filtrato per stato"),
     ("/lead <id>", "tutto su un lead: problemi, bozza, note, stato"),
-    ("/digest", "il riepilogo del giorno: chi chiamare, cosa inviare"),
+    ("/digest", "riepilogo dei LEAD di lavoro: chi chiamare oggi, quali "
+                "messaggi inviare. NON riguarda la posta in arrivo"),
     ("/scan [n]", "analizza i lead non ancora analizzati e scrive le bozze"),
     ("/wa <id>", "link WhatsApp con il messaggio già scritto"),
     ("/shot <id>", "screenshot del problema trovato sul sito"),
@@ -57,7 +58,8 @@ CATALOGUE = [
     ("/add Nome | Città | sito | tel | email", "aggiunge un lead"),
     ("/import <righe>", "aggiunge molti lead, uno per riga"),
     ("/signature <testo>", "con che firma partono le email"),
-    ("morning_routine", "briefing email del mattino, ora"),
+    ("morning_routine", "leggi la POSTA IN ARRIVO (Gmail) e riassumi le email "
+                        "ricevute: novità nella mail, cosa è arrivato oggi"),
     ("kiro_check", "novità sui corsi universitari (spento senza credenziali)"),
 ]
 
