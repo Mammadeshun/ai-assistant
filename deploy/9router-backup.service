@@ -1,0 +1,6 @@
+[Unit]
+Description=Snapshot 9router state (accounts, OAuth tokens, quota)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/9router-backup

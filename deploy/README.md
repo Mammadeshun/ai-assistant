@@ -264,8 +264,27 @@ block of `~/.claude/settings.json`, and no `/v1` suffix (Claude Code appends
 ```
 
 State (accounts, tokens, quota counters) lives in
-`~/.9router/db/data.sqlite`. Back that up — re-authenticating every provider
-is tedious.
+`~/.9router/db/data.sqlite`. Re-authenticating every provider by hand is what
+a backup saves you:
+
+```bash
+sudo install -m 700 deploy/9router-backup /usr/local/bin/9router-backup
+sudo cp deploy/9router-backup.service deploy/9router-backup.timer /etc/systemd/system/
+sudo systemctl daemon-reload && sudo systemctl enable --now 9router-backup.timer
+```
+
+Daily at 04:30 Europe/Rome into `/root/backups/9router/`, seven kept, taken
+with SQLite's online backup API so it's safe while the router is running. Same
+disk as the original, so it covers corruption and mistakes, not disk loss.
+
+### The app's API key
+
+`REQUIRE_API_KEY=true` means the app needs a key. Keys are validated by a
+plain lookup (`SELECT isActive FROM apiKeys WHERE key = ?`), not a signature,
+so one can be inserted directly when the dashboard isn't reachable — that's
+how the `assistant-app` key in `.env` was created. To rotate it: delete the
+key in Dashboard → API Keys, issue a new one, and update `VOLUME_API_KEY` in
+`.env` plus `ANTHROPIC_AUTH_TOKEN` in `/home/agent/.claude/settings.json`.
 
 ### What it gives you
 

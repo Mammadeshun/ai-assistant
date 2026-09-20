@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily 9router state snapshot
+
+[Timer]
+OnCalendar=*-*-* 04:30:00 Europe/Rome
+Persistent=true
+
+[Install]
+WantedBy=timers.target

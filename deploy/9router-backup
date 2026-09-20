@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Consistent snapshot of 9router's state: accounts, OAuth tokens, quota
+# counters. Re-authenticating every provider by hand is what this avoids.
+# Same disk as the original, so it covers corruption and mistakes, not disk loss.
+set -euo pipefail
+python3 - <<'PY'
+import sqlite3, datetime, pathlib
+dest = pathlib.Path("/root/backups/9router")
+dest.mkdir(parents=True, exist_ok=True)
+dest.chmod(0o700)
+dst = dest / ("data-%s.sqlite" % datetime.date.today().isoformat())
+src = sqlite3.connect("file:/home/agent/.9router/db/data.sqlite?mode=ro", uri=True)
+out = sqlite3.connect(str(dst))
+src.backup(out)          # online backup API: safe while the service is running
+out.close(); src.close()
+dst.chmod(0o600)
+print("backed up ->", dst)
+PY
+# keep the 7 most recent
+ls -1t /root/backups/9router/data-*.sqlite | tail -n +8 | xargs -r rm -f
