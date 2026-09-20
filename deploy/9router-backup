@@ -26,6 +26,11 @@ for name, source in (("data", "/home/agent/.9router/db/data.sqlite"),
     print("backed up ->", dst)
 PY
 # keep the 7 most recent
+# A stamp the assistant can stat: the backups themselves stay root-only
+# because they contain OAuth tokens.
+date -Iseconds > /var/lib/assistant-backup.stamp
+chmod 644 /var/lib/assistant-backup.stamp
+
 for prefix in data leads; do
   ls -1t /root/backups/9router/${prefix}-*.sqlite 2>/dev/null | tail -n +8 | xargs -r rm -f
 done

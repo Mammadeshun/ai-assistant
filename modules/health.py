@@ -16,7 +16,10 @@ import requests
 
 UNITS = ("assistant", "9router", "caddy", "docker")
 ROUTER_DB = os.environ.get("ROUTER_DB", "/home/agent/.9router/db/data.sqlite")
-BACKUP_DIR = os.environ.get("BACKUP_DIR", "/root/backups/9router")
+# The backups themselves live under /root, which this service cannot read -
+# correctly, since they contain OAuth tokens. The backup script drops a
+# world-readable stamp instead, so /status can still report freshness.
+BACKUP_STAMP = os.environ.get("BACKUP_STAMP", "/var/lib/assistant-backup.stamp")
 
 
 def _run(args, timeout=5):
@@ -73,7 +76,11 @@ def uptime():
 
 
 def router_usage(days=1):
-    """Today's traffic per provider, straight from the router's database."""
+    """Traffic per provider from the router's own log.
+
+    usageHistory is the per-request table; usageDaily exists but is a rollup
+    that lags, so the live answer comes from the detail rows.
+    """
     if not os.path.exists(ROUTER_DB):
         return {}
     since = (datetime.date.today() - datetime.timedelta(days=days - 1)).isoformat()
@@ -81,12 +88,14 @@ def router_usage(days=1):
         conn = sqlite3.connect(f"file:{ROUTER_DB}?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
         rows = conn.execute(
-            "SELECT provider, SUM(requests) requests, SUM(inputTokens + outputTokens) tokens"
-            " FROM usageDaily WHERE date >= ? GROUP BY provider ORDER BY requests DESC",
-            (since,)).fetchall()
+            "SELECT provider, COUNT(*) requests,"
+            "       SUM(COALESCE(promptTokens,0) + COALESCE(completionTokens,0)) tokens,"
+            "       SUM(COALESCE(cost,0)) cost"
+            " FROM usageHistory WHERE timestamp >= ?"
+            " GROUP BY provider ORDER BY requests DESC", (since,)).fetchall()
         conn.close()
-        return {r["provider"]: {"requests": r["requests"] or 0, "tokens": r["tokens"] or 0}
-                for r in rows}
+        return {(r["provider"] or "?"): {"requests": r["requests"], "tokens": r["tokens"] or 0,
+                                        "cost": r["cost"] or 0} for r in rows}
     except sqlite3.Error:
         return {}
 
@@ -117,14 +126,10 @@ def gmail_check():
 
 def last_backup():
     try:
-        files = [os.path.join(BACKUP_DIR, f) for f in os.listdir(BACKUP_DIR)]
+        age_hours = (time.time() - os.path.getmtime(BACKUP_STAMP)) / 3600
     except OSError:
         return None
-    if not files:
-        return None
-    newest = max(files, key=os.path.getmtime)
-    age_hours = (time.time() - os.path.getmtime(newest)) / 3600
-    return {"name": os.path.basename(newest), "age_hours": age_hours}
+    return {"age_hours": age_hours}
 
 
 def next_jobs():
@@ -160,8 +165,10 @@ def summary():
 
     usage = router_usage()
     if usage:
-        lines.append("📊 oggi: " + " · ".join(
-            f"{p} {v['requests']}req" for p, v in list(usage.items())[:4]))
+        total_cost = sum(v["cost"] for v in usage.values())
+        detail = " · ".join(f"{p} {v['requests']}" for p, v in list(usage.items())[:4])
+        lines.append(f"📊 richieste oggi: {detail}"
+                     + (f" · ${total_cost:.2f}" if total_cost else ""))
 
     counts = store.counts()
     if counts:
