@@ -9,8 +9,8 @@ selenium>=4.15
 webdriver-manager>=4.0
 beautifulsoup4>=4.12
 
-# Volume-tier models
-groq>=0.11
+# Volume-tier models go through 9router (see modules/llm.py), which speaks
+# plain HTTP, so no provider SDK is needed here.
 
 # Gmail
 google-api-python-client>=2.100

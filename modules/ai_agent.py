@@ -1,8 +1,4 @@
-import os
-import json
-from groq import Groq
-
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+from .llm import ask_volume_json
 
 # ── Tool definitions — Llama reads these to understand what it can do ──
 TOOLS = [
@@ -60,28 +56,21 @@ User message: "{user_message}"
 """
 
 def understand_message(user_message):
-    """Uses Llama to parse a natural language message into a tool + params"""
+    """Parse a natural language message into a tool + params.
+
+    ask_volume_json() handles the fence-stripping and JSON salvage that free
+    models make necessary, and falls through the provider chain on limits.
+    """
     try:
-        client = Groq(api_key=GROQ_API_KEY)
-        response = client.chat.completions.create(
-            messages=[{"role": "user", "content": build_prompt(user_message)}],
-            model="llama-3.3-70b-versatile",
-            temperature=0.0  # deterministic — we want consistent JSON
-        )
-        raw = response.choices[0].message.content.strip()
-
-        # Strip markdown code fences if Llama wraps it anyway
-        if raw.startswith("```"):
-            raw = raw.split("```")[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-
-        result = json.loads(raw)
-        return result
-
+        result = ask_volume_json(build_prompt(user_message))
     except Exception as e:
         print(f"❌ Agent error: {e}")
         return {"tool": "unknown", "params": {}}
+
+    if not isinstance(result, dict) or "tool" not in result:
+        print(f"❌ Agent returned an unexpected shape: {result!r}")
+        return {"tool": "unknown", "params": {}}
+    return result
 
 
 if __name__ == "__main__":

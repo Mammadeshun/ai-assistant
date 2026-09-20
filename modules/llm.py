@@ -93,6 +93,11 @@ def _call(link, messages, max_tokens, temperature):
             headers={
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
+                # 9router applies Caveman/Ponytail to every request that passes
+                # through it, by injecting system prompts. That suits a coding
+                # CLI; it mangles an Italian briefing or a client-facing draft.
+                # Providers that aren't the router ignore an unknown X- header.
+                "X-9Router-Token-Saver": "off",
             },
             json={
                 "model": link["model"],

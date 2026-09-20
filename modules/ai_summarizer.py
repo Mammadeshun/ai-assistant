@@ -1,14 +1,19 @@
-import os
-from groq import Groq
+"""The morning briefing: 15 emails in, a few useful lines out.
 
-# Paste your Groq API key here
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+Model calls go through modules/llm.py, which points at 9router. No provider
+SDK and no API key in here on purpose - the router owns the accounts.
+"""
+
+from .llm import ask_volume, VolumeLLMError
 
 def summarize_emails(email_list):
     if not email_list:
         return "No new emails to summarize."
 
-    email_text = "\\n\\n".join([f"From: {e['from']}\\nSubject: {e['subject']}\\nBody Preview: {e['snippet']}" for e in email_list])
+    email_text = "\n\n".join(
+        f"From: {e['from']}\nSubject: {e['subject']}\nBody Preview: {e['snippet']}"
+        for e in email_list
+    )
     
     prompt = f"""
     You are my brilliant personal AI assistant. I am a university student in Pavia, Italy.
@@ -26,15 +31,9 @@ def summarize_emails(email_list):
     """
 
     try:
-        client = Groq(api_key=GROQ_API_KEY)
-        chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model="llama-3.3-70b-versatile",
-        )
-        return chat_completion.choices[0].message.content
-        
-    except Exception as e:
-        print(f"Groq API Error: {e}")
+        return ask_volume(prompt, max_tokens=1024)
+    except VolumeLLMError as e:
+        print(f"Volume tier error: {e}")
         return "⚠️ Could not generate summary due to an AI error."
 
 if __name__ == "__main__":
