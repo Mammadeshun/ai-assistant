@@ -109,15 +109,49 @@ def run_lead_digest():
 # TELEGRAM AI AGENT LISTENER
 # ──────────────────────────────────────────
 
+def _drop_backlog():
+    """Confirm whatever is queued, so a restart does not replay old messages.
+
+    Telegram redelivers updates until they are confirmed by the next poll.
+    Without this, restarting mid-command re-runs it, and a "good morning" sent
+    while the service was down fires the routine again on boot.
+    """
+    try:
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates"
+        data = requests.get(url, params={"timeout": 0, "offset": -1}, timeout=15).json()
+        results = data.get("result", [])
+        if results:
+            last = results[-1]["update_id"]
+            requests.get(url, params={"timeout": 0, "offset": last + 1}, timeout=15)
+            print(f"   skipped {len(results)} message(s) queued while offline")
+            return last + 1
+    except Exception as e:
+        print(f"   could not clear the backlog: {e}")
+    return None
+
+
 def listen_for_commands():
     print("💬 Telegram AI listener active...")
-    last_update_id = None
+    last_update_id = _drop_backlog()
+    warned_conflict = False
 
     while True:
         try:
             url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates"
             params = {"timeout": 10, "offset": last_update_id}
             response = requests.get(url, params=params, timeout=15).json()
+
+            # Telegram gives one update to one poller. A second instance - the
+            # laptop copy, typically - silently steals half the messages, and
+            # the only visible sign is this error code.
+            if not response.get("ok"):
+                description = str(response.get("description", ""))
+                if response.get("error_code") == 409 and not warned_conflict:
+                    print("⚠️  409 Conflict: another instance is polling this bot "
+                          "token. Messages will be split between them.")
+                    warned_conflict = True
+                elif response.get("error_code") != 409:
+                    print(f"⚠️  Telegram refused getUpdates: {description[:120]}")
 
             for update in response.get("result", []):
                 last_update_id = update["update_id"] + 1
