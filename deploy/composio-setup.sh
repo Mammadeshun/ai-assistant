@@ -18,7 +18,15 @@ cd "$(dirname "$0")/.."
 ENV_FILE="${ENV_FILE:-/opt/ai-assistant/.env}"
 VENV_PY="${VENV_PY:-/opt/ai-assistant/.venv/bin/python}"
 
-read -rsp "Composio API key: " COMPOSIO_API_KEY; echo
+# A key file wins over the prompt: pasting a long key into a hidden prompt is
+# error-prone, and nano handles it reliably.
+KEY_FILE="${KEY_FILE:-$HOME/.composio-key}"
+if [[ -s "$KEY_FILE" ]]; then
+  COMPOSIO_API_KEY="$(cat "$KEY_FILE")"
+  echo "using the key in $KEY_FILE"
+else
+  read -rsp "Composio API key: " COMPOSIO_API_KEY; echo
+fi
 # A pasted key often carries a trailing newline or space, which the API then
 # rejects as invalid - indistinguishable from a wrong key in the 401.
 COMPOSIO_API_KEY="${COMPOSIO_API_KEY//[[:space:]]/}"
@@ -28,6 +36,13 @@ COMPOSIO_API_KEY="${COMPOSIO_API_KEY//[[:space:]]/}"
 # with the dashboard without exposing the key.
 printf 'read %d characters: %s…%s\n' "${#COMPOSIO_API_KEY}" \
   "${COMPOSIO_API_KEY:0:3}" "${COMPOSIO_API_KEY: -4}"
+# The dashboard shows keys masked as ck_****…last4. Copying that display text
+# yields a plausible-looking string the API rejects as invalid; the masked form
+# is around 23 characters, a real key is longer.
+if (( ${#COMPOSIO_API_KEY} < 30 )); then
+  echo "warning: that is short enough to be the dashboard's masked display" >&2
+  echo "         value rather than the key. Use the copy button next to it." >&2
+fi
 
 # ── 1. the assistant ────────────────────────────────────────────────────────
 say() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }
