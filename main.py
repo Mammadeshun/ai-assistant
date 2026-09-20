@@ -167,6 +167,21 @@ def listen_for_commands():
                 # Slash commands are parsed literally. "/dead 12" must mean
                 # that every time, with no model in the loop.
                 if text.startswith("/"):
+                    # The two scheduled jobs live here rather than in
+                    # commands.py, which cannot import main without a cycle.
+                    literal = text.split()[0].lstrip("/").lower()
+                    if literal in ("briefing", "morning_routine"):
+                        telegram_bot.send_telegram_message("⏳ Preparo il briefing...")
+                        threading.Thread(target=run_morning_routine, daemon=True).start()
+                        continue
+                    if literal in ("kiro", "kiro_check"):
+                        if KIRO_ENABLED:
+                            telegram_bot.send_telegram_message("⏳ Controllo Kiro...")
+                            threading.Thread(target=run_kiro_check, daemon=True).start()
+                        else:
+                            telegram_bot.send_telegram_message(
+                                "📚 Kiro è spento: mancano UNIPV_USERNAME e UNIPV_PASSWORD.")
+                        continue
                     try:
                         if commands.handle(text, telegram_bot.send_telegram_message):
                             continue

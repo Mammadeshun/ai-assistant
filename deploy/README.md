@@ -400,6 +400,16 @@ Telegram is the dashboard. There is no second login to keep track of.
 /digest  /leads  /lead 3  /wa 3  /draft 3  /email 3
 ```
 
+You do not have to remember any of that. The bot maps plain language onto
+those commands - "come va il server?", "chi devo chiamare oggi?", "riassumimi
+la posta", "any new emails?" - and answers conversationally when no command
+fits. Missing details are asked for rather than guessed.
+
+Read-only commands run straight away. Anything that sends a message, changes
+a lead's state or restarts a service comes back as a command for you to tap:
+the model proposes, you confirm. That rule lives in the listener, not in the
+prompt, so a misread sentence cannot email a stranger.
+
 A unit that fails announces itself: `OnFailure=` sends the unit name and the
 last dozen log lines to Telegram, so you learn about a crash then rather than
 when the 08:00 briefing fails to arrive.
