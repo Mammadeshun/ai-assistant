@@ -1,0 +1,220 @@
+"""Slash commands for working leads from Telegram.
+
+Parsed before the LLM intent router ever sees the message: "/dead 12" must
+mean exactly that, every time, with no model in the loop.
+
+    /leads [stato]        what is in the pipeline
+    /lead <id>            everything known about one
+    /scan [n]             scan unscanned leads and draft openers
+    /digest               the 08:00 summary, now
+    /wa <id>              one-tap WhatsApp link, message pre-filled
+    /draft <id>           read the email before it goes
+    /email <id>           send that email (this is the approval)
+    /sent <id>            you sent the WhatsApp yourself
+    /contacted <id> [..]  you spoke to them
+    /interested <id>      worth chasing
+    /dead <id>            stop spending attention
+    /note <id> <text>     remember something
+    /add <name> | <city> | <website> | <phone> | <email>
+"""
+
+import os
+
+from . import leads as store
+from . import outreach
+from . import scanner
+
+HELP = __doc__.split("\n\n", 2)[2]
+
+
+def mobile_number(phone):
+    """Return an Italian mobile in wa.me form, or None.
+
+    Only mobiles have WhatsApp. Italian mobile numbers start with 3 after the
+    country code; landlines (02 for Milan, 0382 for Pavia) do not, and a
+    wa.me link to one just fails after you have already tapped it.
+    """
+    digits = "".join(c for c in (phone or "") if c.isdigit())
+    if not digits:
+        return None
+    if digits.startswith("00"):
+        digits = digits[2:]
+    if digits.startswith("39"):
+        national = digits[2:]
+    elif digits.startswith("3"):
+        national = digits          # local format, already a mobile
+    else:
+        return None                # landline or unknown country
+    if not national.startswith("3") or not 9 <= len(national) <= 11:
+        return None
+    return "39" + national
+
+
+def _lead_or_error(arg):
+    if not arg or not arg.isdigit():
+        return None, "Serve un id: per esempio /lead 3"
+    lead = store.get(int(arg))
+    if not lead:
+        return None, f"Nessun lead con id {arg}"
+    return lead, None
+
+
+def handle(text, send):
+    """Run one command. `send` delivers a reply; returns True if handled."""
+    parts = text.strip().split(maxsplit=1)
+    command = parts[0].lower().lstrip("/")
+    rest = parts[1].strip() if len(parts) > 1 else ""
+    args = rest.split(maxsplit=1)
+    first = args[0] if args else ""
+
+    if command in ("help", "aiuto", "start"):
+        send("Comandi:\n" + HELP)
+
+    elif command == "leads":
+        state = first.upper() or None
+        rows = store.list_leads(state=state, limit=30)
+        if not rows:
+            send("Nessun lead." if not state else f"Nessun lead in stato {state}.")
+        else:
+            send("\n".join(outreach.format_lead(r) for r in rows)
+                 + f"\n\n{' · '.join(f'{k}:{v}' for k, v in sorted(store.counts().items()))}")
+
+    elif command == "lead":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        else:
+            findings = store.findings_of(lead)
+            lines = [outreach.format_lead(lead), f"stato: {lead['state']}"]
+            if lead.get("website"):
+                lines.append(f"sito: {lead['website']}")
+            if lead.get("email"):
+                lines.append(f"email: {lead['email']}")
+            if findings:
+                lines.append("problemi: " + ", ".join(f["code"] for f in findings))
+            if lead.get("draft"):
+                lines.append("\nbozza:\n" + lead["draft"])
+            if lead.get("notes"):
+                lines.append("\nnote:\n" + lead["notes"])
+            send("\n".join(lines))
+
+    elif command == "scan":
+        limit = int(first) if first.isdigit() else 10
+        send(f"⏳ Scansione di {limit} lead...")
+        summary = scan_pending(limit)
+        send(summary)
+
+    elif command == "digest":
+        send(outreach.format_digest(store.due_leads(), store.counts()))
+
+    elif command == "wa":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        elif not lead.get("whatsapp"):
+            send(f"{lead['name']} non ha un numero WhatsApp.")
+        else:
+            message = lead.get("draft") or outreach.draft_opener(lead, store.findings_of(lead)) or ""
+            link = outreach.whatsapp_link(lead, message)
+            send(f"{lead['name']}\n\n{message}\n\n👉 {link}\n\nDopo l'invio: /sent {lead['id']}")
+
+    elif command == "draft":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        else:
+            findings = store.findings_of(lead)
+            body = lead.get("draft") or outreach.draft_opener(lead, findings) or "(nessuna bozza)"
+            send(f"A: {lead.get('email') or '(nessuna email)'}\n"
+                 f"Oggetto: {outreach.subject_for(lead, findings)}\n\n{body}\n\n"
+                 f"Per inviare: /email {lead['id']}")
+
+    elif command == "email":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        elif not lead.get("email"):
+            send(f"{lead['name']} non ha un'email.")
+        else:
+            findings = store.findings_of(lead)
+            body = lead.get("draft") or outreach.draft_opener(lead, findings)
+            try:
+                outreach.send_email(lead, outreach.subject_for(lead, findings), body)
+            except Exception as e:
+                send(f"❌ Invio fallito: {e}")
+            else:
+                store.set_state(lead["id"], "EMAIL_SENT", note="approved in telegram")
+                send(f"✅ Inviata a {lead['email']}. Se non rispondono, fra "
+                     f"{store.EMAIL_WAIT_DAYS} giorni finisce fra le chiamate.")
+
+    elif command == "sent":
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        else:
+            store.set_state(lead["id"], "WHATSAPP_SENT", note="sent by hand")
+            send(f"Segnato. Se non rispondono, fra {store.WHATSAPP_WAIT_DAYS} giorni passa all'email.")
+
+    elif command in ("contacted", "interested", "dead"):
+        lead, error = _lead_or_error(first)
+        if error:
+            send(error)
+        else:
+            state = {"contacted": "CONTACTED", "interested": "INTERESTED", "dead": "DEAD"}[command]
+            note = args[1] if len(args) > 1 else None
+            store.set_state(lead["id"], state, note=note)
+            if note:
+                store.add_note(lead["id"], note)
+            send(f"[{lead['id']}] {lead['name']} → {state}" + (f"\n{note}" if note else ""))
+
+    elif command == "note":
+        lead, error = _lead_or_error(first)
+        if error or len(args) < 2:
+            send(error or "Serve il testo: /note 3 richiamare giovedì")
+        else:
+            store.add_note(lead["id"], args[1])
+            send(f"Annotato su {lead['name']}.")
+
+    elif command == "add":
+        fields = [f.strip() or None for f in rest.split("|")]
+        if not fields or not fields[0]:
+            send("Formato: /add Nome | Città | sito | telefono | email")
+        else:
+            fields += [None] * (5 - len(fields))
+            name, city, website, phone, email = fields[:5]
+            whatsapp = mobile_number(phone)
+            lead_id = store.add_lead(name, city=city, website=website, phone=phone,
+                                     email=email, whatsapp=whatsapp)
+            send(f"Aggiunto [{lead_id}] {name}." if lead_id else f"{name} c'era già.")
+
+    else:
+        return False
+    return True
+
+
+def scan_pending(limit=10):
+    """Scan leads that have never been scanned, and draft their openers."""
+    pending = [l for l in store.list_leads(limit=500) if not l["scanned_at"]][:limit]
+    if not pending:
+        return "Niente da scansionare."
+
+    driver = None
+    if os.environ.get("SCAN_MOBILE", "1") == "1":
+        try:
+            driver = scanner.browser()
+        except Exception as e:
+            print(f"   no browser for the mobile check: {e}")
+
+    lines = []
+    try:
+        for lead in pending:
+            findings, shot = scanner.scan_lead(lead, driver)
+            draft = outreach.draft_opener(lead, findings) if findings else None
+            store.save_scan(lead["id"], findings, draft)
+            lines.append(f"[{lead['id']}] {lead['name']}: "
+                         + (outreach.describe(findings) if findings else "nessun problema trovato"))
+    finally:
+        if driver:
+            driver.quit()
+
+    return "🔍 Scansione completata\n" + "\n".join(lines)

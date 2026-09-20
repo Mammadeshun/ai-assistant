@@ -9,6 +9,9 @@ from modules import telegram_bot
 from modules import ai_summarizer
 from modules.kiro_scraper import check_kiro_updates, format_kiro_report, COURSES
 from modules.ai_agent import understand_message
+from modules import commands
+from modules import leads as leads_store
+from modules import outreach
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -64,6 +67,31 @@ def run_kiro_check():
         print(f"❌ Kiro job failed: {e}")
 
 
+def run_lead_scan():
+    """Overnight: scan whatever came in during the day and draft the openers.
+
+    Sending is never part of this. The server prepares; you press send.
+    """
+    print("\n🔍 Running overnight lead scan...")
+    try:
+        summary = commands.scan_pending(limit=int(os.environ.get("SCAN_BATCH", "25")))
+        print(summary)
+    except Exception as e:
+        print(f"❌ Lead scan failed: {e}")
+
+
+def run_lead_digest():
+    """The 08:00 list: who to call, what to send, in the order to do it."""
+    print("\n📋 Building the lead digest...")
+    try:
+        message = outreach.format_digest(leads_store.due_leads(), leads_store.counts())
+        for chunk in [message[i:i + 4000] for i in range(0, len(message), 4000)]:
+            telegram_bot.send_telegram_message(chunk)
+            time.sleep(1)
+    except Exception as e:
+        print(f"❌ Lead digest failed: {e}")
+
+
 # ──────────────────────────────────────────
 # TELEGRAM AI AGENT LISTENER
 # ──────────────────────────────────────────
@@ -89,7 +117,18 @@ def listen_for_commands():
 
                 print(f"📩 Message from you: {text}")
 
-                # Let the AI agent decide what to do
+                # Slash commands are parsed literally. "/dead 12" must mean
+                # that every time, with no model in the loop.
+                if text.startswith("/"):
+                    try:
+                        if commands.handle(text, telegram_bot.send_telegram_message):
+                            continue
+                    except Exception as e:
+                        print(f"❌ Command failed: {e}")
+                        telegram_bot.send_telegram_message(f"❌ {e}")
+                        continue
+
+                # Otherwise let the AI agent decide what to do
                 decision = understand_message(text)
                 tool = decision.get("tool", "unknown")
                 params = decision.get("params", {}) or {}
@@ -149,13 +188,22 @@ def main():
     schedule.every().day.at("08:00").do(run_morning_routine)
     if KIRO_ENABLED:
         schedule.every().day.at("08:05").do(run_kiro_check)
+    # Leads: scan overnight when nobody is waiting, then hand you the list at
+    # breakfast. Both times are local, which is why the box runs Europe/Rome.
+    schedule.every().day.at(os.environ.get("SCAN_AT", "03:00")).do(run_lead_scan)
+    schedule.every().day.at(os.environ.get("DIGEST_AT", "08:10")).do(run_lead_digest)
 
     # Run Telegram listener in background thread
     listener_thread = threading.Thread(target=listen_for_commands, daemon=True)
     listener_thread.start()
 
-    jobs = "08:00 & 08:05" if KIRO_ENABLED else "08:00 (Kiro off: no UniPV credentials)"
-    print(f"⏰ Scheduler running. Jobs at {jobs}. Send natural messages to your bot!")
+    jobs = ["08:00 briefing"]
+    if KIRO_ENABLED:
+        jobs.append("08:05 kiro")
+    jobs += [f"{os.environ.get('SCAN_AT', '03:00')} lead scan",
+             f"{os.environ.get('DIGEST_AT', '08:10')} lead digest"]
+    print("⏰ Scheduler running: " + ", ".join(jobs))
+    print("   Slash commands: /help. Natural messages go to the agent.")
     while True:
         schedule.run_pending()
         time.sleep(30)
