@@ -41,12 +41,21 @@ Regole:
 - Niente complimenti finti, niente "spero che questa email La trovi bene".
 - Niente promesse di risultati, niente percentuali inventate.
 - Chiudi con una domanda semplice, non con un invito a comprare.
+- MAI termini tecnici o parole inglesi: niente "viewport", "meta tag",
+  "certificate", "SSL", "responsive". Scrivi come parleresti al telefono.
+- Descrivi solo il problema indicato, non aggiungerne altri.
 - Nessun markdown, nessun emoji. Solo testo."""
 
 
-def describe(findings):
-    """The findings as one Italian phrase, worst first."""
-    return ", ".join(PROBLEM_IT.get(f["code"], f["code"]) for f in findings[:2])
+def describe(findings, min_severity=2):
+    """The findings as one Italian phrase, worst first.
+
+    Trivia is filtered out: an opener that lists a real problem and then pads
+    it with something minor reads like a form letter, and the minor checks are
+    the ones most likely to be wrong.
+    """
+    real = [f for f in findings if f["severity"] >= min_severity]
+    return ", ".join(PROBLEM_IT.get(f["code"], f["code"]) for f in real[:2])
 
 
 def draft_opener(lead, findings):
@@ -57,9 +66,11 @@ def draft_opener(lead, findings):
     if not problem:
         return None
 
+    # The technical detail stays out of the prompt on purpose: the model
+    # quoted it verbatim ("certificate has expired") into a message meant for
+    # a dentist. PROBLEM_IT already says it in plain Italian.
     prompt = f"""Attività: {lead['name']} ({lead.get('category') or 'attività locale'}, {lead.get('city') or 'Milano'})
 Problema trovato sul loro sito: {problem}
-Dettaglio tecnico: {findings[0].get('detail', '')}
 
 Scrivi il messaggio."""
     try:

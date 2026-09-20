@@ -118,9 +118,13 @@ def check_site(url):
     if elapsed > SLOW_SECONDS:
         findings.append(_finding("slow", f"{elapsed:.1f}s to first byte"))
 
-    html = response.text[:200000].lower()
-    if 'hreflang="en' not in html and "/en/" not in html and "lang=\"en" not in html:
-        findings.append(_finding("no_english", "no English version found"))
+    # Off by default: only interesting for tourist-facing businesses, and the
+    # heuristic is wrong often enough (it called an English site Italian-only)
+    # that it is not worth putting in front of a prospect.
+    if os.environ.get("SCAN_CHECK_ENGLISH", "0") == "1":
+        html = response.text[:200000].lower()
+        if 'hreflang="en' not in html and "/en/" not in html and 'lang="en' not in html:
+            findings.append(_finding("no_english", "no English version found"))
     return _dedupe(findings)
 
 
