@@ -1,4 +1,5 @@
 import os
+import sys
 import datetime
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -15,6 +16,15 @@ def authenticate_gmail():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
+            # run_local_server() opens a browser and then blocks forever
+            # waiting for a redirect. Under systemd there is no browser and
+            # no tty, so refuse instead of hanging the morning routine.
+            if not sys.stdin.isatty():
+                raise RuntimeError(
+                    "token.json is missing or unusable, and Gmail's login "
+                    "needs a browser. Generate it on your laptop and copy it "
+                    "over - see deploy/README.md."
+                )
             flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         with open('token.json', 'w') as token:
@@ -50,8 +60,11 @@ def read_emails():
         return email_list
 
     except Exception as error:
+        # None means "I could not read the mailbox", which is a different
+        # thing from "the mailbox is empty". The caller must not report an
+        # empty inbox when the truth is that Gmail failed.
         print(f'An error occurred: {error}')
-        return []
+        return None
 
 if __name__ == '__main__':
     print(read_emails())

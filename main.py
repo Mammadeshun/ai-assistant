@@ -13,6 +13,10 @@ from modules.ai_agent import understand_message
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 
+# The Kiro/Moodle scraper stays dormant until its credentials are set. It is
+# the only job that starts Chrome, and Chrome is the memory hog on a 4 GB box.
+KIRO_ENABLED = bool(os.environ.get("UNIPV_USERNAME") and os.environ.get("UNIPV_PASSWORD"))
+
 
 # ──────────────────────────────────────────
 # JOB FUNCTIONS
@@ -25,8 +29,12 @@ def run_morning_routine():
     print("\n--- Scanning & Summarizing Emails ---")
     emails = email_reader.read_emails()
 
-    if emails and len(emails) > 0:
-        print("Thinking... Generating Llama 3 Summary...")
+    if emails is None:
+        message = ("🤖 Good Morning!\n\n⚠️ I could not read your Gmail this "
+                   "morning, so there is no briefing. Check the log:\n"
+                   "  journalctl -u assistant -n 50")
+    elif emails:
+        print("Thinking... Generating summary...")
         ai_summary = ai_summarizer.summarize_emails(emails)
         message = f"🤖 Good Morning!\n\nHere is your AI Briefing:\n\n{ai_summary}"
     else:
@@ -88,6 +96,14 @@ def listen_for_commands():
 
                 print(f"🤖 Agent decision: {decision}")
 
+                if tool.startswith("kiro") and not KIRO_ENABLED:
+                    telegram_bot.send_telegram_message(
+                        "📚 Kiro is switched off on the server. Set "
+                        "UNIPV_USERNAME and UNIPV_PASSWORD in .env and restart "
+                        "the assistant to turn it back on."
+                    )
+                    continue
+
                 if tool == "morning_routine":
                     telegram_bot.send_telegram_message("⏳ Running morning routine...")
                     threading.Thread(target=run_morning_routine).start()
@@ -131,13 +147,15 @@ def main():
 
     # Schedule daily jobs
     schedule.every().day.at("08:00").do(run_morning_routine)
-    schedule.every().day.at("08:05").do(run_kiro_check)
+    if KIRO_ENABLED:
+        schedule.every().day.at("08:05").do(run_kiro_check)
 
     # Run Telegram listener in background thread
     listener_thread = threading.Thread(target=listen_for_commands, daemon=True)
     listener_thread.start()
 
-    print("⏰ Scheduler running. Jobs at 08:00 & 08:05. Send natural messages to your bot!")
+    jobs = "08:00 & 08:05" if KIRO_ENABLED else "08:00 (Kiro off: no UniPV credentials)"
+    print(f"⏰ Scheduler running. Jobs at {jobs}. Send natural messages to your bot!")
     while True:
         schedule.run_pending()
         time.sleep(30)
