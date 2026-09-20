@@ -81,10 +81,23 @@ def run_lead_scan():
 
 
 def run_lead_digest():
-    """The 08:00 list: who to call, what to send, in the order to do it."""
+    """The 08:10 list: who to call, what to send, in the order to do it."""
     print("\n📋 Building the lead digest...")
     try:
-        message = outreach.format_digest(leads_store.due_leads(), leads_store.counts())
+        moved = leads_store.advance_overdue()
+        if moved:
+            print(f"   {len(moved)} lead(s) moved to CALL_DUE: {moved}")
+
+        buckets = leads_store.due_leads()
+        actionable = sum(len(buckets[k]) for k in
+                         ("to_whatsapp", "to_email", "to_call", "to_follow_up"))
+        if not actionable:
+            # A daily "nothing to do" trains you to ignore the digest, which
+            # is the one message that must stay worth opening.
+            print("   nothing actionable today, staying quiet")
+            return
+
+        message = outreach.format_digest(buckets, leads_store.counts())
         for chunk in [message[i:i + 4000] for i in range(0, len(message), 4000)]:
             telegram_bot.send_telegram_message(chunk)
             time.sleep(1)

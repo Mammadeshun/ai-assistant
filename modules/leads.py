@@ -21,6 +21,7 @@ import os
 import json
 import sqlite3
 import datetime
+import contextlib
 
 DB_PATH = os.environ.get("LEADS_DB", "data/leads.db")
 
@@ -73,15 +74,38 @@ def _now():
     return datetime.datetime.now().isoformat(timespec="seconds")
 
 
+_schema_ready = False
+
+
+@contextlib.contextmanager
 def connect():
-    """Open the database, creating it and its schema on first use."""
+    """Open the database, commit on success, and always close.
+
+    sqlite3's own context manager commits but does NOT close, so the plain
+    `with sqlite3.connect(...)` spelling leaks a file descriptor per call
+    until the garbage collector happens to run - 93 of them after 400 calls
+    in a process that is meant to stay up for months.
+
+    timeout lets the 03:00 scan and a command typed in Telegram wait for each
+    other instead of raising "database is locked".
+    """
+    global _schema_ready
     directory = os.path.dirname(DB_PATH)
     if directory:
         os.makedirs(directory, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, timeout=10)
     conn.row_factory = sqlite3.Row
-    conn.executescript(SCHEMA)
-    return conn
+    try:
+        if not _schema_ready:
+            conn.executescript(SCHEMA)
+            _schema_ready = True
+        yield conn
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
 
 
 def add_lead(name, category=None, city=None, website=None, email=None,
@@ -91,6 +115,10 @@ def add_lead(name, category=None, city=None, website=None, email=None,
     Deduplicated on (name, city): re-importing the same list is normal and
     must not create twins or reset anyone's state.
     """
+    # SQLite treats NULLs as distinct, so a missing city would let the same
+    # business in twice however often the list is re-imported.
+    name = (name or "").strip()
+    city = (city or "").strip()
     with connect() as conn:
         try:
             cur = conn.execute(
@@ -212,6 +240,26 @@ def due_leads():
         elif state == "CONTACTED" and age_days >= FOLLOW_UP_DAYS and lead["follow_ups"] < 1:
             buckets["to_follow_up"].append(lead)
     return buckets
+
+
+def advance_overdue():
+    """Move leads whose email went unanswered into CALL_DUE.
+
+    due_leads() only reports; this is the transition that makes /leads
+    CALL_DUE mean something and stops the digest recomputing it from dates
+    every morning.
+    """
+    moved = []
+    for lead in list_leads(state="EMAIL_SENT", limit=500):
+        try:
+            age = (datetime.datetime.now()
+                   - datetime.datetime.fromisoformat(lead["state_changed_at"])).days
+        except (TypeError, ValueError):
+            continue
+        if age >= EMAIL_WAIT_DAYS:
+            set_state(lead["id"], "CALL_DUE", note=f"no reply in {age} days")
+            moved.append(lead["id"])
+    return moved
 
 
 def mark_followed_up(lead_id):

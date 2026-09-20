@@ -21,6 +21,19 @@ from .llm import ask_volume, VolumeLLMError
 from . import leads as leads_store
 
 SIGNATURE = os.environ.get("OUTREACH_SIGNATURE", "")
+
+# Every email says who is writing, how they found the business, and how to
+# stop hearing from you. That is the user's own rule for outreach, and it is
+# also what makes a first message defensible rather than spam.
+OPT_OUT_IT = ("Le scrivo perché ho trovato i vostri contatti pubblicati online. "
+              "Se preferisce non ricevere altri messaggi, risponda a questa email "
+              "e non la contatterò più.")
+
+
+def email_footer():
+    if not SIGNATURE:
+        print("   OUTREACH_SIGNATURE is empty: the email will not say who is writing")
+    return ("\n\n--\n" + (SIGNATURE + "\n" if SIGNATURE else "") + OPT_OUT_IT)
 MAX_WHATSAPP_PER_DAY = int(os.environ.get("MAX_WHATSAPP_PER_DAY", "25"))
 
 # Said in plain Italian, the way a person would describe the problem.
@@ -116,7 +129,7 @@ def send_email(lead, subject, body):
 
     call = {"tool_slug": "GMAIL_SEND_EMAIL",
             "arguments": {"recipient_email": lead["email"], "subject": subject,
-                          "body": body + (f"\n\n{SIGNATURE}" if SIGNATURE else "")}}
+                          "body": body + email_footer()}}
     account = os.environ.get("COMPOSIO_GMAIL_ACCOUNT")
     if account:
         call["account"] = account

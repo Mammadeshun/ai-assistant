@@ -17,9 +17,11 @@ mean exactly that, every time, with no model in the loop.
     /dead <id>            stop spending attention
     /note <id> <text>     remember something
     /add <name> | <city> | <website> | <phone> | <email>
+    /import               same format, one lead per line
 """
 
 import os
+import threading
 
 from . import leads as store
 from . import outreach
@@ -101,9 +103,10 @@ def handle(text, send):
 
     elif command == "scan":
         limit = int(first) if first.isdigit() else 10
-        send(f"⏳ Scansione di {limit} lead...")
-        summary = scan_pending(limit)
-        send(summary)
+        send(f"⏳ Scansione di {limit} lead avviata...")
+        # A scan starts Chrome and can run for minutes. On the listener thread
+        # that freezes the bot and Telegram updates pile up behind it.
+        threading.Thread(target=lambda: send(scan_pending(limit)), daemon=True).start()
 
     elif command == "digest":
         send(outreach.format_digest(store.due_leads(), store.counts()))
@@ -115,7 +118,11 @@ def handle(text, send):
         elif not lead.get("whatsapp"):
             send(f"{lead['name']} non ha un numero WhatsApp.")
         else:
-            message = lead.get("draft") or outreach.draft_opener(lead, store.findings_of(lead)) or ""
+            message = lead.get("draft") or outreach.draft_opener(lead, store.findings_of(lead))
+            if not message:
+                send(f"Nessuna bozza per {lead['name']}: la scansione non ha trovato "
+                     f"problemi da citare. /scan per riprovare, oppure scriva a mano.")
+                return True
             link = outreach.whatsapp_link(lead, message)
             extra = ""
             if os.path.exists(os.path.join(scanner.SHOTS_DIR, f"lead-{lead['id']}.png")):
@@ -157,6 +164,9 @@ def handle(text, send):
         else:
             findings = store.findings_of(lead)
             body = lead.get("draft") or outreach.draft_opener(lead, findings)
+            if not body:
+                send(f"Nessuna bozza per {lead['name']}: niente da inviare.")
+                return True
             try:
                 outreach.send_email(lead, outreach.subject_for(lead, findings), body)
             except Exception as e:
@@ -205,6 +215,24 @@ def handle(text, send):
             lead_id = store.add_lead(name, city=city, website=website, phone=phone,
                                      email=email, whatsapp=whatsapp)
             send(f"Aggiunto [{lead_id}] {name}." if lead_id else f"{name} c'era già.")
+
+    elif command == "import":
+        added, skipped = 0, 0
+        for line in rest.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            fields = [f.strip() or None for f in line.split("|")] + [None] * 5
+            name, city, website, phone, email = fields[:5]
+            if not name:
+                continue
+            if store.add_lead(name, city=city, website=website, phone=phone,
+                              email=email, whatsapp=mobile_number(phone), source="import"):
+                added += 1
+            else:
+                skipped += 1
+        send(f"Importati {added} lead" + (f", {skipped} già presenti." if skipped else ".")
+             + ("\n/scan per analizzarli." if added else ""))
 
     else:
         return False
