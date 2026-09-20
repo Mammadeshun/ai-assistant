@@ -366,6 +366,13 @@ queued with an empty message.
 
 **Memory:** a scan run holds one headless Chrome. `SCAN_MOBILE=0` skips it.
 
+**Tests:** `python -m unittest discover -s tests` - the cascade timings, the
+dedup rules and the phone-number parsing, standard library only.
+
+**Signature:** `/signature Nome - cosa fai - contatto` before the first email;
+sending is refused while it is unset, because an unsigned cold email is what
+these rules exist to prevent.
+
 ## Daily use
 
 ```bash

@@ -28,6 +28,9 @@ DB_PATH = os.environ.get("LEADS_DB", "data/leads.db")
 STATES = ("NEW", "WHATSAPP_SENT", "EMAIL_SENT", "CALL_DUE",
           "CONTACTED", "INTERESTED", "DEAD")
 OPEN_STATES = ("NEW", "WHATSAPP_SENT", "EMAIL_SENT", "CALL_DUE")
+# CONTACTED belongs here too: the pipeline is done with it, but you still owe
+# it one follow-up. Leaving it out made the follow-up branch unreachable.
+ACTIONABLE_STATES = OPEN_STATES + ("CONTACTED",)
 
 # Days to wait before a lead escalates to the next channel. Defaults match the
 # plan; override per deployment without touching code.
@@ -64,6 +67,10 @@ CREATE TABLE IF NOT EXISTS events (
     kind    TEXT NOT NULL,
     detail  TEXT,
     FOREIGN KEY (lead_id) REFERENCES leads (id)
+);
+CREATE TABLE IF NOT EXISTS settings (
+    key   TEXT PRIMARY KEY,
+    value TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_leads_state ON leads (state);
 CREATE INDEX IF NOT EXISTS idx_events_lead ON events (lead_id);
@@ -213,7 +220,7 @@ def due_leads():
     now = datetime.datetime.now()
     buckets = {"to_whatsapp": [], "to_email": [], "to_call": [], "to_follow_up": [],
                "no_angle": []}
-    for lead in list_leads(state=OPEN_STATES, limit=500):
+    for lead in list_leads(state=ACTIONABLE_STATES, limit=500):
         state, changed = lead["state"], lead["state_changed_at"]
 
         # Scanned and nothing wrong: there is no honest opener to write, so it
@@ -268,6 +275,22 @@ def mark_followed_up(lead_id):
         conn.execute("INSERT INTO events (lead_id, at, kind, detail) VALUES (?,?,?,?)",
                      (lead_id, _now(), "follow_up", None))
     return get(lead_id)
+
+
+def get_setting(key, default=None):
+    """Settings you can change from Telegram, without editing .env and
+    restarting the service."""
+    with connect() as conn:
+        row = conn.execute("SELECT value FROM settings WHERE key = ?", (key,)).fetchone()
+        return row["value"] if row else default
+
+
+def set_setting(key, value):
+    with connect() as conn:
+        conn.execute("INSERT INTO settings (key, value) VALUES (?,?)"
+                     " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+                     (key, value))
+    return value
 
 
 def counts():

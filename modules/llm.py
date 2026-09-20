@@ -37,7 +37,7 @@ DEFAULT_CHAIN = [
         "name": "groq",
         "base_url": "https://api.groq.com/openai/v1",
         "key_env": "GROQ_API_KEY",
-        "model": os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"),
+        "model": os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b"),
     },
     {
         "name": "gemini",
@@ -52,7 +52,7 @@ DEFAULT_CHAIN = [
         "name": "groq-small",
         "base_url": "https://api.groq.com/openai/v1",
         "key_env": "GROQ_API_KEY",
-        "model": os.environ.get("GROQ_SMALL_MODEL", "llama-3.1-8b-instant"),
+        "model": os.environ.get("GROQ_SMALL_MODEL", "openai/gpt-oss-20b"),
     },
 ]
 
@@ -118,9 +118,15 @@ def _call(link, messages, max_tokens, temperature):
 
     if response.status_code == 200:
         try:
-            return response.json()["choices"][0]["message"]["content"], None
+            content = response.json()["choices"][0]["message"]["content"]
         except (KeyError, IndexError, ValueError) as e:
             return None, f"{link['name']}: unexpected response shape ({e})"
+        # Reasoning models spend the token budget thinking and can return an
+        # empty string with a 200. Treated as an answer, that silently
+        # produces blank drafts, so fall through to the next provider.
+        if not (content or "").strip():
+            return None, f"{link['name']}: returned an empty completion"
+        return content, None
 
     if response.status_code == 429 or response.status_code >= 500:
         return None, f"{link['name']}: HTTP {response.status_code} (limit or outage)"

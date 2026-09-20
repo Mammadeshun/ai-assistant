@@ -20,7 +20,13 @@ import urllib.parse
 from .llm import ask_volume, VolumeLLMError
 from . import leads as leads_store
 
-SIGNATURE = os.environ.get("OUTREACH_SIGNATURE", "")
+def signature():
+    """Who is writing. Set with /signature in Telegram, or OUTREACH_SIGNATURE.
+
+    Stored in the database so changing it does not mean editing .env and
+    restarting the service mid-conversation.
+    """
+    return leads_store.get_setting("signature", os.environ.get("OUTREACH_SIGNATURE", "")).strip()
 
 # Every email says who is writing, how they found the business, and how to
 # stop hearing from you. That is the user's own rule for outreach, and it is
@@ -31,9 +37,7 @@ OPT_OUT_IT = ("Le scrivo perché ho trovato i vostri contatti pubblicati online.
 
 
 def email_footer():
-    if not SIGNATURE:
-        print("   OUTREACH_SIGNATURE is empty: the email will not say who is writing")
-    return ("\n\n--\n" + (SIGNATURE + "\n" if SIGNATURE else "") + OPT_OUT_IT)
+    return "\n\n--\n" + signature() + "\n" + OPT_OUT_IT
 MAX_WHATSAPP_PER_DAY = int(os.environ.get("MAX_WHATSAPP_PER_DAY", "25"))
 
 # Said in plain Italian, the way a person would describe the problem.
@@ -71,6 +75,18 @@ def describe(findings, min_severity=2):
     return ", ".join(PROBLEM_IT.get(f["code"], f["code"]) for f in real[:2])
 
 
+TEMPLATE_MARKER = "Me ne occupo per attività come la vostra"
+
+
+def is_template_draft(draft):
+    """True when the model refused and the plain template was used instead.
+
+    Worth knowing: a template draft is serviceable but generic, and generic is
+    what makes cold outreach look like cold outreach.
+    """
+    return bool(draft) and TEMPLATE_MARKER in draft
+
+
 def draft_opener(lead, findings):
     """Write the first message. Falls back to a plain template if the model
     is unavailable, because a queued lead with no draft is worse than a
@@ -106,47 +122,21 @@ def whatsapp_link(lead, text):
 
 def send_email(lead, subject, body):
     """Send through Composio's Gmail connection. Called only on approval."""
-    from .email_reader import _composio_rpc, COMPOSIO_MCP_URL
-    import requests
+    from . import composio_mcp
 
-    key = os.environ.get("COMPOSIO_CONSUMER_KEY")
-    if not key:
-        raise RuntimeError("COMPOSIO_CONSUMER_KEY is not set; cannot send mail")
     if not lead.get("email"):
         raise RuntimeError(f"lead {lead['id']} has no email address")
+    # Fail closed: an unsigned cold email is what the outreach rules here
+    # exist to prevent, so refuse rather than send one anonymously.
+    if not signature():
+        raise RuntimeError("nessuna firma impostata: usa /signature Nome, cosa fai, contatto")
 
-    headers = {"x-consumer-api-key": key, "Content-Type": "application/json",
-               "Accept": "application/json, text/event-stream"}
-    session = requests.Session()
-    response, _ = _composio_rpc(session, {
-        "jsonrpc": "2.0", "id": 1, "method": "initialize",
-        "params": {"protocolVersion": "2025-06-18", "capabilities": {},
-                   "clientInfo": {"name": "ai-assistant", "version": "1"}}}, headers)
-    if response.headers.get("mcp-session-id"):
-        headers["Mcp-Session-Id"] = response.headers["mcp-session-id"]
-    _composio_rpc(session, {"jsonrpc": "2.0", "method": "notifications/initialized"},
-                  headers, expect_reply=False)
-
-    call = {"tool_slug": "GMAIL_SEND_EMAIL",
-            "arguments": {"recipient_email": lead["email"], "subject": subject,
-                          "body": body + email_footer()}}
-    account = os.environ.get("COMPOSIO_GMAIL_ACCOUNT")
-    if account:
-        call["account"] = account
-
-    _, reply = _composio_rpc(session, {
-        "jsonrpc": "2.0", "id": 3, "method": "tools/call",
-        "params": {"name": "COMPOSIO_MULTI_EXECUTE_TOOL",
-                   "arguments": {"thought": "send an approved outreach email",
-                                 "tools": [call]}}}, headers)
-    result = reply.get("result", {})
-    text = "".join(c.get("text", "") for c in result.get("content", [])
-                   if c.get("type") == "text")
-    if result.get("isError"):
-        raise RuntimeError(text[:200])
-    inner = json.loads(text)["data"]["results"][0]["response"]
-    if not inner.get("successful", False):
-        raise RuntimeError(str(inner.get("error"))[:200])
+    composio_mcp.execute(
+        "GMAIL_SEND_EMAIL",
+        {"recipient_email": lead["email"], "subject": subject,
+         "body": body + email_footer()},
+        thought="send an outreach email the user approved in telegram",
+        account=os.environ.get("COMPOSIO_GMAIL_ACCOUNT") or None)
     return True
 
 

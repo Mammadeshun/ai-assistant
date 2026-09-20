@@ -33,89 +33,22 @@ def authenticate_gmail():
             token.write(creds.to_json())
     return build('gmail', 'v1', credentials=creds)
 
-COMPOSIO_MCP_URL = os.environ.get("COMPOSIO_MCP_URL", "https://connect.composio.dev/mcp")
-COMPOSIO_TIMEOUT = 90
-
-
-def _composio_rpc(session, payload, headers, expect_reply=True):
-    """One JSON-RPC call over MCP's streamable HTTP transport.
-
-    Replies come back as server-sent events (`data: {...}`) even for a single
-    result, so the last data line is the answer.
-    """
-    response = session.post(COMPOSIO_MCP_URL, headers=headers, json=payload,
-                            timeout=COMPOSIO_TIMEOUT)
-    response.raise_for_status()
-    if not expect_reply:
-        return response, None
-    lines = [l[6:] for l in response.text.splitlines() if l.startswith("data: ")]
-    if not lines:
-        raise RuntimeError(f"no JSON-RPC reply: {response.text[:200]}")
-    return response, json.loads(lines[-1])
-
-
 def _read_emails_via_composio(limit=15):
-    """Read the inbox through Composio's MCP endpoint.
+    """Read the inbox through Composio, which holds the Gmail OAuth grant.
 
-    Composio holds the Gmail OAuth grant, so nothing has to be generated in a
-    browser on another machine and copied here, and there is no weekly token
-    expiry to trip over.
-
-    The consumer key (ck_...) authenticates against connect.composio.dev with
-    an x-consumer-api-key header. It is NOT the platform API key (ak_...) and
-    every v3 REST endpoint rejects it, which is a confusing thing to debug -
-    hence this going over MCP rather than the SDK.
+    Nothing has to be generated in a browser on another machine and copied
+    here, and there is no weekly token expiry to trip over.
     """
-    key = os.environ["COMPOSIO_CONSUMER_KEY"]
-    account = os.environ.get("COMPOSIO_GMAIL_ACCOUNT", "")
+    from . import composio_mcp
 
-    headers = {
-        "x-consumer-api-key": key,
-        "Content-Type": "application/json",
-        "Accept": "application/json, text/event-stream",
-    }
-    session = requests.Session()
-
-    response, _ = _composio_rpc(session, {
-        "jsonrpc": "2.0", "id": 1, "method": "initialize",
-        "params": {"protocolVersion": "2025-06-18", "capabilities": {},
-                   "clientInfo": {"name": "ai-assistant", "version": "1"}},
-    }, headers)
-    session_id = response.headers.get("mcp-session-id")
-    if session_id:
-        headers["Mcp-Session-Id"] = session_id
-    _composio_rpc(session, {"jsonrpc": "2.0", "method": "notifications/initialized"},
-                  headers, expect_reply=False)
-
-    call = {"tool_slug": "GMAIL_FETCH_EMAILS",
-            "arguments": {"max_results": limit, "verbose": False,
-                          "include_payload": False}}
-    if account:
-        # Required when several mailboxes are connected; without it Composio
-        # picks its default, which may be the wrong inbox.
-        call["account"] = account
-
-    _, reply = _composio_rpc(session, {
-        "jsonrpc": "2.0", "id": 3, "method": "tools/call",
-        "params": {"name": "COMPOSIO_MULTI_EXECUTE_TOOL",
-                   "arguments": {"thought": "fetch recent mail for the morning briefing",
-                                 "tools": [call]}},
-    }, headers)
-
-    if "error" in reply:
-        raise RuntimeError(reply["error"])
-    result = reply.get("result", {})
-    if result.get("isError"):
-        raise RuntimeError(str(result.get("content"))[:300])
-
-    text = "".join(c.get("text", "") for c in result.get("content", [])
-                   if c.get("type") == "text")
-    inner = json.loads(text)["data"]["results"][0]["response"]
-    if not inner.get("successful", False):
-        raise RuntimeError(inner.get("error") or "Composio reported failure")
+    data = composio_mcp.execute(
+        "GMAIL_FETCH_EMAILS",
+        {"max_results": limit, "verbose": False, "include_payload": False},
+        thought="fetch recent mail for the morning briefing",
+        account=os.environ.get("COMPOSIO_GMAIL_ACCOUNT") or None)
 
     email_list = []
-    for m in inner.get("data", {}).get("messages", []):
+    for m in data.get("messages", []):
         preview = m.get("preview") if isinstance(m.get("preview"), dict) else {}
         email_list.append({
             "subject": m.get("subject") or preview.get("subject") or "No Subject",

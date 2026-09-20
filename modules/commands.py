@@ -16,6 +16,7 @@ mean exactly that, every time, with no model in the loop.
     /interested <id>      worth chasing
     /dead <id>            stop spending attention
     /note <id> <text>     remember something
+    /signature <testo>    who your emails say they are from
     /add <name> | <city> | <website> | <phone> | <email>
     /import               same format, one lead per line
 """
@@ -26,6 +27,7 @@ import threading
 from . import leads as store
 from . import outreach
 from . import scanner
+from .escalate import escalate
 
 HELP = __doc__.split("\n\n", 2)[2]
 
@@ -204,6 +206,17 @@ def handle(text, send):
             store.add_note(lead["id"], args[1])
             send(f"Annotato su {lead['name']}.")
 
+    elif command == "signature":
+        if not rest:
+            current = outreach.signature()
+            send(f"Firma attuale:\n{current}" if current else
+                 "Nessuna firma. Esempio:\n/signature Mohammad Nori - automazioni "
+                 "per studi professionali, Pavia - 333 1234567")
+        else:
+            store.set_setting("signature", rest)
+            send("Firma aggiornata. Ecco come chiuderanno le email:\n"
+                 + outreach.email_footer())
+
     elif command == "add":
         fields = [f.strip() or None for f in rest.split("|")]
         if not fields or not fields[0]:
@@ -239,6 +252,23 @@ def handle(text, send):
     return True
 
 
+def prune_screenshots(keep_days=30):
+    """Screenshots are evidence for an opener, not an archive."""
+    import time
+    cutoff = time.time() - keep_days * 86400
+    removed = 0
+    if os.path.isdir(scanner.SHOTS_DIR):
+        for name in os.listdir(scanner.SHOTS_DIR):
+            path = os.path.join(scanner.SHOTS_DIR, name)
+            try:
+                if os.path.isfile(path) and os.path.getmtime(path) < cutoff:
+                    os.remove(path)
+                    removed += 1
+            except OSError:
+                pass
+    return removed
+
+
 def scan_pending(limit=10):
     """Scan leads that have never been scanned, and draft their openers."""
     pending = [l for l in store.list_leads(limit=500) if not l["scanned_at"]][:limit]
@@ -258,10 +288,23 @@ def scan_pending(limit=10):
             findings, shot = scanner.scan_lead(lead, driver)
             draft = outreach.draft_opener(lead, findings) if findings else None
             store.save_scan(lead["id"], findings, draft)
+
+            # Hand anything the cheap tier could not do to the brain queue,
+            # which deploy/brain.sh drains when you next open a session.
+            if findings and outreach.is_template_draft(draft):
+                escalate("draft_needs_a_human",
+                         f"{lead['name']}: the volume tier could not write an opener",
+                         context={"lead_id": lead["id"], "name": lead["name"],
+                                  "problems": [f["code"] for f in findings],
+                                  "website": lead.get("website")},
+                         priority="normal")
             lines.append(f"[{lead['id']}] {lead['name']}: "
                          + (outreach.describe(findings) if findings else "nessun problema trovato"))
     finally:
         if driver:
             driver.quit()
 
+    pruned = prune_screenshots()
+    if pruned:
+        print(f"   removed {pruned} screenshot(s) older than 30 days")
     return "🔍 Scansione completata\n" + "\n".join(lines)
