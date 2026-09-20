@@ -326,6 +326,46 @@ through third-party software is not obviously within Anthropic's or OpenAI's
 terms, and the downside if it's judged not to be lands on your account. Your
 call; just make it knowingly rather than by accident.
 
+## Leads (phase 2)
+
+Overnight the server scans whatever is queued, drafts an Italian opener for
+each real problem, and at 08:10 hands you the list. It never sends anything.
+
+```
+/add Studio Rossi | Milano | studiorossi.it | +39 333 111 2222 | info@…
+/scan 25          scan what has not been scanned, draft the openers
+/digest           the 08:10 list, on demand
+/wa 3             WhatsApp link with the message pre-filled - you press send
+/draft 3          read the email first
+/email 3          send it (this is the approval)
+/sent 3           you sent the WhatsApp by hand
+/contacted 3 richiamare giovedì
+/interested 3  ·  /dead 3  ·  /note 3 <testo>  ·  /leads [stato]
+```
+
+**The cascade.** WhatsApp where there is an Italian mobile, email where there
+isn't or after two days of silence, a call after three more, one follow-up
+after four, then cold. Timings are env vars.
+
+**Nothing is auto-sent, by design.** Bulk WhatsApp gets numbers banned, and
+Italy's Codice Privacy art. 130 treats unsolicited commercial email and
+messaging as consent-based, including business to business — the Garante has
+fined campaigns built on addresses found on websites. Phone contact to
+businesses is opt-out instead, via the Registro Pubblico delle Opposizioni,
+which is why calls carry the most weight here. Approving each message keeps a
+human in the loop and matches the rule that nothing a cheap model wrote
+reaches a business unread. Get a professional opinion before changing that.
+
+**What counts as a finding:** no website, site down, expired or expiring
+certificate, no mobile layout, slow. Each one is something a screenshot can
+show, which is what the opener points at. The language check is off by
+default — it called an English site Italian-only.
+
+Leads scanned with nothing wrong are parked in their own bucket rather than
+queued with an empty message.
+
+**Memory:** a scan run holds one headless Chrome. `SCAN_MOBILE=0` skips it.
+
 ## Daily use
 
 ```bash
