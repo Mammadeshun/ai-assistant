@@ -7,6 +7,10 @@
 Description=AI Assistant (Telegram bot + scheduled jobs)
 After=network-online.target
 Wants=network-online.target
+# Don't let a crash-loop hammer the Telegram API. These belong in [Unit];
+# systemd ignores them under [Service] and logs a warning.
+StartLimitIntervalSec=300
+StartLimitBurst=5
 
 [Service]
 Type=simple
@@ -18,13 +22,19 @@ WorkingDirectory=/opt/ai-assistant
 EnvironmentFile=/opt/ai-assistant/.env
 Environment=PYTHONUNBUFFERED=1
 
+# ProtectHome=true hides /home from this service, so anything that wants to
+# write under $HOME (webdriver-manager's driver cache, Chrome's profile dirs)
+# needs somewhere else to go. CacheDirectory= gives us /var/cache/ai-assistant,
+# owned by the service user and writable despite ProtectSystem=strict, and
+# HOME points at it. Keeps /home/agent — and 9router's OAuth database in it —
+# invisible to a process that handles untrusted mail and web pages.
+CacheDirectory=ai-assistant
+Environment=HOME=/var/cache/ai-assistant
+
 ExecStart=/opt/ai-assistant/.venv/bin/python main.py
 
 Restart=always
 RestartSec=10
-# Don't let a crash-loop hammer the Telegram API.
-StartLimitIntervalSec=300
-StartLimitBurst=5
 
 # The assistant reads mail and scrapes a course portal. It has no business
 # touching anything outside its own directory.
@@ -33,8 +43,11 @@ PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
 ReadWritePaths=/opt/ai-assistant/data
-# webdriver-manager caches the chromedriver binary under the home directory.
-ReadWritePaths=/home/agent/.wdm
+# The Gmail client rewrites token.json every time it refreshes the access
+# token, which is most mornings. Without this the write hits a read-only
+# filesystem, read_emails() swallows the error, and the briefing claims there
+# is no new mail. Optional (-) because the file only exists once you scp it.
+ReadWritePaths=-/opt/ai-assistant/token.json
 
 [Install]
 WantedBy=multi-user.target

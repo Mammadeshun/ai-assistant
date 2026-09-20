@@ -17,6 +17,8 @@
 Description=9router (AI router: subscription -> cheap -> free fallback)
 After=network-online.target
 Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
 
 [Service]
 Type=simple
@@ -30,15 +32,17 @@ Environment=PORT=20128
 Environment=HOSTNAME=127.0.0.1
 Environment=DATA_DIR=/home/agent/.9router
 
-# JWT_SECRET for the dashboard, plus any provider API keys.
-EnvironmentFile=/opt/ai-assistant/.env
+# The router's own secrets: JWT_SECRET, API_KEY_SECRET, MACHINE_ID_SALT,
+# INITIAL_PASSWORD, REQUIRE_API_KEY. Deliberately NOT the app's .env — the
+# router has no use for the Telegram token or the portal password, and
+# EnvironmentFile hands over the whole file. Root-owned, 0600; systemd reads
+# it as root before dropping to the service user.
+EnvironmentFile=/etc/9router.env
 
 ExecStart=/usr/bin/9router
 
 Restart=always
 RestartSec=5
-StartLimitIntervalSec=300
-StartLimitBurst=5
 
 NoNewPrivileges=true
 PrivateTmp=true
