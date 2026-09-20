@@ -1,86 +1,76 @@
-from .llm import ask_volume_json
+"""Turn anything you type into either a command or an answer.
 
-# ── Tool definitions — Llama reads these to understand what it can do ──
-TOOLS = [
-    {
-        "name": "kiro_check",
-        "description": "Check Kiro UniPV for new course materials or announcements across all courses",
-        "examples": ["what's new on kiro", "any new slides?", "check my courses"]
-    },
-    {
-        "name": "kiro_list_courses",
-        "description": "List all enrolled courses on Kiro UniPV",
-        "examples": ["list my courses", "what courses am i enrolled in"]
-    },
-    {
-        "name": "morning_routine",
-        "description": "Run the full morning routine: clean PC, summarize emails, send briefing",
-        "examples": ["good morning", "run morning routine", "summarize my emails", "clean my pc"]
-    },
-    {
-        "name": "kiro_download",
-        "description": "Download all files and PDFs from a specific course on Kiro",
-        "examples": ["download ml slides", "get fuzzy systems files", "download everything from computer vision"],
-        "params": ["course_name"]
-    },
-    {
-        "name": "unknown",
-        "description": "Used when the message doesn't match any available tool",
-        "examples": []
-    }
-]
+The bot should understand "come vanno i lead?" as readily as "/leads", so
+this asks the volume tier to map free text onto the command catalogue.
 
-def build_prompt(user_message):
-    tools_text = "\n".join([
-        f"- {t['name']}: {t['description']} (e.g. {', '.join(t['examples'][:2]) if t['examples'] else 'N/A'})"
-        for t in TOOLS
-    ])
+Two rules keep that safe:
 
-    return f"""You are an AI assistant controller. The user sent a message via Telegram.
-Your job is to read the message and return a JSON object selecting the right tool and any parameters.
+  * Read-only commands run immediately.
+  * Anything with consequences - sending an email, changing a lead's state,
+    restarting a service - comes back as a command for you to tap. A model
+    misreading a sentence must not be able to email a business.
 
-Available tools:
-{tools_text}
-
-Rules:
-- Always respond with ONLY a raw JSON object, no explanation, no markdown.
-- If the user mentions a course name, include it as "course_name" in params.
-- If nothing matches, use "unknown" as the tool.
-
-Examples:
-User: "download the machine learning slides" → {{"tool": "kiro_download", "params": {{"course_name": "Machine Learning & Deep Learning"}}}}
-User: "whats new on kiro" → {{"tool": "kiro_check", "params": {{}}}}
-User: "good morning" → {{"tool": "morning_routine", "params": {{}}}}
-
-User message: "{user_message}"
+When nothing fits, it answers in plain language instead of reciting a menu.
 """
 
-def understand_message(user_message):
-    """Parse a natural language message into a tool + params.
+from .llm import ask_volume_json, VolumeLLMError
+from .commands import CATALOGUE
 
-    ask_volume_json() handles the fence-stripping and JSON salvage that free
-    models make necessary, and falls through the provider chain on limits.
+SYSTEM = """Sei il router di un assistente personale su Telegram.
+L'utente scrive in italiano o in inglese, in modo informale.
+
+Rispondi SOLO con un oggetto JSON, senza markdown:
+  {"command": "/leads"}            per eseguire un comando
+  {"reply": "..."}                 per rispondere a voce, se nessun comando serve
+
+Regole:
+- Scegli un comando solo se esiste nell'elenco. Non inventarne.
+- Includi gli argomenti nel comando, es. {"command": "/lead 3"}.
+- Se manca un dato indispensabile (per esempio quale lead), chiedilo con "reply".
+- Se l'utente fa una domanda generica o chiacchiera, usa "reply" e sii breve.
+- "reply" è in italiano se l'utente scrive in italiano."""
+
+
+def build_prompt(user_message):
+    catalogue = "\n".join(f"  {name} - {what}" for name, what in CATALOGUE)
+    return f"""Comandi disponibili:
+{catalogue}
+
+Messaggio dell'utente: "{user_message}"
+
+JSON:"""
+
+
+def understand_message(user_message):
+    """Return {"command": "/x"} or {"reply": "..."}.
+
+    Falls back to a reply rather than an error: an assistant that says
+    nothing useful when the model is capped is worse than a slow one.
     """
     try:
-        result = ask_volume_json(build_prompt(user_message))
+        result = ask_volume_json(build_prompt(user_message), system=SYSTEM, max_tokens=400)
+    except VolumeLLMError as e:
+        print(f"❌ Agent error: {e}")
+        return {"reply": "Non riesco a ragionare in questo momento (modelli non "
+                         "disponibili). I comandi diretti funzionano lo stesso: /help"}
     except Exception as e:
         print(f"❌ Agent error: {e}")
-        return {"tool": "unknown", "params": {}}
+        return {"reply": "Qualcosa è andato storto nel capire il messaggio. /help"}
 
-    if not isinstance(result, dict) or "tool" not in result:
-        print(f"❌ Agent returned an unexpected shape: {result!r}")
-        return {"tool": "unknown", "params": {}}
-    return result
+    if not isinstance(result, dict):
+        return {"reply": "Non ho capito. Prova con /help"}
+
+    command = result.get("command")
+    if isinstance(command, str) and command.strip().startswith("/"):
+        return {"command": command.strip()}
+    reply = result.get("reply")
+    if isinstance(reply, str) and reply.strip():
+        return {"reply": reply.strip()}
+    return {"reply": "Non ho capito. Prova con /help"}
 
 
 if __name__ == "__main__":
-    tests = [
-        "what's new on kiro?",
-        "download the fuzzy systems slides",
-        "good morning",
-        "list my courses",
-        "what time is it",
-    ]
-    for msg in tests:
-        result = understand_message(msg)
-        print(f"'{msg}' → {result}")
+    for message in ("come vanno i lead?", "come sta il server?",
+                    "mandagli la mail al 3", "che novità ci sono stamattina?",
+                    "ciao come stai?", "fammi vedere il lead numero 5"):
+        print(f"{message!r:40} -> {understand_message(message)}")

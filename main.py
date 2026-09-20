@@ -175,48 +175,45 @@ def listen_for_commands():
                         telegram_bot.send_telegram_message(f"❌ {e}")
                         continue
 
-                # Otherwise let the AI agent decide what to do
+                # Otherwise let the model map free text onto a command.
                 decision = understand_message(text)
-                tool = decision.get("tool", "unknown")
-                params = decision.get("params", {}) or {}
-
                 print(f"🤖 Agent decision: {decision}")
 
-                if tool.startswith("kiro") and not KIRO_ENABLED:
-                    telegram_bot.send_telegram_message(
-                        "📚 Kiro is switched off on the server. Set "
-                        "UNIPV_USERNAME and UNIPV_PASSWORD in .env and restart "
-                        "the assistant to turn it back on."
-                    )
+                if decision.get("reply"):
+                    telegram_bot.send_telegram_message(decision["reply"])
                     continue
 
-                if tool == "morning_routine":
-                    telegram_bot.send_telegram_message("⏳ Running morning routine...")
-                    threading.Thread(target=run_morning_routine).start()
+                command = decision.get("command", "")
+                name = command.split()[0].lstrip("/").lower() if command else ""
 
-                elif tool == "kiro_check":
-                    telegram_bot.send_telegram_message("⏳ Checking Kiro for new materials...")
-                    threading.Thread(target=run_kiro_check).start()
-
-                elif tool == "kiro_list_courses":
-                    courses_text = "\n".join([f"• {name}" for name in COURSES.keys()])
-                    telegram_bot.send_telegram_message("📚 Your Kiro courses:\n" + courses_text)
-
-                elif tool == "kiro_download":
-                    course_name = params.get("course_name")
-                    if not course_name:
-                        telegram_bot.send_telegram_message("❓ Which course? e.g. 'download fuzzy systems slides'")
+                if name in commands.SAFE:
+                    # Read-only: just do it.
+                    try:
+                        if not commands.handle(command, telegram_bot.send_telegram_message):
+                            telegram_bot.send_telegram_message(
+                                "Non ho capito. /help per l'elenco dei comandi.")
+                    except Exception as e:
+                        print(f"❌ Command failed: {e}")
+                        telegram_bot.send_telegram_message(f"❌ {e}")
+                elif name == "morning_routine":
+                    telegram_bot.send_telegram_message("⏳ Preparo il briefing...")
+                    threading.Thread(target=run_morning_routine, daemon=True).start()
+                elif name.startswith("kiro"):
+                    if KIRO_ENABLED:
+                        telegram_bot.send_telegram_message("⏳ Controllo Kiro...")
+                        threading.Thread(target=run_kiro_check, daemon=True).start()
                     else:
-                        telegram_bot.send_telegram_message(f"⏳ Downloading files from {course_name}... (coming soon)")
-
+                        telegram_bot.send_telegram_message(
+                            "📚 Kiro è spento: mancano UNIPV_USERNAME e UNIPV_PASSWORD.")
+                elif name:
+                    # Anything that sends, changes state or restarts a service
+                    # is confirmed by a human. A misread sentence must not be
+                    # able to email a business or mark a lead dead.
+                    telegram_bot.send_telegram_message(
+                        f"Intendi questo?\n\n{command}\n\nToccalo per confermare.")
                 else:
                     telegram_bot.send_telegram_message(
-                        "🤔 I didn't understand. Try:\n\n"
-                        "• 'what's new on kiro?'\n"
-                        "• 'download fuzzy systems slides'\n"
-                        "• 'good morning'\n"
-                        "• 'list my courses'"
-                    )
+                        "Non ho capito. /help per l'elenco dei comandi.")
 
         except Exception as e:
             print(f"⚠️ Listener error: {e}")

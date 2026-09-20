@@ -34,6 +34,39 @@ from .escalate import escalate
 
 HELP = __doc__.split("\n\n", 2)[2]
 
+# What each command does, in the words someone might use for it. This is the
+# list the natural-language router picks from, so it is the single place to
+# describe a capability.
+CATALOGUE = [
+    ("/status", "come sta il server, memoria, modelli, quanti lead, backup"),
+    ("/logs [n]", "le ultime righe di log del servizio"),
+    ("/restart [unit]", "riavvia l'assistente o il router"),
+    ("/leads [stato]", "elenco dei lead, eventualmente filtrato per stato"),
+    ("/lead <id>", "tutto su un lead: problemi, bozza, note, stato"),
+    ("/digest", "il riepilogo del giorno: chi chiamare, cosa inviare"),
+    ("/scan [n]", "analizza i lead non ancora analizzati e scrive le bozze"),
+    ("/wa <id>", "link WhatsApp con il messaggio già scritto"),
+    ("/shot <id>", "screenshot del problema trovato sul sito"),
+    ("/draft <id>", "leggi l'email prima di inviarla"),
+    ("/email <id>", "INVIA l'email a quel lead"),
+    ("/sent <id>", "segna che hai inviato tu il WhatsApp"),
+    ("/contacted <id> [nota]", "hai parlato con loro"),
+    ("/interested <id>", "sono interessati"),
+    ("/dead <id>", "lead da abbandonare"),
+    ("/note <id> <testo>", "annota qualcosa su un lead"),
+    ("/add Nome | Città | sito | tel | email", "aggiunge un lead"),
+    ("/import <righe>", "aggiunge molti lead, uno per riga"),
+    ("/signature <testo>", "con che firma partono le email"),
+    ("morning_routine", "briefing email del mattino, ora"),
+    ("kiro_check", "novità sui corsi universitari (spento senza credenziali)"),
+]
+
+# Commands the router may run on its own: they only read. Anything that
+# sends, changes state, spends quota or restarts a service is handed back for
+# the human to tap, because a misread sentence must not email a stranger.
+SAFE = {"status", "stato", "logs", "leads", "lead", "digest", "draft", "wa",
+        "shot", "help", "aiuto", "start"}
+
 
 def mobile_number(phone):
     """Return an Italian mobile in wa.me form, or None.

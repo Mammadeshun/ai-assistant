@@ -193,3 +193,29 @@ class OutreachTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class RouterSafetyTest(unittest.TestCase):
+    """The split that keeps a misread sentence from sending an email."""
+
+    def setUp(self):
+        os.environ["LEADS_DB"] = tempfile.mktemp(suffix=".db")
+        from modules import commands
+        self.commands = commands
+
+    def test_read_only_commands_are_auto_runnable(self):
+        for name in ("status", "leads", "lead", "digest", "draft", "wa", "logs"):
+            self.assertIn(name, self.commands.SAFE, f"/{name} only reads")
+
+    def test_consequential_commands_need_a_human(self):
+        for name in ("email", "restart", "dead", "contacted", "interested",
+                     "sent", "scan", "import", "add", "signature", "note"):
+            self.assertNotIn(name, self.commands.SAFE,
+                             f"/{name} changes something and must be confirmed")
+
+    def test_every_catalogue_entry_is_a_real_command_or_job(self):
+        jobs = {"morning_routine", "kiro_check"}
+        for entry, _ in self.commands.CATALOGUE:
+            name = entry.split()[0].lstrip("/")
+            self.assertTrue(name in jobs or f"/{name}" in self.commands.__doc__,
+                            f"{entry} is advertised but not documented as a command")
