@@ -3,6 +3,9 @@
 Parsed before the LLM intent router ever sees the message: "/dead 12" must
 mean exactly that, every time, with no model in the loop.
 
+    /status               services, memory, models, leads, backups
+    /logs [n]             the last n lines of the service log
+    /restart [servizio]   restart the assistant, or 9router
     /leads [stato]        what is in the pipeline
     /lead <id>            everything known about one
     /scan [n]             scan unscanned leads and draft openers
@@ -74,6 +77,32 @@ def handle(text, send):
 
     if command in ("help", "aiuto", "start"):
         send("Comandi:\n" + HELP)
+
+    elif command in ("status", "stato"):
+        from . import health
+        send(health.summary())
+
+    elif command == "logs":
+        lines = first if first.isdigit() else "25"
+        import subprocess
+        out = subprocess.run(["journalctl", "-u", "assistant", "-n", lines,
+                              "--no-pager", "-o", "cat"],
+                             capture_output=True, text=True, timeout=15).stdout
+        if not out.strip():
+            send("Log non leggibili: manca il gruppo systemd-journal?")
+        else:
+            send("```\n" + out[-3500:] + "\n```")
+
+    elif command == "restart":
+        import subprocess
+        unit = first if first in ("assistant", "9router") else "assistant"
+        send(f"♻️ Riavvio {unit}...")
+        result = subprocess.run(["sudo", "-n", "/usr/bin/systemctl", "restart", unit],
+                                capture_output=True, text=True, timeout=30)
+        if result.returncode != 0:
+            # The bot restarting itself is the normal case; systemd kills this
+            # process mid-reply, so an error here means the sudo rule is missing.
+            send(f"❌ {result.stderr.strip()[:200] or 'permesso negato'}")
 
     elif command == "leads":
         state = first.upper() or None

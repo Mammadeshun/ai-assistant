@@ -1,0 +1,7 @@
+# Lets the bot restart itself and the router from Telegram, and nothing else.
+# No shell, no arbitrary systemctl verb, no other unit: the bot parses input
+# from the internet, so its extra privilege is exactly two commands.
+#
+#   install -m 440 deploy/assistant.sudoers /etc/sudoers.d/assistant
+#   visudo -c
+agent ALL=(root) NOPASSWD: /usr/bin/systemctl restart assistant, /usr/bin/systemctl restart 9router
