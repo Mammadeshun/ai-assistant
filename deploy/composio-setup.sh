@@ -36,13 +36,18 @@ COMPOSIO_API_KEY="${COMPOSIO_API_KEY//[[:space:]]/}"
 # with the dashboard without exposing the key.
 printf 'read %d characters: %s…%s\n' "${#COMPOSIO_API_KEY}" \
   "${COMPOSIO_API_KEY:0:3}" "${COMPOSIO_API_KEY: -4}"
-# The dashboard shows keys masked as ck_****…last4. Copying that display text
-# yields a plausible-looking string the API rejects as invalid; the masked form
-# is around 23 characters, a real key is longer.
-if (( ${#COMPOSIO_API_KEY} < 30 )); then
-  echo "warning: that is short enough to be the dashboard's masked display" >&2
-  echo "         value rather than the key. Use the copy button next to it." >&2
-fi
+# Prefix, not length, tells you whether this is the right kind of key:
+#   ak_  project API key  <- the v3 API and the SDK want this one
+#   oak_ / uak_           organisation / user keys
+#   ck_  consumer key from the Connect & Sessions pages, which every v3
+#        endpoint rejects as "Invalid API key" no matter the header used.
+# An ak_ key is also 23 characters, so length proves nothing.
+case "$COMPOSIO_API_KEY" in
+  ak_*|oak_*|uak_*) ;;
+  ck_*) echo "warning: ck_ is a consumer key from Connect/Sessions, not a" >&2
+        echo "         project API key. Settings -> API Keys gives an ak_ one." >&2 ;;
+  *)    echo "warning: unrecognised key prefix; expected ak_" >&2 ;;
+esac
 
 # ── 1. the assistant ────────────────────────────────────────────────────────
 say() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }
