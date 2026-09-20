@@ -104,6 +104,12 @@ def _call(link, messages, max_tokens, temperature):
                 "messages": messages,
                 "max_tokens": max_tokens,
                 "temperature": temperature,
+                # Explicit: 9router streams Claude-format replies as
+                # text/event-stream even when the request says nothing about
+                # streaming, and .json() cannot parse that. Verified against
+                # cc/claude-opus-5, which returns application/json only when
+                # stream is set false.
+                "stream": False,
             },
             timeout=DEFAULT_TIMEOUT,
         )
