@@ -195,7 +195,7 @@ def listen_for_commands():
                     except Exception as e:
                         print(f"❌ Command failed: {e}")
                         telegram_bot.send_telegram_message(f"❌ {e}")
-                elif name == "morning_routine":
+                elif name in ("briefing", "morning_routine"):
                     telegram_bot.send_telegram_message("⏳ Preparo il briefing...")
                     threading.Thread(target=run_morning_routine, daemon=True).start()
                 elif name.startswith("kiro"):

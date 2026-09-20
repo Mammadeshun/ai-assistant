@@ -61,8 +61,12 @@ def understand_message(user_message):
         return {"reply": "Non ho capito. Prova con /help"}
 
     command = result.get("command")
-    if isinstance(command, str) and command.strip().startswith("/"):
-        return {"command": command.strip()}
+    if isinstance(command, str) and command.strip():
+        command = command.strip()
+        # Models drop the slash about as often as they keep it; the catalogue
+        # shows one, but rejecting the other spelling turns a correct answer
+        # into "I did not understand".
+        return {"command": command if command.startswith("/") else "/" + command}
     reply = result.get("reply")
     if isinstance(reply, str) and reply.strip():
         return {"reply": reply.strip()}

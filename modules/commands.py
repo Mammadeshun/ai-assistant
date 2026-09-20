@@ -3,6 +3,8 @@
 Parsed before the LLM intent router ever sees the message: "/dead 12" must
 mean exactly that, every time, with no model in the loop.
 
+    /briefing             read the inbox and summarise it now
+    /kiro                 check the course portal (dormant without credentials)
     /status               services, memory, models, leads, backups
     /logs [n]             the last n lines of the service log
     /restart [servizio]   restart the assistant, or 9router
@@ -58,9 +60,9 @@ CATALOGUE = [
     ("/add Nome | Città | sito | tel | email", "aggiunge un lead"),
     ("/import <righe>", "aggiunge molti lead, uno per riga"),
     ("/signature <testo>", "con che firma partono le email"),
-    ("morning_routine", "leggi la POSTA IN ARRIVO (Gmail) e riassumi le email "
-                        "ricevute: novità nella mail, cosa è arrivato oggi"),
-    ("kiro_check", "novità sui corsi universitari (spento senza credenziali)"),
+    ("/briefing", "leggi la POSTA IN ARRIVO (Gmail) e riassumi le email "
+                  "ricevute: novità nella mail, cosa è arrivato oggi"),
+    ("/kiro", "novità sui corsi universitari (spento senza credenziali)"),
 ]
 
 # Commands the router may run on its own: they only read. Anything that
