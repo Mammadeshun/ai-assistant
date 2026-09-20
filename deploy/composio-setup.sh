@@ -1,120 +1,74 @@
 #!/usr/bin/env bash
 #
-# Wire Composio into both places it can be useful on this box:
+# Wire Composio into both places it is useful here:
 #
 #   1. the assistant, so the morning briefing reads Gmail through Composio's
 #      OAuth grant instead of a token.json generated on a laptop
-#   2. Claude Code on the server, so an interactive session (deploy/brain.sh)
-#      can use your connected apps
+#   2. Claude Code on this box, so an interactive session can use the
+#      connected apps
 #
-# Run it as the agent user:  bash deploy/composio-setup.sh
+# Run as the agent user:  bash deploy/composio-setup.sh
 #
-# It asks for your API key and never echoes it. Get one from
-# https://platform.composio.dev  ->  API Keys.
+# Composio has two unrelated credentials, and picking the wrong one costs an
+# afternoon:
+#   ak_  platform project API key -> the v3 REST API and the python SDK
+#   ck_  consumer key             -> connect.composio.dev/mcp, header
+#                                    x-consumer-api-key
+# A ck_ key returns "Invalid API key" from every v3 endpoint no matter the
+# header, which reads exactly like a wrong key. This script uses ck_, because
+# that is what the Connect dashboard (For You -> Connect -> Settings ->
+# Sessions & API Key) hands you.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 ENV_FILE="${ENV_FILE:-/opt/ai-assistant/.env}"
-VENV_PY="${VENV_PY:-/opt/ai-assistant/.venv/bin/python}"
-
-# A key file wins over the prompt: pasting a long key into a hidden prompt is
-# error-prone, and nano handles it reliably.
+MCP_URL="${MCP_URL:-https://connect.composio.dev/mcp}"
 KEY_FILE="${KEY_FILE:-$HOME/.composio-key}"
+
 if [[ -s "$KEY_FILE" ]]; then
-  COMPOSIO_API_KEY="$(cat "$KEY_FILE")"
+  KEY="$(tr -d '[:space:]' < "$KEY_FILE")"
   echo "using the key in $KEY_FILE"
 else
-  read -rsp "Composio API key: " COMPOSIO_API_KEY; echo
+  read -rsp "Composio consumer key (ck_...): " KEY; echo
+  KEY="${KEY//[[:space:]]/}"
 fi
-# A pasted key often carries a trailing newline or space, which the API then
-# rejects as invalid - indistinguishable from a wrong key in the 401.
-COMPOSIO_API_KEY="${COMPOSIO_API_KEY//[[:space:]]/}"
-[[ -n "$COMPOSIO_API_KEY" ]] || { echo "nothing entered, aborting" >&2; exit 1; }
-
-# Echo only what the API itself echoes back in errors, so you can compare it
-# with the dashboard without exposing the key.
-printf 'read %d characters: %s…%s\n' "${#COMPOSIO_API_KEY}" \
-  "${COMPOSIO_API_KEY:0:3}" "${COMPOSIO_API_KEY: -4}"
-# Prefix, not length, tells you whether this is the right kind of key:
-#   ak_  project API key  <- the v3 API and the SDK want this one
-#   oak_ / uak_           organisation / user keys
-#   ck_  consumer key from the Connect & Sessions pages, which every v3
-#        endpoint rejects as "Invalid API key" no matter the header used.
-# An ak_ key is also 23 characters, so length proves nothing.
-case "$COMPOSIO_API_KEY" in
-  ak_*|oak_*|uak_*) ;;
-  ck_*) echo "warning: ck_ is a consumer key from Connect/Sessions, not a" >&2
-        echo "         project API key. Settings -> API Keys gives an ak_ one." >&2 ;;
-  *)    echo "warning: unrecognised key prefix; expected ak_" >&2 ;;
+[[ -n "$KEY" ]] || { echo "nothing entered, aborting" >&2; exit 1; }
+case "$KEY" in
+  ck_*) ;;
+  ak_*|oak_*|uak_*) echo "that is a platform key; this script wants the ck_ consumer key" >&2; exit 1 ;;
+  *) echo "unrecognised key prefix; expected ck_" >&2; exit 1 ;;
 esac
 
-# ── 1. the assistant ────────────────────────────────────────────────────────
 say() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }
 
-say "Checking the key and listing connected Gmail accounts"
-"$VENV_PY" - "$COMPOSIO_API_KEY" <<'PY'
-import sys
-from composio import Composio
-client = Composio(api_key=sys.argv[1])
-accounts = client.connected_accounts.list()
-items = getattr(accounts, "items", None) or getattr(accounts, "data", None) or []
-print("connected accounts:")
-for a in items:
-    toolkit = getattr(getattr(a, "toolkit", None), "slug", None) or "?"
-    print(f"  {getattr(a, 'id', '?'):24} {toolkit:12} {getattr(a, 'status', '?')}")
+say "Checking the key against $MCP_URL"
+code=$(curl -s -m 30 -o /tmp/composio-probe.$$ -w '%{http_code}' -X POST "$MCP_URL" \
+  -H "x-consumer-api-key: $KEY" -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"setup","version":"1"}}}')
+rm -f /tmp/composio-probe.$$
+[[ "$code" == "200" ]] || { echo "endpoint returned $code, not 200 - key rejected" >&2; exit 1; }
+echo "authenticated"
+
+say "Writing the key into $ENV_FILE"
+python3 - "$KEY" "$ENV_FILE" <<'PY'
+import pathlib, re, sys
+key, path = sys.argv[1], pathlib.Path(sys.argv[2])
+s = re.sub(r"(?m)^COMPOSIO_[A-Z_]*=.*$\n?", "", path.read_text())
+path.write_text(s.rstrip() + "\n"
+    "\n# Composio: Gmail for the briefing, over its MCP endpoint.\n"
+    f"COMPOSIO_CONSUMER_KEY={key}\n"
+    "# Which mailbox to read when several are connected (alias or account id).\n"
+    "COMPOSIO_GMAIL_ACCOUNT=\n")
+path.chmod(0o600)
 PY
+echo "written - set COMPOSIO_GMAIL_ACCOUNT if more than one mailbox is connected"
 
-say "Writing COMPOSIO_API_KEY into $ENV_FILE"
-if grep -q '^COMPOSIO_API_KEY=' "$ENV_FILE"; then
-  sed -i "s|^COMPOSIO_API_KEY=.*|COMPOSIO_API_KEY=$COMPOSIO_API_KEY|" "$ENV_FILE"
-else
-  printf '\n# Composio: Gmail for the briefing, without a laptop-generated token.\nCOMPOSIO_API_KEY=%s\n#COMPOSIO_GMAIL_ACCOUNT_ID=\n#COMPOSIO_USER_ID=default\n' "$COMPOSIO_API_KEY" >> "$ENV_FILE"
-fi
-chmod 600 "$ENV_FILE"
-echo "written (the assistant needs a restart to pick it up)"
-
-# ── 2. Claude Code on this box ──────────────────────────────────────────────
-say "Creating a tool-router session for the MCP endpoint"
-MCP_URL="$("$VENV_PY" - "$COMPOSIO_API_KEY" <<'PY'
-import sys
-from composio import Composio
-client = Composio(api_key=sys.argv[1])
-session = client.sessions.create()
-url = None
-for path in (("mcp", "url"), ("mcp_url",), ("url",)):
-    obj = session
-    for part in path:
-        obj = getattr(obj, part, None)
-        if obj is None:
-            break
-    if isinstance(obj, str):
-        url = obj
-        break
-print(url or "", end="")
-PY
-)"
-
-if [[ -z "$MCP_URL" ]]; then
-  echo "Could not read an MCP URL from the session object." >&2
-  echo "Get it from https://platform.composio.dev -> MCP, then run:" >&2
-  echo "  claude mcp add --scope user --transport http composio <URL> -H \"X-API-Key: <key>\"" >&2
-  exit 1
-fi
-
-say "Registering it with Claude Code"
+say "Registering the endpoint with Claude Code"
 export PATH="$HOME/.local/bin:$PATH"
 claude mcp remove composio --scope user >/dev/null 2>&1 || true
-claude mcp add --scope user --transport http composio "$MCP_URL" -H "X-API-Key: $COMPOSIO_API_KEY"
-claude mcp list 2>&1 | grep -i composio || true
+claude mcp add --scope user --transport http composio "$MCP_URL" -H "x-consumer-api-key: $KEY"
 
-say "Done"
-cat <<'NEXT'
-Next:
-  sudo systemctl restart assistant     # so the bot picks up the key
-  claude                               # new session; the tools appear there
-
-If several Gmail accounts are connected, set COMPOSIO_GMAIL_ACCOUNT_ID in
-.env to the one the briefing should read - otherwise Composio picks the
-default, which may be the wrong mailbox.
-NEXT
+say "Done - restart the assistant to pick up the key"
+echo "  sudo systemctl restart assistant"

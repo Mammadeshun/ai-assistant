@@ -141,6 +141,31 @@ Notes:
   ("In production") before generating the token.
 * Both `token.json` and `credentials.json` are gitignored. Keep them that way.
 
+### 4b. Gmail without a token, via Composio
+
+If Composio holds a Gmail grant, `read_emails()` uses it and step 4 becomes
+unnecessary - no browser, no scp, no weekly expiry:
+
+```bash
+bash deploy/composio-setup.sh      # as agent; needs the ck_ consumer key
+sudo systemctl restart assistant
+```
+
+Two credentials exist and only one works here:
+
+| Key | Where it comes from | What accepts it |
+|---|---|---|
+| `ak_` | Platform → Settings → API Keys | the v3 REST API and the python SDK |
+| `ck_` | For You → Connect → Settings → Sessions & API Key | `connect.composio.dev/mcp`, header `x-consumer-api-key` |
+
+A `ck_` key fails against every v3 endpoint with `Invalid API key` whatever
+header you send, which is indistinguishable from a wrong key. The app talks
+MCP directly for that reason. `COMPOSIO_GMAIL_ACCOUNT` picks the mailbox when
+several are connected; leave it empty and Composio chooses its default.
+
+The same endpoint is registered with Claude Code on the server, so an
+interactive session there can reach the connected apps.
+
 ### 5. Services
 
 ```bash
