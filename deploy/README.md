@@ -373,6 +373,7 @@ sites.
 | `session not created: This version of ChromeDriver...` | Driver/Chrome mismatch; set `CHROME_BINARY`, clear `~/.wdm` |
 | Scraper killed mid-run | Out of memory — confirm swap is on with `free -h` |
 | Volume tier raises `whole volume chain refused` | Every free provider capped. Check keys, or wait for the daily reset |
+| Briefing fails the moment one free tier caps | `VOLUME_CHAIN` has a single link, or its JSON was unquoted in `.env` and silently ignored |
 | Briefing says "I could not read your Gmail" | `token.json` missing, expired (7-day Testing-mode limit) or unwritable — `journalctl -u assistant -n 50` has the real error |
 | Service won't start, `226/NAMESPACE` | A `ReadWritePaths=` path doesn't exist; prefix it with `-` or create it |
 | Bot replies "Kiro is switched off" | `UNIPV_USERNAME`/`UNIPV_PASSWORD` unset — deliberate, set them and restart |
