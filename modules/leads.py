@@ -183,9 +183,16 @@ def due_leads():
     "what is waiting for me" rather than "what should the server fire off".
     """
     now = datetime.datetime.now()
-    buckets = {"to_whatsapp": [], "to_email": [], "to_call": [], "to_follow_up": []}
+    buckets = {"to_whatsapp": [], "to_email": [], "to_call": [], "to_follow_up": [],
+               "no_angle": []}
     for lead in list_leads(state=OPEN_STATES, limit=500):
         state, changed = lead["state"], lead["state_changed_at"]
+
+        # Scanned and nothing wrong: there is no honest opener to write, so it
+        # stays out of the send lists rather than producing an empty message.
+        if state == "NEW" and lead["scanned_at"] and not findings_of(lead):
+            buckets["no_angle"].append(lead)
+            continue
         try:
             age_days = (now - datetime.datetime.fromisoformat(changed)).days
         except (TypeError, ValueError):

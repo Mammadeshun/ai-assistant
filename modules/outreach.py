@@ -192,6 +192,11 @@ def format_digest(buckets, counts):
         for lead in buckets["to_follow_up"][:10]:
             parts.append(format_lead(lead))
 
+    if buckets.get("no_angle"):
+        parts.append(f"\n⚪ SENZA PROBLEMI TROVATI ({len(buckets['no_angle'])})")
+        parts.append("   Il sito funziona: serve un altro motivo per scrivere, "
+                     "oppure /dead per toglierli di mezzo.")
+
     if len(parts) == 2:
         parts.append("\nNiente in coda. Aggiungi lead con /add o lancia /scan.")
 
