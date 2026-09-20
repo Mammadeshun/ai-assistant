@@ -1,6 +1,8 @@
 import os
 import sys
+import json
 import datetime
+import requests
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -31,45 +33,96 @@ def authenticate_gmail():
             token.write(creds.to_json())
     return build('gmail', 'v1', credentials=creds)
 
-def _read_emails_via_composio(limit=15):
-    """Read the inbox through Composio, which holds the OAuth grant itself.
+COMPOSIO_MCP_URL = os.environ.get("COMPOSIO_MCP_URL", "https://connect.composio.dev/mcp")
+COMPOSIO_TIMEOUT = 90
 
-    The alternative (authenticate_gmail) needs a token.json generated in a
-    browser on another machine and copied over, and Google expires that token
-    weekly while the OAuth app is in Testing. Composio refreshes its own.
 
-    Selected by COMPOSIO_API_KEY being set. COMPOSIO_GMAIL_ACCOUNT_ID picks
-    which connected mailbox to read when several are linked.
+def _composio_rpc(session, payload, headers, expect_reply=True):
+    """One JSON-RPC call over MCP's streamable HTTP transport.
+
+    Replies come back as server-sent events (`data: {...}`) even for a single
+    result, so the last data line is the answer.
     """
-    from composio import Composio  # optional dependency: imported only on this path
+    response = session.post(COMPOSIO_MCP_URL, headers=headers, json=payload,
+                            timeout=COMPOSIO_TIMEOUT)
+    response.raise_for_status()
+    if not expect_reply:
+        return response, None
+    lines = [l[6:] for l in response.text.splitlines() if l.startswith("data: ")]
+    if not lines:
+        raise RuntimeError(f"no JSON-RPC reply: {response.text[:200]}")
+    return response, json.loads(lines[-1])
 
-    client = Composio(api_key=os.environ["COMPOSIO_API_KEY"])
-    result = client.tools.execute(
-        "GMAIL_FETCH_EMAILS",
-        arguments={
-            "max_results": limit,
-            "verbose": False,          # metadata only; the briefing needs subject/sender/snippet
-            "include_payload": False,
-        },
-        connected_account_id=os.environ.get("COMPOSIO_GMAIL_ACCOUNT_ID") or None,
-        user_id=os.environ.get("COMPOSIO_USER_ID", "default"),
-    )
 
-    if not getattr(result, "successful", True):
-        raise RuntimeError(getattr(result, "error", None) or "Composio reported failure")
+def _read_emails_via_composio(limit=15):
+    """Read the inbox through Composio's MCP endpoint.
 
-    data = getattr(result, "data", None) or {}
-    messages = data.get("messages") or []
+    Composio holds the Gmail OAuth grant, so nothing has to be generated in a
+    browser on another machine and copied here, and there is no weekly token
+    expiry to trip over.
+
+    The consumer key (ck_...) authenticates against connect.composio.dev with
+    an x-consumer-api-key header. It is NOT the platform API key (ak_...) and
+    every v3 REST endpoint rejects it, which is a confusing thing to debug -
+    hence this going over MCP rather than the SDK.
+    """
+    key = os.environ["COMPOSIO_CONSUMER_KEY"]
+    account = os.environ.get("COMPOSIO_GMAIL_ACCOUNT", "")
+
+    headers = {
+        "x-consumer-api-key": key,
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
+    }
+    session = requests.Session()
+
+    response, _ = _composio_rpc(session, {
+        "jsonrpc": "2.0", "id": 1, "method": "initialize",
+        "params": {"protocolVersion": "2025-06-18", "capabilities": {},
+                   "clientInfo": {"name": "ai-assistant", "version": "1"}},
+    }, headers)
+    session_id = response.headers.get("mcp-session-id")
+    if session_id:
+        headers["Mcp-Session-Id"] = session_id
+    _composio_rpc(session, {"jsonrpc": "2.0", "method": "notifications/initialized"},
+                  headers, expect_reply=False)
+
+    call = {"tool_slug": "GMAIL_FETCH_EMAILS",
+            "arguments": {"max_results": limit, "verbose": False,
+                          "include_payload": False}}
+    if account:
+        # Required when several mailboxes are connected; without it Composio
+        # picks its default, which may be the wrong inbox.
+        call["account"] = account
+
+    _, reply = _composio_rpc(session, {
+        "jsonrpc": "2.0", "id": 3, "method": "tools/call",
+        "params": {"name": "COMPOSIO_MULTI_EXECUTE_TOOL",
+                   "arguments": {"thought": "fetch recent mail for the morning briefing",
+                                 "tools": [call]}},
+    }, headers)
+
+    if "error" in reply:
+        raise RuntimeError(reply["error"])
+    result = reply.get("result", {})
+    if result.get("isError"):
+        raise RuntimeError(str(result.get("content"))[:300])
+
+    text = "".join(c.get("text", "") for c in result.get("content", [])
+                   if c.get("type") == "text")
+    inner = json.loads(text)["data"]["results"][0]["response"]
+    if not inner.get("successful", False):
+        raise RuntimeError(inner.get("error") or "Composio reported failure")
 
     email_list = []
-    for m in messages:
+    for m in inner.get("data", {}).get("messages", []):
+        preview = m.get("preview") if isinstance(m.get("preview"), dict) else {}
         email_list.append({
-            "subject": m.get("subject") or "No Subject",
-            "from": m.get("sender") or m.get("from") or "Unknown Sender",
-            "snippet": m.get("preview", {}).get("body") if isinstance(m.get("preview"), dict)
-                       else (m.get("messageText") or m.get("snippet") or "No preview available."),
+            "subject": m.get("subject") or preview.get("subject") or "No Subject",
+            "from": m.get("sender") or "Unknown Sender",
+            "snippet": preview.get("body") or m.get("messageText") or "No preview available.",
         })
-        print(f" - Found: {email_list[-1]['subject']}")
+        print(f" - Found: {email_list[-1]['subject'][:70]}")
     return email_list
 
 
@@ -79,7 +132,7 @@ def read_emails():
     None and [] mean different things here: [] is a genuinely empty inbox,
     None is a failure, and the morning briefing reports them differently.
     """
-    if os.environ.get("COMPOSIO_API_KEY"):
+    if os.environ.get("COMPOSIO_CONSUMER_KEY"):
         try:
             return _read_emails_via_composio()
         except Exception as error:
