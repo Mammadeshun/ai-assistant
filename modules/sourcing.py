@@ -69,10 +69,19 @@ def search(niche, city="Milano", limit=200):
         raise ValueError(f"niche sconosciuta: {niche}. "
                          f"Disponibili: {', '.join(sorted(NICHES))}")
 
-    response = requests.post(OVERPASS_URL, data={"data": build_query(niche, city, limit)},
-                             headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT + 30)
-    if response.status_code == 429:
-        raise RuntimeError("Overpass ha risposto 429: troppe richieste, riprova fra qualche minuto")
+    query = build_query(niche, city, limit)
+    # Overpass runs on donated hardware and hands out slots: 429 means wait,
+    # not fail. Sourcing several niches in one go hits this every time.
+    for attempt in range(4):
+        response = requests.post(OVERPASS_URL, data={"data": query},
+                                 headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT + 30)
+        if response.status_code not in (429, 504):
+            break
+        wait = 30 * (attempt + 1)
+        print(f"   Overpass busy ({response.status_code}), waiting {wait}s")
+        time.sleep(wait)
+    else:
+        raise RuntimeError("Overpass occupato: riprova fra qualche minuto")
     response.raise_for_status()
 
     candidates = []
