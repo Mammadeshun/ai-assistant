@@ -42,7 +42,10 @@ MAX_WHATSAPP_PER_DAY = int(os.environ.get("MAX_WHATSAPP_PER_DAY", "25"))
 
 # Said in plain Italian, the way a person would describe the problem.
 PROBLEM_IT = {
-    "no_website": "non ha un sito web",
+    # Sourced from OpenStreetMap, where a missing website tag means nobody
+    # mapped one - not that none exists. Claiming otherwise to a practice that
+    # has a site ends the conversation on the first line.
+    "no_website": "non riesco a trovare un vostro sito web online",
     "site_down": "il sito non si apre",
     "ssl_expired": "il certificato di sicurezza è scaduto, il browser mostra un avviso",
     "ssl_expiring": "il certificato di sicurezza sta per scadere",
@@ -103,8 +106,13 @@ Problema trovato sul loro sito: {problem}
 
 Scrivi il messaggio."""
     try:
-        text = ask_volume(prompt, system=DRAFT_SYSTEM, max_tokens=300, temperature=0.4)
-        return text.strip()
+        # Generous budget: reasoning models spend part of it thinking, and a
+        # draft cut off mid-sentence is worse than a plain template.
+        text = ask_volume(prompt, system=DRAFT_SYSTEM, max_tokens=900, temperature=0.4).strip()
+        if text and text.rstrip()[-1] not in ".?!\"":
+            print("   draft looks truncated, using the template instead")
+            raise VolumeLLMError("truncated draft")
+        return text
     except VolumeLLMError as e:
         print(f"   draft fell back to template: {e}")
         return (f"Buongiorno, ho visto che {problem} per {lead['name']}. "
