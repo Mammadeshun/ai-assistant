@@ -24,6 +24,7 @@ mean exactly that, every time, with no model in the loop.
     /signature <testo>    who your emails say they are from
     /add <name> | <city> | <website> | <phone> | <email>
     /import               same format, one lead per line
+    /source <niche> <città> [n]   find businesses on OpenStreetMap
 """
 
 import os
@@ -59,6 +60,9 @@ CATALOGUE = [
     ("/note <id> <testo>", "annota qualcosa su un lead"),
     ("/add Nome | Città | sito | tel | email", "aggiunge un lead"),
     ("/import <righe>", "aggiunge molti lead, uno per riga"),
+    ("/source <niche> <città> [n]", "cerca nuove attività su OpenStreetMap e le "
+                                    "aggiunge: dentisti, commercialisti, avvocati, "
+                                    "architetti, fisioterapisti, veterinari, notai"),
     ("/signature <testo>", "con che firma partono le email"),
     ("/briefing", "leggi la POSTA IN ARRIVO (Gmail) e riassumi le email "
                   "ricevute: novità nella mail, cosa è arrivato oggi"),
@@ -294,6 +298,27 @@ def handle(text, send):
             lead_id = store.add_lead(name, city=city, website=website, phone=phone,
                                      email=email, whatsapp=whatsapp)
             send(f"Aggiunto [{lead_id}] {name}." if lead_id else f"{name} c'era già.")
+
+    elif command == "source":
+        from . import sourcing
+        parts_ = rest.split()
+        if not parts_:
+            send("Come: /source dentisti Milano 200\n"
+                 "Niche: " + ", ".join(sorted(sourcing.NICHES)))
+            return True
+        niche = parts_[0].lower()
+        city = parts_[1].capitalize() if len(parts_) > 1 else "Milano"
+        count = int(parts_[2]) if len(parts_) > 2 and parts_[2].isdigit() else 200
+        send(f"🔎 Cerco {niche} a {city}...")
+
+        def work():
+            try:
+                result = sourcing.import_niche(niche, city, count)
+                send(sourcing.summarise(result, niche, city))
+            except Exception as e:
+                send(f"❌ {e}")
+
+        threading.Thread(target=work, daemon=True).start()
 
     elif command == "import":
         added, skipped = 0, 0

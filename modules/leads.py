@@ -237,7 +237,19 @@ def due_leads():
         # then email, then a call. Each step waits for the previous one to go
         # unanswered.
         if state == "NEW":
-            buckets["to_whatsapp" if lead["whatsapp"] else "to_email"].append(lead)
+            # Route by the channels this lead actually has. Studi
+            # professionali mostly publish a landline: of 77 contactable
+            # dentists in Milan, 2 had a mobile. Queuing those for an email
+            # address they do not have is how a digest fills up with work
+            # that cannot be done.
+            if lead["whatsapp"]:
+                buckets["to_whatsapp"].append(lead)
+            elif lead["email"]:
+                buckets["to_email"].append(lead)
+            elif lead["phone"]:
+                buckets["to_call"].append(lead)
+            else:
+                buckets["no_angle"].append(lead)
         elif state == "WHATSAPP_SENT" and age_days >= WHATSAPP_WAIT_DAYS:
             buckets["to_email"].append(lead)
         elif state == "EMAIL_SENT" and age_days >= EMAIL_WAIT_DAYS:

@@ -48,7 +48,10 @@ class LeadStoreTest(unittest.TestCase):
         landline = self.leads.add_lead("Solo Fisso", city="Milano", phone="02 1234567")
         due = self.leads.due_leads()
         self.assertEqual([l["id"] for l in due["to_whatsapp"]], [mobile])
-        self.assertEqual([l["id"] for l in due["to_email"]], [landline])
+        # A landline with no email address is a phone call: it used to be
+        # queued for an email that could never be sent.
+        self.assertEqual([l["id"] for l in due["to_call"]], [landline])
+        self.assertEqual(due["to_email"], [])
 
     def test_cascade_escalates_only_after_the_wait(self):
         lead = self.leads.add_lead("Studio Alfa", city="Milano", whatsapp="393331112222")
@@ -219,3 +222,35 @@ class RouterSafetyTest(unittest.TestCase):
             name = entry.split()[0].lstrip("/")
             self.assertTrue(name in jobs or f"/{name}" in self.commands.__doc__,
                             f"{entry} is advertised but not documented as a command")
+
+
+class ChannelRoutingTest(unittest.TestCase):
+    """Real data drove this: dentists publish landlines, not mobiles."""
+
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads
+        self.leads = leads
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def test_each_lead_goes_to_a_channel_it_actually_has(self):
+        mobile = self.leads.add_lead("Con Mobile", city="MI", whatsapp="393331112222",
+                                     phone="+39 333 111 2222")
+        emailed = self.leads.add_lead("Con Email", city="MI", phone="02 111111",
+                                      email="a@b.invalid")
+        landline = self.leads.add_lead("Solo Fisso", city="MI", phone="02 222222")
+        nothing = self.leads.add_lead("Nessun Contatto", city="MI")
+        due = self.leads.due_leads()
+        self.assertEqual([l["id"] for l in due["to_whatsapp"]], [mobile])
+        self.assertEqual([l["id"] for l in due["to_email"]], [emailed])
+        self.assertEqual([l["id"] for l in due["to_call"]], [landline],
+                         "a landline with no email is a phone call, not an email")
+        self.assertEqual([l["id"] for l in due["no_angle"]], [nothing])
