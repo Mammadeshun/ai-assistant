@@ -1,0 +1,34 @@
+# The phone app: JSON API + one static page, on localhost behind Caddy.
+#   cp deploy/webapp.service /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now webapp
+
+[Unit]
+Description=Assistant phone app (localhost, behind Caddy)
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+OnFailure=notify-failure@%N.service
+
+[Service]
+Type=simple
+User=agent
+Group=agent
+WorkingDirectory=/opt/ai-assistant
+EnvironmentFile=/opt/ai-assistant/.env
+Environment=PYTHONUNBUFFERED=1
+CacheDirectory=ai-assistant-webapp
+Environment=HOME=/var/cache/ai-assistant-webapp
+ExecStart=/opt/ai-assistant/.venv/bin/python -m modules.webapp
+Restart=always
+RestartSec=5
+
+# Same sandbox as the assistant: it serves the same data and needs no more.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/ai-assistant/data
+
+[Install]
+WantedBy=multi-user.target

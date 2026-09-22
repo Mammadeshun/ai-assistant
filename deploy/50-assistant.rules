@@ -1,0 +1,18 @@
+// Lets the agent user restart its own services, and nothing else.
+//
+// This replaces a sudoers rule that never worked: the services run with
+// NoNewPrivileges=true, which stops sudo from gaining root at all. polkit
+// answers over D-Bus, so the sandbox stays intact and no setuid binary is
+// involved. Only the restart verb, only these units.
+//
+//   install -m 644 deploy/50-assistant.rules /etc/polkit-1/rules.d/
+polkit.addRule(function (action, subject) {
+    if (action.id !== "org.freedesktop.systemd1.manage-units" || subject.user !== "agent") {
+        return polkit.Result.NOT_HANDLED;
+    }
+    var units = ["assistant.service", "9router.service", "webapp.service"];
+    if (units.indexOf(action.lookup("unit")) >= 0 && action.lookup("verb") === "restart") {
+        return polkit.Result.YES;
+    }
+    return polkit.Result.NOT_HANDLED;
+});

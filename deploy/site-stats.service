@@ -1,0 +1,11 @@
+[Unit]
+Description=Snapshot switchers.events visitor stats for the assistant
+
+# Runs as root because the Caddy log holds visitor IPs and is readable only
+# by caddy. It writes the aggregate - no IPs - to a file the assistant can
+# read, so the bot needs no privilege to show visitor numbers.
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/python3 /opt/visitor-report/visitor_report.py --days 14 > /var/lib/assistant-site/stats.txt.tmp && mv /var/lib/assistant-site/stats.txt.tmp /var/lib/assistant-site/stats.txt'
+StateDirectory=assistant-site
+StateDirectoryMode=0755

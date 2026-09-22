@@ -7,6 +7,7 @@ mean exactly that, every time, with no model in the loop.
     /kiro                 check the course portal (dormant without credentials)
     /chiama               call mode: one practice at a time, outcome in a tap
     /sito                 switchers.events visitors and Google search
+    /app                  six-digit code to sign in to the phone app
     /status               services, memory, models, leads, backups
     /logs [n]             the last n lines of the service log
     /restart [servizio]   restart the assistant, or 9router
@@ -45,6 +46,7 @@ HELP = __doc__.split("\n\n", 2)[2]
 CATALOGUE = [
     ("/chiama", "inizia a chiamare i lead: uno alla volta, esito con un tocco"),
     ("/sito", "quante persone hanno visitato switchers.events e come va su Google"),
+    ("/app", "codice per accedere all'app sul telefono, dashboard"),
     ("/status", "come sta il server, memoria, modelli, quanti lead, backup"),
     ("/logs [n]", "le ultime righe di log del servizio"),
     ("/restart [unit]", "riavvia l'assistente o il router"),
@@ -77,7 +79,8 @@ CATALOGUE = [
 # sends, changes state, spends quota or restarts a service is handed back for
 # the human to tap, because a misread sentence must not email a stranger.
 SAFE = {"status", "stato", "logs", "leads", "lead", "digest", "draft", "wa",
-        "shot", "help", "aiuto", "start", "chiama", "call", "sito", "switchers"}
+        "shot", "help", "aiuto", "start", "chiama", "call", "sito", "switchers",
+        "app", "dashboard"}
 
 
 def mobile_number(phone):
@@ -123,6 +126,15 @@ def handle(text, send):
     if command in ("help", "aiuto", "start"):
         send("Comandi:\n" + HELP)
 
+    elif command in ("app", "dashboard"):
+        # The code goes only to this chat, which the listener has already
+        # verified is yours. Single use, ten minutes, five tries.
+        from . import webapp
+        code = webapp.new_pairing_code()
+        url = os.environ.get("WEBAPP_URL", "https://app.momosassistant.it")
+        send(f"📱 Codice per l'app:\n\n{code}\n\nApri {url} e inseriscilo. "
+             f"Vale 10 minuti, una volta sola.")
+
     elif command in ("chiama", "call"):
         from . import callmode
         callmode.start(send)
@@ -149,13 +161,15 @@ def handle(text, send):
 
     elif command == "restart":
         import subprocess
-        unit = first if first in ("assistant", "9router") else "assistant"
+        unit = first if first in ("assistant", "9router", "webapp") else "assistant"
         send(f"♻️ Riavvio {unit}...")
-        result = subprocess.run(["sudo", "-n", "/usr/bin/systemctl", "restart", unit],
+        # Authorised by a polkit rule, not sudo: NoNewPrivileges=true in the
+        # unit stops sudo from ever gaining root, and that flag should stay.
+        result = subprocess.run(["systemctl", "restart", unit],
                                 capture_output=True, text=True, timeout=30)
         if result.returncode != 0:
-            # The bot restarting itself is the normal case; systemd kills this
-            # process mid-reply, so an error here means the sudo rule is missing.
+            # Restarting itself is the normal case, and systemd kills this
+            # process mid-reply; an error here means the polkit rule is missing.
             send(f"❌ {result.stderr.strip()[:200] or 'permesso negato'}")
 
     elif command == "leads":

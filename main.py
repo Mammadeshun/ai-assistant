@@ -290,6 +290,7 @@ def main():
     # The "/" menu on the phone: commands you can see beat commands you must
     # remember, and this is the list people actually use.
     telegram_bot.set_commands([
+        ("app", "Apri l'app sul telefono (codice di accesso)"),
         ("chiama", "Chiamate: un lead alla volta, esito con un tocco"),
         ("digest", "Chi chiamare e cosa inviare oggi"),
         ("status", "Server, modelli, lead, backup"),

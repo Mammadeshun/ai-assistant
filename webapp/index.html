@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assistente</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Assistente">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+/* iOS semantic colours. Data marks use the validated series blue instead of
+   system blue: UI accents and chart ink are different jobs. */
+:root {
+  color-scheme: light;
+  --bg: #F2F2F7; --card: #FFFFFF; --card-2: #F2F2F7;
+  --label: #000000; --label-2: rgba(60,60,67,.60); --label-3: rgba(60,60,67,.30);
+  --sep: rgba(60,60,67,.18); --fill: rgba(120,120,128,.12); --fill-2: rgba(120,120,128,.08);
+  --blue: #007AFF; --green: #34C759; --red: #FF3B30; --orange: #FF9500; --yellow: #FFCC00; --indigo: #5856D6;
+  --bar: rgba(249,249,249,.86);
+  --series: #2a78d6; --grid: #e7e6e2;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #000000; --card: #1C1C1E; --card-2: #2C2C2E;
+    --label: #FFFFFF; --label-2: rgba(235,235,245,.60); --label-3: rgba(235,235,245,.30);
+    --sep: rgba(84,84,88,.65); --fill: rgba(118,118,128,.24); --fill-2: rgba(118,118,128,.16);
+    --blue: #0A84FF; --green: #30D158; --red: #FF453A; --orange: #FF9F0A; --yellow: #FFD60A; --indigo: #5E5CE6;
+    --bar: rgba(22,22,24,.86);
+    --series: #3987e5; --grid: #2e2e2c;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000; --card: #1C1C1E; --card-2: #2C2C2E;
+  --label: #FFFFFF; --label-2: rgba(235,235,245,.60); --label-3: rgba(235,235,245,.30);
+  --sep: rgba(84,84,88,.65); --fill: rgba(118,118,128,.24); --fill-2: rgba(118,118,128,.16);
+  --blue: #0A84FF; --green: #30D158; --red: #FF453A; --orange: #FF9F0A; --yellow: #FFD60A; --indigo: #5E5CE6;
+  --bar: rgba(22,22,24,.86); --series: #3987e5; --grid: #2e2e2c; --shadow: none;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; background: var(--bg); color: var(--label); }
+body {
+  font: 17px/1.29 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  letter-spacing: -.41px; -webkit-font-smoothing: antialiased;
+  padding: env(safe-area-inset-top) 0 calc(62px + env(safe-area-inset-bottom));
+  min-height: 100vh; overscroll-behavior-y: none;
+}
+button { font: inherit; color: inherit; letter-spacing: inherit; border: 0; background: none; cursor: pointer; }
+a { color: var(--blue); text-decoration: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wrap { max-width: 620px; margin: 0 auto; padding: 0 16px; }
+
+/* Large title, as in Settings and Health */
+.head { padding: 10px 4px 14px; }
+.head .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: -.08px; color: var(--label-2); text-transform: uppercase; }
+.head h1 { font-size: 34px; line-height: 41px; font-weight: 700; letter-spacing: .37px; margin: 2px 0 0; }
+.head .sub { font-size: 15px; color: var(--label-2); letter-spacing: -.24px; margin-top: 2px; }
+
+.card { background: var(--card); border-radius: 16px; box-shadow: var(--shadow); }
+.section-title { font-size: 13px; color: var(--label-2); text-transform: uppercase; letter-spacing: -.08px; margin: 26px 16px 7px; }
+.footnote { font-size: 13px; color: var(--label-2); letter-spacing: -.08px; margin: 7px 16px 0; }
+
+/* ── Oggi ─────────────────────────────────────────────── */
+.progress { display: flex; align-items: center; gap: 16px; padding: 16px 18px; }
+.ring { width: 64px; height: 64px; flex: none; }
+.ring circle { fill: none; stroke-width: 9; stroke-linecap: round; }
+.ring .track { stroke: var(--fill); }
+.ring .value { stroke: var(--green); transition: stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1); transform: rotate(-90deg); transform-origin: 50% 50%; }
+.progress .big { font-size: 28px; font-weight: 700; letter-spacing: .36px; font-variant-numeric: tabular-nums; }
+.progress .big small { font-size: 17px; font-weight: 600; color: var(--label-2); }
+.progress .caption { font-size: 15px; color: var(--label-2); letter-spacing: -.24px; }
+
+.next { margin-top: 16px; padding: 20px 20px 18px; overflow: hidden; }
+.next .meta { font-size: 13px; font-weight: 600; color: var(--label-2); text-transform: uppercase; letter-spacing: -.08px; }
+.next h2 { font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: .36px; margin: 6px 0 12px; overflow-wrap: anywhere; }
+.pill { display: inline-flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 500; letter-spacing: -.24px;
+        padding: 6px 12px 6px 10px; border-radius: 999px; background: var(--fill-2); }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.tone-critical .dot { background: var(--red); } .tone-serious .dot { background: var(--orange); }
+.tone-warning .dot { background: var(--yellow); } .tone-neutral .dot { background: var(--label-3); }
+.phone { display: block; font-size: 22px; font-weight: 600; letter-spacing: .35px; margin: 18px 0 16px;
+         font-variant-numeric: tabular-nums; color: var(--label); }
+.cta { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 52px;
+       border-radius: 14px; background: var(--blue); color: #fff; font-size: 17px; font-weight: 600; }
+.cta:active, .cta2:active, .row:active, .opt:active { opacity: .7; }
+.cta svg { width: 20px; height: 20px; }
+.actions { display: flex; gap: 10px; margin-top: 10px; }
+.cta2 { flex: 1; height: 44px; border-radius: 12px; background: var(--fill-2); color: var(--blue); font-size: 15px; font-weight: 600; }
+.say { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: var(--fill-2); font-size: 16px; line-height: 1.38;
+       letter-spacing: -.32px; color: var(--label); display: none; }
+.say.open { display: block; }
+.say .label { font-size: 13px; font-weight: 600; color: var(--label-2); text-transform: uppercase; letter-spacing: -.08px; margin-bottom: 6px; }
+.attempt { font-size: 13px; color: var(--orange); margin-top: 10px; }
+.remaining { text-align: center; font-size: 13px; color: var(--label-2); margin-top: 14px; }
+
+.done { text-align: center; padding: 48px 24px; }
+.done .check { width: 72px; height: 72px; border-radius: 50%; background: var(--green); display: grid; place-items: center; margin: 0 auto 16px; }
+.done h2 { font-size: 22px; font-weight: 700; margin: 0 0 6px; }
+.done p { color: var(--label-2); margin: 0; }
+
+/* ── Lists (Lead, Sistema) ───────────────────────────── */
+.search { display: flex; align-items: center; gap: 6px; height: 36px; padding: 0 8px; border-radius: 10px; background: var(--fill); }
+.search svg { width: 16px; height: 16px; color: var(--label-2); flex: none; }
+.search input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; font: inherit; font-size: 17px; color: var(--label); outline: none; }
+.search input::placeholder { color: var(--label-2); }
+.segmented { display: flex; margin: 12px 0 4px; padding: 2px; border-radius: 9px; background: var(--fill); }
+.segmented button { flex: 1; height: 28px; border-radius: 7px; font-size: 13px; font-weight: 500; letter-spacing: -.08px; }
+.segmented button[aria-pressed="true"] { background: var(--card); box-shadow: 0 3px 8px rgba(0,0,0,.12), 0 3px 1px rgba(0,0,0,.04); font-weight: 600; }
+.list { margin-top: 12px; overflow: hidden; }
+.row { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 60px; padding: 10px 16px; text-align: left; position: relative; }
+.row + .row::before { content: ""; position: absolute; top: 0; left: 36px; right: 0; border-top: .5px solid var(--sep); }
+.row .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.row .text { flex: 1; min-width: 0; }
+.row .title { font-size: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .subtitle { font-size: 15px; color: var(--label-2); letter-spacing: -.24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .trail { font-size: 15px; color: var(--label-2); flex: none; }
+.chev { width: 8px; height: 13px; color: var(--label-3); flex: none; }
+.empty { padding: 32px 16px; text-align: center; color: var(--label-2); }
+
+/* ── Sito ─────────────────────────────────────────────── */
+.hero { padding: 18px 20px; }
+.hero .n { font-size: 56px; line-height: 1; font-weight: 700; letter-spacing: -.5px; font-variant-numeric: tabular-nums; }
+.hero .what { font-size: 15px; color: var(--label-2); margin-top: 6px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.tile { padding: 14px 16px; }
+.tile .k { font-size: 13px; font-weight: 600; color: var(--label-2); letter-spacing: -.08px; }
+.tile .v { font-size: 28px; font-weight: 700; letter-spacing: .36px; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 13px; margin-top: 2px; color: var(--label-2); }
+.up { color: var(--green) !important; } .down { color: var(--red) !important; }
+.chart { padding: 16px 16px 12px; margin-top: 12px; position: relative; }
+.chart h3 { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.chart .caption { font-size: 13px; color: var(--label-2); margin-bottom: 10px; }
+.chart svg { display: block; width: 100%; height: 170px; overflow: visible; }
+.chart .ax { fill: var(--label-2); font-size: 11px; letter-spacing: 0; }
+.chart .grid { stroke: var(--grid); stroke-width: 1; }
+.chart .bar { fill: var(--series); }
+.chart .hit { fill: transparent; }
+.chart .dlabel { fill: var(--label); font-size: 11px; font-weight: 600; letter-spacing: 0; }
+.tip { position: absolute; pointer-events: none; background: var(--card-2); border-radius: 10px; padding: 6px 10px; font-size: 13px;
+       box-shadow: 0 4px 16px rgba(0,0,0,.18); white-space: nowrap; transform: translate(-50%, -100%); opacity: 0; transition: opacity .12s; }
+.tip strong { display: block; font-size: 15px; }
+.tip.on { opacity: 1; }
+
+/* ── Sistema ──────────────────────────────────────────── */
+.status { font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.status svg { width: 16px; height: 16px; }
+.ok { color: var(--green); } .bad { color: var(--red); }
+.meter { height: 6px; border-radius: 3px; background: var(--fill); margin-top: 8px; overflow: hidden; }
+.meter i { display: block; height: 100%; border-radius: 3px; background: var(--blue); }
+
+/* ── Tab bar ──────────────────────────────────────────── */
+nav.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: space-around;
+  padding: 6px 0 calc(4px + env(safe-area-inset-bottom)); background: var(--bar);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-top: .5px solid var(--sep); }
+nav.tabs button { flex: 1; max-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 10px; font-weight: 500; letter-spacing: .1px; color: var(--label-2); padding: 2px 0; }
+nav.tabs button svg { width: 26px; height: 26px; }
+nav.tabs button[aria-selected="true"] { color: var(--blue); }
+.badge { position: absolute; margin-left: 22px; margin-top: -2px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: var(--red); color: #fff; font-size: 12px; font-weight: 600; line-height: 18px; }
+nav.tabs .ico { position: relative; display: flex; }
+
+/* ── Sheets ───────────────────────────────────────────── */
+.scrim { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.35); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.scrim.on { opacity: 1; pointer-events: auto; }
+.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 21; max-height: 92vh; overflow-y: auto; max-width: 620px; margin: 0 auto;
+  background: var(--bg); border-radius: 14px 14px 0 0; padding: 8px 16px calc(20px + env(safe-area-inset-bottom));
+  transform: translateY(105%); transition: transform .38s cubic-bezier(.32,.72,0,1); }
+.sheet.on { transform: none; }
+.grabber { width: 36px; height: 5px; border-radius: 3px; background: var(--label-3); margin: 0 auto 14px; }
+.sheet h3 { font-size: 20px; font-weight: 700; text-align: center; margin: 0 0 4px; }
+.sheet .q { text-align: center; font-size: 15px; color: var(--label-2); margin: 0 0 18px; }
+.opt { display: flex; align-items: center; gap: 14px; width: 100%; height: 56px; padding: 0 16px; font-size: 17px; font-weight: 500; text-align: left; position: relative; }
+.opt + .opt::before { content: ""; position: absolute; top: 0; left: 58px; right: 0; border-top: .5px solid var(--sep); }
+.opt .em { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; flex: none; color: #fff; }
+.opt .em svg { width: 18px; height: 18px; }
+.cancel { width: 100%; height: 56px; margin-top: 10px; border-radius: 14px; background: var(--card); color: var(--blue); font-size: 17px; font-weight: 600; }
+.detail h2 { font-size: 26px; font-weight: 700; margin: 4px 0 2px; overflow-wrap: anywhere; }
+.detail .meta { color: var(--label-2); font-size: 15px; margin-bottom: 14px; }
+.kv { padding: 0 16px; }
+.kv .r { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; font-size: 16px; }
+.kv .r + .r { border-top: .5px solid var(--sep); }
+.kv .r span:last-child { color: var(--label-2); text-align: right; overflow-wrap: anywhere; }
+textarea { width: 100%; min-height: 70px; resize: vertical; border: 0; border-radius: 12px; padding: 12px 14px; font: inherit; font-size: 16px;
+  background: var(--card); color: var(--label); outline: none; }
+
+/* ── Sign in ──────────────────────────────────────────── */
+.signin { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+.signin img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.14); }
+.signin h1 { font-size: 28px; font-weight: 700; margin: 20px 0 6px; }
+.signin p { color: var(--label-2); margin: 0 0 26px; max-width: 300px; }
+.code { width: 240px; height: 60px; text-align: center; font-size: 32px; font-weight: 600; letter-spacing: 12px; border: 0; border-radius: 14px;
+  background: var(--card); color: var(--label); outline: none; font-variant-numeric: tabular-nums; }
+.code:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 40%, transparent); }
+.err { color: var(--red); font-size: 15px; min-height: 20px; margin-top: 10px; }
+
+.toast { position: fixed; left: 50%; bottom: calc(80px + env(safe-area-inset-bottom)); z-index: 30; transform: translate(-50%, 20px);
+  background: var(--card-2); color: var(--label); padding: 12px 18px; border-radius: 14px; font-size: 15px; font-weight: 500;
+  box-shadow: 0 8px 28px rgba(0,0,0,.2); opacity: 0; transition: all .3s cubic-bezier(.32,.72,0,1); pointer-events: none; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+.hint { margin: 0 0 14px; padding: 12px 14px; font-size: 14px; color: var(--label-2); display: none; gap: 10px; align-items: center; }
+.hint.on { display: flex; }
+.hint button { color: var(--blue); font-weight: 600; font-size: 14px; margin-left: auto; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- Sign in: pairing code from the bot, like pairing an Apple TV -->
+<section id="signin" class="signin" hidden>
+  <img src="/apple-touch-icon.png" alt="">
+  <h1>Assistente</h1>
+  <p>Scrivi <b>/app</b> al tuo bot su Telegram e inserisci il codice che ti manda.</p>
+  <input id="code" class="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="······" aria-label="Codice a sei cifre">
+  <div id="err" class="err" role="alert"></div>
+</section>
+
+<main id="app" hidden>
+  <!-- OGGI -->
+  <section id="tab-oggi" class="wrap">
+    <header class="head"><div class="eyebrow" id="today-date"></div><h1>Oggi</h1></header>
+    <div id="install-hint" class="card hint">
+      <span>Aggiungila alla Home: tocca <b>Condividi</b> e poi <b>Aggiungi alla schermata Home</b>.</span>
+      <button id="hint-close" aria-label="Chiudi">OK</button>
+    </div>
+    <div class="card progress">
+      <svg class="ring" viewBox="0 0 64 64" aria-hidden="true">
+        <circle class="track" cx="32" cy="32" r="27"/>
+        <circle class="value" id="ring" cx="32" cy="32" r="27" stroke-dasharray="169.6" stroke-dashoffset="169.6"/>
+      </svg>
+      <div>
+        <div class="big" id="done-count">0 <small>/ 20</small></div>
+        <div class="caption">chiamate fatte oggi</div>
+      </div>
+    </div>
+    <div id="next"></div>
+  </section>
+
+  <!-- LEAD -->
+  <section id="tab-lead" class="wrap" hidden>
+    <header class="head"><h1>Lead</h1><div class="sub" id="lead-sub"></div></header>
+    <label class="search">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="7" r="5"/><path d="m11 11 3.5 3.5"/></svg>
+      <input id="q" type="search" placeholder="Cerca" aria-label="Cerca lead">
+    </label>
+    <div class="segmented" role="group" aria-label="Filtro">
+      <button data-state="call" aria-pressed="true">Da chiamare</button>
+      <button data-state="INTERESTED" aria-pressed="false">Interessati</button>
+      <button data-state="CONTACTED" aria-pressed="false">Contattati</button>
+      <button data-state="all" aria-pressed="false">Tutti</button>
+    </div>
+    <div class="card list" id="lead-list"></div>
+  </section>
+
+  <!-- SITO -->
+  <section id="tab-sito" class="wrap" hidden>
+    <header class="head"><div class="eyebrow">switchers.events</div><h1>Sito</h1></header>
+    <div id="site"></div>
+  </section>
+
+  <!-- SISTEMA -->
+  <section id="tab-sistema" class="wrap" hidden>
+    <header class="head"><h1>Sistema</h1><div class="sub" id="sys-sub"></div></header>
+    <div id="system"></div>
+  </section>
+</main>
+
+<nav class="tabs" id="tabs" role="tablist" hidden>
+  <button role="tab" aria-selected="true" data-tab="oggi">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span class="badge" id="badge" hidden></span></span>Oggi</button>
+  <button role="tab" aria-selected="false" data-tab="lead">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor"/></svg></span>Lead</button>
+  <button role="tab" aria-selected="false" data-tab="sito">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="12" width="4" height="8" rx="1.2"/><rect x="10" y="7" width="4" height="13" rx="1.2"/><rect x="17" y="3" width="4" height="17" rx="1.2"/></svg></span>Sito</button>
+  <button role="tab" aria-selected="false" data-tab="sistema">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>Sistema</button>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") n.className = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if (v !== null && v !== undefined && v !== false) n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false)
+    n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  return n;
+};
+const svg = (markup) => { const t = document.createElement("template"); t.innerHTML = markup.trim(); return t.content.firstChild; };
+
+async function api(path, body) {
+  const opts = { credentials: "same-origin", headers: { "X-Requested-With": "app" } };
+  if (body !== undefined) { opts.method = "POST"; opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
+  const r = await fetch(path, opts);
+  if (r.status === 401) { showSignin(); throw new Error("signin"); }
+  const data = await r.json();
+  if (!r.ok) throw new Error(data.error || r.statusText);
+  return data;
+}
+
+let toastTimer;
+function toast(text) {
+  const t = $("#toast"); t.textContent = text; t.classList.add("on");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("on"), 1800);
+}
+
+/* ── sign in ─────────────────────────────────────────── */
+function showSignin() {
+  $("#app").hidden = true; $("#tabs").hidden = true; $("#signin").hidden = false;
+  setTimeout(() => $("#code").focus(), 300);
+}
+$("#code").addEventListener("input", async (e) => {
+  const code = e.target.value.replace(/\D/g, "").slice(0, 6);
+  e.target.value = code; $("#err").textContent = "";
+  if (code.length < 6) return;
+  try {
+    await api("/api/pair", { code });
+    $("#signin").hidden = true; start();
+  } catch (err) {
+    if (err.message !== "signin") { $("#err").textContent = err.message; e.target.value = ""; }
+  }
+});
+
+/* ── tabs ────────────────────────────────────────────── */
+const loaders = {};
+let current = "oggi";
+function show(tab) {
+  current = tab;
+  for (const b of document.querySelectorAll("nav.tabs button")) b.setAttribute("aria-selected", b.dataset.tab === tab);
+  for (const s of document.querySelectorAll("main > section")) s.hidden = s.id !== "tab-" + tab;
+  window.scrollTo({ top: 0 });
+  loaders[tab]?.();
+}
+for (const b of document.querySelectorAll("nav.tabs button")) b.addEventListener("click", () => show(b.dataset.tab));
+
+/* ── sheets ──────────────────────────────────────────── */
+function openSheet(content) {
+  const sh = $("#sheet"); sh.replaceChildren(el("div", { class: "grabber" }), content);
+  $("#scrim").classList.add("on"); sh.classList.add("on");
+}
+function closeSheet() { $("#scrim").classList.remove("on"); $("#sheet").classList.remove("on"); }
+$("#scrim").addEventListener("click", closeSheet);
+
+/* ── Oggi ────────────────────────────────────────────── */
+const ICONS = {
+  phone: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+  flame: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 3.5 5 5.7 5 10.5A5 5 0 0 1 12 22a5 5 0 0 1-5-5c0-2.2 1.2-3.6 2.5-4.8.3 1.3 1 2.3 2 2.8-.6-3.4.5-6.4.5-13z"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+  nophone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4l16 16M7.5 10.8a15 15 0 0 0 5.7 5.7l1.4-1.4M17 14.6c.9.2 1.9.4 3 .4v4c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h4c0 1.1.2 2.1.4 3"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+};
+const OUTCOMES = [
+  ["ok", "Ho parlato con loro", "check", "var(--green)"],
+  ["hot", "Sono interessati", "flame", "var(--orange)"],
+  ["later", "Da richiamare", "clock", "var(--blue)"],
+  ["noanswer", "Non ha risposto", "nophone", "var(--label-3)"],
+  ["no", "Non interessati", "x", "var(--red)"],
+];
+
+let pendingCall = null;   // the lead just dialled, to ask about on return
+let nextLead = null;
+
+function ring(done, goal) {
+  const c = 169.6, pct = Math.min(1, done / Math.max(goal, 1));
+  $("#ring").style.strokeDashoffset = String(c * (1 - pct));
+  $("#done-count").replaceChildren(String(done), " ", el("small", {}, "/ " + goal));
+}
+
+function nextCard(lead, remaining) {
+  const say = el("div", { class: "say" }, el("div", { class: "label" }, "Cosa dire"), lead.draft || "Nessuna bozza.");
+  const tel = (lead.phone || "").replace(/[^\d+]/g, "");
+  return el("div", { class: "card next" },
+    el("div", { class: "meta" }, [lead.category, lead.city].filter(Boolean).join(" · ")),
+    el("h2", {}, lead.name),
+    lead.problem ? el("span", { class: "pill tone-" + lead.tone }, el("span", { class: "dot", "aria-hidden": "true" }), lead.problem) : null,
+    el("a", { class: "phone", href: "tel:" + tel }, lead.phone),
+    el("a", { class: "cta", href: "tel:" + tel, onclick: () => { pendingCall = lead; } }, svg(ICONS.phone), "Chiama"),
+    lead.attempts ? el("div", { class: "attempt" }, `Tentativo n. ${lead.attempts + 1}`) : null,
+    el("div", { class: "actions" },
+      el("button", { class: "cta2", onclick: (e) => { say.classList.toggle("open"); e.target.textContent = say.classList.contains("open") ? "Nascondi" : "Cosa dire"; } }, "Cosa dire"),
+      el("button", { class: "cta2", onclick: () => askOutcome(lead) }, "Esito"),
+      el("button", { class: "cta2", onclick: () => record(lead, "skip") }, "Salta"),
+    ),
+    say,
+  );
+}
+
+async function loadOggi() {
+  try {
+    const t = await api("/api/today");
+    const d = new Date(t.date + "T12:00:00");
+    $("#today-date").textContent = d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+    ring(t.done, t.goal);
+    nextLead = t.next;
+    const badge = $("#badge"); badge.hidden = !t.remaining; badge.textContent = t.remaining > 99 ? "99+" : t.remaining;
+    const box = $("#next");
+    if (!t.next) {
+      box.replaceChildren(el("div", { class: "card done" },
+        el("div", { class: "check" }, svg('<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>')),
+        el("h2", {}, "Hai finito per oggi"),
+        el("p", {}, "Chi non ha risposto torna domani.")));
+      return;
+    }
+    box.replaceChildren(el("div", { class: "section-title" }, "Prossima chiamata"), nextCard(t.next),
+      el("div", { class: "remaining" }, t.remaining > 1 ? `Ne restano ${t.remaining - 1} dopo questa` : "È l'ultima di oggi"));
+  } catch (e) { if (e.message !== "signin") toast("Non riesco a caricare"); }
+}
+loaders.oggi = loadOggi;
+
+function askOutcome(lead) {
+  openSheet(el("div", {},
+    el("h3", {}, lead.name),
+    el("p", { class: "q" }, "Com'è andata?"),
+    el("div", { class: "card" }, OUTCOMES.map(([action, label, icon, color]) =>
+      el("button", { class: "opt", onclick: () => { closeSheet(); record(lead, action); } },
+        el("span", { class: "em", style: "background:" + color }, svg(ICONS[icon])), label))),
+    el("button", { class: "cancel", onclick: closeSheet }, "Annulla")));
+}
+
+async function record(lead, action) {
+  try {
+    const r = await api("/api/outcome", { id: lead.id, action });
+    if (navigator.vibrate) navigator.vibrate(12);
+    toast(action === "skip" ? "Saltato" : "Registrato");
+    await loadOggi();
+  } catch (e) { if (e.message !== "signin") toast("Errore: " + e.message); }
+}
+
+// Back from the phone app: ask how the call went, the moment it matters.
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible") return;
+  if (pendingCall) { const lead = pendingCall; pendingCall = null; setTimeout(() => askOutcome(lead), 350); }
+  else loaders[current]?.();
+});
+
+/* ── Lead ────────────────────────────────────────────── */
+let leadState = "call", searchTimer;
+const STATE_LABEL = { NEW: "Nuovo", WHATSAPP_SENT: "WhatsApp", EMAIL_SENT: "Email", CALL_DUE: "Da chiamare",
+                      CONTACTED: "Contattato", INTERESTED: "Interessato", DEAD: "Archiviato" };
+const TONE_COLOR = { critical: "var(--red)", serious: "var(--orange)", warning: "var(--yellow)", neutral: "var(--label-3)" };
+const chevron = () => svg('<svg class="chev" viewBox="0 0 8 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m1.5 1.5 5 5-5 5"/></svg>');
+
+async function loadLead() {
+  try {
+    const q = $("#q").value.trim();
+    const rows = await api(`/api/leads?state=${encodeURIComponent(leadState)}&q=${encodeURIComponent(q)}`);
+    $("#lead-sub").textContent = `${rows.length} ${rows.length === 1 ? "attività" : "attività"}`;
+    const list = $("#lead-list");
+    if (!rows.length) { list.replaceChildren(el("div", { class: "empty" }, "Niente qui.")); return; }
+    list.replaceChildren(...rows.map((l) => el("button", { class: "row", onclick: () => openLead(l.id) },
+      el("span", { class: "dot", style: "background:" + TONE_COLOR[l.tone], "aria-hidden": "true" }),
+      el("span", { class: "text" },
+        el("div", { class: "title" }, l.name),
+        el("div", { class: "subtitle" }, l.problem || [l.category, l.city].filter(Boolean).join(" · "))),
+      el("span", { class: "trail" }, STATE_LABEL[l.state] || l.state), chevron())));
+  } catch (e) { if (e.message !== "signin") toast("Non riesco a caricare"); }
+}
+loaders.lead = loadLead;
+$("#q").addEventListener("input", () => { clearTimeout(searchTimer); searchTimer = setTimeout(loadLead, 220); });
+for (const b of document.querySelectorAll(".segmented button")) b.addEventListener("click", () => {
+  leadState = b.dataset.state;
+  for (const x of document.querySelectorAll(".segmented button")) x.setAttribute("aria-pressed", x === b);
+  loadLead();
+});
+
+async function openLead(id) {
+  const l = await api("/api/lead/" + id);
+  const tel = (l.phone || "").replace(/[^\d+]/g, "");
+  const note = el("textarea", { placeholder: "Aggiungi una nota", "aria-label": "Nota" });
+  openSheet(el("div", { class: "detail" },
+    el("h2", {}, l.name),
+    el("div", { class: "meta" }, [l.category, l.city, STATE_LABEL[l.state]].filter(Boolean).join(" · ")),
+    l.phone ? el("a", { class: "cta", href: "tel:" + tel, onclick: () => { closeSheet(); pendingCall = l; } }, svg(ICONS.phone), "Chiama " + l.phone) : null,
+    l.whatsapp ? el("div", { class: "actions" }, el("a", { class: "cta2", style: "display:grid;place-items:center", href: l.whatsapp, target: "_blank", rel: "noopener" }, "Apri WhatsApp con il messaggio")) : null,
+    el("div", { class: "section-title" }, "Dettagli"),
+    el("div", { class: "card kv" },
+      l.problem ? el("div", { class: "r" }, el("span", {}, "Problema"), el("span", {}, l.problem)) : null,
+      l.website ? el("div", { class: "r" }, el("span", {}, "Sito"), el("a", { href: l.website.startsWith("http") ? l.website : "https://" + l.website, target: "_blank", rel: "noopener" }, l.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))) : null,
+      l.email ? el("div", { class: "r" }, el("span", {}, "Email"), el("span", {}, l.email)) : null,
+      el("div", { class: "r" }, el("span", {}, "Tentativi"), el("span", {}, String(l.attempts || 0)))),
+    l.draft ? [el("div", { class: "section-title" }, "Cosa dire"), el("div", { class: "card", style: "padding:14px 16px;font-size:16px;line-height:1.38" }, l.draft)] : null,
+    el("div", { class: "section-title" }, "Note"),
+    l.notes ? el("div", { class: "card", style: "padding:12px 16px;font-size:15px;white-space:pre-wrap;color:var(--label-2)" }, l.notes) : null,
+    el("div", { style: "margin-top:10px" }, note),
+    el("button", { class: "cancel", onclick: async () => {
+      if (note.value.trim()) { await api("/api/note", { id: l.id, text: note.value.trim() }); toast("Nota salvata"); }
+      closeSheet();
+    } }, "Fatto")));
+}
+
+/* ── Sito ────────────────────────────────────────────── */
+function delta(now, was) {
+  if (!was) return null;
+  const pct = Math.round((now - was) / was * 100);
+  return { text: (pct > 0 ? "+" : "") + pct + "% vs settimana prima", cls: pct >= 0 ? "up" : "down" };
+}
+function tile(k, v, d) {
+  return el("div", { class: "card tile" }, el("div", { class: "k" }, k), el("div", { class: "v" }, v),
+    d ? el("div", { class: "d " + d.cls }, d.text) : el("div", { class: "d" }, " "));
+}
+
+// Single-series columns: no legend (the title names it), thin bars with a
+// rounded data-end, hairline grid, value on the peak and the latest bar only,
+// a tap tooltip, and the same data as a table for screen readers.
+function columnChart(days) {
+  const W = 340, H = 170, top = 18, bottom = 22, left = 4, right = 4;
+  const max = Math.max(1, ...days.map((d) => d.visitors));
+  const nice = Math.ceil(max / 10) * 10;
+  const plotH = H - top - bottom, band = (W - left - right) / days.length;
+  const barW = Math.min(18, band - 4), y = (v) => top + plotH - (v / nice) * plotH;
+  const ns = "http://www.w3.org/2000/svg";
+  const s = document.createElementNS(ns, "svg");
+  s.setAttribute("viewBox", `0 0 ${W} ${H}`); s.setAttribute("role", "img");
+  s.setAttribute("aria-label", "Visitatori unici al giorno, ultimi 14 giorni");
+  const add = (tag, attrs, text) => { const n = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v); if (text !== undefined) n.textContent = text; s.append(n); return n; };
+  for (const g of [0, nice / 2, nice]) {
+    add("line", { class: "grid", x1: left, x2: W - right, y1: y(g), y2: y(g) });
+    if (g) add("text", { class: "ax", x: W - right, y: y(g) - 4, "text-anchor": "end" }, g);
+  }
+  const peak = days.reduce((a, d, i) => d.visitors > days[a].visitors ? i : a, 0);
+  const wrap = el("div", { class: "card chart" });
+  const tip = el("div", { class: "tip" });
+  days.forEach((d, i) => {
+    const cx = left + band * i + band / 2, h = Math.max(0, (d.visitors / nice) * plotH), r = Math.min(4, h / 2, barW / 2);
+    const x0 = cx - barW / 2, yb = top + plotH;
+    if (h > 0) add("path", { class: "bar", d: `M${x0},${yb}V${yb - h + r}Q${x0},${yb - h} ${x0 + r},${yb - h}H${x0 + barW - r}Q${x0 + barW},${yb - h} ${x0 + barW},${yb - h + r}V${yb}Z` });
+    if (i === peak || i === days.length - 1) add("text", { class: "dlabel", x: cx, y: yb - h - 5, "text-anchor": "middle" }, d.visitors);
+    if (i % 2 === 0 || i === days.length - 1) add("text", { class: "ax", x: cx, y: H - 6, "text-anchor": "middle" }, d.date.slice(8));
+    const hit = add("rect", { class: "hit", x: left + band * i, y: top, width: band, height: plotH + bottom, tabindex: 0 });
+    const on = () => {
+      const date = new Date(d.date + "T12:00:00").toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
+      tip.replaceChildren(el("strong", {}, `${d.visitors} visitatori`), `${d.views} pagine · ${date}`);
+      const box = s.getBoundingClientRect(), parent = wrap.getBoundingClientRect();
+      tip.style.left = (box.left - parent.left + (cx / W) * box.width) + "px";
+      tip.style.top = (box.top - parent.top + ((yb - h) / H) * box.height - 8) + "px";
+      tip.classList.add("on");
+    };
+    hit.addEventListener("pointerenter", on); hit.addEventListener("click", on); hit.addEventListener("focus", on);
+    hit.addEventListener("pointerleave", () => tip.classList.remove("on")); hit.addEventListener("blur", () => tip.classList.remove("on"));
+  });
+  const table = el("table", { class: "sr-only" }, el("caption", {}, "Visitatori al giorno"),
+    el("tr", {}, el("th", {}, "Giorno"), el("th", {}, "Visitatori"), el("th", {}, "Pagine")),
+    days.map((d) => el("tr", {}, el("td", {}, d.date), el("td", {}, d.visitors), el("td", {}, d.views))));
+  wrap.append(el("h3", {}, "Visitatori al giorno"), el("div", { class: "caption" }, "Ultimi 14 giorni · tocca una barra"), s, tip, table);
+  return wrap;
+}
+
+async function loadSito() {
+  const box = $("#site");
+  if (!box.childNodes.length) box.append(el("div", { class: "empty" }, "Carico…"));
+  try {
+    const { visitors: v, search: g } = await api("/api/site");
+    const days = v?.days || [];
+    const last7 = days.slice(-7).reduce((a, d) => a + d.visitors, 0);
+    const prev7 = days.slice(-14, -7).reduce((a, d) => a + d.visitors, 0);
+    const wa = v?.contacts?.whatsapp ?? 0;
+    const parts = [
+      el("div", { class: "card hero" }, el("div", { class: "n" }, (v?.visitors ?? "–").toLocaleString("it-IT")),
+        el("div", { class: "what" }, "visitatori unici negli ultimi 14 giorni")),
+      el("div", { class: "tiles" },
+        tile("Ultimi 7 giorni", last7, delta(last7, prev7)),
+        tile("Contatti WhatsApp", wa, null),
+        g && !g.error ? tile("Clic da Google · 7g", Math.round(g.clicks), delta(g.clicks, g.prev_clicks)) : tile("Google", "–", null),
+        g && !g.error ? tile("Posizione media", g.position ? g.position.toFixed(1) : "–",
+          g.prev_position ? { text: `era ${g.prev_position.toFixed(1)}`, cls: g.position <= g.prev_position ? "up" : "down" } : null) : tile("Pagine viste", v?.pageviews ?? "–", null)),
+      days.length ? columnChart(days) : null,
+      g && !g.error ? el("div", { class: "footnote" }, `Google: ${Math.round(g.impressions)} impressioni in 7 giorni. I dati di Search Console arrivano con 2–3 giorni di ritardo.`) : null,
+    ];
+    box.replaceChildren(...parts.filter(Boolean));
+  } catch (e) { if (e.message !== "signin") box.replaceChildren(el("div", { class: "empty" }, "Dati del sito non disponibili.")); }
+}
+loaders.sito = loadSito;
+
+/* ── Sistema ─────────────────────────────────────────── */
+const SERVICE_NAME = { assistant: "Assistente", "9router": "Router AI", caddy: "Sito web", docker: "Container" };
+function statusLabel(ok, yes = "Attivo", no = "Fermo") {
+  return el("span", { class: "status " + (ok ? "ok" : "bad") }, svg(ok
+    ? '<svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/><path d="m4.8 8.2 2 2 4.4-4.4" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    : '<svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/><path d="M8 4.5v4M8 11v.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>'), ok ? yes : no);
+}
+async function loadSistema() {
+  const box = $("#system");
+  if (!box.childNodes.length) box.append(el("div", { class: "empty" }, "Carico…"));
+  try {
+    const s = await api("/api/system");
+    const allOk = Object.values(s.services).every((x) => x === "active") && s.model.ok;
+    $("#sys-sub").textContent = allOk ? "Tutto funziona" : "Qualcosa richiede attenzione";
+    const mem = s.memory || {}, disk = s.disk || {};
+    const usage = Object.entries(s.usage || {});
+    box.replaceChildren(
+      el("div", { class: "section-title" }, "Servizi"),
+      el("div", { class: "card list", style: "margin-top:0" }, Object.entries(s.services).map(([k, v]) =>
+        el("div", { class: "row" }, el("span", { class: "text" }, el("div", { class: "title" }, SERVICE_NAME[k] || k)), statusLabel(v === "active")))),
+      el("div", { class: "section-title" }, "Intelligenza artificiale"),
+      el("div", { class: "card list", style: "margin-top:0" },
+        el("div", { class: "row" }, el("span", { class: "text" }, el("div", { class: "title" }, "Modelli"),
+          el("div", { class: "subtitle" }, s.model.ok ? `risposta in ${s.model.seconds.toFixed(1)} s` : (s.model.error || ""))), statusLabel(s.model.ok, "Rispondono", "Non rispondono")),
+        usage.length ? el("div", { class: "row" }, el("span", { class: "text" }, el("div", { class: "title" }, "Richieste oggi"),
+          el("div", { class: "subtitle" }, usage.map(([p, u]) => `${p} ${u.requests}`).join(" · ")))) : null),
+      el("div", { class: "section-title" }, "Risorse"),
+      el("div", { class: "card", style: "padding:14px 16px" },
+        el("div", { style: "display:flex;justify-content:space-between" }, el("span", {}, "Memoria"), el("span", { style: "color:var(--label-2)" }, `${(mem.used_gb || 0).toFixed(1)} di ${(mem.total_gb || 0).toFixed(1)} GB`)),
+        el("div", { class: "meter" }, el("i", { style: `width:${Math.round(mem.percent || 0)}%` })),
+        el("div", { style: "display:flex;justify-content:space-between;margin-top:16px" }, el("span", {}, "Disco"), el("span", { style: "color:var(--label-2)" }, `${Math.round(disk.used_gb || 0)} di ${Math.round(disk.total_gb || 0)} GB`)),
+        el("div", { class: "meter" }, el("i", { style: `width:${Math.round(disk.percent || 0)}%` }))),
+      el("div", { class: "footnote" }, `Acceso da ${s.uptime}` + (s.backup ? ` · ultimo backup ${Math.round(s.backup.age_hours)} h fa` : "")),
+    );
+  } catch (e) { if (e.message !== "signin") box.replaceChildren(el("div", { class: "empty" }, "Stato non disponibile.")); }
+}
+loaders.sistema = loadSistema;
+
+/* ── start ───────────────────────────────────────────── */
+function start() {
+  $("#app").hidden = false; $("#tabs").hidden = false;
+  const standalone = window.navigator.standalone || matchMedia("(display-mode: standalone)").matches;
+  let dismissed = false; try { dismissed = localStorage.getItem("hint") === "1"; } catch {}
+  if (!standalone && !dismissed && /iPhone|iPad/.test(navigator.userAgent)) $("#install-hint").classList.add("on");
+  $("#hint-close").addEventListener("click", () => { $("#install-hint").classList.remove("on"); try { localStorage.setItem("hint", "1"); } catch {} });
+  show("oggi");
+}
+(async () => {
+  try { const me = await api("/api/me"); me.authed ? start() : showSignin(); }
+  catch { showSignin(); }
+})();
+</script>
+</body>
+</html>

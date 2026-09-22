@@ -1,9 +1,0 @@
-# Lets the bot restart itself and the router from Telegram, and read the
-# site's visitor summary - and nothing else. No shell, no arbitrary systemctl
-# verb, no other unit, and the visitor report is pinned to one exact command
-# line: the raw Caddy log holds visitor IPs and stays unreadable to the bot,
-# which only ever sees the aggregate.
-#
-#   install -m 440 deploy/assistant.sudoers /etc/sudoers.d/assistant
-#   visudo -c
-agent ALL=(root) NOPASSWD: /usr/bin/systemctl restart assistant, /usr/bin/systemctl restart 9router, /usr/bin/python3 /opt/visitor-report/visitor_report.py --days 7
