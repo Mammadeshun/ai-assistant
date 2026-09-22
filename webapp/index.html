@@ -481,6 +481,10 @@ function showSignin() {
   $("#app").hidden = true; $("#tabs").hidden = true; $("#signin").hidden = false;
   setTimeout(() => $("#code").focus(), 300);
 }
+// Registered for one reason: Chrome on Android offers a real install only
+// to a page that has one. It caches nothing.
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
+
 $("#code").addEventListener("input", async (e) => {
   const code = e.target.value.replace(/\D/g, "").slice(0, 6);
   e.target.value = code; $("#err").textContent = "";

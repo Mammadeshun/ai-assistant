@@ -352,7 +352,11 @@ class Handler(http.server.BaseHTTPRequestHandler):
                    "/manifest.webmanifest": ("manifest.webmanifest", "application/manifest+json"),
                    "/icon.svg": ("icon.svg", "image/svg+xml"),
                    "/apple-touch-icon.png": ("apple-touch-icon.png", "image/png"),
-                   "/icon-512.png": ("icon-512.png", "image/png")}
+                   "/icon-512.png": ("icon-512.png", "image/png"),
+                   "/icon-192.png": ("icon-192.png", "image/png"),
+                   "/icon-maskable.png": ("icon-maskable.png", "image/png"),
+                   # Android will not offer "Install app" without one.
+                   "/sw.js": ("sw.js", "text/javascript")}
         if url.path in statics:
             return self._static(*statics[url.path])
         if url.path == "/api/me":
