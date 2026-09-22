@@ -258,6 +258,20 @@ def due_leads():
             buckets["to_call"].append(lead)
         elif state == "CONTACTED" and age_days >= FOLLOW_UP_DAYS and lead["follow_ups"] < 1:
             buckets["to_follow_up"].append(lead)
+    # Strongest problem first. Ordered by id, the first calls of the day were
+    # "could not find your site", the weakest angle in the list, while expired
+    # certificates and dead sites - checkable in ten seconds on the owner's
+    # own phone - sat halfway down.
+    from .scanner import SEVERITY
+
+    def strength(lead):
+        # Looked up by code rather than read from the stored finding, so
+        # retuning SEVERITY reorders existing leads without rescanning them.
+        found = findings_of(lead)
+        scores = [SEVERITY.get(f["code"], f.get("severity", 1)) for f in found]
+        return (max(scores, default=0), len(found))
+    for key in buckets:
+        buckets[key].sort(key=strength, reverse=True)
     return buckets
 
 

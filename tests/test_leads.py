@@ -254,3 +254,28 @@ class ChannelRoutingTest(unittest.TestCase):
         self.assertEqual([l["id"] for l in due["to_call"]], [landline],
                          "a landline with no email is a phone call, not an email")
         self.assertEqual([l["id"] for l in due["no_angle"]], [nothing])
+
+
+class PriorityTest(unittest.TestCase):
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads
+        self.leads = leads
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def test_strongest_problem_is_called_first(self):
+        weak = self.leads.add_lead("Senza Sito", city="MI", phone="02 1")
+        strong = self.leads.add_lead("Certificato Scaduto", city="MI", phone="02 2")
+        self.leads.save_scan(weak, [{"code": "no_website", "severity": 5, "detail": ""}])
+        self.leads.save_scan(strong, [{"code": "ssl_expired", "severity": 5, "detail": ""},
+                                      {"code": "slow", "severity": 2, "detail": ""}])
+        order = [l["id"] for l in self.leads.due_leads()["to_call"]]
+        self.assertEqual(order, [strong, weak], "more wrong beats less wrong at equal severity")

@@ -25,7 +25,10 @@ SHOTS_DIR = os.environ.get("SCAN_SHOTS_DIR", "data/shots")
 
 # What each finding is worth when deciding who to contact first.
 SEVERITY = {
-    "no_website": 5,
+    # Observed problems outrank inferred ones. no_website comes from a missing
+    # OpenStreetMap tag, which is a guess about the practice, not something
+    # seen on it - so it ranks below anything a screenshot can prove.
+    "no_website": 3,
     "site_down": 5,
     "ssl_expired": 5,
     "not_mobile": 4,
