@@ -14,3 +14,6 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# The app icons are part of the app, not local state.
+!webapp/*.png
