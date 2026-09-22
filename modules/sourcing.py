@@ -90,9 +90,16 @@ def search(niche, city="Milano", limit=200):
         name = _tag(tags, "name", "operator")
         if not name:
             continue
+        # OSM packs several numbers into one tag with ";". Unsplit, the digest
+        # showed "+39 02 2892827;" and a landline plus a mobile collapsed into
+        # one digit string that matched neither.
+        raw_phones = ";".join(filter(None, (tags.get(k) for k in
+                              ("phone", "contact:phone", "contact:mobile", "mobile"))))
+        phones = [p.strip() for p in raw_phones.split(";") if p.strip()]
         candidates.append({
             "name": name,
-            "phone": _tag(tags, "phone", "contact:phone", "contact:mobile", "mobile"),
+            "phone": phones[0] if phones else None,
+            "all_phones": phones,
             "email": _tag(tags, "email", "contact:email"),
             "website": _tag(tags, "website", "contact:website", "url"),
             "street": _tag(tags, "addr:street"),
@@ -114,10 +121,12 @@ def import_niche(niche, city="Milano", limit=200):
         if not candidate["phone"] and not candidate["email"]:
             unreachable += 1
             continue
+        # Prefer a mobile for WhatsApp if any of the listed numbers is one.
+        whatsapp = next((m for m in map(mobile_number, candidate["all_phones"]) if m), None)
         lead_id = store.add_lead(
             candidate["name"], category=niche, city=city,
             website=candidate["website"], email=candidate["email"],
-            phone=candidate["phone"], whatsapp=mobile_number(candidate["phone"]),
+            phone=candidate["phone"], whatsapp=whatsapp,
             source=f"osm:{candidate['osm_id']}")
         if lead_id:
             added += 1

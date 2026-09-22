@@ -101,8 +101,18 @@ def draft_opener(lead, findings):
     # The technical detail stays out of the prompt on purpose: the model
     # quoted it verbatim ("certificate has expired") into a message meant for
     # a dentist. PROBLEM_IT already says it in plain Italian.
+    # Name the address when the problem is about a specific site. Most dead
+    # sites in the list fail at DNS - an expired domain - and the practice may
+    # have moved. "Il sito pentadent.it non si apre" is checkable and true;
+    # "il vostro sito non si apre" is a claim they can refute with a new URL.
+    host = ""
+    if lead.get("website") and findings[0]["code"] in ("site_down", "ssl_expired",
+                                                        "ssl_expiring", "not_mobile", "slow"):
+        import urllib.parse
+        url = lead["website"] if "://" in lead["website"] else "https://" + lead["website"]
+        host = (urllib.parse.urlparse(url).hostname or "").removeprefix("www.")
     prompt = f"""Attività: {lead['name']} ({lead.get('category') or 'attività locale'}, {lead.get('city') or 'Milano'})
-Problema trovato sul loro sito: {problem}
+Problema trovato: {problem}""" + (f"\nIndirizzo del sito: {host} (citalo per nome)" if host else "") + """
 
 Scrivi il messaggio."""
     try:
