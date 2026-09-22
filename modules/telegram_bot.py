@@ -41,7 +41,8 @@ def send_telegram_message(message):
         else:
             print(f"Failed to send Telegram message: {response.text}")
     except Exception as e:
-        print(f"Telegram connection error: {e}")
+        # The token is in the URL, and requests puts the URL in its errors.
+        print(f"Telegram connection error: {str(e).replace(BOT_TOKEN, '<token>') if BOT_TOKEN else e}")
 
 def send_telegram_photo(path, caption=""):
     """Send an image - the evidence an opener refers to.
@@ -63,7 +64,8 @@ def send_telegram_photo(path, caption=""):
     except OSError as e:
         print(f"Screenshot not readable: {e}")
     except Exception as e:
-        print(f"Telegram connection error: {e}")
+        # The token is in the URL, and requests puts the URL in its errors.
+        print(f"Telegram connection error: {str(e).replace(BOT_TOKEN, '<token>') if BOT_TOKEN else e}")
     return False
 
 

@@ -16,6 +16,22 @@ from modules import outreach
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 
+# Long-poll: Telegram holds the request open for POLL_SECONDS when there is
+# nothing to deliver, so the read timeout has to comfortably exceed it.
+POLL_SECONDS = 10
+POLL_TIMEOUT = (10, POLL_SECONDS + 25)   # (connect, read)
+
+
+def _redact(error):
+    """Error text without the bot token in it.
+
+    requests puts the full URL in its exceptions, and the token is part of the
+    URL, so every network blip wrote the token into the journal - which /logs
+    then forwards to Telegram.
+    """
+    text = str(error)
+    return text.replace(TELEGRAM_BOT_TOKEN, "<token>") if TELEGRAM_BOT_TOKEN else text
+
 # The Kiro/Moodle scraper stays dormant until its credentials are set. It is
 # the only job that starts Chrome, and Chrome is the memory hog on a 4 GB box.
 KIRO_ENABLED = bool(os.environ.get("UNIPV_USERNAME") and os.environ.get("UNIPV_PASSWORD"))
@@ -138,8 +154,8 @@ def listen_for_commands():
     while True:
         try:
             url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates"
-            params = {"timeout": 10, "offset": last_update_id}
-            response = requests.get(url, params=params, timeout=15).json()
+            params = {"timeout": POLL_SECONDS, "offset": last_update_id}
+            response = requests.get(url, params=params, timeout=POLL_TIMEOUT).json()
 
             # Telegram gives one update to one poller. A second instance - the
             # laptop copy, typically - silently steals half the messages, and
@@ -230,8 +246,12 @@ def listen_for_commands():
                     telegram_bot.send_telegram_message(
                         "Non ho capito. /help per l'elenco dei comandi.")
 
+        except requests.exceptions.ReadTimeout:
+            # A long-poll that timed out is not an error: nothing arrived.
+            # Logging these (86 in two days) buried the real failures.
+            continue
         except Exception as e:
-            print(f"⚠️ Listener error: {e}")
+            print(f"⚠️ Listener error: {_redact(e)}")
 
         time.sleep(2)
 
