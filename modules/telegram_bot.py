@@ -69,6 +69,53 @@ def send_telegram_photo(path, caption=""):
     return False
 
 
+def _api(method, payload):
+    """One Bot API call; returns the result object or None."""
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/{method}"
+    try:
+        response = _session.post(url, json=payload, timeout=REQUEST_TIMEOUT)
+        data = response.json()
+        if not data.get("ok"):
+            print(f"Telegram {method} refused: {str(data.get('description'))[:150]}")
+            return None
+        return data.get("result")
+    except Exception as e:
+        print(f"Telegram {method} error: {str(e).replace(BOT_TOKEN, '<token>') if BOT_TOKEN else e}")
+        return None
+
+
+def send_with_buttons(text, rows):
+    """Send a message with inline buttons. rows = [[(label, data), ...], ...].
+
+    Returns the message id so the card can be edited in place once a button
+    is pressed, instead of stacking a new message per tap.
+    """
+    keyboard = {"inline_keyboard": [[{"text": label, "callback_data": data}
+                                     for label, data in row] for row in rows]}
+    result = _api("sendMessage", {"chat_id": CHAT_ID, "text": text,
+                                  "reply_markup": keyboard})
+    return result.get("message_id") if result else None
+
+
+def edit_message(message_id, text):
+    """Replace a card's text and drop its buttons, so it cannot be tapped twice."""
+    return _api("editMessageText", {"chat_id": CHAT_ID, "message_id": message_id,
+                                    "text": text})
+
+
+def answer_callback(callback_id, text=""):
+    """Stop the button's loading spinner; Telegram shows it until answered."""
+    return _api("answerCallbackQuery", {"callback_query_id": callback_id,
+                                        "text": text[:190]})
+
+
+def set_commands(commands):
+    """Populate the '/' menu, so the commands are discoverable on the phone
+    instead of living in a message you have to scroll back to find."""
+    return _api("setMyCommands", {"commands": [
+        {"command": name, "description": desc[:250]} for name, desc in commands]})
+
+
 # Let's test it immediately!
 if __name__ == "__main__":
     test_msg = "🤖 Hello! I am your Python Assistant.\n\nYour PC cleanup is done and I am watching your emails!"

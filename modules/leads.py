@@ -37,6 +37,8 @@ ACTIONABLE_STATES = OPEN_STATES + ("CONTACTED",)
 WHATSAPP_WAIT_DAYS = int(os.environ.get("WHATSAPP_WAIT_DAYS", "2"))
 EMAIL_WAIT_DAYS = int(os.environ.get("EMAIL_WAIT_DAYS", "3"))
 FOLLOW_UP_DAYS = int(os.environ.get("FOLLOW_UP_DAYS", "4"))
+# Three unanswered calls on three different days, then stop.
+MAX_ATTEMPTS = int(os.environ.get("MAX_CALL_ATTEMPTS", "3"))
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS leads (
@@ -83,6 +85,23 @@ def _now():
 
 _schema_ready = False
 
+# Columns added after the first deploy. CREATE TABLE IF NOT EXISTS never alters
+# an existing table, so each addition is applied once, and "duplicate column"
+# means it already was.
+MIGRATIONS = (
+    "ALTER TABLE leads ADD COLUMN attempts INTEGER NOT NULL DEFAULT 0",
+    "ALTER TABLE leads ADD COLUMN last_attempt_at TEXT",
+)
+
+
+def _migrate(conn):
+    for statement in MIGRATIONS:
+        try:
+            conn.execute(statement)
+        except sqlite3.OperationalError as e:
+            if "duplicate column" not in str(e):
+                raise
+
 
 @contextlib.contextmanager
 def connect():
@@ -105,6 +124,7 @@ def connect():
     try:
         if not _schema_ready:
             conn.executescript(SCHEMA)
+            _migrate(conn)
             _schema_ready = True
         yield conn
         conn.commit()
@@ -272,7 +292,29 @@ def due_leads():
         return (max(scores, default=0), len(found))
     for key in buckets:
         buckets[key].sort(key=strength, reverse=True)
+    # "Non risponde" should move you on to the next practice, not hand the
+    # same one back; it returns tomorrow.
+    buckets["to_call"] = [l for l in buckets["to_call"] if not attempted_today(l)]
     return buckets
+
+
+def record_attempt(lead_id, outcome):
+    """A call that did not reach anyone. The lead leaves today's list and
+    comes back tomorrow; after MAX_ATTEMPTS it is given up on."""
+    with connect() as conn:
+        conn.execute("UPDATE leads SET attempts = attempts + 1, last_attempt_at = ?"
+                     " WHERE id = ?", (_now(), lead_id))
+        conn.execute("INSERT INTO events (lead_id, at, kind, detail) VALUES (?,?,?,?)",
+                     (lead_id, _now(), "attempt", outcome))
+    lead = get(lead_id)
+    if lead and lead["attempts"] >= MAX_ATTEMPTS and lead["state"] in OPEN_STATES:
+        set_state(lead_id, "DEAD", note=f"{lead['attempts']} tentativi senza risposta")
+    return get(lead_id)
+
+
+def attempted_today(lead):
+    stamp = lead.get("last_attempt_at")
+    return bool(stamp) and stamp[:10] == datetime.date.today().isoformat()
 
 
 def advance_overdue():

@@ -279,3 +279,47 @@ class PriorityTest(unittest.TestCase):
                                       {"code": "slow", "severity": 2, "detail": ""}])
         order = [l["id"] for l in self.leads.due_leads()["to_call"]]
         self.assertEqual(order, [strong, weak], "more wrong beats less wrong at equal severity")
+
+
+class CallAttemptTest(unittest.TestCase):
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads
+        self.leads = leads
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def test_no_answer_moves_on_today_and_returns_tomorrow(self):
+        lead = self.leads.add_lead("Studio", city="MI", phone="02 1")
+        self.leads.record_attempt(lead, "non risponde")
+        self.assertEqual(self.leads.due_leads()["to_call"], [], "not offered twice in a day")
+        yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).isoformat(timespec="seconds")
+        with self.leads.connect() as conn:
+            conn.execute("UPDATE leads SET last_attempt_at = ? WHERE id = ?", (yesterday, lead))
+        self.assertEqual([l["id"] for l in self.leads.due_leads()["to_call"]], [lead])
+
+    def test_three_unanswered_calls_give_up(self):
+        lead = self.leads.add_lead("Mai Risponde", city="MI", phone="02 2")
+        for _ in range(self.leads.MAX_ATTEMPTS):
+            self.leads.record_attempt(lead, "non risponde")
+        self.assertEqual(self.leads.get(lead)["state"], "DEAD")
+
+    def test_migration_adds_columns_to_an_old_database(self):
+        import sqlite3
+        conn = sqlite3.connect(self.db)
+        conn.execute("CREATE TABLE leads (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL,"
+                     " category TEXT, city TEXT, website TEXT, email TEXT, phone TEXT, whatsapp TEXT,"
+                     " source TEXT, state TEXT NOT NULL DEFAULT 'NEW', created_at TEXT NOT NULL,"
+                     " state_changed_at TEXT NOT NULL, next_action_at TEXT, scanned_at TEXT,"
+                     " findings TEXT, draft TEXT, follow_ups INTEGER NOT NULL DEFAULT 0, notes TEXT,"
+                     " UNIQUE (name, city))")
+        conn.commit(); conn.close()
+        lead = self.leads.add_lead("Vecchio DB", city="MI", phone="02 3")
+        self.assertEqual(self.leads.record_attempt(lead, "x")["attempts"], 1)

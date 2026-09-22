@@ -171,6 +171,21 @@ def listen_for_commands():
 
             for update in response.get("result", []):
                 last_update_id = update["update_id"] + 1
+
+                # A button tap on a call card.
+                callback = update.get("callback_query")
+                if callback:
+                    chat = str(callback.get("message", {}).get("chat", {}).get("id", ""))
+                    if chat != TELEGRAM_CHAT_ID:
+                        continue
+                    try:
+                        from modules import callmode
+                        callmode.on_button(callback.get("data", ""),
+                                           callback["message"]["message_id"], callback["id"])
+                    except Exception as e:
+                        print(f"❌ Button failed: {_redact(e)}")
+                    continue
+
                 message = update.get("message", {})
                 text = message.get("text", "").strip()
                 chat_id = str(message.get("chat", {}).get("id", ""))
@@ -271,6 +286,20 @@ def main():
     # breakfast. Both times are local, which is why the box runs Europe/Rome.
     schedule.every().day.at(os.environ.get("SCAN_AT", "03:00")).do(run_lead_scan)
     schedule.every().day.at(os.environ.get("DIGEST_AT", "08:10")).do(run_lead_digest)
+
+    # The "/" menu on the phone: commands you can see beat commands you must
+    # remember, and this is the list people actually use.
+    telegram_bot.set_commands([
+        ("chiama", "Chiamate: un lead alla volta, esito con un tocco"),
+        ("digest", "Chi chiamare e cosa inviare oggi"),
+        ("status", "Server, modelli, lead, backup"),
+        ("sito", "Visite di switchers.events e Google"),
+        ("briefing", "Riassunto della posta, ora"),
+        ("leads", "Elenco dei lead"),
+        ("source", "Cerca nuove attività: /source dentisti Milano"),
+        ("logs", "Ultime righe di log"),
+        ("help", "Tutti i comandi"),
+    ])
 
     # Run Telegram listener in background thread
     listener_thread = threading.Thread(target=listen_for_commands, daemon=True)

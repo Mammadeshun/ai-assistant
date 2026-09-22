@@ -5,6 +5,8 @@ mean exactly that, every time, with no model in the loop.
 
     /briefing             read the inbox and summarise it now
     /kiro                 check the course portal (dormant without credentials)
+    /chiama               call mode: one practice at a time, outcome in a tap
+    /sito                 switchers.events visitors and Google search
     /status               services, memory, models, leads, backups
     /logs [n]             the last n lines of the service log
     /restart [servizio]   restart the assistant, or 9router
@@ -41,6 +43,8 @@ HELP = __doc__.split("\n\n", 2)[2]
 # list the natural-language router picks from, so it is the single place to
 # describe a capability.
 CATALOGUE = [
+    ("/chiama", "inizia a chiamare i lead: uno alla volta, esito con un tocco"),
+    ("/sito", "quante persone hanno visitato switchers.events e come va su Google"),
     ("/status", "come sta il server, memoria, modelli, quanti lead, backup"),
     ("/logs [n]", "le ultime righe di log del servizio"),
     ("/restart [unit]", "riavvia l'assistente o il router"),
@@ -73,7 +77,7 @@ CATALOGUE = [
 # sends, changes state, spends quota or restarts a service is handed back for
 # the human to tap, because a misread sentence must not email a stranger.
 SAFE = {"status", "stato", "logs", "leads", "lead", "digest", "draft", "wa",
-        "shot", "help", "aiuto", "start"}
+        "shot", "help", "aiuto", "start", "chiama", "call", "sito", "switchers"}
 
 
 def mobile_number(phone):
@@ -118,6 +122,15 @@ def handle(text, send):
 
     if command in ("help", "aiuto", "start"):
         send("Comandi:\n" + HELP)
+
+    elif command in ("chiama", "call"):
+        from . import callmode
+        callmode.start(send)
+
+    elif command in ("sito", "switchers"):
+        from . import site
+        send("⏳ Controllo visite e Google...")
+        threading.Thread(target=lambda: send(site.report()), daemon=True).start()
 
     elif command in ("status", "stato"):
         from . import health
