@@ -25,12 +25,12 @@
   color-scheme: dark;
   --ink: #ffffff; --ink-2: rgba(255,255,255,.66); --ink-3: rgba(255,255,255,.38);
   --bg: #05060a;
-  --glass: rgba(255,255,255,.075); --glass-hi: rgba(255,255,255,.13); --glass-strong: rgba(30,32,40,.55);
+  --glass: rgba(255,255,255,.07); --glass-hi: rgba(255,255,255,.12); --glass-strong: rgba(30,32,40,.55);
   --rim: rgba(255,255,255,.28); --rim-soft: rgba(255,255,255,.08);
   --shadow: 0 18px 50px -12px rgba(0,0,0,.65);
   --green: #32d74b; --green-2: #0fb33a; --blue: #3b9bff; --indigo: #6b5cff;
   --red: #ff5a52; --orange: #ffa53a; --yellow: #ffd84d;
-  --orb-1: #2f6bff; --orb-2: #7a3cff; --orb-3: #00c2a8;
+  --orb-1: #1b3a8a; --orb-2: #3b2475; --orb-3: #0b4f4a;
   --series: #3987e5; --grid: rgba(255,255,255,.08);
 }
 @media (prefers-color-scheme: light) {
@@ -69,12 +69,19 @@ a { color: inherit; text-decoration: none; }
 .num { font-family: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
 
 /* The ambient field the glass refracts. Drifts slowly; still for reduced motion. */
-.ambient { position: fixed; inset: -20vmax; z-index: -1; pointer-events: none; filter: blur(70px) saturate(140%); opacity: .9; }
-.ambient i { position: absolute; border-radius: 50%; mix-blend-mode: screen; }
-.ambient i:nth-child(1) { width: 60vmax; height: 60vmax; left: 5%; top: 0; background: var(--orb-1); animation: drift1 26s ease-in-out infinite alternate; }
-.ambient i:nth-child(2) { width: 52vmax; height: 52vmax; right: 0; top: 30%; background: var(--orb-2); animation: drift2 32s ease-in-out infinite alternate; }
-.ambient i:nth-child(3) { width: 44vmax; height: 44vmax; left: 20%; bottom: 0; background: var(--orb-3); opacity: .55; animation: drift1 38s ease-in-out infinite alternate-reverse; }
-@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .ambient i { mix-blend-mode: multiply; opacity: .55; } }
+/* Pre-soft radial gradients rather than filter: blur on screen-sized layers:
+   the blur made first paint visibly slow under the glass, and a gradient
+   that is already soft looks the same for almost nothing. */
+.ambient { position: fixed; inset: -10vmax; z-index: -1; pointer-events: none; opacity: .9; }
+.ambient i { position: absolute; border-radius: 50%; will-change: transform; }
+.ambient i:nth-child(1) { width: 80vmax; height: 80vmax; left: -10%; top: -10%; background: radial-gradient(closest-side, var(--orb-1), transparent); animation: drift1 26s ease-in-out infinite alternate; }
+.ambient i:nth-child(2) { width: 70vmax; height: 70vmax; right: -15%; top: 25%; background: radial-gradient(closest-side, var(--orb-2), transparent); animation: drift2 32s ease-in-out infinite alternate; }
+.ambient i:nth-child(3) { width: 64vmax; height: 64vmax; left: 5%; bottom: -15%; background: radial-gradient(closest-side, var(--orb-3), transparent); animation: drift1 38s ease-in-out infinite alternate-reverse; }
+/* A vignette keeps the title zone calm: the light sits behind the content,
+   not in competition with the large title. */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(120% 70% at 50% 110%, transparent 35%, rgba(0,0,0,.35) 75%), linear-gradient(180deg, rgba(0,0,0,.55), transparent 32%); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) body::before { background: linear-gradient(180deg, rgba(255,255,255,.6), transparent 34%); } }
 @keyframes drift1 { to { transform: translate(8vmax, 6vmax) scale(1.08); } }
 @keyframes drift2 { to { transform: translate(-7vmax, -5vmax) scale(.94); } }
 
@@ -106,7 +113,7 @@ a { color: inherit; text-decoration: none; }
 .today { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 18px 20px; border-radius: 30px; }
 .ring { width: 76px; height: 76px; }
 .ring circle { fill: none; stroke-width: 10; stroke-linecap: round; }
-.ring .track { stroke: rgba(127,127,127,.18); }
+.ring .track { stroke: rgba(127,127,127,.22); }
 .ring .value { stroke: url(#ringgrad); transform: rotate(-90deg); transform-origin: 50% 50%;
   transition: stroke-dashoffset .9s cubic-bezier(.2,.9,.2,1); filter: drop-shadow(0 0 6px rgba(50,215,75,.55)); }
 .today .big { font-size: 34px; font-weight: 700; letter-spacing: -.03em; line-height: 1; }
@@ -163,8 +170,10 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 4px 14px -4px rgba(0,0,0,.4), inset 0 1px 0 var(--rim); transition: transform .45s cubic-bezier(.3,1.35,.5,1), width .3s; }
 .seg button { position: relative; z-index: 1; font-size: 14px; font-weight: 600; color: var(--ink-2); white-space: nowrap; transition: color .2s; }
 .seg button[aria-pressed="true"] { color: var(--ink); }
-.cards { display: grid; gap: 10px; margin-top: 12px; }
-.lead { display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px 16px; border-radius: 26px; text-align: left;
+/* minmax(0,1fr): an auto grid column grows to the longest unbroken name,
+   which pushed every row past the screen edge and hid the state badge. */
+.cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 12px; }
+.lead { display: flex; align-items: center; gap: 14px; width: 100%; min-width: 0; padding: 14px 16px; border-radius: 26px; text-align: left;
   transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
 .lead:active { transform: scale(.98); }
 .lead .avatar { width: 42px; height: 42px; font-size: 15px; }
@@ -189,7 +198,7 @@ a { color: inherit; text-decoration: none; }
 .stat .n { font-size: 64px; line-height: .95; font-weight: 800; letter-spacing: -.045em;
   background: linear-gradient(180deg, var(--ink), color-mix(in srgb, var(--ink) 55%, var(--blue))); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .stat .what { font-size: 15px; color: var(--ink-2); margin-top: 10px; }
-.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
 .tile { padding: 16px 18px; border-radius: 26px; }
 .tile .k { font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .tile .v { font-size: 30px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px; }
@@ -217,7 +226,7 @@ a { color: inherit; text-decoration: none; }
 .health .orb.bad { background: radial-gradient(circle at 35% 30%, #ff9a94, #d9302a); box-shadow: 0 0 30px -4px rgba(255,90,82,.7); }
 .health .t { font-size: 20px; font-weight: 700; letter-spacing: -.02em; }
 .health .s { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
-.svc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .svc .glass { padding: 16px; border-radius: 24px; }
 .svc .name { font-size: 15px; font-weight: 600; }
 .svc .st { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; margin-top: 8px; }
@@ -259,7 +268,7 @@ nav.tabs.compact .tl { display: none; }
 .grabber { width: 38px; height: 5px; border-radius: 3px; background: var(--ink-3); margin: 0 auto 16px; }
 .sheet h3 { font-size: 22px; font-weight: 800; letter-spacing: -.02em; text-align: center; margin: 0 0 4px; }
 .sheet .q { text-align: center; font-size: 15px; color: var(--ink-2); margin: 0 0 18px; }
-.outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.outcomes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .outcome { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px; border-radius: 26px; text-align: left;
   font-size: 16px; font-weight: 700; letter-spacing: -.01em; min-height: 104px; transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
 .outcome:active { transform: scale(.95); }
@@ -427,7 +436,11 @@ function formatPhone(p) {
 // Contacts-style monogram, hue fixed per category so a list reads at a glance.
 const HUES = { dentisti: 212, veterinari: 150, commercialisti: 265, avvocati: 20, architetti: 330, fisioterapisti: 185, notai: 45, psicologi: 290 };
 function avatar(name, category) {
-  const words = (name || "?").replace(/^(studio|dott\.?|dr\.?|ambulatorio|centro)\s+/i, "").split(/\s+/).filter(Boolean);
+  // Skip the words that describe the category rather than name the practice:
+  // "Studio Dentistico Dottor Forcellini" is F, not DD.
+  const generic = /^(studio|studi|dentistic[oai]|odontoiatric[oai]|dott(or|ore|\.)?|dr\.?|dott\.ssa|ambulatori[oa]|centro|clinica|dental[ei]?|veterinari[oa]|associat[oi]|legale|commercialista|architett[oai]|fisioterapi[ac]|di|del|della|e|&|s\.?r\.?l\.?)$/i;
+  const all = (name || "?").replace(/[^\p{L}\s&.]/gu, " ").split(/\s+/).filter(Boolean);
+  const words = all.filter((w) => !generic.test(w)).length ? all.filter((w) => !generic.test(w)) : all;
   const initials = ((words[0] || "?")[0] + (words[1] ? words[1][0] : "")).toUpperCase();
   const h = HUES[category] ?? 220;
   return el("span", { class: "avatar", style: `background:linear-gradient(160deg,hsl(${h} 80% 62%),hsl(${h + 25} 70% 45%))`, "aria-hidden": "true" }, initials);
@@ -459,7 +472,7 @@ function show(tab) {
   const nav = $("#tabs");
   for (const b of nav.querySelectorAll("button")) {
     const on = b.dataset.tab === tab; b.setAttribute("aria-selected", on);
-    if (on) moveLens($("#tab-lens"), nav, b);
+    if (on) requestAnimationFrame(() => moveLens($("#tab-lens"), nav, b));
   }
   for (const s of document.querySelectorAll("main > section")) {
     const on = s.id === "tab-" + tab; s.hidden = !on;
@@ -710,7 +723,9 @@ async function loadSito() {
       el("div", { class: "glass stat" }, el("div", { class: "n num" }, (v?.visitors ?? 0).toLocaleString("it-IT")),
         el("div", { class: "what" }, "persone hanno visitato il sito negli ultimi 14 giorni")),
       el("div", { class: "tiles" },
-        tile("Questa settimana", last7, delta(last7, prev7)),
+        // Sum of daily uniques: a person who comes back on two days counts
+        // twice, so this is visits, not people - labelled as such.
+        tile("Visite · 7 giorni", last7, delta(last7, prev7)),
         tile("Contatti WhatsApp", v?.contacts?.whatsapp ?? 0, null),
         okG ? tile("Clic da Google", Math.round(g.clicks), delta(g.clicks, g.prev_clicks)) : tile("Pagine viste", v?.pageviews ?? "–", null),
         okG ? tile("Posizione su Google", g.position ? g.position.toFixed(1) : "–",
@@ -762,7 +777,9 @@ function start() {
   let dismissed = false; try { dismissed = localStorage.getItem("hint") === "1"; } catch {}
   if (!standalone && !dismissed && /iPhone|iPad/.test(navigator.userAgent)) $("#install-hint").classList.add("on");
   $("#hint-close").addEventListener("click", () => { $("#install-hint").classList.remove("on"); try { localStorage.setItem("hint", "1"); } catch {} });
-  requestAnimationFrame(() => show("oggi"));
+  // Data first, geometry second: a frame callback does not fire until the
+  // browser paints, which a backgrounded or pre-rendered page may not do.
+  show("oggi");
 }
 (async () => {
   try { const me = await api("/api/me"); me.authed ? start() : showSignin(); }
