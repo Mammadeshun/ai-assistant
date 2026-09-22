@@ -323,3 +323,52 @@ class CallAttemptTest(unittest.TestCase):
         conn.commit(); conn.close()
         lead = self.leads.add_lead("Vecchio DB", city="MI", phone="02 3")
         self.assertEqual(self.leads.record_attempt(lead, "x")["attempts"], 1)
+
+
+class CallModeTest(unittest.TestCase):
+    """The tap path, with Telegram replaced by a recorder."""
+
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads, callmode, telegram_bot
+        self.leads, self.callmode = leads, callmode
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+        self.sent = []
+        telegram_bot.send_with_buttons = lambda text, rows: self.sent.append(("card", text)) or 1
+        telegram_bot.send_telegram_message = lambda text: self.sent.append(("msg", text))
+        telegram_bot.edit_message = lambda mid, text: self.sent.append(("edit", text))
+        telegram_bot.answer_callback = lambda cid, text="": self.sent.append(("ack", text))
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def _lead(self, name, severity_code="site_down"):
+        lead = self.leads.add_lead(name, city="MI", phone="02 123")
+        self.leads.save_scan(lead, [{"code": severity_code, "severity": 5, "detail": ""}], "Buongiorno.")
+        return lead
+
+    def test_a_tap_records_the_outcome_and_loads_the_next_card(self):
+        first, second = self._lead("Primo"), self._lead("Secondo", "slow")
+        self.callmode.start(lambda text: self.sent.append(("msg", text)))
+        self.assertIn("Primo", [t for k, t in self.sent if k == "card"][0])
+        self.callmode.on_button(f"c:{first}:hot", 1, "cb1")
+        self.assertEqual(self.leads.get(first)["state"], "INTERESTED")
+        self.assertIn("Secondo", [t for k, t in self.sent if k == "card"][-1])
+
+    def test_no_answer_and_skip_both_move_on(self):
+        a, b = self._lead("A"), self._lead("B", "slow")
+        self.callmode.start(lambda text: None)
+        self.callmode.on_button(f"c:{a}:noanswer", 1, "cb")
+        self.assertEqual(self.leads.get(a)["attempts"], 1)
+        self.assertIn("B", [t for k, t in self.sent if k == "card"][-1])
+        self.callmode.on_button(f"c:{b}:skip", 2, "cb")
+        self.assertIn("finita", [t for k, t in self.sent if k == "msg"][-1])
+
+    def test_malformed_callback_data_is_ignored(self):
+        self.callmode.on_button("garbage", 1, "cb")
+        self.assertEqual(self.sent[-1], ("ack", "?"))
