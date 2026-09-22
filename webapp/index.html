@@ -150,6 +150,21 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
 .call svg { width: 22px; height: 22px; }
 /* WhatsApp's own green, so the primary action says where it goes before it is read. */
+.call.mail-go, .wa.mail { background: linear-gradient(180deg, #56adff, #1f6fe0);
+  box-shadow: 0 12px 30px -10px rgba(40,120,240,.7), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 6px rgba(0,0,0,.12); }
+.wa.mail { width: 100%; }
+.wa svg { width: 20px; height: 20px; flex: none; }   /* icons carry no size of their own */
+.call:disabled { opacity: .6; }
+.dial.addr { font-size: 19px; font-weight: 600; letter-spacing: 0; text-overflow: ellipsis; }
+.mini { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 7px; font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.mini span { display: inline-flex; align-items: center; gap: 5px; } .mini svg { width: 15px; height: 15px; opacity: .8; }
+.shot { display: block; width: 62%; max-width: 260px; margin: 4px auto 0; border-radius: 26px; box-shadow: var(--shadow); }
+.field { display: block; width: 100%; border: 0; outline: none; border-radius: 18px; padding: 13px 16px; font: inherit; font-size: 16px;
+  color: var(--ink); background: rgba(127,127,127,.12); }
+textarea.field { min-height: 300px; line-height: 1.45; margin-top: 10px; }
+.foot { font-size: 13px; line-height: 1.4; color: var(--ink-3); white-space: pre-line; margin: 10px 6px 0; }
+.to { font-size: 15px; color: var(--ink-2); margin: 0 6px 10px; text-align: center; overflow-wrap: anywhere; }
+.note-cap { text-align: center; font-size: 14px; color: var(--ink-2); margin-top: 10px; }
 .call.wa-go { background: linear-gradient(180deg, #3be07a, #1faa54);
   box-shadow: 0 12px 30px -10px rgba(37,211,102,.75), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 6px rgba(0,0,0,.12); }
 .call:active { transform: scale(.97); }
@@ -188,7 +203,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .lead:active { transform: scale(.98); }
 .lead .avatar { width: 42px; height: 42px; font-size: 15px; }
 .lead .text { flex: 1; min-width: 0; }
-.lead .title { font-size: 17px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lead .title { font-size: 17px; font-weight: 600; line-height: 1.25; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
 .lead .sub2 { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--ink-2); margin-top: 3px; white-space: nowrap; overflow: hidden; }
 .lead .sub2 .glow { width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 8px currentColor; flex: none; }
 .lead .sub2 span:last-child { overflow: hidden; text-overflow: ellipsis; color: var(--ink-2); }
@@ -352,7 +368,7 @@ section.enter { animation: rise .5s cubic-bezier(.2,.9,.2,1); }
         <circle class="track" cx="38" cy="38" r="32"/>
         <circle class="value" id="ring" cx="38" cy="38" r="32" stroke-dasharray="201" stroke-dashoffset="201"/>
       </svg>
-      <div><div class="big num" id="done-count">0 <small>/ 20</small></div><div class="caption" id="done-caption">contatti oggi</div></div>
+      <div><div class="big num" id="done-count">0 <small>/ 20</small></div><div class="caption" id="done-caption">contatti oggi</div><div class="mini" id="done-mini"></div></div>
     </div>
     <div id="next"><div class="skel tall" style="margin-top:14px;height:380px;border-radius:34px"></div></div>
   </section>
@@ -521,6 +537,7 @@ const I = {
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>',
   bubble: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c5 0 9 3.4 9 7.7s-4 7.7-9 7.7c-1 0-1.9-.1-2.8-.4L4.6 20c-.4.2-.9-.2-.7-.7l1.1-3.3A7.2 7.2 0 0 1 3 10.7C3 6.4 7 3 12 3z"/></svg>',
   flag: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 21V4.2c0-.4.2-.7.6-.9 3-1.3 5.2 1.4 8.4.1 1.4-.6 3.2-.5 4.4.3.4.3.6.7.6 1.1v8.4c0 .6-.6 1-1.2.8-1.4-.5-2.7-.4-3.8.1-3.2 1.4-5.4-1.3-8.9.1V21H5z"/></svg>',
+  mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 6 8-6" stroke-linecap="round"/></svg>',
   skip: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 6.3v11.4c0 .8.9 1.3 1.6.8l8-5.7c.6-.4.6-1.2 0-1.6l-8-5.7C5.9 5 5 5.5 5 6.3z"/><rect x="16.5" y="5.5" width="2.8" height="13" rx="1.4"/></svg>',
 };
 const OUTCOMES = [
@@ -537,6 +554,20 @@ const WA_OUTCOMES = [
   ["ok", "Hanno risposto", "bubble", "#3b9bff"],
   ["no", "Non interessati", "x", "#ff453a"],
 ];
+const EMAIL_OUTCOMES = [
+  ["hot", "Interessati", "flame", "#ff9f0a"],
+  ["ok", "Hanno risposto", "bubble", "#3b9bff"],
+  ["no", "Non interessati", "x", "#ff453a", true],
+];
+const FOLLOW_OUTCOMES = [
+  ["followed", "Ricontattato", "check", "#30c85a"],
+  ["hot", "Interessati", "flame", "#ff9f0a"],
+  ["later", "Da richiamare", "clock", "#3b9bff"],
+  ["no", "Non interessati", "x", "#ff453a"],
+];
+const OUTCOME_SETS = { whatsapp: [WA_OUTCOMES, "Com'è andata su WhatsApp?"], email: [EMAIL_OUTCOMES, "Com'è andata con l'email?"],
+                       follow: [FOLLOW_OUTCOMES, "Com'è andata?"], call: [OUTCOMES, "Com'è andata?"] };
+const NEXT_LABEL = { whatsapp: "Prossimo messaggio", email: "Prossima email", call: "Prossima chiamata", follow: "Da ricontattare" };
 const TONE = { critical: "rgba(255,90,82,.45)", serious: "rgba(255,165,58,.4)", warning: "rgba(255,216,77,.35)", neutral: "rgba(59,155,255,.3)" };
 let pendingCall = null, pendingWa = null;
 
@@ -547,19 +578,23 @@ function ring(done, goal) {
 }
 
 function heroCard(lead) {
-  const wa = lead.channel === "whatsapp";
+  const ch = lead.channel, mail = ch === "email", follow = ch === "follow";
+  const wa = ch === "whatsapp" || (follow && lead.wa_chat);
   const tel = (lead.phone || "").replace(/[^\d+]/g, "");
-  const say = el("div", { class: "say" }, el("div", { class: "inner" }, (wa ? lead.message : lead.draft) || "Nessuna bozza per questo lead."));
-  const sayBtn = el("button", { class: "glass pill", onclick: () => { haptic(); say.classList.toggle("open"); } }, svg(I.bubble), wa ? "Leggi" : "Cosa dire");
-  // WhatsApp opens with the message already written; Momo reads it there and
-  // presses send himself. Nothing leaves from here.
+  // A follow-up needs what was said last time, not the opener.
+  const text = mail ? lead.email_body : ch === "whatsapp" ? lead.message : follow ? (lead.notes || "Nessuna nota dall'ultimo contatto.") : lead.draft;
+  const say = el("div", { class: "say" }, el("div", { class: "inner" }, text || "Nessuna bozza per questo lead."));
+  const sayBtn = el("button", { class: "glass pill", onclick: () => { haptic(); say.classList.toggle("open"); } }, svg(I.bubble), mail || ch === "whatsapp" ? "Leggi" : follow ? "Note" : "Cosa dire");
+  // WhatsApp opens with the message already written (a follow-up opens the
+  // chat empty); Momo reads it there and presses send himself.
+  const waHref = follow ? lead.wa_chat : lead.wa_app;
   const go = () => { haptic(); pendingWa = lead; };
-  const number = wa
-    ? el("a", { class: "dial num", href: lead.wa_app, onclick: go }, formatPhone("+" + lead.mobile))
+  const number = mail ? el("div", { class: "dial addr" }, lead.email)
+    : wa ? el("a", { class: "dial num", href: waHref, onclick: go }, formatPhone("+" + (lead.mobile || lead.phone || "")))
     : el("a", { class: "dial num", href: "tel:" + tel }, formatPhone(lead.phone));
-  const primary = wa
-    ? el("a", { class: "call wa-go", href: lead.wa_app, onclick: go }, svg(I.bubble), "Scrivi su WhatsApp")
-    : el("a", { class: "call", href: "tel:" + tel, onclick: () => { haptic(); pendingCall = lead; } }, svg(I.phone), "Chiama");
+  const primary = mail ? el("button", { class: "call mail-go", onclick: () => { haptic(); openEmail(lead); } }, svg(I.mail), "Leggi e invia l'email")
+    : wa ? el("a", { class: "call wa-go", href: waHref, onclick: go }, svg(I.bubble), follow ? "Ricontatta su WhatsApp" : "Scrivi su WhatsApp")
+    : el("a", { class: "call", href: "tel:" + tel, onclick: () => { haptic(); pendingCall = lead; } }, svg(I.phone), follow ? "Richiama" : "Chiama");
   return el("div", { class: "glass hero", style: "--tone:" + TONE[lead.tone] },
     el("div", { class: "meta" }, avatar(lead.name, lead.category),
       el("div", {}, el("div", { class: "kicker" }, [lead.category, lead.city].filter(Boolean).map((x) => x[0].toUpperCase() + x.slice(1)).join(" · ")))),
@@ -569,7 +604,7 @@ function heroCard(lead) {
     el("div", { class: "pills" }, sayBtn,
       el("button", { class: "glass pill", onclick: () => { haptic(); askOutcome(lead, lead.channel); } }, svg(I.flag), "Esito"),
       el("button", { class: "glass pill", onclick: () => { haptic(); record(lead, "skip"); } }, svg(I.skip), "Salta")),
-    lead.attempts && !wa ? el("div", { class: "attempt" }, `Tentativo n. ${lead.attempts + 1}`) : null,
+    lead.attempts && ch === "call" ? el("div", { class: "attempt" }, `Tentativo n. ${lead.attempts + 1}`) : null,
     say);
 }
 
@@ -580,10 +615,11 @@ async function loadOggi() {
     const day = d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
     $("#today-date").textContent = day[0].toUpperCase() + day.slice(1);
     ring(t.done, t.goal);
-    const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
-    $("#done-caption").textContent = t.done
-      ? `${t.messages} WhatsApp · ${plural(t.calls, "chiamata", "chiamate")} oggi`
-      : "contatti oggi";
+    $("#done-caption").textContent = "contatti oggi";
+    $("#done-mini").replaceChildren(
+      el("span", { "aria-label": "WhatsApp" }, svg(I.bubble), String(t.messages)),
+      el("span", { "aria-label": "email" }, svg(I.mail), String(t.emails)),
+      el("span", { "aria-label": "chiamate" }, svg(I.phone), String(t.calls)));
     const badge = $("#badge"); badge.hidden = !t.remaining; badge.textContent = t.remaining > 99 ? "99+" : t.remaining;
     const box = $("#next");
     if (!t.next) {
@@ -592,22 +628,52 @@ async function loadOggi() {
         el("h2", {}, "Hai finito per oggi"), el("p", {}, "Chi non ha risposto torna domani.")));
       return;
     }
-    const capped = t.next.channel === "call" && t.messages >= t.message_cap;
-    box.replaceChildren(el("div", { class: "label" }, t.next.channel === "whatsapp" ? "Prossimo messaggio" : "Prossima chiamata"), heroCard(t.next),
-      el("div", { class: "queue" }, capped ? `WhatsApp: ${t.message_cap} nuovi contatti oggi, il resto domani`
-        : t.remaining > 1 ? `Poi ne restano ${t.remaining - 1}` : "È l'ultimo di oggi"));
+    // Say why WhatsApp or email went quiet, so a cap does not look like an empty list.
+    const caps = [t.messages >= t.message_cap && `${t.message_cap} WhatsApp`, t.emails >= t.email_cap && `${t.email_cap} email`].filter(Boolean);
+    box.replaceChildren(el("div", { class: "label" }, NEXT_LABEL[t.next.channel]), heroCard(t.next),
+      el("div", { class: "queue" }, (t.remaining > 1 ? `Poi ne restano ${t.remaining - 1}` : "È l'ultimo di oggi")
+        + (caps.length ? ` · limite di oggi raggiunto: ${caps.join(", ")}` : "")));
   } catch (e) { if (e.message !== "signin") toast("Non riesco a caricare"); }
 }
 loaders.oggi = loadOggi;
 
 function askOutcome(lead, channel) {
-  const wa = channel === "whatsapp";
+  const [list, question] = OUTCOME_SETS[channel] || OUTCOME_SETS.call;
+  // Notes name the channel the contact actually happened on.
+  const via = channel === "follow" ? (lead.wa_chat ? "whatsapp" : "call") : channel;
   openSheet(el("div", {},
-    el("h3", {}, lead.name), el("p", { class: "q" }, wa ? "Com'è andata su WhatsApp?" : "Com'è andata?"),
-    el("div", { class: "outcomes" }, (wa ? WA_OUTCOMES : OUTCOMES).map(([action, label, icon, color, wide]) =>
-      el("button", { class: "glass outcome" + (wide ? " wide" : ""), onclick: () => { haptic(); closeSheet(); record(lead, action, channel); } },
+    el("h3", {}, lead.name), el("p", { class: "q" }, question),
+    el("div", { class: "outcomes" }, list.map(([action, label, icon, color, wide]) =>
+      el("button", { class: "glass outcome" + (wide ? " wide" : ""), onclick: () => { haptic(); closeSheet(); record(lead, action, via); } },
         el("span", { class: "em", style: `background:${color};--c:${color}` }, svg(I[icon])), label))),
     el("button", { class: "glass cancel", onclick: closeSheet }, "Annulla")));
+}
+
+// The last screen before an email leaves, so it shows everything that will
+// be sent and lets Momo change it. The footer - signature, where the address
+// came from, how to stop - is added by the server and cannot be edited away.
+function openEmail(lead) {
+  const subject = el("input", { class: "field", value: lead.email_subject || "", "aria-label": "Oggetto" });
+  const body = el("textarea", { class: "field", "aria-label": "Testo dell'email" });
+  body.value = lead.email_body || "";
+  const label = document.createTextNode("Invia email");
+  const send = el("button", { class: "call mail-go", style: "margin-top:16px" }, svg(I.mail), label);
+  send.addEventListener("click", async () => {
+    haptic(); send.disabled = true; label.textContent = "Invio…";
+    try {
+      await api("/api/email", { id: lead.id, subject: subject.value, body: body.value });
+      closeSheet();
+      toast("Email inviata", '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#32d74b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>');
+      await (loaders[current] || loadOggi)();
+    } catch (e) {
+      if (e.message !== "signin") toast(e.message);
+      send.disabled = false; label.textContent = "Invia email";
+    }
+  });
+  openSheet(el("div", { class: "detail" },
+    el("h3", {}, lead.name), el("div", { class: "to" }, "A: " + lead.email),
+    subject, body, el("div", { class: "foot" }, lead.email_footer || ""),
+    send, el("button", { class: "glass cancel", onclick: closeSheet }, "Annulla")));
 }
 
 // Back from WhatsApp: the one question that matters, with the answer that
@@ -632,8 +698,9 @@ async function record(lead, action, channel) {
 // Back from the Phone app: ask how it went, at the moment it matters.
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState !== "visible") return;
-  if (pendingWa) { const lead = pendingWa; pendingWa = null; setTimeout(() => askSent(lead), 400); }
-  else if (pendingCall) { const lead = pendingCall; pendingCall = null; setTimeout(() => askOutcome(lead, "call"), 400); }
+  const back = pendingWa || pendingCall, viaWa = !!pendingWa;
+  pendingWa = pendingCall = null;
+  if (back) setTimeout(() => back.channel === "follow" ? askOutcome(back, "follow") : viaWa ? askSent(back) : askOutcome(back, "call"), 400);
   else loaders[current]?.();
 });
 
@@ -653,8 +720,8 @@ async function loadLead() {
     if (!rows.length) { list.replaceChildren(el("div", { class: "glass empty" }, "Niente qui.")); return; }
     list.replaceChildren(...rows.map((l) => {
       // In "Da fare" every row is new, so the pill says what to do instead.
-      const [label, cls] = l.channel === "whatsapp" ? ["Scrivere", "msg"] : l.channel === "call" ? ["Chiamare", ""]
-        : STATE[l.state] || [l.state, ""];
+      const [label, cls] = ({ whatsapp: ["Scrivere", "msg"], email: ["Email", "warm"], call: ["Chiamare", ""],
+        follow: ["Ricontattare", ""] })[l.channel] || STATE[l.state] || [l.state, ""];
       return el("button", { class: "glass lead", onclick: () => { haptic(); openLead(l.id); } },
         avatar(l.name, l.category),
         el("span", { class: "text" }, el("div", { class: "title" }, l.name),
@@ -683,15 +750,24 @@ async function openLead(id) {
     el("div", { class: "meta", style: "text-align:center" }, [l.category, l.city, (STATE[l.state] || [l.state])[0]].filter(Boolean).join(" · ")),
     l.phone ? el("a", { class: "call", href: "tel:" + tel, onclick: () => { closeSheet(); pendingCall = l; } }, svg(I.phone), "Chiama " + formatPhone(l.phone)) : null,
     l.wa_app ? el("a", { class: "wa", href: l.wa_app, onclick: () => { closeSheet(); pendingWa = l; } }, svg(I.bubble), "WhatsApp con il messaggio") : null,
+    l.wa_capped ? el("div", { class: "note-cap" }, "Limite WhatsApp di oggi raggiunto: il primo messaggio domani.") : null,
+    l.email_body && !l.email_sent && !l.email_capped
+      ? el("button", { class: "wa mail", onclick: () => { haptic(); closeSheet(); setTimeout(() => openEmail(l), 380); } }, svg(I.mail), "Leggi e invia l'email") : null,
+    l.email_sent ? el("div", { class: "note-cap" }, "Email già inviata.") : null,
+    l.email_body && !l.email_sent && l.email_capped ? el("div", { class: "note-cap" }, "Limite email di oggi raggiunto.") : null,
     el("div", { class: "label" }, "Dettagli"),
     el("div", { class: "glass kv" },
       l.problem ? el("div", { class: "r" }, el("span", {}, "Problema"), el("span", {}, l.problem)) : null,
       site ? el("div", { class: "r" }, el("span", {}, "Sito"), el("a", { href: site, target: "_blank", rel: "noopener" }, site.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))) : null,
       l.email ? el("div", { class: "r" }, el("span", {}, "Email"), el("span", {}, l.email)) : null,
       el("div", { class: "r" }, el("span", {}, "Tentativi"), el("span", { class: "num" }, String(l.attempts || 0)))),
+    // What the scanner saw on a phone: the proof, and something to attach.
+    l.shot ? [el("div", { class: "label" }, "Dal telefono"),
+      el("img", { class: "shot", src: "/api/shot/" + l.id, alt: `Il sito di ${l.name} visto da un telefono`, loading: "lazy", decoding: "async" })] : null,
     l.message ? [el("div", { class: "label" }, "Messaggio WhatsApp"), el("div", { class: "glass block", style: "white-space:pre-line" }, l.message)]
       : l.draft ? [el("div", { class: "label" }, "Cosa dire"), el("div", { class: "glass block" }, l.draft)] : null,
-    el("button", { class: "glass cancel", onclick: () => { haptic(); closeSheet(); setTimeout(() => askOutcome(l, l.message ? "whatsapp" : "call"), 350); } }, "Registra un esito"),
+    el("button", { class: "glass cancel", onclick: () => { haptic(); closeSheet();
+      setTimeout(() => askOutcome(l, l.state === "EMAIL_SENT" ? "email" : l.message ? "whatsapp" : "call"), 350); } }, "Registra un esito"),
     el("div", { class: "label" }, "Note"),
     l.notes ? el("div", { class: "glass block", style: "white-space:pre-wrap;color:var(--ink-2);font-size:15px" }, l.notes) : null,
     note,

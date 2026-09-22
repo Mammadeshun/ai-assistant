@@ -39,6 +39,9 @@ OPT_OUT_IT = ("Le scrivo perché ho trovato i vostri contatti pubblicati online.
 def email_footer():
     return "\n\n--\n" + signature() + "\n" + OPT_OUT_IT
 MAX_WHATSAPP_PER_DAY = int(os.environ.get("MAX_WHATSAPP_PER_DAY", "25"))
+# Cold email from a personal Gmail: a burst of them is what gets the account
+# flagged, and it is the address every reply comes back to.
+MAX_EMAIL_PER_DAY = int(os.environ.get("MAX_EMAIL_PER_DAY", "20"))
 
 # Said in plain Italian, the way a person would describe the problem.
 PROBLEM_IT = {
@@ -196,9 +199,10 @@ def _where_found(lead):
     return "Ho trovato il vostro numero tra i contatti pubblici dello studio."
 
 
-def whatsapp_message(lead, findings, hour=None):
-    """The first WhatsApp message: who is writing, the one problem found, at
-    most one other offer, a question, and where the number came from.
+def _opener(lead, findings, hour=None):
+    """The parts every first message shares - greeting, who is writing, the
+    one problem with its question, the optional extra - or None when nothing
+    found is worth writing about.
 
     One problem only. describe() can name two, but a stranger's first message
     listing what is wrong with your practice reads like an audit; the extra
@@ -214,19 +218,41 @@ def whatsapp_message(lead, findings, hour=None):
     greeting = "Buonasera" if hour >= 17 else "Buongiorno"
     # Two phrasings, picked by id: the same text sent to many numbers is what
     # WhatsApp's spam detection looks for.
-    intro = (f"{greeting}, sono Momo: faccio siti web e automazioni per studi professionali, tra Pavia e Milano.",
-             f"{greeting}, mi chiamo Momo e mi occupo di siti web e automazioni per studi professionali, tra Pavia e Milano.")[lead["id"] % 2]
+    who = ("sono Momo: faccio siti web e automazioni per studi professionali, tra Pavia e Milano.",
+           "mi chiamo Momo e mi occupo di siti web e automazioni per studi professionali, tra Pavia e Milano.")[lead["id"] % 2]
     problem = WA_PROBLEM[code].format(site=_site_name(lead))
     if code == "no_website":
         question = "Le interessa vedere un sito che ho fatto?"
     else:
         question = ("Vuole che le spieghi in due righe da cosa dipende e come si sistema?",
                     "Le interessa che le scriva in due righe da cosa dipende e come lo sistemerei?")[lead["id"] % 2]
+    return greeting, who, f"{problem} {question}", extra_offer(lead)
+
+
+def whatsapp_message(lead, findings, hour=None):
+    """The first WhatsApp message: who is writing, the one problem found, a
+    question, at most one other offer, and where the number came from."""
+    parts = _opener(lead, findings, hour)
+    if not parts:
+        return None
+    greeting, who, ask, extra = parts
     # The question follows the problem it is about; the extra offer gets its
     # own line after it, so the one thing being asked stays obvious.
-    parts = [intro, f"{problem} {question}", extra_offer(lead),
+    lines = [f"{greeting}, {who}", ask, extra,
              f"{_where_found(lead)} Se preferisce non ricevere altri messaggi, me lo scriva e non la ricontatto."]
-    return "\n\n".join(p for p in parts if p)
+    return "\n\n".join(p for p in lines if p)
+
+
+def email_message(lead, findings, hour=None):
+    """The same opener as an email body. Where the address came from and how
+    to opt out are not repeated here: send_email appends email_footer(), with
+    the signature and OPT_OUT_IT, to every message."""
+    parts = _opener(lead, findings, hour)
+    if not parts:
+        return None
+    greeting, who, ask, extra = parts
+    lines = [f"{greeting},", who[0].upper() + who[1:], ask, extra, "Un saluto,\nMomo"]
+    return "\n\n".join(p for p in lines if p)
 
 
 def send_email(lead, subject, body):

@@ -26,12 +26,16 @@ HOST = os.environ.get("WEBAPP_HOST", "127.0.0.1")
 PORT = int(os.environ.get("WEBAPP_PORT", "8787"))
 STATIC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "webapp")
 DAILY_GOAL = int(os.environ.get("DAILY_CALL_GOAL", "20"))
+SHOTS_DIR = os.environ.get("SCAN_SHOTS_DIR", "data/shots")
 SESSION_DAYS = 90
 CODE_MINUTES = 10
 CODE_TRIES = 5
 
 _cache = {}
 _cache_lock = threading.Lock()
+# One email send at a time, so the already-sent check and the send cannot
+# interleave: a double tap on a slow connection must not mail a studio twice.
+_email_lock = threading.Lock()
 
 
 def cached(key, seconds, compute):
@@ -112,10 +116,25 @@ def lead_view(lead, full=False):
         # stored drafts are the model's email-style openers, several are
         # empty, and an empty one made a wa.me link that opened a blank chat.
         message = outreach.whatsapp_message(lead, findings) if lead.get("whatsapp") else None
+        # The cap applies wherever a first message can start, not just on
+        # Oggi: without this, Lead -> Tutti offered a way around it.
+        wa_capped = bool(message) and lead["state"] == "NEW" and \
+            whatsapp_today() >= outreach.MAX_WHATSAPP_PER_DAY
+        send_wa = message and not wa_capped
+        body = outreach.email_message(lead, findings) if lead.get("email") else None
         view.update(draft=lead.get("draft"), notes=lead.get("notes"), message=message,
-                    mobile=lead.get("whatsapp") if message else None,
-                    whatsapp=outreach.whatsapp_link(lead, message) if message else None,
-                    wa_app=outreach.whatsapp_app_link(lead, message) if message else None,
+                    mobile=lead.get("whatsapp"),
+                    whatsapp=outreach.whatsapp_link(lead, message) if send_wa else None,
+                    wa_app=outreach.whatsapp_app_link(lead, message) if send_wa else None,
+                    wa_capped=wa_capped,
+                    # A follow-up opens the chat empty: the first message
+                    # again, days after talking to them, would be absurd.
+                    wa_chat=f"whatsapp://send?phone={lead['whatsapp'].lstrip('+')}" if lead.get("whatsapp") else None,
+                    email_subject=outreach.subject_for(lead, findings) if body else None,
+                    email_body=body, email_footer=outreach.email_footer().strip() if body else None,
+                    email_sent=already_emailed(lead["id"]) if body else False,
+                    email_capped=bool(body) and emails_today() >= outreach.MAX_EMAIL_PER_DAY,
+                    shot=os.path.exists(os.path.join(SHOTS_DIR, f"lead-{lead['id']}.png")),
                     problems=[f["code"] for f in findings])
     return view
 
@@ -130,50 +149,111 @@ def calls_today():
     return row["n"]
 
 
-def whatsapp_today():
-    """Distinct practices messaged today, from the app or /sent."""
+def _sent_today(state):
+    """Distinct practices moved into `state` today, from the app or Telegram."""
     today = datetime.date.today().isoformat()
     with store.connect() as conn:
         row = conn.execute("SELECT COUNT(DISTINCT lead_id) n FROM events WHERE at >= ?"
-                           " AND kind = 'state:WHATSAPP_SENT'", (today,)).fetchone()
+                           " AND kind = ?", (today, f"state:{state}")).fetchone()
     return row["n"]
 
 
+def whatsapp_today():
+    return _sent_today("WHATSAPP_SENT")
+
+
+def emails_today():
+    return _sent_today("EMAIL_SENT")
+
+
+def already_emailed(lead_id):
+    with store.connect() as conn:
+        return conn.execute("SELECT 1 FROM events WHERE lead_id = ? AND kind = 'state:EMAIL_SENT'",
+                            (lead_id,)).fetchone() is not None
+
+
+CHANNELS = ("whatsapp", "email", "call", "follow")
+
+
 def queues():
-    """What to do next, WhatsApp before calls - Momo would rather write than
-    ring - and WhatsApp only up to the daily cap. Past the cap the queue is
-    empty rather than shorter: new contacts per day is what gets a number
-    reported and banned, and a ban is not something you undo."""
+    """What to do next, in Momo's order: WhatsApp, email, a call, then the one
+    follow-up each practice he has spoken to is owed.
+
+    New WhatsApp and email contacts stop at their daily caps. Past a cap that
+    queue is empty rather than shorter: new contacts per day is what gets a
+    number reported or a Gmail account flagged, and neither is undone easily.
+    Returns ({channel: [leads]}, {"messages": n, "emails": n}).
+    """
     from . import callmode, outreach
-    sent = whatsapp_today()
-    wa = callmode.wa_queue() if sent < outreach.MAX_WHATSAPP_PER_DAY else []
-    return wa, callmode._queue(), sent
+    buckets = store.due_leads()
+    sent = {"messages": whatsapp_today(), "emails": emails_today()}
+    fresh = lambda rows: [l for l in rows if l["id"] not in callmode._skipped]
+    q = {ch: [] for ch in CHANNELS}
+    if sent["messages"] < outreach.MAX_WHATSAPP_PER_DAY:
+        q["whatsapp"] = [l for l in fresh(buckets["to_whatsapp"])
+                         if outreach.whatsapp_message(l, store.findings_of(l))]
+    if sent["emails"] < outreach.MAX_EMAIL_PER_DAY:
+        q["email"] = [l for l in fresh(buckets["to_email"])
+                      if l.get("email") and outreach.email_message(l, store.findings_of(l))]
+    q["call"] = fresh(buckets["to_call"])
+    q["follow"] = fresh(buckets["to_follow_up"])
+    return q, sent
 
 
 def today():
     from . import outreach
-    wa, calls, sent = queues()
-    if wa:
-        nxt = dict(lead_view(wa[0], full=True), channel="whatsapp")
-    elif calls:
-        nxt = dict(lead_view(calls[0], full=True), channel="call")
-    else:
-        nxt = None
+    q, sent = queues()
+    channel = next((ch for ch in CHANNELS if q[ch]), None)
+    nxt = dict(lead_view(q[channel][0], full=True), channel=channel) if channel else None
     called = calls_today()
-    return {"next": nxt, "remaining": len(wa) + len(calls),
-            "done": sent + called, "goal": DAILY_GOAL,
-            "messages": sent, "message_cap": outreach.MAX_WHATSAPP_PER_DAY, "calls": called,
+    return {"next": nxt, "remaining": sum(len(v) for v in q.values()),
+            "done": sent["messages"] + sent["emails"] + called, "goal": DAILY_GOAL,
+            "messages": sent["messages"], "message_cap": outreach.MAX_WHATSAPP_PER_DAY,
+            "emails": sent["emails"], "email_cap": outreach.MAX_EMAIL_PER_DAY, "calls": called,
+            "queued": {ch: len(v) for ch, v in q.items()},
             "counts": store.counts(),
             "date": datetime.date.today().isoformat()}
 
 
+def send_lead_email(lead_id, subject, body):
+    """Send one practice its email, on Momo's tap, with the text he read and
+    possibly edited on screen. Returns (status, payload).
+
+    The app is the last screen before this leaves - unlike WhatsApp, where
+    WhatsApp itself shows the text before send - so the text sent is exactly
+    the text shown, and the footer with the signature and the opt-out line is
+    added here, where the phone cannot drop it.
+    """
+    from . import outreach
+    lead = store.get(lead_id)
+    subject, body = (subject or "").strip()[:200], (body or "").strip()[:6000]
+    if not lead or not lead.get("email"):
+        return 404, {"error": "questo studio non ha un'email"}
+    if not subject or len(body) < 40:
+        return 400, {"error": "oggetto o testo mancante"}
+    with _email_lock:
+        if already_emailed(lead_id):
+            return 409, {"error": "a questo studio l'email è già partita"}
+        if emails_today() >= outreach.MAX_EMAIL_PER_DAY:
+            return 429, {"error": f"limite di {outreach.MAX_EMAIL_PER_DAY} email per oggi, il resto domani"}
+        try:
+            outreach.send_email(lead, subject, body)
+        except RuntimeError as e:          # no signature, no address: say which
+            return 400, {"error": str(e)[:200]}
+        except Exception as e:
+            print(f"email to lead {lead_id} failed: {type(e).__name__}: {e}")
+            return 502, {"error": "invio non riuscito, riprova tra poco"}
+        store.set_state(lead_id, "EMAIL_SENT", note="email: inviata dall'app")
+    return 200, {"ok": True, "today": today()}
+
+
 def leads_list(state=None, q=None):
     if state in ("todo", "call"):
-        # Exactly the order Oggi serves them - messages, then calls, worst
-        # problem first within each - rather than id order, which buried the
-        # dead sites.
-        wa, calls, _ = queues()
-        rows = [dict(r, channel="whatsapp") for r in wa] + [dict(r, channel="call") for r in calls]
+        # Exactly the order Oggi serves them - WhatsApp, email, calls, then
+        # follow-ups, worst problem first within each - rather than id order,
+        # which buried the dead sites.
+        queue, _ = queues()
+        rows = [dict(r, channel=ch) for ch in CHANNELS for r in queue[ch]]
     else:
         rows = store.list_leads(limit=1000)
     if state and state not in ("all", "todo", "call"):
@@ -283,6 +363,14 @@ class Handler(http.server.BaseHTTPRequestHandler):
             if url.path.startswith("/api/lead/"):
                 lead = store.get(int(url.path.rsplit("/", 1)[1]))
                 return self._send(200, lead_view(lead, full=True) if lead else {"error": "not found"})
+            if url.path.startswith("/api/shot/"):
+                # The phone screenshot the scanner took: the proof Momo can
+                # look at before writing, and attach to the message.
+                path = os.path.join(SHOTS_DIR, f"lead-{int(url.path.rsplit('/', 1)[1])}.png")
+                if not os.path.exists(path):
+                    return self._send(404, {"error": "not found"})
+                with open(path, "rb") as f:
+                    return self._send(200, f.read(), "image/png")
             if url.path == "/api/site":
                 return self._send(200, site_data())
             if url.path == "/api/system":
@@ -313,9 +401,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
         try:
             if url.path == "/api/outcome":
                 from . import callmode
+                channel = body.get("channel")
                 label = callmode.apply(int(body["id"]), str(body["action"]),
-                                       "whatsapp" if body.get("channel") == "whatsapp" else "call")
+                                       channel if channel in ("whatsapp", "email") else "call")
                 return self._send(200, {"label": label, "today": today()})
+            if url.path == "/api/email":
+                return self._send(*send_lead_email(int(body["id"]), body.get("subject"), body.get("body")))
             if url.path == "/api/note":
                 store.add_note(int(body["id"]), str(body["text"])[:1000])
                 return self._send(200, lead_view(store.get(int(body["id"])), full=True))

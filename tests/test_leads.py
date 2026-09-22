@@ -54,12 +54,22 @@ class LeadStoreTest(unittest.TestCase):
         self.assertEqual(due["to_email"], [])
 
     def test_cascade_escalates_only_after_the_wait(self):
-        lead = self.leads.add_lead("Studio Alfa", city="Milano", whatsapp="393331112222")
+        lead = self.leads.add_lead("Studio Alfa", city="Milano", whatsapp="393331112222",
+                                   email="studio@alfa.it")
         self.leads.set_state(lead, "WHATSAPP_SENT")
         self.assertEqual(self.leads.due_leads()["to_email"], [],
                          "must not escalate on the same day")
         self._age(lead, self.leads.WHATSAPP_WAIT_DAYS)
         self.assertEqual([l["id"] for l in self.leads.due_leads()["to_email"]], [lead])
+
+    def test_no_email_address_skips_straight_to_a_call(self):
+        lead = self.leads.add_lead("Studio Beta", city="Milano", whatsapp="393331112222",
+                                   phone="02 1234 5678")
+        self.leads.set_state(lead, "WHATSAPP_SENT")
+        self._age(lead, self.leads.WHATSAPP_WAIT_DAYS)
+        due = self.leads.due_leads()
+        self.assertEqual(due["to_email"], [], "no address to write to")
+        self.assertEqual([l["id"] for l in due["to_call"]], [lead])
 
     def test_advance_overdue_sets_call_due(self):
         lead = self.leads.add_lead("Studio Beta", city="Milano", email="b@example.invalid")
@@ -214,6 +224,10 @@ class WhatsAppFirstTest(unittest.TestCase):
     def tearDown(self):
         if os.path.exists(self.db):
             os.unlink(self.db)
+        # Drop what these tests patched (send_email, the caps) so the next
+        # class imports clean modules.
+        for module in [m for m in list(sys.modules) if m == "modules" or m.startswith("modules.")]:
+            del sys.modules[module]
 
     def _lead(self, name, code="not_mobile", severity=4, category="dentisti", whatsapp="393331112222",
               website="https://www.studiouno.it"):
@@ -288,6 +302,83 @@ class WhatsAppFirstTest(unittest.TestCase):
         self._lead("Messaggio", code="slow", severity=2)
         channels = [r["channel"] for r in self.webapp.leads_list("todo")]
         self.assertEqual(channels, ["whatsapp", "call"])
+
+
+class EmailAndFollowUpTest(WhatsAppFirstTest):
+    """Email as the second channel, sent only from what was on screen, once."""
+
+    def setUp(self):
+        super().setUp()
+        self.sent = []
+        self.outreach.send_email = lambda lead, subject, body: self.sent.append((lead["id"], subject, body)) or True
+        self.leads.set_setting("signature", "Momo - siti e automazioni")
+
+    def _email_lead(self, name="Studio Mail"):
+        return self._lead(name, whatsapp=None)
+
+    def _set_email(self, lead, address="studio@example.it"):
+        with self.leads.connect() as conn:
+            conn.execute("UPDATE leads SET email = ? WHERE id = ?", (address, lead))
+
+    def test_email_body_is_the_same_opener_without_the_footer_lines(self):
+        lead = self._email_lead(); self._set_email(lead)
+        body = self.outreach.email_message(self.leads.get(lead), self.leads.findings_of(self.leads.get(lead)), hour=9)
+        self.assertTrue(body.startswith("Buongiorno,\n\n"))
+        self.assertIn("Momo", body)
+        self.assertTrue(body.endswith("Un saluto,\nMomo"))
+        self.assertNotIn("OpenStreetMap", body, "where-found and opt-out come from the footer")
+
+    def test_channels_come_in_order_and_email_stops_at_its_cap(self):
+        self._lead("Scrivere")
+        mail = self._email_lead(); self._set_email(mail)
+        self._lead("Chiamare", whatsapp=None)
+        self.assertEqual([r["channel"] for r in self.webapp.leads_list("todo")],
+                         ["whatsapp", "email", "call"])
+        self.outreach.MAX_EMAIL_PER_DAY = 0
+        self.assertEqual([r["channel"] for r in self.webapp.leads_list("todo")], ["whatsapp", "call"])
+        self.assertTrue(self.webapp.lead_view(self.leads.get(mail), full=True)["email_capped"])
+
+    def test_an_email_is_sent_once_with_the_text_shown(self):
+        lead = self._email_lead(); self._set_email(lead)
+        text = "Buongiorno, testo modificato a mano da Momo prima di inviarlo."
+        status, payload = self.webapp.send_lead_email(lead, "Oggetto", text)
+        self.assertEqual(status, 200)
+        self.assertEqual(self.sent, [(lead, "Oggetto", text)], "sends exactly what was on screen")
+        self.assertEqual(self.leads.get(lead)["state"], "EMAIL_SENT")
+        self.assertEqual(payload["today"]["emails"], 1)
+        status, _ = self.webapp.send_lead_email(lead, "Oggetto", text)
+        self.assertEqual(status, 409, "a second tap must not send twice")
+        self.assertEqual(len(self.sent), 1)
+
+    def test_email_refused_without_address_text_or_under_the_cap(self):
+        lead = self._email_lead()
+        self.assertEqual(self.webapp.send_lead_email(lead, "Oggetto", "x" * 60)[0], 404)
+        self._set_email(lead)
+        self.assertEqual(self.webapp.send_lead_email(lead, "", "x" * 60)[0], 400)
+        self.outreach.MAX_EMAIL_PER_DAY = 0
+        self.assertEqual(self.webapp.send_lead_email(lead, "Oggetto", "x" * 60)[0], 429)
+        self.assertEqual(self.sent, [])
+
+    def test_whatsapp_cap_also_holds_in_the_lead_sheet(self):
+        lead = self._lead("Nuovo")
+        self.assertTrue(self.webapp.lead_view(self.leads.get(lead), full=True)["wa_app"])
+        self.outreach.MAX_WHATSAPP_PER_DAY = 0
+        view = self.webapp.lead_view(self.leads.get(lead), full=True)
+        self.assertIsNone(view["wa_app"])
+        self.assertTrue(view["wa_capped"])
+
+    def test_owed_follow_up_is_listed_until_done(self):
+        lead = self._lead("Sentito", whatsapp=None)
+        self.leads.set_state(lead, "CONTACTED")
+        self._age(lead, self.leads.FOLLOW_UP_DAYS)
+        self.assertEqual([(r["id"], r["channel"]) for r in self.webapp.leads_list("todo")], [(lead, "follow")])
+        self.callmode.apply(lead, "followed")
+        self.assertEqual(self.webapp.leads_list("todo"), [])
+
+    def _age(self, lead_id, days):
+        old = (datetime.datetime.now() - datetime.timedelta(days=days)).isoformat(timespec="seconds")
+        with self.leads.connect() as conn:
+            conn.execute("UPDATE leads SET state_changed_at = ? WHERE id = ?", (old, lead_id))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

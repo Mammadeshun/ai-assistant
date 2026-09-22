@@ -27,7 +27,7 @@ BUTTONS = [
 
 OUTCOME_LABEL = {"ok": "✅ parlato", "hot": "🔥 interessato", "noanswer": "📵 non risponde",
                  "later": "📅 da richiamare", "no": "❌ non interessato", "skip": "⏭ saltato",
-                 "wa_sent": "💬 messaggio inviato"}
+                 "wa_sent": "💬 messaggio inviato", "followed": "🔁 ricontattato"}
 
 
 def _queue():
@@ -103,9 +103,11 @@ def apply(lead_id, action, channel="call"):
     lead = store.get(lead_id)
     if not lead:
         return "lead non trovato"
-    via = "whatsapp" if channel == "whatsapp" else "chiamata"
+    via = {"whatsapp": "whatsapp", "email": "email"}.get(channel, "chiamata")
     if action == "wa_sent":
         store.set_state(lead_id, "WHATSAPP_SENT", note="whatsapp: inviato")
+    elif action == "followed":
+        store.mark_followed_up(lead_id)
     elif action == "ok":
         store.set_state(lead_id, "CONTACTED", note=f"{via}: parlato")
     elif action == "hot":

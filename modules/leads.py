@@ -271,7 +271,10 @@ def due_leads():
             else:
                 buckets["no_angle"].append(lead)
         elif state == "WHATSAPP_SENT" and age_days >= WHATSAPP_WAIT_DAYS:
-            buckets["to_email"].append(lead)
+            # Straight to a call when there is no address: 10 of the 24
+            # practices with a mobile publish no email, and queuing them for
+            # one parked them in the email list for good.
+            buckets["to_email" if lead["email"] else "to_call"].append(lead)
         elif state == "EMAIL_SENT" and age_days >= EMAIL_WAIT_DAYS:
             buckets["to_call"].append(lead)
         elif state == "CALL_DUE":
