@@ -28,7 +28,11 @@ STATIC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 DAILY_GOAL = int(os.environ.get("DAILY_CALL_GOAL", "20"))
 SHOTS_DIR = os.environ.get("SCAN_SHOTS_DIR", "data/shots")
 SESSION_DAYS = 90
-CODE_MINUTES = 10
+# Thirty, not ten: the code arrives in Telegram and has to be carried to
+# another app, and the first pairing failed on exactly that - it expired
+# before the page loaded. Six digits and five tries still leave a guesser
+# one chance in 200,000.
+CODE_MINUTES = 30
 CODE_TRIES = 5
 
 _cache = {}

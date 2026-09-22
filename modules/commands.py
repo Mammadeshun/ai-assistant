@@ -133,7 +133,7 @@ def handle(text, send):
         code = webapp.new_pairing_code()
         url = os.environ.get("WEBAPP_URL", "https://app.momosassistant.it")
         send(f"📱 Codice per l'app:\n\n{code}\n\nApri {url} e inseriscilo. "
-             f"Vale 10 minuti, una volta sola.")
+             f"Vale {webapp.CODE_MINUTES} minuti, una volta sola.")
 
     elif command in ("chiama", "call"):
         from . import callmode

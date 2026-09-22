@@ -432,7 +432,10 @@ async function api(path, body) {
   const opts = { credentials: "same-origin", headers: { "X-Requested-With": "app" } };
   if (body !== undefined) { opts.method = "POST"; opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
   const r = await fetch(path, opts);
-  if (r.status === 401) { showSignin(); throw new Error("signin"); }
+  // 401 means "signed out" everywhere except the pairing call itself, where
+  // it means "wrong or expired code" and has to be said out loud: treating
+  // it as signed-out left the screen unchanged, with no message at all.
+  if (r.status === 401 && path !== "/api/pair") { showSignin(); throw new Error("signin"); }
   const data = await r.json();
   if (!r.ok) throw new Error(data.error || r.statusText);
   return data;
@@ -483,7 +486,12 @@ $("#code").addEventListener("input", async (e) => {
   e.target.value = code; $("#err").textContent = "";
   if (code.length < 6) return;
   try { await api("/api/pair", { code }); $("#signin").hidden = true; start(); }
-  catch (err) { if (err.message !== "signin") { $("#err").textContent = err.message; e.target.value = ""; } }
+  catch (err) {
+    $("#err").textContent = err.message === "codice non valido o scaduto"
+      ? "Codice non valido o scaduto. Scrivi di nuovo /app al bot e usa il codice nuovo."
+      : "Non riesco a collegarmi: " + err.message;
+    e.target.value = "";
+  }
 });
 
 /* ── tabs, with a lens that slides under the selection ── */
