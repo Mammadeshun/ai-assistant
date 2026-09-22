@@ -134,11 +134,13 @@ def today():
 
 
 def leads_list(state=None, q=None):
-    rows = store.list_leads(limit=1000)
     if state == "call":
-        call_ids = {l["id"] for l in store.due_leads()["to_call"]}
-        rows = [r for r in rows if r["id"] in call_ids]
-    elif state and state != "all":
+        # Priority order - worst problem first - exactly as call mode serves
+        # them, rather than id order, which buried the dead sites.
+        rows = store.due_leads()["to_call"]
+    else:
+        rows = store.list_leads(limit=1000)
+    if state and state not in ("all", "call"):
         rows = [r for r in rows if r["state"] == state]
     if q:
         needle = q.lower()
