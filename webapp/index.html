@@ -32,6 +32,7 @@
   --red: #ff5a52; --orange: #ffa53a; --yellow: #ffd84d;
   --orb-1: #1b3a8a; --orb-2: #3b2475; --orb-3: #0b4f4a;
   --series: #3987e5; --grid: rgba(255,255,255,.08);
+  --wa-ink: #4ce36a;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -43,6 +44,7 @@
     --shadow: 0 18px 40px -16px rgba(40,50,90,.28);
     --orb-1: #8fb4ff; --orb-2: #c7a8ff; --orb-3: #8ff0dc;
     --series: #2a78d6; --grid: rgba(11,12,16,.07);
+    --wa-ink: #0a7d2c;
   }
 }
 :root[data-theme="light"] {
@@ -51,6 +53,7 @@
   --glass: rgba(255,255,255,.52); --glass-hi: rgba(255,255,255,.72); --glass-strong: rgba(255,255,255,.72);
   --rim: rgba(255,255,255,.95); --rim-soft: rgba(0,0,0,.04); --shadow: 0 18px 40px -16px rgba(40,50,90,.28);
   --orb-1: #8fb4ff; --orb-2: #c7a8ff; --orb-3: #8ff0dc; --series: #2a78d6; --grid: rgba(11,12,16,.07);
+  --wa-ink: #0a7d2c;
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -146,6 +149,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   box-shadow: 0 12px 30px -10px rgba(50,215,75,.75), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 6px rgba(0,0,0,.12);
   transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
 .call svg { width: 22px; height: 22px; }
+/* WhatsApp's own green, so the primary action says where it goes before it is read. */
+.call.wa-go { background: linear-gradient(180deg, #3be07a, #1faa54);
+  box-shadow: 0 12px 30px -10px rgba(37,211,102,.75), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 6px rgba(0,0,0,.12); }
 .call:active { transform: scale(.97); }
 .pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
 .pill { display: flex; align-items: center; justify-content: center; gap: 7px; height: 48px; border-radius: 24px; font-size: 15px; font-weight: 600; white-space: nowrap; min-width: 0; padding: 0 8px;
@@ -153,8 +159,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .pill svg { width: 17px; height: 17px; opacity: .9; }
 .pill:active { transform: scale(.95); }
 .say { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.2,.9,.2,1), margin .3s; }
-.say.open { max-height: 480px; margin-top: 14px; }
-.say .inner { padding: 16px 18px; border-radius: 22px; background: rgba(127,127,127,.12); font-size: 16px; line-height: 1.45; }
+.say.open { max-height: 760px; margin-top: 14px; }
+.say .inner { padding: 16px 18px; border-radius: 22px; background: rgba(127,127,127,.12); font-size: 16px; line-height: 1.45; white-space: pre-line; }
 .attempt { font-size: 13px; color: var(--orange); margin-top: 10px; text-align: center; }
 .queue { text-align: center; font-size: 14px; color: var(--ink-3); margin-top: 16px; }
 
@@ -189,6 +195,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .state { font-size: 12px; font-weight: 700; letter-spacing: .02em; padding: 5px 10px; border-radius: 12px; background: rgba(127,127,127,.14); color: var(--ink-2); flex: none; }
 .state.hot { background: rgba(255,165,58,.18); color: var(--orange); }
 .state.warm { background: rgba(59,155,255,.16); color: var(--blue); }
+.state.msg { background: rgba(37,211,102,.16); color: var(--wa-ink); }   /* not .wa: that is the big button */
 .empty { padding: 40px 16px; text-align: center; color: var(--ink-2); border-radius: 26px; }
 
 /* Loading: a shimmer in the shape of what is coming, never a blank screen */
@@ -345,7 +352,7 @@ section.enter { animation: rise .5s cubic-bezier(.2,.9,.2,1); }
         <circle class="track" cx="38" cy="38" r="32"/>
         <circle class="value" id="ring" cx="38" cy="38" r="32" stroke-dasharray="201" stroke-dashoffset="201"/>
       </svg>
-      <div><div class="big num" id="done-count">0 <small>/ 20</small></div><div class="caption">chiamate fatte oggi</div></div>
+      <div><div class="big num" id="done-count">0 <small>/ 20</small></div><div class="caption" id="done-caption">contatti oggi</div></div>
     </div>
     <div id="next"><div class="skel tall" style="margin-top:14px;height:380px;border-radius:34px"></div></div>
   </section>
@@ -358,7 +365,7 @@ section.enter { animation: rise .5s cubic-bezier(.2,.9,.2,1); }
     </label>
     <div class="glass seg" role="group" aria-label="Filtro">
       <span class="lens" id="seg-lens"></span>
-      <button data-state="call" aria-pressed="true">Chiamare</button>
+      <button data-state="todo" aria-pressed="true">Da fare</button>
       <button data-state="INTERESTED" aria-pressed="false">Caldi</button>
       <button data-state="CONTACTED" aria-pressed="false">Sentiti</button>
       <button data-state="all" aria-pressed="false">Tutti</button>
@@ -523,8 +530,15 @@ const OUTCOMES = [
   ["noanswer", "Non ha risposto", "missed", "#8e8e93"],
   ["no", "Non interessati", "x", "#ff453a", true],
 ];
+// After a WhatsApp: whether it went, then what came back.
+const WA_OUTCOMES = [
+  ["wa_sent", "Messaggio inviato", "check", "#30c85a"],
+  ["hot", "Interessati", "flame", "#ff9f0a"],
+  ["ok", "Hanno risposto", "bubble", "#3b9bff"],
+  ["no", "Non interessati", "x", "#ff453a"],
+];
 const TONE = { critical: "rgba(255,90,82,.45)", serious: "rgba(255,165,58,.4)", warning: "rgba(255,216,77,.35)", neutral: "rgba(59,155,255,.3)" };
-let pendingCall = null;
+let pendingCall = null, pendingWa = null;
 
 function ring(done, goal) {
   const c = 201, pct = Math.min(1, done / Math.max(goal, 1));
@@ -533,20 +547,29 @@ function ring(done, goal) {
 }
 
 function heroCard(lead) {
+  const wa = lead.channel === "whatsapp";
   const tel = (lead.phone || "").replace(/[^\d+]/g, "");
-  const say = el("div", { class: "say" }, el("div", { class: "inner" }, lead.draft || "Nessuna bozza per questo lead."));
-  const sayBtn = el("button", { class: "glass pill", onclick: () => { haptic(); say.classList.toggle("open"); } }, svg(I.bubble), "Cosa dire");
+  const say = el("div", { class: "say" }, el("div", { class: "inner" }, (wa ? lead.message : lead.draft) || "Nessuna bozza per questo lead."));
+  const sayBtn = el("button", { class: "glass pill", onclick: () => { haptic(); say.classList.toggle("open"); } }, svg(I.bubble), wa ? "Leggi" : "Cosa dire");
+  // WhatsApp opens with the message already written; Momo reads it there and
+  // presses send himself. Nothing leaves from here.
+  const go = () => { haptic(); pendingWa = lead; };
+  const number = wa
+    ? el("a", { class: "dial num", href: lead.wa_app, onclick: go }, formatPhone("+" + lead.mobile))
+    : el("a", { class: "dial num", href: "tel:" + tel }, formatPhone(lead.phone));
+  const primary = wa
+    ? el("a", { class: "call wa-go", href: lead.wa_app, onclick: go }, svg(I.bubble), "Scrivi su WhatsApp")
+    : el("a", { class: "call", href: "tel:" + tel, onclick: () => { haptic(); pendingCall = lead; } }, svg(I.phone), "Chiama");
   return el("div", { class: "glass hero", style: "--tone:" + TONE[lead.tone] },
     el("div", { class: "meta" }, avatar(lead.name, lead.category),
       el("div", {}, el("div", { class: "kicker" }, [lead.category, lead.city].filter(Boolean).map((x) => x[0].toUpperCase() + x.slice(1)).join(" · ")))),
     el("h2", {}, lead.name),
     lead.problem ? el("span", { class: "chip tone-" + lead.tone }, el("span", { class: "glow", "aria-hidden": "true" }), el("span", {}, lead.problem)) : null,
-    el("a", { class: "dial num", href: "tel:" + tel }, formatPhone(lead.phone)),
-    el("a", { class: "call", href: "tel:" + tel, onclick: () => { haptic(); pendingCall = lead; } }, svg(I.phone), "Chiama"),
+    number, primary,
     el("div", { class: "pills" }, sayBtn,
-      el("button", { class: "glass pill", onclick: () => { haptic(); askOutcome(lead); } }, svg(I.flag), "Esito"),
+      el("button", { class: "glass pill", onclick: () => { haptic(); askOutcome(lead, lead.channel); } }, svg(I.flag), "Esito"),
       el("button", { class: "glass pill", onclick: () => { haptic(); record(lead, "skip"); } }, svg(I.skip), "Salta")),
-    lead.attempts ? el("div", { class: "attempt" }, `Tentativo n. ${lead.attempts + 1}`) : null,
+    lead.attempts && !wa ? el("div", { class: "attempt" }, `Tentativo n. ${lead.attempts + 1}`) : null,
     say);
 }
 
@@ -557,6 +580,10 @@ async function loadOggi() {
     const day = d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
     $("#today-date").textContent = day[0].toUpperCase() + day.slice(1);
     ring(t.done, t.goal);
+    const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+    $("#done-caption").textContent = t.done
+      ? `${t.messages} WhatsApp · ${plural(t.calls, "chiamata", "chiamate")} oggi`
+      : "contatti oggi";
     const badge = $("#badge"); badge.hidden = !t.remaining; badge.textContent = t.remaining > 99 ? "99+" : t.remaining;
     const box = $("#next");
     if (!t.next) {
@@ -565,38 +592,53 @@ async function loadOggi() {
         el("h2", {}, "Hai finito per oggi"), el("p", {}, "Chi non ha risposto torna domani.")));
       return;
     }
-    box.replaceChildren(el("div", { class: "label" }, "Prossima chiamata"), heroCard(t.next),
-      el("div", { class: "queue" }, t.remaining > 1 ? `Poi ne restano ${t.remaining - 1}` : "È l'ultima di oggi"));
+    const capped = t.next.channel === "call" && t.messages >= t.message_cap;
+    box.replaceChildren(el("div", { class: "label" }, t.next.channel === "whatsapp" ? "Prossimo messaggio" : "Prossima chiamata"), heroCard(t.next),
+      el("div", { class: "queue" }, capped ? `WhatsApp: ${t.message_cap} nuovi contatti oggi, il resto domani`
+        : t.remaining > 1 ? `Poi ne restano ${t.remaining - 1}` : "È l'ultimo di oggi"));
   } catch (e) { if (e.message !== "signin") toast("Non riesco a caricare"); }
 }
 loaders.oggi = loadOggi;
 
-function askOutcome(lead) {
+function askOutcome(lead, channel) {
+  const wa = channel === "whatsapp";
   openSheet(el("div", {},
-    el("h3", {}, lead.name), el("p", { class: "q" }, "Com'è andata?"),
-    el("div", { class: "outcomes" }, OUTCOMES.map(([action, label, icon, color, wide]) =>
-      el("button", { class: "glass outcome" + (wide ? " wide" : ""), onclick: () => { haptic(); closeSheet(); record(lead, action); } },
+    el("h3", {}, lead.name), el("p", { class: "q" }, wa ? "Com'è andata su WhatsApp?" : "Com'è andata?"),
+    el("div", { class: "outcomes" }, (wa ? WA_OUTCOMES : OUTCOMES).map(([action, label, icon, color, wide]) =>
+      el("button", { class: "glass outcome" + (wide ? " wide" : ""), onclick: () => { haptic(); closeSheet(); record(lead, action, channel); } },
         el("span", { class: "em", style: `background:${color};--c:${color}` }, svg(I[icon])), label))),
     el("button", { class: "glass cancel", onclick: closeSheet }, "Annulla")));
 }
 
-async function record(lead, action) {
+// Back from WhatsApp: the one question that matters, with the answer that
+// is almost always right as the big button.
+function askSent(lead) {
+  openSheet(el("div", {},
+    el("h3", {}, lead.name), el("p", { class: "q" }, "Hai inviato il messaggio?"),
+    el("div", { class: "outcomes" },
+      el("button", { class: "glass outcome wide", onclick: () => { haptic(); closeSheet(); record(lead, "wa_sent", "whatsapp"); } },
+        el("span", { class: "em", style: "background:#30c85a;--c:#30c85a" }, svg(I.check)), "Sì, inviato")),
+    el("button", { class: "glass cancel", onclick: closeSheet }, "Non ancora")));
+}
+
+async function record(lead, action, channel) {
   try {
-    await api("/api/outcome", { id: lead.id, action });
-    toast(action === "skip" ? "Saltato" : "Registrato", action === "skip" ? null : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#32d74b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>');
-    await loadOggi();
+    await api("/api/outcome", { id: lead.id, action, channel: channel || "call" });
+    toast(action === "skip" ? "Saltato" : action === "wa_sent" ? "Inviato" : "Registrato", action === "skip" ? null : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#32d74b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>');
+    await (loaders[current] || loadOggi)();   // the Lead list too, when recorded from there
   } catch (e) { if (e.message !== "signin") toast("Errore: " + e.message); }
 }
 
 // Back from the Phone app: ask how it went, at the moment it matters.
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState !== "visible") return;
-  if (pendingCall) { const lead = pendingCall; pendingCall = null; setTimeout(() => askOutcome(lead), 400); }
+  if (pendingWa) { const lead = pendingWa; pendingWa = null; setTimeout(() => askSent(lead), 400); }
+  else if (pendingCall) { const lead = pendingCall; pendingCall = null; setTimeout(() => askOutcome(lead, "call"), 400); }
   else loaders[current]?.();
 });
 
 /* ── Lead ────────────────────────────────────────────── */
-let leadState = "call", searchTimer;
+let leadState = "todo", searchTimer;
 const STATE = { NEW: ["Nuovo", ""], WHATSAPP_SENT: ["WhatsApp", "warm"], EMAIL_SENT: ["Email", "warm"], CALL_DUE: ["Da chiamare", ""],
                 CONTACTED: ["Sentito", "warm"], INTERESTED: ["Caldo", "hot"], DEAD: ["Archiviato", ""] };
 function skeletons(n) { return Array.from({ length: n }, () => el("div", { class: "skel" })); }
@@ -610,7 +652,9 @@ async function loadLead() {
     $("#lead-sub").textContent = rows.length === 1 ? "1 attività" : `${rows.length} attività`;
     if (!rows.length) { list.replaceChildren(el("div", { class: "glass empty" }, "Niente qui.")); return; }
     list.replaceChildren(...rows.map((l) => {
-      const [label, cls] = STATE[l.state] || [l.state, ""];
+      // In "Da fare" every row is new, so the pill says what to do instead.
+      const [label, cls] = l.channel === "whatsapp" ? ["Scrivere", "msg"] : l.channel === "call" ? ["Chiamare", ""]
+        : STATE[l.state] || [l.state, ""];
       return el("button", { class: "glass lead", onclick: () => { haptic(); openLead(l.id); } },
         avatar(l.name, l.category),
         el("span", { class: "text" }, el("div", { class: "title" }, l.name),
@@ -638,14 +682,16 @@ async function openLead(id) {
     el("h2", { style: "text-align:center" }, l.name),
     el("div", { class: "meta", style: "text-align:center" }, [l.category, l.city, (STATE[l.state] || [l.state])[0]].filter(Boolean).join(" · ")),
     l.phone ? el("a", { class: "call", href: "tel:" + tel, onclick: () => { closeSheet(); pendingCall = l; } }, svg(I.phone), "Chiama " + formatPhone(l.phone)) : null,
-    l.whatsapp ? el("a", { class: "wa", href: l.whatsapp, target: "_blank", rel: "noopener" }, svg(I.bubble), "WhatsApp con il messaggio") : null,
+    l.wa_app ? el("a", { class: "wa", href: l.wa_app, onclick: () => { closeSheet(); pendingWa = l; } }, svg(I.bubble), "WhatsApp con il messaggio") : null,
     el("div", { class: "label" }, "Dettagli"),
     el("div", { class: "glass kv" },
       l.problem ? el("div", { class: "r" }, el("span", {}, "Problema"), el("span", {}, l.problem)) : null,
       site ? el("div", { class: "r" }, el("span", {}, "Sito"), el("a", { href: site, target: "_blank", rel: "noopener" }, site.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))) : null,
       l.email ? el("div", { class: "r" }, el("span", {}, "Email"), el("span", {}, l.email)) : null,
       el("div", { class: "r" }, el("span", {}, "Tentativi"), el("span", { class: "num" }, String(l.attempts || 0)))),
-    l.draft ? [el("div", { class: "label" }, "Cosa dire"), el("div", { class: "glass block" }, l.draft)] : null,
+    l.message ? [el("div", { class: "label" }, "Messaggio WhatsApp"), el("div", { class: "glass block", style: "white-space:pre-line" }, l.message)]
+      : l.draft ? [el("div", { class: "label" }, "Cosa dire"), el("div", { class: "glass block" }, l.draft)] : null,
+    el("button", { class: "glass cancel", onclick: () => { haptic(); closeSheet(); setTimeout(() => askOutcome(l, l.message ? "whatsapp" : "call"), 350); } }, "Registra un esito"),
     el("div", { class: "label" }, "Note"),
     l.notes ? el("div", { class: "glass block", style: "white-space:pre-wrap;color:var(--ink-2);font-size:15px" }, l.notes) : null,
     note,

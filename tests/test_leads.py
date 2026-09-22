@@ -194,6 +194,101 @@ class OutreachTest(unittest.TestCase):
         self.assertIn("non la contatterò più", footer)
 
 
+
+class WhatsAppFirstTest(unittest.TestCase):
+    """Messages before calls, one clean message each, and a daily cap."""
+
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        # The package too, not just its submodules: `from modules import x`
+        # returns the attribute cached on the package, so without this the
+        # skipped set and the cap another test changed would carry over.
+        for module in [m for m in list(sys.modules) if m == "modules" or m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads, outreach, callmode, webapp
+        self.leads, self.outreach, self.callmode, self.webapp = leads, outreach, callmode, webapp
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def _lead(self, name, code="not_mobile", severity=4, category="dentisti", whatsapp="393331112222",
+              website="https://www.studiouno.it"):
+        lead = self.leads.add_lead(name, category=category, city="Milano", website=website,
+                                   phone="02 1234 5678", whatsapp=whatsapp, source=f"osm:node/{name}")
+        self.assertIsNotNone(lead, "the store took it for a duplicate")
+        self.leads.save_scan(lead, [{"code": code, "severity": severity, "detail": ""}], "bozza email")
+        return lead
+
+    def test_message_says_who_where_and_one_problem_with_one_soft_extra(self):
+        lead = self.leads.get(self._lead("Studio Uno"))
+        findings = [{"code": "not_mobile", "severity": 4, "detail": ""},
+                    {"code": "slow", "severity": 2, "detail": ""}]
+        msg = self.outreach.whatsapp_message(lead, findings, hour=10)
+        self.assertTrue(msg.startswith("Buongiorno"))
+        self.assertIn("Momo", msg)
+        self.assertIn("studiouno.it", msg, "the site is named so the claim can be checked")
+        self.assertIn("OpenStreetMap", msg, "says where the number came from")
+        self.assertIn("non ricevere altri messaggi", msg, "says how to make it stop")
+        self.assertNotIn("secondi", msg, "one problem only, not an audit")
+        self.assertEqual(msg.count("?"), 1, "one question")
+        self.assertEqual(msg.count("promemoria"), 1, "one extra offer")
+        self.assertNotIn("www.", msg)
+
+    def test_extra_offer_fits_the_trade_or_is_left_out(self):
+        self.assertIn("pazienti", self.outreach.extra_offer({"category": "dentisti"}))
+        self.assertIn("clienti", self.outreach.extra_offer({"category": "veterinari"}))
+        self.assertIn("documenti", self.outreach.extra_offer({"category": "avvocati"}))
+        self.assertIsNone(self.outreach.extra_offer({"category": "ristoranti"}))
+        lead = self.leads.get(self._lead("Trattoria", category="ristoranti"))
+        msg = self.outreach.whatsapp_message(lead, self.leads.findings_of(lead), hour=10)
+        self.assertEqual(len(msg.split("\n\n")), 3, "intro, problem + question, source")
+
+    def test_no_message_without_a_real_problem_and_evening_greeting(self):
+        lead = self.leads.get(self._lead("Studio Due"))
+        self.assertIsNone(self.outreach.whatsapp_message(lead, []))
+        self.assertIsNone(self.outreach.whatsapp_message(
+            lead, [{"code": "no_english", "severity": 1, "detail": ""}]))
+        msg = self.outreach.whatsapp_message(lead, self.leads.findings_of(lead), hour=18)
+        self.assertTrue(msg.startswith("Buonasera"))
+
+    def test_today_serves_messages_before_calls_up_to_the_cap(self):
+        wa = self._lead("Da scrivere")
+        call = self._lead("Da chiamare", code="site_down", severity=5, whatsapp=None)
+        nxt = self.webapp.today()["next"]
+        self.assertEqual((nxt["id"], nxt["channel"]), (wa, "whatsapp"),
+                         "a message comes first even when a call has the worse problem")
+        self.assertTrue(nxt["wa_app"].startswith("whatsapp://send?phone=393331112222&text="))
+        self.assertIn("Momo", nxt["message"])
+
+        self.callmode.apply(wa, "wa_sent", "whatsapp")
+        self.assertEqual(self.leads.get(wa)["state"], "WHATSAPP_SENT")
+        t = self.webapp.today()
+        self.assertEqual((t["messages"], t["calls"], t["done"]), (1, 0, 1))
+        self.assertEqual((t["next"]["id"], t["next"]["channel"]), (call, "call"))
+
+        self.outreach.MAX_WHATSAPP_PER_DAY = 1
+        self._lead("Oltre il limite", whatsapp="393339998888")
+        self.assertEqual(self.webapp.today()["next"]["channel"], "call",
+                         "past the daily cap no new WhatsApp contact is offered")
+
+    def test_a_whatsapp_reply_is_not_counted_as_a_call(self):
+        wa = self._lead("Risponde")
+        call = self._lead("Telefono", whatsapp=None)
+        self.callmode.apply(wa, "hot", "whatsapp")
+        self.assertEqual(self.webapp.calls_today(), 0)
+        self.callmode.apply(call, "ok", "call")
+        self.assertEqual(self.webapp.calls_today(), 1)
+
+    def test_todo_list_is_messages_then_calls(self):
+        self._lead("Chiamata forte", code="site_down", severity=5, whatsapp=None)
+        self._lead("Messaggio", code="slow", severity=2)
+        channels = [r["channel"] for r in self.webapp.leads_list("todo")]
+        self.assertEqual(channels, ["whatsapp", "call"])
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
 

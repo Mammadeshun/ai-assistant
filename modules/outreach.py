@@ -138,6 +138,97 @@ def whatsapp_link(lead, text):
     return f"https://wa.me/{number}?text={urllib.parse.quote(text)}"
 
 
+def whatsapp_app_link(lead, text):
+    """Same, as the app's own scheme. From an iPhone home-screen web app a
+    wa.me link opens a web page with a "continue to chat" button first; this
+    goes straight to the chat, the way tel: goes straight to the dialler."""
+    number = (lead.get("whatsapp") or "").lstrip("+").replace(" ", "")
+    if not number:
+        return None
+    return f"whatsapp://send?phone={number}&text={urllib.parse.quote(text)}"
+
+
+# The WhatsApp opener is assembled here, not by the model. It goes out under
+# Momo's own number, and the parts that make a cold message defensible - who
+# is writing, where the number came from, how to make it stop - are the parts
+# the model left out: none of the WhatsApp drafts written before 2026-09-22
+# said who was writing.
+
+# One sentence per problem, naming the site so it can be checked.
+WA_PROBLEM = {
+    "site_down": "Ho provato ad aprire {site} e in questo momento non si apre.",
+    "ssl_expired": "Aprendo {site}, il browser avvisa che il sito non è sicuro: il certificato di sicurezza è scaduto.",
+    "ssl_expiring": "Il certificato di sicurezza di {site} sta per scadere, e quando scade il browser avvisa chi lo apre che il sito non è sicuro.",
+    "not_mobile": "Ho aperto {site} dal telefono e la pagina non si adatta allo schermo.",
+    "slow": "Ho aperto {site} e ci mette diversi secondi a caricare.",
+    "no_website": ("Non riesco a trovare un vostro sito web: se non ce l'avete, ne preparo uno "
+                   "semplice e chiaro, che si legge bene anche dal telefono."),
+}
+
+# What else Momo builds, offered once and softly. "Se non li usate già"
+# because nothing checked tells us they lack it - it is a guess from the kind
+# of practice, and a guess stated as a fact is how an opener loses the reader.
+APPOINTMENT_TRADES = ("dentist", "fisioterap", "veterinar", "psicolog", "medic", "odontoiatr")
+DOCUMENT_TRADES = ("commercialist", "avvocat", "notai", "notaio", "architett", "consulent")
+
+
+def extra_offer(lead):
+    """The one other thing worth mentioning to this kind of practice, or None."""
+    category = (lead.get("category") or "").lower()
+    if any(t in category for t in APPOINTMENT_TRADES):
+        who = "i clienti" if "veterinar" in category else "i pazienti"
+        return f"Se non li usate già, posso preparare anche i promemoria degli appuntamenti su WhatsApp per {who}."
+    if any(t in category for t in DOCUMENT_TRADES):
+        return "Se può servire, posso preparare anche un modo semplice per ricevere i documenti dai clienti, tutti in un unico posto."
+    return None
+
+
+def _site_name(lead):
+    if not lead.get("website"):
+        return "il vostro sito"
+    url = lead["website"] if "://" in lead["website"] else "https://" + lead["website"]
+    return (urllib.parse.urlparse(url).hostname or "").removeprefix("www.") or "il vostro sito"
+
+
+def _where_found(lead):
+    if (lead.get("source") or "").startswith("osm:"):
+        return "Ho trovato il vostro numero su OpenStreetMap, la mappa online."
+    return "Ho trovato il vostro numero tra i contatti pubblici dello studio."
+
+
+def whatsapp_message(lead, findings, hour=None):
+    """The first WhatsApp message: who is writing, the one problem found, at
+    most one other offer, a question, and where the number came from.
+
+    One problem only. describe() can name two, but a stranger's first message
+    listing what is wrong with your practice reads like an audit; the extra
+    line offers something instead of finding another fault.
+    """
+    real = [f for f in findings if f["severity"] >= 2 and f["code"] in WA_PROBLEM]
+    if not real:
+        return None
+    code = real[0]["code"]
+    if hour is None:
+        import datetime
+        hour = datetime.datetime.now().hour
+    greeting = "Buonasera" if hour >= 17 else "Buongiorno"
+    # Two phrasings, picked by id: the same text sent to many numbers is what
+    # WhatsApp's spam detection looks for.
+    intro = (f"{greeting}, sono Momo: faccio siti web e automazioni per studi professionali, tra Pavia e Milano.",
+             f"{greeting}, mi chiamo Momo e mi occupo di siti web e automazioni per studi professionali, tra Pavia e Milano.")[lead["id"] % 2]
+    problem = WA_PROBLEM[code].format(site=_site_name(lead))
+    if code == "no_website":
+        question = "Le interessa vedere un sito che ho fatto?"
+    else:
+        question = ("Vuole che le spieghi in due righe da cosa dipende e come si sistema?",
+                    "Le interessa che le scriva in due righe da cosa dipende e come lo sistemerei?")[lead["id"] % 2]
+    # The question follows the problem it is about; the extra offer gets its
+    # own line after it, so the one thing being asked stays obvious.
+    parts = [intro, f"{problem} {question}", extra_offer(lead),
+             f"{_where_found(lead)} Se preferisce non ricevere altri messaggi, me lo scriva e non la ricontatto."]
+    return "\n\n".join(p for p in parts if p)
+
+
 def send_email(lead, subject, body):
     """Send through Composio's Gmail connection. Called only on approval."""
     from . import composio_mcp
@@ -188,6 +279,13 @@ def format_digest(buckets, counts):
     """The 08:00 message: what is waiting, in the order it should be done."""
     parts = ["☀️ Lead del giorno", "━" * 24]
 
+    # Messages first: Momo would rather write than ring.
+    if buckets["to_whatsapp"]:
+        parts.append(f"\n💬 WHATSAPP DA INVIARE ({len(buckets['to_whatsapp'])})")
+        for lead in buckets["to_whatsapp"][:MAX_WHATSAPP_PER_DAY]:
+            parts.append(format_lead(lead))
+            parts.append(f"   /wa {lead['id']}  per il link già scritto")
+
     if buckets["to_call"]:
         parts.append(f"\n📞 DA CHIAMARE OGGI ({len(buckets['to_call'])})")
         for lead in buckets["to_call"][:10]:
@@ -195,12 +293,6 @@ def format_digest(buckets, counts):
             draft = (lead.get("draft") or "").strip().splitlines()
             if draft:
                 parts.append(f"   apertura: {draft[0][:110]}")
-
-    if buckets["to_whatsapp"]:
-        parts.append(f"\n💬 WHATSAPP DA INVIARE ({len(buckets['to_whatsapp'])})")
-        for lead in buckets["to_whatsapp"][:MAX_WHATSAPP_PER_DAY]:
-            parts.append(format_lead(lead))
-            parts.append(f"   /wa {lead['id']}  per il link già scritto")
 
     if buckets["to_email"]:
         parts.append(f"\n✉️ EMAIL DA APPROVARE ({len(buckets['to_email'])})")

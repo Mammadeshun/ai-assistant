@@ -217,7 +217,7 @@ def handle(text, send):
         elif not lead.get("whatsapp"):
             send(f"{lead['name']} non ha un numero WhatsApp.")
         else:
-            message = lead.get("draft") or outreach.draft_opener(lead, store.findings_of(lead))
+            message = outreach.whatsapp_message(lead, store.findings_of(lead))
             if not message:
                 send(f"Nessuna bozza per {lead['name']}: la scansione non ha trovato "
                      f"problemi da citare. /scan per riprovare, oppure scriva a mano.")

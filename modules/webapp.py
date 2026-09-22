@@ -108,8 +108,14 @@ def lead_view(lead, full=False):
         "attempts": lead.get("attempts") or 0,
     }
     if full:
-        view.update(draft=lead.get("draft"), notes=lead.get("notes"),
-                    whatsapp=outreach.whatsapp_link(lead, lead.get("draft") or "") if lead.get("whatsapp") else None,
+        # The WhatsApp text is built fresh rather than read from `draft`: the
+        # stored drafts are the model's email-style openers, several are
+        # empty, and an empty one made a wa.me link that opened a blank chat.
+        message = outreach.whatsapp_message(lead, findings) if lead.get("whatsapp") else None
+        view.update(draft=lead.get("draft"), notes=lead.get("notes"), message=message,
+                    mobile=lead.get("whatsapp") if message else None,
+                    whatsapp=outreach.whatsapp_link(lead, message) if message else None,
+                    wa_app=outreach.whatsapp_app_link(lead, message) if message else None,
                     problems=[f["code"] for f in findings])
     return view
 
@@ -124,29 +130,59 @@ def calls_today():
     return row["n"]
 
 
+def whatsapp_today():
+    """Distinct practices messaged today, from the app or /sent."""
+    today = datetime.date.today().isoformat()
+    with store.connect() as conn:
+        row = conn.execute("SELECT COUNT(DISTINCT lead_id) n FROM events WHERE at >= ?"
+                           " AND kind = 'state:WHATSAPP_SENT'", (today,)).fetchone()
+    return row["n"]
+
+
+def queues():
+    """What to do next, WhatsApp before calls - Momo would rather write than
+    ring - and WhatsApp only up to the daily cap. Past the cap the queue is
+    empty rather than shorter: new contacts per day is what gets a number
+    reported and banned, and a ban is not something you undo."""
+    from . import callmode, outreach
+    sent = whatsapp_today()
+    wa = callmode.wa_queue() if sent < outreach.MAX_WHATSAPP_PER_DAY else []
+    return wa, callmode._queue(), sent
+
+
 def today():
-    from . import callmode
-    queue = callmode._queue()
-    return {"next": lead_view(queue[0], full=True) if queue else None,
-            "remaining": len(queue), "done": calls_today(), "goal": DAILY_GOAL,
+    from . import outreach
+    wa, calls, sent = queues()
+    if wa:
+        nxt = dict(lead_view(wa[0], full=True), channel="whatsapp")
+    elif calls:
+        nxt = dict(lead_view(calls[0], full=True), channel="call")
+    else:
+        nxt = None
+    called = calls_today()
+    return {"next": nxt, "remaining": len(wa) + len(calls),
+            "done": sent + called, "goal": DAILY_GOAL,
+            "messages": sent, "message_cap": outreach.MAX_WHATSAPP_PER_DAY, "calls": called,
             "counts": store.counts(),
             "date": datetime.date.today().isoformat()}
 
 
 def leads_list(state=None, q=None):
-    if state == "call":
-        # Priority order - worst problem first - exactly as call mode serves
-        # them, rather than id order, which buried the dead sites.
-        rows = store.due_leads()["to_call"]
+    if state in ("todo", "call"):
+        # Exactly the order Oggi serves them - messages, then calls, worst
+        # problem first within each - rather than id order, which buried the
+        # dead sites.
+        wa, calls, _ = queues()
+        rows = [dict(r, channel="whatsapp") for r in wa] + [dict(r, channel="call") for r in calls]
     else:
         rows = store.list_leads(limit=1000)
-    if state and state not in ("all", "call"):
+    if state and state not in ("all", "todo", "call"):
         rows = [r for r in rows if r["state"] == state]
     if q:
         needle = q.lower()
         rows = [r for r in rows if needle in (r["name"] or "").lower()
                 or needle in (r.get("category") or "").lower()]
-    return [lead_view(r) for r in rows[:300]]
+    return [dict(lead_view(r), channel=r.get("channel")) for r in rows[:300]]
 
 
 def site_data():
@@ -277,7 +313,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
         try:
             if url.path == "/api/outcome":
                 from . import callmode
-                label = callmode.apply(int(body["id"]), str(body["action"]))
+                label = callmode.apply(int(body["id"]), str(body["action"]),
+                                       "whatsapp" if body.get("channel") == "whatsapp" else "call")
                 return self._send(200, {"label": label, "today": today()})
             if url.path == "/api/note":
                 store.add_note(int(body["id"]), str(body["text"])[:1000])

@@ -26,11 +26,19 @@ BUTTONS = [
 ]
 
 OUTCOME_LABEL = {"ok": "✅ parlato", "hot": "🔥 interessato", "noanswer": "📵 non risponde",
-                 "later": "📅 da richiamare", "no": "❌ non interessato", "skip": "⏭ saltato"}
+                 "later": "📅 da richiamare", "no": "❌ non interessato", "skip": "⏭ saltato",
+                 "wa_sent": "💬 messaggio inviato"}
 
 
 def _queue():
     return [l for l in store.due_leads()["to_call"] if l["id"] not in _skipped]
+
+
+def wa_queue():
+    """Leads to message first, worst problem first, each with a message that
+    can actually be sent - a lead whose only finding is trivia has none."""
+    return [l for l in store.due_leads()["to_whatsapp"]
+            if l["id"] not in _skipped and outreach.whatsapp_message(l, store.findings_of(l))]
 
 
 def _card(lead, remaining):
@@ -84,20 +92,29 @@ def start(send):
     send_next()
 
 
-def apply(lead_id, action):
-    """Record what happened on a call. Returns a short label for the card."""
+def apply(lead_id, action, channel="call"):
+    """Record what happened on a call or a WhatsApp chat. Returns a short
+    label for the card.
+
+    The note names the channel, and that matters beyond the history: the
+    app's call counter counts notes that start with "chiamata", so a WhatsApp
+    reply logged as one would inflate it.
+    """
     lead = store.get(lead_id)
     if not lead:
         return "lead non trovato"
-    if action == "ok":
-        store.set_state(lead_id, "CONTACTED", note="chiamata: parlato")
+    via = "whatsapp" if channel == "whatsapp" else "chiamata"
+    if action == "wa_sent":
+        store.set_state(lead_id, "WHATSAPP_SENT", note="whatsapp: inviato")
+    elif action == "ok":
+        store.set_state(lead_id, "CONTACTED", note=f"{via}: parlato")
     elif action == "hot":
-        store.set_state(lead_id, "INTERESTED", note="chiamata: interessato")
+        store.set_state(lead_id, "INTERESTED", note=f"{via}: interessato")
     elif action == "later":
-        store.set_state(lead_id, "CONTACTED", note="chiamata: da richiamare")
+        store.set_state(lead_id, "CONTACTED", note=f"{via}: da richiamare")
         store.add_note(lead_id, "chiede di essere richiamato")
     elif action == "no":
-        store.set_state(lead_id, "DEAD", note="chiamata: non interessato")
+        store.set_state(lead_id, "DEAD", note=f"{via}: non interessato")
     elif action == "noanswer":
         after = store.record_attempt(lead_id, "non risponde")
         if after and after["state"] == "DEAD":
