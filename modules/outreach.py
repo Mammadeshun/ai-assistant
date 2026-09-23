@@ -292,6 +292,26 @@ def email_message(lead, findings, hour=None):
     return "\n\n".join(p for p in lines if p)
 
 
+def call_script(lead, findings):
+    """What to say on the phone, built from what is known today.
+
+    This replaces the stored model drafts everywhere they were shown. Those
+    were written from the findings of the night they were scanned: on
+    2026-09-23, 123 of 154 described a problem we no longer claim, and one
+    said "ho provato più volte da diversi dispositivi", which never happened.
+    """
+    parts = _opener(lead, findings)
+    if parts:
+        greeting, who, ask, _ = parts
+        return f"{greeting}, {who} {ask}"
+    if any(f["code"] == "no_website" for f in findings):
+        # Only a guess from the map data, so on the phone it is a question.
+        return ("Buongiorno, sono Momo: faccio siti web per studi professionali, tra Pavia e Milano. "
+                "Sulle mappe online non trovo un vostro sito: ce l'avete? Se no, ne preparo uno "
+                "semplice e chiaro, che si legge bene anche dal telefono.")
+    return None
+
+
 def send_email(lead, subject, body):
     """Send through Composio's Gmail connection. Called only on approval."""
     from . import composio_mcp
@@ -360,9 +380,12 @@ def format_digest(buckets, counts):
         parts.append(f"\n📞 DA CHIAMARE OGGI ({len(buckets['to_call'])})")
         for lead in buckets["to_call"][:10]:
             parts.append(format_lead(lead))
-            draft = (lead.get("draft") or "").strip().splitlines()
-            if draft:
-                parts.append(f"   apertura: {draft[0][:110]}")
+            # The checked sentence, not the stored draft (see call_script).
+            found = leads_store.findings_of(lead)
+            opening = _opener(lead, found)
+            line = opening[2] if opening else call_script(lead, found)
+            if line:
+                parts.append(f"   apertura: {line[:160]}")
 
     if buckets["to_email"]:
         parts.append(f"\n✉️ EMAIL DA APPROVARE ({len(buckets['to_email'])})")

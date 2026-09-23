@@ -53,7 +53,7 @@ def _card(lead, remaining):
         lines.append(f"🌐 {lead['website']}")
     if lead.get("attempts"):
         lines.append(f"↩️ tentativo n. {lead['attempts'] + 1}")
-    draft = (lead.get("draft") or "").strip()
+    draft = outreach.call_script(lead, findings)
     if draft:
         lines += ["", "💬 Cosa dire:", draft[:600]]
     if lead.get("notes"):

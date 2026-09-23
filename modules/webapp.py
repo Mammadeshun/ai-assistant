@@ -141,7 +141,9 @@ def lead_view(lead, full=False):
         send_wa = message and not wa_capped
         body = (outreach.email_message(lead, findings)
                 if lead.get("email") and "email" in open_channels else None)
-        view.update(draft=lead.get("draft"), notes=lead.get("notes"), message=message,
+        # "draft" is the call script. Built fresh like the messages: the stored
+        # model drafts describe findings that have since been corrected.
+        view.update(draft=outreach.call_script(lead, findings), notes=lead.get("notes"), message=message,
                     mobile=lead.get("whatsapp"),
                     whatsapp=outreach.whatsapp_link(lead, message) if send_wa else None,
                     wa_app=outreach.whatsapp_app_link(lead, message) if send_wa else None,

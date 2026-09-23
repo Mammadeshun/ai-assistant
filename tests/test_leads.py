@@ -505,6 +505,18 @@ class SendableClaimsTest(unittest.TestCase):
                "category": "veterinari", "source": "osm:node/2", "website": None}
         self.assertIn("il vostro ambulatorio", self.outreach.whatsapp_message(vet, found))
 
+    def test_the_call_script_is_built_from_todays_findings_not_the_stored_draft(self):
+        lead = {"id": 44, "name": "DSZ", "category": "dentisti", "source": "osm:node/1",
+                "website": "https://www.studiodsz.com",
+                "draft": "Il sito non si apre. Ho provato più volte da diversi dispositivi."}
+        script = self.outreach.call_script(lead, [{"code": "site_down", "severity": 5, "detail": ""}])
+        self.assertIn("studiodsz.com", script)
+        self.assertNotIn("dispositivi", script)
+        # Nothing verified, nothing claimed - whatever the old draft said.
+        self.assertIsNone(self.outreach.call_script(lead, [{"code": "mobile_overflow", "severity": 1, "detail": ""}]))
+        guess = self.outreach.call_script(lead, [{"code": "no_website", "severity": 1, "detail": ""}])
+        self.assertIn("ce l'avete?", guess)
+
     def test_the_phone_claim_is_only_made_about_a_phone_sized_screen(self):
         text = self.outreach.WA_PROBLEM["not_mobile"]
         self.assertIn("schermo da telefono", text)

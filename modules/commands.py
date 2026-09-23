@@ -206,8 +206,9 @@ def handle(text, send):
                 lines.append(f"email: {lead['email']}")
             if findings:
                 lines.append("problemi: " + ", ".join(f["code"] for f in findings))
-            if lead.get("draft"):
-                lines.append("\nbozza:\n" + lead["draft"])
+            script = outreach.call_script(lead, findings)
+            if script:
+                lines.append("\ncosa dire:\n" + script)
             if lead.get("notes"):
                 lines.append("\nnote:\n" + lead["notes"])
             send("\n".join(lines))
@@ -260,11 +261,16 @@ def handle(text, send):
         if error:
             send(error)
         else:
+            # Exactly what /email and the app would send, footer included.
             findings = store.findings_of(lead)
-            body = lead.get("draft") or outreach.draft_opener(lead, findings) or "(nessuna bozza)"
-            send(f"A: {lead.get('email') or '(nessuna email)'}\n"
-                 f"Oggetto: {outreach.subject_for(lead, findings)}\n\n{body}\n\n"
-                 f"Per inviare: /email {lead['id']}")
+            body = outreach.email_message(lead, findings)
+            if not body:
+                send(f"Per {lead['name']} non c'è niente di verificato da scrivere.")
+            else:
+                send(f"A: {lead.get('email') or '(nessuna email)'}\n"
+                     f"Oggetto: {outreach.subject_for(lead, findings)}\n\n{body}"
+                     f"{outreach.email_footer()}\n\n"
+                     f"Per inviare: /email {lead['id']}")
 
     elif command == "email":
         lead, error = _lead_or_error(first)
@@ -273,19 +279,22 @@ def handle(text, send):
         elif not lead.get("email"):
             send(f"{lead['name']} non ha un'email.")
         else:
+            # The app's sender, so both doors have the same locks: the lead
+            # must be in the email queue, not emailed already, under the daily
+            # cap, and an unclear failure is never answered with "retry".
+            # This used to send the stored model draft with none of those.
+            from .webapp import send_lead_email
             findings = store.findings_of(lead)
-            body = lead.get("draft") or outreach.draft_opener(lead, findings)
+            body = outreach.email_message(lead, findings)
             if not body:
-                send(f"Nessuna bozza per {lead['name']}: niente da inviare.")
+                send(f"Per {lead['name']} non c'è niente di verificato da scrivere.")
                 return True
-            try:
-                outreach.send_email(lead, outreach.subject_for(lead, findings), body)
-            except Exception as e:
-                send(f"❌ Invio fallito: {e}")
-            else:
-                store.set_state(lead["id"], "EMAIL_SENT", note="approved in telegram")
+            status, payload = send_lead_email(lead["id"], outreach.subject_for(lead, findings), body)
+            if status == 200:
                 send(f"✅ Inviata a {lead['email']}. Se non rispondono, fra "
                      f"{store.EMAIL_WAIT_DAYS} giorni finisce fra le chiamate.")
+            else:
+                send(f"❌ {payload.get('error', 'invio non riuscito')}")
 
     elif command == "sent":
         lead, error = _lead_or_error(first)
