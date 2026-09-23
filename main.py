@@ -142,7 +142,7 @@ def _drop_backlog():
             print(f"   skipped {len(results)} message(s) queued while offline")
             return last + 1
     except Exception as e:
-        print(f"   could not clear the backlog: {e}")
+        print(f"   could not clear the backlog: {_redact(e)}")
     return None
 
 

@@ -109,7 +109,8 @@ def valid_session(token):
 # ── data for the four tabs ─────────────────────────────────────────────────
 
 PROBLEM_TONE = {"site_down": "critical", "ssl_expired": "critical", "not_mobile": "serious",
-                "ssl_expiring": "warning", "slow": "warning", "no_website": "neutral"}
+                "ssl_expiring": "warning", "slow": "warning", "no_website": "neutral",
+                "no_site_found": "neutral"}
 
 
 def lead_view(lead, full=False):

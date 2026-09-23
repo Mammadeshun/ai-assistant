@@ -463,7 +463,20 @@ class SendableClaimsTest(unittest.TestCase):
         for code, severity in self.scanner.SEVERITY.items():
             if severity >= self.scanner.SENDABLE and code != "no_website":
                 self.assertIn(code, self.outreach.WA_PROBLEM, code)
-                self.assertIn("{site}", self.outreach.WA_PROBLEM[code], code)
+                # Name what was checked: the address for a site problem, the
+                # practice for "we searched and found nothing".
+                self.assertRegex(self.outreach.WA_PROBLEM[code], r"\{site\}|\{practice\}", code)
+
+    def test_no_site_found_says_studio_not_the_raw_map_name(self):
+        found = [{"code": "no_site_found", "severity": 3, "detail": ""}]
+        lead = {"id": 91, "name": "Dott. Lanza Matteo Luciano consulente tributario",
+                "category": "commercialisti", "source": "osm:node/1", "website": None}
+        text = self.outreach.whatsapp_message(lead, found)
+        self.assertIn("Ho cercato il vostro studio su internet", text)
+        self.assertNotIn("Lanza", text)
+        vet = {"id": 229, "name": "Ambulatorio Veterinario Dr. Colombo",
+               "category": "veterinari", "source": "osm:node/2", "website": None}
+        self.assertIn("il vostro ambulatorio", self.outreach.whatsapp_message(vet, found))
 
     def test_the_phone_claim_is_only_made_about_a_phone_sized_screen(self):
         text = self.outreach.WA_PROBLEM["not_mobile"]

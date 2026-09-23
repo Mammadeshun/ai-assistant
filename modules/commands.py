@@ -161,6 +161,11 @@ def handle(text, send):
         out = subprocess.run(["journalctl", "-u", "assistant", "-n", lines,
                               "--no-pager", "-o", "cat"],
                              capture_output=True, text=True, timeout=15).stdout
+        # Lines written before a redaction fix can still hold the bot token;
+        # this sends them into a chat, so strip it here as well.
+        token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+        if token:
+            out = out.replace(token, "<token>")
         if not out.strip():
             send("Log non leggibili: manca il gruppo systemd-journal?")
         else:

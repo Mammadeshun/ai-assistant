@@ -35,6 +35,11 @@ SEVERITY = {
     # on this guess. It stays visible in the app, but it no longer writes to
     # anyone until something actually searches for the practice.
     "no_website": 1,
+    # Same fact, but checked: somebody searched the web for this practice and
+    # found no site of their own. Only this one may be written to; the guess
+    # above may not. Set by hand today - the server cannot search yet, because
+    # every engine blocks it.
+    "no_site_found": 3,
     "site_down": 5,
     "ssl_expired": 5,
     "not_mobile": 4,

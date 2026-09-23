@@ -49,6 +49,7 @@ PROBLEM_IT = {
     # mapped one - not that none exists. Claiming otherwise to a practice that
     # has a site ends the conversation on the first line.
     "no_website": "non risulta un sito web nelle mappe online",
+    "no_site_found": "cercando online non si trova un sito dello studio",
     "domain_gone": "il dominio del sito non risulta più attivo",
     "ssl_wrong_host": "il certificato di sicurezza è di un altro indirizzo, il browser avvisa",
     "site_down": "il sito non si apre",
@@ -184,6 +185,13 @@ WA_PROBLEM = {
     "not_mobile": "Ho aperto {site} su uno schermo da telefono e la pagina non si adatta: si legge solo spostandola di lato.",
     "no_website": ("Non riesco a trovare un vostro sito web: se non ce l'avete, ne preparo uno "
                    "semplice e chiaro, che si legge bene anche dal telefono."),
+    # "il vostro studio", not the map name: pasted in, "Dott. Lanza Matteo
+    # Luciano consulente tributario" reads like a mail merge, and a bare
+    # person's name like searching for the person. "o social" because some
+    # have only a Facebook page.
+    "no_site_found": ("Ho cercato {practice} su internet e non trovo un vostro sito: ci sono solo "
+                      "le schede su mappe, portali o social. Se non ne avete uno, ne preparo uno "
+                      "semplice e chiaro, che si legge bene anche dal telefono."),
 }
 
 # What else Momo builds, offered once and softly. "Se non li usate già"
@@ -209,6 +217,11 @@ def _site_name(lead):
         return "il vostro sito"
     url = lead["website"] if "://" in lead["website"] else "https://" + lead["website"]
     return (urllib.parse.urlparse(url).hostname or "").removeprefix("www.") or "il vostro sito"
+
+
+def _practice(lead):
+    text = f"{lead.get('category') or ''} {lead['name']}".lower()
+    return "il vostro ambulatorio" if "veterinar" in text or "ambulatori" in text else "il vostro studio"
 
 
 def _where_found(lead):
@@ -238,8 +251,10 @@ def _opener(lead, findings, hour=None):
     # WhatsApp's spam detection looks for.
     who = ("sono Momo: faccio siti web e automazioni per studi professionali, tra Pavia e Milano.",
            "mi chiamo Momo e mi occupo di siti web e automazioni per studi professionali, tra Pavia e Milano.")[lead["id"] % 2]
-    problem = WA_PROBLEM[code].format(site=_site_name(lead))
-    if code == "domain_gone":
+    problem = WA_PROBLEM[code].format(site=_site_name(lead), practice=_practice(lead))
+    if code == "no_site_found":
+        question = "Le interessa vedere un sito che ho fatto?"
+    elif code == "domain_gone":
         question = "Avete cambiato indirizzo, o il sito non c'è più?"
     elif code == "no_website":
         question = "Le interessa vedere un sito che ho fatto?"
@@ -305,6 +320,7 @@ def subject_for(lead, findings):
     site = _site_name(lead)
     return {
         "no_website": f"{lead['name']}: non vi trovo online",
+        "no_site_found": f"{lead['name']}: non trovo un vostro sito",
         "domain_gone": f"{site}: il dominio non risulta più attivo",
         "ssl_wrong_host": f"{site}: il browser avvisa che il sito non è sicuro",
         "site_down": f"{site} non risponde",
