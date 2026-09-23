@@ -40,6 +40,9 @@ _cache_lock = threading.Lock()
 # One email send at a time, so the already-sent check and the send cannot
 # interleave: a double tap on a slow connection must not mail a studio twice.
 _email_lock = threading.Lock()
+# Read-check-write on the pairing code. Without it, parallel guesses each read
+# the same try count: an audit got 22-32 guesses past a limit of 5.
+_pair_lock = threading.Lock()
 
 
 def cached(key, seconds, compute):
@@ -69,6 +72,11 @@ def new_pairing_code():
 
 
 def redeem_code(code):
+    with _pair_lock:
+        return _redeem(code)
+
+
+def _redeem(code):
     raw = store.get_setting("webapp_code")
     if not raw:
         return None
@@ -119,13 +127,18 @@ def lead_view(lead, full=False):
         # The WhatsApp text is built fresh rather than read from `draft`: the
         # stored drafts are the model's email-style openers, several are
         # empty, and an empty one made a wa.me link that opened a blank chat.
-        message = outreach.whatsapp_message(lead, findings) if lead.get("whatsapp") else None
-        # The cap applies wherever a first message can start, not just on
-        # Oggi: without this, Lead -> Tutti offered a way around it.
+        # The same rules the queue uses, applied here too. The Lead screen
+        # used to offer a first message to anyone with a number, including
+        # leads already contacted, parked as a stale duplicate, or marked
+        # "not interested".
+        open_channels = store.channels_open(lead["id"])
+        message = (outreach.whatsapp_message(lead, findings)
+                   if lead.get("whatsapp") and {"whatsapp", "follow"} & open_channels else None)
         wa_capped = bool(message) and lead["state"] == "NEW" and \
             whatsapp_today() >= outreach.MAX_WHATSAPP_PER_DAY
         send_wa = message and not wa_capped
-        body = outreach.email_message(lead, findings) if lead.get("email") else None
+        body = (outreach.email_message(lead, findings)
+                if lead.get("email") and "email" in open_channels else None)
         view.update(draft=lead.get("draft"), notes=lead.get("notes"), message=message,
                     mobile=lead.get("whatsapp"),
                     whatsapp=outreach.whatsapp_link(lead, message) if send_wa else None,
@@ -235,6 +248,8 @@ def send_lead_email(lead_id, subject, body):
         return 404, {"error": "questo studio non ha un'email"}
     if not subject or len(body) < 40:
         return 400, {"error": "oggetto o testo mancante"}
+    if "email" not in store.channels_open(lead_id):
+        return 409, {"error": "questo studio non è in coda per l'email"}
     with _email_lock:
         if already_emailed(lead_id):
             return 409, {"error": "a questo studio l'email è già partita"}
@@ -245,9 +260,17 @@ def send_lead_email(lead_id, subject, body):
         except RuntimeError as e:          # no signature, no address: say which
             return 400, {"error": str(e)[:200]}
         except Exception as e:
-            print(f"email to lead {lead_id} failed: {type(e).__name__}: {e}")
-            return 502, {"error": "invio non riuscito, riprova tra poco"}
+            # Gmail may well have accepted it and the failure happened on the
+            # way back. "Riprova tra poco" invited a second copy to the same
+            # studio, so the lead is marked and the doubt is stated.
+            print(f"email to lead {lead_id} unclear: {type(e).__name__}: {e}")
+            store.add_note(lead_id, f"invio email incerto ({type(e).__name__}): controlla Gmail Inviati")
+            store.set_state(lead_id, "EMAIL_SENT", note="email: esito incerto, da verificare in Gmail")
+            return 502, {"error": "Non so se è partita: controlla Posta inviata in Gmail prima di riprovare"}
         store.set_state(lead_id, "EMAIL_SENT", note="email: inviata dall'app")
+    # Keep what was actually sent: rebuilding it from the template later shows
+    # today's wording, not the words the studio read.
+    store.add_note(lead_id, f"EMAIL INVIATA — oggetto: {subject}\n{body}")
     return 200, {"ok": True, "today": today()}
 
 
@@ -295,6 +318,10 @@ def system_data():
 # ── HTTP ───────────────────────────────────────────────────────────────────
 
 class Handler(http.server.BaseHTTPRequestHandler):
+    # Without this a client that dribbles its request body holds a thread
+    # open indefinitely, and there is no limit on threads.
+    timeout = 15
+
     server_version = "assistant"
 
     def log_message(self, fmt, *args):   # quiet: no request log in the journal

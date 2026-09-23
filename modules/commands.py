@@ -126,6 +126,13 @@ def handle(text, send):
     if command in ("help", "aiuto", "start"):
         send("Comandi:\n" + HELP)
 
+    elif command in ("app", "dashboard") and first in ("logout", "esci", "revoca"):
+        # A lost phone could otherwise send from the app for 90 days, and the
+        # only way to stop it was editing the database.
+        store.set_setting("webapp_sessions", "[]")
+        send("🔒 Fatto: l'app è stata scollegata da tutti i telefoni. "
+             "Scrivi /app per rientrare.")
+
     elif command in ("app", "dashboard"):
         # The code goes only to this chat, which the listener has already
         # verified is yours. Single use, ten minutes, five tries.

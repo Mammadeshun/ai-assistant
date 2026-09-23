@@ -48,7 +48,9 @@ PROBLEM_IT = {
     # Sourced from OpenStreetMap, where a missing website tag means nobody
     # mapped one - not that none exists. Claiming otherwise to a practice that
     # has a site ends the conversation on the first line.
-    "no_website": "non riesco a trovare un vostro sito web online",
+    "no_website": "non risulta un sito web nelle mappe online",
+    "domain_gone": "il dominio del sito non risulta più attivo",
+    "ssl_wrong_host": "il certificato di sicurezza è di un altro indirizzo, il browser avvisa",
     "site_down": "il sito non si apre",
     "ssl_expired": "il certificato di sicurezza è scaduto, il browser mostra un avviso",
     "ssl_expiring": "il certificato di sicurezza sta per scadere",
@@ -70,6 +72,18 @@ Regole:
 - Nessun markdown, nessun emoji. Solo testo."""
 
 
+def severity_now(finding):
+    """The finding's severity as the scanner rates it TODAY.
+
+    The stored number is whatever it was worth on the night of the scan.
+    Demoting a check (no_website went from 3 to 1 on 2026-09-23, after an
+    audit found live sites behind that guess) has to take effect without
+    rescanning 244 leads, so every send decision looks the code up again.
+    """
+    from .scanner import SEVERITY
+    return SEVERITY.get(finding["code"], finding.get("severity", 0))
+
+
 def describe(findings, min_severity=2):
     """The findings as one Italian phrase, worst first.
 
@@ -77,7 +91,7 @@ def describe(findings, min_severity=2):
     it with something minor reads like a form letter, and the minor checks are
     the ones most likely to be wrong.
     """
-    real = [f for f in findings if f["severity"] >= min_severity]
+    real = [f for f in findings if severity_now(f) >= min_severity]
     return ", ".join(PROBLEM_IT.get(f["code"], f["code"]) for f in real[:2])
 
 
@@ -159,11 +173,15 @@ def whatsapp_app_link(lead, text):
 
 # One sentence per problem, naming the site so it can be checked.
 WA_PROBLEM = {
-    "site_down": "Ho provato ad aprire {site} e in questo momento non si apre.",
+    # Each sentence says exactly what was done and what was seen. The audit
+    # found the old ones claiming a phone we never used, an expiry that had
+    # not happened, and a site that was down only at www.
+    "site_down": "Ho provato ad aprire {site}, con e senza www, e non risponde.",
+    "domain_gone": "Ho provato ad aprire {site} e il dominio non risulta più registrato o attivo.",
+    "ssl_wrong_host": "Aprendo {site} il browser avvisa che il sito non è sicuro: il certificato di sicurezza è intestato a un altro indirizzo.",
     "ssl_expired": "Aprendo {site}, il browser avvisa che il sito non è sicuro: il certificato di sicurezza è scaduto.",
     "ssl_expiring": "Il certificato di sicurezza di {site} sta per scadere, e quando scade il browser avvisa chi lo apre che il sito non è sicuro.",
-    "not_mobile": "Ho aperto {site} dal telefono e la pagina non si adatta allo schermo.",
-    "slow": "Ho aperto {site} e ci mette diversi secondi a caricare.",
+    "not_mobile": "Ho aperto {site} su uno schermo da telefono e la pagina non si adatta: si legge solo spostandola di lato.",
     "no_website": ("Non riesco a trovare un vostro sito web: se non ce l'avete, ne preparo uno "
                    "semplice e chiaro, che si legge bene anche dal telefono."),
 }
@@ -208,7 +226,7 @@ def _opener(lead, findings, hour=None):
     listing what is wrong with your practice reads like an audit; the extra
     line offers something instead of finding another fault.
     """
-    real = [f for f in findings if f["severity"] >= 2 and f["code"] in WA_PROBLEM]
+    real = [f for f in findings if severity_now(f) >= 2 and f["code"] in WA_PROBLEM]
     if not real:
         return None
     code = real[0]["code"]
@@ -221,7 +239,9 @@ def _opener(lead, findings, hour=None):
     who = ("sono Momo: faccio siti web e automazioni per studi professionali, tra Pavia e Milano.",
            "mi chiamo Momo e mi occupo di siti web e automazioni per studi professionali, tra Pavia e Milano.")[lead["id"] % 2]
     problem = WA_PROBLEM[code].format(site=_site_name(lead))
-    if code == "no_website":
+    if code == "domain_gone":
+        question = "Avete cambiato indirizzo, o il sito non c'è più?"
+    elif code == "no_website":
         question = "Le interessa vedere un sito che ho fatto?"
     else:
         question = ("Vuole che le spieghi in due righe da cosa dipende e come si sistema?",
@@ -276,15 +296,21 @@ def send_email(lead, subject, body):
 
 
 def subject_for(lead, findings):
-    """Subject naming the concrete problem, as in the plan."""
+    """Subject naming the problem and the exact address it was seen at.
+
+    "Il vostro sito non si apre" is a claim about a site they can point at;
+    "studiorossi.it non risponde" is a fact they can check in ten seconds.
+    """
     code = findings[0]["code"] if findings else None
+    site = _site_name(lead)
     return {
         "no_website": f"{lead['name']}: non vi trovo online",
-        "site_down": f"Il vostro sito non si apre",
-        "ssl_expired": "Il vostro sito mostra un avviso di sicurezza",
-        "ssl_expiring": "Il certificato del vostro sito sta per scadere",
-        "not_mobile": "Il vostro sito non si apre bene da cellulare",
-        "slow": "Il vostro sito impiega troppo a caricare",
+        "domain_gone": f"{site}: il dominio non risulta più attivo",
+        "ssl_wrong_host": f"{site}: il browser avvisa che il sito non è sicuro",
+        "site_down": f"{site} non risponde",
+        "ssl_expired": f"{site}: il certificato di sicurezza è scaduto",
+        "ssl_expiring": f"{site}: il certificato di sicurezza sta per scadere",
+        "not_mobile": f"{site} non si adatta allo schermo del telefono",
     }.get(code, f"Due righe sul sito di {lead['name']}")
 
 

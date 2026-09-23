@@ -46,6 +46,10 @@ class LeadStoreTest(unittest.TestCase):
     def test_new_lead_goes_to_whatsapp_only_with_a_mobile(self):
         mobile = self.leads.add_lead("Con Mobile", city="Milano", whatsapp="393331112222")
         landline = self.leads.add_lead("Solo Fisso", city="Milano", phone="02 1234567")
+        # A lead with nothing observed is parked now, so give these a real
+        # problem to have something honest to contact them about.
+        for lead_id in (mobile, landline):
+            self.leads.save_scan(lead_id, [{"code": "site_down", "severity": 5, "detail": ""}], None)
         due = self.leads.due_leads()
         self.assertEqual([l["id"] for l in due["to_whatsapp"]], [mobile])
         # A landline with no email address is a phone call: it used to be
@@ -299,7 +303,7 @@ class WhatsAppFirstTest(unittest.TestCase):
 
     def test_todo_list_is_messages_then_calls(self):
         self._lead("Chiamata forte", code="site_down", severity=5, whatsapp=None)
-        self._lead("Messaggio", code="slow", severity=2)
+        self._lead("Messaggio", code="not_mobile", severity=4)
         channels = [r["channel"] for r in self.webapp.leads_list("todo")]
         self.assertEqual(channels, ["whatsapp", "call"])
 
@@ -380,6 +384,100 @@ class EmailAndFollowUpTest(WhatsAppFirstTest):
         with self.leads.connect() as conn:
             conn.execute("UPDATE leads SET state_changed_at = ? WHERE id = ?", (old, lead_id))
 
+
+class StaleDataTest(unittest.TestCase):
+    """The two ways the first real message went wrong."""
+
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m == "modules" or m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads, scanner
+        self.leads, self.scanner = leads, scanner
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+        for module in [m for m in list(sys.modules) if m == "modules" or m.startswith("modules.")]:
+            del sys.modules[module]
+
+    def test_the_old_address_of_a_practice_that_moved_is_not_contacted(self):
+        old = self.leads.add_lead("City planner aka Pjhooker", city="Milano", phone="02 4874 48152",
+                                  whatsapp="393487448152", website="https://cityplanner.it",
+                                  source="osm:node/1")
+        new = self.leads.add_lead("City Planner", city="Milano", phone="+39 02 48744 8152",
+                                  website="https://cityplanner.biz", source="osm:node/2")
+        self.leads.save_scan(old, [{"code": "not_mobile", "severity": 4, "detail": ""}], "bozza")
+        self.leads.save_scan(new, [], None)          # the current site is fine
+        due = self.leads.due_leads()
+        self.assertEqual(due["to_whatsapp"], [], "the same practice, one number, one working site")
+        self.assertIn(old, [l["id"] for l in due["no_angle"]])
+
+    def test_people_who_build_websites_are_left_alone(self):
+        lead = self.leads.add_lead("Rossi GIS e sviluppo software", category="architetti",
+                                   city="Milano", whatsapp="393331112222",
+                                   website="https://x.it", source="osm:node/3")
+        self.leads.save_scan(lead, [{"code": "slow", "severity": 2, "detail": ""}], "bozza")
+        self.assertIn(lead, [l["id"] for l in self.leads.due_leads()["no_angle"]])
+
+    def test_a_page_we_were_blocked_from_gets_no_verdict(self):
+        self.assertTrue(self.scanner._is_challenge("Just a moment...", "Attention Required! | Cloudflare"))
+        self.assertFalse(self.scanner._is_challenge("Studio dentistico a Milano, prenota una visita"))
+        self.assertIn(403, self.scanner.BLOCKED_STATUS)
+
+    def test_the_browser_challenge_check_uses_no_lazy_import(self):
+        """It raised NameError on every page and the caller hid it."""
+        import inspect
+        source = inspect.getsource(self.scanner.check_mobile)
+        self.assertNotIn("By.", source, "By is imported inside browser(), not at module level")
+        self.assertIn("document.body", source)
+
+
+class SendableClaimsTest(unittest.TestCase):
+    """What may be asserted to a stranger, after the 2026-09-23 audit."""
+
+    def setUp(self):
+        for module in [m for m in list(sys.modules) if m == "modules" or m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import scanner, outreach
+        self.scanner, self.outreach = scanner, outreach
+
+    def test_guesses_and_single_measurements_are_never_sent(self):
+        for code in ("no_website", "slow", "ssl_chain", "blocked", "scan_error", "social_only"):
+            self.assertLess(self.scanner.SEVERITY[code], self.scanner.SENDABLE, code)
+        for code in ("site_down", "ssl_expired", "ssl_wrong_host", "not_mobile", "domain_gone"):
+            self.assertGreaterEqual(self.scanner.SEVERITY[code], self.scanner.SENDABLE, code)
+
+    def test_a_demoted_check_stops_sending_without_a_rescan(self):
+        old = {"code": "slow", "severity": 2, "detail": "from the night it was scanned"}
+        self.assertEqual(self.outreach.severity_now(old), 1)
+        self.assertEqual(self.outreach.describe([old]), "")
+
+    def test_every_sendable_code_has_a_sentence_and_names_the_address(self):
+        for code, severity in self.scanner.SEVERITY.items():
+            if severity >= self.scanner.SENDABLE and code != "no_website":
+                self.assertIn(code, self.outreach.WA_PROBLEM, code)
+                self.assertIn("{site}", self.outreach.WA_PROBLEM[code], code)
+
+    def test_the_phone_claim_is_only_made_about_a_phone_sized_screen(self):
+        text = self.outreach.WA_PROBLEM["not_mobile"]
+        self.assertIn("schermo da telefono", text)
+        self.assertNotIn("dal telefono", text, "we measure in an emulated phone, not on one")
+
+    def test_a_social_page_is_not_treated_as_their_website(self):
+        for url in ("https://www.facebook.com/studio", "http://instagram.com/x", "https://wa.me/39333"):
+            codes = [f["code"] for f in self.scanner.check_site(url)]
+            self.assertEqual(codes, ["social_only"], url)
+
+    def test_www_and_bare_are_both_tried_before_calling_a_site_dead(self):
+        tried = self.scanner._candidates("https://www.confident.dental/")
+        self.assertIn("https://confident.dental/", tried)
+        self.assertIn("http://www.confident.dental/", tried)
+        self.assertEqual(tried[0], "https://www.confident.dental/", "the listed address first")
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
 
@@ -433,6 +531,10 @@ class ChannelRoutingTest(unittest.TestCase):
         emailed = self.leads.add_lead("Con Email", city="MI", phone="02 111111",
                                       email="a@b.invalid")
         landline = self.leads.add_lead("Solo Fisso", city="MI", phone="02 222222")
+        # A lead with nothing observed is parked now, so give these a real
+        # problem to have something honest to contact them about.
+        for lead_id in (mobile, emailed, landline):
+            self.leads.save_scan(lead_id, [{"code": "site_down", "severity": 5, "detail": ""}], None)
         nothing = self.leads.add_lead("Nessun Contatto", city="MI")
         due = self.leads.due_leads()
         self.assertEqual([l["id"] for l in due["to_whatsapp"]], [mobile])
@@ -484,6 +586,7 @@ class CallAttemptTest(unittest.TestCase):
 
     def test_no_answer_moves_on_today_and_returns_tomorrow(self):
         lead = self.leads.add_lead("Studio", city="MI", phone="02 1")
+        self.leads.save_scan(lead, [{"code": "site_down", "severity": 5, "detail": ""}], None)
         self.leads.record_attempt(lead, "non risponde")
         self.assertEqual(self.leads.due_leads()["to_call"], [], "not offered twice in a day")
         yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).isoformat(timespec="seconds")
@@ -491,11 +594,27 @@ class CallAttemptTest(unittest.TestCase):
             conn.execute("UPDATE leads SET last_attempt_at = ? WHERE id = ?", (yesterday, lead))
         self.assertEqual([l["id"] for l in self.leads.due_leads()["to_call"]], [lead])
 
-    def test_three_unanswered_calls_give_up(self):
+    def _yesterday_attempt(self, lead_id):
+        """Pretend the last attempt was on another day."""
+        old = (datetime.datetime.now() - datetime.timedelta(days=1)).isoformat(timespec="seconds")
+        with self.leads.connect() as conn:
+            conn.execute("UPDATE leads SET last_attempt_at = ? WHERE id = ?", (old, lead_id))
+
+    def test_three_unanswered_calls_on_three_days_give_up(self):
         lead = self.leads.add_lead("Mai Risponde", city="MI", phone="02 2")
         for _ in range(self.leads.MAX_ATTEMPTS):
             self.leads.record_attempt(lead, "non risponde")
+            self._yesterday_attempt(lead)
         self.assertEqual(self.leads.get(lead)["state"], "DEAD")
+
+    def test_tapping_no_answer_three_times_in_one_day_does_not_archive(self):
+        """A double tap, or a retry after a network error, is not a decision."""
+        lead = self.leads.add_lead("Doppio Tap", city="MI", phone="02 3")
+        for _ in range(5):
+            self.leads.record_attempt(lead, "non risponde")
+        after = self.leads.get(lead)
+        self.assertEqual(after["attempts"], 1)
+        self.assertEqual(after["state"], "NEW")
 
     def test_migration_adds_columns_to_an_old_database(self):
         import sqlite3
@@ -539,7 +658,7 @@ class CallModeTest(unittest.TestCase):
         return lead
 
     def test_a_tap_records_the_outcome_and_loads_the_next_card(self):
-        first, second = self._lead("Primo"), self._lead("Secondo", "slow")
+        first, second = self._lead("Primo"), self._lead("Secondo", "not_mobile")
         self.callmode.start(lambda text: self.sent.append(("msg", text)))
         self.assertIn("Primo", [t for k, t in self.sent if k == "card"][0])
         self.callmode.on_button(f"c:{first}:hot", 1, "cb1")
@@ -547,7 +666,7 @@ class CallModeTest(unittest.TestCase):
         self.assertIn("Secondo", [t for k, t in self.sent if k == "card"][-1])
 
     def test_no_answer_and_skip_both_move_on(self):
-        a, b = self._lead("A"), self._lead("B", "slow")
+        a, b = self._lead("A"), self._lead("B", "not_mobile")
         self.callmode.start(lambda text: None)
         self.callmode.on_button(f"c:{a}:noanswer", 1, "cb")
         self.assertEqual(self.leads.get(a)["attempts"], 1)

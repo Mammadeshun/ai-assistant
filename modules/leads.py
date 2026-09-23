@@ -37,6 +37,10 @@ ACTIONABLE_STATES = OPEN_STATES + ("CONTACTED",)
 WHATSAPP_WAIT_DAYS = int(os.environ.get("WHATSAPP_WAIT_DAYS", "2"))
 EMAIL_WAIT_DAYS = int(os.environ.get("EMAIL_WAIT_DAYS", "3"))
 FOLLOW_UP_DAYS = int(os.environ.get("FOLLOW_UP_DAYS", "4"))
+# A claim in writing has to be current. Every scan in the database was taken
+# once, days before the message would go out; in that time a domain had moved,
+# a certificate had been renewed and a site had been rebuilt.
+SCAN_MAX_AGE_HOURS = int(os.environ.get("SCAN_MAX_AGE_HOURS", "48"))
 # Three unanswered calls on three different days, then stop.
 MAX_ATTEMPTS = int(os.environ.get("MAX_CALL_ATTEMPTS", "3"))
 
@@ -231,6 +235,58 @@ def findings_of(lead):
         return []
 
 
+# Someone who builds sites for a living does not need one bought from you,
+# and spots a templated opener instantly. Matched against name and category.
+TRADE_EXCLUSIONS = ("gis", "web ", "webdesign", "web design", "informatic", "software",
+                    "digital", "hosting", "seo", "agenzia di comunicazione", "sviluppat",
+                    "programmat", "computer", "tecnolog", "startup", "consulenza it")
+
+
+def _numbers(lead):
+    """The last nine digits of every number on a lead - enough to match the
+    same office written two different ways."""
+    out = set()
+    for field in ("phone", "whatsapp"):
+        digits = "".join(c for c in (lead[field] or "") if c.isdigit())
+        if len(digits) >= 9:
+            out.add(digits[-9:])
+    return out
+
+
+def numbers_with_a_working_site():
+    """Phone numbers belonging to a practice whose site checked out fine.
+
+    The same practice is often listed twice - an old domain and the current
+    one - and only the stale copy looks broken. The first message this system
+    ever sent went to exactly that: a dead address from the map, while the
+    real site, listed under the same number, was fine.
+    """
+    ok = set()
+    with connect() as conn:
+        for row in conn.execute("SELECT phone, whatsapp, findings, scanned_at FROM leads"):
+            if row["scanned_at"] and not json.loads(row["findings"] or "[]"):
+                ok |= _numbers(row)
+    return ok
+
+
+def _sendable_findings(lead):
+    """Findings that may be asserted to a stranger today - judged by what the
+    scanner is worth now, not by the number stored on the night of the scan."""
+    from .scanner import SEVERITY, SENDABLE
+    return [f for f in findings_of(lead) if SEVERITY.get(f["code"], 0) >= SENDABLE]
+
+
+def _scan_is_fresh(lead):
+    scanned = lead["scanned_at"]
+    if not scanned:
+        return False
+    try:
+        age = datetime.datetime.now() - datetime.datetime.fromisoformat(scanned)
+    except (TypeError, ValueError):
+        return False
+    return age <= datetime.timedelta(hours=SCAN_MAX_AGE_HOURS)
+
+
 def due_leads():
     """Leads whose timer has expired, grouped by what should happen next.
 
@@ -240,8 +296,31 @@ def due_leads():
     now = datetime.datetime.now()
     buckets = {"to_whatsapp": [], "to_email": [], "to_call": [], "to_follow_up": [],
                "no_angle": []}
+    settled = numbers_with_a_working_site()
     for lead in list_leads(state=ACTIONABLE_STATES, limit=500):
         state, changed = lead["state"], lead["state_changed_at"]
+
+        # Nothing observed that is worth writing about. "No website in the map
+        # data" is a guess, a blocked page is a refusal, a single slow reading
+        # from Finland is not evidence - none of them go in a message. A
+        # missing website is still a fair question to ask on the phone.
+        if state == "NEW" and not _sendable_findings(lead):
+            codes = {f["code"] for f in findings_of(lead)}
+            if "no_website" in codes and lead["phone"]:
+                buckets["to_call"].append(lead)
+            else:
+                buckets["no_angle"].append(lead)
+            continue
+
+        # Same number, another entry, working site: the problem we found is on
+        # an address they have already left behind.
+        if state == "NEW" and _numbers(lead) & settled:
+            buckets["no_angle"].append(lead)
+            continue
+        blob = f"{lead['name']} {lead.get('category') or ''}".lower()
+        if state == "NEW" and any(t in blob for t in TRADE_EXCLUSIONS):
+            buckets["no_angle"].append(lead)
+            continue
 
         # Scanned and nothing wrong: there is no honest opener to write, so it
         # stays out of the send lists rather than producing an empty message.
@@ -262,7 +341,11 @@ def due_leads():
             # dentists in Milan, 2 had a mobile. Queuing those for an email
             # address they do not have is how a digest fills up with work
             # that cannot be done.
-            if lead["whatsapp"]:
+            # In writing the claim must also be current; on the phone he can
+            # look at the site while it rings.
+            if not _scan_is_fresh(lead):
+                buckets["to_call"].append(lead) if lead["phone"] else buckets["no_angle"].append(lead)
+            elif lead["whatsapp"]:
                 buckets["to_whatsapp"].append(lead)
             elif lead["email"]:
                 buckets["to_email"].append(lead)
@@ -301,9 +384,22 @@ def due_leads():
     return buckets
 
 
+def attempted_today(lead):
+    last = lead["last_attempt_at"] if "last_attempt_at" in lead.keys() else None
+    return bool(last) and last[:10] == datetime.date.today().isoformat()
+
+
 def record_attempt(lead_id, outcome):
     """A call that did not reach anyone. The lead leaves today's list and
-    comes back tomorrow; after MAX_ATTEMPTS it is given up on."""
+    comes back tomorrow; after MAX_ATTEMPTS it is given up on.
+
+    Only one attempt a day counts. Three taps in one sitting - a double tap,
+    or a retry after a network error - used to archive a lead nobody had
+    decided to give up on.
+    """
+    lead = get(lead_id)
+    if lead and attempted_today(lead):
+        return lead
     with connect() as conn:
         conn.execute("UPDATE leads SET attempts = attempts + 1, last_attempt_at = ?"
                      " WHERE id = ?", (_now(), lead_id))
@@ -362,6 +458,24 @@ def set_setting(key, value):
                      " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
                      (key, value))
     return value
+
+
+BUCKET_CHANNEL = {"to_whatsapp": "whatsapp", "to_email": "email",
+                  "to_call": "call", "to_follow_up": "follow"}
+
+
+def channels_open(lead_id):
+    """Which channels the queue would offer this lead right now.
+
+    One source of truth for "may this person be written to". The rules used to
+    live only inside due_leads(), so the app's Lead screen and Telegram's
+    /email walked straight past them: an audit found the app offering a first
+    message to leads already contacted, to one marked "not interested", and to
+    the lead whose false claim caused the first complaint.
+    """
+    buckets = due_leads()
+    return {channel for bucket, channel in BUCKET_CHANNEL.items()
+            if any(l["id"] == lead_id for l in buckets[bucket])}
 
 
 def counts():
