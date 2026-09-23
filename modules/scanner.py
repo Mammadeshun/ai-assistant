@@ -101,8 +101,20 @@ def _finding(code, detail):
 
 
 def _normalise(url):
+    """Clean up what the map data gives us.
+
+    One lead was stored as https://studiodentisticogp.it/https://studiodentisticogp.it/,
+    which 404s; we measured that 404 page and queued a claim about it. When an
+    address contains a second address, keep the last one.
+    """
     if not url:
         return None
+    url = url.strip()
+    for scheme in ("https://", "http://"):
+        cut = url.rfind(scheme)
+        if cut > 0:
+            url = url[cut:]
+            break
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
     return url

@@ -253,6 +253,17 @@ def _numbers(lead):
     return out
 
 
+def _domain(lead):
+    """The registered-looking part of the site, so two entries for one
+    practice match even when their phone numbers differ: Confident is in the
+    list twice, on confident.dental, with two different landlines."""
+    site = (lead["website"] or "").strip().lower()
+    if not site:
+        return None
+    host = site.split("//")[-1].split("/")[0].removeprefix("www.")
+    return host or None
+
+
 def numbers_with_a_working_site():
     """Phone numbers belonging to a practice whose site checked out fine.
 
@@ -297,6 +308,7 @@ def due_leads():
     buckets = {"to_whatsapp": [], "to_email": [], "to_call": [], "to_follow_up": [],
                "no_angle": []}
     settled = numbers_with_a_working_site()
+    seen_domains = set()
     for lead in list_leads(state=ACTIONABLE_STATES, limit=500):
         state, changed = lead["state"], lead["state_changed_at"]
 
@@ -317,6 +329,14 @@ def due_leads():
         if state == "NEW" and _numbers(lead) & settled:
             buckets["no_angle"].append(lead)
             continue
+        # The same site listed twice is one practice, however many numbers it
+        # publishes. Contacting both is contacting the same person twice.
+        domain = _domain(lead)
+        if state == "NEW" and domain:
+            if domain in seen_domains:
+                buckets["no_angle"].append(lead)
+                continue
+            seen_domains.add(domain)
         blob = f"{lead['name']} {lead.get('category') or ''}".lower()
         if state == "NEW" and any(t in blob for t in TRADE_EXCLUSIONS):
             buckets["no_angle"].append(lead)

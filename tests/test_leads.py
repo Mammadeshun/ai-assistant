@@ -234,7 +234,10 @@ class WhatsAppFirstTest(unittest.TestCase):
             del sys.modules[module]
 
     def _lead(self, name, code="not_mobile", severity=4, category="dentisti", whatsapp="393331112222",
-              website="https://www.studiouno.it"):
+              website=None):
+        # Its own domain per lead: two entries on one website are now treated
+        # as one practice, so a shared default would park them all.
+        website = website or "https://www." + "".join(c for c in name.lower() if c.isalnum()) + ".it"
         lead = self.leads.add_lead(name, category=category, city="Milano", website=website,
                                    phone="02 1234 5678", whatsapp=whatsapp, source=f"osm:node/{name}")
         self.assertIsNotNone(lead, "the store took it for a duplicate")
@@ -477,6 +480,25 @@ class SendableClaimsTest(unittest.TestCase):
         self.assertIn("https://confident.dental/", tried)
         self.assertIn("http://www.confident.dental/", tried)
         self.assertEqual(tried[0], "https://www.confident.dental/", "the listed address first")
+
+
+class OnePracticeOneQueueTest(WhatsAppFirstTest):
+    def test_two_entries_on_one_website_are_contacted_once(self):
+        a = self._lead("Confident", whatsapp=None, website="https://confident.dental/")
+        b = self._lead("Studi dentistici", whatsapp=None, website="https://www.confident.dental")
+        due = self.leads.due_leads()
+        queued = [l["id"] for l in due["to_call"]]
+        self.assertEqual(queued, [a], "the second entry is the same practice")
+        self.assertIn(b, [l["id"] for l in due["no_angle"]])
+
+    def test_a_doubled_address_is_repaired_before_it_is_judged(self):
+        fixed = self.scanner._normalise("https://studiodentisticogp.it/https://studiodentisticogp.it/")
+        self.assertEqual(fixed, "https://studiodentisticogp.it/")
+
+    def setUp(self):
+        super().setUp()
+        from modules import scanner
+        self.scanner = scanner
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
