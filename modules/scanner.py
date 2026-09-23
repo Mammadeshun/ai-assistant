@@ -43,6 +43,13 @@ SEVERITY = {
     "site_down": 5,
     "ssl_expired": 5,
     "not_mobile": 4,
+    # Wider than the screen, but the text fits: a map, a banner, one long
+    # line. True, and worth mentioning on a call; not worth a stranger's
+    # first message, because the owner opens the page and it reads fine.
+    "mobile_overflow": 1,
+    # The page a map listing links to is gone, the site is not. Worth a
+    # sentence on a call; "your site is down" would be false.
+    "listed_page_gone": 1,
     "ssl_expiring": 3,
     # Demoted 2026-09-23: one measurement, from a data centre in Finland. The
     # audit found a site stored as 12.4s that answers in 0.39s from elsewhere.
@@ -149,15 +156,38 @@ def check_certificate(hostname, port=443):
     except (socket.timeout, socket.gaierror, ConnectionError, OSError) as e:
         return None  # reachability is the HTTP check's job, not this one
 
+    return _expiry_finding(cert)
+
+
+# These CAs issue short certificates that the host renews by itself, usually
+# 30 days before expiry. Sixteen days left on one of them is a renewal that is
+# late, not one that has failed, and "your certificate is about to expire"
+# sent today can be false by the time it is read. Seven days left is a
+# renewal that has stopped.
+AUTO_RENEWING_CAS = ("let's encrypt", "zerossl", "google trust services", "buypass")
+AUTO_RENEW_WARN_DAYS = 7
+
+
+def _issuer_org(cert):
+    for rdn in cert.get("issuer", ()):
+        for key, value in rdn:
+            if key == "organizationName":
+                return value
+    return ""
+
+
+def _expiry_finding(cert, now=None):
     not_after = cert.get("notAfter")
     if not not_after:
         return None
     expires = datetime.datetime.strptime(not_after, "%b %d %H:%M:%S %Y %Z")
-    days_left = (expires - datetime.datetime.utcnow()).days
+    days_left = (expires - (now or datetime.datetime.utcnow())).days
     if days_left < 0:
         return _finding("ssl_expired", f"expired {abs(days_left)} days ago")
-    if days_left <= CERT_WARN_DAYS:
-        return _finding("ssl_expiring", f"expires in {days_left} days")
+    issuer = _issuer_org(cert)
+    auto = any(ca in issuer.lower() for ca in AUTO_RENEWING_CAS)
+    if days_left <= (AUTO_RENEW_WARN_DAYS if auto else CERT_WARN_DAYS):
+        return _finding("ssl_expiring", f"expires in {days_left} days ({issuer or 'unknown issuer'})")
     return None
 
 
@@ -185,6 +215,11 @@ def _candidates(url):
         for h in hosts:
             if h:
                 out.append(f"{scheme}://{h}{parsed.path if parsed.path not in ('', '/') else '/'}")
+    # A map listing often points at one page of a site. When that page is
+    # gone the site usually is not: centri-smile.it answered 200 while its
+    # /dentista-milano-affori/ page gave 404, and we had it down as dead.
+    if parsed.path not in ("", "/"):
+        out += [f"{scheme}://{h}/" for scheme in ("https", "http") for h in hosts if h]
     # The address on file first, then the alternatives.
     listed = _normalise(url)
     return [listed] + [u for u in out if u != listed]
@@ -196,6 +231,28 @@ def _resolves(host):
         return True
     except socket.gaierror:
         return False
+
+
+def _fetch(url):
+    """GET the page. Returns (response, chain_broken).
+
+    A missing intermediate certificate fails every script and almost no
+    browser: Chrome and Safari fetch the missing piece themselves and show
+    the page. www.5rs.it opened normally in a browser while this check
+    reported it down. So on that one error, look again without verifying,
+    and let the caller record it as the invisible problem it is.
+    """
+    headers = {"User-Agent": USER_AGENT}
+    try:
+        return requests.get(url, timeout=SCAN_TIMEOUT, allow_redirects=True, headers=headers), False
+    except requests.exceptions.SSLError as e:
+        if "unable to get local issuer" not in str(e):
+            raise
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        return requests.get(url, timeout=SCAN_TIMEOUT, allow_redirects=True,
+                            headers=headers, verify=False), True
 
 
 def check_site(url):
@@ -216,11 +273,11 @@ def check_site(url):
         return [_finding("social_only", f"{host} is a social or directory page")]
 
     attempts, response, final_url, elapsed = [], None, None, None
+    chain_broken, answered = False, None
     for candidate in _candidates(url):
         started = time.time()
         try:
-            r = requests.get(candidate, timeout=SCAN_TIMEOUT, allow_redirects=True,
-                             headers={"User-Agent": USER_AGENT})
+            r, chain_broken = _fetch(candidate)
         except requests.exceptions.SSLError as e:
             attempts.append((candidate, f"SSLError {str(e)[:60]}"))
             continue
@@ -235,7 +292,7 @@ def check_site(url):
             # phone" and queued the claim.
             attempts.append((candidate, f"HTTP {r.status_code}"))
             continue
-        response, final_url, elapsed = r, r.url, time.time() - started
+        response, final_url, elapsed, answered = r, r.url, time.time() - started, candidate
         break
 
     if response is None:
@@ -245,6 +302,12 @@ def check_site(url):
         return [_finding("site_down", detail[:160])]
 
     findings = []
+    listed_path = urllib.parse.urlparse(url).path not in ("", "/")
+    if listed_path and urllib.parse.urlparse(answered).path in ("", "/") and attempts:
+        findings.append(_finding("listed_page_gone",
+                                 f"{url} gives {attempts[0][1]}; the site opens at {answered}"[:160]))
+    if chain_broken:
+        findings.append(_finding("ssl_chain", "missing intermediate certificate: browsers repair it, scripts fail"))
     # Only judge the certificate of an address the practice actually serves
     # over https. Checking port 443 of a site listed as http reported the
     # hosting provider's certificate as the practice's problem.
@@ -261,6 +324,57 @@ def check_site(url):
         if 'hreflang="en' not in html and "/en/" not in html and 'lang="en' not in html:
             findings.append(_finding("no_english", "no English version found"))
     return _dedupe(findings)
+
+
+# Counts the blocks of text a phone visitor would have to scroll sideways to
+# read. A page can be wider than the screen for reasons nobody reading it sees:
+# on 2026-09-23 a dentist's page was 73px too wide because of one long email
+# address in the footer and a cookie banner, and a vet's by 200px because of
+# an embedded map - both read perfectly well. Overlays (position fixed, like
+# cookie banners and chat bubbles) and anything inside a clipping box (like a
+# carousel's off-screen slides) are not counted.
+TEXT_PAST_EDGE_JS = """
+var vw = document.documentElement.clientWidth, total = 0, out = 0, sample = '';
+var all = document.body ? document.body.querySelectorAll('*') : [];
+for (var i = 0; i < all.length; i++) {
+  var e = all[i], text = false;
+  for (var n = e.firstChild; n; n = n.nextSibling) {
+    if (n.nodeType === 3 && n.textContent.trim().length > 2) { text = true; break; }
+  }
+  if (!text) continue;
+  var r = e.getBoundingClientRect();
+  if (r.width === 0 || r.height === 0 || getComputedStyle(e).visibility === 'hidden') continue;
+  var skip = false;
+  for (var p = e; p && p !== document.documentElement; p = p.parentElement) {
+    var cs = getComputedStyle(p);
+    if (cs.position === 'fixed' || cs.position === 'sticky') { skip = true; break; }
+    if (p !== e && p !== document.body && ['hidden', 'clip', 'auto', 'scroll'].indexOf(cs.overflowX) >= 0) { skip = true; break; }
+  }
+  if (skip) continue;
+  total++;
+  if (r.right > vw + 2 || r.left < -2) {
+    out++;
+    if (!sample) sample = e.textContent.trim().slice(0, 40);
+  }
+}
+return [total, out, sample];
+"""
+
+
+def _mobile_verdict(has_viewport, overflow, win_width, text_total, text_out, sample=""):
+    """not_mobile only when a visitor really has to move the page sideways to
+    read it; a page that is merely wider than the screen is mobile_overflow,
+    which is recorded but never written to anyone."""
+    if not has_viewport:
+        return _finding("not_mobile", "no viewport meta tag: phones show the desktop layout")
+    if text_out >= 3 and text_out >= 0.1 * text_total:
+        return _finding("not_mobile", f"{text_out} of {text_total} blocks of text run past "
+                                      f"a {win_width}px phone screen")
+    if overflow > 20:
+        extra = f', e.g. "{sample}"' if text_out else ", text fits"
+        return _finding("mobile_overflow", f"page {overflow}px wider than a {win_width}px "
+                                           f"phone screen; {text_out} text block(s) past the edge{extra}")
+    return None
 
 
 def check_mobile(driver, url, shot_path=None):
@@ -293,13 +407,9 @@ def check_mobile(driver, url, shot_path=None):
     # emulated phone; innerWidth lies when the page sets its own zoom.
     doc_width = driver.execute_script("return document.documentElement.scrollWidth")
     win_width = driver.execute_script("return document.documentElement.clientWidth")
-    overflow = doc_width - win_width
-
-    finding = None
-    if not has_viewport:
-        finding = _finding("not_mobile", "no viewport meta tag: phones show the desktop layout")
-    elif overflow > 20:
-        finding = _finding("not_mobile", f"content {overflow}px wider than a {win_width}px phone screen")
+    text_total, text_out, sample = driver.execute_script(TEXT_PAST_EDGE_JS) or (0, 0, "")
+    finding = _mobile_verdict(has_viewport, doc_width - win_width, win_width,
+                              text_total, text_out, sample)
 
     # Only keep the screenshot when it shows something. 102 of the 122 stored
     # shots belonged to leads with no finding, and the app offered them as

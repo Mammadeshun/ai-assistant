@@ -153,6 +153,33 @@ class ScannerTest(unittest.TestCase):
         from modules import scanner
         self.scanner = scanner
 
+    def test_an_auto_renewing_certificate_is_only_flagged_when_renewal_has_stopped(self):
+        now = datetime.datetime(2026, 9, 23, 12, 0)
+        lets_encrypt = {"notAfter": "Oct  9 05:04:47 2026 GMT",
+                        "issuer": ((("countryName", "US"),), (("organizationName", "Let's Encrypt"),))}
+        self.assertIsNone(self.scanner._expiry_finding(lets_encrypt, now),
+                          "16 days left on a 90-day certificate is a late renewal, not a failed one")
+        lets_encrypt["notAfter"] = "Sep 29 05:04:47 2026 GMT"
+        self.assertEqual(self.scanner._expiry_finding(lets_encrypt, now)["code"], "ssl_expiring")
+        bought = {"notAfter": "Oct  9 05:04:47 2026 GMT",
+                  "issuer": ((("organizationName", "Sectigo Limited"),),)}
+        self.assertEqual(self.scanner._expiry_finding(bought, now)["code"], "ssl_expiring",
+                         "a certificate someone renews by hand is worth a warning weeks ahead")
+        self.assertEqual(self.scanner._expiry_finding({"notAfter": "Sep 1 00:00:00 2026 GMT"}, now)["code"],
+                         "ssl_expired")
+
+    def test_a_page_is_only_unreadable_on_a_phone_when_its_text_runs_off(self):
+        verdict = self.scanner._mobile_verdict
+        self.assertEqual(verdict(False, 0, 390, 0, 0)["code"], "not_mobile")
+        # The dentist: 73px too wide, one email address in the footer sticks out.
+        self.assertEqual(verdict(True, 73, 390, 140, 1, "email:x@gmail.com")["code"], "mobile_overflow")
+        # The vet: 200px too wide because of a map; every line of text fits.
+        self.assertEqual(verdict(True, 200, 390, 120, 0)["code"], "mobile_overflow")
+        # A fixed 960px layout: most paragraphs run off.
+        self.assertEqual(verdict(True, 570, 390, 80, 45)["code"], "not_mobile")
+        self.assertIsNone(verdict(True, 5, 390, 80, 0))
+        self.assertLess(self.scanner.SEVERITY["mobile_overflow"], self.scanner.SENDABLE)
+
     def test_missing_website_is_itself_a_finding(self):
         self.assertEqual([f["code"] for f in self.scanner.check_site(None)], ["no_website"])
 
@@ -487,6 +514,51 @@ class SendableClaimsTest(unittest.TestCase):
         for url in ("https://www.facebook.com/studio", "http://instagram.com/x", "https://wa.me/39333"):
             codes = [f["code"] for f in self.scanner.check_site(url)]
             self.assertEqual(codes, ["social_only"], url)
+
+    def _fake_web(self, answers):
+        """Replace requests.get: answers maps url -> status code, or an
+        exception to raise. Anything else fails to connect."""
+        import requests
+        scanner = self.scanner
+
+        class Page:
+            def __init__(self, url, status):
+                self.url, self.status_code, self.text = url, status, "<html>ok</html>"
+
+        def get(url, verify=True, **kwargs):
+            answer = answers.get((url, verify), answers.get(url))
+            if answer is None:
+                raise requests.exceptions.ConnectionError("refused")
+            if isinstance(answer, Exception):
+                raise answer
+            return Page(url, answer)
+        real_get, real_cert = scanner.requests.get, scanner.check_certificate
+        scanner.requests.get, scanner.check_certificate = get, lambda host: None
+        self.addCleanup(setattr, scanner.requests, "get", real_get)
+        self.addCleanup(setattr, scanner, "check_certificate", real_cert)
+
+    def test_a_missing_listed_page_is_not_a_dead_site(self):
+        self._fake_web({"https://www.centri-smile.it/dentista-milano-affori/": 404,
+                        "https://www.centri-smile.it/": 200})
+        codes = [f["code"] for f in self.scanner.check_site("https://www.centri-smile.it/dentista-milano-affori/")]
+        self.assertEqual(codes, ["listed_page_gone"])
+        self.assertLess(self.scanner.SEVERITY["listed_page_gone"], self.scanner.SENDABLE)
+
+    def test_a_missing_intermediate_certificate_is_not_a_dead_site(self):
+        import requests
+        broken = requests.exceptions.SSLError("certificate verify failed: unable to get local issuer certificate")
+        self._fake_web({("https://www.5rs.it/", True): broken, ("https://www.5rs.it/", False): 200})
+        codes = [f["code"] for f in self.scanner.check_site("https://www.5rs.it/")]
+        self.assertEqual(codes, ["ssl_chain"])
+        self.assertEqual(self.scanner.SEVERITY["ssl_chain"], 0)
+
+    def test_a_site_that_answers_nowhere_is_still_down(self):
+        self._fake_web({})
+        real = self.scanner._resolves
+        self.scanner._resolves = lambda host: True
+        self.addCleanup(setattr, self.scanner, "_resolves", real)
+        codes = [f["code"] for f in self.scanner.check_site("https://www.studiodsz.com/")]
+        self.assertEqual(codes, ["site_down"])
 
     def test_www_and_bare_are_both_tried_before_calling_a_site_dead(self):
         tried = self.scanner._candidates("https://www.confident.dental/")

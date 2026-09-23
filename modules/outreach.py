@@ -50,6 +50,8 @@ PROBLEM_IT = {
     # has a site ends the conversation on the first line.
     "no_website": "non risulta un sito web nelle mappe online",
     "no_site_found": "cercando online non si trova un sito dello studio",
+    "mobile_overflow": "sul telefono una parte della pagina esce dallo schermo",
+    "listed_page_gone": "la pagina collegata alla scheda sulle mappe non esiste più",
     "domain_gone": "il dominio del sito non risulta più attivo",
     "ssl_wrong_host": "il certificato di sicurezza è di un altro indirizzo, il browser avvisa",
     "site_down": "il sito non si apre",
