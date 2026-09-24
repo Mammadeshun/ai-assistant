@@ -43,6 +43,9 @@ FOLLOW_UP_DAYS = int(os.environ.get("FOLLOW_UP_DAYS", "4"))
 SCAN_MAX_AGE_HOURS = int(os.environ.get("SCAN_MAX_AGE_HOURS", "48"))
 # Three unanswered calls on three different days, then stop.
 MAX_ATTEMPTS = int(os.environ.get("MAX_CALL_ATTEMPTS", "3"))
+# The row cap used wherever "every lead that might be due" is read. 500 was
+# fine at 244 leads; a provincial OSM import can add several hundred more.
+LEADS_LIST_CAP = int(os.environ.get("LEADS_LIST_CAP", "5000"))
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS leads (
@@ -214,6 +217,35 @@ def add_note(lead_id, text):
     return get(lead_id)
 
 
+def log_event(lead_id, kind, detail=None):
+    """Record one event against a lead, for anything outside the built-in
+    state machine - used by modules/site_search.py to log its decisions and
+    to make its runs idempotent (see has_event)."""
+    with connect() as conn:
+        conn.execute("INSERT INTO events (lead_id, at, kind, detail) VALUES (?,?,?,?)",
+                     (lead_id, _now(), kind, detail))
+
+
+def has_event(lead_id, kind):
+    with connect() as conn:
+        row = conn.execute(
+            "SELECT 1 FROM events WHERE lead_id = ? AND kind = ? LIMIT 1",
+            (lead_id, kind)).fetchone()
+        return row is not None
+
+
+def set_website(lead_id, website):
+    """Record a site found for a lead that had none, and clear scanned_at so
+    scan_pending() picks it up on the next run - it only scans leads whose
+    scanned_at is still NULL."""
+    with connect() as conn:
+        conn.execute("UPDATE leads SET website = ?, scanned_at = NULL WHERE id = ?",
+                     (website, lead_id))
+        conn.execute("INSERT INTO events (lead_id, at, kind, detail) VALUES (?,?,?,?)",
+                     (lead_id, _now(), "website_found", website))
+    return get(lead_id)
+
+
 def save_scan(lead_id, findings, draft=None):
     """Store what the scanner found and the opener drafted from it."""
     with connect() as conn:
@@ -309,7 +341,10 @@ def due_leads():
                "no_angle": []}
     settled = numbers_with_a_working_site()
     seen_domains = set()
-    for lead in list_leads(state=ACTIONABLE_STATES, limit=500):
+    # 500 used to be "more than we will ever have"; a provincial OSM import
+    # alone can add several hundred, and a lead past this cap is simply never
+    # queued, silently. LEADS_LIST_CAP is the same headroom scan_pending uses.
+    for lead in list_leads(state=ACTIONABLE_STATES, limit=LEADS_LIST_CAP):
         state, changed = lead["state"], lead["state_changed_at"]
 
         # Nothing observed that is worth writing about. "No website in the map
@@ -444,7 +479,7 @@ def advance_overdue():
     every morning.
     """
     moved = []
-    for lead in list_leads(state="EMAIL_SENT", limit=500):
+    for lead in list_leads(state="EMAIL_SENT", limit=LEADS_LIST_CAP):
         try:
             age = (datetime.datetime.now()
                    - datetime.datetime.fromisoformat(lead["state_changed_at"])).days

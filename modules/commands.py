@@ -410,7 +410,8 @@ def prune_screenshots(keep_days=30):
 
 def scan_pending(limit=10):
     """Scan leads that have never been scanned, and draft their openers."""
-    pending = [l for l in store.list_leads(limit=500) if not l["scanned_at"]][:limit]
+    pending = [l for l in store.list_leads(limit=store.LEADS_LIST_CAP)
+              if not l["scanned_at"]][:limit]
     if not pending:
         return "Niente da scansionare."
 

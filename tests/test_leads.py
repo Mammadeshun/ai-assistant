@@ -129,6 +129,52 @@ class LeadStoreTest(unittest.TestCase):
         self.leads.set_setting("signature", "aggiornata")
         self.assertEqual(self.leads.get_setting("signature"), "aggiornata")
 
+    def test_website_found_clears_scanned_at_so_it_is_rescanned(self):
+        lead_id = self.leads.add_lead("Nessun Sito", city="Como", whatsapp="393331112222")
+        self.leads.save_scan(lead_id, [{"code": "no_website", "severity": 1, "detail": ""}], None)
+        self.assertIsNotNone(self.leads.get(lead_id)["scanned_at"])
+        updated = self.leads.set_website(lead_id, "https://studio.it")
+        self.assertEqual(updated["website"], "https://studio.it")
+        self.assertIsNone(updated["scanned_at"])
+
+    def test_events_can_be_logged_and_checked_for_idempotency(self):
+        lead_id = self.leads.add_lead("Controllato", city="Como")
+        self.assertFalse(self.leads.has_event(lead_id, "site_search"))
+        self.leads.log_event(lead_id, "site_search", "no_site_confirmed")
+        self.assertTrue(self.leads.has_event(lead_id, "site_search"))
+        self.assertFalse(self.leads.has_event(lead_id, "some_other_kind"))
+
+
+class LeadCapTest(unittest.TestCase):
+    """The row cap used to read 'every due lead' used to be a literal 500,
+    silently dropping anything past it once a provincial import pushed the
+    table past that size."""
+
+    def setUp(self):
+        self.db = tempfile.mktemp(suffix=".db")
+        os.environ["LEADS_DB"] = self.db
+        for module in [m for m in list(sys.modules) if m.startswith("modules.")]:
+            del sys.modules[module]
+        from modules import leads
+        self.leads = leads
+        leads.DB_PATH = self.db
+        leads._schema_ready = False
+
+    def tearDown(self):
+        if os.path.exists(self.db):
+            os.unlink(self.db)
+
+    def test_due_leads_sees_past_the_old_500_row_cap(self):
+        n = 520
+        ids = []
+        for i in range(n):
+            lead_id = self.leads.add_lead(f"Studio {i}", city="Bergamo", whatsapp=f"3933100{i:04d}")
+            self.leads.save_scan(lead_id, [{"code": "site_down", "severity": 5, "detail": ""}], None)
+            ids.append(lead_id)
+        due = self.leads.due_leads()
+        self.assertEqual(len(due["to_whatsapp"]), n,
+                         "a lead past the old 500-row cap must still be queued")
+
 
 class PhoneNumberTest(unittest.TestCase):
     def setUp(self):
