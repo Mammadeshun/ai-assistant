@@ -131,6 +131,31 @@ class DecideTest(unittest.TestCase):
         self.assertEqual(action, "inconclusive")
 
 
+class ExtractResultsTest(unittest.TestCase):
+    """COMPOSIO_SEARCH_WEB's real shape, confirmed against a live call: an
+    "answer" string plus a "citations" list - not "results"/"organic"."""
+
+    def test_reads_citations_and_backfills_snippet_from_the_answer(self):
+        data = {
+            "answer": "Lo Studio Rossi si trova in Via Roma 1, telefono 035 123456.",
+            "citations": [
+                {"title": "Studio Rossi - PagineGialle", "url": "https://paginegialle.it/rossi"},
+                {"title": "Studio Rossi", "id": "https://studiorossi.it"},
+            ],
+        }
+        results = ss._extract_results(data)
+        self.assertEqual([r["url"] for r in results],
+                         ["https://paginegialle.it/rossi", "https://studiorossi.it"])
+        self.assertIn("035 123456", results[0]["snippet"])
+
+    def test_citation_with_no_url_or_id_is_dropped(self):
+        data = {"answer": "", "citations": [{"title": "no link here"}]}
+        self.assertEqual(ss._extract_results(data), [])
+
+    def test_empty_shape_yields_no_results(self):
+        self.assertEqual(ss._extract_results({}), [])
+
+
 class ParseVerdictTest(unittest.TestCase):
     def test_parses_json_even_with_surrounding_prose(self):
         text = 'Sure, here you go:\n{"has_own_site": false, "url": null, "reason": "no site"}\nDone.'

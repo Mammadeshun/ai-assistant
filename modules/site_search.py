@@ -161,16 +161,30 @@ def search_queries(lead):
 
 
 def _extract_results(data):
-    items = (data.get("results") or data.get("organic") or data.get("items")
-             or data.get("organic_results") or [])
+    """COMPOSIO_SEARCH_WEB's actual shape (checked against a live call):
+    {"answer": "<synthesised text, with [1][2].. markers>",
+     "citations": [{"title", "url", "id", "image", ...}, ...]}
+    - not a plain list of results under "results"/"organic"/"items". There is
+    no per-citation snippet, so the shared answer text stands in for one:
+    it is what most often actually names the practice or its phone number,
+    which relevant_results() and valid_own_site() key off.
+    """
+    answer = (data.get("answer") or "")[:600]
+    citations = data.get("citations") or []
+    # Still accept a plain list shape, in case a future search engine behind
+    # the tool returns one instead - cheap to keep, costs nothing when unused.
+    items = citations or data.get("results") or data.get("organic") or data.get("items") or []
     out = []
     for it in items:
         if not isinstance(it, dict):
             continue
+        url = (it.get("url") or it.get("link") or it.get("id") or "").strip()
+        if not url:
+            continue
         out.append({
             "title": it.get("title") or "",
-            "url": (it.get("link") or it.get("url") or "").strip(),
-            "snippet": it.get("snippet") or it.get("description") or "",
+            "url": url,
+            "snippet": it.get("snippet") or it.get("description") or answer,
         })
     return out
 
