@@ -27,7 +27,12 @@ RestartSec=5
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
-ProtectHome=true
+# read-only, not true: "true" replaces all of /home with an empty,
+# inaccessible stub, and on this host BindReadOnlyPaths could not punch a
+# hole back through it for the lab scripts' own event log (runs/events.jsonl)
+# that the Agenti tab reads - so /home is exposed read-only instead, the
+# same pattern ReadWritePaths already uses below for ProtectSystem=strict.
+ProtectHome=read-only
 ReadWritePaths=/opt/ai-assistant/data
 
 [Install]

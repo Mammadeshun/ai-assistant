@@ -14,6 +14,7 @@ import os
 import json
 import time
 import secrets
+import socket
 import hashlib
 import datetime
 import threading
@@ -319,6 +320,118 @@ def system_data():
     return cached("system", 60, compute)
 
 
+# ── Agenti: what the model-driven lab jobs are up to ───────────────────────
+
+# The server-side lab scripts (~/portfolio-lab/ask.py, pilot/common.py -
+# not in this repo) append one JSON line here at the start of every router
+# call and one at the end, joined by "id". Not the assistant's own router
+# usage (that is system_data()/router_usage) - these are Momo's own model
+# jobs: pipelines, evals, drafting scripts he runs by hand or from cron.
+AGENTS_RUNS_DIR = os.environ.get("AGENTS_RUNS_DIR", "/home/agent/portfolio-lab/runs")
+AGENTS_EVENTS_FILE = os.path.join(AGENTS_RUNS_DIR, "events.jsonl")
+AGENTS_STALE_SECONDS = 30 * 60
+AGENTS_ROUTER_HOST = os.environ.get("ROUTER_HOST", "127.0.0.1")
+AGENTS_ROUTER_PORT = int(os.environ.get("ROUTER_PORT", "20128"))
+
+
+def agents_view(lines, now=None):
+    """Pure function: turns the raw lines of events.jsonl into the shape the
+    dashboard wants. Tolerant of junk lines, a truncated first line after a
+    rotation, and an end line whose start line never arrived (or vice versa).
+
+    Returns {"running": [...], "recent": [...(newest first, capped 60)],
+    "pipelines": [{"name", "last_activity", "ok", "errors", "running"}]}.
+    """
+    now = time.time() if now is None else now
+    events, order = {}, []
+    for raw in lines:
+        raw = (raw or "").strip()
+        if not raw:
+            continue
+        try:
+            obj = json.loads(raw)
+        except (ValueError, TypeError):
+            continue
+        eid = obj.get("id")
+        if not eid:
+            continue
+        if eid not in events:
+            events[eid] = {}
+            order.append(eid)
+        events[eid].update(obj)
+
+    running, recent = [], []
+    pipelines = {}
+
+    def bucket(name):
+        return pipelines.setdefault(name, {"name": name, "last_activity": 0,
+                                           "ok": 0, "errors": 0, "running": 0})
+
+    for eid in order:
+        ev = events[eid]
+        status = ev.get("status")
+        name = ev.get("pipeline") or "unknown"
+        p = bucket(name)
+        p["last_activity"] = max(p["last_activity"], ev.get("ts_end") or ev.get("ts") or 0)
+        if status == "running":
+            started = ev.get("ts") or now
+            item = dict(ev, pipeline=name, elapsed=round(now - started, 1),
+                       stale=(now - started) > AGENTS_STALE_SECONDS)
+            running.append(item)
+            p["running"] += 1
+        elif status in ("ok", "error"):
+            started, ended = ev.get("ts"), ev.get("ts_end")
+            item = dict(ev, pipeline=name, duration=round(ended - started, 1) if started and ended else None)
+            recent.append(item)
+            p["ok" if status == "ok" else "errors"] += 1
+
+    running.sort(key=lambda e: e.get("ts") or 0, reverse=True)
+    recent.sort(key=lambda e: e.get("ts_end") or e.get("ts") or 0, reverse=True)
+    pipeline_list = sorted(pipelines.values(), key=lambda p: p["last_activity"], reverse=True)
+    return {"running": running, "recent": recent[:60], "pipelines": pipeline_list}
+
+
+def _read_events_tail(path, max_bytes=8 * 1024 * 1024):
+    """The file can grow between events.jsonl's own rotations; read at most
+    the tail of it, dropping a first line that landed mid-write."""
+    try:
+        size = os.path.getsize(path)
+        with open(path, "rb") as f:
+            if size > max_bytes:
+                f.seek(size - max_bytes)
+                f.readline()
+            data = f.read()
+        return data.decode("utf-8", "replace").splitlines()
+    except OSError:
+        return []
+
+
+def router_active():
+    try:
+        with socket.create_connection((AGENTS_ROUTER_HOST, AGENTS_ROUTER_PORT), timeout=1):
+            return True
+    except OSError:
+        return False
+
+
+def scheduled_jobs():
+    """The assistant's own scheduled jobs, if this process happens to have
+    them (health.next_jobs() reads an in-process `schedule` registry, so it
+    is empty unless something in this process has registered jobs)."""
+    try:
+        from . import health
+        return [{"when": when.isoformat(), "what": what} for when, what in health.next_jobs()]
+    except Exception:
+        return []
+
+
+def agents_data():
+    view = agents_view(_read_events_tail(AGENTS_EVENTS_FILE))
+    view["router"] = {"active": router_active()}
+    view["jobs"] = scheduled_jobs()
+    return view
+
+
 # ── HTTP ───────────────────────────────────────────────────────────────────
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -414,6 +527,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._send(200, site_data())
             if url.path == "/api/system":
                 return self._send(200, system_data())
+            if url.path == "/api/agents":
+                return self._send(200, agents_data())
         except Exception as e:
             print(f"webapp error on {url.path}: {e}")
             return self._send(500, {"error": "server error"})

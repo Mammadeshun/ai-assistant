@@ -266,6 +266,21 @@ textarea.field { min-height: 300px; line-height: 1.45; margin-top: 10px; }
 .meter i { display: block; height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--blue), var(--indigo)); box-shadow: 0 0 12px rgba(59,155,255,.5); }
 .meter-row + .meter-row { margin-top: 10px; }
 
+/* ── Agenti ───────────────────────────────────────────── */
+.agent-row { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border-radius: 24px; text-align: left;
+  transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
+.agent-row:active { transform: scale(.98); }
+.agent-row .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; background: currentColor; box-shadow: 0 0 8px currentColor; }
+.agent-row .dot.run { color: var(--blue); animation: pulse 1.4s ease-in-out infinite; }
+.agent-row .dot.ok { color: var(--green); } .agent-row .dot.err { color: var(--red); } .agent-row .dot.stale { color: var(--ink-3); }
+@keyframes pulse { 50% { opacity: .35; } }
+.agent-row .text { flex: 1; min-width: 0; }
+.agent-row .title { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.agent-row .sub2 { font-size: 13px; color: var(--ink-2); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.agent-row .elapsed { font-size: 14px; font-weight: 600; color: var(--ink-2); flex: none; }
+.agent-list { display: grid; gap: 8px; }
+.agent-list + .label { margin-top: 26px; }
+
 /* ── Floating tab bar: a glass capsule with a lens that slides ─────────── */
 nav.tabs { position: fixed; z-index: 10; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom)); transform: translateX(-50%);
   display: grid; grid-template-columns: repeat(4, 1fr); width: min(360px, calc(100% - 36px)); height: 66px; padding: 6px;
@@ -396,6 +411,9 @@ section.enter { animation: rise .5s cubic-bezier(.2,.9,.2,1); }
 
   <section id="tab-sistema" class="wrap" hidden>
     <header class="head"><h1>Sistema</h1></header>
+    <div class="label" style="margin-top:0">Agenti</div>
+    <div id="agents"></div>
+    <div class="label">Stato</div>
     <div id="system"></div>
   </section>
 </main>
@@ -501,6 +519,7 @@ $("#code").addEventListener("input", async (e) => {
 /* ── tabs, with a lens that slides under the selection ── */
 const loaders = {};
 let current = "oggi";
+let agentsTimer = null;
 function moveLens(lens, container, button) {
   const c = container.getBoundingClientRect(), b = button.getBoundingClientRect();
   lens.style.width = b.width + "px";
@@ -508,6 +527,7 @@ function moveLens(lens, container, button) {
 }
 function show(tab) {
   current = tab;
+  if (tab !== "sistema") { clearInterval(agentsTimer); agentsTimer = null; }
   const nav = $("#tabs");
   for (const b of nav.querySelectorAll("button")) {
     const on = b.dataset.tab === tab; b.setAttribute("aria-selected", on);
@@ -875,6 +895,54 @@ async function loadSito() {
 }
 loaders.sito = loadSito;
 
+/* ── Agenti ──────────────────────────────────────────── */
+function fmtElapsed(s) {
+  s = Math.max(0, Math.round(s || 0));
+  if (s < 60) return s + "s";
+  const m = Math.floor(s / 60);
+  if (m < 60) return m + "m";
+  return Math.floor(m / 60) + "h" + (m % 60 ? " " + (m % 60) + "m" : "");
+}
+// Prompt and output are model output shown as plain text - textContent only,
+// never innerHTML, however unlikely it looks that a prompt would carry markup.
+function openAgentSheet(row) {
+  openSheet(el("div", { class: "detail" },
+    el("h3", { style: "text-align:center" }, [row.pipeline, row.step].filter(Boolean).join(" · ")),
+    el("div", { class: "meta", style: "text-align:center" }, [row.model, row.status].filter(Boolean).join(" · ")),
+    el("div", { class: "label" }, "Prompt"),
+    el("div", { class: "glass block", style: "white-space:pre-wrap;overflow-wrap:anywhere" }, row.prompt_preview || "—"),
+    el("div", { class: "label" }, "Risultato"),
+    el("div", { class: "glass block", style: "white-space:pre-wrap;overflow-wrap:anywhere" }, row.output_preview || row.error || "—"),
+    el("button", { class: "glass cancel", onclick: closeSheet }, "Chiudi")));
+}
+function agentRow(row, kind) {
+  const running = kind === "running";
+  const dotCls = running ? (row.stale ? "stale" : "run") : (row.status === "ok" ? "ok" : "err");
+  const sub = [row.model, running ? (row.stale ? "forse interrotto" : null) : fmtElapsed(row.duration)].filter(Boolean).join(" · ");
+  const right = running ? fmtElapsed(row.elapsed) : (row.status === "ok" ? "OK" : "Errore");
+  return el("button", { class: "glass agent-row", onclick: () => { haptic(); openAgentSheet(row); } },
+    el("span", { class: "dot " + dotCls, "aria-hidden": "true" }),
+    el("span", { class: "text" },
+      el("div", { class: "title" }, [row.pipeline, row.step].filter(Boolean).join(" · ")),
+      el("div", { class: "sub2" }, sub || " ")),
+    el("span", { class: "elapsed num" }, right));
+}
+async function loadAgenti() {
+  const box = $("#agents");
+  if (!box.childNodes.length) box.replaceChildren(el("div", { class: "skel", style: "height:60px;border-radius:24px" }));
+  try {
+    const a = await api("/api/agents");
+    const parts = [el("div", { class: "label", style: "margin-top:0" }, "In corso"),
+      a.running.length ? el("div", { class: "agent-list" }, a.running.map((r) => agentRow(r, "running")))
+        : el("div", { class: "glass empty" }, "Nessun agente al lavoro."),
+      el("div", { class: "label" }, "Completati"),
+      a.recent.length ? el("div", { class: "agent-list" }, a.recent.slice(0, 20).map((r) => agentRow(r, "recent")))
+        : el("div", { class: "glass empty" }, "Nessuna esecuzione recente.")];
+    if (!a.router.active) parts.push(el("div", { class: "footnote" }, "Il router dei modelli non risponde in questo momento."));
+    box.replaceChildren(...parts);
+  } catch (e) { if (e.message !== "signin") box.replaceChildren(el("div", { class: "glass empty" }, "Dati agenti non disponibili.")); }
+}
+
 /* ── Sistema ─────────────────────────────────────────── */
 const SERVICE = { assistant: "Assistente", "9router": "Router AI", caddy: "Sito web", docker: "Container" };
 async function loadSistema() {
@@ -906,7 +974,13 @@ async function loadSistema() {
     );
   } catch (e) { if (e.message !== "signin") box.replaceChildren(el("div", { class: "glass empty" }, "Stato non disponibile.")); }
 }
-loaders.sistema = loadSistema;
+loaders.sistema = () => {
+  loadAgenti(); loadSistema();
+  clearInterval(agentsTimer);
+  agentsTimer = setInterval(() => {
+    if (current === "sistema" && document.visibilityState === "visible") loadAgenti();
+  }, 10000);
+};
 
 /* ── start ───────────────────────────────────────────── */
 function start() {
