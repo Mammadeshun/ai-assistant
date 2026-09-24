@@ -32,6 +32,7 @@ skipped, so re-running this costs nothing.
 
 import os
 import re
+import sys
 import json
 import datetime
 
@@ -254,7 +255,14 @@ def _call_model(model, lead, results, refute, pipeline, step):
     uninstrumented call otherwise."""
     prompt = build_prompt(lead, results, refute)
     try:
-        import runlog  # ~/portfolio-lab/runlog.py - not part of this repo
+        # ~/portfolio-lab/runlog.py - not part of this repo, not always on
+        # sys.path (this module also runs standalone, from cron, from a
+        # shell with a different cwd). Its events feed the phone
+        # dashboard's Agenti tab, so a call here should show up there.
+        lab_dir = os.path.expanduser("~/portfolio-lab")
+        if lab_dir not in sys.path and os.path.isdir(lab_dir):
+            sys.path.insert(0, lab_dir)
+        import runlog
         eid = runlog.start(model, prompt, pipeline=pipeline, step=step)
     except Exception:
         runlog, eid = None, None
