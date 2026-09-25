@@ -280,6 +280,40 @@ def whatsapp_message(lead, findings, hour=None):
     return "\n\n".join(p for p in lines if p)
 
 
+def whatsapp_parts(lead, findings, hour=None):
+    """The first WhatsApp message in three pieces, for the app's inline editor:
+    the intro (who is writing), the middle Momo may edit by hand, and the
+    closing (where the number came from, how to make it stop).
+
+    "\n\n".join(intro, body, closing) is exactly whatsapp_message(). Only the
+    middle is editable; the other two are put back by the server, so they
+    cannot be edited away.
+    """
+    parts = _opener(lead, findings, hour)
+    if not parts:
+        return None
+    greeting, who, ask, extra = parts
+    return {"intro": f"{greeting}, {who}",
+            "body": "\n\n".join(p for p in (ask, extra) if p),
+            "closing": f"{_where_found(lead)} Se preferisce non ricevere altri messaggi, me lo scriva e non la ricontatto."}
+
+
+# What every first message must say, checked before WhatsApp may open.
+# Identity: the name of the person writing. Source: where the number came
+# from. Opt-out: how to make it stop.
+REQUIRED_CLAUSES = (
+    ("identity", "Momo"),
+    ("source", "Ho trovato il vostro numero"),
+    ("opt_out", "non ricevere altri messaggi"),
+)
+
+
+def missing_clauses(text):
+    """The required clauses a message leaves out, as their names."""
+    text = text or ""
+    return [name for name, needle in REQUIRED_CLAUSES if needle not in text]
+
+
 def email_message(lead, findings, hour=None):
     """The same opener as an email body. Where the address came from and how
     to opt out are not repeated here: send_email appends email_footer(), with

@@ -11,6 +11,7 @@ a login link opened in Safari would not sign in the installed app.
 """
 
 import os
+import re
 import json
 import time
 import secrets
@@ -137,8 +138,10 @@ def lead_view(lead, full=False):
         open_channels = store.channels_open(lead["id"])
         message = (outreach.whatsapp_message(lead, findings)
                    if lead.get("whatsapp") and {"whatsapp", "follow"} & open_channels else None)
-        wa_capped = bool(message) and lead["state"] == "NEW" and \
-            whatsapp_today() >= outreach.MAX_WHATSAPP_PER_DAY
+        cap = _caps()
+        wa_capped = bool(message) and lead["state"] == "NEW" and whatsapp_today() >= cap["whatsapp"]
+        # "Non contattare" is permanent: not even an empty chat to reopen.
+        dnc = bool(lead.get("do_not_contact_at"))
         send_wa = message and not wa_capped
         body = (outreach.email_message(lead, findings)
                 if lead.get("email") and "email" in open_channels else None)
@@ -151,41 +154,39 @@ def lead_view(lead, full=False):
                     wa_capped=wa_capped,
                     # A follow-up opens the chat empty: the first message
                     # again, days after talking to them, would be absurd.
-                    wa_chat=f"whatsapp://send?phone={lead['whatsapp'].lstrip('+')}" if lead.get("whatsapp") else None,
+                    wa_chat=f"whatsapp://send?phone={lead['whatsapp'].lstrip('+')}" if lead.get("whatsapp") and not dnc else None,
                     email_subject=outreach.subject_for(lead, findings) if body else None,
                     email_body=body, email_footer=outreach.email_footer().strip() if body else None,
                     email_sent=already_emailed(lead["id"]) if body else False,
-                    email_capped=bool(body) and emails_today() >= outreach.MAX_EMAIL_PER_DAY,
+                    email_capped=bool(body) and emails_today() >= cap["email"],
                     shot=os.path.exists(os.path.join(SHOTS_DIR, f"lead-{lead['id']}.png")),
                     problems=[f["code"] for f in findings])
     return view
 
 
+def _caps():
+    """The day's caps: Controllo's settings within the hard limits (WhatsApp
+    0-30, email 0-20), defaulting to MAX_WHATSAPP_PER_DAY/MAX_EMAIL_PER_DAY.
+    Both apps and the email send read the same numbers."""
+    from . import dashboard
+    return dashboard.caps()
+
+
 def calls_today():
-    today = datetime.date.today().isoformat()
-    with store.connect() as conn:
-        row = conn.execute(
-            "SELECT COUNT(DISTINCT lead_id) n FROM events WHERE at >= ? AND"
-            " (kind = 'attempt' OR (kind LIKE 'state:%' AND detail LIKE 'chiamata%'))",
-            (today,)).fetchone()
-    return row["n"]
-
-
-def _sent_today(state):
-    """Distinct practices moved into `state` today, from the app or Telegram."""
-    today = datetime.date.today().isoformat()
-    with store.connect() as conn:
-        row = conn.execute("SELECT COUNT(DISTINCT lead_id) n FROM events WHERE at >= ?"
-                           " AND kind = ?", (today, f"state:{state}")).fetchone()
-    return row["n"]
+    from . import dashboard
+    return dashboard.count_calls(datetime.date.today())
 
 
 def whatsapp_today():
-    return _sent_today("WHATSAPP_SENT")
+    """Distinct practices written to on WhatsApp today, first messages and
+    follow-ups sent from the new app alike: both count against the cap."""
+    from . import dashboard
+    return dashboard.count_whatsapp(datetime.date.today())
 
 
 def emails_today():
-    return _sent_today("EMAIL_SENT")
+    from . import dashboard
+    return dashboard.count_email(datetime.date.today())
 
 
 def already_emailed(lead_id):
@@ -209,12 +210,13 @@ def queues():
     from . import callmode, outreach
     buckets = store.due_leads()
     sent = {"messages": whatsapp_today(), "emails": emails_today()}
+    cap = _caps()
     fresh = lambda rows: [l for l in rows if l["id"] not in callmode._skipped]
     q = {ch: [] for ch in CHANNELS}
-    if sent["messages"] < outreach.MAX_WHATSAPP_PER_DAY:
+    if sent["messages"] < cap["whatsapp"]:
         q["whatsapp"] = [l for l in fresh(buckets["to_whatsapp"])
                          if outreach.whatsapp_message(l, store.findings_of(l))]
-    if sent["emails"] < outreach.MAX_EMAIL_PER_DAY:
+    if sent["emails"] < cap["email"]:
         q["email"] = [l for l in fresh(buckets["to_email"])
                       if l.get("email") and outreach.email_message(l, store.findings_of(l))]
     q["call"] = fresh(buckets["to_call"])
@@ -228,10 +230,11 @@ def today():
     channel = next((ch for ch in CHANNELS if q[ch]), None)
     nxt = dict(lead_view(q[channel][0], full=True), channel=channel) if channel else None
     called = calls_today()
+    cap = _caps()
     return {"next": nxt, "remaining": sum(len(v) for v in q.values()),
             "done": sent["messages"] + sent["emails"] + called, "goal": DAILY_GOAL,
-            "messages": sent["messages"], "message_cap": outreach.MAX_WHATSAPP_PER_DAY,
-            "emails": sent["emails"], "email_cap": outreach.MAX_EMAIL_PER_DAY, "calls": called,
+            "messages": sent["messages"], "message_cap": cap["whatsapp"],
+            "emails": sent["emails"], "email_cap": cap["email"], "calls": called,
             "queued": {ch: len(v) for ch, v in q.items()},
             "counts": store.counts(),
             "date": datetime.date.today().isoformat()}
@@ -253,13 +256,18 @@ def send_lead_email(lead_id, subject, body):
         return 404, {"error": "questo studio non ha un'email"}
     if not subject or len(body) < 40:
         return 400, {"error": "oggetto o testo mancante"}
+    # Certified mail is for legal notices: never an outreach email, whatever
+    # the queue says.
+    if store.email_is_pec(lead):
+        return 409, {"error": "è un indirizzo PEC: niente email"}
     if "email" not in store.channels_open(lead_id):
         return 409, {"error": "questo studio non è in coda per l'email"}
     with _email_lock:
         if already_emailed(lead_id):
             return 409, {"error": "a questo studio l'email è già partita"}
-        if emails_today() >= outreach.MAX_EMAIL_PER_DAY:
-            return 429, {"error": f"limite di {outreach.MAX_EMAIL_PER_DAY} email per oggi, il resto domani"}
+        cap = _caps()["email"]
+        if emails_today() >= cap:
+            return 429, {"error": f"limite di {cap} email per oggi, il resto domani"}
         try:
             outreach.send_email(lead, subject, body)
         except RuntimeError as e:          # no signature, no address: say which
@@ -271,12 +279,24 @@ def send_lead_email(lead_id, subject, body):
             print(f"email to lead {lead_id} unclear: {type(e).__name__}: {e}")
             store.add_note(lead_id, f"invio email incerto ({type(e).__name__}): controlla Gmail Inviati")
             store.set_state(lead_id, "EMAIL_SENT", note="email: esito incerto, da verificare in Gmail")
+            _after_email(lead_id)
             return 502, {"error": "Non so se è partita: controlla Posta inviata in Gmail prima di riprovare"}
         store.set_state(lead_id, "EMAIL_SENT", note="email: inviata dall'app")
+        _after_email(lead_id)
     # Keep what was actually sent: rebuilding it from the template later shows
     # today's wording, not the words the studio read.
     store.add_note(lead_id, f"EMAIL INVIATA — oggetto: {subject}\n{body}")
     return 200, {"ok": True, "today": today()}
+
+
+def _after_email(lead_id):
+    """The follow-up an email leaves behind (dashboard v2). Never lets a
+    bookkeeping error turn a sent email into a failure."""
+    try:
+        from . import dashboard
+        dashboard.after_email_sent(lead_id)
+    except Exception as e:
+        print(f"follow-up after email to lead {lead_id} not set: {e}")
 
 
 def leads_list(state=None, q=None):
@@ -432,6 +452,63 @@ def agents_data():
     return view
 
 
+# ── dashboard v2: /api/v2/..., GET reads and POST writes ───────────────────
+
+V2_LEAD = re.compile(r"^/api/v2/lead/(\d{1,9})(?:/([a-z-]{2,20}(?:/undo)?))?$")
+
+
+def v2_get(path, query):
+    """Returns (status, payload). The session check has already happened."""
+    from . import dashboard, jobs
+    if path == "/api/v2/today":
+        return 200, dashboard.today_view()
+    if path == "/api/v2/leads":
+        return 200, dashboard.leads_view(query)
+    if path == "/api/v2/results":
+        days = query.get("days", "30")
+        return 200, dashboard.results(int(days) if days.isdigit() else 30)
+    if path == "/api/v2/settings":
+        return 200, dashboard.settings_view()
+    if path == "/api/v2/jobs":
+        return 200, jobs.overview()
+    m = V2_LEAD.match(path)
+    if m and not m.group(2):
+        detail = dashboard.lead_detail(int(m.group(1)))
+        return (200, detail) if detail else (404, {"error": "studio non trovato"})
+    return 404, {"error": "not found"}
+
+
+def v2_post(path, body):
+    """Every write in v2. The X-Requested-With check, the body cap and the
+    session check have already happened in do_POST."""
+    from . import dashboard, jobs
+    if path == "/api/v2/settings":
+        return dashboard.update_settings(body)
+    if path.startswith("/api/v2/jobs/"):
+        return jobs.request(path.rsplit("/", 1)[1])
+    if path.startswith("/api/v2/handoff/"):
+        return dashboard.resolve_handoff(path.rsplit("/", 1)[1][:40], body)
+    m = V2_LEAD.match(path)
+    if not m or not m.group(2):
+        return 404, {"error": "not found"}
+    lead_id, action = int(m.group(1)), m.group(2)
+    actions = {
+        "handoff": lambda: dashboard.start_handoff(lead_id, body),
+        "skip": lambda: dashboard.skip(lead_id),
+        "snooze": lambda: dashboard.snooze(lead_id, body),
+        "followup": lambda: dashboard.set_follow_up(lead_id, body),
+        "reply": lambda: dashboard.log_reply(lead_id, body),
+        "reply-done": lambda: dashboard.reply_done(lead_id, body),
+        "dnc": lambda: dashboard.do_not_contact(lead_id, body.get("reason")),
+        "dnc/undo": lambda: dashboard.undo_do_not_contact(lead_id),
+        "contact": lambda: dashboard.edit_contact(lead_id, body),
+        "note": lambda: dashboard.add_note(lead_id, body.get("text")),
+    }
+    if action not in actions:
+        return 404, {"error": "not found"}
+    return actions[action]()
+
+
 # ── HTTP ───────────────────────────────────────────────────────────────────
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -493,6 +570,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
         url = urllib.parse.urlparse(self.path)
         query = dict(urllib.parse.parse_qsl(url.query))
         statics = {"/": ("index.html", "text/html; charset=utf-8"),
+                   # Dashboard v2, side by side with the app above until it
+                   # replaces it (docs/dashboard-v2/SPEC.md).
+                   "/v2": ("v2.html", "text/html; charset=utf-8"),
                    "/manifest.webmanifest": ("manifest.webmanifest", "application/manifest+json"),
                    "/icon.svg": ("icon.svg", "image/svg+xml"),
                    "/apple-touch-icon.png": ("apple-touch-icon.png", "image/png"),
@@ -529,6 +609,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._send(200, system_data())
             if url.path == "/api/agents":
                 return self._send(200, agents_data())
+            if url.path.startswith("/api/v2/"):
+                return self._send(*v2_get(url.path, query))
         except Exception as e:
             print(f"webapp error on {url.path}: {e}")
             return self._send(500, {"error": "server error"})
@@ -564,6 +646,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             if url.path == "/api/note":
                 store.add_note(int(body["id"]), str(body["text"])[:1000])
                 return self._send(200, lead_view(store.get(int(body["id"])), full=True))
+            if url.path.startswith("/api/v2/"):
+                return self._send(*v2_post(url.path, body))
         except (KeyError, ValueError) as e:
             return self._send(400, {"error": str(e)[:100]})
         except Exception as e:

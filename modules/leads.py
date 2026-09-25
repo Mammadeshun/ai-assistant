@@ -98,6 +98,49 @@ _schema_ready = False
 MIGRATIONS = (
     "ALTER TABLE leads ADD COLUMN attempts INTEGER NOT NULL DEFAULT 0",
     "ALTER TABLE leads ADD COLUMN last_attempt_at TEXT",
+    # Dashboard v2 (docs/dashboard-v2/SPEC.md). All additive, all nullable:
+    # a lead none of these were ever set on behaves exactly as before.
+    # follow_up_at is a date (YYYY-MM-DD) Momo chose or a send defaulted;
+    # follow_up_off_at records that he removed it, so the old wait-based
+    # cascade does not quietly bring it back.
+    "ALTER TABLE leads ADD COLUMN follow_up_at TEXT",
+    "ALTER TABLE leads ADD COLUMN follow_up_off_at TEXT",
+    "ALTER TABLE leads ADD COLUMN snoozed_until TEXT",
+    "ALTER TABLE leads ADD COLUMN skipped_at TEXT",
+    "ALTER TABLE leads ADD COLUMN do_not_contact_at TEXT",
+    "ALTER TABLE leads ADD COLUMN do_not_contact_reason TEXT",
+    "ALTER TABLE leads ADD COLUMN phone_invalid_at TEXT",
+    "ALTER TABLE leads ADD COLUMN email_is_pec INTEGER NOT NULL DEFAULT 0",
+    "ALTER TABLE leads ADD COLUMN reply_type TEXT",
+    "ALTER TABLE leads ADD COLUMN reply_at TEXT",
+    "ALTER TABLE leads ADD COLUMN reply_todo_at TEXT",
+    # Server jobs the app may ask for (modules/jobs.py). The webapp only
+    # inserts; the assistant process claims and runs them one at a time.
+    """CREATE TABLE IF NOT EXISTS job_requests (
+        id           INTEGER PRIMARY KEY AUTOINCREMENT,
+        key          TEXT NOT NULL,
+        requested_at TEXT NOT NULL,
+        started_at   TEXT,
+        finished_at  TEXT,
+        status       TEXT NOT NULL DEFAULT 'queued',
+        summary      TEXT)""",
+    # Single flight, enforced by the database rather than by a check that two
+    # requests could both pass: one queued-or-running row per key.
+    "CREATE UNIQUE INDEX IF NOT EXISTS idx_job_single_flight ON job_requests (key)"
+    " WHERE status IN ('queued', 'running')",
+    # A WhatsApp or a call opened from the app and not yet confirmed. Opening
+    # WhatsApp records nothing; the row is what "Hai inviato il messaggio?"
+    # answers, and it survives a reload.
+    """CREATE TABLE IF NOT EXISTS handoffs (
+        key         TEXT PRIMARY KEY,
+        lead_id     INTEGER NOT NULL,
+        channel     TEXT NOT NULL,
+        kind        TEXT NOT NULL,
+        created_at  TEXT NOT NULL,
+        status      TEXT NOT NULL DEFAULT 'open',
+        resolved_at TEXT,
+        message     TEXT)""",
+    "CREATE INDEX IF NOT EXISTS idx_events_at ON events (at)",
 )
 
 
@@ -192,6 +235,12 @@ def set_state(lead_id, state, note=None, next_action_in_days=None):
     """Move a lead, recording why and when to look at it again."""
     if state not in STATES:
         raise ValueError(f"unknown state: {state}")
+    # "Non contattare" is permanent: nothing - the app, Telegram, call mode -
+    # may move such a lead back into a state that gets it contacted.
+    if state != "DEAD":
+        current = get(lead_id)
+        if current and current.get("do_not_contact_at"):
+            raise ValueError("questo studio è segnato 'Non contattare'")
     next_at = None
     if next_action_in_days is not None:
         next_at = (datetime.datetime.now()
@@ -330,6 +379,24 @@ def _scan_is_fresh(lead):
     return age <= datetime.timedelta(hours=SCAN_MAX_AGE_HOURS)
 
 
+def is_pec_address(address):
+    """A certified-mail (PEC) address. Those are for legal notices, never for
+    outreach: no email action may ever target one."""
+    domain = (address or "").strip().lower().rpartition("@")[2]
+    return bool(domain) and ("pec." in domain or domain.endswith(".pec.it"))
+
+
+def email_is_pec(lead):
+    return bool(lead.get("email_is_pec")) or is_pec_address(lead.get("email"))
+
+
+def emailable(lead):
+    """Has an address that may be written to: present, not PEC, and the
+    practice has not asked to be left alone."""
+    return bool(lead.get("email")) and not email_is_pec(lead) \
+        and not lead.get("do_not_contact_at")
+
+
 def due_leads():
     """Leads whose timer has expired, grouped by what should happen next.
 
@@ -346,6 +413,16 @@ def due_leads():
     # queued, silently. LEADS_LIST_CAP is the same headroom scan_pending uses.
     for lead in list_leads(state=ACTIONABLE_STATES, limit=LEADS_LIST_CAP):
         state, changed = lead["state"], lead["state_changed_at"]
+        # Asked not to be contacted: out of every queue, on every channel,
+        # for good.
+        if lead.get("do_not_contact_at"):
+            continue
+        # A number logged as wrong is not a channel any more; a non-PEC
+        # email may still be.
+        phone_ok = not lead.get("phone_invalid_at")
+        has_phone = bool(lead["phone"]) and phone_ok
+        has_mobile = bool(lead["whatsapp"]) and phone_ok
+        has_email = emailable(lead)
 
         # Nothing observed that is worth writing about. "No website in the map
         # data" is a guess, a blocked page is a refusal, a single slow reading
@@ -353,7 +430,7 @@ def due_leads():
         # missing website is still a fair question to ask on the phone.
         if state == "NEW" and not _sendable_findings(lead):
             codes = {f["code"] for f in findings_of(lead)}
-            if "no_website" in codes and lead["phone"]:
+            if "no_website" in codes and has_phone:
                 buckets["to_call"].append(lead)
             else:
                 buckets["no_angle"].append(lead)
@@ -399,24 +476,32 @@ def due_leads():
             # In writing the claim must also be current; on the phone he can
             # look at the site while it rings.
             if not _scan_is_fresh(lead):
-                buckets["to_call"].append(lead) if lead["phone"] else buckets["no_angle"].append(lead)
-            elif lead["whatsapp"]:
+                buckets["to_call"].append(lead) if has_phone else buckets["no_angle"].append(lead)
+            elif has_mobile:
                 buckets["to_whatsapp"].append(lead)
-            elif lead["email"]:
+            elif has_email:
                 buckets["to_email"].append(lead)
-            elif lead["phone"]:
+            elif has_phone:
                 buckets["to_call"].append(lead)
             else:
                 buckets["no_angle"].append(lead)
-        elif state == "WHATSAPP_SENT" and age_days >= WHATSAPP_WAIT_DAYS:
+        elif state == "WHATSAPP_SENT" and (age_days >= WHATSAPP_WAIT_DAYS
+                                           or (not phone_ok and has_email)):
             # Straight to a call when there is no address: 10 of the 24
             # practices with a mobile publish no email, and queuing them for
-            # one parked them in the email list for good.
-            buckets["to_email" if lead["email"] else "to_call"].append(lead)
+            # one parked them in the email list for good. A PEC address is
+            # no address. A wrong number goes to email at once: there is no
+            # reply to wait for.
+            if has_email:
+                buckets["to_email"].append(lead)
+            elif has_phone:
+                buckets["to_call"].append(lead)
         elif state == "EMAIL_SENT" and age_days >= EMAIL_WAIT_DAYS:
-            buckets["to_call"].append(lead)
+            if has_phone:
+                buckets["to_call"].append(lead)
         elif state == "CALL_DUE":
-            buckets["to_call"].append(lead)
+            if has_phone:
+                buckets["to_call"].append(lead)
         elif state == "CONTACTED" and age_days >= FOLLOW_UP_DAYS and lead["follow_ups"] < 1:
             buckets["to_follow_up"].append(lead)
     # Strongest problem first. Ordered by id, the first calls of the day were

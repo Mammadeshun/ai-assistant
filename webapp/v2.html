@@ -1,0 +1,1661 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assistente</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Assistente">
+<meta name="theme-color" content="#F3F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101713" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+/* ───────────────────────────────────────────────────────────────────────
+   "Banco di lavoro" (docs/dashboard-v2/visual-spec.md): opaque surfaces,
+   dark ink, crisp edges, one unmistakable next action. No glass, no
+   gradients, no celebration. Every string from the server is set with
+   textContent; the only markup built from strings is the constant icons.
+   ─────────────────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --bg: #F3F5F0; --surface: #FFFFFF; --raised: #E9EEE8; --border: #7B857E; --line: #D3DAD2;
+  --text: #17231C; --text-2: #435249; --muted: #58645E;
+  --accent: #1859B8; --on-accent: #FFFFFF; --accent-soft: #E2EBF7;
+  --success: #17613D; --warning: #815500; --danger: #AF2525;
+  --success-soft: #E0EFE5; --warning-soft: #F5EBD5; --danger-soft: #F7E2E0;
+  --wa: #25D366; --wa-ink: #102119; --wa-edge: #0B5D2F;
+  --shadow: 0 8px 24px #00000024;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --nav-h: 64px; --safe-b: env(safe-area-inset-bottom, 0px); --dock-h: 0px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #101713; --surface: #18221C; --raised: #223029; --border: #75817B; --line: #2E3C34;
+    --text: #F3F6F1; --text-2: #CBD5CD; --muted: #ADB9B1;
+    --accent: #91BBFF; --on-accent: #101713; --accent-soft: #1E2D42;
+    --success: #81D4A2; --warning: #F2CA73; --danger: #FFAAA4;
+    --success-soft: #1B3326; --warning-soft: #372F1E; --danger-soft: #3C2321;
+    --wa-edge: #25D366; --shadow: 0 8px 24px #00000066; --line: #3A4A41;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101713; --surface: #18221C; --raised: #223029; --border: #75817B; --line: #2E3C34;
+  --text: #F3F6F1; --text-2: #CBD5CD; --muted: #ADB9B1;
+  --accent: #91BBFF; --on-accent: #101713; --accent-soft: #1E2D42;
+  --success: #81D4A2; --warning: #F2CA73; --danger: #FFAAA4;
+  --success-soft: #1B3326; --warning-soft: #372F1E; --danger-soft: #3C2321;
+  --wa-edge: #25D366; --shadow: 0 8px 24px #00000066; --line: #3A4A41;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100dvh; background: var(--bg); color: var(--text);
+  font: 400 16px/24px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent; }
+button, input, select, textarea { font: inherit; color: inherit; letter-spacing: inherit; }
+button { cursor: pointer; }
+a { color: var(--accent); }
+[hidden] { display: none !important; }
+.num { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; box-shadow: 0 0 0 2px var(--surface); }
+svg.i { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* type scale: title 28/34, section 20/26, body 16/24, meta 14/20, nav 12/16 */
+h1 { font-size: 28px; line-height: 34px; font-weight: 700; margin: 0; }
+h2 { font-size: 20px; line-height: 26px; font-weight: 700; margin: 0; }
+h3 { font-size: 16px; line-height: 24px; font-weight: 700; margin: 0; }
+p { margin: 0; }
+.meta { font-size: 14px; line-height: 20px; color: var(--muted); }
+.sec { color: var(--text-2); }
+.section-title { font-size: 20px; line-height: 26px; font-weight: 700; margin: 32px 0 12px; }
+.sub-title { font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-2); margin: 24px 0 8px; }
+
+/* ── frame ─────────────────────────────────────────────────────────── */
+main { padding: calc(env(safe-area-inset-top, 0px) + 16px) 16px calc(var(--nav-h) + var(--safe-b) + var(--dock-h) + 32px); }
+.page { max-width: 640px; margin: 0 auto; }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.page-head .meta { margin-top: 2px; }
+
+.nav { position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; height: calc(var(--nav-h) + var(--safe-b));
+  padding-bottom: var(--safe-b); background: var(--surface); border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: repeat(4, 1fr); }
+.nav .brand { display: none; }
+.nav a { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 48px; color: var(--muted); text-decoration: none; font-size: 12px; line-height: 16px; font-weight: 600; }
+.nav a svg.i { width: 22px; height: 22px; }
+.nav a[aria-current="page"] { color: var(--accent); }
+.nav a[aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 24%; right: 24%; height: 3px;
+  background: var(--accent); border-radius: 0 0 3px 3px; }
+.nav .dot { position: absolute; top: 8px; left: calc(50% + 8px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: var(--danger); color: var(--surface); font-size: 12px; line-height: 18px; font-weight: 700; text-align: center; }
+.pend-bar { position: fixed; z-index: 19; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--safe-b)); display: flex; align-items: center;
+  gap: 12px; min-height: 56px; padding: 8px 16px; background: var(--warning-soft); color: var(--text); border-top: 1px solid var(--border); }
+.pend-bar p { flex: 1; font-size: 14px; line-height: 20px; }
+
+/* ── controls ──────────────────────────────────────────────────────── */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 16px;
+  border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  font-weight: 600; text-decoration: none; text-align: center; line-height: 20px;
+  transition: transform 100ms var(--ease), background-color 100ms var(--ease); }
+.btn:active:not(:disabled) { transform: scale(.98); }
+.btn:disabled, .btn[aria-disabled="true"] { cursor: not-allowed; color: var(--muted); border-style: dashed; background: var(--raised); }
+.btn.primary { min-height: 52px; background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-size: 16px; }
+.btn.primary:disabled { background: var(--raised); color: var(--muted); border-color: var(--border); }
+.btn.wa { min-height: 52px; background: var(--wa); border-color: var(--wa-edge); color: var(--wa-ink); font-size: 16px; }
+.btn.wa:disabled { background: var(--raised); color: var(--muted); border-color: var(--border); }
+.btn.danger { color: var(--danger); border-color: var(--danger); }
+.btn.quiet { border-color: transparent; background: transparent; color: var(--accent); }
+.btn.block { display: flex; width: 100%; }
+.btn .small { font-weight: 400; font-size: 14px; }
+.row { display: flex; gap: 8px; }
+.row > * { flex: 1; min-width: 0; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.linkish { background: none; border: 0; padding: 12px 0; min-height: 48px; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+label.field { display: block; margin-top: 12px; }
+label.field > span { display: block; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--text-2); margin-bottom: 4px; }
+input[type="text"], input[type="search"], input[type="tel"], input[type="email"], input[type="url"], input[type="date"],
+input[type="number"], select, textarea {
+  width: 100%; min-height: 48px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--surface); color: var(--text); font-size: 16px; line-height: 24px; }
+textarea { resize: vertical; min-height: 120px; }
+select { appearance: none; background-image: none; padding-right: 36px; }
+.select-wrap { position: relative; }
+.select-wrap svg.i { position: absolute; right: 12px; top: 14px; pointer-events: none; color: var(--muted); }
+.field-error { color: var(--danger); font-size: 14px; line-height: 20px; margin-top: 4px; }
+.help { font-size: 14px; line-height: 20px; color: var(--muted); margin-top: 4px; }
+
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.seg button { min-height: 48px; border: 0; border-right: 1px solid var(--line); background: transparent; font-weight: 600; font-size: 14px; color: var(--text-2); padding: 0 8px; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent); }
+.seg button:disabled { color: var(--muted); text-decoration: line-through; cursor: not-allowed; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 2px 10px; border-radius: 14px;
+  font-size: 14px; line-height: 20px; font-weight: 600; background: var(--raised); color: var(--text-2); border: 1px solid transparent; }
+.chip svg.i { width: 16px; height: 16px; }
+.chip.critical { background: var(--danger-soft); color: var(--danger); }
+.chip.serious, .chip.warning { background: var(--warning-soft); color: var(--warning); }
+.chip.ok { background: var(--success-soft); color: var(--success); }
+.chip.info { background: var(--accent-soft); color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+button.chip { min-height: 48px; padding: 0 12px; border-color: var(--border); background: var(--surface); color: var(--text-2); border-radius: 24px; }
+button.chip[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card + .card { margin-top: 12px; }
+.panel-empty { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.panel-empty h2 { margin-bottom: 8px; }
+.panel-empty p { color: var(--text-2); margin-bottom: 16px; }
+.notice { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--warning-soft); }
+.notice.error { background: var(--danger-soft); }
+.notice p { flex: 1; }
+.notice svg.i { margin-top: 2px; color: var(--warning); }
+.notice.error svg.i { color: var(--danger); }
+
+/* ── Oggi ──────────────────────────────────────────────────────────── */
+.progress { padding: 12px 16px; }
+.progress .big { font-size: 20px; line-height: 26px; font-weight: 700; }
+.progress .big .num { font-size: 28px; line-height: 32px; }
+.allow { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.allow li { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 14px; line-height: 20px; color: var(--text-2); }
+.allow li svg.i { width: 16px; height: 16px; }
+.allow li .v { flex-basis: 100%; font-weight: 700; font-size: 20px; line-height: 26px; color: var(--text); }
+.allow li .v.full { color: var(--warning); }
+.allow li .tag { font-size: 12px; line-height: 16px; font-weight: 700; color: var(--warning); border: 1px solid currentColor; border-radius: 6px; padding: 1px 6px; }
+.counts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.counts > div { display: flex; align-items: center; gap: 8px; padding: 8px 10px; min-height: 56px; }
+.counts > div + div { border-left: 1px solid var(--line); }
+.counts .n { font-size: 20px; line-height: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.counts .l { font-size: 12px; line-height: 15px; color: var(--text-2); font-weight: 600; }
+.counts > .hot .n { color: var(--accent); }
+.counts > .warn .n { color: var(--warning); }
+
+.work { margin-top: 16px; }
+.kicker { display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-2); margin-bottom: 8px; }
+.kicker.hot { color: var(--accent); }
+.kicker.warn { color: var(--warning); }
+.lead-card h2 { overflow-wrap: anywhere; }
+.lead-card .where { margin-top: 2px; }
+.evidence { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 12px; }
+.evidence .meta { display: inline-flex; align-items: center; gap: 4px; }
+.facts { margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.facts li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 20px; }
+.facts li > span:first-child { color: var(--muted); width: 124px; flex: none; }
+.facts li > span:last-child { overflow-wrap: anywhere; font-weight: 600; }
+.msg { margin-top: 16px; }
+.msg .fixed { padding: 12px; border-radius: 10px; background: var(--raised); color: var(--text-2); font-size: 14px; line-height: 20px; white-space: pre-line; }
+.msg .fixed + label, .msg label + .fixed { margin-top: 8px; }
+.msg label { display: block; }
+.msg label > span { display: flex; justify-content: space-between; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--text-2); margin: 8px 0 4px; }
+.msg textarea { min-height: 132px; }
+.clauses { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--success); }
+.clauses span { display: inline-flex; align-items: center; gap: 4px; }
+.clauses .bad { color: var(--danger); }
+.clauses svg.i { width: 16px; height: 16px; }
+.quiet-actions { margin-top: 16px; }
+.quiet-actions .btn { font-size: 15px; padding: 0 8px; }
+.exclude { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+@media (max-width: 400px) { .quiet-actions svg.i { display: none; } }
+.card-links { margin-top: 8px; }
+.card-links .btn { font-size: 15px; padding: 0 8px; }
+.say { margin-top: 12px; padding: 12px; border-left: 3px solid var(--line); color: var(--text-2); font-size: 15px; line-height: 22px; }
+.chan { margin-top: 16px; }
+.chan .why { margin-top: 6px; }
+
+.dock { position: fixed; z-index: 18; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--safe-b)); background: var(--surface);
+  border-top: 1px solid var(--border); padding: 12px 16px; }
+.dock .q { font-weight: 700; margin-bottom: 8px; overflow-wrap: anywhere; }
+.dock .status { font-size: 14px; line-height: 20px; color: var(--text-2); margin-bottom: 8px; display: flex; justify-content: space-between; gap: 12px; white-space: nowrap; }
+.dock .status > span:first-child { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.dock .status .warn { color: var(--warning); font-weight: 600; }
+.dock .row + .row, .dock .row + .grid2, .dock .grid2 + .row { margin-top: 8px; }
+.dock .err { color: var(--danger); font-size: 14px; line-height: 20px; margin-top: 8px; }
+.dock .again { display: block; text-align: center; font-size: 14px; line-height: 20px; margin-top: 8px; min-height: 24px; }
+.dock .inner { max-width: 608px; margin: 0 auto; }
+
+.list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.list > li + li { border-top: 1px solid var(--line); }
+.list .item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 64px; padding: 12px 16px; border: 0; background: none; text-align: left; text-decoration: none; color: var(--text); }
+.list .item .grow { flex: 1; min-width: 0; }
+.list .item .name { font-weight: 600; overflow-wrap: anywhere; }
+.list .item .right { text-align: right; flex: none; max-width: 45%; }
+.list .item svg.i { color: var(--muted); }
+.list.rows .item { min-height: 88px; }
+.state-lbl { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--text-2); }
+.late { color: var(--warning); font-weight: 600; }
+.todo { color: var(--accent); font-weight: 600; }
+.due { color: var(--warning); font-weight: 600; }
+
+/* ── Contatti ──────────────────────────────────────────────────────── */
+.search { position: relative; }
+.search svg.i { position: absolute; left: 12px; top: 14px; color: var(--muted); }
+.search input { padding-left: 42px; }
+.filters { margin-top: 12px; }
+.filters .chips { margin-bottom: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters .chips { display: contents; }
+.filters .filter-grid { flex-basis: 100%; }
+#more-filters { border-radius: 24px; padding: 0 14px; }
+.filter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.filter-grid label > span { font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-2); display: block; margin-bottom: 2px; }
+.results-count { margin: 16px 0 8px; }
+.table-wrap { display: none; }
+table.leads { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 14px; line-height: 20px; }
+table.leads th { text-align: left; padding: 0; background: var(--raised); border-bottom: 1px solid var(--border); }
+table.leads th button { width: 100%; min-height: 44px; padding: 0 12px; border: 0; background: none; text-align: left; font-weight: 700; color: var(--text-2); display: flex; align-items: center; gap: 4px; }
+table.leads td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.leads tr { cursor: pointer; }
+table.leads tbody tr:hover td { background: var(--raised); }
+table.leads tr[aria-selected="true"] td { background: var(--accent-soft); }
+table.leads td.name { font-weight: 600; font-size: 16px; line-height: 22px; }
+table.leads td a { color: var(--text); text-decoration: none; }
+
+/* ── lead detail ───────────────────────────────────────────────────── */
+.detail-screen { position: fixed; inset: 0; z-index: 30; background: var(--bg); display: flex; flex-direction: column; }
+.detail-top { display: flex; align-items: center; gap: 8px; min-height: 56px; padding: calc(env(safe-area-inset-top, 0px) + 4px) 8px 4px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.detail-top .t { flex: 1; min-width: 0; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.icon-btn { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border: 0; background: none; color: var(--text); border-radius: 10px; flex: none; }
+.detail-body { flex: 1; overflow-y: auto; padding: 16px 16px 24px; overscroll-behavior: contain; }
+.detail-body > .inner { max-width: 640px; margin: 0 auto; }
+.detail-foot { background: var(--surface); border-top: 1px solid var(--border); padding: 12px 16px calc(12px + var(--safe-b)); }
+.detail-foot .inner { max-width: 640px; margin: 0 auto; }
+.d-head h2 { font-size: 20px; line-height: 26px; overflow-wrap: anywhere; }
+.d-head .chips { margin-top: 8px; }
+.d-sec { margin-top: 24px; }
+.d-sec > h3 { margin-bottom: 8px; }
+.actions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.proof { display: flex; gap: 12px; align-items: flex-start; }
+.proof button { flex: none; padding: 0; border: 1px solid var(--border); border-radius: 10px; background: var(--raised); overflow: hidden; width: 104px; height: 140px; }
+.proof img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); margin-left: 6px; }
+.timeline li { position: relative; padding: 0 0 14px 16px; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--border); }
+.timeline .when { font-size: 14px; line-height: 20px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.timeline .what { font-weight: 600; }
+.timeline .det { font-size: 14px; line-height: 20px; color: var(--text-2); white-space: pre-line; overflow-wrap: anywhere; }
+.notes { list-style: none; margin: 0 0 8px; padding: 0; }
+.notes li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.notes .txt { white-space: pre-line; overflow-wrap: anywhere; }
+.danger-zone { margin-top: 32px; padding: 16px; border: 1px solid var(--danger); border-radius: 12px; background: var(--danger-soft); }
+.danger-zone p { color: var(--text); margin-bottom: 12px; font-size: 14px; line-height: 20px; }
+.dnc-banner { margin-top: 12px; }
+.detail-panel { display: none; }
+
+/* ── sheets, toasts ────────────────────────────────────────────────── */
+.scrim { position: fixed; inset: 0; z-index: 40; background: #0000008C; }
+.sheet { position: fixed; z-index: 41; left: 0; right: 0; bottom: 0; max-height: 92dvh; display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--border); border-bottom: 0; border-radius: 20px 20px 0 0; box-shadow: var(--shadow);
+  animation: sheet-in 180ms var(--ease); }
+.sheet-head { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 16px; border-bottom: 1px solid var(--line); }
+.sheet-head h2 { flex: 1; }
+.sheet-body { overflow-y: auto; padding: 16px; overscroll-behavior: contain; }
+.sheet-foot { padding: 12px 16px calc(12px + var(--safe-b)); border-top: 1px solid var(--line); }
+.choice { display: flex; align-items: flex-start; gap: 12px; width: 100%; min-height: 64px; padding: 12px 14px; margin-bottom: 8px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--surface); text-align: left; }
+.choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
+.choice .t { font-weight: 700; display: block; }
+.choice .d { font-size: 14px; line-height: 20px; color: var(--text-2); display: block; }
+.check { display: flex; align-items: center; gap: 12px; min-height: 48px; }
+.check input { width: 24px; height: 24px; margin: 0; accent-color: var(--accent); }
+.full-shot { display: block; width: 100%; max-width: 420px; margin: 0 auto; border: 1px solid var(--line); border-radius: 10px; touch-action: pinch-zoom; }
+@keyframes sheet-in { from { transform: translateY(24px); opacity: 0; } }
+.toast { position: fixed; z-index: 50; left: 16px; right: 16px; bottom: calc(var(--nav-h) + var(--safe-b) + var(--dock-h) + 12px);
+  display: flex; align-items: center; gap: 12px; min-height: 48px; max-width: 560px; margin: 0 auto; padding: 8px 8px 8px 16px;
+  background: var(--text); color: var(--bg); border-radius: 10px; box-shadow: var(--shadow); font-weight: 600;
+  animation: toast-in 140ms var(--ease); }
+.toast p { flex: 1; font-size: 15px; line-height: 20px; }
+.toast .btn { min-height: 40px; background: transparent; color: var(--bg); border-color: var(--bg); }
+@keyframes toast-in { from { transform: translateY(8px); opacity: 0; } }
+
+/* ── Risultati ─────────────────────────────────────────────────────── */
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.tile { min-height: 96px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.tile .v { font-size: 28px; line-height: 32px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tile .k { font-size: 14px; line-height: 20px; font-weight: 600; margin-top: 4px; }
+.tile .p { font-size: 12px; line-height: 16px; color: var(--muted); }
+.chart { margin-top: 12px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .ax { fill: var(--muted); font-size: 14px; }
+.chart .gl { stroke: var(--line); stroke-width: 1; }
+.chart .goal { stroke: var(--text); stroke-width: 2; stroke-dasharray: 6 4; }
+.chart .cap { stroke: var(--warning); stroke-width: 2; stroke-dasharray: 2 4; }
+.chart .lbl { fill: var(--text-2); font-size: 14px; font-weight: 600; }
+.numbers { margin-top: 8px; }
+.numbers summary { min-height: 48px; display: flex; align-items: center; font-weight: 600; color: var(--accent); cursor: pointer; }
+.daytable { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 20px; font-variant-numeric: tabular-nums; }
+.daytable th, .daytable td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.daytable th:first-child, .daytable td:first-child { text-align: left; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--text-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--border); display: inline-block; }
+.sw.wa { background: var(--accent); border-color: var(--accent); }
+.sw.em { background: repeating-linear-gradient(45deg, var(--accent) 0 2px, var(--surface) 2px 5px); border-color: var(--accent); }
+.sw.ca { background: repeating-linear-gradient(0deg, var(--muted) 0 2px, var(--surface) 2px 4px); border-color: var(--muted); }
+.sw.goal { border: 0; border-top: 2px dashed var(--text); height: 0; width: 18px; border-radius: 0; }
+.sw.cap { border: 0; border-top: 2px dotted var(--warning); height: 0; width: 18px; border-radius: 0; }
+.rates { list-style: none; margin: 0; padding: 0; }
+.rates li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.rates .top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.rates .top .l { font-weight: 600; }
+.rates .top .v { font-variant-numeric: tabular-nums; text-align: right; }
+.rates .track { height: 10px; background: var(--raised); border-radius: 5px; margin-top: 8px; overflow: hidden; border: 1px solid var(--line); }
+.rates .track i { display: block; height: 100%; background: var(--accent); }
+.rates .small .track i { background: var(--muted); }
+.rates .flag { font-size: 14px; line-height: 20px; color: var(--muted); margin-top: 4px; }
+.kv { list-style: none; margin: 0; padding: 0; }
+.kv li { display: flex; justify-content: space-between; gap: 12px; min-height: 44px; align-items: center; border-bottom: 1px solid var(--line); }
+.kv li .v { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ── Controllo ─────────────────────────────────────────────────────── */
+.set { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 16px; }
+.set-row { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.set-row:last-child { border-bottom: 0; }
+.set-row .grow { flex: 1; min-width: 0; }
+.set-row .t { font-weight: 600; overflow-wrap: anywhere; }
+.set-row.stack { flex-direction: column; align-items: stretch; }
+.set-row.step { flex-wrap: wrap; }
+.set-row.step .grow { flex-basis: 100%; }
+@media (min-width: 520px) { .set-row.step { flex-wrap: nowrap; } .set-row.step .grow { flex-basis: auto; } }
+.stepper { display: flex; align-items: center; gap: 4px; flex: none; }
+.stepper button { width: 48px; height: 48px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); font-size: 22px; font-weight: 600; line-height: 1; }
+.stepper input { width: 64px; text-align: center; padding: 11px 4px; font-weight: 700; font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
+.stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.switch { position: relative; width: 48px; height: 48px; flex: none; border: 0; background: none; padding: 0; }
+.switch::before { content: ""; position: absolute; left: 0; top: 10px; width: 48px; height: 28px; border-radius: 14px; background: var(--raised); border: 1px solid var(--border); transition: background-color 140ms var(--ease); }
+.switch::after { content: ""; position: absolute; left: 4px; top: 14px; width: 20px; height: 20px; border-radius: 50%; background: var(--muted); transition: transform 140ms var(--ease); }
+.switch[aria-checked="true"]::before { background: var(--accent); border-color: var(--accent); }
+.switch[aria-checked="true"]::after { transform: translateX(20px); background: var(--on-accent); }
+.saved { font-size: 14px; line-height: 20px; color: var(--success); }
+.saved:empty { display: none; }
+.job { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.job:last-child { border-bottom: 0; }
+.job .top { display: flex; align-items: center; gap: 12px; }
+.job .top .grow { flex: 1; min-width: 0; }
+.job .sum { font-size: 14px; line-height: 20px; color: var(--text-2); margin-top: 6px; overflow-wrap: anywhere; }
+details.diag { margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+details.diag > summary { min-height: 56px; display: flex; align-items: center; padding: 0 16px; font-weight: 700; cursor: pointer; }
+details.diag > div { padding: 0 16px 16px; }
+details.cover { margin-top: 8px; }
+details.cover .set { border: 0; padding: 0; border-radius: 0; }
+.agent { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--line); background: none; text-align: left; }
+.agent .grow { flex: 1; min-width: 0; }
+.agent .t { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 20px; background: var(--raised); border-radius: 10px; padding: 12px; }
+
+/* ── sign in ───────────────────────────────────────────────────────── */
+.signin { min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px; text-align: center; }
+.signin img { width: 72px; height: 72px; border-radius: 16px; }
+.signin h1 { margin: 16px 0 8px; }
+.signin p { color: var(--text-2); max-width: 320px; margin-bottom: 24px; }
+.signin input { max-width: 240px; text-align: center; font-size: 28px; line-height: 34px; letter-spacing: 10px; font-weight: 700; }
+
+/* ── laptop (1280): left rail, list and detail side by side ────────── */
+@media (min-width: 1024px) {
+  .nav { top: 0; right: auto; width: 220px; height: auto; padding: 24px 12px; display: flex; flex-direction: column; gap: 4px; border-top: 0; border-right: 1px solid var(--line); }
+  .nav .brand { display: block; font-weight: 700; font-size: 20px; line-height: 26px; padding: 0 14px 20px; }
+  .nav .brand small { display: block; font-size: 14px; line-height: 20px; font-weight: 400; color: var(--muted); }
+  .nav a { flex-direction: row; justify-content: flex-start; gap: 12px; padding: 0 14px; font-size: 16px; line-height: 24px; border-radius: 10px; }
+  .nav a[aria-current="page"] { background: var(--accent-soft); }
+  .nav a[aria-current="page"]::before { top: 12px; bottom: 12px; left: 0; right: auto; width: 3px; height: auto; border-radius: 0 3px 3px 0; }
+  .nav .dot { position: static; margin-left: auto; }
+  .nav .old { margin-top: auto; font-size: 14px; }
+  .pend-bar { left: 220px; bottom: 0; }
+  main { margin-left: 220px; padding: 32px 24px 48px; }
+  .page { max-width: 1120px; }
+  .page.narrow { max-width: 1120px; }
+  .oggi-grid { display: grid; grid-template-columns: 200px minmax(460px, 540px) minmax(220px, 1fr); gap: 24px; align-items: start; }
+  .oggi-right .section-title:first-child { margin-top: 0; }
+  .counts { grid-template-columns: 1fr; }
+  .counts > div + div { border-left: 0; border-top: 1px solid var(--line); }
+  .oggi-grid .work { margin-top: 0; }
+
+  .allow { grid-template-columns: 1fr; gap: 0; }
+  .allow li { flex-wrap: nowrap; gap: 10px; min-height: 44px; border-top: 1px solid var(--line); }
+  .allow li .v { flex-basis: auto; margin-left: auto; font-size: 16px; }
+  .dock { position: sticky; bottom: 16px; margin-top: 12px; border: 1px solid var(--border); border-radius: 12px; }
+  .toast { left: 252px; bottom: 24px; }
+  .contatti-grid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 24px; align-items: start; }
+  .table-wrap { overflow-x: auto; }
+  .contatti-grid .list-mobile { display: none; }
+  .table-wrap { display: block; }
+  .detail-panel { display: grid; grid-template-rows: minmax(0, 1fr) auto; position: sticky; top: 32px; height: calc(100dvh - 136px); min-height: 480px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+  .detail-panel .detail-body { padding: 16px; overflow-y: auto; }
+  .detail-panel .detail-foot { border-radius: 0 0 12px 12px; padding: 12px 16px 16px; }
+  .detail-panel .detail-foot .btn { font-size: 15px; padding: 0 12px; }
+  .detail-panel .placeholder { padding: 24px; color: var(--text-2); }
+  .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .two-col .section-title:first-child, .two-col > div > .section-title:first-child { margin-top: 0; }
+  .sheet { left: 50%; right: auto; width: 560px; transform: translateX(-50%); bottom: 24px; border-radius: 20px; border-bottom: 1px solid var(--border); animation: none; }
+  .filter-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .btn:active:not(:disabled) { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<section id="signin" class="signin" hidden>
+  <img src="/apple-touch-icon.png" alt="">
+  <h1>Assistente</h1>
+  <p>Scrivi /app al bot su Telegram e inserisci qui il codice che ti manda.</p>
+  <label class="sr-only" for="code">Codice a sei cifre</label>
+  <input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="······">
+  <p id="signin-err" class="field-error" role="alert" style="margin-top:12px"></p>
+</section>
+
+<div id="shell" hidden>
+  <nav class="nav" id="nav" aria-label="Sezioni">
+    <div class="brand">Assistente<small>Banco di lavoro</small></div>
+    <a href="#oggi" data-tab="oggi"><span data-icon="today"></span><span>Oggi</span><span class="dot num" id="nav-dot" hidden></span></a>
+    <a href="#contatti" data-tab="contatti"><span data-icon="contacts"></span><span>Contatti</span></a>
+    <a href="#risultati" data-tab="risultati"><span data-icon="results"></span><span>Risultati</span></a>
+    <a href="#controllo" data-tab="controllo"><span data-icon="control"></span><span>Controllo</span></a>
+  </nav>
+
+  <main id="main">
+    <section id="tab-oggi" class="page" hidden aria-labelledby="oggi-title">
+      <div class="page-head"><div><h1 id="oggi-title">Oggi</h1><p class="meta" id="oggi-date">&nbsp;</p></div></div>
+      <div class="oggi-grid">
+        <div class="oggi-left" id="oggi-left"></div>
+        <div class="oggi-center">
+          <div class="work" id="oggi-work" aria-live="polite"></div>
+          <div class="dock" id="dock" hidden></div>
+        </div>
+        <div class="oggi-right" id="oggi-right"></div>
+      </div>
+    </section>
+
+    <section id="tab-contatti" class="page" hidden aria-labelledby="contatti-title">
+      <div class="page-head"><div><h1 id="contatti-title">Contatti</h1><p class="meta" id="contatti-count">&nbsp;</p></div></div>
+      <div class="contatti-grid">
+        <div>
+          <div class="search"><span data-icon="search"></span>
+            <label class="sr-only" for="q">Cerca</label>
+            <input id="q" type="search" placeholder="Cerca nome, città, telefono" autocomplete="off"></div>
+          <div class="filters">
+            <div class="chips" id="status-chips" role="group" aria-label="Stato"></div>
+            <button class="btn" id="more-filters" aria-expanded="false" aria-controls="filter-grid"><span data-icon="filter"></span><span id="more-filters-label">Filtri</span></button>
+            <div class="filter-grid" id="filter-grid" hidden></div>
+          </div>
+          <p class="meta results-count" id="rows-count"></p>
+          <ul class="list rows list-mobile" id="lead-rows"></ul>
+          <div class="table-wrap" id="lead-table"></div>
+        </div>
+        <aside class="detail-panel" id="detail-panel" aria-label="Scheda del contatto"><p class="placeholder">Scegli un contatto dall'elenco.</p></aside>
+      </div>
+    </section>
+
+    <section id="tab-risultati" class="page" hidden aria-labelledby="risultati-title">
+      <div class="page-head"><div><h1 id="risultati-title">Risultati</h1><p class="meta" id="risultati-range">&nbsp;</p></div></div>
+      <div class="seg" id="period" role="group" aria-label="Periodo">
+        <button data-days="7" aria-pressed="false">7 giorni</button>
+        <button data-days="30" aria-pressed="true">30 giorni</button>
+        <button data-days="90" aria-pressed="false">90 giorni</button>
+      </div>
+      <div id="risultati-body"></div>
+    </section>
+
+    <section id="tab-controllo" class="page" hidden aria-labelledby="controllo-title">
+      <div class="page-head"><div><h1 id="controllo-title">Controllo</h1><p class="meta">Limiti, pause e lavori del server</p></div></div>
+      <div id="controllo-body"></div>
+    </section>
+  </main>
+  <div class="pend-bar" id="pend-bar" hidden></div>
+</div>
+
+<div class="detail-screen" id="detail-screen" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden></div>
+<div id="sheet-root"></div>
+<div id="toast-root" aria-live="polite" role="status"></div>
+
+<script>
+"use strict";
+/* ── basics ─────────────────────────────────────────────────────────── */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+// DOM building only. Attributes are set with setAttribute and text with text
+// nodes, so nothing from the server is ever parsed as markup.
+function h(tag, attrs, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k === "class") n.className = v;
+    else if (k.startsWith("on") && typeof v === "function") n.addEventListener(k.slice(2), v);
+    else n.setAttribute(k, v === true ? "" : String(v));
+  }
+  for (const kid of kids.flat(3)) {
+    if (kid === null || kid === undefined || kid === false) continue;
+    n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  }
+  return n;
+}
+// replaceChildren would print "null" for a skipped optional part.
+function fill(n, ...kids) {
+  n.replaceChildren(...kids.flat(3).filter((k) => k !== null && k !== undefined && k !== false));
+  return n;
+}
+// Icons: constant path data, built with createElementNS.
+const P = {
+  today: ["M9 11l3 3 8-8", "M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"],
+  contacts: ["M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2", "M9 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z", "M23 21v-2a4 4 0 0 0-3-3.87", "M16 3.13a4 4 0 0 1 0 7.75"],
+  results: ["M3 20h18", "M6 20v-6", "M11 20V8", "M16 20v-9", "M21 20V4"],
+  control: ["M4 21v-7", "M4 10V3", "M12 21v-9", "M12 8V3", "M20 21v-5", "M20 12V3", "M1 14h6", "M9 8h6", "M17 16h6"],
+  wa: ["M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"],
+  phone: ["M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"],
+  mail: ["M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M22 6l-10 7L2 6"],
+  check: ["M20 6L9 17l-5-5"], x: ["M18 6L6 18", "M6 6l12 12"],
+  clock: ["M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M12 6v6l4 2"],
+  skip: ["M5 4l10 8-10 8V4z", "M19 5v14"],
+  back: ["M15 18l-6-6 6-6"], right: ["M9 18l6-6-6-6"], down: ["M6 9l6 6 6-6"],
+  alert: ["M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z", "M12 9v4", "M12 17h.01"],
+  ban: ["M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M4.9 4.9l14.2 14.2"],
+  edit: ["M12 20h9", "M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"],
+  image: ["M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z", "M8.5 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z", "M21 15l-5-5L5 21"],
+  reply: ["M9 14L4 9l5-5", "M20 20v-7a4 4 0 0 0-4-4H4"],
+  calendar: ["M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M16 2v4", "M8 2v4", "M3 10h18"],
+  search: ["M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z", "M21 21l-4.3-4.3"],
+  filter: ["M22 3H2l8 9.5V19l4 2v-8.5L22 3z"],
+  globe: ["M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M2 12h20", "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"],
+  lock: ["M5 11h14v10H5z", "M8 11V7a4 4 0 0 1 8 0v4"],
+  mobile: ["M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z", "M12 18h.01"],
+  unreachable: ["M1 1l22 22", "M16.7 11.1A11 11 0 0 1 19 12.5", "M5 12.5a11 11 0 0 1 5.2-2.6", "M10.7 5.1A16 16 0 0 1 22.6 9", "M1.4 9a16 16 0 0 1 4.7-2.9", "M8.5 16.1a6 6 0 0 1 7 0", "M12 20h.01"],
+  note: ["M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z", "M14 2v6h6", "M16 13H8", "M16 17H8"],
+  refresh: ["M23 4v6h-6", "M1 20v-6h6", "M3.5 9a9 9 0 0 1 14.9-3.4L23 10", "M1 14l4.6 4.4A9 9 0 0 0 20.5 15"],
+  pause: ["M6 4h4v16H6z", "M14 4h4v16h-4z"],
+};
+function icon(name, label) {
+  const ns = "http://www.w3.org/2000/svg", s = document.createElementNS(ns, "svg");
+  s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("class", "i");
+  if (label) { s.setAttribute("role", "img"); s.setAttribute("aria-label", label); } else s.setAttribute("aria-hidden", "true");
+  for (const d of P[name] || []) { const p = document.createElementNS(ns, "path"); p.setAttribute("d", d); s.append(p); }
+  return s;
+}
+for (const n of $$("[data-icon]")) n.replaceWith(icon(n.dataset.icon));
+
+const store = {
+  get(k) { try { return localStorage.getItem("v2:" + k); } catch { return null; } },
+  set(k, v) { try { v === null ? localStorage.removeItem("v2:" + k) : localStorage.setItem("v2:" + k, v); } catch {} },
+};
+const desktop = () => matchMedia("(min-width: 1024px)").matches;
+
+class ApiError extends Error { constructor(msg, status, data) { super(msg); this.status = status; this.data = data || {}; } }
+async function api(path, body) {
+  const opts = { credentials: "same-origin", headers: { "X-Requested-With": "app" } };
+  if (body !== undefined) { opts.method = "POST"; opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
+  let r;
+  try { r = await fetch(path, opts); }
+  catch { throw new ApiError("Sei offline o il server non risponde.", 0); }
+  let data = {};
+  try { data = await r.json(); } catch {}
+  if (r.status === 401 && path !== "/api/pair") { showSignin(); throw new ApiError("signin", 401); }
+  if (!r.ok) throw new ApiError(data.error || "Errore del server (" + r.status + ")", r.status, data);
+  return data;
+}
+
+/* ── formatting ─────────────────────────────────────────────────────── */
+const MONTHS = ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"];
+const parseDay = (iso) => iso ? new Date(String(iso).slice(0, 10) + "T12:00:00") : null;
+const parseTime = (iso) => iso ? new Date(String(iso)) : null;
+function shortDate(iso) { const d = parseDay(iso); return d ? `${d.getDate()} ${MONTHS[d.getMonth()]}` : ""; }
+function longDate(iso) {
+  const d = parseDay(iso); if (!d) return "";
+  const s = d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+  return s[0].toUpperCase() + s.slice(1);
+}
+function hhmm(iso) { const d = parseTime(iso); return d ? d.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" }) : ""; }
+function dayDiff(iso, from) { const a = parseDay(iso), b = parseDay(from || todayIso()); return a && b ? Math.round((a - b) / 86400000) : null; }
+function todayIso() { return (S.today && S.today.date) || new Date().toISOString().slice(0, 10); }
+function relDay(iso) {
+  const n = dayDiff(iso); if (n === null) return "";
+  if (n === 0) return "oggi"; if (n === -1) return "ieri"; if (n === 1) return "domani";
+  return n < 0 ? `${-n} giorni fa` : `tra ${n} giorni`;
+}
+function whenText(iso) {
+  if (!iso) return "";
+  const n = dayDiff(iso);
+  const t = String(iso).length > 10 ? " alle " + hhmm(iso) : "";
+  if (n === 0) return "oggi" + t; if (n === -1) return "ieri" + t;
+  return shortDate(iso) + t;
+}
+function plural(n, one, many) { return `${n} ${n === 1 ? one : many}`; }
+function formatPhone(p) {
+  if (!p) return "";
+  let d = String(p).replace(/[^\d+]/g, ""), cc = "";
+  if (d.startsWith("+39")) { cc = "+39 "; d = d.slice(3); } else if (d.startsWith("0039")) { cc = "+39 "; d = d.slice(4); }
+  else if (/^39\d{9,10}$/.test(d)) { cc = "+39 "; d = d.slice(2); }
+  const head = d.startsWith("3") ? d.slice(0, 3) : /^0[26]/.test(d) ? d.slice(0, 2) : d.slice(0, 3);
+  const rest = d.slice(head.length);
+  return (cc + head + " " + (rest.length > 4 ? rest.slice(0, rest.length - 4) + " " + rest.slice(-4) : rest)).trim();
+}
+const cap1 = (s) => s ? s[0].toUpperCase() + s.slice(1) : "";
+// "a Studio", but "ad Ambulatorio".
+const aName = (name) => (/^[aA]/.test(name || "") ? "ad " : "a ") + (name || "questo studio");
+const whereText = (c) => [cap1(c.category || ""), c.city].filter(Boolean).join(" · ");
+const PROBLEM_ICON = { site_down: "unreachable", domain_gone: "unreachable", ssl_expired: "lock", ssl_expiring: "lock",
+  ssl_wrong_host: "lock", not_mobile: "mobile", mobile_overflow: "mobile", no_site_found: "globe", no_website: "globe", slow: "clock" };
+function problemChip(p, fallback) {
+  if (!p && !fallback) return null;
+  if (!p) return h("span", { class: "chip" }, fallback);
+  return h("span", { class: "chip " + (p.tone || "") }, icon(PROBLEM_ICON[p.code] || "alert"), p.label || p);
+}
+
+/* ── toast ──────────────────────────────────────────────────────────── */
+let toastTimer = null;
+function toast(text, opts = {}) {
+  const root = $("#toast-root"); clearTimeout(toastTimer);
+  const kids = [h("p", {}, text)];
+  if (opts.action) kids.push(h("button", { class: "btn", onclick: () => { fill(root, ); clearTimeout(toastTimer); opts.action.fn(); } }, opts.action.label));
+  fill(root, h("div", { class: "toast" }, kids));
+  toastTimer = setTimeout(() => { fill(root, ); opts.onExpire && opts.onExpire(); }, opts.ms || 3200);
+}
+
+/* ── sheets: opaque, scrollable, Back and Esc close them ───────────── */
+let sheetOpen = null;
+function openSheet(title, body, foot) {
+  closeSheet(true);
+  const prevFocus = document.activeElement;
+  const close = h("button", { class: "icon-btn", "aria-label": "Chiudi", onclick: () => closeSheet() }, icon("x"));
+  const sheet = h("div", { class: "sheet", role: "dialog", "aria-modal": "true", "aria-label": title },
+    h("div", { class: "sheet-head" }, h("h2", {}, title), close),
+    h("div", { class: "sheet-body" }, body), foot ? h("div", { class: "sheet-foot" }, foot) : null);
+  const scrim = h("div", { class: "scrim", onclick: () => closeSheet() });
+  fill($("#sheet-root"), scrim, sheet);
+  sheet.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { e.preventDefault(); closeSheet(); }
+    if (e.key !== "Tab") return;
+    const f = $$("button, a[href], input, select, textarea", sheet).filter((x) => !x.disabled && x.offsetParent);
+    if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  });
+  history.pushState({ sheet: true }, "");
+  sheetOpen = { prevFocus };
+  setTimeout(() => (sheet.querySelector("[autofocus]") || close).focus(), 30);
+}
+function closeSheet(silent) {
+  if (!sheetOpen) return;
+  const { prevFocus } = sheetOpen; sheetOpen = null;
+  fill($("#sheet-root"), );
+  if (!silent && history.state && history.state.sheet) history.back();
+  if (prevFocus && prevFocus.focus) prevFocus.focus();
+}
+addEventListener("popstate", () => { if (sheetOpen) { const s = sheetOpen; sheetOpen = null; fill($("#sheet-root"), ); s.prevFocus && s.prevFocus.focus && s.prevFocus.focus(); } });
+
+/* ── state and routing ──────────────────────────────────────────────── */
+const S = { tab: "oggi", today: null, chan: {}, busy: false, leads: null, selected: null, detail: null,
+  filters: { q: "", status: "todo", category: "", city: "", problem: "", next: "" }, sort: { key: "order", dir: 1 },
+  period: 30, results: null, settings: null, jobs: null, dockError: "" };
+const TABS = ["oggi", "contatti", "risultati", "controllo"];
+
+function route() {
+  const raw = location.hash.replace(/^#\/?/, "");
+  const [name, arg] = raw.split("/");
+  if (name === "lead" && /^\d+$/.test(arg || "")) {
+    if (desktop()) { setTab("contatti", false); showDetail(+arg); }
+    else { if (!S.tab) setTab("contatti"); openDetailScreen(+arg); }
+    return;
+  }
+  closeDetailScreen();
+  setTab(TABS.includes(name) ? name : "oggi");
+}
+function setTab(tab, load = true) {
+  const changed = S.tab !== tab || !$("#tab-" + tab).offsetParent;
+  S.tab = tab;
+  for (const a of $$("#nav a")) a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
+  for (const t of TABS) $("#tab-" + t).hidden = t !== tab;
+  if (changed) window.scrollTo(0, 0);
+  if (load) ({ oggi: loadOggi, contatti: loadContatti, risultati: loadRisultati, controllo: loadControllo })[tab]();
+  else if (tab === "contatti" && !S.leads) loadContatti();
+  updatePendBar();
+  updateDockSpace();
+}
+addEventListener("hashchange", route);
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible" || $("#shell").hidden) return;
+  // Back from WhatsApp or the dialler: the dock is already asking; refresh
+  // so another device's answer or a new day shows up too.
+  refreshCurrent();
+});
+function refreshCurrent() {
+  if (S.tab === "oggi") loadOggi(); else loadToday().then(updatePendBar).catch(() => {});
+  if (S.tab === "contatti") loadContatti();
+  if (S.tab === "controllo") loadControllo();
+  if (S.detail && (!$("#detail-screen").hidden || desktop())) showDetail(S.detail.id, true);
+}
+async function loadToday() { S.today = await api("/api/v2/today"); updateNavDot(); return S.today; }
+function updateNavDot() {
+  const t = S.today, dot = $("#nav-dot"); if (!t) return;
+  const n = t.sections.replies + t.sections.overdue;
+  dot.hidden = !n; dot.textContent = n > 99 ? "99+" : String(n);
+  dot.setAttribute("aria-label", plural(n, "cosa urgente", "cose urgenti"));
+}
+function updateDockSpace() {
+  const dock = $("#dock"), bar = $("#pend-bar");
+  let hgt = 0;
+  if (!desktop()) {
+    if (S.tab === "oggi" && !dock.hidden) hgt = dock.offsetHeight;
+    else if (!bar.hidden) hgt = bar.offsetHeight;
+  }
+  document.documentElement.style.setProperty("--dock-h", hgt + "px");
+}
+new ResizeObserver(updateDockSpace).observe($("#dock"));
+addEventListener("resize", () => { updateDockSpace(); });
+
+/* ── the handoff: Apri WhatsApp -> Hai inviato il messaggio? ─────────── */
+const KIND_FOR = { new: "first", reply: "reply", follow: "follow_up" };
+function launch(h_) {
+  // Phone: straight into the WhatsApp app or the dialler. Laptop: wa.me in a new tab.
+  if (h_.channel === "whatsapp" && desktop() && h_.web_link) window.open(h_.web_link, "_blank", "noopener");
+  else if (h_.link) location.href = h_.link;
+}
+async function startHandoff(card, channel, btn) {
+  if (S.busy) return;
+  const kind = channel === "call" ? (KIND_FOR[card.kind] || "follow_up") : (KIND_FOR[card.kind] || "follow_up");
+  const body = { channel, kind };
+  if (channel === "whatsapp" && kind === "first") {
+    const text = currentDraft(card);
+    const problem = validateMiddle(text);
+    if (problem) { S.dockError = problem; renderDock(); focusEditor(); return; }
+    body.body = text;
+  }
+  S.busy = true; if (btn) { btn.disabled = true; }
+  try {
+    const res = await api(`/api/v2/lead/${card.id}/handoff`, body);
+    S.dockError = "";
+    if (S.today) S.today.pending = { key: res.key, channel: res.channel, kind: res.kind, lead_id: res.lead_id, name: res.name, link: res.link, web_link: res.web_link };
+    renderDock(); updatePendBar(); if (S.detail && S.detail.id === card.id) renderDetailFoot();
+    launch(res);
+  } catch (e) {
+    if (e.message === "signin") return;
+    S.dockError = e.message;
+    if (e.data && e.data.pending && S.today) S.today.pending = e.data.pending;
+    renderDock(); updatePendBar(); if (S.detail) renderDetailFoot();
+    if (!$("#detail-screen").hidden) toast(e.message);
+  } finally { S.busy = false; if (btn) btn.disabled = false; }
+}
+async function resolveHandoff(p, body) {
+  if (S.busy) return; S.busy = true;
+  try {
+    const res = await api(`/api/v2/handoff/${encodeURIComponent(p.key)}`, body);
+    if (S.today) S.today.pending = null;
+    if (body.result === "sent") store.set("draft:" + p.lead_id, null);
+    const lbl = res.label || "Registrato";
+    if (res.follow_up_at && body.result !== "later") {
+      toast(`${lbl} · follow-up ${shortDate(res.follow_up_at)}`, { ms: 5000, action: { label: "Cambia", fn: () => followUpSheet({ id: p.lead_id, name: p.name, follow_up_at: res.follow_up_at, state: "X" }) } });
+    } else if (res.snoozed_until) toast(`${res.name}: torna ${whenText(res.snoozed_until)}`);
+    else toast(lbl);
+  } catch (e) { if (e.message !== "signin") { S.dockError = e.message; } }
+  finally { S.busy = false; }
+  await loadOggi(); if (S.detail) showDetail(S.detail.id, true);
+}
+function pendingPanel(p, compact) {
+  const name = p.name || "questo studio";
+  if (p.channel === "call") {
+    const outs = [["ok", "Parlato"], ["hot", "Interessato"], ["later", "Da richiamare"], ["noanswer", "Non risponde"], ["no", "Non interessato"], ["none", "Non ho chiamato"]];
+    return h("div", { class: "inner" },
+      h("p", { class: "q" }, `Com'è andata la chiamata con ${name}?`),
+      h("div", { class: "grid2" }, outs.map(([o, l], i) => h("button", { class: "btn" + (i === 0 ? " primary" : ""), onclick: () => resolveHandoff(p, { result: "call", outcome: o }) }, l))),
+      p.link ? h("a", { class: "again", href: p.link }, "Richiama") : null,
+      S.dockError ? h("p", { class: "err", role: "alert" }, S.dockError) : null);
+  }
+  const reply = p.kind === "reply";
+  return h("div", { class: "inner" },
+    h("p", { class: "q" }, reply ? `Hai risposto ${aName(name)}?` : `Hai inviato il messaggio ${aName(name)}?`),
+    h("div", { class: "row" }, h("button", { class: "btn primary", onclick: () => resolveHandoff(p, { result: "sent" }) }, icon("check"), reply ? "Fatto" : "Inviato")),
+    h("div", { class: "row" },
+      h("button", { class: "btn", onclick: () => resolveHandoff(p, { result: "not_sent" }) }, reply ? "Non ancora" : "Non inviato"),
+      h("button", { class: "btn", onclick: () => resolveHandoff(p, { result: "later" }) }, "Più tardi")),
+    // A second genuine tap always works: a real link, no request in between.
+    p.link && !compact ? h("a", { class: "again", href: desktop() && p.web_link ? p.web_link : p.link, target: desktop() ? "_blank" : null, rel: "noopener" }, "Riapri WhatsApp") : null,
+    S.dockError ? h("p", { class: "err", role: "alert" }, S.dockError) : null);
+}
+function updatePendBar() {
+  const bar = $("#pend-bar"), p = S.today && S.today.pending;
+  const show = p && S.tab !== "oggi" && $("#detail-screen").hidden && !desktop();
+  bar.hidden = !show;
+  if (show) fill(bar, h("p", {}, p.channel === "call" ? `Chiamata ${aName(p.name)}: com'è andata?` : `In attesa: hai scritto ${aName(p.name)}?`),
+    h("a", { class: "btn", href: "#oggi" }, "Rispondi"));
+  updateDockSpace();
+}
+
+/* ── message editing: only the middle, by hand ─────────────────────── */
+const CLAUSES = [["Momo", "Chi sei"], ["Ho trovato il vostro numero", "Dove hai trovato il numero"], ["non ricevere altri messaggi", "Come smettere"]];
+function currentDraft(card) { const d = store.get("draft:" + card.id); return d !== null ? d : (card.message ? card.message.body : ""); }
+function validateMiddle(text) {
+  const t = (text || "").trim();
+  if (t.length < 10) return "Il messaggio è vuoto: scrivi almeno una frase.";
+  if (t.length > 1500) return "Il messaggio è troppo lungo (massimo 1500 caratteri).";
+  return "";
+}
+function focusEditor() { const t = $("#msg-body") || $("#d-msg-body"); if (t) t.focus(); }
+function messageEditor(card, id) {
+  const m = card.message;
+  const ta = h("textarea", { id, rows: 6, "aria-describedby": id + "-help", spellcheck: "true" });
+  ta.value = currentDraft(card);
+  const clauses = h("p", { class: "clauses", id: id + "-help" });
+  const reset = h("button", { class: "linkish", type: "button", onclick: () => { store.set("draft:" + card.id, null); ta.value = m.body; check(); } }, "Ripristina il testo");
+  function check() {
+    const full = [m.intro, ta.value, m.closing].join("\n\n");
+    fill(clauses, ...CLAUSES.map(([needle, label]) => {
+      const ok = full.includes(needle);
+      return h("span", { class: ok ? "" : "bad" }, icon(ok ? "check" : "x"), label);
+    }));
+    reset.hidden = ta.value === m.body;
+    const err = validateMiddle(ta.value);
+    ta.setAttribute("aria-invalid", err ? "true" : "false");
+  }
+  ta.addEventListener("input", () => { store.set("draft:" + card.id, ta.value); check(); if (S.dockError) { S.dockError = ""; renderDock(); } });
+  check();
+  return h("div", { class: "msg" },
+    h("p", { class: "fixed" }, m.intro),
+    h("label", { for: id }, h("span", {}, h("span", {}, "Il tuo messaggio"), h("span", { class: "meta" }, "modificabile a mano")), ta),
+    h("p", { class: "fixed" }, m.closing),
+    clauses, reset,
+    h("p", { class: "help" }, "Le frasi in grigio restano sempre: dicono chi sei, dove hai trovato il numero e come smettere. WhatsApp si apre con il testo, invii tu."));
+}
+
+/* ── Oggi ───────────────────────────────────────────────────────────── */
+const KIND_LABEL = { reply: "Risposta da gestire", follow_overdue: "Follow-up scaduto", follow_today: "Follow-up di oggi", new: "Nuovo contatto" };
+const CHANNEL_LABEL = { whatsapp: "WhatsApp", email: "Email", call: "Chiamata" };
+async function loadOggi() {
+  const work = $("#oggi-work");
+  if (!S.today) fill(work, h("div", { class: "card" }, h("p", { class: "meta" }, "Carico la coda…")));
+  try { await loadToday(); }
+  catch (e) {
+    if (e.message === "signin") return;
+    fill(work, errorPanel(e, loadOggi)); $("#dock").hidden = true; updateDockSpace(); return;
+  }
+  renderOggi();
+}
+function errorPanel(e, retry) {
+  const offline = e.status === 0;
+  return h("div", { class: "panel-empty", role: "alert" },
+    h("h2", {}, offline ? "Sei offline" : "Non riesco a caricare"),
+    h("p", {}, offline ? "La connessione non risponde. Le modifiche al testo restano salvate su questo telefono." : e.message),
+    h("button", { class: "btn", onclick: retry }, icon("refresh"), "Riprova"));
+}
+function renderOggi() {
+  const t = S.today;
+  $("#oggi-date").textContent = longDate(t.date);
+  const pausedCh = ["whatsapp", "email", "call"].filter((c) => t.paused[c]);
+  const allow = (name, ic, n, cap, paused) => h("li", {}, icon(ic), h("span", {}, name),
+    paused ? h("span", { class: "tag" }, "in pausa") : null,
+    h("span", { class: "v num" + (cap !== null && n >= cap ? " full" : "") }, cap === null ? String(n) : `${n}/${cap}`));
+  const left = [
+    h("div", { class: "card progress" },
+      h("p", { class: "big" }, h("span", { class: "num" }, String(t.counts.total)), " ", t.counts.total === 1 ? "contatto confermato" : "contatti confermati",
+        h("span", { class: "meta", style: "font-weight:400" }, ` su ${t.goal}`)),
+
+      h("ul", { class: "allow" },
+        allow("WhatsApp", "wa", t.counts.whatsapp, t.caps.whatsapp, t.paused.whatsapp),
+        allow("Email", "mail", t.counts.email, t.caps.email, t.paused.email),
+        allow("Chiamate", "phone", t.counts.call, null, t.paused.call))),
+    pausedCh.length ? h("div", { class: "notice", style: "margin-top:12px" }, icon("pause"),
+      h("p", {}, t.paused.all ? "Tutti gli invii sono in pausa." : `In pausa: ${pausedCh.map((c) => CHANNEL_LABEL[c]).join(", ")}.`, " ", h("a", { href: "#controllo" }, "Cambia in Controllo"))) : null,
+    h("div", { class: "counts" },
+      h("div", { class: t.sections.replies ? "hot" : "" }, h("div", { class: "n num" }, String(t.sections.replies)), h("div", { class: "l" }, "Risposte da gestire")),
+      h("div", { class: t.sections.overdue ? "warn" : "" }, h("div", { class: "n num" }, String(t.sections.overdue)), h("div", { class: "l" }, "Follow-up scaduti")),
+      h("div", {}, h("div", { class: "n num" }, String(t.sections.today)), h("div", { class: "l" }, "Follow-up oggi"))),
+  ];
+  fill($("#oggi-left"), ...left);
+
+  const work = $("#oggi-work");
+  if (!t.first) {
+    fill(work, h("div", { class: "panel-empty" },
+      h("h2", {}, "Niente da fare adesso"),
+      h("p", {}, t.sections.snoozed ? `${plural(t.sections.snoozed, "studio rimandato torna", "studi rimandati tornano")} più tardi. ` + "Il resto è fatto."
+        : t.counts.whatsapp >= t.caps.whatsapp ? "Limite WhatsApp di oggi raggiunto: i nuovi contatti ripartono domani." : "Coda vuota per oggi. Chi non ha risposto torna quando scade il follow-up."),
+      h("a", { class: "btn", href: "#contatti" }, "Apri i contatti")));
+  } else {
+    fill(work, renderCard(t.first));
+  }
+  // right column: what comes next, then the week's follow-ups
+  const right = [];
+  if (t.queue.length) {
+    right.push(h("h2", { class: "section-title" }, `Poi, in coda (${t.remaining})`),
+      h("ul", { class: "list" }, t.queue.slice(0, 12).map((q) => h("li", {}, h("a", { class: "item", href: "#lead/" + q.id },
+        h("span", { class: "grow" }, h("span", { class: "name" }, q.name),
+          h("span", { class: "meta", style: "display:block" }, [KIND_LABEL[q.kind] + (q.kind === "follow_overdue" && q.due ? ` da ${-dayDiff(q.due)} g` : ""), q.skipped ? "saltato" : null, q.problem].filter(Boolean).join(" · "))),
+        icon("right"))))),
+      t.queue.length > 12 ? h("p", { class: "meta", style: "margin-top:8px" }, `e altri ${t.remaining - 12} nei Contatti, filtro "Da fare".`) : null);
+  }
+  if (t.agenda.length) {
+    right.push(h("h2", { class: "section-title" }, "Prossimi follow-up"),
+      h("ul", { class: "list" }, t.agenda.slice(0, 8).map((a) => h("li", {}, h("a", { class: "item", href: "#lead/" + a.id },
+        h("span", { class: "grow" }, h("span", { class: "name" }, a.name)), h("span", { class: "meta num" }, shortDate(a.date)))))));
+  }
+  fill($("#oggi-right"), ...right);
+  renderDock();
+}
+function channelFor(card) {
+  const pick = S.chan[card.id];
+  return pick && card.channels[pick] && card.channels[pick].ok ? pick : card.channel;
+}
+function renderCard(item) {
+  const c = item.card, kind = item.kind;
+  const overdueDays = kind === "follow_overdue" && item.due ? -dayDiff(item.due) : 0;
+  const kicker = h("p", { class: "kicker" + (kind === "reply" ? " hot" : kind === "follow_overdue" ? " warn" : "") },
+    icon(kind === "reply" ? "reply" : kind === "new" ? "today" : "calendar"),
+    KIND_LABEL[kind] + (overdueDays > 0 ? ` da ${plural(overdueDays, "giorno", "giorni")}` : ""));
+  const p = c.problem;
+  const ch = channelFor(c);
+  const contact = ch === "email" ? c.email : ch === "call" ? formatPhone(c.channels.call.number) : formatPhone(c.whatsapp);
+  const facts = [];
+  if (kind !== "new") {
+    if (c.last_contact) facts.push(["Ultimo contatto", `${c.last_contact.label}, ${relDay(c.last_contact.at)}`]);
+    if (c.reply && c.reply.todo) facts.push(["Risposta", `${c.reply.label || "Ricevuta"}, ${relDay(c.reply.at)}`]);
+    if (c.last_note) facts.push(["Ultima nota", c.last_note.text.split("\n")[0].slice(0, 160)]);
+  }
+  facts.push([CHANNEL_LABEL[ch] || "Contatto", contact || "—"]);
+  const factList = h("ul", { class: "facts" }, facts.map(([k, v]) => h("li", {}, h("span", {}, k), h("span", {}, v))));
+  const evidence = h("div", { class: "evidence" }, problemChip(p),
+    p && p.verified_at ? h("span", { class: "meta" }, icon("check"), `Verificato ${whenText(p.verified_at)}`) : null,
+    c.shot ? h("button", { class: "linkish", style: "padding:0;min-height:48px", onclick: () => shotSheet(c) }, "Vedi la prova") : null);
+  const parts = [kicker, h("h2", { id: "card-title" }, c.name), h("p", { class: "meta where" }, whereText(c))];
+  // A first message is reviewed right under its evidence; a reply or a
+  // follow-up needs the conversation first, the evidence after.
+  const firstMessage = kind === "new" && ch === "whatsapp" && c.message;
+  if (firstMessage) parts.push(evidence, messageEditor(c, "msg-body"), factList);
+  else {
+    parts.push(...(kind === "new" ? [evidence, factList] : [factList, evidence]));
+    if (kind !== "new") parts.push(channelPicker(c, ch));
+    if (ch === "email" && c.email_draft) parts.push(emailEditor(c));
+    else if (ch === "call" && c.script) parts.push(h("details", { class: "say" }, h("summary", { style: "min-height:48px;display:flex;align-items:center;cursor:pointer;font-weight:600" }, "Cosa dire al telefono"), h("p", {}, c.script)));
+    else if (ch === "whatsapp" && kind !== "new") parts.push(h("p", { class: "help", style: "margin-top:12px" }, "WhatsApp si apre sulla chat vuota: scrivi tu, come in una conversazione."));
+  }
+  parts.push(h("div", { class: "grid2 quiet-actions" },
+    h("button", { class: "btn", onclick: () => doSkip(c) }, icon("skip"), "Salta"),
+    h("button", { class: "btn", onclick: () => doSnooze(c) }, icon("clock"), "Più tardi oggi")));
+  parts.push(h("div", { class: "row card-links" },
+    kind !== "new" ? h("button", { class: "btn", onclick: () => replySheet(c) }, "Registra risposta") : null,
+    h("a", { class: "btn", href: "#lead/" + c.id }, "Dettagli")));
+  // One tap, permanent after five seconds: kept apart from the routine
+  // deferrals so it never reads as another "later".
+  parts.push(h("div", { class: "exclude" },
+    h("button", { class: "btn danger block", onclick: () => doDnc(c) }, icon("ban"), "Non contattare")));
+  return h("article", { class: "card lead-card", "aria-labelledby": "card-title" }, parts);
+}
+// Reasons worth showing: a cap, a pause, PEC, a wrong number. "Not queued
+// for email" is just how the cascade works, so that channel is left out.
+const TELLING = /Limite|pausa|PEC|errato|già inviata/;
+function channelPicker(c, ch) {
+  const names = ["whatsapp", "call", "email"].filter((k) => c.channels[k].ok || k === ch || TELLING.test(c.channels[k].why || ""));
+  const blocked = names.filter((k) => !c.channels[k].ok && c.channels[k].why);
+  const why = blocked.length ? h("p", { class: "meta why" }, blocked.map((k) => `${CHANNEL_LABEL[k]}: ${c.channels[k].why}`).join(" · ")) : null;
+  if (names.length < 2) return why ? h("div", { class: "chan" }, why) : null;
+  return h("div", { class: "chan" },
+    h("div", { class: "seg", role: "group", "aria-label": "Canale" }, names.map((k) =>
+      h("button", { "aria-pressed": String(k === ch), disabled: !c.channels[k].ok && k !== ch,
+        onclick: () => { S.chan[c.id] = k; S.dockError = ""; renderOggi(); } }, CHANNEL_LABEL[k]))),
+    why);
+}
+function emailEditor(c) {
+  const d = c.email_draft;
+  const subj = h("input", { type: "text", id: "em-subject", value: store.get("esubj:" + c.id) ?? d.subject, maxlength: 200 });
+  const body = h("textarea", { id: "em-body", rows: 8 }); body.value = store.get("ebody:" + c.id) ?? d.body;
+  subj.addEventListener("input", () => store.set("esubj:" + c.id, subj.value));
+  body.addEventListener("input", () => store.set("ebody:" + c.id, body.value));
+  return h("div", { class: "msg" },
+    h("p", { class: "meta" }, "A: ", c.email),
+    h("label", { class: "field" }, h("span", {}, "Oggetto"), subj),
+    h("label", { class: "field" }, h("span", {}, "Testo, modificabile a mano"), body),
+    h("p", { class: "fixed", style: "margin-top:8px" }, d.footer),
+    h("p", { class: "help" }, "Firma, provenienza del contatto e come smettere li aggiunge il server: non si possono togliere."));
+}
+function renderDock() {
+  const dock = $("#dock"), t = S.today;
+  if (!t) { dock.hidden = true; updateDockSpace(); return; }
+  if (t.pending) { fill(dock, pendingPanel(t.pending)); dock.hidden = false; updateDockSpace(); return; }
+  if (!t.first) { dock.hidden = true; updateDockSpace(); return; }
+  const c = t.first.card, ch = channelFor(c), st = c.channels[ch] || { ok: false };
+  let primary, status;
+  if (ch === "whatsapp") {
+    const label = c.kind === "new" ? "Apri WhatsApp" : c.kind === "reply" ? "Rispondi su WhatsApp" : "Scrivi su WhatsApp";
+    primary = h("button", { class: "btn wa", disabled: !st.ok, onclick: (e) => startHandoff(c, "whatsapp", e.currentTarget) }, icon("wa"), st.ok ? label : st.why);
+    status = [`WhatsApp oggi ${t.counts.whatsapp}/${t.caps.whatsapp}`, st.ok ? null : st.why];
+  } else if (ch === "email") {
+    primary = h("button", { class: "btn primary", disabled: !st.ok || !c.email_draft, onclick: (e) => sendEmail(c, e.currentTarget) }, icon("mail"), st.ok ? "Invia email" : st.why);
+    status = [`Email oggi ${t.counts.email}/${t.caps.email}`, st.ok ? null : st.why];
+  } else {
+    primary = h("button", { class: "btn primary", disabled: !st.ok, onclick: (e) => startHandoff(c, "call", e.currentTarget) }, icon("phone"), st.ok ? "Chiama " + formatPhone(st.number) : st.why);
+    status = [`Chiamate oggi ${t.counts.call}`, st.ok ? null : st.why];
+  }
+  const edit = c.kind === "new" && ch === "whatsapp" && c.message
+    ? h("button", { class: "btn", style: "flex:0 0 auto", onclick: focusEditor }, icon("edit"), "Modifica") : null;
+  fill(dock, h("div", { class: "inner" },
+    h("p", { class: "status" }, h("span", {}, c.name), h("span", { class: st.ok ? "num" : "warn" }, status[1] || status[0])),
+    h("div", { class: "row" }, edit, primary),
+    S.dockError ? h("p", { class: "err", role: "alert" }, S.dockError) : null));
+  dock.hidden = false; updateDockSpace();
+}
+async function sendEmail(c, btn) {
+  const subject = ($("#em-subject") || {}).value ?? c.email_draft.subject;
+  const body = ($("#em-body") || {}).value ?? c.email_draft.body;
+  if (!subject.trim() || body.trim().length < 40) { S.dockError = "Oggetto o testo mancante."; renderDock(); return; }
+  btn.disabled = true;
+  try {
+    await api("/api/email", { id: c.id, subject, body });
+    store.set("esubj:" + c.id, null); store.set("ebody:" + c.id, null); S.dockError = "";
+    toast(`Email inviata a ${c.name}`);
+  } catch (e) { if (e.message !== "signin") S.dockError = e.message; }
+  await loadOggi(); if (S.detail && S.detail.id === c.id) showDetail(c.id, true);
+}
+
+/* ── one-tap actions ────────────────────────────────────────────────── */
+async function doSkip(c) {
+  try { await api(`/api/v2/lead/${c.id}/skip`, {}); toast(`${c.name} in fondo alla coda`); await loadOggi(); }
+  catch (e) { if (e.message !== "signin") toast(e.message); }
+}
+async function doSnooze(c) {
+  try { const r = await api(`/api/v2/lead/${c.id}/snooze`, { preset: "later" }); toast(`${c.name}: torna ${whenText(r.until)}`); await loadOggi(); if (S.detail) showDetail(c.id, true); }
+  catch (e) { if (e.message !== "signin") toast(e.message); }
+}
+async function doDnc(c) {
+  try {
+    await api(`/api/v2/lead/${c.id}/dnc`, {});
+    // Written at once. "Annulla" works for five seconds; after that it is permanent.
+    toast(`${c.name}: non contattare`, { ms: 5000, action: { label: "Annulla", fn: async () => {
+      try { await api(`/api/v2/lead/${c.id}/dnc/undo`, {}); toast("Annullato"); } catch (e) { if (e.message !== "signin") toast(e.message); }
+      await loadOggi(); if (S.detail && S.detail.id === c.id) showDetail(c.id, true); if (S.tab === "contatti") loadContatti();
+    } } });
+    await loadOggi(); if (S.detail && S.detail.id === c.id) showDetail(c.id, true); if (S.tab === "contatti") loadContatti();
+  } catch (e) { if (e.message !== "signin") toast(e.message); }
+}
+function replySheet(c) {
+  let type = null, via = c.channel === "email" ? "email" : c.channel === "call" ? "call" : "whatsapp";
+  const opts = [["positive", "Positiva", "Interessato: rispondi oggi."], ["question", "Domanda", "Chiede qualcosa: rispondi oggi."],
+    ["not_interested", "Non interessato", "Chiude il contatto e toglie i follow-up."], ["wrong_number", "Numero errato", "Il numero non è dello studio. Un'email normale resta usabile."]];
+  const optOut = h("input", { type: "checkbox", id: "optout" });
+  const optRow = h("label", { class: "check", for: "optout", hidden: true }, optOut, h("span", {}, "Ha chiesto di non essere più contattato (Non contattare)"));
+  const save = h("button", { class: "btn primary block", disabled: true }, "Registra");
+  const list = h("div", { role: "group", "aria-label": "Tipo di risposta" }, opts.map(([k, t, d]) => h("button", { class: "choice", "aria-pressed": "false", onclick: (e) => {
+    type = k; for (const b of $$(".choice", list)) b.setAttribute("aria-pressed", String(b === e.currentTarget));
+    optRow.hidden = k !== "not_interested"; save.disabled = false;
+  } }, h("span", {}, h("span", { class: "t" }, t), h("span", { class: "d" }, d)))));
+  const viaSeg = h("div", { class: "seg", role: "group", "aria-label": "Arrivata da" }, [["whatsapp", "WhatsApp"], ["email", "Email"], ["call", "Telefono"]].map(([k, l]) =>
+    h("button", { "aria-pressed": String(k === via), onclick: (e) => { via = k; for (const b of $$("button", viaSeg)) b.setAttribute("aria-pressed", String(b === e.currentTarget)); } }, l)));
+  save.addEventListener("click", async () => {
+    save.disabled = true;
+    try {
+      await api(`/api/v2/lead/${c.id}/reply`, { type, channel: via, opt_out: optOut.checked });
+      closeSheet(); toast("Risposta registrata");
+      await loadOggi(); if (S.detail && S.detail.id === c.id) showDetail(c.id, true);
+    } catch (e) { save.disabled = false; if (e.message !== "signin") toast(e.message); }
+  });
+  openSheet(`Risposta di ${c.name}`, h("div", {}, list, optRow, h("p", { class: "sub-title" }, "Arrivata da"), viaSeg), save);
+}
+function followUpSheet(c) {
+  const date = h("input", { type: "date", id: "fu-date", min: todayIso(), value: c.follow_up_at ? String(c.follow_up_at).slice(0, 10) : "" });
+  const err = h("p", { class: "field-error", role: "alert" });
+  async function set(body) {
+    try {
+      const r = await api(`/api/v2/lead/${c.id}/followup`, body);
+      closeSheet(); toast(r.follow_up_at ? `Follow-up ${shortDate(r.follow_up_at)}` : "Follow-up tolto");
+      await loadOggi(); if (S.detail && S.detail.id === c.id) showDetail(c.id, true);
+    } catch (e) { if (e.message !== "signin") err.textContent = e.message; }
+  }
+  openSheet("Follow-up" + (c.name ? " · " + c.name : ""), h("div", {},
+    c.follow_up_at ? h("p", { class: "sec", style: "margin-bottom:12px" }, `Adesso: ${longDate(c.follow_up_at)}`) : h("p", { class: "sec", style: "margin-bottom:12px" }, "Nessun follow-up fissato."),
+    h("div", { class: "grid3" },
+      h("button", { class: "btn", onclick: () => set({ preset: "today" }) }, "Oggi"),
+      h("button", { class: "btn", onclick: () => set({ preset: "tomorrow" }) }, "Domani"),
+      h("button", { class: "btn", onclick: () => set({ preset: "3days" }) }, "Tra 3 giorni")),
+    h("label", { class: "field" }, h("span", {}, "Scegli data"), date),
+    h("button", { class: "btn block", style: "margin-top:8px", onclick: () => date.value ? set({ date: date.value }) : (err.textContent = "Scegli una data.") }, "Fissa questa data"),
+    err,
+    c.follow_up_at ? h("button", { class: "btn danger block", style: "margin-top:16px", onclick: () => set({ remove: true }) }, "Togli il follow-up") : null));
+}
+function shotSheet(c) {
+  const img = h("img", { class: "full-shot", src: `/api/shot/${c.id}`, alt: `Il sito di ${c.name} visto da un telefono` });
+  openSheet("Prova", h("div", {}, img, c.shot && c.shot.at ? h("p", { class: "meta", style: "margin-top:8px;text-align:center" }, `Schermata del ${shortDate(c.shot.at)} alle ${hhmm(c.shot.at)} · allarga con due dita`) : null));
+}
+
+/* ── lead detail: full screen on a phone, a panel on a laptop ──────── */
+async function openDetailScreen(id) {
+  const scr = $("#detail-screen");
+  if (scr.hidden) {
+    scr.hidden = false; document.body.style.overflow = "hidden";
+    fill(scr, detailFrame("Carico…"));
+  }
+  await showDetail(id);
+}
+function closeDetailScreen() {
+  const scr = $("#detail-screen");
+  if (!scr.hidden) { scr.hidden = true; document.body.style.overflow = ""; fill(scr, ); }
+  if (!desktop()) S.detail = null;
+}
+function detailFrame(title) {
+  return [h("div", { class: "detail-top" },
+    h("button", { class: "icon-btn", "aria-label": "Indietro", onclick: () => history.length > 1 ? history.back() : (location.hash = "#contatti") }, icon("back")),
+    h("p", { class: "t meta", id: "detail-title", "aria-label": title }, "Scheda contatto")),
+    h("div", { class: "detail-body" }, h("div", { class: "inner" })), h("div", { class: "detail-foot", id: "detail-foot" }, h("div", { class: "inner" }))];
+}
+async function showDetail(id, quiet) {
+  const onScreen = !$("#detail-screen").hidden;
+  const host = onScreen ? $("#detail-screen") : $("#detail-panel");
+  if (!quiet) { S.selected = id; markSelected(); }
+  let c;
+  try { c = await api(`/api/v2/lead/${id}`); if (!S.today) await loadToday().catch(() => {}); }
+  catch (e) {
+    if (e.message === "signin") return;
+    fill(host, ...(onScreen ? detailFrame("Errore") : []), errorPanel(e, () => showDetail(id)));
+    return;
+  }
+  S.detail = c;
+  const frame = onScreen ? detailFrame(c.name) : [h("div", { class: "detail-body" }, h("div", { class: "inner" })), h("div", { class: "detail-foot", id: "detail-foot" }, h("div", { class: "inner" }))];
+  const scroll = quiet && host.querySelector(".detail-body") ? host.querySelector(".detail-body").scrollTop : 0;
+  fill(host, ...frame);
+  fill(host.querySelector(".detail-body .inner"), ...detailBody(c));
+  host.querySelector(".detail-body").scrollTop = scroll;
+  renderDetailFoot();
+}
+function markSelected() { for (const tr of $$("table.leads tbody tr")) tr.setAttribute("aria-selected", String(+tr.dataset.id === S.selected)); }
+function detailBody(c) {
+  const p = c.problem, next = c.next || {};
+  const nd = next.date ? dayDiff(next.date) : null;
+  const nextText = next.kind === "follow" ? (next.overdue ? `Follow-up scaduto il ${shortDate(next.date)}` : nd === 0 ? "Follow-up oggi" : nd === 1 ? "Follow-up domani" : `Follow-up il ${shortDate(next.date)}`)
+    : next.kind === "reply" ? "Rispondere oggi" : next.kind === "new" ? `Primo contatto (${CHANNEL_LABEL[next.channel] || "in coda"})` : next.label;
+  const out = [];
+  out.push(h("div", { class: "d-head" },
+    h("h2", {}, c.name), h("p", { class: "meta" }, whereText(c)),
+    h("div", { class: "chips" },
+      h("span", { class: "chip" + (c.dnc ? " critical" : c.state === "INTERESTED" ? " ok" : "") }, c.dnc ? "Non contattare" : c.status_label),
+      nextText ? h("span", { class: "chip " + (next.overdue ? "warning" : "info") }, icon(next.kind === "reply" ? "reply" : "calendar"), nextText) : null,
+      c.snoozed_until && parseTime(c.snoozed_until) > new Date() ? h("span", { class: "chip" }, icon("clock"), `Torna ${whenText(c.snoozed_until)}`) : null)));
+  if (c.dnc) out.push(h("div", { class: "notice error dnc-banner" }, icon("ban"), h("p", {}, `Non contattare dal ${shortDate(c.dnc.at)}: ${c.dnc.reason || ""}. Nessun canale è attivo, per sempre.`)));
+  if (!c.dnc && c.state !== "NEW") {
+    // Nothing to reply to or follow up before the first contact.
+    const followLabel = c.follow_up_at ? `Follow-up ${shortDate(c.follow_up_at)}` : "Fissa follow-up";
+    out.push(h("div", { class: "actions-grid" },
+      h("button", { class: "btn", onclick: () => replySheet(c) }, "Registra risposta"),
+      c.state !== "DEAD" ? h("button", { class: "btn", onclick: () => followUpSheet(c) }, icon("calendar"), followLabel) : null));
+  }
+  // Problema + Prova
+  out.push(h("section", { class: "d-sec" }, h("h3", {}, "Problema"),
+    p ? h("div", {}, problemChip(p), h("p", { style: "margin-top:8px" }, cap1(p.text) + "."),
+      h("p", { class: "meta", style: "margin-top:4px" }, [p.verified_at ? `Verificato ${whenText(p.verified_at)}` : "Non ancora verificato", `Fonte: ${c.source}`].join(" · ")),
+      p.sendable ? null : h("p", { class: "help" }, "Non abbastanza sicuro per scriverlo in un messaggio."))
+      : h("p", { class: "sec" }, "Nessun problema trovato sul sito."),
+    c.shot ? h("div", { class: "proof", style: "margin-top:12px" },
+      h("button", { "aria-label": "Apri la schermata del sito", onclick: () => shotSheet(c) }, h("img", { src: `/api/shot/${c.id}`, alt: "", loading: "lazy" })),
+      h("p", { class: "meta" }, `Schermata dal telefono, ${shortDate(c.shot.at)} alle ${hhmm(c.shot.at)}. Toccala per ingrandire.`)) : null));
+  // Messaggio
+  if (c.message && !c.dnc) out.push(h("section", { class: "d-sec" }, h("h3", {}, "Primo messaggio WhatsApp"), messageEditor(c, "d-msg-body")));
+  else if (c.email_draft && !c.dnc) out.push(h("section", { class: "d-sec" }, h("h3", {}, "Email"), h("p", { class: "sec" }, "Oggetto: ", c.email_draft.subject), h("p", { class: "fixed", style: "white-space:pre-line;margin-top:8px" }, c.email_draft.body)));
+  if (c.script && !c.dnc) out.push(h("details", { class: "d-sec say" }, h("summary", { style: "min-height:48px;display:flex;align-items:center;cursor:pointer;font-weight:700" }, "Cosa dire al telefono"), h("p", {}, c.script)));
+  // Contatti (editable)
+  out.push(contactForm(c));
+  // Note
+  const noteTa = h("textarea", { id: "note-new", rows: 3, placeholder: "Scrivi una nota", maxlength: 1000 });
+  const noteBtn = h("button", { class: "btn block", style: "margin-top:8px" }, icon("note"), "Aggiungi nota");
+  noteBtn.addEventListener("click", async () => {
+    if (!noteTa.value.trim()) return noteTa.focus();
+    noteBtn.disabled = true;
+    try { await api(`/api/v2/lead/${c.id}/note`, { text: noteTa.value }); toast("Nota salvata"); showDetail(c.id, true); }
+    catch (e) { noteBtn.disabled = false; if (e.message !== "signin") toast(e.message); }
+  });
+  out.push(h("section", { class: "d-sec" }, h("h3", {}, "Note"),
+    c.notes && c.notes.length ? h("ul", { class: "notes" }, c.notes.slice(0, 20).map((n) => h("li", {}, n.at ? h("p", { class: "meta" }, whenText(n.at)) : null, h("p", { class: "txt" }, n.text)))) : h("p", { class: "meta", style: "margin-bottom:8px" }, "Nessuna nota."),
+    h("label", { class: "sr-only", for: "note-new" }, "Nuova nota"), noteTa, noteBtn));
+  // Cronologia
+  out.push(h("section", { class: "d-sec" }, h("h3", {}, "Cronologia"),
+    c.history && c.history.length ? h("ol", { class: "timeline" }, c.history.map((e) => h("li", {},
+      h("p", { class: "when" }, whenText(e.at)), h("p", { class: "what" }, e.label), e.detail ? h("p", { class: "det" }, e.detail) : null))) : h("p", { class: "meta" }, "Niente ancora.")));
+  if (!c.dnc) out.push(h("section", { class: "danger-zone" },
+    h("h3", { style: "margin-bottom:4px" }, "Non contattare mai"),
+    h("p", {}, "Toglie lo studio da ogni coda e da ogni canale, e cancella i follow-up. Hai cinque secondi per annullare, poi è per sempre."),
+    h("button", { class: "btn danger block", onclick: () => doDnc(c) }, icon("ban"), "Non contattare mai")));
+  return out;
+}
+function contactForm(c) {
+  const f = {
+    phone: h("input", { type: "tel", id: "cf-phone", value: c.phone || "", autocomplete: "off" }),
+    whatsapp: h("input", { type: "tel", id: "cf-wa", value: c.whatsapp ? formatPhone(c.whatsapp) : "", autocomplete: "off" }),
+    email: h("input", { type: "email", id: "cf-email", value: c.email || "", autocomplete: "off" }),
+    website: h("input", { type: "url", id: "cf-site", value: c.website || "", autocomplete: "off" }),
+  };
+  const pec = h("input", { type: "checkbox", id: "cf-pec" }); pec.checked = !!c.email_pec_flag;
+  const errs = {}; for (const k of Object.keys(f)) errs[k] = h("p", { class: "field-error", id: `cf-${k}-err` });
+  const save = h("button", { class: "btn block", style: "margin-top:12px" }, "Salva contatti");
+  save.addEventListener("click", async () => {
+    for (const e of Object.values(errs)) e.textContent = "";
+    const body = {};
+    if (f.phone.value.trim() !== (c.phone || "")) body.phone = f.phone.value;
+    if (f.whatsapp.value.replace(/\D/g, "") !== String(c.whatsapp || "").replace(/^39/, "").replace(/\D/g, "") &&
+        f.whatsapp.value.replace(/\D/g, "") !== String(c.whatsapp || "")) body.whatsapp = f.whatsapp.value;
+    if (f.email.value.trim() !== (c.email || "")) body.email = f.email.value;
+    if (f.website.value.trim() !== (c.website || "")) body.website = f.website.value;
+    if (pec.checked !== !!c.email_pec_flag) body.email_pec = pec.checked;
+    if (!Object.keys(body).length) { toast("Nessuna modifica"); return; }
+    save.disabled = true;
+    try { await api(`/api/v2/lead/${c.id}/contact`, body); toast("Contatti salvati"); showDetail(c.id, true); if (S.tab === "contatti") loadContatti(); }
+    catch (e) {
+      save.disabled = false; if (e.message === "signin") return;
+      const fields = e.data.fields || {};
+      for (const [k, m] of Object.entries(fields)) if (errs[k]) errs[k].textContent = m;
+      if (!Object.keys(fields).length) toast(e.message);
+    }
+  });
+  const field = (k, label, extra) => h("label", { class: "field", for: f[k].id }, h("span", {}, label), f[k], extra || null, errs[k]);
+  return h("section", { class: "d-sec" }, h("h3", {}, "Contatti"),
+    c.phone_invalid ? h("div", { class: "notice", style: "margin-bottom:8px" }, icon("alert"), h("p", {}, "Numero segnato come errato: correggilo qui per riattivarlo.")) : null,
+    field("phone", "Telefono"), field("whatsapp", "Cellulare (WhatsApp)"),
+    field("email", "Email", c.email ? h("p", { class: c.email_pec ? "field-error" : "help" }, c.email_pec ? "Indirizzo PEC: niente email, mai." : "Email normale.") : null),
+    h("label", { class: "check", for: "cf-pec" }, pec, h("span", {}, "È un indirizzo PEC")),
+    field("website", "Sito", h("p", { class: "help" }, "Se cambi il sito, il server lo ricontrolla prima di scriverne.")),
+    h("p", { class: "meta", style: "margin-top:8px" }, `Fonte del contatto: ${c.source}. I valori vecchi restano nella cronologia.`),
+    save);
+}
+function renderDetailFoot() {
+  const foot = $("#detail-foot"), c = S.detail; if (!foot || !c) return;
+  const inner = foot.querySelector(".inner") || foot;
+  const p = S.today && S.today.pending;
+  if (c.dnc) { foot.hidden = true; return; }
+  foot.hidden = false;
+  if (p && p.lead_id === c.id) { fill(inner, pendingPanel(p, false)); return; }
+  if (p) { fill(inner, h("p", { class: "meta", style: "margin-bottom:8px" }, `Prima di tutto: com'è andata con ${p.name}?`), h("a", { class: "btn block", href: "#oggi" }, "Vai a Oggi")); return; }
+  const wa = c.channels.whatsapp, call = c.channels.call, em = c.channels.email;
+  const waLabel = c.kind === "new" ? "Apri WhatsApp" : c.kind === "reply" ? "Rispondi su WhatsApp" : "Scrivi su WhatsApp";
+  const kids = [];
+  kids.push(h("div", { class: "row" },
+    h("button", { class: "btn wa", disabled: !wa.ok, onclick: (e) => startHandoffFromDetail(c, "whatsapp", e.currentTarget) }, icon("wa"), wa.ok ? waLabel : (wa.why || "WhatsApp")),
+    h("button", { class: "btn", style: "flex:0 0 auto", disabled: !call.ok, onclick: (e) => startHandoffFromDetail(c, "call", e.currentTarget), "aria-label": call.ok ? "Chiama " + formatPhone(call.number) : "Chiama: " + (call.why || "") }, icon("phone"), "Chiama")));
+  if (c.email_draft && em.ok) kids.push(h("div", { class: "row", style: "margin-top:8px" }, h("button", { class: "btn", onclick: () => emailSheet(c) }, icon("mail"), "Leggi e invia l'email")));
+  else if (c.email && !em.ok && TELLING.test(em.why || "")) kids.push(h("p", { class: "meta", style: "margin-top:6px" }, `Email: ${em.why}`));
+  fill(inner, ...kids);
+}
+async function startHandoffFromDetail(c, channel, btn) {
+  if (channel === "whatsapp" && c.kind === "new") {
+    const ta = $("#d-msg-body"); if (ta) store.set("draft:" + c.id, ta.value);
+  }
+  await startHandoff(c, channel, btn);
+}
+function emailSheet(c) {
+  const ed = emailEditor(c);
+  const send = h("button", { class: "btn primary block" }, icon("mail"), "Invia email");
+  send.addEventListener("click", async () => { closeSheet(); await sendEmail(c, send); });
+  openSheet(`Email a ${c.name}`, ed, send);
+}
+
+/* ── Contatti ───────────────────────────────────────────────────────── */
+const STATUS_CHIPS = [["todo", "Da fare"], ["", "Tutti"], ["NEW", "Nuovi"], ["WHATSAPP_SENT", "Scritti"], ["CONTACTED", "Sentiti"],
+  ["INTERESTED", "Interessati"], ["DEAD", "Chiusi"], ["dnc", "Non contattare"]];
+const NEXT_OPTS = [["", "Qualsiasi"], ["reply", "Rispondere"], ["overdue", "Follow-up scaduto"], ["today", "Follow-up oggi"], ["future", "Follow-up futuro"], ["new", "Primo contatto"], ["none", "Niente"]];
+let qTimer = null;
+function renderStatusChips() {
+  fill($("#status-chips"), ...STATUS_CHIPS.map(([v, l]) => h("button", { class: "chip", "aria-pressed": String(S.filters.status === v),
+    onclick: () => { S.filters.status = v; renderStatusChips(); loadContatti(); } }, l)));
+}
+function renderFilterGrid(f) {
+  const sel = (key, label, opts) => {
+    const s = h("select", { id: "f-" + key }, opts.map(([v, l]) => h("option", { value: v, selected: S.filters[key] === v }, l)));
+    s.addEventListener("change", () => { S.filters[key] = s.value; loadContatti(); });
+    return h("label", {}, h("span", {}, label), h("div", { class: "select-wrap" }, s, icon("down")));
+  };
+  fill($("#filter-grid"), 
+    sel("category", "Categoria", [["", "Tutte"], ...f.categories.map((x) => [x.value, `${cap1(x.label)} (${x.count})`])]),
+    sel("city", "Città", [["", "Tutte"], ...f.cities.map((x) => [x.value, `${x.label} (${x.count})`])]),
+    sel("problem", "Problema", [["", "Tutti"], ...f.problems.map((x) => [x.value, `${x.label} (${x.count})`])]),
+    sel("next", "Prossimo passo", NEXT_OPTS));
+  const n = ["category", "city", "problem", "next"].filter((k) => S.filters[k]).length;
+  $("#more-filters-label").textContent = n ? `Filtri (${n})` : "Filtri";
+}
+$("#more-filters").addEventListener("click", (e) => {
+  const g = $("#filter-grid"); g.hidden = !g.hidden; e.currentTarget.setAttribute("aria-expanded", String(!g.hidden));
+});
+$("#q").addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(() => { S.filters.q = $("#q").value; loadContatti(); }, 250); });
+async function loadContatti() {
+  renderStatusChips();
+  const qs = new URLSearchParams(Object.entries(S.filters).filter(([, v]) => v)).toString();
+  try { S.leads = await api("/api/v2/leads?" + qs); }
+  catch (e) { if (e.message !== "signin") fill($("#lead-rows"), h("li", {}, errorPanel(e, loadContatti))); return; }
+  renderFilterGrid(S.leads.facets);
+  renderContatti();
+  if (desktop() && !S.selected && S.leads.rows.length) { S.selected = S.leads.rows[0].id; showDetail(S.selected); }
+}
+function nextCell(r) {
+  const n = r.next || {};
+  if (n.kind === "follow") {
+    const d = dayDiff(n.date);
+    return h("span", { class: n.overdue ? "late" : d === 0 ? "due" : "" }, n.overdue ? `Follow-up scaduto da ${plural(-d, "giorno", "giorni")}` : d === 0 ? "Follow-up oggi" : `Follow-up ${shortDate(n.date)}`);
+  }
+  if (n.kind === "reply") return h("span", { class: "todo" }, "Rispondere");
+  if (n.kind === "new") return h("span", {}, "Primo contatto · " + (CHANNEL_LABEL[n.channel] || ""));
+  return h("span", { class: "meta" }, n.label || "—");
+}
+function sortedRows() {
+  const rows = S.leads.rows.slice(), { key, dir } = S.sort;
+  if (key === "order") return dir === 1 ? rows : rows.reverse();
+  const val = (r) => key === "next" ? (r.order * 1e5 + (r.next.date ? dayDiff(r.next.date) + 5e4 : 9e4)) : String(r[key] || "").toLowerCase();
+  return rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : 0) * dir);
+}
+function renderContatti() {
+  const L = S.leads;
+  $("#contatti-count").textContent = plural(L.total, "studio", "studi") + (L.total > L.rows.length ? `, i primi ${L.rows.length}` : "");
+  $("#rows-count").textContent = L.total ? "" : "Nessuno studio con questi filtri.";
+  const rows = sortedRows();
+  fill($("#lead-rows"), ...rows.map((r) => h("li", {}, h("a", { class: "item", href: "#lead/" + r.id },
+    h("span", { class: "grow" }, h("span", { class: "name", style: "display:block" }, r.name),
+      h("span", { class: "meta", style: "display:block" }, [cap1(r.category || ""), r.city].filter(Boolean).join(" · ")),
+      r.problem ? h("span", { class: "meta", style: "display:block;color:var(--text-2)" }, r.problem) : null),
+    h("span", { class: "right" }, h("span", { class: "state-lbl", style: "display:block" }, r.status_label), h("span", { class: "meta", style: "display:block" }, nextCell(r)))))));
+  const cols = [["name", "Studio"], ["problem", "Problema"], ["status_label", "Stato"], ["next", "Prossimo passo"]];
+  const head = h("tr", {}, cols.map(([k, l]) => h("th", { scope: "col", "aria-sort": S.sort.key === k ? (S.sort.dir === 1 ? "ascending" : "descending") : "none" },
+    h("button", { onclick: () => { S.sort = { key: k, dir: S.sort.key === k ? -S.sort.dir : 1 }; renderContatti(); } }, l, S.sort.key === k ? icon(S.sort.dir === 1 ? "down" : "back") : null))));
+  const body = rows.map((r) => {
+    const tr = h("tr", { "data-id": r.id, "aria-selected": String(r.id === S.selected), onclick: () => { location.hash = "#lead/" + r.id; } },
+      h("td", { class: "name" }, h("a", { href: "#lead/" + r.id }, r.name), h("span", { class: "meta", style: "display:block;font-weight:400" }, [cap1(r.category || ""), r.city].filter(Boolean).join(" · "))),
+      h("td", {}, r.problem || "—"), h("td", {}, r.status_label), h("td", {}, nextCell(r)));
+    return tr;
+  });
+  fill($("#lead-table"), h("table", { class: "leads" }, h("caption", { class: "sr-only" }, "Contatti"), h("thead", {}, head), h("tbody", {}, body)));
+}
+
+/* ── Risultati ──────────────────────────────────────────────────────── */
+for (const b of $$("#period button")) b.addEventListener("click", () => {
+  S.period = +b.dataset.days; for (const x of $$("#period button")) x.setAttribute("aria-pressed", String(x === b)); loadRisultati();
+});
+async function loadRisultati() {
+  const box = $("#risultati-body");
+  if (!S.results) fill(box, h("p", { class: "meta", style: "margin-top:16px" }, "Carico…"));
+  try { S.results = await api("/api/v2/results?days=" + S.period); }
+  catch (e) { if (e.message !== "signin") fill(box, errorPanel(e, loadRisultati)); return; }
+  renderRisultati();
+  loadSito();
+}
+function rateRow(seg, noun) {
+  const pct = seg.rate === null ? null : Math.round(seg.rate * 100);
+  const v = seg.n ? `${plural(seg.replies, "risposta", "risposte")} su ${seg.n}` + (seg.small ? "" : ` · ${pct}%`) : "nessun invio";
+  return h("li", { class: seg.small ? "small" : "" },
+    h("div", { class: "top" }, h("span", { class: "l" }, seg.label), h("span", { class: "v" }, v)),
+    seg.n ? h("div", { class: "track", "aria-hidden": "true" }, h("i", { style: `width:${pct || 0}%` })) : null,
+    h("p", { class: "flag" }, seg.small ? `Campione piccolo (n=${seg.n}): troppo pochi ${noun} per dire qualcosa.` : `n=${seg.n}`));
+}
+function renderRisultati() {
+  const r = S.results, T = r.totals;
+  $("#risultati-range").textContent = `Dal ${shortDate(r.from)} al ${shortDate(r.to)}`;
+  const tile = (v, k, p) => h("div", { class: "tile" }, h("div", { class: "v" }, String(v)), h("div", { class: "k" }, k), h("div", { class: "p" }, p));
+  const period = `ultimi ${r.days} giorni`;
+  const left = [
+    h("h2", { class: "section-title" }, "In breve"),
+    h("div", { class: "tiles" },
+      tile(T.contacts, "Contatti confermati", period),
+      tile(T.messages, "Messaggi inviati", `${T.whatsapp} WhatsApp · ${T.email} email`),
+      tile(T.replies, T.replies === 1 ? "Risposta registrata" : "Risposte registrate", `${plural(T.replies, "risposta", "risposte")}; ${plural(T.messages, "messaggio inviato", "messaggi inviati")}`),
+      tile(r.follow_up.due_now, "Follow-up da fare", r.follow_up.overdue_now ? `adesso, ${r.follow_up.overdue_now} scaduti` : "adesso, nessuno scaduto")),
+    h("h2", { class: "section-title" }, "Invii al giorno"),
+    h("div", { class: "card chart" }, dayChart(r),
+      h("div", { class: "legend" }, h("span", {}, h("i", { class: "sw wa" }), "WhatsApp"), h("span", {}, h("i", { class: "sw em" }), "Email"),
+        h("span", {}, h("i", { class: "sw ca" }), "Chiamate"), h("span", {}, h("i", { class: "sw goal" }), `Obiettivo ${r.goal}`), h("span", {}, h("i", { class: "sw cap" }), `Limite WhatsApp ${r.caps.whatsapp}`)),
+      dayTable(r)),
+  ];
+  const right = [
+    h("h2", { class: "section-title" }, "Risposte per canale"),
+    h("p", { class: "meta" }, `Contano solo i contatti di almeno ${r.mature_days} giorni fa (fino al ${shortDate(r.cohort_to)}): per i più recenti la risposta può ancora arrivare. Per le chiamate, "risposta" vuol dire che hai parlato con qualcuno.`),
+    h("ul", { class: "rates" }, r.by_channel.map((s) => rateRow(s, "contatti"))),
+    h("h2", { class: "section-title" }, "Risposte per problema"),
+    r.by_problem.length ? h("ul", { class: "rates" }, r.by_problem.map((s) => rateRow(s, "messaggi"))) : h("p", { class: "sec" }, "Nessun messaggio abbastanza vecchio in questo periodo."),
+    h("h2", { class: "section-title" }, "Qualità delle risposte"),
+    r.quality.n && r.quality.small ? h("p", { class: "flag meta" }, `Campione piccolo (n=${r.quality.n}).`) : null,
+    h("ul", { class: "kv" }, r.quality.items.map((i) => h("li", {}, h("span", {}, i.label), h("span", { class: "v" }, i.count + (i.pct !== null && !r.quality.small ? ` · ${Math.round(i.pct * 100)}%` : ""))))),
+    h("h2", { class: "section-title" }, "Follow-up"),
+    h("h3", { class: "sub-title" }, "Adesso"),
+    h("ul", { class: "kv" },
+      h("li", {}, h("span", {}, "Da fare"), h("span", { class: "v" }, String(r.follow_up.due_now))),
+      h("li", {}, h("span", {}, "Di cui scaduti"), h("span", { class: "v" }, String(r.follow_up.overdue_now)))),
+    h("h3", { class: "sub-title", style: "margin-top:16px" }, `Fatti negli ultimi ${r.days} giorni`),
+    h("ul", { class: "kv" },
+      h("li", {}, h("span", {}, "In tempo"), h("span", { class: "v" }, String(r.follow_up.done_on_time))),
+      h("li", {}, h("span", {}, "In ritardo"), h("span", { class: "v" }, String(r.follow_up.done_late)))),
+    // 6. the goal streak after the outcomes, not before them
+    h("h2", { class: "section-title" }, "Costanza"),
+    h("ul", { class: "kv" },
+      h("li", {}, h("span", {}, "Giorni di fila con l'obiettivo raggiunto"), h("span", { class: "v" }, String(r.streak.current))),
+      h("li", {}, h("span", {}, `Giorni con l'obiettivo, su ${r.days}`), h("span", { class: "v" }, String(r.streak.days_on_goal)))),
+  ];
+  fill($("#risultati-body"), h("div", { class: "two-col" }, h("div", {}, left), h("div", {}, right)), h("div", { id: "sito" }));
+}
+function dayChart(r) {
+  const ns = "http://www.w3.org/2000/svg", W = 360, H = 200, top = 12, bottom = 26, left = 4, right = 30;
+  const plotH = H - top - bottom, days = r.series;
+  const max = Math.max(1, r.goal, r.caps.whatsapp, ...days.map((d) => d.total));
+  const nice = Math.ceil(max / 10) * 10, y = (v) => top + plotH - (v / nice) * plotH;
+  const band = (W - left - right) / days.length, bw = Math.max(1.5, Math.min(14, band - (days.length > 40 ? 1 : 3)));
+  const s = document.createElementNS(ns, "svg"); s.setAttribute("viewBox", `0 0 ${W} ${H}`); s.setAttribute("role", "img");
+  s.setAttribute("aria-label", `Contatti al giorno negli ultimi ${r.days} giorni. I numeri sono nella tabella sotto.`);
+  const add = (tag, a, text) => { const n = document.createElementNS(ns, tag); for (const [k, v] of Object.entries(a)) n.setAttribute(k, v); if (text !== undefined) n.textContent = text; s.append(n); return n; };
+  const defs = add("defs", {}); const pat = document.createElementNS(ns, "pattern");
+  for (const [k, v] of Object.entries({ id: "hatch", width: 5, height: 5, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" })) pat.setAttribute(k, v);
+  const bg = document.createElementNS(ns, "rect"); bg.setAttribute("width", 5); bg.setAttribute("height", 5); bg.setAttribute("fill", "var(--surface)");
+  const ln = document.createElementNS(ns, "rect"); ln.setAttribute("width", 2); ln.setAttribute("height", 5); ln.setAttribute("fill", "var(--accent)");
+  pat.append(bg, ln); defs.append(pat);
+  const pat2 = document.createElementNS(ns, "pattern");
+  for (const [k, v] of Object.entries({ id: "hatch-h", width: 4, height: 4, patternUnits: "userSpaceOnUse" })) pat2.setAttribute(k, v);
+  const bg2 = document.createElementNS(ns, "rect"); bg2.setAttribute("width", 4); bg2.setAttribute("height", 4); bg2.setAttribute("fill", "var(--surface)");
+  const ln2 = document.createElementNS(ns, "rect"); ln2.setAttribute("width", 4); ln2.setAttribute("height", 2); ln2.setAttribute("fill", "var(--muted)");
+  pat2.append(bg2, ln2); defs.append(pat2);
+  for (const g of [0, nice / 2, nice]) { add("line", { class: "gl", x1: left, x2: W - right, y1: y(g), y2: y(g) }); add("text", { class: "ax", x: W, y: y(g) + 5, "text-anchor": "end" }, String(g)); }
+  days.forEach((d, i) => {
+    const x = left + band * i + (band - bw) / 2; let base = top + plotH;
+    for (const [k, fill, stroke] of [["whatsapp", "var(--accent)", "var(--accent)"], ["email", "url(#hatch)", "var(--accent)"], ["call", "url(#hatch-h)", "var(--muted)"]]) {
+      if (!d[k]) continue; const hgt = (d[k] / nice) * plotH;
+      add("rect", { x, y: base - hgt, width: bw, height: hgt, fill, stroke, "stroke-width": k === "whatsapp" ? 0 : 1 }); base -= hgt;
+    }
+    const step = days.length > 40 ? 15 : days.length > 10 ? 7 : 1;
+    if ((days.length - 1 - i) % step === 0) add("text", { class: "ax", x: x + bw / 2, y: H - 6, "text-anchor": "middle" }, shortDate(d.date).split(" ")[0]);
+  });
+  add("line", { class: "goal", x1: left, x2: W - right, y1: y(r.goal), y2: y(r.goal) });
+  add("text", { class: "lbl", x: left + 2, y: y(r.goal) - 5 }, `Obiettivo ${r.goal}`);
+  if (r.caps.whatsapp !== r.goal) {
+    add("line", { class: "cap", x1: left, x2: W - right, y1: y(r.caps.whatsapp), y2: y(r.caps.whatsapp) });
+    const apart = Math.abs(y(r.caps.whatsapp) - y(r.goal)) >= 16;
+    add("text", { class: "lbl", x: apart ? left + 2 : W - right - 4, y: y(r.caps.whatsapp) - 5, "text-anchor": apart ? "start" : "end" }, `Limite WhatsApp ${r.caps.whatsapp}`);
+  }
+  return s;
+}
+function dayTable(r) {
+  const days = r.series.filter((d) => d.total).slice().reverse();
+  return h("details", { class: "numbers" }, h("summary", {}, "Vedi i numeri"),
+    days.length ? h("table", { class: "daytable" }, h("caption", { class: "sr-only" }, "Contatti al giorno"),
+      h("thead", {}, h("tr", {}, h("th", { scope: "col" }, "Giorno"), h("th", { scope: "col" }, "WhatsApp"), h("th", { scope: "col" }, "Email"), h("th", { scope: "col" }, "Chiamate"))),
+      h("tbody", {}, days.map((d) => h("tr", {}, h("td", {}, shortDate(d.date)), h("td", {}, d.whatsapp), h("td", {}, d.email), h("td", {}, d.call)))))
+      : h("p", { class: "meta" }, "Nessun contatto nel periodo."));
+}
+async function loadSito() {
+  const box = $("#sito"); if (!box) return;
+  fill(box, h("h2", { class: "section-title" }, "Sito switchers.events"), h("p", { class: "meta" }, "Carico…"));
+  try {
+    const { visitors: v, search: g } = await api("/api/site");
+    const days = (v && v.days) || [];
+    const last7 = days.slice(-7).reduce((a, d) => a + d.visitors, 0);
+    const okG = g && !g.error;
+    fill(box, h("h2", { class: "section-title" }, "Sito switchers.events"),
+      h("p", { class: "meta", style: "margin-bottom:8px" }, "Il sito che hai fatto: visite e Google, separati dai risultati dei messaggi."),
+      h("div", { class: "tiles" },
+        h("div", { class: "tile" }, h("div", { class: "v" }, String((v && v.visitors) || 0)), h("div", { class: "k" }, "Visitatori"), h("div", { class: "p" }, "ultimi 14 giorni")),
+        h("div", { class: "tile" }, h("div", { class: "v" }, String(last7)), h("div", { class: "k" }, "Visite"), h("div", { class: "p" }, "ultimi 7 giorni")),
+        h("div", { class: "tile" }, h("div", { class: "v" }, String((v && v.contacts && v.contacts.whatsapp) || 0)), h("div", { class: "k" }, "Contatti WhatsApp dal sito"), h("div", { class: "p" }, "ultimi 14 giorni")),
+        okG ? h("div", { class: "tile" }, h("div", { class: "v" }, String(Math.round(g.clicks || 0))), h("div", { class: "k" }, "Clic da Google"), h("div", { class: "p" }, "ultimi 7 giorni"))
+          : h("div", { class: "tile" }, h("div", { class: "v" }, "—"), h("div", { class: "k" }, "Google"), h("div", { class: "p" }, "non disponibile"))));
+  } catch (e) { if (e.message !== "signin") fill(box, h("h2", { class: "section-title" }, "Sito switchers.events"), h("p", { class: "sec" }, "Dati del sito non disponibili.")); }
+}
+
+/* ── Controllo ──────────────────────────────────────────────────────── */
+let jobTimer = null;
+async function loadControllo() {
+  const box = $("#controllo-body");
+  if (!S.settings) fill(box, h("p", { class: "meta" }, "Carico…"));
+  try { [S.settings, S.jobs] = await Promise.all([api("/api/v2/settings"), api("/api/v2/jobs")]); }
+  catch (e) { if (e.message !== "signin") fill(box, errorPanel(e, loadControllo)); return; }
+  renderControllo();
+  loadHealth();
+}
+function stepper(key, label, help) {
+  const s = S.settings, max = s.limits[key];
+  const input = h("input", { type: "number", id: "st-" + key, min: 0, max, step: 1, value: s[key], inputmode: "numeric", "aria-describedby": `st-${key}-msg` });
+  const msg = h("p", { class: "saved", id: `st-${key}-msg`, "aria-live": "polite" });
+  let timer = null;
+  const commit = () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const v = input.value.trim();
+      try { S.settings = await api("/api/v2/settings", { [key]: v === "" ? null : Number(v) }); msg.className = "saved"; msg.textContent = "Salvato"; input.value = S.settings[key]; if (S.today) loadToday().catch(() => {}); }
+      catch (e) { if (e.message === "signin") return; msg.className = "field-error"; msg.textContent = e.message; input.value = S.settings[key]; }
+    }, 500);
+  };
+  const bump = (d) => { input.value = Math.max(0, Math.min(max, (+input.value || 0) + d)); commit(); };
+  input.addEventListener("change", commit);
+  return h("div", { class: "set-row step" },
+    h("div", { class: "grow" }, h("label", { class: "t", for: input.id }, label), h("p", { class: "meta" }, help), msg),
+    h("div", { class: "stepper" }, h("button", { type: "button", "aria-label": `${label}: meno uno`, onclick: () => bump(-1) }, "−"), input,
+      h("button", { type: "button", "aria-label": `${label}: più uno`, onclick: () => bump(1) }, "+")));
+}
+async function saveSettings(body) {
+  try { S.settings = await api("/api/v2/settings", body); renderControllo(); if (S.today) loadToday().catch(() => {}); }
+  catch (e) { if (e.message !== "signin") toast(e.message); }
+}
+function pauseRow(key, label) {
+  const p = S.settings.pause[key];
+  const sw = h("button", { class: "switch", role: "switch", "aria-checked": String(p.on), "aria-label": label, onclick: () => saveSettings({ pause: { [key]: p.on ? null : "manual" } }) });
+  const date = h("input", { type: "date", min: new Date(Date.now() + 86400000).toISOString().slice(0, 10), "aria-label": "Riprende il giorno" });
+  const until = p.on ? h("div", { style: "margin-top:8px" },
+    h("div", { class: "seg", role: "group", "aria-label": "Fino a quando" },
+      h("button", { "aria-pressed": String(p.manual), onclick: () => saveSettings({ pause: { [key]: "manual" } }) }, "Finché la tolgo"),
+      h("button", { "aria-pressed": String(!p.manual && !!p.until && dayDiff(p.until) === 1), onclick: () => saveSettings({ pause: { [key]: "today" } }) }, "Fino a domani")),
+    h("div", { class: "row", style: "margin-top:8px" }, date, h("button", { class: "btn", style: "flex:0 0 auto", onclick: () => date.value && saveSettings({ pause: { [key]: date.value } }) }, "Fino al giorno"))) : null;
+  return h("div", { class: "set-row stack" },
+    h("div", { class: "row", style: "align-items:center" },
+      h("div", { class: "grow" }, h("p", { class: "t" }, label), h("p", { class: "meta" }, p.on ? (p.manual ? "In pausa finché non la togli" : `In pausa fino a ${longDate(p.until)}`) : "Spenta: gli invii vanno avanti")), sw),
+    until);
+}
+function coverageRows(list, kind) {
+  if (!list.length) return [h("p", { class: "meta", style: "padding:12px 0" }, "Niente da mostrare.")];
+  return list.map((x) => h("div", { class: "set-row" },
+    h("div", { class: "grow" }, h("p", { class: "t" }, cap1(x.name)), h("p", { class: "meta" }, `${plural(x.unsent, "da contattare", "da contattare")} · ${x.count} in tutto`)),
+    h("button", { class: "switch", role: "switch", "aria-checked": String(x.on), "aria-label": `${cap1(x.name)}: ${x.on ? "attivo" : "spento"}`,
+      onclick: () => saveSettings({ coverage: { kind, name: x.name, on: !x.on } }) })));
+}
+function coverageBox(title, list, body) {
+  const off = list.filter((x) => !x.on).length;
+  return h("details", { class: "diag cover", open: off ? true : null },
+    h("summary", {}, title, h("span", { class: "meta", style: "margin-left:auto;font-weight:400" }, off ? `${off} spente` : "tutte accese")),
+    h("div", {}, body));
+}
+function renderControllo() {
+  const s = S.settings;
+  const theme = store.get("theme") || "system";
+  const themeSeg = h("div", { class: "seg", role: "group", "aria-label": "Tema" }, [["system", "Sistema"], ["light", "Chiaro"], ["dark", "Scuro"]].map(([k, l]) =>
+    h("button", { "aria-pressed": String(theme === k), onclick: () => { store.set("theme", k === "system" ? null : k); applyTheme(); renderControllo(); } }, l)));
+  const cities = coverageRows(s.cities, "city");
+  const citiesBox = h("div", {}, cities.slice(0, 8));
+  const moreCities = cities.length > 8 ? h("button", { class: "linkish", onclick: (e) => { fill(citiesBox, ...cities); e.currentTarget.remove(); } }, `Mostra tutte le ${cities.length} città`) : null;
+  const left = [
+    h("h2", { class: "section-title" }, "Obiettivo e limiti"),
+    h("div", { class: "set" },
+      stepper("goal", "Obiettivo di contatti al giorno", "WhatsApp, email e chiamate insieme."),
+      stepper("cap_whatsapp", "WhatsApp al giorno", `Da 0 a 30. Normale: ${s.defaults.cap_whatsapp}. Contano primi messaggi e follow-up.`),
+      stepper("cap_email", "Email al giorno", "Da 0 a 20.")),
+    h("h2", { class: "section-title" }, "Pausa"),
+    h("p", { class: "meta", style: "margin-bottom:8px" }, "In pausa la coda non propone nuovi invii. Le risposte si registrano comunque."),
+    h("p", { class: "meta", style: "margin-bottom:8px" }, "Interruttore acceso = in pausa."),
+    h("div", { class: "set" }, pauseRow("all", "Pausa di tutti gli invii"), pauseRow("whatsapp", "Pausa WhatsApp"), pauseRow("email", "Pausa email"), pauseRow("call", "Pausa chiamate")),
+    h("h2", { class: "section-title" }, "Copertura"),
+    h("p", { class: "meta", style: "margin-bottom:8px" }, "Spento: i suoi studi non ancora contattati escono da Oggi. Niente viene cancellato."),
+    coverageBox("Categorie", s.categories, h("div", { class: "set" }, coverageRows(s.categories, "category"))),
+    coverageBox("Città", s.cities, h("div", { class: "set" }, citiesBox, moreCities)),
+  ];
+  const right = [
+    h("h2", { class: "section-title" }, "Lavori del server"),
+    h("p", { class: "meta", style: "margin-bottom:8px" }, "L'app mette in coda la richiesta; il server la esegue entro un minuto, una alla volta."),
+    h("div", { class: "set" }, S.jobs.jobs.map(jobRow)),
+    h("h2", { class: "section-title" }, "Applicazione"),
+    h("div", { class: "set" },
+      h("div", { class: "set-row stack" }, h("p", { class: "t" }, "Tema"), h("div", { style: "margin-top:8px" }, themeSeg)),
+      h("div", { class: "set-row", id: "health" }, h("div", { class: "grow" }, h("p", { class: "t" }, "Stato del server"), h("p", { class: "meta" }, "Controllo…")))),
+    h("details", { class: "diag", ontoggle: (e) => { if (e.currentTarget.open) loadAgents(); } },
+      h("summary", {}, "Diagnostica e agenti"), h("div", { id: "agents" }, h("p", { class: "meta" }, "Carico…"))),
+    h("p", { style: "margin-top:24px" }, h("a", { href: "/" }, "Apri la vecchia app")),
+  ];
+  fill($("#controllo-body"), h("div", { class: "two-col" }, h("div", {}, left), h("div", {}, right)));
+  clearTimeout(jobTimer);
+  if (S.jobs.jobs.some((j) => j.last && ["queued", "running"].includes(j.last.status)))
+    jobTimer = setTimeout(async () => { if (S.tab !== "controllo" || document.hidden) return; try { S.jobs = await api("/api/v2/jobs"); renderControllo(); } catch {} }, 10000);
+}
+function jobRow(j) {
+  const last = j.last, active = last && ["queued", "running"].includes(last.status);
+  const cls = !last ? "" : last.status === "done" ? "ok" : last.status === "error" ? "critical" : "info";
+  const when = !last ? "Mai avviato" : last.status === "queued" ? `Richiesto ${whenText(last.requested_at)}`
+    : last.status === "running" ? `Avviato ${whenText(last.started_at)}` : `Finito ${whenText(last.finished_at)}`;
+  return h("div", { class: "job" },
+    h("div", { class: "top" }, h("div", { class: "grow" }, h("p", { class: "t", style: "font-weight:600" }, j.label), h("p", { class: "meta" }, when)),
+      last ? h("span", { class: "chip " + cls }, last.status_label) : null),
+    last && last.summary ? h("p", { class: "sum" }, last.summary) : null,
+    h("button", { class: "btn block", style: "margin-top:8px", disabled: active, onclick: async (e) => {
+      e.currentTarget.disabled = true;
+      try { await api(`/api/v2/jobs/${j.key}`, {}); toast(`${j.label}: in coda`); S.jobs = await api("/api/v2/jobs"); renderControllo(); }
+      catch (err) { if (err.message !== "signin") toast(err.message); e.currentTarget.disabled = false; }
+    } }, active ? (last.status === "running" ? "In esecuzione…" : "In coda…") : "Avvia"));
+}
+const SERVICE = { assistant: "Assistente", "9router": "Router AI", caddy: "Sito web", docker: "Container", webapp: "App" };
+async function loadHealth() {
+  try {
+    const s = await api("/api/system"), box = $("#health"); if (!box) return;
+    const down = Object.entries(s.services || {}).filter(([, v]) => v !== "active").map(([k]) => SERVICE[k] || k);
+    const ok = !down.length && s.model && s.model.ok;
+    fill(box, h("div", { class: "grow" }, h("p", { class: "t" }, "Stato del server"),
+      h("p", { class: "meta" }, ok ? `Tutto funziona · acceso da ${s.uptime}` + (s.backup ? ` · backup ${Math.round(s.backup.age_hours)} h fa` : "")
+        : down.length ? `Fermi: ${down.join(", ")}` : "I modelli non rispondono")),
+      h("span", { class: "chip " + (ok ? "ok" : "critical") }, ok ? "OK" : "Attenzione"));
+  } catch (e) { const box = $("#health"); if (box && e.message !== "signin") fill(box, h("div", { class: "grow" }, h("p", { class: "t" }, "Stato del server"), h("p", { class: "meta" }, "Non disponibile"))); }
+}
+function fmtSecs(s) { s = Math.max(0, Math.round(s || 0)); if (s < 60) return s + " s"; const m = Math.floor(s / 60); return m < 60 ? m + " min" : Math.floor(m / 60) + " h " + (m % 60) + " min"; }
+async function loadAgents() {
+  const box = $("#agents"); if (!box) return;
+  try {
+    const a = await api("/api/agents");
+    const row = (r, running) => h("button", { class: "agent", onclick: () => openSheet([r.pipeline, r.step].filter(Boolean).join(" · ") || "Agente",
+      h("div", {}, h("p", { class: "meta" }, [r.model, r.status].filter(Boolean).join(" · ")), h("h3", { class: "sub-title" }, "Prompt"), h("p", { class: "pre" }, r.prompt_preview || "—"),
+        h("h3", { class: "sub-title" }, "Risultato"), h("p", { class: "pre" }, r.output_preview || r.error || "—"))) },
+      h("span", { class: "chip " + (running ? "info" : r.status === "ok" ? "ok" : "critical") }, running ? "In corso" : r.status === "ok" ? "OK" : "Errore"),
+      h("span", { class: "grow" }, h("span", { class: "t", style: "display:block" }, [r.pipeline, r.step].filter(Boolean).join(" · ")), h("span", { class: "meta", style: "display:block" }, [r.model, running ? fmtSecs(r.elapsed) : fmtSecs(r.duration)].filter(Boolean).join(" · "))));
+    fill(box, 
+      h("h3", { class: "sub-title" }, "In corso"), a.running.length ? h("div", {}, a.running.map((r) => row(r, true))) : h("p", { class: "meta" }, "Nessun agente al lavoro."),
+      h("h3", { class: "sub-title" }, "Completati"), a.recent.length ? h("div", {}, a.recent.slice(0, 20).map((r) => row(r, false))) : h("p", { class: "meta" }, "Nessuna esecuzione recente."),
+      a.router && !a.router.active ? h("p", { class: "field-error" }, "Il router dei modelli non risponde.") : null);
+  } catch (e) { if (e.message !== "signin") fill(box, h("p", { class: "meta" }, "Dati agenti non disponibili.")); }
+}
+
+/* ── theme, sign-in, start ──────────────────────────────────────────── */
+function applyTheme() {
+  const t = store.get("theme");
+  if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
+}
+applyTheme();
+function showSignin() { $("#shell").hidden = true; closeDetailScreen(); $("#signin").hidden = false; setTimeout(() => $("#code").focus(), 200); }
+$("#code").addEventListener("input", async (e) => {
+  const code = e.target.value.replace(/\D/g, "").slice(0, 6); e.target.value = code; $("#signin-err").textContent = "";
+  if (code.length < 6) return;
+  try { await api("/api/pair", { code }); $("#signin").hidden = true; start(); }
+  catch (err) {
+    $("#signin-err").textContent = err.status === 401 ? "Codice non valido o scaduto. Scrivi di nuovo /app al bot e usa il codice nuovo." : "Non riesco a collegarmi: " + err.message;
+    e.target.value = "";
+  }
+});
+matchMedia("(min-width: 1024px)").addEventListener("change", () => { closeSheet(true); route(); });
+function start() { $("#shell").hidden = false; S.tab = null; route(); }
+(async () => {
+  try { const me = await api("/api/me"); me.authed ? start() : showSignin(); }
+  catch { showSignin(); }
+})();
+</script>
+</body>
+</html>

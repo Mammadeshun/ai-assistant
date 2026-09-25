@@ -12,6 +12,7 @@ from modules.ai_agent import understand_message
 from modules import commands
 from modules import leads as leads_store
 from modules import outreach
+from modules import jobs
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -90,7 +91,9 @@ def run_lead_scan():
     """
     print("\n🔍 Running overnight lead scan...")
     try:
-        summary = commands.scan_pending(limit=int(os.environ.get("SCAN_BATCH", "25")))
+        # A scan requested from the app may be running: one Chrome at a time.
+        with jobs.HEAVY_LOCK:
+            summary = commands.scan_pending(limit=int(os.environ.get("SCAN_BATCH", "25")))
         print(summary)
     except Exception as e:
         print(f"❌ Lead scan failed: {e}")
@@ -286,6 +289,17 @@ def main():
     # breakfast. Both times are local, which is why the box runs Europe/Rome.
     schedule.every().day.at(os.environ.get("SCAN_AT", "03:00")).do(run_lead_scan)
     schedule.every().day.at(os.environ.get("DIGEST_AT", "08:10")).do(run_lead_digest)
+    # Jobs requested from the phone app (whitelist in modules/jobs.py): the
+    # app only queues them; this process runs them, one at a time, in a
+    # thread. A restart kills a running one, so say so rather than leave it
+    # "running" for ever.
+    try:
+        interrupted = jobs.recover_interrupted()
+        if interrupted:
+            print(f"   {interrupted} app job(s) were interrupted by the restart")
+    except Exception as e:
+        print(f"   could not check app jobs: {e}")
+    schedule.every(1).minutes.do(jobs.poll)
 
     # The "/" menu on the phone: commands you can see beat commands you must
     # remember, and this is the list people actually use.
@@ -306,12 +320,13 @@ def main():
     listener_thread = threading.Thread(target=listen_for_commands, daemon=True)
     listener_thread.start()
 
-    jobs = ["08:00 briefing"]
+    planned = ["08:00 briefing"]
     if KIRO_ENABLED:
-        jobs.append("08:05 kiro")
-    jobs += [f"{os.environ.get('SCAN_AT', '03:00')} lead scan",
-             f"{os.environ.get('DIGEST_AT', '08:10')} lead digest"]
-    print("⏰ Scheduler running: " + ", ".join(jobs))
+        planned.append("08:05 kiro")
+    planned += [f"{os.environ.get('SCAN_AT', '03:00')} lead scan",
+                f"{os.environ.get('DIGEST_AT', '08:10')} lead digest",
+                "app jobs every minute"]
+    print("⏰ Scheduler running: " + ", ".join(planned))
     print("   Slash commands: /help. Natural messages go to the agent.")
     while True:
         schedule.run_pending()
