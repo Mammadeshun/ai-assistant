@@ -440,6 +440,12 @@ def start_handoff(lead_id, body, now=None):
             return 404, {"error": "studio non trovato"}
         if lead.get("do_not_contact_at"):
             return 409, {"error": "Questo studio è segnato Non contattare"}
+        # "reply" skips the pause and the cap (SPEC: replying inside a live
+        # conversation is not outreach) - but only for a lead that actually
+        # has a reply waiting, or that exemption is a way to send uncapped,
+        # unpaused WhatsApps to anyone.
+        if kind == "reply" and not lead.get("reply_todo_at"):
+            return 409, {"error": "Nessuna risposta da gestire per questo studio"}
         _expire_handoffs(now)
         pend = _open_handoff()
         if pend and pend["lead_id"] != lead_id:
@@ -886,8 +892,12 @@ def edit_contact(lead_id, body, now=None):
     website = text("website", 200)
     if website is not None:
         url = website if (not website or "://" in website) else "https://" + website
-        host = urllib.parse.urlparse(url).hostname if url else None
-        if website and (not host or "." not in host or " " in website):
+        parsed = urllib.parse.urlparse(url) if url else None
+        host = parsed.hostname if parsed else None
+        # Only http(s): a scheme such as javascript: or data: must never be
+        # stored as a "website" that later ends up in a link.
+        if website and (not host or "." not in host or " " in website
+                        or (parsed and parsed.scheme not in ("http", "https"))):
             errors["website"] = "Sito non valido"
         elif (url or None) != lead.get("website"):
             changes["website"] = url or None

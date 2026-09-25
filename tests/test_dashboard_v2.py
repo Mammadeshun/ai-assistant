@@ -127,6 +127,19 @@ class HandoffTest(V2Base):
         self.assertEqual(self.webapp.today()["messages"], 1)
         self.assertIsNone(self.dash.today_view(self.now)["pending"])
 
+    def test_reply_kind_is_refused_without_an_actual_pending_reply(self):
+        # "reply" skips the pause and the cap (it is answering inside a live
+        # conversation, not outreach) - it must not become a way to send an
+        # uncapped, unpaused WhatsApp to a lead that never wrote in.
+        lead = self._lead("Studio Cinque")
+        self._send_whatsapp(lead)
+        self.dash.update_settings({"cap_whatsapp": 0})
+        status, payload = self.dash.start_handoff(lead, {"channel": "whatsapp", "kind": "reply"}, self.now)
+        self.assertEqual(status, 409)
+        self.dash.log_reply(lead, {"type": "question"}, self.now)
+        status, h = self.dash.start_handoff(lead, {"channel": "whatsapp", "kind": "reply"}, self.now)
+        self.assertEqual(status, 200, h)
+
     def test_non_inviato_keeps_the_lead_in_the_queue(self):
         lead = self._lead("Studio Due")
         status, h = self.dash.start_handoff(lead, {"channel": "whatsapp", "kind": "first"}, self.now)
@@ -191,6 +204,18 @@ class PecTest(V2Base):
         status, _ = self.dash.edit_contact(lead, {"email_pec": True}, self.now)
         self.assertEqual(status, 200)
         self.assertEqual(self.leads.due_leads()["to_email"], [])
+
+
+class ContactEditTest(V2Base):
+    def test_website_is_refused_outside_http_and_https(self):
+        lead = self._lead("Schema Strano")
+        for bad in ("javascript://x.com/%0aalert(1)", "data://x.com/x", "file:///etc/passwd"):
+            status, payload = self.dash.edit_contact(lead, {"website": bad}, self.now)
+            self.assertEqual(status, 400, bad)
+            self.assertIn("website", payload["fields"])
+        status, _ = self.dash.edit_contact(lead, {"website": "https://nuovo-sito.it"}, self.now)
+        self.assertEqual(status, 200)
+        self.assertEqual(self.leads.get(lead)["website"], "https://nuovo-sito.it")
 
 
 class DoNotContactTest(V2Base):
