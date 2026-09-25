@@ -123,6 +123,380 @@
     --s3: 0 24px 64px -8px rgba(0,0,0,.72);
     --scrim: rgba(0,0,0,.52);
 }
+/* Looks from real references (?look= or the stored choice): sistema = iOS Settings,
+   things = Things 3, notte = Linear, grana = Arc. Unset keeps the v1-style default. */
+
+:root[data-look="sistema"] {
+  --bg: #F2F2F7;
+  --atmos: none;
+  --card: #FFFFFF;
+  --surface: #FFFFFF;
+  --raised: #F2F2F7;
+  --rail: rgba(255,255,255,.72);
+  --card-shadow: 0 0 0 .5px rgba(0,0,0,.04);
+  --line: rgba(60,60,67,.18);
+  --border: rgba(60,60,67,.29);
+  --text: #000000;
+  --text-2: #3A3A3F;
+  --muted: #6C6C70;
+  --accent: #0066D6;
+  --accent-fill: #007AFF;
+  --accent-soft: #E5F0FF;
+  --accent-tint: rgba(0,122,255,.10);
+  --accent-glow: rgba(0,122,255,.28);
+  --chrome: rgba(249,249,249,.78);
+  --chrome-solid: #F9F9F9;
+  --sheet-bg: rgba(242,242,247,.9);
+  --sheet-solid: #F2F2F7;
+  --ring-a: #34C759;
+  --ring-b: #34C759;
+  --switch-on: #34C759;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+:root[data-look="sistema"]:not([data-theme="light"]) {
+  --bg: #000000;
+  --atmos: none;
+  --card: #1C1C1E;
+  --surface: #1C1C1E;
+  --raised: #2C2C2E;
+  --rail: rgba(28,28,30,.72);
+  --card-shadow: none;
+  --line: rgba(84,84,88,.6);
+  --border: rgba(84,84,88,.75);
+  --text: #FFFFFF;
+  --text-2: #D1D1D6;
+  --muted: #98989F;
+  --accent: #0A84FF;
+  --accent-fill: #0A84FF;
+  --accent-soft: #0A2A4D;
+  --accent-tint: rgba(10,132,255,.16);
+  --accent-glow: rgba(10,132,255,.35);
+  --chrome: rgba(22,22,24,.78);
+  --chrome-solid: #161618;
+  --sheet-bg: rgba(28,28,30,.92);
+  --sheet-solid: #1C1C1E;
+  --ring-a: #30D158;
+  --ring-b: #30D158;
+  --switch-on: #30D158;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+}
+
+:root[data-look="sistema"][data-theme="dark"] {
+  --bg: #000000;
+  --atmos: none;
+  --card: #1C1C1E;
+  --surface: #1C1C1E;
+  --raised: #2C2C2E;
+  --rail: rgba(28,28,30,.72);
+  --card-shadow: none;
+  --line: rgba(84,84,88,.6);
+  --border: rgba(84,84,88,.75);
+  --text: #FFFFFF;
+  --text-2: #D1D1D6;
+  --muted: #98989F;
+  --accent: #0A84FF;
+  --accent-fill: #0A84FF;
+  --accent-soft: #0A2A4D;
+  --accent-tint: rgba(10,132,255,.16);
+  --accent-glow: rgba(10,132,255,.35);
+  --chrome: rgba(22,22,24,.78);
+  --chrome-solid: #161618;
+  --sheet-bg: rgba(28,28,30,.92);
+  --sheet-solid: #1C1C1E;
+  --ring-a: #30D158;
+  --ring-b: #30D158;
+  --switch-on: #30D158;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+:root[data-look="things"] {
+  --bg: #F4F5F7;
+  --atmos: none;
+  --card: #FFFFFF;
+  --surface: #FFFFFF;
+  --raised: #EEF0F3;
+  --rail: rgba(255,255,255,.75);
+  --card-shadow: 0 0 0 1px rgba(16,24,40,.05), 0 1px 2px rgba(16,24,40,.04);
+  --line: rgba(16,24,40,.08);
+  --border: rgba(16,24,40,.16);
+  --text: #1D2433;
+  --text-2: #4A5263;
+  --muted: #5B6475;
+  --accent: #1B64D1;
+  --accent-fill: #2F80ED;
+  --accent-soft: #E6F0FD;
+  --accent-tint: rgba(47,128,237,.10);
+  --accent-glow: rgba(47,128,237,.28);
+  --chrome: rgba(255,255,255,.8);
+  --chrome-solid: #FFFFFF;
+  --sheet-bg: rgba(255,255,255,.93);
+  --sheet-solid: #FFFFFF;
+  --ring-a: #2F80ED;
+  --ring-b: #5A9CF5;
+  --switch-on: #2F80ED;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+:root[data-look="things"]:not([data-theme="light"]) {
+  --bg: #1C1D21;
+  --atmos: none;
+  --card: #25262B;
+  --surface: #25262B;
+  --raised: #2E3036;
+  --rail: rgba(37,38,43,.75);
+  --card-shadow: 0 0 0 1px rgba(255,255,255,.05);
+  --line: rgba(255,255,255,.07);
+  --border: rgba(255,255,255,.15);
+  --text: #ECEDEF;
+  --text-2: #C3C6CC;
+  --muted: #9A9EA6;
+  --accent: #6AA5FF;
+  --accent-fill: #2F80ED;
+  --accent-soft: #1E3150;
+  --accent-tint: rgba(106,165,255,.14);
+  --accent-glow: rgba(47,128,237,.35);
+  --chrome: rgba(30,31,35,.8);
+  --chrome-solid: #1E1F23;
+  --sheet-bg: rgba(37,38,43,.93);
+  --sheet-solid: #25262B;
+  --ring-a: #2F80ED;
+  --ring-b: #6AA5FF;
+  --switch-on: #2F80ED;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+}
+
+:root[data-look="things"][data-theme="dark"] {
+  --bg: #1C1D21;
+  --atmos: none;
+  --card: #25262B;
+  --surface: #25262B;
+  --raised: #2E3036;
+  --rail: rgba(37,38,43,.75);
+  --card-shadow: 0 0 0 1px rgba(255,255,255,.05);
+  --line: rgba(255,255,255,.07);
+  --border: rgba(255,255,255,.15);
+  --text: #ECEDEF;
+  --text-2: #C3C6CC;
+  --muted: #9A9EA6;
+  --accent: #6AA5FF;
+  --accent-fill: #2F80ED;
+  --accent-soft: #1E3150;
+  --accent-tint: rgba(106,165,255,.14);
+  --accent-glow: rgba(47,128,237,.35);
+  --chrome: rgba(30,31,35,.8);
+  --chrome-solid: #1E1F23;
+  --sheet-bg: rgba(37,38,43,.93);
+  --sheet-solid: #25262B;
+  --ring-a: #2F80ED;
+  --ring-b: #6AA5FF;
+  --switch-on: #2F80ED;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+:root[data-look="notte"] {
+  --bg: #F7F8F8;
+  --atmos: none;
+  --card: #FFFFFF;
+  --surface: #FFFFFF;
+  --raised: #F0F1F2;
+  --rail: rgba(255,255,255,.75);
+  --card-shadow: 0 0 0 1px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --line: rgba(0,0,0,.06);
+  --border: rgba(0,0,0,.13);
+  --text: #0F1011;
+  --text-2: #3C4149;
+  --muted: #5E6269;
+  --accent: #4A55C8;
+  --accent-fill: #5E6AD2;
+  --accent-soft: #ECEEFB;
+  --accent-tint: rgba(94,106,210,.10);
+  --accent-glow: rgba(94,106,210,.3);
+  --chrome: rgba(255,255,255,.76);
+  --chrome-solid: #FFFFFF;
+  --sheet-bg: rgba(255,255,255,.93);
+  --sheet-solid: #FFFFFF;
+  --ring-a: #5E6AD2;
+  --ring-b: #7C85F0;
+  --switch-on: #5E6AD2;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+:root[data-look="notte"]:not([data-theme="light"]) {
+  --bg: #08090A;
+  --atmos: radial-gradient(70% 38% at 50% -4%, rgba(125,135,255,.13), transparent 72%);
+  --card: #111214;
+  --surface: #131416;
+  --raised: #1A1B1E;
+  --rail: rgba(17,18,20,.75);
+  --card-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 0 0 1px rgba(255,255,255,.06);
+  --line: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.13);
+  --text: #F7F8F8;
+  --text-2: #D0D6E0;
+  --muted: #8A8F98;
+  --accent: #9199FF;
+  --accent-fill: #5E6AD2;
+  --on-accent-fill: #FFFFFF;
+  --accent-soft: #1D2046;
+  --accent-tint: rgba(94,106,210,.18);
+  --accent-glow: rgba(94,106,210,.4);
+  --chrome: rgba(16,17,19,.72);
+  --chrome-solid: #101113;
+  --sheet-bg: rgba(19,20,22,.92);
+  --sheet-solid: #131416;
+  --ring-a: #5E6AD2;
+  --ring-b: #7C85F0;
+  --switch-on: #5E6AD2;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+}
+
+:root[data-look="notte"][data-theme="dark"] {
+  --bg: #08090A;
+  --atmos: radial-gradient(70% 38% at 50% -4%, rgba(125,135,255,.13), transparent 72%);
+  --card: #111214;
+  --surface: #131416;
+  --raised: #1A1B1E;
+  --rail: rgba(17,18,20,.75);
+  --card-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 0 0 1px rgba(255,255,255,.06);
+  --line: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.13);
+  --text: #F7F8F8;
+  --text-2: #D0D6E0;
+  --muted: #8A8F98;
+  --accent: #9199FF;
+  --accent-fill: #5E6AD2;
+  --on-accent-fill: #FFFFFF;
+  --accent-soft: #1D2046;
+  --accent-tint: rgba(94,106,210,.18);
+  --accent-glow: rgba(94,106,210,.4);
+  --chrome: rgba(16,17,19,.72);
+  --chrome-solid: #101113;
+  --sheet-bg: rgba(19,20,22,.92);
+  --sheet-solid: #131416;
+  --ring-a: #5E6AD2;
+  --ring-b: #7C85F0;
+  --switch-on: #5E6AD2;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+:root[data-look="grana"] {
+  --bg: #F3EFE8;
+  --atmos: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .075 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"), linear-gradient(180deg, rgba(64,68,246,.09), transparent 34%);
+  --card: #FFFDF9;
+  --surface: #FFFDF9;
+  --raised: #F1ECE4;
+  --rail: rgba(255,253,249,.76);
+  --card-shadow: 0 0 0 1px rgba(60,40,20,.06), 0 2px 6px rgba(60,40,20,.05);
+  --line: rgba(60,40,20,.10);
+  --border: rgba(60,40,20,.20);
+  --text: #1A1714;
+  --text-2: #4A433B;
+  --muted: #5E564C;
+  --accent: #3439E6;
+  --accent-fill: #3F44F6;
+  --accent-soft: #E6E7FF;
+  --accent-tint: rgba(63,68,246,.10);
+  --accent-glow: rgba(63,68,246,.3);
+  --chrome: rgba(250,247,242,.78);
+  --chrome-solid: #FAF7F2;
+  --sheet-bg: rgba(252,250,246,.93);
+  --sheet-solid: #FCFAF6;
+  --ring-a: #3F44F6;
+  --ring-b: #6E72FF;
+  --switch-on: #3F44F6;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+:root[data-look="grana"]:not([data-theme="light"]) {
+  --bg: #141312;
+  --atmos: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"), linear-gradient(180deg, rgba(90,94,255,.14), transparent 34%);
+  --card: #1E1D1B;
+  --surface: #1E1D1B;
+  --raised: #282624;
+  --rail: rgba(30,29,27,.76);
+  --card-shadow: 0 0 0 1px rgba(255,240,220,.06);
+  --line: rgba(255,240,220,.08);
+  --border: rgba(255,240,220,.16);
+  --text: #F4F1EC;
+  --text-2: #D2CCC3;
+  --muted: #A9A39A;
+  --accent: #A3A6FF;
+  --accent-fill: #4B50F7;
+  --on-accent-fill: #FFFFFF;
+  --accent-soft: #25264A;
+  --accent-tint: rgba(120,124,255,.16);
+  --accent-glow: rgba(75,80,247,.4);
+  --chrome: rgba(24,23,22,.78);
+  --chrome-solid: #181716;
+  --sheet-bg: rgba(30,29,27,.93);
+  --sheet-solid: #1E1D1B;
+  --ring-a: #4B50F7;
+  --ring-b: #8F92FF;
+  --switch-on: #4B50F7;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
+}
+
+:root[data-look="grana"][data-theme="dark"] {
+  --bg: #141312;
+  --atmos: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"), linear-gradient(180deg, rgba(90,94,255,.14), transparent 34%);
+  --card: #1E1D1B;
+  --surface: #1E1D1B;
+  --raised: #282624;
+  --rail: rgba(30,29,27,.76);
+  --card-shadow: 0 0 0 1px rgba(255,240,220,.06);
+  --line: rgba(255,240,220,.08);
+  --border: rgba(255,240,220,.16);
+  --text: #F4F1EC;
+  --text-2: #D2CCC3;
+  --muted: #A9A39A;
+  --accent: #A3A6FF;
+  --accent-fill: #4B50F7;
+  --on-accent-fill: #FFFFFF;
+  --accent-soft: #25264A;
+  --accent-tint: rgba(120,124,255,.16);
+  --accent-glow: rgba(75,80,247,.4);
+  --chrome: rgba(24,23,22,.78);
+  --chrome-solid: #181716;
+  --sheet-bg: rgba(30,29,27,.93);
+  --sheet-solid: #1E1D1B;
+  --ring-a: #4B50F7;
+  --ring-b: #8F92FF;
+  --switch-on: #4B50F7;
+  --glow-hot: transparent;
+  --glow-warn: transparent;
+  --glow-new: transparent;
+}
 /* No glass where it is not wanted or not drawn: every material goes opaque. */
 @media (prefers-reduced-transparency: reduce) {
   :root { --blur: none !important; --chrome: var(--chrome-solid) !important; --sheet-bg: var(--sheet-solid) !important;
@@ -1871,9 +2245,15 @@ async function loadAgents() {
 }
 
 /* ── theme, sign-in, start ──────────────────────────────────────────── */
+const LOOKS = ["sistema", "things", "notte", "grana"];
 function applyTheme() {
   const t = store.get("theme");
   if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
+  const q = new URLSearchParams(location.search).get("look");
+  if (q && LOOKS.includes(q)) store.set("look", q);
+  if (q === "vetro") store.set("look", null);  // back to the default glass look
+  const l = store.get("look");
+  if (l && LOOKS.includes(l)) document.documentElement.dataset.look = l; else delete document.documentElement.dataset.look;
 }
 applyTheme();
 function showSignin() { $("#shell").hidden = true; closeDetailScreen(); $("#signin").hidden = false; setTimeout(() => $("#code").focus(), 200); }
