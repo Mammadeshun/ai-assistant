@@ -942,6 +942,7 @@ function channelFor(card) {
 }
 function renderCard(item) {
   const c = item.card, kind = item.kind;
+  S.cardEmail = null;
   const overdueDays = kind === "follow_overdue" && item.due ? -dayDiff(item.due) : 0;
   const kicker = h("p", { class: "kicker" + (kind === "reply" ? " hot" : kind === "follow_overdue" ? " warn" : "") },
     icon(kind === "reply" ? "reply" : kind === "new" ? "today" : "calendar"),
@@ -968,7 +969,7 @@ function renderCard(item) {
   else {
     parts.push(...(kind === "new" ? [evidence, factList] : [factList, evidence]));
     if (kind !== "new") parts.push(channelPicker(c, ch));
-    if (ch === "email" && c.email_draft) parts.push(emailEditor(c));
+    if (ch === "email" && c.email_draft) { const ed = emailEditor(c, "card"); S.cardEmail = ed; parts.push(ed.node); }
     else if (ch === "call" && c.script) parts.push(h("details", { class: "say" }, h("summary", { style: "min-height:48px;display:flex;align-items:center;cursor:pointer;font-weight:600" }, "Cosa dire al telefono"), h("p", {}, c.script)));
     else if (ch === "whatsapp" && kind !== "new") parts.push(h("p", { class: "help", style: "margin-top:12px" }, "WhatsApp si apre sulla chat vuota: scrivi tu, come in una conversazione."));
   }
@@ -998,18 +999,22 @@ function channelPicker(c, ch) {
         onclick: () => { S.chan[c.id] = k; S.dockError = ""; renderOggi(); } }, CHANNEL_LABEL[k]))),
     why);
 }
-function emailEditor(c) {
+// Returns the node and its own two fields, tied to this lead. Nothing is
+// looked up by a page-wide id: the Oggi card and the detail sheet each read
+// their own editor, so one practice's text can never go to another.
+function emailEditor(c, where) {
   const d = c.email_draft;
-  const subj = h("input", { type: "text", id: "em-subject", value: store.get("esubj:" + c.id) ?? d.subject, maxlength: 200 });
-  const body = h("textarea", { id: "em-body", rows: 8 }); body.value = store.get("ebody:" + c.id) ?? d.body;
+  const subj = h("input", { type: "text", id: `${where}-subject-${c.id}`, value: store.get("esubj:" + c.id) ?? d.subject, maxlength: 200 });
+  const body = h("textarea", { id: `${where}-body-${c.id}`, rows: 8 }); body.value = store.get("ebody:" + c.id) ?? d.body;
   subj.addEventListener("input", () => store.set("esubj:" + c.id, subj.value));
   body.addEventListener("input", () => store.set("ebody:" + c.id, body.value));
-  return h("div", { class: "msg" },
+  const node = h("div", { class: "msg" },
     h("p", { class: "meta" }, "A: ", c.email),
     h("label", { class: "field" }, h("span", {}, "Oggetto"), subj),
     h("label", { class: "field" }, h("span", {}, "Testo, modificabile a mano"), body),
     h("p", { class: "fixed", style: "margin-top:8px" }, d.footer),
     h("p", { class: "help" }, "Firma, provenienza del contatto e come smettere li aggiunge il server: non si possono togliere."));
+  return { node, leadId: c.id, read: () => ({ subject: subj.value, body: body.value }) };
 }
 function renderDock() {
   const dock = $("#dock"), t = S.today;
@@ -1023,7 +1028,8 @@ function renderDock() {
     primary = h("button", { class: "btn wa", disabled: !st.ok, onclick: (e) => startHandoff(c, "whatsapp", e.currentTarget) }, icon("wa"), st.ok ? label : st.why);
     status = [`WhatsApp oggi ${t.counts.whatsapp}/${t.caps.whatsapp}`, st.ok ? null : st.why];
   } else if (ch === "email") {
-    primary = h("button", { class: "btn primary", disabled: !st.ok || !c.email_draft, onclick: (e) => sendEmail(c, e.currentTarget) }, icon("mail"), st.ok ? "Invia email" : st.why);
+    const ed = S.cardEmail && S.cardEmail.leadId === c.id ? S.cardEmail : null;
+    primary = h("button", { class: "btn primary", disabled: !st.ok || !ed, onclick: (e) => sendEmail(c, e.currentTarget, ed ? ed.read() : null) }, icon("mail"), st.ok ? "Invia email" : st.why);
     status = [`Email oggi ${t.counts.email}/${t.caps.email}`, st.ok ? null : st.why];
   } else {
     primary = h("button", { class: "btn primary", disabled: !st.ok, onclick: (e) => startHandoff(c, "call", e.currentTarget) }, icon("phone"), st.ok ? "Chiama " + formatPhone(st.number) : st.why);
@@ -1037,10 +1043,11 @@ function renderDock() {
     S.dockError ? h("p", { class: "err", role: "alert" }, S.dockError) : null));
   dock.hidden = false; updateDockSpace();
 }
-async function sendEmail(c, btn) {
-  const subject = ($("#em-subject") || {}).value ?? c.email_draft.subject;
-  const body = ($("#em-body") || {}).value ?? c.email_draft.body;
-  if (!subject.trim() || body.trim().length < 40) { S.dockError = "Oggetto o testo mancante."; renderDock(); return; }
+async function sendEmail(c, btn, text) {
+  // Exactly the text on screen for this lead, or nothing.
+  if (!text) { toast("Riapri l'email: non trovo il testo da inviare."); return; }
+  const { subject, body } = text;
+  if (!subject.trim() || body.trim().length < 40) { S.dockError = "Oggetto o testo mancante."; renderDock(); toast("Oggetto o testo mancante."); return; }
   btn.disabled = true;
   try {
     await api("/api/email", { id: c.id, subject, body });
@@ -1280,10 +1287,11 @@ async function startHandoffFromDetail(c, channel, btn) {
   await startHandoff(c, channel, btn);
 }
 function emailSheet(c) {
-  const ed = emailEditor(c);
+  const ed = emailEditor(c, "sheet");
   const send = h("button", { class: "btn primary block" }, icon("mail"), "Invia email");
-  send.addEventListener("click", async () => { closeSheet(); await sendEmail(c, send); });
-  openSheet(`Email a ${c.name}`, ed, send);
+  // Read the fields first: once the sheet closes they are gone.
+  send.addEventListener("click", async () => { const text = ed.read(); closeSheet(); await sendEmail(c, send, text); });
+  openSheet(`Email a ${c.name}`, ed.node, send);
 }
 
 /* ── Contatti ───────────────────────────────────────────────────────── */
