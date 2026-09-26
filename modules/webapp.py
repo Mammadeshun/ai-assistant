@@ -575,6 +575,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
                    # replaces it (docs/dashboard-v2/SPEC.md).
                    "/v2": ("v2.html", "text/html; charset=utf-8"),
                    "/manifest.webmanifest": ("manifest.webmanifest", "application/manifest+json"),
+                   # v2 installs as its own app ("Banco") that opens /v2.
+                   "/manifest-v2.webmanifest": ("manifest-v2.webmanifest", "application/manifest+json"),
+                   "/v2-icon.svg": ("v2-icon.svg", "image/svg+xml"),
+                   **{f"/v2-{n}.png": (f"v2-{n}.png", "image/png") for n in ("icon-512", "icon-192", "icon-maskable", "apple-touch-icon")},
                    "/icon.svg": ("icon.svg", "image/svg+xml"),
                    "/apple-touch-icon.png": ("apple-touch-icon.png", "image/png"),
                    "/icon-512.png": ("icon-512.png", "image/png"),
