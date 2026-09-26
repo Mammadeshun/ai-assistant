@@ -27,6 +27,7 @@ from . import leads as store
 HOST = os.environ.get("WEBAPP_HOST", "127.0.0.1")
 PORT = int(os.environ.get("WEBAPP_PORT", "8787"))
 STATIC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "webapp")
+FONT_FILES = ("DMSans", "Fraunces", "SpaceGrotesk", "Manrope")
 DAILY_GOAL = int(os.environ.get("DAILY_CALL_GOAL", "20"))
 SHOTS_DIR = os.environ.get("SCAN_SHOTS_DIR", "data/shots")
 SESSION_DAYS = 90
@@ -580,7 +581,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
                    "/icon-192.png": ("icon-192.png", "image/png"),
                    "/icon-maskable.png": ("icon-maskable.png", "image/png"),
                    # Android will not offer "Install app" without one.
-                   "/sw.js": ("sw.js", "text/javascript")}
+                   "/sw.js": ("sw.js", "text/javascript"),
+                   # Open-licence (OFL) fonts for the v2 looks, served from here
+                   # rather than a font CDN.
+                   **{f"/fonts/{n}.ttf": (f"fonts/{n}.ttf", "font/ttf") for n in FONT_FILES}}
         if url.path in statics:
             return self._static(*statics[url.path])
         if url.path == "/api/me":
